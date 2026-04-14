@@ -1,0 +1,54 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "env": [
+    {
+      "key": "NEXT_PUBLIC_SUPABASE_URL",
+      "description": "Supabase project URL"
+    },
+    {
+      "key": "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+      "description": "Supabase anonymous key"
+    },
+    {
+      "key": "SUPABASE_SERVICE_KEY",
+      "description": "Supabase service role key"
+    },
+    {
+      "key": "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY",
+      "description": "Stripe publishable key"
+    },
+    {
+      "key": "STRIPE_SECRET_KEY",
+      "description": "Stripe secret key"
+    },
+    {
+      "key": "STRIPE_WEBHOOK_SECRET",
+      "description": "Stripe webhook signing secret"
+    },
+    {
+      "key": "MAILCHIMP_API_KEY",
+      "description": "Mailchimp API key"
+    },
+    {
+      "key": "MAILCHIMP_SERVER_PREFIX",
+      "description": "Mailchimp server prefix (e.g., us1, us2-1)"
+    },
+    {
+      "key": "MAILCHIMP_LIST_ID",
+      "description": "Mailchimp audience ID"
+    },
+    {
+      "key": "NEXT_PUBLIC_GA_MEASUREMENT_ID",
+      "description": "Google Analytics 4 measurement ID"
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/cleanup",
+      "schedule": "0 2 * * *"
+    }
+  ]
+}
