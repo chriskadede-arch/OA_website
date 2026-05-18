@@ -6,7 +6,11 @@ const nextConfig = {
     output: 'export',
     basePath: '/OA_website',
     trailingSlash: true,
-    images: { unoptimized: true },
+    env: { NEXT_PUBLIC_BASE_PATH: '/OA_website' },
+    images: {
+      loader: 'custom',
+      loaderFile: './image-loader.js',
+    },
   } : {
     images: {
       domains: [
