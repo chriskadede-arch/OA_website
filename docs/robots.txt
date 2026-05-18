@@ -1,0 +1,11 @@
+User-Agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api
+Disallow: /_next
+Disallow: /.env
+
+User-Agent: AdsBot-Google
+Allow: /
+
+Sitemap: https://oceansalive.org/sitemap.xml
