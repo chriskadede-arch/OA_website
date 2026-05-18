@@ -102,6 +102,54 @@ const CATEGORY_CONFIG = {
       { number: 'Global', label: 'Conservation Network' },
     ],
   },
+  'impact-stories': {
+    value: 'Impact Stories',
+    eyebrow: 'Field Results · Real Change · Kilifi County',
+    headline: 'Impact\nStories',
+    description:
+      'These are not press releases — they are the real, measurable, human outcomes of 20+ years of community-led conservation on Kenya\'s coast. Stories of reefs rebuilt, livelihoods created, and governance won.',
+    heroImage: '/images/oceanculturelife.jpg',
+    heroImageAlt: 'Community life and conservation impact along the Kilifi coast',
+    accentColor: 'ocean-turquoise' as const,
+    stats: [
+      { number: '25,000+', label: 'Corals Planted' },
+      { number: '400%', label: 'Fish Recovery' },
+      { number: '150 km²', label: 'Co-Managed Ocean' },
+      { number: '80+', label: 'Women Empowered' },
+    ],
+  },
+  'community-news': {
+    value: 'Community News',
+    eyebrow: 'Kilifi Communities · Local Voices · Coastal Kenya',
+    headline: 'Community\nNews',
+    description:
+      'From BMU governance decisions to women\'s group milestones and coastal events — the news that matters most to the 1,200+ people whose lives and livelihoods are intertwined with Kenya\'s ocean.',
+    heroImage: '/images/communities.jpg',
+    heroImageAlt: 'Kilifi coastal community members at a conservation gathering',
+    accentColor: 'ocean-seafoam' as const,
+    stats: [
+      { number: '1,200+', label: 'Community Members' },
+      { number: '4', label: 'Partner Communities' },
+      { number: '12', label: 'BMU Representatives' },
+      { number: '640 km', label: 'Coastline Covered' },
+    ],
+  },
+  'updates': {
+    value: 'Latest Updates',
+    eyebrow: 'OAF News · Events · Announcements',
+    headline: 'Latest\nUpdates',
+    description:
+      'The latest from Oceans Alive Foundation — programme updates, upcoming events, volunteer opportunities, partnership announcements, and everything happening across Kilifi\'s coastline.',
+    heroImage: '/images/oceanday.jpg',
+    heroImageAlt: 'Oceans Alive Foundation team at World Ocean Day 2024',
+    accentColor: 'ocean-turquoise' as const,
+    stats: [
+      { number: '2025', label: 'IUCN Featured' },
+      { number: '20+', label: 'Years Active' },
+      { number: '14', label: 'Active Programmes' },
+      { number: '40+', label: 'Global Partners' },
+    ],
+  },
 };
 
 type CategorySlug = keyof typeof CATEGORY_CONFIG;
@@ -117,6 +165,18 @@ const STORY_IMAGES: Record<string, string> = {
   'rebuilding-fisheries': '/images/fisher.jpg',
   'ocean-leaders': '/images/interns.jpg',
   'iucn-2025': '/images/kamakukijcma.jpg',
+  // Impact Stories
+  'kuruwitu-comeback': '/images/oceanculturelife.jpg',
+  'mothers-choice-trash4cash': '/images/trashforcash3.jpg',
+  'reef-gardener-journal': '/images/man.jpg',
+  // Community News
+  'bmu-new-leadership-2025': '/images/BMUS.jpg',
+  'community-voices-ocean': '/images/communities.jpg',
+  'lift-network-eco-market': '/images/womenlearning2.jpg',
+  // Latest Updates
+  'annual-report-2024': '/images/kamakukijcma.jpg',
+  'world-ocean-day-2025': '/images/oceanday.jpg',
+  'volunteer-coral-survey-2025': '/images/learning.jpg',
 };
 
 const OTHER_CATEGORIES = [
@@ -126,6 +186,9 @@ const OTHER_CATEGORIES = [
   { slug: 'education', label: 'Education', desc: 'Learning & training', image: '/images/kids.jpg' },
   { slug: 'governance', label: 'Governance', desc: 'Community governance', image: '/images/BMUmeeting.jpg' },
   { slug: 'recognition', label: 'Recognition', desc: 'Awards & partnerships', image: '/images/oceanday.jpg' },
+  { slug: 'impact-stories', label: 'Impact Stories', desc: 'Field results & real change', image: '/images/oceanculturelife.jpg' },
+  { slug: 'community-news', label: 'Community News', desc: 'Local voices from the coast', image: '/images/communities.jpg' },
+  { slug: 'updates', label: 'Latest Updates', desc: 'News & announcements', image: '/images/oceanday.jpg' },
 ];
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────

@@ -185,6 +185,184 @@ const BLOG_CONTENT: Record<string, StoryContent> = {
     ],
     relatedSlugs: ['co-management-plan', 'coral-restoration-journey', 'rebuilding-fisheries'],
   },
+
+  // ── Impact Stories ─────────────────────────────────────────────────────────
+
+  'kuruwitu-comeback': {
+    heroImage: '/images/oceanculturelife.jpg',
+    heroImageAlt: 'The Kuruwitu reef, now teeming with life after two decades of community protection',
+    pullQuote: 'Twenty years ago I could walk across that reef and see nothing. No fish, no colour. Now I go underwater and I cry — because it is alive again.',
+    pullQuoteAttrib: 'Community elder, Kuruwitu Village',
+    body: [
+      'Stand at the edge of the Kuruwitu reef flat at low tide and look out. The water is so clear you can read the colour of the coral from shore. There are parrotfish grazing in water barely deep enough to cover them. A white-spotted grouper pauses in the shadow of a brain coral, then drifts lazily into the blue. Two decades ago, this scene was impossible. The reef was rubble.',
+      'In the early 2000s, Kilifi\'s fishing communities were in crisis. Dynamite fishing had shattered the reef structure. Over-harvesting with illegal beach seine nets had stripped the water column of fish that communities had relied on for generations. Fishers were travelling thirty kilometres offshore to catch what their grandfathers had found twenty metres from shore. The economics of fishing were breaking down, and with them, a way of life.',
+      'It was in this context that a British marine conservationist named Desmond Bowden sat down with the fishermen of Kuruwitu village and asked a simple, radical question: what would it take for you to stop fishing one section of the reef permanently? The answer — which emerged from dozens of meetings over months — required trust, governance, and a shared belief that sacrifice today would mean abundance tomorrow.',
+      'What followed was the establishment of Kenya\'s first community-managed no-take zone: a 30-hectare permanent sanctuary created not by government decree but by the voluntary decision of the fishing community that depended on it. Over the next fifteen years, that sanctuary grew — not just in area, but in proof. Fish populations within the zone increased by an order of magnitude. Species returned that had been absent for decades.',
+      'By 2022, the numbers were undeniable. Fish biomass within the co-managed zone had increased by more than 400% compared to baseline measurements from 2003. The spillover effect into adjacent fishing areas was real and measurable. Fishers who gave up twenty metres of reef twenty years ago were now catching more fish, more reliably, than at any point in living memory. The 25,000 coral colonies planted since 2019 by certified community reef gardeners accelerated the recovery, closing the loop between coral restoration and fisheries in a way rarely achieved in conservation practice.',
+      'The Kuruwitu model has been recognised by the IUCN World Conservation Congress as a blueprint for marine governance across the Western Indian Ocean. But for the fishers who sat in those early meetings — who made the decision to protect, and kept it — it is simpler than that. It is their reef. They brought it back. And their children will inherit an ocean that is alive.',
+    ],
+    bodyImages: [
+      { src: '/images/divers.jpg', alt: 'Community divers at the Kuruwitu reef restoration site', caption: 'Certified community divers tend to coral nurseries at Kuruwitu — the same fishers who first created the marine sanctuary in 2003.' },
+      { src: '/images/BMUS.jpg', alt: 'BMU governance meeting', caption: 'The Beach Management Unit that administers the co-management plan meets monthly to review compliance data and plan the reef\'s future.' },
+    ],
+    relatedSlugs: ['coral-restoration-journey', 'co-management-plan', 'iucn-2025'],
+  },
+
+  'mothers-choice-trash4cash': {
+    heroImage: '/images/trashforcash3.jpg',
+    heroImageAlt: 'Fatuma and her collection group weigh plastic at a Trash4Cash point in Kilifi',
+    pullQuote: 'My husband used to decide everything about money in our house. Now I run a team of fourteen women and I decide our futures.',
+    pullQuoteAttrib: 'Fatuma Hamisi, Trash4Cash group leader, Kilifi North',
+    body: [
+      'Fatuma Hamisi grew up watching the tide carry plastic onto the beach outside her door. She understood it was wrong the way you understand rain is wet — as a fact of life, not a solvable problem. She was twenty-six when an Oceans Alive community worker asked if she wanted to be paid to collect it.',
+      'That was three years ago. Today, Fatuma manages a collection group of fourteen women who together gather, sort, and sell more plastic than any other group on Kilifi\'s northern coast. She tracks their collection data on a phone she bought herself. She negotiates directly with the recycling buyer from Mombasa. She runs a savings scheme that has helped four members of her group pay secondary school fees they could not otherwise afford.',
+      'The Trash4Cash programme\'s environmental impact is easy to quantify: more than two tonnes of plastic removed from the coastal environment each month; cleaner beaches; fewer plastic-choked mangrove roots; fewer entanglements in fishing gear. The fishers who work near the collection areas notice the difference. The mangrove forest that lines part of Kilifi Creek, once visibly degraded by plastic accumulation, is recovering.',
+      'But the programme\'s human impact is harder to put in a press release. It shows up in the way Fatuma describes making decisions. In the way her daughter, who is twelve, announced last month that she wants to study marine biology. In the savings books group members pull out at monthly meetings, tracking contributions that are building toward futures that plastic collection alone did not purchase — but made possible.',
+      'Oceans Alive designed Trash4Cash around the insight that women in coastal communities are the primary managers of household waste, and that they have the networks, the organisational capacity, and the motivation to run collection operations efficiently. What the programme provided was infrastructure: a guaranteed buyer, a fair price, basic equipment, and the legitimacy of a formal employer-employee relationship. In communities where it operates, women\'s incomes have increased by an average of 40%.',
+    ],
+    bodyImages: [
+      { src: '/images/trashforcash2.jpg', alt: 'Women sorting and weighing plastic', caption: 'Trash4Cash participants sort collected plastic by type at a collection point — precision work that maximises the value of every kilogram sold to recycling partners.' },
+      { src: '/images/womenlearning2.jpg', alt: 'Women in financial literacy training', caption: 'Financial literacy training alongside the environmental programme has helped group members convert Trash4Cash income into long-term household savings.' },
+    ],
+    relatedSlugs: ['trash4cash-women', 'kuruwitu-comeback', 'lift-network-eco-market'],
+  },
+
+  'reef-gardener-journal': {
+    heroImage: '/images/man.jpg',
+    heroImageAlt: 'Katana Ngala, coral restoration technician, preparing for a morning dive at Kuruwitu',
+    pullQuote: 'I know every nursery frame by touch. I know which corals are growing fast, which ones need watching. They are not just corals to me. I planted them.',
+    pullQuoteAttrib: 'Katana Ngala, Coral Restoration Technician, Oceans Alive Foundation',
+    body: [
+      'Katana Ngala is in the water before the sun is. On most mornings, he is the first person at the reef — checking the nursery frames before the visibility has fully improved, running his hands along the wire structures where hundreds of coral fragments grow on their way to becoming transplantable colonies. He can tell, by the way a coral feels and by its colour in the first grey light of the Indian Ocean morning, whether it has had a good week.',
+      'Katana grew up in Kilifi. As a young man, he fished — sometimes legally, sometimes in ways he now describes with a slight wince. He knew the reef was declining. Everyone knew. He just did not know what to do about it. When the coral restoration programme launched in 2019, he applied for training without being entirely sure what he was signing up for.',
+      'What he signed up for was becoming, over the next five years, one of East Africa\'s most skilled reef restoration practitioners. He has been trained in coral fragment harvesting, underwater nursery management, transplantation using stainless steel fixings and hydraulic cement, predator management, bleaching monitoring, and species identification. He has attended workshops in Madagascar and Mozambique. He has trained 40 other community members himself.',
+      'The programme\'s 85% coral survival rate — measured from nursery to twelve months post-transplant — is in large part a reflection of Katana\'s standards. He rejects fragments that do not look healthy enough. He moves corals that are in poor positions. He adjusts nursery depth when seasonal temperatures threaten to stress growing fragments. Conservation science happens in the university; the actual outcome happens with people like Katana in the water, making decisions in real time.',
+      'Ask him what the best moment of his career has been, and he does not hesitate. "There is a section of reef near the south nursery where we transplanted our first corals in 2019," he says. "Last month I dived there and counted forty-seven species of fish. In 2019, there were almost none. I did that. The community did that. That is the best feeling I have ever had."',
+    ],
+    bodyImages: [
+      { src: '/images/oceansmen.jpg', alt: 'Reef gardening team preparing equipment before a dive', caption: 'The Kuruwitu reef gardening team checks equipment before a morning restoration dive — a ritual that has taken place almost every working day since 2019.' },
+      { src: '/images/coralteaching.jpg', alt: 'Katana training new community divers', caption: 'Katana leads coral identification and handling training for new reef gardeners, passing on skills learned from Coral Guardian experts.' },
+    ],
+    relatedSlugs: ['coral-restoration-journey', 'kuruwitu-comeback', 'rebuilding-fisheries'],
+  },
+
+  // ── Community News ─────────────────────────────────────────────────────────
+
+  'bmu-new-leadership-2025': {
+    heroImage: '/images/BMUmeeting.jpg',
+    heroImageAlt: 'The newly elected Kuruwitu BMU leadership committee at their first meeting of 2025',
+    pullQuote: 'We are not here to maintain what exists. We are here to build what has never existed before — ocean governance that truly belongs to the people who live by the sea.',
+    pullQuoteAttrib: 'Newly elected BMU chair, Kuruwitu, January 2025',
+    body: [
+      'In January 2025, the Kuruwitu Beach Management Unit — one of Kenya\'s most closely watched community marine governance bodies — held its biennial leadership election. What might have seemed like a routine administrative exercise was, in practice, something more significant: a test of whether a governance model built over twenty years could survive the most basic challenge facing any institution — the peaceful transfer of power.',
+      'It passed. The election was organised and administered entirely by the BMU itself, overseen by an elected oversight committee. Three candidates stood for the chair position. There was debate, there was canvassing, and there was a result that all three candidates accepted. The outgoing chair, who has served since 2021, gave a speech that community members present described as one of the most moving they had heard — a final accounting of what four years of governance had achieved and what remained undone.',
+      'The new leadership has set out an agenda that is ambitious by any standard. First priority: the launch of a digital reef monitoring platform that will allow community members, researchers, and government officers to access fish biomass data, coral cover assessments, and enforcement logs in real time via a mobile app. The platform is being developed in partnership with a Nairobi-based conservation technology startup.',
+      'Second priority: an application to extend the co-management zone by a further 15 km² to the north, incorporating a reef system that has been unprotected for two decades and that community surveys suggest has significant recovery potential. The application is before Kenya\'s Marine Fisheries Research Institute for technical assessment, with a decision expected before the end of 2025.',
+      'For Oceans Alive, the election and the new leadership agenda represent something important: the co-management model is not dependent on any single individual, any single partner organisation, or any single funding cycle. It is self-perpetuating. The community owns it, elects it, and drives it forward. That was always the goal.',
+    ],
+    bodyImages: [
+      { src: '/images/BMUS.jpg', alt: 'BMU members in governance session', caption: 'Elected BMU representatives from across Kilifi County review the proposed co-management zone extension during the first committee meeting of 2025.' },
+      { src: '/images/kamakukijcma.jpg', alt: 'The JCMA governance framework', caption: 'The JCMA governance framework underpins the BMU mandate — displayed at the Kuruwitu community resource centre as a reminder of what the community signed into law.' },
+    ],
+    relatedSlugs: ['co-management-plan', 'rebuilding-fisheries', 'kuruwitu-comeback'],
+  },
+
+  'community-voices-ocean': {
+    heroImage: '/images/communities.jpg',
+    heroImageAlt: 'Residents of Kilifi\'s coastal communities at the annual marine conservation gathering',
+    pullQuote: 'The ocean does not belong to me. I belong to it. Every decision I make is about whether my grandchildren will still be able to say the same.',
+    pullQuoteAttrib: 'Elder fisherwoman, Vipingo village',
+    body: [
+      'Every conservation programme has numbers. Oceans Alive has some of the best: 25,000 coral colonies, 400% fish recovery, 150 km² under management. But numbers exist at a distance. They don\'t tell you why a fisherman wept the first time he saw a bumphead parrotfish return to the reef he had protected for fifteen years. They don\'t capture what it means to a fourteen-year-old girl when she snorkels in her community\'s protected zone and sees a reef she didn\'t know was possible.',
+      'We spent three weeks travelling the Kilifi coastline — from Kuruwitu to Watamu to Vipingo — and asking residents, unscripted, what the ocean means to them. Fifteen people sat with us. They spoke in Swahili, in Giriama, in English, and in combinations of all three. This is what they said.',
+      'Mohammed, 67, retired fisherman, Kuruwitu: "My father taught me to fish on this reef. His father taught him. But when I was your age, the fish were leaving. I was afraid that when my sons grew up, there would be nothing left. Now I take my grandchildren to the protected zone and I show them what a reef is supposed to look like. I did not think I would live to see this."',
+      'Amina, 34, Trash4Cash group leader, Watamu: "The ocean gives us food. The ocean gives us income. When we clean the beach, we are not doing it for the tourists — we are doing it for ourselves. A dirty ocean is a dying ocean, and a dying ocean means our children go hungry. It is that simple." And James, 29, youth volunteer: "I used to think conservation was for rich people. Oceans Alive showed me that the most important conservation happens in the communities where people actually live by the sea. That changed everything."',
+      'What strikes you, spending time with these communities, is how little daylight there is between practical survival and principled stewardship. Nobody here is protecting the ocean out of abstract concern. They are protecting it because it is the ground beneath their feet — the source of their food, their income, their identity, and their children\'s futures. Conservation that ignores this is conservation that will fail.',
+    ],
+    bodyImages: [
+      { src: '/images/oceanculturelife.jpg', alt: 'Ocean culture and community life on the coast', caption: 'Coastal community life in Kilifi is inseparable from the ocean — from daily fishing rhythms to weekly BMU governance meetings.' },
+      { src: '/images/farmernaction.jpg', alt: 'Community members in resource use mapping', caption: 'Community members participate in a resource mapping exercise — keeping the co-management plan grounded in local knowledge that no outsider could supply.' },
+    ],
+    relatedSlugs: ['bmu-new-leadership-2025', 'kuruwitu-comeback', 'trash4cash-women'],
+  },
+
+  'lift-network-eco-market': {
+    heroImage: '/images/womenlearning2.jpg',
+    heroImageAlt: 'LIFT Network women at the launch of Kilifi\'s first eco-enterprise market in Watamu',
+    pullQuote: 'We were told we needed support. What we actually needed was a market. And when we built the market ourselves, that\'s when everything changed.',
+    pullQuoteAttrib: 'LIFT Network member, Watamu',
+    body: [
+      'On a bright Saturday morning in February 2025, fifteen women from the LIFT Network opened what they call Soko la Bahari — the Sea Market — in Watamu. The name is deliberate. These are not products shipped from Nairobi, not generic handicrafts sourced at wholesale. They are hand-dyed fabrics using natural coastal plant pigments, handwoven fish traps repurposed as decorative pieces, sustainably harvested seaweed snacks, and jewellery made from ethically collected shells.',
+      'Every item on sale has a story, and the women selling them know it. That is the point. The LIFT Network — Livelihood, Independence, and Financial Transformation — was designed by Oceans Alive not as a handout programme but as a pathway to genuine economic independence. The eco-enterprise market is the most visible expression yet of what that pathway looks like when women travel it fully.',
+      'The market did not happen overnight. LIFT Network members went through twelve months of business development training, product design workshops, sustainable materials sourcing guidance, and marketing skills development. They formed a cooperative governance structure, elected officers, and opened a joint bank account. The Saturday market is the commercial outlet for everything they built.',
+      'On opening day, the market attracted more than 200 visitors — conservation tourists, hotel guests from the Watamu resort strip, and local residents who heard about it through community radio. By midday, several products had sold out. The women improvised a WhatsApp order system on the spot, which is now their primary sales channel for repeat customers from Nairobi and abroad.',
+      'For Oceans Alive, the LIFT Network eco-market demonstrates that conservation impact and economic independence are not competing goals — they reinforce each other. Women who earn independent income from sustainable products have a direct stake in the health of the coastal environment their products come from. The ocean\'s recovery and the community\'s prosperity are, at last, moving in the same direction.',
+    ],
+    bodyImages: [
+      { src: '/images/womenlearning.jpg', alt: 'LIFT Network business training session', caption: 'LIFT Network members attended twelve months of business development training before the eco-market launched — building governance structures as well as products.' },
+      { src: '/images/trashforcash3.jpg', alt: 'Women\'s economic activities along the Kilifi coast', caption: 'The LIFT Network builds on the economic foundation established by Trash4Cash — connecting environmental action directly to women\'s financial independence.' },
+    ],
+    relatedSlugs: ['trash4cash-women', 'mothers-choice-trash4cash', 'community-voices-ocean'],
+  },
+
+  // ── Latest Updates ─────────────────────────────────────────────────────────
+
+  'annual-report-2024': {
+    heroImage: '/images/kamakukijcma.jpg',
+    heroImageAlt: 'Oceans Alive Foundation team and community partners at the 2024 annual review',
+    pullQuote: '2024 was not the year we scaled. It was the year we proved we could scale without losing the thing that makes us work: the community.',
+    pullQuoteAttrib: 'Desmond Bowden, Director & CEO, Oceans Alive Foundation',
+    body: [
+      'Annual reports are usually written backward — from outcomes to inputs, from impact to effort, from the headline numbers to the human stories underneath them. This one starts differently. It starts with a question: what did 2024 feel like?',
+      'It felt like arrival. Not in the sense that the work is done — it is not, and may never be, and that is the nature of conservation work in a world of accelerating climate change. But 2024 was the year when several long-running efforts converged into something bigger than their parts. The coral restoration programme passed 25,000 colonies planted. The co-management zone registered its first full year of formal governance data — and the data showed what the fishers already knew: the fish are coming back. And the IUCN World Conservation Congress, held in 2025, was shaped by months of preparation that defined much of 2024.',
+      'The numbers tell part of the story. 25,000 coral colonies planted with an 85% survival rate that exceeds most comparable programmes globally. 150 km² under formal community co-management. 80+ women employed in Trash4Cash, removing 2+ tonnes of plastic monthly. 2,500+ students reached through ocean education. 14 active programmes spanning ecosystem restoration, fisheries governance, livelihoods, education, health, and media.',
+      'But the numbers that matter most are harder to quantify. The moment when a BMU chair said, in a governance meeting attended by county and national government officials, "this is our ocean and we will govern it." The daughter of a Trash4Cash participant who announced she wants to study marine biology. The 67-year-old fisherman who, for the first time in his adult life, saw a bumphead parrotfish on the Kuruwitu reef.',
+      'In 2025 and beyond, Oceans Alive will expand the co-management zone, launch the digital reef monitoring platform, open the Watamu Youth Marine Education Centre, and continue making the case that community-led conservation is not a compromise between human development and ecological recovery — it is the only model that achieves both. The annual report is available to download from our resources page.',
+    ],
+    bodyImages: [
+      { src: '/images/oceanday.jpg', alt: 'World Ocean Day 2024 community gathering', caption: 'Over 800 community members gathered at Kuruwitu for World Ocean Day 2024 — the single largest conservation event in Kilifi\'s history.' },
+      { src: '/images/Capacityassess.jpg', alt: 'Annual programme review and capacity assessment', caption: 'Staff and community partners in the annual programme review — a process that drives adaptation and evidence-based planning across all 14 programmes.' },
+    ],
+    relatedSlugs: ['iucn-2025', 'world-ocean-day-2025', 'kuruwitu-comeback'],
+  },
+
+  'world-ocean-day-2025': {
+    heroImage: '/images/oceanday.jpg',
+    heroImageAlt: 'Dawn preparations for World Ocean Day celebrations at Kuruwitu reef',
+    pullQuote: 'Every year Ocean Day gets bigger. This year, the reef itself will be the centrepiece. We want everyone in Kilifi to touch it and understand what they are protecting.',
+    pullQuoteAttrib: 'Tilda Bowden, Education Director, Oceans Alive Foundation',
+    body: [
+      'On June 8th, 2025 — World Ocean Day — the Indian Ocean will be the main stage, and everyone in Kilifi County is invited.',
+      'This year\'s celebration is the most ambitious Oceans Alive has hosted. It begins at 6 AM with a community reef walk at low tide — guided by trained community educators, open to all ages, no experience required. At 8 AM, twelve certified community divers will descend to the coral nurseries and transplanted reef sections for a simultaneous restoration dive, with underwater cameras broadcasting live to a screen on the beach. Children can watch the reef gardeners at work in real time.',
+      'At 10 AM, we will officially open the Watamu Youth Marine Education Centre — a permanent facility that will host school groups, youth conservation training, citizen science workshops, and international research collaborations year-round. The centre has been two years in planning and represents the most significant investment Oceans Alive has made in ocean education infrastructure to date.',
+      'The afternoon programme includes a live music stage featuring coastal Kenya artists, a community conservation market hosted by the LIFT Network, interactive species identification workshops, and the public launch of the OAF Reef Monitor app — a citizen science platform allowing registered community members to log reef observations, report violations, and track fish populations from their phones.',
+      'There will be food, music, and children snorkelling for the first time. But at the centre of all of it will be the reef itself — the same reef that was rubble twenty years ago and is now one of the most closely studied and genuinely recovering coral ecosystems in the Western Indian Ocean. All events are free. To receive programme updates and register for the guided reef walk, contact us through the website or WhatsApp.',
+    ],
+    bodyImages: [
+      { src: '/images/kids.jpg', alt: 'Children at a previous World Ocean Day celebration', caption: 'School groups from across Kilifi County attend World Ocean Day at Kuruwitu each year — many children experiencing the reef for the very first time.' },
+      { src: '/images/learning.jpg', alt: 'Ocean education activities at the Kuruwitu sanctuary', caption: 'Hands-on learning drives every Oceans Alive education event. The new Watamu centre will allow this to happen year-round, for thousands more children.' },
+    ],
+    relatedSlugs: ['annual-report-2024', 'youth-conservation', 'world-ocean-day-2024'],
+  },
+
+  'volunteer-coral-survey-2025': {
+    heroImage: '/images/learning.jpg',
+    heroImageAlt: 'Volunteer trainees at the Kuruwitu coral monitoring and survey training programme',
+    pullQuote: 'The best volunteers are not always the ones with the most experience. They are the ones who can be genuinely useful within six days — and never stop wanting to know what is down there.',
+    pullQuoteAttrib: 'Coral survey coordinator, Oceans Alive Foundation',
+    body: [
+      'We are looking for twenty people who want to do something real. Not symbolic conservation tourism, not photo opportunities — real work. Joining Oceans Alive\'s Q3 2025 coral survey team means spending six days learning a scientifically rigorous reef monitoring methodology and then putting it to use on one of East Africa\'s most closely monitored marine ecosystems.',
+      'The coral monitoring survey is conducted every quarter at Kuruwitu. Trained teams use point intercept transect methodology to assess live coral cover, dead coral, algae cover, and substrate composition across permanent monitoring sites. Fish biomass surveys run alongside, using underwater visual census techniques. The data collected feeds directly into the annual monitoring report underpinning the BMU\'s co-management plan and Kenya Fisheries Service compliance assessments.',
+      'This is not a beginners\' snorkelling holiday. It is volunteer-powered science. But no prior marine biology experience is required — what is required is the ability to swim comfortably, the willingness to spend up to four hours in the water daily, and the patience for methodical work that does not always produce dramatic results but is the foundation of everything that the dramatic results depend on.',
+      'Training takes place over the first six days of the programme, led by Oceans Alive\'s research team and experienced community divers including Katana Ngala — the lead coral restoration technician who has been monitoring this reef daily since 2019. You will learn coral species identification, survey methodology, data recording, and underwater navigation. By the end of training week, you will be conducting surveys independently.',
+      'The programme runs from July 14th to August 8th 2025. Volunteers commit to a minimum of two weeks, with the option to extend. Accommodation can be arranged at the Kuruwitu community lodge at cost price. International volunteers are welcome; Kenyan nationals from coastal counties are particularly encouraged to apply. To apply, email volunteer@oceansalive.org with a brief paragraph about why you want to join. No formal form — just tell us who you are.',
+    ],
+    bodyImages: [
+      { src: '/images/Capacityassess.jpg', alt: 'Volunteers in coral survey training at Kuruwitu', caption: 'Survey volunteers receive hands-on training in point intercept transect methodology from experienced community conservation officers.' },
+      { src: '/images/interns.jpg', alt: 'Previous volunteer cohort at the Kuruwitu project', caption: 'Previous survey volunteers from Kenya and internationally have contributed data that directly underpins the Kuruwitu co-management plan.' },
+    ],
+    relatedSlugs: ['ocean-leaders', 'annual-report-2024', 'coral-restoration-journey'],
+  },
 };
 
 // ─── Static params ────────────────────────────────────────────────────────────
