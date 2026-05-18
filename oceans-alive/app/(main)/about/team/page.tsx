@@ -16,24 +16,8 @@ const GRADIENTS = [
   ['#1a4a5a','#022F4E'],
 ];
 
-// Apple-style grid config — col spans on lg (6-col grid), must total 6 per row
-const APPLE_GRID: { span: 3 | 2 | 1; mobile: 2 | 1 }[] = [
-  { span: 3, mobile: 2 }, // 00 Ali Kaka
-  { span: 3, mobile: 2 }, // 01 Des Bowden
-  { span: 2, mobile: 1 }, // 02 Lionel
-  { span: 2, mobile: 1 }, // 03 Sarah
-  { span: 2, mobile: 1 }, // 04 Alice
-  { span: 2, mobile: 1 }, // 05 Tilda
-  { span: 2, mobile: 1 }, // 06 Remmy
-  { span: 2, mobile: 1 }, // 07 Katana
-  { span: 2, mobile: 1 }, // 08 John
-  { span: 2, mobile: 1 }, // 09 Roseline
-  { span: 2, mobile: 1 }, // 10 Teddy
-  { span: 2, mobile: 1 }, // 11 Cameron
-  { span: 1, mobile: 1 }, // 12 Ledama
-  { span: 1, mobile: 1 }, // 13 Patrick
-  { span: 2, mobile: 2 }, // 14 Chris
-];
+// All cards uniform — same size as the smallest (Ledama/Patrick style)
+
 
 
 export default function TeamPage() {
@@ -161,24 +145,18 @@ export default function TeamPage() {
             </p>
           </div>
 
-          {/* ── 6-column Apple grid ── */}
-          <div className="grid grid-cols-2 lg:grid-cols-6 gap-2">
+          {/* ── Uniform square grid ── */}
+          <div className="grid grid-cols-3 lg:grid-cols-6 gap-3">
             {TEAM_MEMBERS.map((member, i) => {
-              const cfg    = APPLE_GRID[i] ?? { span: 2, mobile: 1 };
-              const gFrom  = GRADIENTS[i % GRADIENTS.length][0];
-              const gTo    = GRADIENTS[i % GRADIENTS.length][1];
-              const isHero = i < 2;
-
-              const lgSpanClass = { 3: 'lg:col-span-3', 2: 'lg:col-span-2', 1: 'lg:col-span-1' }[cfg.span];
-              const smSpanClass = { 2: 'col-span-2', 1: 'col-span-1' }[cfg.mobile];
-              const heightClass = isHero ? 'h-[260px]' : 'h-[200px]';
+              const gFrom = GRADIENTS[i % GRADIENTS.length][0];
+              const gTo   = GRADIENTS[i % GRADIENTS.length][1];
 
               return (
                 <div
                   key={member.name}
-                  className={`group relative overflow-hidden rounded-[2.5rem] bg-[#111] ${smSpanClass} ${lgSpanClass} ${heightClass}
+                  className="group relative overflow-hidden rounded-[2.5rem] bg-[#111] col-span-1 aspect-square
                     border border-white/[0.06] hover:border-white/[0.14]
-                    transition-all duration-500 ease-out cursor-default`}
+                    transition-all duration-500 ease-out cursor-default"
                 >
                   {/* Full-bleed image or gradient placeholder */}
                   <div className="absolute inset-0">
@@ -197,14 +175,14 @@ export default function TeamPage() {
                         {/* Oversized initial as abstract background art */}
                         <span
                           className="font-poppins font-black text-white/[0.07] select-none leading-none"
-                          style={{ fontSize: isHero ? '14rem' : '8rem' }}
+                          style={{ fontSize: '8rem' }}
                         >
                           {member.name.charAt(0)}
                         </span>
                         {/* Centered monogram */}
                         <span
                           className="absolute font-poppins font-bold text-white/50"
-                          style={{ fontSize: isHero ? '3.5rem' : '2rem' }}
+                          style={{ fontSize: '1.75rem' }}
                         >
                           {member.initials}
                         </span>
@@ -223,26 +201,17 @@ export default function TeamPage() {
                   </div>
 
                   {/* Bottom text block */}
-                  <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
-                    <h3
-                      className="font-poppins font-bold text-white leading-tight"
-                      style={{ fontSize: isHero ? '1.35rem' : '0.9rem' }}
-                    >
+                  <div className="absolute bottom-0 left-0 right-0 p-3 z-10">
+                    <h3 className="font-poppins font-bold text-white leading-tight text-[0.82rem]">
                       {member.name}
                     </h3>
-                    <p
-                      className="text-white/40 mt-0.5 uppercase tracking-widest"
-                      style={{ fontSize: '0.6rem' }}
-                    >
+                    <p className="text-white/40 mt-0.5 uppercase tracking-widest text-[0.55rem]">
                       {member.role}
                     </p>
                     {/* Bio — slides in on hover */}
-                    <div className="overflow-hidden max-h-0 group-hover:max-h-14 transition-all duration-500 ease-out">
-                      <p
-                        className="text-white/30 leading-relaxed mt-2"
-                        style={{ fontSize: '0.65rem' }}
-                      >
-                        {member.bio.slice(0, isHero ? 110 : 72)}{member.bio.length > (isHero ? 110 : 72) ? '…' : ''}
+                    <div className="overflow-hidden max-h-0 group-hover:max-h-10 transition-all duration-500 ease-out">
+                      <p className="text-white/30 leading-relaxed mt-1 text-[0.58rem]">
+                        {member.bio.slice(0, 60)}{member.bio.length > 60 ? '…' : ''}
                       </p>
                     </div>
                   </div>
@@ -259,7 +228,7 @@ export default function TeamPage() {
             {/* ── Join card ── */}
             <Link
               href="/contact?type=Volunteer"
-              className="group relative col-span-1 lg:col-span-2 h-[200px] rounded-[2.5rem] overflow-hidden
+              className="group relative col-span-1 aspect-square rounded-[2.5rem] overflow-hidden
                 border border-dashed border-white/[0.10] hover:border-white/[0.22]
                 flex items-center justify-center transition-all duration-500"
             >
@@ -267,11 +236,11 @@ export default function TeamPage() {
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                 style={{ background: 'radial-gradient(ellipse at center, rgba(46,191,209,0.05) 0%, transparent 70%)' }}
               />
-              <div className="relative text-center px-8">
-                <div className="w-12 h-12 rounded-2xl border border-white/[0.12] group-hover:border-white/30 flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110">
-                  <span className="text-white/25 group-hover:text-white text-2xl leading-none transition-colors">+</span>
+              <div className="relative text-center px-4">
+                <div className="w-8 h-8 rounded-xl border border-white/[0.12] group-hover:border-white/30 flex items-center justify-center mx-auto mb-2 transition-all duration-300 group-hover:scale-110">
+                  <span className="text-white/25 group-hover:text-white text-lg leading-none transition-colors">+</span>
                 </div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-white/20 group-hover:text-white/50 transition-colors">
+                <p className="text-[9px] font-semibold uppercase tracking-[0.25em] text-white/20 group-hover:text-white/50 transition-colors">
                   Join the team
                 </p>
                 <p className="text-[10px] text-white/12 mt-1">
