@@ -35,7 +35,7 @@ export default function AdminDashboard() {
         supabase.from('newsletter_subscribers').select('*', { count: 'exact', head: true }),
       ]);
 
-      const totalAmount = donationsData.data?.reduce((sum, d) => sum + d.amount, 0) || 0;
+      const totalAmount = donationsData.data?.reduce((sum: number, d: any) => sum + d.amount, 0) || 0;
 
       setStats({
         totalPosts: postsData.count || 0,

@@ -2,10 +2,16 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Hero from '@/components/common/Hero';
 import { GALLERY_CATEGORIES } from '@/lib/constants';
 import { GalleryItem } from '@/lib/types';
 import { apiClient } from '@/lib/api-client';
+
+const LOCAL_PREVIEWS = [
+  { src: '/images/divers.jpg', alt: 'Coral restoration divers' },
+  { src: '/images/trashforcash.jpg', alt: 'Trash4Cash programme' },
+  { src: '/images/BMUmeeting.jpg', alt: 'Community BMU meeting' },
+  { src: '/images/oceanday.jpg', alt: 'World Ocean Day celebration' },
+];
 
 export default function Gallery() {
   const [items, setItems] = useState<GalleryItem[]>([]);
@@ -21,20 +27,14 @@ export default function Gallery() {
   const fetchGallery = async () => {
     setLoading(true);
     try {
-      const response = await apiClient.getGalleryItems(
-        1,
-        24,
-        selectedType || undefined
-      );
+      const response = await apiClient.getGalleryItems(1, 24, selectedType || undefined);
       let data = response.data || [];
-
       if (selectedCategory) {
-        data = data.filter((item) => item.category === selectedCategory);
+        data = data.filter((item: GalleryItem) => item.category === selectedCategory);
       }
-
       setItems(data);
-    } catch (error) {
-      console.error('Failed to fetch gallery:', error);
+    } catch {
+      setItems([]);
     } finally {
       setLoading(false);
     }
@@ -47,120 +47,146 @@ export default function Gallery() {
 
   return (
     <>
-      <Hero
-        title="Photo & Video Gallery"
-        subtitle="Visual Stories of Our Work"
-        description="Explore our conservation projects, community activities, and the beauty of Kenya's marine ecosystems."
-      />
+      {/* ── Hero ─────────────────────────────────────────────── */}
+      <section className="bg-ocean-midnight py-20 md:py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 items-center mb-12">
+            <div>
+              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-5 flex items-center gap-3">
+                <span className="w-8 h-px bg-ocean-turquoise inline-block" />
+                Kilifi County, Kenya
+              </p>
+              <h1 className="font-poppins font-bold text-white text-5xl md:text-6xl leading-tight mb-4">
+                Visual Stories<br />
+                <span className="text-ocean-turquoise">of Our Work</span>
+              </h1>
+              <p className="text-white/65 text-lg max-w-xl leading-relaxed">
+                Explore conservation projects, community life, and the beauty of Kenya's marine ecosystems.
+              </p>
+            </div>
+          </div>
 
-      <section className="py-16 md:py-24">
-        <div className="container-fluid">
-          {/* Filters */}
-          <div className="max-w-4xl mx-auto mb-12">
-            {/* Type Filter */}
-            <div className="mb-6">
-              <h3 className="font-poppins font-semibold text-ocean-midnight mb-3">Media Type</h3>
-              <div className="flex flex-wrap gap-2">
-                <button
-                  onClick={() => setSelectedType(null)}
-                  className={`px-4 py-2 rounded-lg font-poppins text-sm transition-colors ${
-                    selectedType === null
-                      ? 'bg-ocean-turquoise text-white'
-                      : 'bg-gray-200 text-ocean-midnight hover:bg-gray-300'
-                  }`}
-                >
-                  All Media
-                </button>
-                <button
-                  onClick={() => setSelectedType('photo')}
-                  className={`px-4 py-2 rounded-lg font-poppins text-sm transition-colors ${
-                    selectedType === 'photo'
-                      ? 'bg-ocean-turquoise text-white'
-                      : 'bg-gray-200 text-ocean-midnight hover:bg-gray-300'
-                  }`}
-                >
-                  📷 Photos
-                </button>
-                <button
-                  onClick={() => setSelectedType('video')}
-                  className={`px-4 py-2 rounded-lg font-poppins text-sm transition-colors ${
-                    selectedType === 'video'
-                      ? 'bg-ocean-turquoise text-white'
-                      : 'bg-gray-200 text-ocean-midnight hover:bg-gray-300'
-                  }`}
-                >
-                  🎥 Videos
-                </button>
+          {/* Photo mosaic in hero */}
+          <div className="grid grid-cols-4 gap-2 rounded-2xl overflow-hidden" style={{ height: '240px' }}>
+            {LOCAL_PREVIEWS.map((p, i) => (
+              <div key={p.src} className={`relative overflow-hidden ${i === 0 ? 'col-span-2' : ''}`}>
+                <Image src={p.src} alt={p.alt} fill className="object-cover hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-ocean-midnight/30" />
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+
+          {/* Filters */}
+          <div className="flex flex-wrap items-center gap-6 mb-10 pb-8 border-b border-gray-100">
+            {/* Type */}
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mr-1">Type</span>
+              {[
+                { label: 'All', value: null as null },
+                { label: 'Photos', value: 'photo' as const },
+                { label: 'Videos', value: 'video' as const },
+              ].map((t) => (
+                <button
+                  key={String(t.value)}
+                  onClick={() => setSelectedType(t.value)}
+                  className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all border ${
+                    selectedType === t.value
+                      ? 'bg-ocean-midnight border-ocean-midnight text-white'
+                      : 'border-gray-200 text-gray-600 hover:border-ocean-midnight/40'
+                  }`}
+                >
+                  {t.label}
+                </button>
+              ))}
             </div>
 
-            {/* Category Filter */}
-            <div>
-              <h3 className="font-poppins font-semibold text-ocean-midnight mb-3">Category</h3>
-              <div className="flex flex-wrap gap-2">
+            <div className="w-px h-6 bg-gray-200 hidden sm:block" />
+
+            {/* Category */}
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mr-1">Category</span>
+              <button
+                onClick={() => setSelectedCategory(null)}
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all border ${
+                  selectedCategory === null
+                    ? 'bg-ocean-turquoise border-ocean-turquoise text-white'
+                    : 'border-gray-200 text-gray-600 hover:border-ocean-turquoise/40'
+                }`}
+              >
+                All
+              </button>
+              {GALLERY_CATEGORIES.map((cat) => (
                 <button
-                  onClick={() => setSelectedCategory(null)}
-                  className={`px-4 py-2 rounded-lg font-poppins text-sm transition-colors ${
-                    selectedCategory === null
-                      ? 'bg-ocean-turquoise text-white'
-                      : 'bg-gray-200 text-ocean-midnight hover:bg-gray-300'
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all border ${
+                    selectedCategory === cat
+                      ? 'bg-ocean-turquoise border-ocean-turquoise text-white'
+                      : 'border-gray-200 text-gray-600 hover:border-ocean-turquoise/40'
                   }`}
                 >
-                  All Categories
+                  {cat}
                 </button>
-                {GALLERY_CATEGORIES.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-lg font-poppins text-sm transition-colors ${
-                      selectedCategory === category
-                        ? 'bg-ocean-turquoise text-white'
-                        : 'bg-gray-200 text-ocean-midnight hover:bg-gray-300'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
+              ))}
             </div>
           </div>
 
           {/* Gallery Grid */}
           {loading ? (
-            <div className="text-center py-12">
-              <p className="text-gray-600">Loading gallery...</p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+              {Array.from({ length: 8 }).map((_, i) => (
+                <div key={i} className={`rounded-xl bg-gray-100 animate-pulse ${i % 5 === 0 ? 'h-64' : 'h-44'}`} />
+              ))}
             </div>
           ) : items.length === 0 ? (
-            <div className="text-center py-12">
-              <p className="text-gray-600">No items found. Check back soon!</p>
+            <div className="text-center py-24">
+              <div className="relative w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 opacity-30">
+                <Image src="/images/divers.jpg" alt="" fill className="object-cover" />
+              </div>
+              <h3 className="text-xl font-poppins font-bold text-gray-400 mb-2">No items found</h3>
+              <p className="text-gray-400 text-sm">Try a different filter or check back soon.</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-12">
-              {items.map((item) => (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+              {items.map((item, i) => (
                 <div
                   key={item.id}
-                  className="relative h-48 overflow-hidden rounded-lg cursor-pointer group"
+                  className={`relative overflow-hidden rounded-xl cursor-pointer group ${i % 7 === 0 ? 'col-span-2 row-span-2 h-64' : 'h-44'}`}
                   onClick={() => setSelectedItem(item)}
                 >
                   {item.type === 'photo' && item.image_url ? (
                     <img
                       src={item.image_url}
                       alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                  ) : item.type === 'video' && item.video_url ? (
-                    <div className="w-full h-full bg-gradient-to-br from-ocean-turquoise to-ocean-midnight flex items-center justify-center">
-                      <div className="text-white text-4xl">▶</div>
+                  ) : item.type === 'video' ? (
+                    <div className="w-full h-full bg-gradient-to-br from-ocean-midnight to-[#0a4f7a] flex items-center justify-center">
+                      <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-ocean-turquoise transition-colors">
+                        <svg className="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
                     </div>
                   ) : null}
 
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-end">
-                    <div className="w-full p-3 bg-gradient-to-t from-black to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                      <p className="font-poppins font-semibold text-sm line-clamp-2">{item.title}</p>
-                      <p className="text-xs opacity-75">{item.category}</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="p-3 w-full">
+                      <p className="text-white text-xs font-semibold line-clamp-2 leading-tight">{item.title}</p>
+                      <p className="text-white/55 text-[10px] mt-0.5 uppercase tracking-widest">{item.category}</p>
                     </div>
                   </div>
+
+                  {item.type === 'video' && (
+                    <div className="absolute top-3 right-3 bg-white/15 text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">
+                      Video
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -168,58 +194,54 @@ export default function Gallery() {
         </div>
       </section>
 
-      {/* Lightbox Modal */}
+      {/* Lightbox */}
       {selectedItem && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-ocean-midnight/95 backdrop-blur-sm z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedItem(null)}
         >
           <div
-            className="bg-white rounded-lg max-w-4xl max-h-[90vh] overflow-y-auto w-full"
+            className="bg-white rounded-2xl max-w-4xl max-h-[90vh] overflow-y-auto w-full shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
-            <button
-              onClick={() => setSelectedItem(null)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl z-10 bg-white rounded-full w-10 h-10 flex items-center justify-center"
-            >
-              ✕
-            </button>
-
-            {/* Content */}
-            <div className="p-6">
+            <div className="relative">
               {selectedItem.type === 'photo' && selectedItem.image_url ? (
-                <img
-                  src={selectedItem.image_url}
-                  alt={selectedItem.title}
-                  className="w-full h-auto rounded-lg mb-4"
-                />
+                <img src={selectedItem.image_url} alt={selectedItem.title} className="w-full h-auto max-h-[60vh] object-cover rounded-t-2xl" />
               ) : selectedItem.type === 'video' && selectedItem.video_url ? (
                 <iframe
                   width="100%"
-                  height="500"
+                  height="420"
                   src={`https://www.youtube.com/embed/${extractYouTubeId(selectedItem.video_url)}`}
                   title={selectedItem.title}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                  className="rounded-lg mb-4"
+                  className="rounded-t-2xl"
                 />
               ) : null}
 
-              <h2 className="text-3xl font-poppins font-bold text-ocean-midnight mb-2">
-                {selectedItem.title}
-              </h2>
+              <button
+                onClick={() => setSelectedItem(null)}
+                className="absolute top-3 right-3 w-9 h-9 bg-ocean-midnight/70 hover:bg-ocean-midnight text-white rounded-xl flex items-center justify-center transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
 
-              <div className="flex items-center gap-4 mb-4">
-                <span className="text-sm font-poppins font-semibold text-ocean-turquoise uppercase">
-                  {selectedItem.type === 'photo' ? '📷 Photo' : '🎥 Video'}
+            <div className="p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <span className={`text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full ${
+                  selectedItem.type === 'photo' ? 'bg-ocean-turquoise/10 text-ocean-turquoise' : 'bg-ocean-midnight/10 text-ocean-midnight'
+                }`}>
+                  {selectedItem.type === 'photo' ? 'Photo' : 'Video'}
                 </span>
-                <span className="text-sm text-gray-600">{selectedItem.category}</span>
+                <span className="text-xs text-gray-400">{selectedItem.category}</span>
               </div>
-
+              <h2 className="text-2xl font-poppins font-bold text-ocean-midnight mb-2">{selectedItem.title}</h2>
               {selectedItem.description && (
-                <p className="text-gray-700 text-lg leading-relaxed">{selectedItem.description}</p>
+                <p className="text-gray-600 leading-relaxed">{selectedItem.description}</p>
               )}
             </div>
           </div>

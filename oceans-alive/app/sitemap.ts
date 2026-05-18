@@ -63,7 +63,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ];
 
     // Blog post pages
-    const blogPages = (posts || []).map((post) => ({
+    const blogPages = (posts || []).map((post: any) => ({
       url: `${SITE_URL}/blog/${post.slug}`,
       lastModified: new Date(post.updated_at),
       changeFrequency: 'monthly' as const,
@@ -71,7 +71,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }));
 
     // Resource pages
-    const resourcePages = (resources || []).map((resource) => ({
+    const resourcePages = (resources || []).map((resource: any) => ({
       url: `${SITE_URL}/resources/${resource.id}`,
       lastModified: new Date(resource.updated_at),
       changeFrequency: 'monthly' as const,

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Poppins, Rugrats_Sans } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/common/Navbar';
 import Footer from '@/components/common/Footer';
@@ -17,12 +17,6 @@ const poppins = Poppins({
   display: 'swap',
 });
 
-const rugraStans = Rugrats_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-rugrats',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: {
@@ -65,7 +59,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${rugraStans.variable}`}
+      className={`${poppins.variable}`}
     >
       <body>
         <Navbar />
