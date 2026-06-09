@@ -444,6 +444,9 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
             />
           </div>
         )}
+        {/* Dark overlay for text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
+
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-32">
           <Link
             href="/programmes"
