@@ -10,27 +10,27 @@ export const metadata = {
 const VALUES = [
   {
     title: 'Community-Led',
-    body: 'Solutions designed by and for local communities — the people who know the ocean best and have the most to gain from protecting it.',
+    body: 'The people closest to the ocean are best placed to care for it. We work alongside communities to develop solutions that reflect local knowledge, priorities and experience.',
     color: 'from-ocean-midnight to-[#0a3560]',
   },
   {
-    title: 'Sustainability',
-    body: 'Long-term environmental and social benefits that outlast any single project, grant cycle, or funding partner.',
+    title: 'Long-Term Thinking',
+    body: 'We focus on lasting outcomes rather than short-term projects, helping communities build the skills, partnerships and financial resilience needed to sustain change.',
     color: 'from-[#1a6b5a] to-[#0e4a3c]',
   },
   {
-    title: 'Education',
-    body: 'Empowering people with knowledge and skills so conservation capacity stays local — not dependent on outside experts.',
+    title: 'Learning & Education',
+    body: 'Knowledge creates opportunity. We support learning at every level, from school programmes and community training to citizen science and leadership development.',
     color: 'from-[#0a4f7a] to-[#0e6b8a]',
   },
   {
-    title: 'Conservation',
-    body: 'Protecting marine biodiversity and ecosystems through evidence-based action — restoring what was lost, protecting what remains.',
+    title: 'Conservation in Action',
+    body: 'We protect and restore marine ecosystems through practical, evidence-based conservation that benefits both nature and people.',
     color: 'from-[#6b3a00] to-[#9a5500]',
   },
   {
     title: 'Partnership',
-    body: 'Collaborating with communities, governments, researchers, and responsible businesses who share our values and amplify our reach.',
+    body: 'Meaningful change happens when communities, government, researchers and responsible businesses work together toward shared goals.',
     color: 'from-[#3d1a6b] to-[#4f2a8a]',
   },
 ];
@@ -74,15 +74,13 @@ export default function MissionPage() {
 
           <div className="max-w-3xl">
             <p className="text-gray-600 text-lg leading-relaxed mb-5">
-              Oceans Alive Foundation empowers Kenya&apos;s coastal communities to become the stewards
-              of the ocean on which they depend — restoring coral reefs, rebuilding fisheries,
-              and securing livelihoods for generations to come.
+              Oceans Alive works with Kenya's coastal communities to restore marine ecosystems, strengthen local livelihoods and support community-led stewardship of the ocean.
             </p>
             <p className="text-gray-500 leading-relaxed">
-              Our aim is to create, promote, facilitate, and accelerate environmental, economic,
-              and socio-cultural change for good on the Kenyan coast. Every programme we run is
-              community-driven, evidence-based, and designed to deliver measurable impact across
-              ecology, governance, and livelihoods.
+              Everything we do is built on a simple belief: lasting conservation happens when the people who depend on marine resources are trusted and supported to manage them.
+            </p>
+            <p className="text-gray-500 leading-relaxed mt-4">
+              Our programmes combine conservation, community governance, education and sustainable livelihoods to create lasting benefits for both people and the environment.
             </p>
           </div>
         </div>
@@ -98,9 +96,7 @@ export default function MissionPage() {
                 Our Vision
               </p>
               <p className="text-white text-2xl md:text-3xl font-poppins font-bold leading-snug">
-                A Kenya where every fishing community is the guardian of its own ocean —
-                and where the health of the sea guarantees the security of coastal livelihoods
-                for generations.
+                A future where thriving coastal communities and healthy oceans support one another for generations to come.
               </p>
             </div>
             <div className="text-right hidden md:block">

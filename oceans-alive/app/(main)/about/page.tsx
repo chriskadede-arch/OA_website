@@ -91,15 +91,17 @@ export default function AboutHub() {
         <div className="relative max-w-6xl mx-auto px-6">
           <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-6 flex items-center gap-3">
             <span className="w-8 h-px bg-ocean-turquoise/50 inline-block" />
-            Kilifi County, Kenya · Est. 2003
+            Kilifi County, Kenya · Est. 2017
           </p>
           <h1 className="font-poppins font-bold text-white leading-[0.9] mb-8">
             <span className="block text-6xl md:text-8xl">About</span>
             <span className="block text-6xl md:text-8xl text-ocean-turquoise">Oceans Alive</span>
           </h1>
           <p className="text-white/55 text-xl max-w-2xl leading-relaxed">
-            An action-based Kenyan not-for-profit trust — with communities, for communities.
-            Twenty years of conservation, education, and livelihoods on Kenya&apos;s coast.
+            Oceans Alive is a marine conservation organisation working along Kenya's coast to restore ocean ecosystems, strengthen local livelihoods and support community-led stewardship of marine resources.
+          </p>
+          <p className="text-white/45 text-lg max-w-2xl leading-relaxed mt-4">
+            For more than three decades, members of our team have worked alongside fishing communities, Beach Management Units, women's groups and local institutions to develop practical solutions that benefit both people and the environment.
           </p>
         </div>
       </section>

@@ -1,0 +1,72 @@
+
+> oceans-alive@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/61) ...
+   Generating static pages (15/61) 
+Sitemap generation error: TypeError: Cannot read properties of null (reading 'from')
+    at r1 (C:\Users\chris\OneDrive\Desktop\oa_website\oceans-alive\.next\server\app\sitemap.xml\route.js:37:56103)
+    at r3 (C:\Users\chris\OneDrive\Desktop\oa_website\oceans-alive\.next\server\app\sitemap.xml\route.js:37:57654)
+    at C:\Users\chris\OneDrive\Desktop\oa_website\oceans-alive\node_modules\next\dist\compiled\next-server\app-route.runtime.prod.js:6:38417
+    at C:\Users\chris\OneDrive\Desktop\oa_website\oceans-alive\node_modules\next\dist\server\lib\trace\tracer.js:140:36
+    at NoopContextManager.with (C:\Users\chris\OneDrive\Desktop\oa_website\oceans-alive\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7062)
+    at ContextAPI.with (C:\Users\chris\OneDrive\Desktop\oa_website\oceans-alive\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:518)
+    at NoopTracer.startActiveSpan (C:\Users\chris\OneDrive\Desktop\oa_website\oceans-alive\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18093)
+    at ProxyTracer.startActiveSpan (C:\Users\chris\OneDrive\Desktop\oa_website\oceans-alive\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18854)
+    at C:\Users\chris\OneDrive\Desktop\oa_website\oceans-alive\node_modules\next\dist\server\lib\trace\tracer.js:122:103
+    at NoopContextManager.with (C:\Users\chris\OneDrive\Desktop\oa_website\oceans-alive\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7062)
+   Generating static pages (30/61) 
+   Generating static pages (45/61) 
+ ✓ Generating static pages (61/61)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    2.32 kB         149 kB
+├ ○ /_not-found                          873 B          88.4 kB
+├ ○ /about                               327 B           102 kB
+├ ○ /about/mission                       178 B          96.4 kB
+├ ○ /about/partners                      769 B            97 kB
+├ ○ /about/recognition                   178 B          96.4 kB
+├ ○ /about/story                         327 B           102 kB
+├ ○ /about/team                          327 B           102 kB
+├ ○ /admin                               1.69 kB         158 kB
+├ ○ /admin/blog                          1.4 kB          158 kB
+├ ○ /blog                                3.18 kB         134 kB
+├ ● /blog/[slug]                         327 B           102 kB
+├   ├ /blog/coral-restoration-journey
+├   ├ /blog/trash4cash-women
+├   ├ /blog/youth-conservation
+├   └ [+15 more paths]
+├ ● /blog/category/[slug]                327 B           102 kB
+├   ├ /blog/category/coral-restoration
+├   ├ /blog/category/women-ocean
+├   ├ /blog/category/fisheries
+├   └ [+6 more paths]
+├ ○ /contact                             5.27 kB         149 kB
+├ ○ /donate                              11.5 kB         155 kB
+├ ○ /gallery                             3.58 kB         125 kB
+├ ○ /programmes                          327 B           102 kB
+├ ● /programmes/[slug]                   327 B           102 kB
+├   ├ /programmes/coral-restoration
+├   ├ /programmes/co-management
+├   ├ /programmes/project-reel
+├   └ [+11 more paths]
+├ ○ /resources                           3.76 kB         134 kB
+├ ○ /robots.txt                          0 B                0 B
+└ ○ /sitemap.xml                         0 B                0 B
++ First Load JS shared by all            87.5 kB
+  ├ chunks/117-1bd7fa992f80e11f.js       31.9 kB
+  ├ chunks/fd9d1056-42a1c2df9c4a85a8.js  53.6 kB
+  └ other shared chunks (total)          1.98 kB
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses getStaticProps)
+

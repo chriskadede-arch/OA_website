@@ -60,39 +60,13 @@ export default function StoryPage() {
 
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <p className="text-xl font-medium text-ocean-midnight">
-                  Our story begins in 2003 when founder Desmond Bowden responded to a call from
-                  fishermen whose livelihoods were collapsing due to coral bleaching, overfishing,
-                  and pollution.
+                  What began as a small community conservation area in Kuruwitu has grown into one of Kenya's best-known examples of community-led marine stewardship.
                 </p>
                 <p>
-                  Together, they created Kenya&apos;s first community-led marine sanctuary at Kuruwitu —
-                  just 30 hectares. That sanctuary, at the fishermen&apos;s own request, became permanent.
-                  A tengefu that would outlast every sceptic.
+                  From 30 hectares of protected reef, the model has expanded along the coast, demonstrating that when communities are given the tools and authority to manage their marine resources, conservation can strengthen livelihoods, restore ecosystems and shape policy.
                 </p>
                 <p>
-                  Thirteen years of proof became an organisation in 2016, when the Trust was registered
-                  with a mandate to carry the Kuruwitu model the full length of Kenya&apos;s 640 km coastline.
-                </p>
-                <p>
-                  In 2019, the UNDP Equator Prize arrived — global recognition for a model that had
-                  already changed lives. In the same year, hands went into the water: the coral
-                  gardening programme began. Over the next five years, 24,800 colonies would be planted
-                  by the people who depend on them most.
-                </p>
-                <p>
-                  In January 2022, Oceans Alive delivered the first Co-Management Plan in Kenya under
-                  new government guidelines — placing 150 km² of ocean under formal community-led
-                  management. Nothing like it had existed before on this coastline.
-                </p>
-                <p>
-                  In 2023, His Majesty King Charles III placed a coral restoration block bearing his
-                  royal cypher into Kuruwitu&apos;s waters — a quiet act that carried the community&apos;s work
-                  to every corner of the world.
-                </p>
-                <p>
-                  In 2025, at the IUCN World Conservation Congress, Kuruwitu was presented not as a
-                  success story — but as a template for community-led marine governance, ready to scale
-                  across the entire Western Indian Ocean.
+                  Today, Oceans Alive continues to build on those foundations, working with communities, government and partners to create healthier oceans and more resilient coastal communities.
                 </p>
               </div>
             </div>

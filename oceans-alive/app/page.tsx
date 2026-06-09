@@ -18,19 +18,14 @@ export default function Home() {
           <div className="max-w-xl">
             <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-6 flex items-center gap-3">
               <span className="w-8 h-px bg-ocean-turquoise inline-block" />
-              Kilifi County, Kenya · Est. 2003
+              Kilifi County, Kenya · Est. 2017
             </p>
             <h1 className="font-poppins font-bold text-white text-5xl md:text-6xl xl:text-7xl leading-[1.05] mb-8">
-              Protect the Ocean.<br />
-              <span className="text-ocean-turquoise">Empower the Community.</span>
+              Building a Future Where Oceans and Communities<br />
+              <span className="text-ocean-turquoise">Thrive Together</span>
             </h1>
-            <p className="text-lg text-white/80 leading-relaxed mb-4">
-              Oceans Alive Foundation empowers Kenya's coastal communities to become the stewards
-              of the ocean on which they depend — restoring coral reefs, rebuilding fisheries,
-              and securing livelihoods since 2003.
-            </p>
-            <p className="text-sm text-ocean-turquoise/80 italic mb-10">
-              "Conservation works when it begins and ends with the communities who call the ocean home."
+            <p className="text-lg text-white/80 leading-relaxed mb-10">
+              We work alongside coastal communities to strengthen fisheries management, protect marine ecosystems, and pioneer inclusive and innovative models of ocean stewardship.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-16">
@@ -51,10 +46,10 @@ export default function Home() {
             <div className="grid grid-cols-3 gap-6">
               <div>
                 <div className="text-3xl font-poppins font-bold text-ocean-turquoise">25,000+</div>
-                <div className="text-xs text-white/60 uppercase tracking-wider mt-1">Coral Colonies Planted</div>
+                <div className="text-xs text-white/60 uppercase tracking-wider mt-1">Coral Colonies Hand-Planted</div>
               </div>
               <div>
-                <div className="text-3xl font-poppins font-bold text-ocean-turquoise">150 km²</div>
+                <div className="text-3xl font-poppins font-bold text-ocean-turquoise">120 km²</div>
                 <div className="text-xs text-white/60 uppercase tracking-wider mt-1">Under Co-Management</div>
               </div>
               <div>
@@ -112,8 +107,8 @@ export default function Home() {
             {/* Stat — bottom right */}
             <div className="absolute bottom-8 right-8 text-right">
               <p className="text-[10px] text-ocean-turquoise font-bold uppercase tracking-widest mb-1">Protected Ocean</p>
-              <p className="text-5xl font-poppins font-bold text-white leading-none drop-shadow-lg">150 km²</p>
-              <p className="text-xs text-white/55 uppercase tracking-wider mt-1">Under Conservation</p>
+              <p className="text-5xl font-poppins font-bold text-white leading-none drop-shadow-lg">120 km²</p>
+              <p className="text-xs text-white/55 uppercase tracking-wider mt-1">Under Co-Management</p>
             </div>
           </div>
 
@@ -125,15 +120,14 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-14">
             <div>
-              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">Our Impact</p>
+              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">Our Joint Impact</p>
               <h2 className="text-4xl md:text-5xl font-poppins font-bold text-white leading-tight">
-                Twenty Years of<br />Measurable Change
+                21 Years of<br />Measurable Change
               </h2>
             </div>
             <div className="lg:pt-3">
               <p className="text-white/60 text-lg leading-relaxed">
-                From a 30-hectare sanctuary to Kenya's first co-management plan — delivered along
-                640 km of coastline, with communities at the centre of every decision.
+                From a 30-hectare Kuruwitu Marine Sanctuary, to Kenya's first Co-Management Area spanning 120 km², to supporting the implementation of Joint Co-Managed Areas covering 65% of the Kenya inshore Ocean.
               </p>
             </div>
           </div>
@@ -180,8 +174,8 @@ export default function Home() {
             {[
               { slug: 'coral-restoration', title: 'Coral Restoration', stat: '25,000+', statLabel: 'Colonies Planted', img: '/images/divers.jpg', grad: 'from-ocean-midnight via-[#0a3560] to-[#0a4f7a]' },
               { slug: 'trash4cash', title: 'Trash4Cash', stat: '2t', statLabel: 'Plastic / Month', img: '/images/trashforcash.jpg', grad: 'from-[#1a6b5a] via-[#124d40] to-[#0b3329]' },
-              { slug: 'ocean-education', title: 'Ocean Education', stat: '2,500+', statLabel: 'People Educated', img: '/images/kids.jpg', grad: 'from-[#0a3560] via-ocean-midnight to-[#040f1a]' },
-              { slug: 'co-management', title: 'Co-Management', stat: '150 km²', statLabel: 'Under LMMA Plan', img: '/images/kamakukijcma.jpg', grad: 'from-[#3a4f2a] via-[#263520] to-[#111a0e]' },
+              { slug: 'ocean-education', title: 'Ocean Education', stat: '10000+', statLabel: 'Local school children educated on the marine environment', img: '/images/kids.jpg', grad: 'from-[#0a3560] via-ocean-midnight to-[#040f1a]' },
+              { slug: 'co-management', title: 'Co-Management', stat: '120 km²', statLabel: 'The Kuruwitu Co-Managed Area', img: '/images/kamakukijcma.jpg', grad: 'from-[#3a4f2a] via-[#263520] to-[#111a0e]' },
             ].map((p) => (
               <Link
                 key={p.slug}
@@ -217,26 +211,20 @@ export default function Home() {
             <div>
               <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">Our Story</p>
               <h2 className="text-4xl md:text-5xl font-poppins font-bold text-ocean-midnight mb-6 leading-tight">
-                A Journey of<br />Community &amp; Ocean
+                Reimagining Marine Conservation through community leadership on Kenya's Coast
               </h2>
               <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                Oceans Alive is a Kenyan marine conservation foundation built on action. We work alongside
-                coastal communities to restore the ocean through hand-planted coral reefs, rebuilt
-                fisheries, and local stewardship.
+                Along Kenya's northern coastline, where coral reefs meet ancient forests and generations of fishing families have relied on the sea, a different approach to conservation has been taking shape.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Our story began in 2003 when a shared concern for the reef brought residents and the
-                Kuruwitu fishers together. What started as a temporary 30-hectare <em>tengefu</em> — a
-                no-take zone — became permanent at the fishermen's own request.
+                It is a story not only about protecting marine ecosystems, but about redefining who leads conservation, who benefits from it, and how lasting change is created.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8">
-                In January 2022, Oceans Alive delivered Kenya's first formal ocean co-management plan —
-                placing 150 km² of sea under community stewardship. From our roots in Kuruwitu, we now
-                accelerate this recovery across the coastline — led by the community, for the community.
+                Since its founding in 2017, Oceans Alive has grown from the success of community-led conservation efforts in Kuruwitu to become one of Kenya's leading marine conservation organisations. What makes Oceans Alive different is a simple belief: conservation works best when it is built with communities, not for them.
               </p>
               <div className="flex items-center gap-6 py-6 border-t border-gray-100">
                 <div>
-                  <div className="text-3xl font-poppins font-bold text-ocean-turquoise">2003</div>
+                  <div className="text-3xl font-poppins font-bold text-ocean-turquoise">2017</div>
                   <div className="text-xs text-gray-500 uppercase tracking-wider mt-1">Founded</div>
                 </div>
                 <div className="w-px h-12 bg-gray-200" />
@@ -292,20 +280,18 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-white/70 text-xs font-bold uppercase tracking-widest mb-4">Women &amp; Ocean</p>
+              <p className="text-white/70 text-xs font-bold uppercase tracking-widest mb-4">Women & Ocean</p>
               <h2 className="text-4xl font-poppins font-bold text-white mb-6">
                 Women at the Heart of Conservation
               </h2>
               <p className="text-white/85 leading-relaxed mb-4">
-                From coral restoration divers to eco-entrepreneurs to community leaders, women are at
-                the heart of the Oceans Alive model. The LIFT Network and Trash4Cash programmes place
-                financial independence and conservation leadership directly in the hands of Kilifi's
-                coastal women.
+                Through Oceans Alive's Social, Health and Environment (SHE) programme, women are helping shape the future of conservation across Kilifi County.
+              </p>
+              <p className="text-white/85 leading-relaxed mb-4">
+                From coral restoration and community leadership to small businesses and recycling initiatives, women are creating practical solutions that benefit both people and the environment.
               </p>
               <p className="text-white/85 leading-relaxed mb-8">
-                Women collect, sort, and sell plastic waste — transforming environmental harm into
-                economic gain while protecting the beaches and reefs that sustain their communities.
-                Over 80 women now participate, collecting more than 2 tonnes of plastic monthly.
+                Today, more than 120 women collect, sort and sell over two tonnes of plastic each month, turning waste into income while helping protect the coast they call home.
               </p>
               <Link
                 href="/programmes/trash4cash"
@@ -350,7 +336,7 @@ export default function Home() {
         {/* Rotated side text — left edge */}
         <div className="hidden lg:block absolute left-4 top-1/2 -translate-y-1/2 rotate-[-90deg] origin-center select-none pointer-events-none">
           <span className="text-[10px] font-bold uppercase tracking-[0.45em] text-ocean-turquoise/20 whitespace-nowrap">
-            Kilifi · Kenya · Est. 2003
+            Kilifi · Kenya · Est. 2017
           </span>
         </div>
 

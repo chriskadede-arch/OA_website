@@ -10,7 +10,7 @@ export const BRAND_COLORS = {
 // Site Metadata
 export const SITE_NAME = 'Oceans Alive Foundation';
 export const SITE_DESCRIPTION =
-  'Community-empowered marine conservation & education platform. Learn from our living classroom models and support sustainable fisheries.';
+  "Working with coastal communities to restore marine ecosystems, strengthen livelihoods, and create lasting positive change along Kenya's coast.";
 export const SITE_URL = 'https://oceansalive.org';
 export const SITE_TWITTER = '@oceans_alive_kenya';
 export const SITE_INSTAGRAM = '@oceans_alive_kenya';
@@ -138,14 +138,14 @@ export const TEAM_MEMBERS = [
   },
   {
     name: 'Lionel D Murage',
-    role: 'Program Manager',
+    role: 'Technical advisor',
     bio: 'Coordinates Oceans Alive\'s programme portfolio, managing delivery timelines, stakeholder relationships, and field operations across Kilifi County.',
     image: '/images/team/lionel-murage.avif',
     initials: 'LM',
   },
   {
     name: 'Sarah Sidi',
-    role: 'Human Resource Manager',
+    role: 'Admin & Human Resource Manager',
     bio: 'Manages team welfare, recruitment, and organisational development — ensuring Oceans Alive attracts and retains the talent needed to deliver its community conservation mission.',
     image: null,
     initials: 'SS',
@@ -166,7 +166,7 @@ export const TEAM_MEMBERS = [
   },
   {
     name: 'Remmy Safari',
-    role: 'Fisheries Development Manager',
+    role: 'Programme Manager',
     bio: 'Drives the BMU network and fisheries co-management programmes, supporting Beach Management Units and building governance structures that protect Kenya\'s coastal fisheries long-term.',
     image: '/images/team/remmy-safari.avif',
     initials: 'RS',
@@ -208,7 +208,7 @@ export const TEAM_MEMBERS = [
   },
   {
     name: 'Ledama Masidza',
-    role: 'Consultant',
+    role: 'Ambassador',
     bio: 'Provides specialist consultancy on community development strategy, policy advocacy, and coastal governance frameworks across OAF\'s programme areas.',
     image: null,
     initials: 'LMa',
@@ -232,10 +232,10 @@ export const TEAM_MEMBERS = [
 // Impact Stats
 export const IMPACT_STATS = [
   { label: 'Coral Colonies Hand-Planted', value: '25,000+' },
-  { label: 'Ocean Under Co-Management', value: '150 km²' },
-  { label: 'Students & Youth Educated', value: '2,500+' },
-  { label: 'Fish Biomass Increase', value: '400%' },
-  { label: 'Years of Conservation', value: '20+' },
+  { label: 'Kuruwitu Co-Managed Area and plan', value: '120 km²' },
+  { label: 'Students & Youth Educated', value: '10,000+' },
+  { label: 'The oldest Community Conservation Area in Kenya', value: '21 Years' },
+  { label: 'Fish Biomass Increase within the sanctuary', value: '400%' },
   { label: 'Coastline Protected', value: '640 km' },
   { label: 'Women in Trash4Cash', value: '80+' },
   { label: 'Community Members', value: '1,200+' },
@@ -245,38 +245,44 @@ export const IMPACT_STATS = [
 export const TIMELINE = [
   {
     year: '2003',
-    title: "Kenya's First Marine Sanctuary",
-    body: "Desmond Bowden and Kuruwitu's fishermen draw a line in the water. Thirty hectares of reef given permanent protection at the community's own request — a tengefu that would outlast every sceptic.",
-    tag: 'Founding Milestone',
-  },
-  {
-    year: '2016',
-    title: 'Oceans Alive Takes Form',
-    body: 'Thirteen years of proof become an organisation. The Trust is registered with a mandate to carry the Kuruwitu model the full length of Kenya\'s 640 km coastline.',
+    title: 'A Community Takes Action',
+    body: 'Following a devastating coral bleaching event in the late 1990s, fish stocks declined and many fishing families struggled to make a living. In Kuruwitu, community members came together, supported by local resident Des Bowden, to find a way forward.',
     tag: '',
   },
   {
-    year: '2019',
-    title: 'The World Takes Notice',
-    body: 'The UNDP Equator Prize lands. In the same breath, hands go into the water — the coral gardening programme begins. Since then, the people who depend on the reef have planted over 25,000 colonies.',
-    tag: 'Global Recognition',
+    year: '2006',
+    title: "Kenya's First Community Marine Sanctuary",
+    body: 'As part of a five-year management plan, the Kuruwitu community set aside 30 hectares of its inner lagoon as a protected area, known locally as a tengefu. What began as a local response to declining fish stocks became the foundation of a community-led approach to marine conservation.',
+    tag: 'Founding',
+  },
+  {
+    year: '2017',
+    title: 'Oceans Alive Takes Shape',
+    body: 'The Oceans Alive Foundation was established to support and expand the community-led conservation work taking place along Kenya\'s coast. Building on lessons from Kuruwitu, the organisation helps communities, government and partners work together.',
+    tag: '',
+  },
+  {
+    year: '2017',
+    title: 'Global Recognition',
+    body: 'The Kuruwitu CBO, supported by Oceans Alive, received the UNDP Equator Prize for outstanding community-led marine conservation. Community representatives Katana Ngala and Shida Shoka travelled to New York to accept the award.',
+    tag: 'UNDP Prize',
   },
   {
     year: '2022',
-    title: '150 km² Written Into Law',
-    body: "Kenya's first ocean co-management plan is signed — 150 square kilometres of sea placed under formal community stewardship. Nothing like it had existed before on this coastline.",
+    title: '120 km² of Ocean Under Co-Management',
+    body: "Years of collaboration led to the formal establishment of the Kuruwitu Co-Managed Area. Covering 120 square kilometres of ocean, it marked a major step forward for community participation in marine governance on Kenya's coast.",
     tag: 'Policy Landmark',
   },
   {
     year: '2023',
-    title: 'A King Kneels at the Reef',
-    body: "His Majesty King Charles III places a coral restoration block bearing his royal cypher into Kuruwitu's waters — a quiet act that carried the community's work to every corner of the world.",
-    tag: 'Royal Endorsement',
+    title: 'Royal Recognition',
+    body: "During a visit to Kuruwitu, His Majesty King Charles III placed a coral restoration block bearing his royal cypher into the water. The moment brought international attention to a conservation story that began with a local community.",
+    tag: 'Royal Visit',
   },
   {
     year: '2025',
-    title: 'A Blueprint for the World',
-    body: 'At the IUCN World Conservation Congress, Kuruwitu is presented not as a success story — but as a template. Community-led marine governance, ready to scale across the entire Western Indian Ocean.',
+    title: 'Sharing the Model',
+    body: 'At the IUCN World Conservation Congress, the Kuruwitu experience was presented as an example of community-led marine conservation in practice. What began as a local response to a crisis is now informing conversations about marine stewardship across the Western Indian Ocean.',
     tag: 'IUCN 2025',
   },
 ];
@@ -302,8 +308,8 @@ export const PROGRAMMES = [
     icon: '🌊',
     slug: 'co-management',
     title: 'Community Co-Management (LMMA)',
-    description: "Kenya's first LMMA. 150 km² under a formal management plan signed in 2022, placing communities at the centre of marine governance. A landmark in Kenyan marine governance history.",
-    stat: '150 km²',
+    description: "Kenya's first LMMA. 120 km² under a formal management plan signed in 2022, placing communities at the centre of marine governance. A landmark in Kenyan marine governance history.",
+    stat: '120 km²',
     statLabel: 'Under Protection',
     href: '/programmes/co-management',
     color: 'from-[#1a6b5a] to-ocean-seafoam',
@@ -341,8 +347,8 @@ export const PROGRAMMES = [
     icon: '🎓',
     slug: 'ocean-education',
     title: 'Ocean Education & Youth',
-    description: 'The tengefu is our living classroom — welcoming schools, interns, and youth groups to learn real conservation. 2,500+ young people educated in ocean literacy each year in Kilifi County.',
-    stat: '2,500+',
+    description: 'The tengefu is our living classroom — welcoming schools, interns, and youth groups to learn real conservation. 10,000+ young people educated in ocean literacy in Kilifi County.',
+    stat: '10,000+',
     statLabel: 'Youth Educated',
     href: '/programmes/ocean-education',
     color: 'from-[#0a4f7a] to-ocean-turquoise',
@@ -554,18 +560,18 @@ export const STATIC_BLOG_STORIES = [
     date: 'November 2024',
     readTime: '4 min read',
     featured: false,
-    stats: ['2,500+ students', 'Annual reach', 'Kilifi County'],
+    stats: ['10,000+ students', 'Annual reach', 'Kilifi County'],
   },
   {
     id: 'co-management-plan',
     slug: 'co-management-plan',
     title: "Kenya's Historic Ocean Co-Management Plan: What It Means for Coastal Communities",
-    excerpt: 'In January 2022, Oceans Alive made history — delivering Kenya\'s first formal ocean co-management plan and placing 150 km² under community stewardship.',
+    excerpt: 'In January 2022, Oceans Alive made history — delivering Kenya\'s first formal ocean co-management plan and placing 120 km² under community stewardship.',
     category: 'Governance',
     date: 'September 2024',
     readTime: '6 min read',
     featured: false,
-    stats: ['150 km² protected', 'First in Kenya', '20,000 residents benefiting'],
+    stats: ['120 km² protected', 'First in Kenya', '20,000 residents benefiting'],
   },
   {
     id: 'royal-visit',
@@ -632,7 +638,7 @@ export const STATIC_BLOG_STORIES = [
     date: 'April 2025',
     readTime: '9 min read',
     featured: true,
-    stats: ['400% fish biomass increase', '25,000+ corals planted', '150 km² co-managed'],
+    stats: ['400% fish biomass increase', '25,000+ corals planted', '120 km² co-managed'],
   },
   {
     id: 'mothers-choice-trash4cash',
@@ -666,7 +672,7 @@ export const STATIC_BLOG_STORIES = [
     date: 'January 2025',
     readTime: '4 min read',
     featured: true,
-    stats: ['150 km² governed', '12 BMU representatives', 'Community-led mandate'],
+    stats: ['120 km² governed', '12 BMU representatives', 'Community-led mandate'],
   },
   {
     id: 'community-voices-ocean',
@@ -695,7 +701,7 @@ export const STATIC_BLOG_STORIES = [
     id: 'annual-report-2024',
     slug: 'annual-report-2024',
     title: 'OAF Annual Report 2024: The Year the Model Proved Itself',
-    excerpt: "25,000 coral colonies. 150 km² under co-management. 80 women in Trash4Cash. A presentation at the IUCN World Congress. 2024 was the year Oceans Alive's community model proved it doesn't just work — it scales.",
+    excerpt: "25,000 coral colonies. 120 km² under co-management. 80 women in Trash4Cash. A presentation at the IUCN World Congress. 2024 was the year Oceans Alive's community model proved it doesn't just work — it scales.",
     category: 'Latest Updates',
     date: 'May 2025',
     readTime: '7 min read',
