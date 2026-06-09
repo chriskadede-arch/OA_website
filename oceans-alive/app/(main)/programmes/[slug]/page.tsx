@@ -480,44 +480,41 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
 
       {/* ── Key Stats ────────────────────────────────────────── */}
       {detail?.highlights && (
-        <section className="relative bg-gradient-to-br from-ocean-midnight via-[#0a3560] to-[#0a4f7a] py-20 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-ocean-midnight via-[#0a3560] to-[#0a4f7a] py-12 overflow-hidden">
           {/* Background pattern */}
           <div className="absolute inset-0 opacity-5 [background-image:radial-gradient(circle,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:24px_24px]" />
 
           <div className="relative max-w-6xl mx-auto px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-3">
+            <div className="text-center mb-8">
+              <h2 className="text-xl md:text-2xl font-poppins font-bold text-white mb-2">
                 Impact at a Glance
               </h2>
-              <div className="w-20 h-1 bg-ocean-turquoise mx-auto rounded-full" />
+              <div className="w-16 h-0.5 bg-ocean-turquoise mx-auto rounded-full" />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Compact stat boxes */}
+            <div className="flex flex-wrap justify-center gap-3 mb-10">
               {detail.highlights.map((h, i) => (
                 <div
                   key={h.label}
-                  className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-ocean-turquoise/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(46,191,209,0.3)] hover:-translate-y-1"
+                  className="group relative"
                 >
-                  {/* Number badge */}
-                  <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-ocean-turquoise flex items-center justify-center text-white text-xs font-bold shadow-lg">
-                    {i + 1}
-                  </div>
+                  {/* Tiny hexagonal stat box */}
+                  <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-3 min-w-[140px] hover:bg-ocean-turquoise/20 hover:border-ocean-turquoise hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-ocean-turquoise/50">
+                    {/* Corner number */}
+                    <div className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-ocean-turquoise text-white text-[9px] font-bold flex items-center justify-center shadow-md">
+                      {i + 1}
+                    </div>
 
-                  {/* Value */}
-                  <div className="text-4xl md:text-5xl font-poppins font-black text-ocean-turquoise mb-3 leading-none group-hover:scale-105 transition-transform">
-                    {h.value}
-                  </div>
+                    {/* Value */}
+                    <div className="text-2xl font-poppins font-black text-ocean-turquoise mb-1 leading-none">
+                      {h.value}
+                    </div>
 
-                  {/* Label */}
-                  <div className="text-sm text-white/70 uppercase tracking-wider leading-tight font-semibold">
-                    {h.label}
-                  </div>
-
-                  {/* Decorative corner */}
-                  <div className="absolute bottom-0 right-0 w-16 h-16 opacity-5 group-hover:opacity-10 transition-opacity">
-                    <svg viewBox="0 0 100 100" className="text-ocean-turquoise fill-current">
-                      <circle cx="80" cy="80" r="60" />
-                    </svg>
+                    {/* Label */}
+                    <div className="text-[10px] text-white/60 uppercase tracking-wide leading-tight font-medium">
+                      {h.label}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -525,14 +522,14 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
 
             {/* SDG Section for this programme */}
             {PROGRAMME_SDGS[detail.slug] && (
-              <div className="mt-16 pt-12 border-t border-white/10">
-                <div className="text-center mb-6">
-                  <p className="text-white/40 text-xs uppercase tracking-widest">
-                    Contributing to UN Sustainable Development Goals
+              <div className="pt-8 border-t border-white/10">
+                <div className="text-center mb-4">
+                  <p className="text-white/40 text-[10px] uppercase tracking-widest">
+                    Contributing to UN SDGs
                   </p>
                 </div>
                 <div className="flex justify-center">
-                  <SDGRow sdgs={PROGRAMME_SDGS[detail.slug]} size="md" />
+                  <SDGRow sdgs={PROGRAMME_SDGS[detail.slug]} size="sm" />
                 </div>
               </div>
             )}
