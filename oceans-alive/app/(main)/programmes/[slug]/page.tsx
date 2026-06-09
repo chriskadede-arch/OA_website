@@ -478,58 +478,38 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
               With us and partners: {prog.partners}
             </p>
           )}
-        </div>
-      </section>
 
-      {/* ── Key Stats ────────────────────────────────────────── */}
-      {detail?.highlights && (
-        <section className="relative bg-gradient-to-b from-ocean-midnight/80 via-ocean-midnight to-ocean-midnight py-12 overflow-hidden">
-          {/* Smooth gradient overlay for blending */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-ocean-midnight/50 to-ocean-midnight" />
-
-          {/* Subtle pattern */}
-          <div className="absolute inset-0 opacity-3 [background-image:radial-gradient(circle,rgba(255,255,255,0.2)_1px,transparent_1px)] [background-size:20px_20px]" />
-
-          <div className="relative max-w-3xl mx-auto px-6">
-            {/* Compact stat boxes - no title */}
-            <div className="flex flex-wrap justify-center gap-3 mb-10">
-              {detail.highlights.map((h) => (
-                <div
-                  key={h.label}
-                  className="group relative"
-                >
-                  {/* Tiny stat box - no numbers */}
-                  <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-3 min-w-[140px] hover:bg-ocean-turquoise/20 hover:border-ocean-turquoise hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-ocean-turquoise/50">
-                    {/* Value */}
-                    <div className="text-2xl font-poppins font-black text-ocean-turquoise mb-1 leading-none">
+          {/* Impact boxes & SDGs - integrated into hero */}
+          {detail?.highlights && (
+            <div className="mt-12 pt-8 border-t border-white/20">
+              {/* Smaller stat boxes */}
+              <div className="flex flex-wrap justify-center gap-2 mb-6">
+                {detail.highlights.map((h) => (
+                  <div
+                    key={h.label}
+                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-3 py-2 min-w-[110px] hover:bg-white/20 hover:border-ocean-turquoise/50 transition-all duration-200"
+                  >
+                    <div className="text-lg font-poppins font-bold text-white mb-0.5 leading-none">
                       {h.value}
                     </div>
-
-                    {/* Label */}
-                    <div className="text-[10px] text-white/60 uppercase tracking-wide leading-tight font-medium">
+                    <div className="text-[9px] text-white/50 uppercase tracking-wide leading-tight">
                       {h.label}
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
 
-            {/* SDG Section for this programme */}
-            {PROGRAMME_SDGS[detail.slug] && (
-              <div className="pt-8 border-t border-white/10">
-                <div className="text-center mb-4">
-                  <p className="text-white/40 text-[10px] uppercase tracking-widest">
-                    Contributing to UN SDGs
-                  </p>
-                </div>
-                <div className="flex justify-center">
+              {/* SDGs inline */}
+              {PROGRAMME_SDGS[detail.slug] && (
+                <div className="flex justify-center items-center gap-3">
+                  <span className="text-[9px] text-white/30 uppercase tracking-widest">UN SDGs</span>
                   <SDGRow sdgs={PROGRAMME_SDGS[detail.slug]} size="sm" />
                 </div>
-              </div>
-            )}
-          </div>
-        </section>
-      )}
+              )}
+            </div>
+          )}
+        </div>
+      </section>
 
       {/* ── Hero Photo ───────────────────────────────────────── */}
       {detail?.heroImage && (
