@@ -480,32 +480,23 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
 
       {/* ── Key Stats ────────────────────────────────────────── */}
       {detail?.highlights && (
-        <section className="relative bg-gradient-to-br from-ocean-midnight via-[#0a3560] to-[#0a4f7a] py-12 overflow-hidden">
-          {/* Background pattern */}
-          <div className="absolute inset-0 opacity-5 [background-image:radial-gradient(circle,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:24px_24px]" />
+        <section className="relative bg-gradient-to-b from-ocean-midnight/80 via-ocean-midnight to-ocean-midnight py-12 overflow-hidden">
+          {/* Smooth gradient overlay for blending */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-ocean-midnight/50 to-ocean-midnight" />
+
+          {/* Subtle pattern */}
+          <div className="absolute inset-0 opacity-3 [background-image:radial-gradient(circle,rgba(255,255,255,0.2)_1px,transparent_1px)] [background-size:20px_20px]" />
 
           <div className="relative max-w-6xl mx-auto px-6">
-            <div className="text-center mb-8">
-              <h2 className="text-xl md:text-2xl font-poppins font-bold text-white mb-2">
-                Impact at a Glance
-              </h2>
-              <div className="w-16 h-0.5 bg-ocean-turquoise mx-auto rounded-full" />
-            </div>
-
-            {/* Compact stat boxes */}
+            {/* Compact stat boxes - no title */}
             <div className="flex flex-wrap justify-center gap-3 mb-10">
-              {detail.highlights.map((h, i) => (
+              {detail.highlights.map((h) => (
                 <div
                   key={h.label}
                   className="group relative"
                 >
-                  {/* Tiny hexagonal stat box */}
+                  {/* Tiny stat box - no numbers */}
                   <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-3 min-w-[140px] hover:bg-ocean-turquoise/20 hover:border-ocean-turquoise hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-ocean-turquoise/50">
-                    {/* Corner number */}
-                    <div className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-ocean-turquoise text-white text-[9px] font-bold flex items-center justify-center shadow-md">
-                      {i + 1}
-                    </div>
-
                     {/* Value */}
                     <div className="text-2xl font-poppins font-black text-ocean-turquoise mb-1 leading-none">
                       {h.value}
