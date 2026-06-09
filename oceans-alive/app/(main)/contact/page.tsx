@@ -77,7 +77,7 @@ export default function Contact() {
                 <span className="text-ocean-turquoise">Together</span>
               </h1>
               <p className="text-lg text-white/70 leading-relaxed mb-10 max-w-md">
-                Whether you want to partner, volunteer, donate, or just learn more — our team
+                Whether you want to partner, volunteer, donate, or just learn more - our team
                 in Kilifi responds within 48 hours.
               </p>
 
@@ -137,7 +137,7 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
 
-            {/* Form — 3/5 width */}
+            {/* Form - 3/5 width */}
             <div className="lg:col-span-3">
 
               {/* Success state */}
@@ -284,7 +284,7 @@ export default function Contact() {
               </form>
             </div>
 
-            {/* Info Panel — 2/5 width */}
+            {/* Info Panel - 2/5 width */}
             <div className="lg:col-span-2">
               <div className="relative rounded-2xl overflow-hidden" style={{ minHeight: '520px' }}>
                 <Image

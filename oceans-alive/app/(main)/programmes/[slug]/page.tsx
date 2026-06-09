@@ -22,9 +22,9 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
     heroImage: '/images/divers.jpg',
     heroImageAlt: 'Oceans Alive community divers preparing for coral restoration at Kuruwitu',
     longDescription: [
-      "Since 2019, Oceans Alive Foundation has partnered with Coral Guardian International and Coral Reef Care to build Kenya's most active community-led coral nursery at Kuruwitu. Local fishers — the same men and women whose livelihoods depend on the reef — are trained and employed as certified reef gardeners.",
-      'Coral fragments are grown in underwater nurseries attached to metal tree structures. Once colonies reach transplantable size, community divers carefully move them to bleached and degraded areas of the reef. The result: 24,800 coral colonies planted since 2019 with an 85% survival rate — well above the global average.',
-      'The programme is deliberately designed so that the community owns it. Fishers who once dynamite-fished now guard the same reef, because they have seen it come back to life with their own hands. Within the protected tengefu, fish biomass has increased by 40% — and the fish have started coming back outside it too.',
+      "Since 2019, Oceans Alive Foundation has partnered with Coral Guardian International and Coral Reef Care to build Kenya's most active community-led coral nursery at Kuruwitu. Local fishers - the same men and women whose livelihoods depend on the reef - are trained and employed as certified reef gardeners.",
+      'Coral fragments are grown in underwater nurseries attached to metal tree structures. Once colonies reach transplantable size, community divers carefully move them to bleached and degraded areas of the reef. The result: 24,800 coral colonies planted since 2019 with an 85% survival rate - well above the global average.',
+      'The programme is deliberately designed so that the community owns it. Fishers who once dynamite-fished now guard the same reef, because they have seen it come back to life with their own hands. Within the protected tengefu, fish biomass has increased by 40% - and the fish have started coming back outside it too.',
     ],
     highlights: [
       { label: 'Coral Colonies Planted', value: '24,800' },
@@ -38,11 +38,11 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
       {
         src: '/images/oceansmen.jpg',
         alt: 'Two young Oceans Alive trained community divers',
-        caption: 'Trained community divers — local fishers turned reef guardians',
+        caption: 'Trained community divers - local fishers turned reef guardians',
       },
     ],
     quote: {
-      text: 'The reef is not just recovering — it is growing. We see fish we have not seen in twenty years.',
+      text: 'The reef is not just recovering - it is growing. We see fish we have not seen in twenty years.',
       author: 'Community diver, Kuruwitu',
     },
     relatedSlugs: ['co-management', 'research-monitoring', 'bmu-network'],
@@ -51,11 +51,11 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
   'co-management': {
     slug: 'co-management',
     heroImage: '/images/kamakukijcma.jpg',
-    heroImageAlt: 'Community co-management meeting — Kilifi County, Kenya',
+    heroImageAlt: 'Community co-management meeting - Kilifi County, Kenya',
     longDescription: [
-      "In January 2022, Oceans Alive Foundation made history: delivering Kenya's first formal ocean co-management plan under new government guidelines. The plan places 150 km² of sea — an area the size of a small city — under structured community stewardship, with Beach Management Units and local government sharing governance responsibility.",
+      "In January 2022, Oceans Alive Foundation made history: delivering Kenya's first formal ocean co-management plan under new government guidelines. The plan places 150 km² of sea - an area the size of a small city - under structured community stewardship, with Beach Management Units and local government sharing governance responsibility.",
       'The LMMA (Locally Managed Marine Area) model is the culmination of nearly two decades of relationship-building between Oceans Alive, Kilifi County Government, the Kenya Ministry of Blue Economy, and the fishing communities who live at the heart of this work. What began with 30 hectares at Kuruwitu in 2003 is now a 120 km² internationally recognised governance blueprint.',
-      "Community co-management means that the people who fish the sea also write the rules about how it is fished. Rotational no-take zones, gear transition programmes, seasonal closures — all driven by community data, community decisions, and community enforcement. It's governance by the people it protects.",
+      "Community co-management means that the people who fish the sea also write the rules about how it is fished. Rotational no-take zones, gear transition programmes, seasonal closures - all driven by community data, community decisions, and community enforcement. It's governance by the people it protects.",
     ],
     highlights: [
       { label: 'Ocean Under Management', value: '120 km²' },
@@ -69,7 +69,7 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
       {
         src: '/images/BMUmeeting.jpg',
         alt: 'Beach Management Unit meeting with community members',
-        caption: 'A Beach Management Unit (BMU) meeting — community voices shaping marine policy',
+        caption: 'A Beach Management Unit (BMU) meeting - community voices shaping marine policy',
       },
       {
         src: '/images/BMUS.jpg',
@@ -87,11 +87,11 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
   'project-reel': {
     slug: 'project-reel',
     heroImage: '/images/oceanculturelife.jpg',
-    heroImageAlt: 'Project REEL Kilifi — Canon CENA documentation at Kuruwitu',
+    heroImageAlt: 'Project REEL Kilifi - Canon CENA documentation at Kuruwitu',
     longDescription: [
-      "Project REEL Kilifi is a media partnership between Oceans Alive, Canon Central & North Africa (Canon CENA), and Athlete Media Group. The programme brings world-class photography and filmmaking to the Kilifi coast — documenting the conservation story and amplifying it to audiences that wouldn't otherwise hear it.",
+      "Project REEL Kilifi is a media partnership between Oceans Alive, Canon Central & North Africa (Canon CENA), and Athlete Media Group. The programme brings world-class photography and filmmaking to the Kilifi coast - documenting the conservation story and amplifying it to audiences that wouldn't otherwise hear it.",
       'The visual documentation produced by Project REEL has appeared in international conservation media, supported OAF fundraising campaigns, and brought global attention to the Kuruwitu model. Photographs from the project have reached audiences across four continents.',
-      "Beyond storytelling, Project REEL trains local young people in photography and documentation — building a generation of Kenyan environmental communicators who can tell their own story in their own voice.",
+      "Beyond storytelling, Project REEL trains local young people in photography and documentation - building a generation of Kenyan environmental communicators who can tell their own story in their own voice.",
     ],
     highlights: [
       { label: 'Partners', value: 'Canon CENA · Athlete Media' },
@@ -109,7 +109,7 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
   'uk-biodiversity': {
     slug: 'uk-biodiversity',
     heroImage: '/images/Capacityassess.jpg',
-    heroImageAlt: 'Capacity assessment workshop — UK Biodiversity Programme',
+    heroImageAlt: 'Capacity assessment workshop - UK Biodiversity Programme',
     longDescription: [
       'The UK Biodiversity Programme is an institutional capacity-building initiative funded by the UK Government through the FCDO (Foreign, Commonwealth & Development Office). It works to strengthen the organisational and governance infrastructure behind marine conservation in Kenya.',
       'The programme focuses on the people and systems that make conservation work over the long term: training conservation managers, strengthening community governance structures, and building the policy frameworks that give community-led marine management legal standing.',
@@ -126,11 +126,11 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
   'ocean-education': {
     slug: 'ocean-education',
     heroImage: '/images/coralteaching.jpg',
-    heroImageAlt: 'Teacher showing coral to children at Kuruwitu — Ocean Education programme',
+    heroImageAlt: 'Teacher showing coral to children at Kuruwitu - Ocean Education programme',
     longDescription: [
-      "The tengefu — the protected space — is Oceans Alive's living classroom. Each year, more than 2,500 students, interns, and young people come to Kuruwitu to learn real marine conservation, not from textbooks, but from the reef itself.",
-      "Schools from across Kilifi County visit the sanctuary for guided learning days. Children snorkel above coral gardens, learn to identify reef species, and hear from community divers about what the reef looked like before — and what it looks like now. It's ocean literacy rooted in living evidence.",
-      'The internship programme brings aspiring conservationists from Kenya and around the world to train alongside OAF staff. They leave with practical skills in reef monitoring, community engagement, and marine governance — and many go on to build careers in conservation.',
+      "The tengefu - the protected space - is Oceans Alive's living classroom. Each year, more than 2,500 students, interns, and young people come to Kuruwitu to learn real marine conservation, not from textbooks, but from the reef itself.",
+      "Schools from across Kilifi County visit the sanctuary for guided learning days. Children snorkel above coral gardens, learn to identify reef species, and hear from community divers about what the reef looked like before - and what it looks like now. It's ocean literacy rooted in living evidence.",
+      'The internship programme brings aspiring conservationists from Kenya and around the world to train alongside OAF staff. They leave with practical skills in reef monitoring, community engagement, and marine governance - and many go on to build careers in conservation.',
     ],
     highlights: [
       { label: 'Young People Educated', value: '2,500+ / yr' },
@@ -142,7 +142,7 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
       {
         src: '/images/kids.jpg',
         alt: 'Children learning about marine conservation at Kuruwitu',
-        caption: 'The reef as a classroom — children discovering marine life at Kuruwitu',
+        caption: 'The reef as a classroom - children discovering marine life at Kuruwitu',
       },
       {
         src: '/images/learning.jpg',
@@ -167,9 +167,9 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
     heroImage: '/images/BMUS.jpg',
     heroImageAlt: 'Beach Management Unit members in community meeting at Kilifi',
     longDescription: [
-      "Beach Management Units (BMUs) are the legal bodies that represent fishing communities in Kenya's coastal governance system. Oceans Alive works to connect and strengthen the BMU network across Kilifi County — ensuring that fishers' voices carry real weight in decision-making at county and national level.",
+      "Beach Management Units (BMUs) are the legal bodies that represent fishing communities in Kenya's coastal governance system. Oceans Alive works to connect and strengthen the BMU network across Kilifi County - ensuring that fishers' voices carry real weight in decision-making at county and national level.",
       'Through the Kilifi BMU Network, OAF facilitates regular inter-BMU coordination meetings, supports communities in documenting fishing pressure data, and provides training in fisheries management, legal rights, and governance processes.',
-      "The programme has contributed to a 40% increase in fish biomass within co-managed areas — evidence that when fishers govern their own waters, the ocean responds. The Kilifi BMU Network is now a model being examined by Kenya Fisheries Service for national rollout.",
+      "The programme has contributed to a 40% increase in fish biomass within co-managed areas - evidence that when fishers govern their own waters, the ocean responds. The Kilifi BMU Network is now a model being examined by Kenya Fisheries Service for national rollout.",
     ],
     highlights: [
       { label: 'Fish Biomass Increase', value: '40%' },
@@ -186,7 +186,7 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
       {
         src: '/images/fisher.jpg',
         alt: 'Fisherman on the Kilifi coast with fishing nets',
-        caption: 'The fishers of Kilifi — the people the BMU Network exists to represent and empower',
+        caption: 'The fishers of Kilifi - the people the BMU Network exists to represent and empower',
       },
     ],
     quote: {
@@ -201,9 +201,9 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
     heroImage: '/images/trashforcash.jpg',
     heroImageAlt: 'Women in Trash4Cash programme sorting plastic waste on the Kilifi coast',
     longDescription: [
-      "Eight million tonnes of plastic enter the world's oceans every year. On the Kilifi coast, the women of the Trash4Cash programme are fighting back — and getting paid for it.",
+      "Eight million tonnes of plastic enter the world's oceans every year. On the Kilifi coast, the women of the Trash4Cash programme are fighting back - and getting paid for it.",
       "Trash4Cash brings together women's groups from coastal communities to collect, sort, and sell plastic waste to certified recyclers. What would otherwise end up in the ocean becomes household income. More than 80 women now participate across four communities, collecting over two tonnes of plastic waste every month.",
-      "The programme is part of the LIFT Network — Oceans Alive's broader women's economic empowerment and conservation leadership platform. By placing income generation and environmental protection in the same hands, Trash4Cash makes conservation something women do for their own futures, not something done to their environment.",
+      "The programme is part of the LIFT Network - Oceans Alive's broader women's economic empowerment and conservation leadership platform. By placing income generation and environmental protection in the same hands, Trash4Cash makes conservation something women do for their own futures, not something done to their environment.",
     ],
     highlights: [
       { label: 'Women Participants', value: '80+' },
@@ -233,11 +233,11 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
   'turtle-protection': {
     slug: 'turtle-protection',
     heroImage: '/images/oceanday.jpg',
-    heroImageAlt: 'Community celebration of ocean conservation at Kilifi — World Ocean Day',
+    heroImageAlt: 'Community celebration of ocean conservation at Kilifi - World Ocean Day',
     longDescription: [
-      "Sea turtles have swum Kenya's coastline for millions of years. Today, three species — the green turtle, hawksbill turtle, and loggerhead — nest along the Kilifi coast. All three are threatened.",
+      "Sea turtles have swum Kenya's coastline for millions of years. Today, three species - the green turtle, hawksbill turtle, and loggerhead - nest along the Kilifi coast. All three are threatened.",
       "Oceans Alive community rangers monitor nesting beaches year-round along 640 km of coastline, recording nesting events, tagging females, and protecting nests from poachers and disturbance. Data collected by the rangers feeds into Kenya's national turtle monitoring programme.",
-      "The programme is built on the understanding that communities who live alongside nesting turtles are the most effective guardians of those turtles. Community rangers are paid local people — often former poachers — who have chosen stewardship over exploitation because it supports their families and their identity.",
+      "The programme is built on the understanding that communities who live alongside nesting turtles are the most effective guardians of those turtles. Community rangers are paid local people - often former poachers - who have chosen stewardship over exploitation because it supports their families and their identity.",
     ],
     highlights: [
       { label: 'Coastline Monitored', value: '640 km' },
@@ -257,12 +257,12 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
     heroImage: '/images/man.jpg',
     heroImageAlt: 'Marine policy documentation and governance work at Oceans Alive',
     longDescription: [
-      "Conservation without policy is just gardening. Oceans Alive translates twenty years of community-collected data and field experience into national marine policy frameworks — ensuring that what works in Kilifi shapes how Kenya manages its entire 640 km coastline.",
-      "In 2022, OAF delivered Kenya's first ocean co-management plan under new government guidelines — a legal document placing 150 km² under community stewardship. In 2025, the Kuruwitu model was presented at the IUCN World Conservation Congress as a globally scalable blueprint for community-led marine governance.",
+      "Conservation without policy is just gardening. Oceans Alive translates twenty years of community-collected data and field experience into national marine policy frameworks - ensuring that what works in Kilifi shapes how Kenya manages its entire 640 km coastline.",
+      "In 2022, OAF delivered Kenya's first ocean co-management plan under new government guidelines - a legal document placing 150 km² under community stewardship. In 2025, the Kuruwitu model was presented at the IUCN World Conservation Congress as a globally scalable blueprint for community-led marine governance.",
       'The Marine Governance & Policy programme supports communities in generating the evidence that policymakers need, represents community interests at county and national government level, and advocates for legal frameworks that recognise community marine tenure across the Western Indian Ocean.',
     ],
     highlights: [
-      { label: 'Co-Management Plan', value: '2022 — First in Kenya' },
+      { label: 'Co-Management Plan', value: '2022 - First in Kenya' },
       { label: 'IUCN Presentation', value: '2025' },
       { label: 'Ocean Under Policy', value: '120 km²' },
       { label: 'Government Partners', value: 'Ministry of Blue Economy · Kilifi County' },
@@ -277,11 +277,11 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
   'lift-network': {
     slug: 'lift-network',
     heroImage: '/images/womenlearning.jpg',
-    heroImageAlt: 'Women in the LIFT Network — economic empowerment and conservation leadership',
+    heroImageAlt: 'Women in the LIFT Network - economic empowerment and conservation leadership',
     longDescription: [
       "The LIFT Network is Oceans Alive's platform for women's economic empowerment and conservation leadership on the Kilifi coast. LIFT stands for Livelihoods, Independence, Finance, and Transformation.",
-      "Coastal women are disproportionately affected by declining fish stocks and ocean degradation — and disproportionately excluded from the governance decisions that shape their futures. LIFT changes that by connecting women to income-generating opportunities (Trash4Cash, eco-tourism, kitchen gardens) while building their leadership within community conservation structures.",
-      "Through LIFT, women participate in BMU meetings, co-management planning sessions, and conservation monitoring. They are not beneficiaries of conservation — they are its architects.",
+      "Coastal women are disproportionately affected by declining fish stocks and ocean degradation - and disproportionately excluded from the governance decisions that shape their futures. LIFT changes that by connecting women to income-generating opportunities (Trash4Cash, eco-tourism, kitchen gardens) while building their leadership within community conservation structures.",
+      "Through LIFT, women participate in BMU meetings, co-management planning sessions, and conservation monitoring. They are not beneficiaries of conservation - they are its architects.",
     ],
     highlights: [
       { label: 'Women Members', value: '80+' },
@@ -293,7 +293,7 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
       {
         src: '/images/womenlearning2.jpg',
         alt: 'Women learning and collaborating in the LIFT Network programme',
-        caption: 'LIFT Network training sessions — building conservation leaders from within communities',
+        caption: 'LIFT Network training sessions - building conservation leaders from within communities',
       },
     ],
     quote: {
@@ -306,11 +306,11 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
   'kitchen-gardens': {
     slug: 'kitchen-gardens',
     heroImage: '/images/farmernaction.jpg',
-    heroImageAlt: 'Coastal woman tending a kitchen garden — Kilifi County, Kenya',
+    heroImageAlt: 'Coastal woman tending a kitchen garden - Kilifi County, Kenya',
     longDescription: [
-      "On Kenya's coast, food security and ocean health are the same problem. When fish stocks decline, fishing families turn to more intensive harvesting — accelerating the collapse. Kitchen gardens break this cycle by providing alternative food sources and income, reducing pressure on the reef.",
+      "On Kenya's coast, food security and ocean health are the same problem. When fish stocks decline, fishing families turn to more intensive harvesting - accelerating the collapse. Kitchen gardens break this cycle by providing alternative food sources and income, reducing pressure on the reef.",
       "Oceans Alive's Kitchen Gardens & Food Security programme establishes climate-smart kitchen gardens for coastal fishing families across Kilifi County. Women who lead the gardens gain income from selling surplus produce, reducing their households' dependence on overexploited fish stocks.",
-      'The programme is intentionally integrated with LIFT Network, Trash4Cash, and the coral restoration work — because a community that has food security is a community that can afford to let the reef recover.',
+      'The programme is intentionally integrated with LIFT Network, Trash4Cash, and the coral restoration work - because a community that has food security is a community that can afford to let the reef recover.',
     ],
     highlights: [
       { label: 'Scope', value: 'Kilifi County' },
@@ -322,7 +322,7 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
       {
         src: '/images/farmers.jpg',
         alt: 'Women laughing and holding fresh vegetables from kitchen gardens',
-        caption: 'Kitchen garden produce — nutrition, income, and reduced pressure on the reef',
+        caption: 'Kitchen garden produce - nutrition, income, and reduced pressure on the reef',
       },
     ],
     quote: {
@@ -335,11 +335,11 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
   'capacity-building': {
     slug: 'capacity-building',
     heroImage: '/images/Capacityassess.jpg',
-    heroImageAlt: 'Capacity assessment and training workshop — Oceans Alive Foundation',
+    heroImageAlt: 'Capacity assessment and training workshop - Oceans Alive Foundation',
     longDescription: [
-      "Conservation only lasts as long as the people who carry it. Oceans Alive's Capacity Building & Training programme builds the human infrastructure that makes community-led marine conservation durable — beyond any single funder, project, or generation.",
+      "Conservation only lasts as long as the people who carry it. Oceans Alive's Capacity Building & Training programme builds the human infrastructure that makes community-led marine conservation durable - beyond any single funder, project, or generation.",
       "Training covers marine governance, protected area management, ecological monitoring, fisheries law, and community facilitation. Participants include BMU members, community rangers, women's group leaders, local government officials, and aspiring conservationists from across Kenya.",
-      "The programme deliberately trains people who will remain in the community after any given project ends — fishers, teachers, local leaders — because they are the ones who will carry the conservation work forward. International interns and students are also integrated into the programme, creating exchange that strengthens both local and global conservation capacity.",
+      "The programme deliberately trains people who will remain in the community after any given project ends - fishers, teachers, local leaders - because they are the ones who will carry the conservation work forward. International interns and students are also integrated into the programme, creating exchange that strengthens both local and global conservation capacity.",
     ],
     highlights: [
       { label: 'Training Coverage', value: 'Kenya-wide' },
@@ -351,7 +351,7 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
       {
         src: '/images/womenlearning.jpg',
         alt: 'Women in a capacity building training session with Oceans Alive',
-        caption: 'Conservation training — building skills that last beyond any project cycle',
+        caption: 'Conservation training - building skills that last beyond any project cycle',
       },
     ],
     relatedSlugs: ['ocean-education', 'bmu-network', 'marine-governance'],
@@ -360,10 +360,10 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
   'community-health': {
     slug: 'community-health',
     heroImage: '/images/communities.jpg',
-    heroImageAlt: 'Community gathering in Kilifi County — Oceans Alive health and wellbeing programme',
+    heroImageAlt: 'Community gathering in Kilifi County - Oceans Alive health and wellbeing programme',
     longDescription: [
       "The health of Kilifi's coastal communities and the health of its ocean are inseparable. When fish stocks collapse, families go hungry. When plastic pollution rises, children get sick swimming in the sea. When livelihoods are insecure, mental health suffers.",
-      "Oceans Alive's Community Health & Wellbeing programme takes a holistic approach — linking ocean conservation directly to the physical, economic, and social wellbeing of the 1,200+ community members at the heart of its work.",
+      "Oceans Alive's Community Health & Wellbeing programme takes a holistic approach - linking ocean conservation directly to the physical, economic, and social wellbeing of the 1,200+ community members at the heart of its work.",
       "The programme includes nutrition support through kitchen gardens, economic resilience through Trash4Cash and LIFT Network, community health days linked to World Ocean Day celebrations, and partnerships with local health authorities on issues that intersect with environmental quality.",
     ],
     highlights: [
@@ -382,11 +382,11 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
   'research-monitoring': {
     slug: 'research-monitoring',
     heroImage: '/images/oceansmen.jpg',
-    heroImageAlt: 'Community reef monitoring divers — research and monitoring programme',
+    heroImageAlt: 'Community reef monitoring divers - research and monitoring programme',
     longDescription: [
       "Good conservation is grounded in evidence. Oceans Alive's Research & Monitoring programme generates the ecological baselines, fish biomass surveys, coral cover assessments, and biodiversity data that underpin every other programme the organisation runs.",
-      "Community reef monitors — local trained divers — conduct regular transect surveys of the Kuruwitu tengefu and surrounding areas. Their data tracks coral cover recovery, fish biomass changes, and the expansion of species into previously degraded areas. This data is presented to Kenya Fisheries Service, county government, and international partners to inform marine policy.",
-      "At the IUCN World Conservation Congress in 2025, Oceans Alive presented a decade of reef monitoring data demonstrating that community-led marine governance produces measurable, sustained ecological recovery — making the Kilifi model the most evidence-backed community conservation programme in East Africa.",
+      "Community reef monitors - local trained divers - conduct regular transect surveys of the Kuruwitu tengefu and surrounding areas. Their data tracks coral cover recovery, fish biomass changes, and the expansion of species into previously degraded areas. This data is presented to Kenya Fisheries Service, county government, and international partners to inform marine policy.",
+      "At the IUCN World Conservation Congress in 2025, Oceans Alive presented a decade of reef monitoring data demonstrating that community-led marine governance produces measurable, sustained ecological recovery - making the Kilifi model the most evidence-backed community conservation programme in East Africa.",
     ],
     highlights: [
       { label: 'Coral Survival Rate', value: '85%' },
@@ -414,7 +414,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const prog = PROGRAMMES.find((p) => p.slug === params.slug);
   if (!prog) return {};
   return {
-    title: `${prog.title} — Oceans Alive Foundation`,
+    title: `${prog.title} - Oceans Alive Foundation`,
     description: prog.description,
   };
 }
@@ -578,7 +578,7 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
               &ldquo;{detail.quote.text}&rdquo;
             </p>
             <p className="text-ocean-turquoise text-sm font-semibold uppercase tracking-widest">
-              — {detail.quote.author}
+              - {detail.quote.author}
             </p>
           </div>
         </section>

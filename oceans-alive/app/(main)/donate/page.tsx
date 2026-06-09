@@ -21,7 +21,7 @@ const stripePromise = loadStripe(
 const IMPACT_MAP: Record<number, { what: string; img: string }> = {
   500:   { what: 'Plants 1 coral fragment in Kuruwitu reef', img: '/images/divers.jpg' },
   1000:  { what: 'Supports a community fisher for half a day', img: '/images/fisher.jpg' },
-  2500:  { what: 'Plants 5 coral fragments — the most popular gift', img: '/images/oceansmen.jpg' },
+  2500:  { what: 'Plants 5 coral fragments - the most popular gift', img: '/images/oceansmen.jpg' },
   5000:  { what: 'Funds one school ocean education day', img: '/images/kids.jpg' },
   10000: { what: 'Covers one community diver certification', img: '/images/coralteaching.jpg' },
   0:     { what: 'Choose your own level of impact', img: '/images/communities.jpg' },
@@ -215,7 +215,7 @@ export default function Donate() {
                   </svg>
                   <p className="text-sm text-ocean-midnight">
                     <span className="font-bold text-ocean-turquoise">${dollarAmount}</span>
-                    {' '}— {activeImpact?.what ?? 'Custom impact'}
+                    {' '}- {activeImpact?.what ?? 'Custom impact'}
                   </p>
                 </div>
               )}
@@ -237,7 +237,7 @@ export default function Donate() {
                 <div className="mb-8">
                   <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-2">Step 2</p>
                   <h2 className="text-3xl font-poppins font-bold text-ocean-midnight">Your Information</h2>
-                  <p className="text-gray-500 text-sm mt-1">All fields are optional — donate anonymously if you prefer.</p>
+                  <p className="text-gray-500 text-sm mt-1">All fields are optional - donate anonymously if you prefer.</p>
                 </div>
 
                 <div className="p-4 rounded-xl bg-ocean-turquoise/8 border border-ocean-turquoise/20 mb-8">
@@ -382,7 +382,7 @@ export default function Donate() {
                 },
                 {
                   q: 'Can I set up a recurring donation?',
-                  a: 'Yes — select Monthly Donation during checkout. You can cancel anytime with no obligation.',
+                  a: 'Yes - select Monthly Donation during checkout. You can cancel anytime with no obligation.',
                 },
                 {
                   q: 'What payment methods do you accept?',

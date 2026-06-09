@@ -3,9 +3,9 @@ import { PARTNERS } from '@/lib/constants';
 import PartnerCard from '@/components/common/PartnerCard';
 
 export const metadata = {
-  title: 'Our Partners — Oceans Alive Foundation',
+  title: 'Our Partners - Oceans Alive Foundation',
   description:
-    'Coral Guardian, Canon CENA, UK FCDO, UNDP, IUCN — the global network of organisations partnering with Oceans Alive to protect Kenya\'s coast.',
+    'Coral Guardian, Canon CENA, UK FCDO, UNDP, IUCN - the global network of organisations partnering with Oceans Alive to protect Kenya\'s coast.',
 };
 
 const CATEGORIES = [
@@ -57,7 +57,7 @@ export default function PartnersPage() {
               </h1>
               <p className="text-gray-500 text-xl leading-relaxed max-w-lg">
                 Conservation at this scale requires a global network. These organisations bring
-                expertise, resources, and reach — all aligned around communities protecting their own ocean.
+                expertise, resources, and reach - all aligned around communities protecting their own ocean.
               </p>
             </div>
 

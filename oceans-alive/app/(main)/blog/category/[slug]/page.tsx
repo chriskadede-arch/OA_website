@@ -11,7 +11,7 @@ const CATEGORY_CONFIG = {
     eyebrow: 'Reef Gardening · Kilifi County',
     headline: 'Coral\nRestoration',
     description:
-      'Since 2019, community fishers have been trained as certified reef gardeners — growing coral fragments in underwater nurseries and transplanting them to bleached areas of Kilifi\'s reefs.',
+      'Since 2019, community fishers have been trained as certified reef gardeners - growing coral fragments in underwater nurseries and transplanting them to bleached areas of Kilifi\'s reefs.',
     heroImage: '/images/divers.jpg',
     heroImageAlt: 'Community divers at the Kuruwitu reef restoration site',
     accentColor: 'ocean-turquoise' as const,
@@ -27,7 +27,7 @@ const CATEGORY_CONFIG = {
     eyebrow: 'Women Leaders · Livelihoods · Kilifi',
     headline: 'Women\n& Ocean',
     description:
-      'Women are at the heart of conservation at Oceans Alive — from the Trash4Cash plastic collection programme to the LIFT Network and mangrove restoration.',
+      'Women are at the heart of conservation at Oceans Alive - from the Trash4Cash plastic collection programme to the LIFT Network and mangrove restoration.',
     heroImage: '/images/trashforcash3.jpg',
     heroImageAlt: 'Women in Trash4Cash collecting plastic on Kenya\'s coast',
     accentColor: 'ocean-seafoam' as const,
@@ -43,7 +43,7 @@ const CATEGORY_CONFIG = {
     eyebrow: 'Community Fisheries · BMU Governance',
     headline: 'Fisheries\nGovernance',
     description:
-      'Working with fisher communities to co-manage 150 km² of Kilifi\'s coastal waters — rebuilding fish stocks and ensuring fishing remains viable for generations to come.',
+      'Working with fisher communities to co-manage 150 km² of Kilifi\'s coastal waters - rebuilding fish stocks and ensuring fishing remains viable for generations to come.',
     heroImage: '/images/fisher.jpg',
     heroImageAlt: 'Fisher at sea in Kilifi County',
     accentColor: 'ocean-turquoise' as const,
@@ -59,7 +59,7 @@ const CATEGORY_CONFIG = {
     eyebrow: 'Schools · Interns · Community Training',
     headline: 'Ocean\nEducation',
     description:
-      'Building a generation of marine conservationists — from primary school field days at Kuruwitu to international intern placements and community-wide training.',
+      'Building a generation of marine conservationists - from primary school field days at Kuruwitu to international intern placements and community-wide training.',
     heroImage: '/images/kids.jpg',
     heroImageAlt: 'Children learning about the ocean at Kuruwitu',
     accentColor: 'ocean-turquoise' as const,
@@ -75,7 +75,7 @@ const CATEGORY_CONFIG = {
     eyebrow: 'Community Governance · Marine Policy',
     headline: 'Community\nGovernance',
     description:
-      'From local BMU structures to national marine policy — helping fisher communities own, govern, and defend their coastal resources through the LMMA and beyond.',
+      'From local BMU structures to national marine policy - helping fisher communities own, govern, and defend their coastal resources through the LMMA and beyond.',
     heroImage: '/images/BMUmeeting.jpg',
     heroImageAlt: 'BMU governance meeting in Kilifi County',
     accentColor: 'ocean-turquoise' as const,
@@ -91,7 +91,7 @@ const CATEGORY_CONFIG = {
     eyebrow: 'Awards · Partnerships · Global Networks',
     headline: 'Recognition\n& Partners',
     description:
-      'Oceans Alive\'s community conservation model has earned global recognition — from the IUCN World Congress to international partnerships with Coral Guardian and beyond.',
+      'Oceans Alive\'s community conservation model has earned global recognition - from the IUCN World Congress to international partnerships with Coral Guardian and beyond.',
     heroImage: '/images/oceanday.jpg',
     heroImageAlt: 'World Ocean Day celebrations in Kilifi',
     accentColor: 'ocean-turquoise' as const,
@@ -107,7 +107,7 @@ const CATEGORY_CONFIG = {
     eyebrow: 'Field Results · Real Change · Kilifi County',
     headline: 'Impact\nStories',
     description:
-      'These are not press releases — they are the real, measurable, human outcomes of 20+ years of community-led conservation on Kenya\'s coast. Stories of reefs rebuilt, livelihoods created, and governance won.',
+      'These are not press releases - they are the real, measurable, human outcomes of 20+ years of community-led conservation on Kenya\'s coast. Stories of reefs rebuilt, livelihoods created, and governance won.',
     heroImage: '/images/oceanculturelife.jpg',
     heroImageAlt: 'Community life and conservation impact along the Kilifi coast',
     accentColor: 'ocean-turquoise' as const,
@@ -123,7 +123,7 @@ const CATEGORY_CONFIG = {
     eyebrow: 'Kilifi Communities · Local Voices · Coastal Kenya',
     headline: 'Community\nNews',
     description:
-      'From BMU governance decisions to women\'s group milestones and coastal events — the news that matters most to the 1,200+ people whose lives and livelihoods are intertwined with Kenya\'s ocean.',
+      'From BMU governance decisions to women\'s group milestones and coastal events - the news that matters most to the 1,200+ people whose lives and livelihoods are intertwined with Kenya\'s ocean.',
     heroImage: '/images/communities.jpg',
     heroImageAlt: 'Kilifi coastal community members at a conservation gathering',
     accentColor: 'ocean-seafoam' as const,
@@ -139,7 +139,7 @@ const CATEGORY_CONFIG = {
     eyebrow: 'OAF News · Events · Announcements',
     headline: 'Latest\nUpdates',
     description:
-      'The latest from Oceans Alive Foundation — programme updates, upcoming events, volunteer opportunities, partnership announcements, and everything happening across Kilifi\'s coastline.',
+      'The latest from Oceans Alive Foundation - programme updates, upcoming events, volunteer opportunities, partnership announcements, and everything happening across Kilifi\'s coastline.',
     heroImage: '/images/oceanday.jpg',
     heroImageAlt: 'Oceans Alive Foundation team at World Ocean Day 2024',
     accentColor: 'ocean-turquoise' as const,
@@ -227,7 +227,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   const config = CATEGORY_CONFIG[params.slug as CategorySlug];
   if (!config) return { title: 'Not Found' };
   return {
-    title: `${config.value} — Oceans Alive Foundation`,
+    title: `${config.value} - Oceans Alive Foundation`,
     description: config.description,
   };
 }

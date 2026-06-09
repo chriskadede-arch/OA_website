@@ -64,7 +64,7 @@ export default function Blog() {
                 <span className="text-ocean-turquoise">Stories</span>
               </h1>
               <p className="text-white/70 text-lg max-w-xl leading-relaxed">
-                Stories from the field — community conservation, coral restoration, women leading change,
+                Stories from the field - community conservation, coral restoration, women leading change,
                 and two decades of ocean stewardship on Kenya's coastline.
               </p>
             </div>
@@ -94,7 +94,7 @@ export default function Blog() {
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
 
-          {/* Category filter — mobile */}
+          {/* Category filter - mobile */}
           <div className="flex flex-wrap gap-2 mb-12 lg:hidden">
             <Link
               href="/blog"

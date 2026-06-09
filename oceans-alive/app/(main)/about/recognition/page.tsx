@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Recognition & Awards — Oceans Alive Foundation',
+  title: 'Recognition & Awards - Oceans Alive Foundation',
   description:
-    'UNDP Equator Prize, King Charles III Royal Visit, IUCN World Conservation Congress 2025 — global recognition for community-led marine conservation.',
+    'UNDP Equator Prize, King Charles III Royal Visit, IUCN World Conservation Congress 2025 - global recognition for community-led marine conservation.',
 };
 
 const AWARDS = [
@@ -25,7 +25,7 @@ const AWARDS = [
     title: 'UNDP Equator Prize',
     sub: 'United Nations Development Programme',
     body:
-      'Awarded the prestigious UNDP Equator Prize for exemplary community-based approaches to conservation and sustainable development — placing Oceans Alive on the world stage of environmental leadership.',
+      'Awarded the prestigious UNDP Equator Prize for exemplary community-based approaches to conservation and sustainable development - placing Oceans Alive on the world stage of environmental leadership.',
     highlight: 'One of the world\'s most recognised prizes for grassroots environmental action.',
     large: true,
   },
@@ -37,7 +37,7 @@ const AWARDS = [
     sub: 'International Union for Conservation of Nature',
     body:
       "Presented the Kuruwitu community co-management model as a globally scalable blueprint for marine governance at the world's largest conservation forum.",
-    highlight: 'From 30 hectares to a global template — Kuruwitu on the world stage.',
+    highlight: 'From 30 hectares to a global template - Kuruwitu on the world stage.',
     large: false,
   },
   {
@@ -47,7 +47,7 @@ const AWARDS = [
     title: "Kenya's First Ocean Co-Management Plan",
     sub: 'Government of Kenya · Ministry of Blue Economy',
     body:
-      "Delivered Kenya's first formal Co-Management Plan under new government guidelines — a historic milestone placing 150 km² under legally recognised community stewardship.",
+      "Delivered Kenya's first formal Co-Management Plan under new government guidelines - a historic milestone placing 150 km² under legally recognised community stewardship.",
     highlight: 'Nothing like it had existed before on this coastline.',
     large: false,
   },
@@ -69,7 +69,7 @@ const AWARDS = [
     title: 'International Partnerships',
     sub: 'Canon CENA · Coral Guardian · UK Government · AMG',
     body:
-      'Active partnerships with Canon Central & North Africa, Coral Guardian, Platcorp Foundation, UK Government (FCDO), and Athlete Media Group — ensuring world-class expertise supports community-led action.',
+      'Active partnerships with Canon Central & North Africa, Coral Guardian, Platcorp Foundation, UK Government (FCDO), and Athlete Media Group - ensuring world-class expertise supports community-led action.',
     highlight: 'Global partners aligned around a community-driven mission.',
     large: false,
   },
@@ -105,7 +105,7 @@ export default function RecognitionPage() {
           </h1>
           <p className="text-white/50 text-xl max-w-xl leading-relaxed">
             Every award, prize, and royal visit reflects the work of the fishing communities
-            of Kilifi County — not just our organisation.
+            of Kilifi County - not just our organisation.
           </p>
         </div>
       </section>
@@ -186,7 +186,7 @@ export default function RecognitionPage() {
             <span className="text-ocean-turquoise">They belong to the communities of Kilifi.</span>&rdquo;
           </p>
           <p className="mt-6 text-white/35 text-sm uppercase tracking-widest">
-            — Desmond Bowden, Founder
+            - Desmond Bowden, Founder
           </p>
         </div>
       </section>

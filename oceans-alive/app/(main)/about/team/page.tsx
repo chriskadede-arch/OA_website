@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { TEAM_MEMBERS } from '@/lib/constants';
 
 export const metadata = {
-  title: 'Our Team — Oceans Alive Foundation',
-  description: 'Meet the Oceans Alive Foundation team — 15 specialists and 1,200+ community stewards protecting Kenya\'s coast.',
+  title: 'Our Team - Oceans Alive Foundation',
+  description: 'Meet the Oceans Alive Foundation team - 15 specialists and 1,200+ community stewards protecting Kenya\'s coast.',
 };
 
 const GRADIENTS = [
@@ -16,7 +16,7 @@ const GRADIENTS = [
   ['#1a4a5a','#022F4E'],
 ];
 
-// All cards uniform — same size as the smallest (Ledama/Patrick style)
+// All cards uniform - same size as the smallest (Ledama/Patrick style)
 
 
 
@@ -25,7 +25,7 @@ export default function TeamPage() {
     <div className="bg-[#04090f] min-h-screen">
 
       {/* ══════════════════════════════════════════════════════════
-          HERO — Collage + giant type
+          HERO - Collage + giant type
       ══════════════════════════════════════════════════════════ */}
       <section className="relative min-h-[90vh] flex items-end overflow-hidden">
 
@@ -34,7 +34,7 @@ export default function TeamPage() {
           {/* Base dark tint */}
           <div className="absolute inset-0 bg-[#04090f]" />
 
-          {/* Scattered photo tiles — absolute positioned */}
+          {/* Scattered photo tiles - absolute positioned */}
           {TEAM_MEMBERS.filter(m => m.image).map((m, i) => {
             const positions = [
               { top:'4%',  left:'38%', w:220, h:290, rot:'-4deg',  z:1 },
@@ -66,7 +66,7 @@ export default function TeamPage() {
             );
           })}
 
-          {/* Gradient vignette — pulls focus left */}
+          {/* Gradient vignette - pulls focus left */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#04090f] via-[#04090f]/80 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#04090f] via-transparent to-[#04090f]/60" />
         </div>
@@ -112,11 +112,11 @@ export default function TeamPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════
-          TEAM GRID — Apple-inspired dark editorial grid
+          TEAM GRID - Apple-inspired dark editorial grid
       ══════════════════════════════════════════════════════════ */}
       <section className="relative bg-black py-24 overflow-hidden">
 
-        {/* Subtle radial glow at the very top — like an iPhone wallpaper bloom */}
+        {/* Subtle radial glow at the very top - like an iPhone wallpaper bloom */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] rounded-full opacity-30 pointer-events-none"
           style={{ background: 'radial-gradient(ellipse at top, rgba(46,191,209,0.12) 0%, transparent 65%)' }} />
 
@@ -190,7 +190,7 @@ export default function TeamPage() {
                     )}
                   </div>
 
-                  {/* Deep gradient scrim — text legibility */}
+                  {/* Deep gradient scrim - text legibility */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
 
                   {/* Top-right index badge */}
@@ -208,7 +208,7 @@ export default function TeamPage() {
                     <p className="text-white/40 mt-0.5 uppercase tracking-widest text-[0.55rem]">
                       {member.role}
                     </p>
-                    {/* Bio — slides in on hover */}
+                    {/* Bio - slides in on hover */}
                     <div className="overflow-hidden max-h-0 group-hover:max-h-10 transition-all duration-500 ease-out">
                       <p className="text-white/30 leading-relaxed mt-1 text-[0.58rem]">
                         {member.bio.slice(0, 60)}{member.bio.length > 60 ? '…' : ''}
@@ -254,7 +254,7 @@ export default function TeamPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════
-          COMMUNITY — Full-bleed with photo wash
+          COMMUNITY - Full-bleed with photo wash
       ══════════════════════════════════════════════════════════ */}
       <section className="relative mt-2 overflow-hidden py-28 md:py-40">
         <div className="absolute inset-0">
@@ -274,7 +274,7 @@ export default function TeamPage() {
                 <span className="block text-[clamp(32px,5vw,60px)] text-ocean-turquoise">Stewards</span>
               </h2>
               <p className="text-white/45 leading-relaxed max-w-lg text-base mb-8">
-                Fishers, reef monitors, women leaders, BMU reps, and community rangers —
+                Fishers, reef monitors, women leaders, BMU reps, and community rangers -
                 the 1,200+ people who protect Kenya&apos;s coast because it is their home.
               </p>
               <Link href="/about/story" className="inline-flex items-center gap-2 text-xs font-bold text-ocean-turquoise group/l hover:gap-4 transition-all">
@@ -301,7 +301,7 @@ export default function TeamPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════
-          CTA — Dark split
+          CTA - Dark split
       ══════════════════════════════════════════════════════════ */}
       <section className="border-t border-white/[0.05] py-24">
         <div className="max-w-6xl mx-auto px-6">
@@ -313,7 +313,7 @@ export default function TeamPage() {
                 <span className="block text-4xl md:text-5xl text-ocean-turquoise">Protect the ocean.</span>
               </h2>
               <p className="text-white/40 leading-relaxed mb-8 max-w-md">
-                Marine biologists, educators, communicators, and field researchers —
+                Marine biologists, educators, communicators, and field researchers -
                 we welcome talent at Kuruwitu and across Kilifi County.
               </p>
               <div className="flex flex-wrap gap-3">

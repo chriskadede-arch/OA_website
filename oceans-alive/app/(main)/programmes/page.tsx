@@ -4,7 +4,7 @@ import { PROGRAMMES, PRINCIPLES, PARTNERS, IMPACT_STATS } from '@/lib/constants'
 
 export const metadata = {
   title: 'Our Programmes',
-  description: '14 interlocking programmes spanning coral restoration, community governance, ocean education, women\'s livelihoods and marine research — forming an integrated model for coastal conservation.',
+  description: '14 interlocking programmes spanning coral restoration, community governance, ocean education, women\'s livelihoods and marine research - forming an integrated model for coastal conservation.',
 };
 
 export default function Programmes() {
@@ -22,7 +22,7 @@ export default function Programmes() {
           </h1>
           <p className="text-xl text-white/80 max-w-2xl leading-relaxed mb-10">
             Fourteen interlocking programmes spanning coral restoration, community governance,
-            ocean education, women's livelihoods, and marine research — forming an integrated
+            ocean education, women's livelihoods, and marine research - forming an integrated
             model for coastal conservation that centres the people who depend on the sea.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl">
@@ -57,7 +57,7 @@ export default function Programmes() {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Conservation that works begins and ends with the communities who call the ocean home.
                 At Oceans Alive Foundation, no programme stands alone. Our fourteen initiatives are
-                deliberately interlocked — reef restoration that trains community divers, governance
+                deliberately interlocked - reef restoration that trains community divers, governance
                 structures that carry fisher voices to national policy, women's livelihoods that reduce
                 pressure on fish stocks, and youth education that plants the next generation of reef guardians.
               </p>
@@ -117,7 +117,7 @@ export default function Programmes() {
               <h2 className="text-4xl font-poppins font-bold mb-4">Coral Restoration</h2>
               <p className="text-white/80 leading-relaxed mb-8">
                 Since 2019, Oceans Alive has partnered with Coral Guardian to rebuild Kilifi's degraded
-                reefs. Community fishers are trained as certified reef gardeners — growing coral fragments
+                reefs. Community fishers are trained as certified reef gardeners - growing coral fragments
                 in underwater nurseries and transplanting them to bleached areas. The programme blends
                 world-class marine science with deep local ownership.
               </p>
@@ -141,7 +141,7 @@ export default function Programmes() {
               <ul className="space-y-4 text-gray-700">
                 <li className="flex gap-3">
                   <span className="text-ocean-turquoise font-bold shrink-0">85%</span>
-                  <span>Coral survival rate from nursery to reef — well above the global average</span>
+                  <span>Coral survival rate from nursery to reef - well above the global average</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-ocean-turquoise font-bold shrink-0">6 yrs</span>
@@ -153,7 +153,7 @@ export default function Programmes() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-ocean-turquoise font-bold shrink-0">∞</span>
-                  <span>"The reef is not just recovering — it is growing. We see fish we haven't seen in twenty years." — Community diver, Kuruwitu</span>
+                  <span>"The reef is not just recovering - it is growing. We see fish we haven't seen in twenty years." - Community diver, Kuruwitu</span>
                 </li>
               </ul>
               <Link
@@ -176,7 +176,7 @@ export default function Programmes() {
               14 Active Programmes
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              From the seabed to the school room, each programme is a thread in the same fabric —
+              From the seabed to the school room, each programme is a thread in the same fabric -
               a coastal community that thrives because its ocean does.
             </p>
           </div>
@@ -261,7 +261,7 @@ export default function Programmes() {
             <div>
               <h3 className="text-2xl font-poppins font-bold text-white">Partner With Our Programmes</h3>
               <p className="text-white/80 mt-1">
-                NGOs, governments, research institutions, and businesses — every partnership strengthens community conservation.
+                NGOs, governments, research institutions, and businesses - every partnership strengthens community conservation.
               </p>
             </div>
             <div className="flex items-center gap-4 shrink-0">

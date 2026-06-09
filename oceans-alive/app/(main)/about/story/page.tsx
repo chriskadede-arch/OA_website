@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { TIMELINE, IMPACT_STATS } from '@/lib/constants';
 
 export const metadata = {
-  title: 'Our Story — Oceans Alive Foundation',
+  title: 'Our Story - Oceans Alive Foundation',
   description:
-    'From a 30-hectare community sanctuary in 2003 to a nationally recognised co-management model — the story of Oceans Alive Foundation.',
+    'From a 30-hectare community sanctuary in 2003 to a nationally recognised co-management model - the story of Oceans Alive Foundation.',
 };
 
 export default function StoryPage() {
@@ -16,7 +16,7 @@ export default function StoryPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/BMUS.jpg"
-            alt="Kuruwitu community — Oceans Alive Foundation"
+            alt="Kuruwitu community - Oceans Alive Foundation"
             fill
             className="object-cover opacity-20"
             priority

@@ -4,9 +4,9 @@ import SDGRow from '@/components/common/SDGRow';
 import { PRIMARY_SDGS } from '@/lib/sdg-mapping';
 
 export const metadata = {
-  title: 'Mission & Vision — Oceans Alive Foundation',
+  title: 'Mission & Vision - Oceans Alive Foundation',
   description:
-    'Our mission, guiding principles, and values — the philosophy that drives every programme from coral reef to national policy.',
+    'Our mission, guiding principles, and values - the philosophy that drives every programme from coral reef to national policy.',
 };
 
 const VALUES = [
@@ -70,7 +70,7 @@ export default function MissionPage() {
           <div className="flex items-center gap-4 mb-14">
             <div className="w-10 h-px bg-ocean-midnight/20" />
             <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-              Desmond Bowden — Founder, Oceans Alive Foundation
+              Desmond Bowden - Founder, Oceans Alive Foundation
             </span>
           </div>
 

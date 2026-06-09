@@ -11,7 +11,7 @@ export default function Home() {
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative bg-ocean-midnight overflow-hidden min-h-[90vh] flex flex-col lg:flex-row">
 
-        {/* Background gradients — left side only */}
+        {/* Background gradients - left side only */}
         <div className="absolute inset-0 lg:right-[45%] bg-gradient-to-br from-ocean-midnight via-[#0a2f4a] to-[#0a4f7a]" />
         <div className="absolute inset-0 lg:right-[45%] bg-[radial-gradient(ellipse_at_top_right,rgba(46,191,209,0.15),transparent_60%)]" />
 
@@ -62,10 +62,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* ── Photos column — diagonal weave, full height ── */}
+        {/* ── Photos column - diagonal weave, full height ── */}
         <div className="hidden lg:block w-[45%] self-stretch relative">
 
-          {/* Coral — top 58%, bottom edge is a diagonal cut */}
+          {/* Coral - top 58%, bottom edge is a diagonal cut */}
           <div className="absolute top-0 left-0 right-0 h-[58%] overflow-hidden z-10 group
             [clip-path:polygon(0_0,100%_0,100%_80%,0_100%)]">
             <Image
@@ -77,7 +77,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-l from-transparent to-ocean-midnight/50" />
             <div className="absolute inset-0 bg-gradient-to-b from-ocean-midnight/40 via-transparent to-transparent" />
-            {/* Stat — bottom left, clear of the clipped area */}
+            {/* Stat - bottom left, clear of the clipped area */}
             <div className="absolute bottom-24 left-8">
               <p className="text-[10px] text-ocean-turquoise font-bold uppercase tracking-widest mb-1">Coral Restoration</p>
               <p className="text-5xl font-poppins font-bold text-white leading-none drop-shadow-lg">25,000+</p>
@@ -85,7 +85,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Glowing badge — dead centre, overlaps both photos */}
+          {/* Glowing badge - dead centre, overlaps both photos */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20
             w-[88px] h-[88px] rounded-full bg-ocean-turquoise
             ring-4 ring-white/20
@@ -95,7 +95,7 @@ export default function Home() {
             <p className="text-[8px] text-white/75 uppercase tracking-widest mt-0.5">Survival</p>
           </div>
 
-          {/* Starfish — bottom 58%, top edge is the mirror diagonal */}
+          {/* Starfish - bottom 58%, top edge is the mirror diagonal */}
           <div className="absolute bottom-0 left-0 right-0 h-[58%] overflow-hidden z-0 group
             [clip-path:polygon(0_20%,100%_0,100%_100%,0_100%)]">
             <Image
@@ -106,7 +106,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-l from-transparent to-ocean-midnight/50" />
             <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight/40 via-transparent to-transparent" />
-            {/* Stat — bottom right */}
+            {/* Stat - bottom right */}
             <div className="absolute bottom-8 right-8 text-right">
               <p className="text-[10px] text-ocean-turquoise font-bold uppercase tracking-widest mb-1">Protected Ocean</p>
               <p className="text-5xl font-poppins font-bold text-white leading-none drop-shadow-lg">120 km²</p>
@@ -344,7 +344,7 @@ export default function Home() {
         {/* Top fade so arcs don't bleed upward */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#040f1a] via-transparent to-[#040f1a] pointer-events-none" />
 
-        {/* Rotated side text — left edge */}
+        {/* Rotated side text - left edge */}
         <div className="hidden lg:block absolute left-4 top-1/2 -translate-y-1/2 rotate-[-90deg] origin-center select-none pointer-events-none">
           <span className="text-[10px] font-bold uppercase tracking-[0.45em] text-ocean-turquoise/20 whitespace-nowrap">
             Kilifi · Kenya · Est. 2017
@@ -371,7 +371,7 @@ export default function Home() {
               </h2>
 
               <p className="text-white/55 text-lg leading-relaxed max-w-sm mb-10">
-                Quarterly updates from the field — conservation progress, stories from Kilifi's coast,
+                Quarterly updates from the field - conservation progress, stories from Kilifi's coast,
                 and real ways to support the work.
               </p>
 
@@ -388,7 +388,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right — form card */}
+            {/* Right - form card */}
             <div className="relative">
               <p className="absolute -top-7 -left-1 text-[100px] font-poppins font-black text-ocean-turquoise/[0.04] leading-none select-none pointer-events-none">
                 OAF
