@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { PROGRAMMES } from '@/lib/constants';
+import SDGRow from '@/components/common/SDGRow';
+import { PROGRAMME_SDGS } from '@/lib/sdg-mapping';
 
 // ─── Per-programme extended content ──────────────────────────────────────────
 
@@ -478,20 +480,62 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
 
       {/* ── Key Stats ────────────────────────────────────────── */}
       {detail?.highlights && (
-        <section className="bg-white py-14 border-b border-gray-100">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {detail.highlights.map((h) => (
-                <div key={h.label} className="text-center">
-                  <div className="text-2xl md:text-3xl font-poppins font-bold text-ocean-turquoise mb-1">
+        <section className="relative bg-gradient-to-br from-ocean-midnight via-[#0a3560] to-[#0a4f7a] py-20 overflow-hidden">
+          {/* Background pattern */}
+          <div className="absolute inset-0 opacity-5 [background-image:radial-gradient(circle,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:24px_24px]" />
+
+          <div className="relative max-w-6xl mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-3">
+                Impact at a Glance
+              </h2>
+              <div className="w-20 h-1 bg-ocean-turquoise mx-auto rounded-full" />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {detail.highlights.map((h, i) => (
+                <div
+                  key={h.label}
+                  className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-ocean-turquoise/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(46,191,209,0.3)] hover:-translate-y-1"
+                >
+                  {/* Number badge */}
+                  <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-ocean-turquoise flex items-center justify-center text-white text-xs font-bold shadow-lg">
+                    {i + 1}
+                  </div>
+
+                  {/* Value */}
+                  <div className="text-4xl md:text-5xl font-poppins font-black text-ocean-turquoise mb-3 leading-none group-hover:scale-105 transition-transform">
                     {h.value}
                   </div>
-                  <div className="text-xs text-gray-500 uppercase tracking-wider leading-tight">
+
+                  {/* Label */}
+                  <div className="text-sm text-white/70 uppercase tracking-wider leading-tight font-semibold">
                     {h.label}
+                  </div>
+
+                  {/* Decorative corner */}
+                  <div className="absolute bottom-0 right-0 w-16 h-16 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <svg viewBox="0 0 100 100" className="text-ocean-turquoise fill-current">
+                      <circle cx="80" cy="80" r="60" />
+                    </svg>
                   </div>
                 </div>
               ))}
             </div>
+
+            {/* SDG Section for this programme */}
+            {PROGRAMME_SDGS[detail.slug] && (
+              <div className="mt-16 pt-12 border-t border-white/10">
+                <div className="text-center mb-6">
+                  <p className="text-white/40 text-xs uppercase tracking-widest">
+                    Contributing to UN Sustainable Development Goals
+                  </p>
+                </div>
+                <div className="flex justify-center">
+                  <SDGRow sdgs={PROGRAMME_SDGS[detail.slug]} size="md" />
+                </div>
+              </div>
+            )}
           </div>
         </section>
       )}
