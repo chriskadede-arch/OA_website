@@ -118,7 +118,7 @@ export const SOCIAL_LINKS = [
 // Contact Info
 export const CONTACT_EMAIL = 'info@oceansalive.org';
 export const CONTACT_PHONE = '+254 712 345 678';
-export const CONTACT_ADDRESS = 'Watamu, Kilifi County, Kenya';
+export const CONTACT_ADDRESS = 'Vipingo, Kilifi County, Kenya';
 
 // Team
 export const TEAM_MEMBERS = [

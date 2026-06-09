@@ -3,7 +3,7 @@
 **Organisation:** Oceans Alive Foundation
 **Location:** Kilifi County, Kenya
 **Founded:** 2003
-**Contact:** info@oceansalive.org | Watamu, Kilifi County, Kenya
+**Contact:** info@oceansalive.org | Vipingo, Kilifi County, Kenya
 
 ---
 
@@ -151,7 +151,7 @@ An action-based Kenyan not-for-profit trust promoting environmental, economic, a
 
 **Contact:**
 - info@oceansalive.org
-- Watamu, Kilifi County, Kenya
+- Vipingo, Kilifi County, Kenya
 - Press & Media
 - Partnerships
 
