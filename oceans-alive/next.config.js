@@ -4,9 +4,9 @@ const isStaticExport = process.env.NEXT_STATIC_EXPORT === '1';
 const nextConfig = {
   ...(isStaticExport ? {
     output: 'export',
-    basePath: '/OA_website',
+    basePath: '/oa_website',
     trailingSlash: true,
-    env: { NEXT_PUBLIC_BASE_PATH: '/OA_website' },
+    env: { NEXT_PUBLIC_BASE_PATH: '/oa_website' },
     images: {
       loader: 'custom',
       loaderFile: './image-loader.js',
