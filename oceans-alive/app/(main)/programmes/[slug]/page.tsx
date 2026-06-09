@@ -511,22 +511,6 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
         </div>
       </section>
 
-      {/* ── Hero Photo ───────────────────────────────────────── */}
-      {detail?.heroImage && (
-        <section className="bg-gray-50 py-0">
-          <div className="max-w-6xl mx-auto px-6 py-10">
-            <div className="relative h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg">
-              <Image
-                src={detail.heroImage}
-                alt={detail.heroImageAlt || prog.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* ── Long Description ─────────────────────────────────── */}
       {detail?.longDescription && (
         <section className="bg-white py-16 md:py-20">
