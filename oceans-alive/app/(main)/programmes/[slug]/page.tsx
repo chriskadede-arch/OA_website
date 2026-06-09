@@ -487,7 +487,7 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
           {/* Subtle pattern */}
           <div className="absolute inset-0 opacity-3 [background-image:radial-gradient(circle,rgba(255,255,255,0.2)_1px,transparent_1px)] [background-size:20px_20px]" />
 
-          <div className="relative max-w-6xl mx-auto px-6">
+          <div className="relative max-w-4xl mx-auto px-6">
             {/* Compact stat boxes - no title */}
             <div className="flex flex-wrap justify-center gap-3 mb-10">
               {detail.highlights.map((h) => (
