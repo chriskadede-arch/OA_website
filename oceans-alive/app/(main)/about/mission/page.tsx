@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { PRINCIPLES } from '@/lib/constants';
+import SDGRow from '@/components/common/SDGRow';
+import { PRIMARY_SDGS } from '@/lib/sdg-mapping';
 
 export const metadata = {
   title: 'Mission & Vision — Oceans Alive Foundation',
@@ -100,8 +102,18 @@ export default function MissionPage() {
               </p>
             </div>
             <div className="text-right hidden md:block">
-              <div className="text-7xl font-poppins font-bold text-ocean-turquoise leading-none">2003</div>
+              <div className="text-7xl font-poppins font-bold text-ocean-turquoise leading-none">2017</div>
               <div className="text-xs text-white/30 uppercase tracking-widest mt-1">to forever</div>
+            </div>
+          </div>
+
+          {/* SDG Section */}
+          <div className="mt-12 pt-10 border-t border-white/10">
+            <p className="text-white/40 text-xs uppercase tracking-widest mb-6 text-center">
+              Aligned with United Nations Sustainable Development Goals
+            </p>
+            <div className="flex justify-center">
+              <SDGRow sdgs={PRIMARY_SDGS} size="md" />
             </div>
           </div>
         </div>

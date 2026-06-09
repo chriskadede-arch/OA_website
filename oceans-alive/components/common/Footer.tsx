@@ -3,7 +3,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { CONTACT_EMAIL, CONTACT_ADDRESS, SITE_NAME } from '@/lib/constants';
+import { PRIMARY_SDGS } from '@/lib/sdg-mapping';
 import NewsletterForm from './NewsletterForm';
+import SDGRow from './SDGRow';
 
 const SOCIAL = [
   {
@@ -88,6 +90,13 @@ export default function Footer() {
             <p className="text-sm text-white/60 leading-relaxed mb-5">
               Working with coastal communities to restore marine ecosystems, strengthen livelihoods, and create lasting positive change along Kenya's coast.
             </p>
+
+            {/* SDG Badges */}
+            <div className="mb-5">
+              <p className="text-[10px] text-white/30 uppercase tracking-wider mb-3">Contributing to UN SDGs</p>
+              <SDGRow sdgs={PRIMARY_SDGS} size="sm" />
+            </div>
+
             <div className="flex gap-3">
               {SOCIAL.map((s) => (
                 <a

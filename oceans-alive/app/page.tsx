@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import NewsletterForm from '@/components/common/NewsletterForm';
+import SDGRow from '@/components/common/SDGRow';
 import { IMPACT_STATS, TIMELINE } from '@/lib/constants';
+import { PRIMARY_SDGS } from '@/lib/sdg-mapping';
 
 export default function Home() {
   return (
@@ -143,11 +145,20 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-10 pt-8 border-t border-white/10 flex flex-wrap items-center gap-x-8 gap-y-2">
-            <span className="text-[9px] text-white/25 uppercase tracking-widest">Recognised by</span>
-            {['UNDP Equator Prize', 'IUCN World Conservation Congress 2025', 'Royal Visit 2023', 'Canon CENA Partnership'].map((a) => (
-              <span key={a} className="text-xs text-white/40 font-semibold">{a}</span>
-            ))}
+          <div className="mt-10 pt-8 border-t border-white/10 space-y-6">
+            {/* Recognition */}
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
+              <span className="text-[9px] text-white/25 uppercase tracking-widest">Recognised by</span>
+              {['UNDP Equator Prize', 'IUCN World Conservation Congress 2025', 'Royal Visit 2023', 'Canon CENA Partnership'].map((a) => (
+                <span key={a} className="text-xs text-white/40 font-semibold">{a}</span>
+              ))}
+            </div>
+
+            {/* SDGs */}
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-4">
+              <span className="text-[9px] text-white/25 uppercase tracking-widest">Contributing to UN SDGs</span>
+              <SDGRow sdgs={PRIMARY_SDGS} size="sm" />
+            </div>
           </div>
         </div>
       </section>
