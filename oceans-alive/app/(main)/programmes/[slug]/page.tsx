@@ -26,13 +26,13 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
     longDescription: [
       "Since 2019, Oceans Alive Foundation has partnered with Coral Guardian International and Coral Reef Care to build Kenya's most active community-led coral nursery at Kuruwitu. Local fishers - the same men and women whose livelihoods depend on the reef - are trained and employed as certified reef gardeners.",
       'Coral fragments are grown in underwater nurseries attached to metal tree structures. Once colonies reach transplantable size, community divers carefully move them to bleached and degraded areas of the reef. The result: 24,800 coral colonies planted since 2019 with an 85% survival rate - well above the global average.',
-      'The programme is deliberately designed so that the community owns it. Fishers who once dynamite-fished now guard the same reef, because they have seen it come back to life with their own hands. Within the protected tengefu, fish biomass has increased by 40% - and the fish have started coming back outside it too.',
+      'The programme is deliberately designed so that the community owns it. Fishers who once dynamite-fished now guard the same reef, because they have seen it come back to life with their own hands. Within the protected tengefu, fish biomass has increased by 400% - and the fish have started coming back outside it too.',
     ],
     highlights: [
       { label: 'Coral Colonies Planted', value: '24,800' },
       { label: 'Survival Rate', value: '85%' },
       { label: 'Community Divers Trained', value: '40+' },
-      { label: 'Fish Biomass Increase', value: '40%' },
+      { label: 'Fish Biomass Increase', value: '400%' },
       { label: 'Programme Start', value: '2019' },
       { label: 'Partner', value: 'Coral Guardian · Coral Reef Care' },
     ],
@@ -171,10 +171,10 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
     longDescription: [
       "Beach Management Units (BMUs) are the legal bodies that represent fishing communities in Kenya's coastal governance system. Oceans Alive works to connect and strengthen the BMU network across Kilifi County - ensuring that fishers' voices carry real weight in decision-making at county and national level.",
       'Through the Kilifi BMU Network, OAF facilitates regular inter-BMU coordination meetings, supports communities in documenting fishing pressure data, and provides training in fisheries management, legal rights, and governance processes.',
-      "The programme has contributed to a 40% increase in fish biomass within co-managed areas - evidence that when fishers govern their own waters, the ocean responds. The Kilifi BMU Network is now a model being examined by Kenya Fisheries Service for national rollout.",
+      "The programme has contributed to a 400% increase in fish biomass within co-managed areas - evidence that when fishers govern their own waters, the ocean responds. The Kilifi BMU Network is now a model being examined by Kenya Fisheries Service for national rollout.",
     ],
     highlights: [
-      { label: 'Fish Biomass Increase', value: '40%' },
+      { label: 'Fish Biomass Increase', value: '400%' },
       { label: 'County Coverage', value: 'Kilifi County' },
       { label: 'Government Partner', value: 'Kenya Fisheries Service' },
       { label: 'Governance Level', value: 'County & National' },
@@ -392,7 +392,7 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
     ],
     highlights: [
       { label: 'Coral Survival Rate', value: '85%' },
-      { label: 'Fish Biomass Recovery', value: '40%' },
+      { label: 'Fish Biomass Recovery', value: '400%' },
       { label: 'Monitoring Duration', value: '10+ years' },
       { label: 'Data Used For', value: 'National marine policy' },
       { label: 'IUCN Presentation', value: '2025' },
