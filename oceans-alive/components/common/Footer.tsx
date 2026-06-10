@@ -168,7 +168,6 @@ export default function Footer() {
                 </a>
               </li>
               <li className="text-white/60">{CONTACT_ADDRESS}</li>
-              <li className="text-white/60">Kenya</li>
               <li className="pt-2 border-t border-white/10">
                 <Link href="/contact?type=Partnership" className="hover:text-ocean-turquoise transition-colors">
                   Press &amp; Media

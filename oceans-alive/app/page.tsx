@@ -62,12 +62,12 @@ export default function Home() {
           </div>
         </div>
 
-        {/* ── Photos column - diagonal weave, full height ── */}
+        {/* ── Photos column - coral only, 1/4 height with slant ── */}
         <div className="hidden lg:block w-[45%] self-stretch relative">
 
-          {/* Coral - top 58%, bottom edge is a diagonal cut */}
-          <div className="absolute top-0 left-0 right-0 h-[58%] overflow-hidden z-10 group
-            [clip-path:polygon(0_0,100%_0,100%_80%,0_100%)]">
+          {/* Coral - 1/4 height, slanted cut */}
+          <div className="absolute top-0 left-0 right-0 h-[25%] overflow-hidden z-10 group
+            [clip-path:polygon(0_0,100%_0,100%_100%,0_80%)]">
             <Image
               src="/images/coral.png"
               alt="Restored coral colony at Kilifi reef"
@@ -77,40 +77,20 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-l from-transparent to-ocean-midnight/50" />
             <div className="absolute inset-0 bg-gradient-to-b from-ocean-midnight/40 via-transparent to-transparent" />
-            {/* Stat - bottom left, clear of the clipped area */}
-            <div className="absolute bottom-24 left-8">
-              <p className="text-[10px] text-ocean-turquoise font-bold uppercase tracking-widest mb-1">Coral Restoration</p>
-              <p className="text-5xl font-poppins font-bold text-white leading-none drop-shadow-lg">25,000+</p>
-              <p className="text-xs text-white/55 uppercase tracking-wider mt-1">Colonies Planted</p>
-            </div>
           </div>
 
-          {/* Glowing badge - dead centre, overlaps both photos */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20
-            w-[88px] h-[88px] rounded-full bg-ocean-turquoise
-            ring-4 ring-white/20
-            shadow-xl shadow-ocean-turquoise/60
-            flex flex-col items-center justify-center">
-            <p className="text-[23px] font-poppins font-bold text-white leading-none">85%</p>
-            <p className="text-[8px] text-white/75 uppercase tracking-widest mt-0.5">Survival</p>
-          </div>
-
-          {/* Starfish - bottom 58%, top edge is the mirror diagonal */}
-          <div className="absolute bottom-0 left-0 right-0 h-[58%] overflow-hidden z-0 group
-            [clip-path:polygon(0_20%,100%_0,100%_100%,0_100%)]">
-            <Image
-              src="/images/starfish.png"
-              alt="Red starfish at Kilifi marine sanctuary"
-              fill
-              className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-            />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent to-ocean-midnight/50" />
-            <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight/40 via-transparent to-transparent" />
-            {/* Stat - bottom right */}
-            <div className="absolute bottom-8 right-8 text-right">
-              <p className="text-[10px] text-ocean-turquoise font-bold uppercase tracking-widest mb-1">Protected Ocean</p>
-              <p className="text-5xl font-poppins font-bold text-white leading-none drop-shadow-lg">120 km²</p>
-              <p className="text-xs text-white/55 uppercase tracking-wider mt-1">Under Co-Management</p>
+          {/* Text overlaid on coral section */}
+          <div className="absolute top-[8%] left-8 z-20">
+            <p className="text-[10px] text-ocean-turquoise font-bold uppercase tracking-widest mb-1">Coral Restoration</p>
+            <p className="text-5xl font-poppins font-bold text-white leading-none drop-shadow-lg">25,000+</p>
+            <p className="text-xs text-white/55 uppercase tracking-wider mt-1">Colonies Planted</p>
+            {/* 85% badge near text */}
+            <div className="mt-4 w-[70px] h-[70px] rounded-full bg-ocean-turquoise
+              ring-4 ring-white/20
+              shadow-xl shadow-ocean-turquoise/60
+              flex flex-col items-center justify-center">
+              <p className="text-[20px] font-poppins font-bold text-white leading-none">85%</p>
+              <p className="text-[7px] text-white/75 uppercase tracking-widest mt-0.5">Survival</p>
             </div>
           </div>
 
@@ -208,7 +188,7 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Program 2: SHE */}
+            {/* Program 2: Social Health Environment */}
             <Link
               href="/programs/she"
               className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300"
@@ -216,14 +196,14 @@ export default function Home() {
             >
               <Image
                 src="/images/trashforcash.jpg"
-                alt="SHE Program"
+                alt="Social Health Environment Program"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-pink-900 via-pink-900/70 to-pink-900/20" />
               <div className="absolute inset-0 p-6 flex flex-col justify-end">
                 <div className="text-4xl font-poppins font-bold text-white/30 mb-2">02</div>
-                <h3 className="text-xl font-poppins font-bold text-white mb-2 leading-tight">SHE Program</h3>
+                <h3 className="text-xl font-poppins font-bold text-white mb-2 leading-tight">Social Health Environment</h3>
                 <p className="text-sm text-white/70 mb-4">Women's empowerment & sustainable livelihoods</p>
                 <div className="flex items-center gap-2 mb-3">
                   <SDGRow sdgs={[5, 8, 14, 13]} size="sm" />
@@ -396,7 +376,7 @@ export default function Home() {
                 Women at the Heart of Conservation
               </h2>
               <p className="text-white/85 leading-relaxed mb-4">
-                Through Oceans Alive's Social, Health and Environment (SHE) programme, women are helping shape the future of conservation across Kilifi County.
+                Through Oceans Alive's Social, Health and Environment programme, women are helping shape the future of conservation across Kilifi County.
               </p>
               <p className="text-white/85 leading-relaxed mb-4">
                 From coral restoration and community leadership to small businesses and recycling initiatives, women are creating practical solutions that benefit both people and the environment.
@@ -526,7 +506,7 @@ export default function Home() {
                 Ready to make an impact?
               </h3>
               <p className="text-ocean-turquoise mt-1">
-                Join 1,200+ community members protecting coastal Kenya since 2003.
+                Join us
               </p>
             </div>
             <div className="flex items-center gap-4 shrink-0">

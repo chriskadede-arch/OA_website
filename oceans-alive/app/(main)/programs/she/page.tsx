@@ -3,7 +3,7 @@ import Image from 'next/image';
 import SDGRow from '@/components/common/SDGRow';
 
 export const metadata = {
-  title: 'SHE Program - Sustainable Households & Enterprises',
+  title: 'Social Health Environment - Sustainable Households & Enterprises',
   description: 'Women\'s empowerment, livelihoods, and economic independence through conservation.',
 };
 
@@ -13,18 +13,18 @@ export default function SHEProgramPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-pink-600 to-purple-700 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/trashforcash.jpg" alt="SHE Program" fill className="object-cover opacity-20" />
+          <Image src="/images/trashforcash.jpg" alt="Social Health Environment Program" fill className="object-cover opacity-20" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-32">
           <div className="text-6xl font-poppins font-bold text-white/20 mb-4">02</div>
-          <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">SHE Program</h1>
+          <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Social Health Environment</h1>
           <p className="text-xl text-white/90 max-w-3xl mb-4 leading-relaxed">
             Sustainable Households & Enterprises
           </p>
           <p className="text-lg text-white/80 max-w-3xl mb-8 leading-relaxed">
-            Conservation is strongest when communities have secure livelihoods and opportunities for the future. The SHE Program supports women, youth and vulnerable households to strengthen incomes, improve food security and build resilience while reducing pressure on marine resources.
+            Conservation is strongest when communities have secure livelihoods and opportunities for the future. The Social Health Environment program supports women, youth and vulnerable households to strengthen incomes, improve food security and build resilience while reducing pressure on marine resources.
           </p>
 
           {/* Impact Boxes */}

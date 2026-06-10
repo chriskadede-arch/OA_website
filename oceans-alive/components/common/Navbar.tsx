@@ -66,7 +66,7 @@ const INVOLVE_CARDS = [
 // 5 Main Programs for Navigation
 const FIVE_PROGRAMS = [
   { title: 'Ocean Recovery', description: 'Coral, reefs & marine ecosystems', href: '/programs/ocean-recovery' },
-  { title: 'SHE Program', description: 'Women\'s livelihoods & empowerment', href: '/programs/she' },
+  { title: 'Social Health Environment', description: 'Women\'s livelihoods & empowerment', href: '/programs/she' },
   { title: 'Learning & Leadership', description: 'Education & capacity building', href: '/programs/learning-leadership' },
   { title: 'Governance & Fisheries', description: 'Community governance & BMUs', href: '/programs/governance-fisheries' },
   { title: 'Research & Innovation', description: 'Monitoring & sustainable finance', href: '/programs/research-innovation' },
@@ -115,7 +115,7 @@ const MEGA_NAV: MegaNavItem[] = [
         items: [
           { label: 'Toolkits', href: '/resources?category=Toolkits', description: 'Practical guides for marine conservation' },
           { label: 'IEC Materials', href: '/resources?category=IEC+Materials', description: 'Information & education content' },
-          { label: 'Reports & Case Studies', href: '/resources?category=Reports', description: 'Evidence-based insights & programme deep dives' },
+          { label: 'Reports & case studies', href: '/resources?category=Reports', description: 'Evidence-based insights & programme deep dives' },
         ],
       },
       {

@@ -217,14 +217,14 @@ export default function Programmes() {
             </div>
           </div>
 
-          {/* Program 2: SHE */}
+          {/* Program 2: Social Health Environment */}
           <div className="mb-12 bg-gradient-to-br from-pink-600 to-purple-700 rounded-3xl p-8 md:p-12 text-white">
             <div className="flex items-start justify-between mb-6">
               <div className="text-6xl font-poppins font-bold text-white/20">02</div>
             </div>
-            <h3 className="text-3xl md:text-4xl font-poppins font-bold mb-4">SHE (Sustainable Households & Enterprises)</h3>
+            <h3 className="text-3xl md:text-4xl font-poppins font-bold mb-4">Social Health Environment (Sustainable Households & Enterprises)</h3>
             <p className="text-white/90 leading-relaxed mb-6 text-lg max-w-3xl">
-              Conservation is strongest when communities have secure livelihoods and opportunities for the future. The SHE Program supports women, youth and vulnerable households to strengthen incomes, improve food security and build resilience while reducing pressure on marine resources.
+              Conservation is strongest when communities have secure livelihoods and opportunities for the future. The Social Health Environment program supports women, youth and vulnerable households to strengthen incomes, improve food security and build resilience while reducing pressure on marine resources.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
               {[

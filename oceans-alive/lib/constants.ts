@@ -263,7 +263,7 @@ export const TIMELINE = [
   },
   {
     year: '2017',
-    title: 'Global Recognition',
+    title: 'Equator Prize',
     body: 'The Kuruwitu CBO, supported by Oceans Alive, received the UNDP Equator Prize for outstanding community-led marine conservation. Community representatives Katana Ngala and Shida Shoka travelled to New York to accept the award.',
     tag: 'UNDP Prize',
   },
@@ -276,7 +276,7 @@ export const TIMELINE = [
   {
     year: '2023',
     title: 'Royal Recognition',
-    body: "During a visit to Kuruwitu, His Majesty King Charles III placed a coral restoration block bearing his royal cypher into the water. The moment brought international attention to a conservation story that began with a local community.",
+    body: "In 2023, during a visit to Kuruwitu, His Majesty King Charles III placed a coral restoration block bearing his royal cypher into the water. The moment brought international attention to a conservation story that began with a local community.",
     tag: 'Royal Visit',
   },
   {
