@@ -184,7 +184,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Program 1: Ocean Recovery */}
             <Link
-              href="/programmes"
+              href="/programs/ocean-recovery"
               className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300"
               style={{ minHeight: '320px' }}
             >
@@ -210,7 +210,7 @@ export default function Home() {
 
             {/* Program 2: SHE */}
             <Link
-              href="/programmes"
+              href="/programs/she"
               className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300"
               style={{ minHeight: '320px' }}
             >
@@ -236,7 +236,7 @@ export default function Home() {
 
             {/* Program 3: Learning & Leadership */}
             <Link
-              href="/programmes"
+              href="/programs/learning-leadership"
               className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300"
               style={{ minHeight: '320px' }}
             >
@@ -262,7 +262,7 @@ export default function Home() {
 
             {/* Program 4: Governance & Fisheries */}
             <Link
-              href="/programmes"
+              href="/programs/governance-fisheries"
               className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300"
               style={{ minHeight: '320px' }}
             >
@@ -288,7 +288,7 @@ export default function Home() {
 
             {/* Program 5: Research & Innovation */}
             <Link
-              href="/programmes"
+              href="/programs/research-innovation"
               className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300"
               style={{ minHeight: '320px' }}
             >

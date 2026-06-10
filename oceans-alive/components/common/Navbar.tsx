@@ -65,11 +65,11 @@ const INVOLVE_CARDS = [
 
 // 5 Main Programs for Navigation
 const FIVE_PROGRAMS = [
-  { title: 'Ocean Recovery', description: 'Coral, reefs & marine ecosystems' },
-  { title: 'SHE Program', description: 'Women\'s livelihoods & empowerment' },
-  { title: 'Learning & Leadership', description: 'Education & capacity building' },
-  { title: 'Governance & Fisheries', description: 'Community governance & BMUs' },
-  { title: 'Research & Innovation', description: 'Monitoring & sustainable finance' },
+  { title: 'Ocean Recovery', description: 'Coral, reefs & marine ecosystems', href: '/programs/ocean-recovery' },
+  { title: 'SHE Program', description: 'Women\'s livelihoods & empowerment', href: '/programs/she' },
+  { title: 'Learning & Leadership', description: 'Education & capacity building', href: '/programs/learning-leadership' },
+  { title: 'Governance & Fisheries', description: 'Community governance & BMUs', href: '/programs/governance-fisheries' },
+  { title: 'Research & Innovation', description: 'Monitoring & sustainable finance', href: '/programs/research-innovation' },
 ];
 
 const MEGA_NAV: MegaNavItem[] = [
@@ -92,7 +92,7 @@ const MEGA_NAV: MegaNavItem[] = [
         compact: true,
         items: FIVE_PROGRAMS.map((p) => ({
           label: p.title,
-          href: '/programmes',
+          href: p.href,
           description: p.description,
         })),
       },
