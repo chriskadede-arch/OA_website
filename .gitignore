@@ -1,0 +1,7 @@
+node_modules/
+.claude/
+oceans-alive/.claude/
+oceans-alive/dev-output.txt
+oceans-alive/.next/
+oceans-alive/out/
+OA_website/
