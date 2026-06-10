@@ -170,14 +170,14 @@ export default function Home() {
             <div>
               <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-3">Our Work</p>
               <h2 className="text-4xl md:text-5xl font-poppins font-bold text-ocean-midnight leading-tight">
-                14 Interlocking<br />Programmes
+                Interlocking<br />Programs
               </h2>
             </div>
             <Link
               href="/programmes"
               className="shrink-0 inline-flex items-center gap-2 text-ocean-turquoise font-bold hover:text-ocean-midnight transition-colors"
             >
-              View all 14 programmes →
+              View all 5 programs →
             </Link>
           </div>
 
