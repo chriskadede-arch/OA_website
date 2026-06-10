@@ -27,6 +27,10 @@ const nextConfig = {
     },
   }),
   reactStrictMode: true,
+  // Performance optimizations
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
 };
 
 module.exports = nextConfig;
