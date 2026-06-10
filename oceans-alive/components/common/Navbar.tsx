@@ -106,7 +106,6 @@ const MEGA_NAV: MegaNavItem[] = [
         title: 'Blog & Stories',
         items: [
           { label: 'Impact Stories', href: '/blog/category/impact-stories', description: 'Real results from our fieldwork' },
-          { label: 'Education', href: '/blog/category/education', description: 'Learning resources and conservation articles' },
           { label: 'Community News', href: '/blog/category/community-news', description: 'Updates from local coastal communities' },
           { label: 'Latest Updates', href: '/blog/category/updates', description: 'News and announcements from OAF' },
         ],
@@ -116,8 +115,7 @@ const MEGA_NAV: MegaNavItem[] = [
         items: [
           { label: 'Toolkits', href: '/resources?category=Toolkits', description: 'Practical guides for marine conservation' },
           { label: 'IEC Materials', href: '/resources?category=IEC+Materials', description: 'Information & education content' },
-          { label: 'Case Studies', href: '/resources?category=Case+Studies', description: 'Deep dives into our programmes' },
-          { label: 'Reports & Data', href: '/resources?category=Reports', description: 'Evidence-based conservation insights' },
+          { label: 'Reports & Case Studies', href: '/resources?category=Reports', description: 'Evidence-based insights & programme deep dives' },
         ],
       },
       {
@@ -147,8 +145,7 @@ const MEGA_NAV: MegaNavItem[] = [
       {
         title: 'Engage',
         items: [
-          { label: 'Volunteer', href: '/contact?type=Volunteer', description: 'Give your time and skills to conservation' },
-          { label: 'Partner With Us', href: '/contact?type=Partnership', description: 'NGOs, governments & researchers welcome' },
+          { label: 'Partner & Volunteer', href: '/contact?type=Partnership', description: 'Collaborate with us — NGOs, volunteers, researchers & institutions' },
           { label: 'Internships', href: '/contact?type=Other', description: 'Join us as a student or graduate' },
           { label: 'Community Events', href: '/blog/category/updates', description: 'Workshops, cleanups & field days' },
         ],
@@ -168,7 +165,7 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
   const programmesCol = item.columns?.[1];
 
   return (
-    <div className="absolute top-full left-0 right-0 z-40" onMouseLeave={onClose}>
+    <div className="absolute top-full left-0 right-0 z-50" onMouseLeave={onClose}>
       <div className="h-1 bg-transparent" />
       <div className="bg-ocean-midnight border-t border-white/5 shadow-[0_24px_60px_-10px_rgba(0,0,0,0.6)]">
         <div className="max-w-6xl mx-auto px-6 py-9">
@@ -281,7 +278,7 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
 
 function ActionCardsMegaDropdown({ onClose }: { onClose: () => void }) {
   return (
-    <div className="absolute top-full left-0 right-0 z-40" onMouseLeave={onClose}>
+    <div className="absolute top-full left-0 right-0 z-50" onMouseLeave={onClose}>
       <div className="h-1 bg-transparent" />
       <div className="bg-ocean-midnight border-t border-white/5 shadow-[0_24px_60px_-10px_rgba(0,0,0,0.6)]">
         <div className="max-w-6xl mx-auto px-6 py-9">
@@ -373,7 +370,7 @@ function ActionCardsMegaDropdown({ onClose }: { onClose: () => void }) {
 
 function EditorialMegaDropdown({ item, onClose }: { item: MegaNavItem; onClose: () => void }) {
   return (
-    <div className="absolute top-full left-0 right-0 z-40" onMouseLeave={onClose}>
+    <div className="absolute top-full left-0 right-0 z-50" onMouseLeave={onClose}>
       <div className="h-1 bg-transparent" />
       <div className="bg-white border-t border-ocean-midnight/10 shadow-2xl">
         <div className="max-w-6xl mx-auto px-6 py-8">
