@@ -163,10 +163,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 5 Programs with Hero Design ─────────────────────────── */}
-      <section className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-6 mb-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+      {/* ── 5 Programs Cards ─────────────────────────── */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
               <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-3">Our Work</p>
               <h2 className="text-4xl md:text-5xl font-poppins font-bold text-ocean-midnight leading-tight">
@@ -180,185 +180,137 @@ export default function Home() {
               View all 5 programs →
             </Link>
           </div>
-        </div>
 
-        {/* Program 1: Ocean Recovery */}
-        <div className="mb-8">
-          <div className="relative bg-gradient-to-br from-ocean-midnight to-blue-900 overflow-hidden">
-            <div className="absolute inset-0">
-              <Image src="/images/divers.jpg" alt="Ocean Recovery" fill className="object-cover opacity-20" />
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
-            <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
-              <div className="text-5xl font-poppins font-bold text-white mb-2">01</div>
-              <h3 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-3">Ocean Recovery</h3>
-              <p className="text-white/90 max-w-2xl mb-8">Healthy oceans support healthy communities. Coral restoration, fisheries protection, and marine ecosystem recovery.</p>
-
-              <div className="mt-8 pt-6 border-t border-white/20">
-                <div className="flex flex-wrap justify-center gap-2 mb-6">
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-3 py-2 min-w-[110px]">
-                    <div className="text-lg font-poppins font-bold text-white">25,000+</div>
-                    <div className="text-[9px] text-white/50 uppercase">Corals Planted</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-3 py-2 min-w-[110px]">
-                    <div className="text-lg font-poppins font-bold text-white">400%</div>
-                    <div className="text-[9px] text-white/50 uppercase">Fish Biomass</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-3 py-2 min-w-[110px]">
-                    <div className="text-lg font-poppins font-bold text-white">120 km²</div>
-                    <div className="text-[9px] text-white/50 uppercase">Co-Managed</div>
-                  </div>
-                </div>
-                <div className="flex justify-center items-center gap-3">
-                  <span className="text-[9px] text-white/30 uppercase">UN SDGs</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Program 1: Ocean Recovery */}
+            <Link
+              href="/programmes"
+              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300"
+              style={{ minHeight: '320px' }}
+            >
+              <Image
+                src="/images/divers.jpg"
+                alt="Ocean Recovery"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/70 to-ocean-midnight/20" />
+              <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                <div className="text-4xl font-poppins font-bold text-white/30 mb-2">01</div>
+                <h3 className="text-xl font-poppins font-bold text-white mb-2 leading-tight">Ocean Recovery</h3>
+                <p className="text-sm text-white/70 mb-4">Coral restoration, fisheries & marine ecosystems</p>
+                <div className="flex items-center gap-2 mb-3">
                   <SDGRow sdgs={[14, 13, 17]} size="sm" />
                 </div>
+                <span className="text-xs font-bold text-ocean-turquoise group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                  Learn more →
+                </span>
               </div>
-            </div>
-          </div>
-        </div>
+            </Link>
 
-        {/* Program 2: SHE */}
-        <div className="mb-8">
-          <div className="relative bg-gradient-to-br from-pink-600 to-purple-700 overflow-hidden">
-            <div className="absolute inset-0">
-              <Image src="/images/trashforcash.jpg" alt="SHE Program" fill className="object-cover opacity-20" />
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
-            <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
-              <div className="text-5xl font-poppins font-bold text-white mb-2">02</div>
-              <h3 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-3">SHE Program</h3>
-              <p className="text-white/90 max-w-2xl mb-8">Sustainable Households & Enterprises. Women's empowerment, livelihoods, and economic independence through conservation.</p>
-
-              <div className="mt-8 pt-6 border-t border-white/20">
-                <div className="flex flex-wrap justify-center gap-2 mb-6">
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-3 py-2 min-w-[110px]">
-                    <div className="text-lg font-poppins font-bold text-white">80+</div>
-                    <div className="text-[9px] text-white/50 uppercase">Women Employed</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-3 py-2 min-w-[110px]">
-                    <div className="text-lg font-poppins font-bold text-white">2+ tonnes</div>
-                    <div className="text-[9px] text-white/50 uppercase">Plastic Monthly</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-3 py-2 min-w-[110px]">
-                    <div className="text-lg font-poppins font-bold text-white">4</div>
-                    <div className="text-[9px] text-white/50 uppercase">Communities</div>
-                  </div>
-                </div>
-                <div className="flex justify-center items-center gap-3">
-                  <span className="text-[9px] text-white/30 uppercase">UN SDGs</span>
+            {/* Program 2: SHE */}
+            <Link
+              href="/programmes"
+              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300"
+              style={{ minHeight: '320px' }}
+            >
+              <Image
+                src="/images/trashforcash.jpg"
+                alt="SHE Program"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-pink-900 via-pink-900/70 to-pink-900/20" />
+              <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                <div className="text-4xl font-poppins font-bold text-white/30 mb-2">02</div>
+                <h3 className="text-xl font-poppins font-bold text-white mb-2 leading-tight">SHE Program</h3>
+                <p className="text-sm text-white/70 mb-4">Women's empowerment & sustainable livelihoods</p>
+                <div className="flex items-center gap-2 mb-3">
                   <SDGRow sdgs={[5, 8, 14, 13]} size="sm" />
                 </div>
+                <span className="text-xs font-bold text-ocean-turquoise group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                  Learn more →
+                </span>
               </div>
-            </div>
-          </div>
-        </div>
+            </Link>
 
-        {/* Program 3: Learning & Leadership */}
-        <div className="mb-8">
-          <div className="relative bg-gradient-to-br from-green-600 to-teal-600 overflow-hidden">
-            <div className="absolute inset-0">
-              <Image src="/images/kids.jpg" alt="Learning & Leadership" fill className="object-cover opacity-20" />
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
-            <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
-              <div className="text-5xl font-poppins font-bold text-white mb-2">03</div>
-              <h3 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-3">Learning & Leadership</h3>
-              <p className="text-white/90 max-w-2xl mb-8">Ocean education, youth programs, and capacity building for the next generation of conservation leaders.</p>
-
-              <div className="mt-8 pt-6 border-t border-white/20">
-                <div className="flex flex-wrap justify-center gap-2 mb-6">
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-3 py-2 min-w-[110px]">
-                    <div className="text-lg font-poppins font-bold text-white">10,000+</div>
-                    <div className="text-[9px] text-white/50 uppercase">Students Educated</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-3 py-2 min-w-[110px]">
-                    <div className="text-lg font-poppins font-bold text-white">200+</div>
-                    <div className="text-[9px] text-white/50 uppercase">Volunteers Trained</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-3 py-2 min-w-[110px]">
-                    <div className="text-lg font-poppins font-bold text-white">Kilifi</div>
-                    <div className="text-[9px] text-white/50 uppercase">County-Wide</div>
-                  </div>
-                </div>
-                <div className="flex justify-center items-center gap-3">
-                  <span className="text-[9px] text-white/30 uppercase">UN SDGs</span>
+            {/* Program 3: Learning & Leadership */}
+            <Link
+              href="/programmes"
+              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300"
+              style={{ minHeight: '320px' }}
+            >
+              <Image
+                src="/images/kids.jpg"
+                alt="Learning & Leadership"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-green-900 via-green-900/70 to-green-900/20" />
+              <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                <div className="text-4xl font-poppins font-bold text-white/30 mb-2">03</div>
+                <h3 className="text-xl font-poppins font-bold text-white mb-2 leading-tight">Learning & Leadership</h3>
+                <p className="text-sm text-white/70 mb-4">Ocean education & capacity building</p>
+                <div className="flex items-center gap-2 mb-3">
                   <SDGRow sdgs={[4, 14, 13]} size="sm" />
                 </div>
+                <span className="text-xs font-bold text-ocean-turquoise group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                  Learn more →
+                </span>
               </div>
-            </div>
-          </div>
-        </div>
+            </Link>
 
-        {/* Program 4: Governance & Fisheries */}
-        <div className="mb-8">
-          <div className="relative bg-gradient-to-br from-amber-600 to-orange-700 overflow-hidden">
-            <div className="absolute inset-0">
-              <Image src="/images/kamakukijcma.jpg" alt="Governance & Fisheries" fill className="object-cover opacity-20" />
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
-            <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
-              <div className="text-5xl font-poppins font-bold text-white mb-2">04</div>
-              <h3 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-3">Governance & Sustainable Fisheries</h3>
-              <p className="text-white/90 max-w-2xl mb-8">Community governance, BMU networks, and sustainable fisheries management for long-term ocean health.</p>
-
-              <div className="mt-8 pt-6 border-t border-white/20">
-                <div className="flex flex-wrap justify-center gap-2 mb-6">
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-3 py-2 min-w-[110px]">
-                    <div className="text-lg font-poppins font-bold text-white">17</div>
-                    <div className="text-[9px] text-white/50 uppercase">BMUs in Network</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-3 py-2 min-w-[110px]">
-                    <div className="text-lg font-poppins font-bold text-white">120 km²</div>
-                    <div className="text-[9px] text-white/50 uppercase">Co-Managed Area</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-3 py-2 min-w-[110px]">
-                    <div className="text-lg font-poppins font-bold text-white">2022</div>
-                    <div className="text-[9px] text-white/50 uppercase">Plan Signed</div>
-                  </div>
-                </div>
-                <div className="flex justify-center items-center gap-3">
-                  <span className="text-[9px] text-white/30 uppercase">UN SDGs</span>
+            {/* Program 4: Governance & Fisheries */}
+            <Link
+              href="/programmes"
+              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300"
+              style={{ minHeight: '320px' }}
+            >
+              <Image
+                src="/images/kamakukijcma.jpg"
+                alt="Governance & Fisheries"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-amber-900 via-amber-900/70 to-amber-900/20" />
+              <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                <div className="text-4xl font-poppins font-bold text-white/30 mb-2">04</div>
+                <h3 className="text-xl font-poppins font-bold text-white mb-2 leading-tight">Governance & Fisheries</h3>
+                <p className="text-sm text-white/70 mb-4">Community governance & sustainable fisheries</p>
+                <div className="flex items-center gap-2 mb-3">
                   <SDGRow sdgs={[14, 17, 8]} size="sm" />
                 </div>
+                <span className="text-xs font-bold text-ocean-turquoise group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                  Learn more →
+                </span>
               </div>
-            </div>
-          </div>
-        </div>
+            </Link>
 
-        {/* Program 5: Research & Innovation */}
-        <div className="mb-8">
-          <div className="relative bg-gradient-to-br from-cyan-600 to-blue-700 overflow-hidden">
-            <div className="absolute inset-0">
-              <Image src="/images/oceansmen.jpg" alt="Research & Innovation" fill className="object-cover opacity-20" />
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
-            <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
-              <div className="text-5xl font-poppins font-bold text-white mb-2">05</div>
-              <h3 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-3">Research, Innovation & Sustainable Finance</h3>
-              <p className="text-white/90 max-w-2xl mb-8">Scientific monitoring, data-driven conservation, and sustainable revenue models for long-term impact.</p>
-
-              <div className="mt-8 pt-6 border-t border-white/20">
-                <div className="flex flex-wrap justify-center gap-2 mb-6">
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-3 py-2 min-w-[110px]">
-                    <div className="text-lg font-poppins font-bold text-white">85%</div>
-                    <div className="text-[9px] text-white/50 uppercase">Coral Survival</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-3 py-2 min-w-[110px]">
-                    <div className="text-lg font-poppins font-bold text-white">Quarterly</div>
-                    <div className="text-[9px] text-white/50 uppercase">Monitoring</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-3 py-2 min-w-[110px]">
-                    <div className="text-lg font-poppins font-bold text-white">Data-Driven</div>
-                    <div className="text-[9px] text-white/50 uppercase">Conservation</div>
-                  </div>
-                </div>
-                <div className="flex justify-center items-center gap-3">
-                  <span className="text-[9px] text-white/30 uppercase">UN SDGs</span>
+            {/* Program 5: Research & Innovation */}
+            <Link
+              href="/programmes"
+              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300"
+              style={{ minHeight: '320px' }}
+            >
+              <Image
+                src="/images/oceansmen.jpg"
+                alt="Research & Innovation"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-cyan-900 via-cyan-900/70 to-cyan-900/20" />
+              <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                <div className="text-4xl font-poppins font-bold text-white/30 mb-2">05</div>
+                <h3 className="text-xl font-poppins font-bold text-white mb-2 leading-tight">Research & Innovation</h3>
+                <p className="text-sm text-white/70 mb-4">Monitoring & sustainable finance</p>
+                <div className="flex items-center gap-2 mb-3">
                   <SDGRow sdgs={[14, 13, 17]} size="sm" />
                 </div>
+                <span className="text-xs font-bold text-ocean-turquoise group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                  Learn more →
+                </span>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
