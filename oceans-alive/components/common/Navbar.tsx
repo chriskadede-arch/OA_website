@@ -3,7 +3,6 @@
 import { useState, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { PROGRAMMES } from '@/lib/constants';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -64,6 +63,15 @@ const INVOLVE_CARDS = [
 
 // ─── Nav Data ─────────────────────────────────────────────────────────────────
 
+// 5 Main Programs for Navigation
+const FIVE_PROGRAMS = [
+  { title: 'Ocean Recovery', description: 'Coral, reefs & marine ecosystems' },
+  { title: 'SHE Program', description: 'Women\'s livelihoods & empowerment' },
+  { title: 'Learning & Leadership', description: 'Education & capacity building' },
+  { title: 'Governance & Fisheries', description: 'Community governance & BMUs' },
+  { title: 'Research & Innovation', description: 'Monitoring & sustainable finance' },
+];
+
 const MEGA_NAV: MegaNavItem[] = [
   {
     label: 'Our Work',
@@ -80,12 +88,12 @@ const MEGA_NAV: MegaNavItem[] = [
         ],
       },
       {
-        title: 'All 14 Programmes',
+        title: 'Our Programs',
         compact: true,
-        items: PROGRAMMES.map((p) => ({
+        items: FIVE_PROGRAMS.map((p) => ({
           label: p.title,
-          href: `/programmes/${p.slug}`,
-          description: p.statLabel,
+          href: '/programmes',
+          description: p.description,
         })),
       },
     ],
@@ -197,12 +205,12 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
               </div>
             </div>
 
-            {/* Column 2: All 14 Programmes */}
+            {/* Column 2: Our Programs */}
             <div className="px-8 border-r border-white/10">
               <div className="flex items-center justify-between mb-6">
                 <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise flex items-center gap-2">
                   <span className="w-4 h-px bg-ocean-turquoise/40 inline-block" />
-                  All 14 Programmes
+                  Our Programs
                 </p>
                 <Link
                   href="/programmes"
