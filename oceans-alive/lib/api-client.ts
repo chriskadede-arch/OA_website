@@ -1,4 +1,10 @@
 import axios, { AxiosInstance } from 'axios';
+import {
+  submitContactForm,
+  submitDonationForm,
+  submitNewsletterForm,
+  usesPhpForms,
+} from '@/lib/php-forms';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
@@ -55,6 +61,10 @@ class ApiClient {
 
   // Newsletter endpoints
   async subscribeNewsletter(email: string, name?: string) {
+    if (usesPhpForms()) {
+      return submitNewsletterForm({ email, name });
+    }
+
     const response = await this.client.post('/newsletter/subscribe', {
       email,
       name,
@@ -64,12 +74,21 @@ class ApiClient {
 
   // Donation endpoints
   async createDonationIntent(data: any) {
+    if (usesPhpForms()) {
+      const result = await submitDonationForm(data);
+      return { data: { message: result.message } };
+    }
+
     const response = await this.client.post('/donate/intent', data);
     return response.data;
   }
 
   // Contact endpoints
   async submitContact(data: any) {
+    if (usesPhpForms()) {
+      return submitContactForm(data);
+    }
+
     const response = await this.client.post('/contact', data);
     return response.data;
   }

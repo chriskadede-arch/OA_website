@@ -57,7 +57,7 @@ export default function MissionPage() {
         <div className="relative max-w-6xl mx-auto px-6">
           <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-10 flex items-center gap-3">
             <span className="w-8 h-px bg-ocean-turquoise/50" />
-            Chapter 02 · Our Purpose
+            Our Purpose
           </p>
 
           <blockquote className="font-poppins font-bold text-ocean-midnight leading-tight mb-10">
@@ -75,15 +75,55 @@ export default function MissionPage() {
           </div>
 
           <div className="max-w-3xl">
-            <p className="text-gray-600 text-lg leading-relaxed mb-5">
-              Oceans Alive works with Kenya's coastal communities to restore marine ecosystems, strengthen local livelihoods and support community-led stewardship of the ocean.
-            </p>
-            <p className="text-gray-500 leading-relaxed">
-              Everything we do is built on a simple belief: lasting conservation happens when the people who depend on marine resources are trusted and supported to manage them.
-            </p>
-            <p className="text-gray-500 leading-relaxed mt-4">
-              Our programmes combine conservation, community governance, education and sustainable livelihoods to create lasting benefits for both people and the environment.
-            </p>
+            <div className="mb-8 pb-8">
+              <h3 className="text-sm font-bold uppercase tracking-widest text-ocean-turquoise mb-4">Our Mission</h3>
+              <p className="text-gray-700 text-xl font-semibold leading-relaxed">
+                To create, catalyse, and scale pragmatic, community-led solutions for ocean conservation across Kenya and the Western Indian Ocean region. We work as a conduit to share proven LMMA tools and technical support, empowering coastal communities to become the primary stewards of their marine resources.
+              </p>
+            </div>
+
+            {/* The Challenge */}
+            <div className="mt-12 pt-12 border-t border-gray-200">
+              <h3 className="text-sm font-bold uppercase tracking-widest text-ocean-turquoise mb-6">The Challenge We Are Addressing</h3>
+
+              <div className="space-y-6">
+                <div className="bg-gradient-to-r from-ocean-turquoise/5 to-transparent border-l-4 border-ocean-turquoise p-6 rounded-r-xl">
+                  <p className="text-gray-700 text-lg leading-relaxed font-medium">
+                    Along the coast of East Africa, fishing, fish processing, and fish vending are cultural traditions with a history going back millennia. But what has changed profoundly are the prospects of fishing communities in terms of wellbeing and economic empowerment.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                    <h4 className="font-poppins font-bold text-ocean-midnight mb-3">The Pressure</h4>
+                    <p className="text-gray-600 leading-relaxed text-sm">
+                      Population growth has driven an exponential increase in the number of artisanal fishers. As fish stocks have dwindled, illegal dragnets have proliferated — destroying coral and seagrass habitats and taking increasingly small juvenile fish. Governance capacity is weak and gear restrictions remain largely unenforced.
+                    </p>
+                  </div>
+
+                  <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                    <h4 className="font-poppins font-bold text-ocean-midnight mb-3">The Pattern</h4>
+                    <p className="text-gray-600 leading-relaxed text-sm">
+                      With 29+ years of NGO engagement in the region, there is little sign of improvement in ecosystems, fish populations, or coastal wellbeing. Decisions are mainly driven by NGOs who arrive with projects but rarely build lasting community leadership.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-ocean-midnight rounded-xl p-6 text-white">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-ocean-turquoise/20 flex items-center justify-center shrink-0 mt-1">
+                      <span className="text-ocean-turquoise text-xl">✓</span>
+                    </div>
+                    <div>
+                      <h4 className="font-poppins font-bold text-ocean-turquoise mb-2">What Actually Works</h4>
+                      <p className="text-white/80 leading-relaxed">
+                        Of 26 Kenyan communities that agreed to set aside voluntary fisheries closures over the past 20 years, only a handful are showing ecological and social improvement and in each case, success is linked to long-term, place-based community organisation.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -98,12 +138,12 @@ export default function MissionPage() {
                 Our Vision
               </p>
               <p className="text-white text-2xl md:text-3xl font-poppins font-bold leading-snug">
-                A future where thriving coastal communities and healthy oceans support one another for generations to come.
+                Coastal communities across the Western Indian Ocean thriving alongside healthy, biodiverse, productive ocean ecosystems—governed by and for the people who depend on them, with legal tenure, scientific backing, and sustainable livelihoods secured.
               </p>
             </div>
             <div className="text-right hidden md:block">
-              <div className="text-7xl font-poppins font-bold text-ocean-turquoise leading-none">2017</div>
-              <div className="text-xs text-white/30 uppercase tracking-widest mt-1">to forever</div>
+              <div className="text-7xl font-poppins font-bold text-ocean-turquoise leading-none">2003</div>
+              <div className="text-xs text-white/30 uppercase tracking-widest mt-1">twenty years</div>
             </div>
           </div>
 

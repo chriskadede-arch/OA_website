@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Path Test - Oceans Alive</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; padding: 20px; background: #f5f5f5; }
+        h1 { font-size: 24px; margin-bottom: 20px; color: #1d1d1f; }
+        .test-card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .test-card h2 { font-size: 18px; margin-bottom: 10px; color: #0071e3; }
+        .test-card p { font-size: 14px; color: #666; margin-bottom: 10px; }
+        .test-card img { max-width: 100%; height: auto; border-radius: 8px; margin-top: 10px; }
+        .status { display: inline-block; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 600; margin-top: 10px; }
+        .status.pass { background: #d1f4e0; color: #0a6640; }
+        .status.fail { background: #ffe5e5; color: #d32f2f; }
+        code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Image Path Test</h1>
+    <p style="margin-bottom: 20px; color: #666;">This page tests if images are loading correctly. If you see images below, your setup is correct!</p>
+
+    <!-- Test 1: Logo -->
+    <div class="test-card">
+        <h2>Test 1: Logo</h2>
+        <p>Path: <code>public/logo.png</code></p>
+        <img src="public/logo.png" alt="Logo Test"
+             onload="document.getElementById('test1').className='status pass'; document.getElementById('test1').textContent='✓ PASS - Logo loaded'"
+             onerror="document.getElementById('test1').className='status fail'; document.getElementById('test1').textContent='✗ FAIL - Logo not found'">
+        <div id="test1" class="status">Loading...</div>
+    </div>
+
+    <!-- Test 2: Hero Image -->
+    <div class="test-card">
+        <h2>Test 2: Hero Image</h2>
+        <p>Path: <code>public/images/gallery/oceanculturelife.jpg</code></p>
+        <img src="public/images/gallery/oceanculturelife.jpg" alt="Ocean Test"
+             onload="document.getElementById('test2').className='status pass'; document.getElementById('test2').textContent='✓ PASS - Image loaded'"
+             onerror="document.getElementById('test2').className='status fail'; document.getElementById('test2').textContent='✗ FAIL - Image not found'">
+        <div id="test2" class="status">Loading...</div>
+    </div>
+
+    <!-- Test 3: Communities Image -->
+    <div class="test-card">
+        <h2>Test 3: Communities Image</h2>
+        <p>Path: <code>public/images/gallery/communities.jpg</code></p>
+        <img src="public/images/gallery/communities.jpg" alt="Communities Test"
+             onload="document.getElementById('test3').className='status pass'; document.getElementById('test3').textContent='✓ PASS - Image loaded'"
+             onerror="document.getElementById('test3').className='status fail'; document.getElementById('test3').textContent='✗ FAIL - Image not found'">
+        <div id="test3" class="status">Loading...</div>
+    </div>
+
+    <!-- Instructions -->
+    <div class="test-card" style="background: #fff3cd; border: 2px solid #ffc107;">
+        <h2>📋 What to do:</h2>
+        <p style="margin-bottom: 8px;"><strong>✓ All tests PASS?</strong> Your setup is correct! Open <code>oceans-alive-MOBILE.html</code></p>
+        <p style="margin-bottom: 8px;"><strong>✗ Tests FAIL?</strong> Check these:</p>
+        <ol style="margin-left: 20px; color: #666; font-size: 14px;">
+            <li>Did you extract the ZIP file completely?</li>
+            <li>Is this HTML file in the same folder as the "public" folder?</li>
+            <li>Try opening this file in a different browser (Chrome recommended)</li>
+        </ol>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; color: #999; font-size: 12px;">
+        Oceans Alive Foundation • www.oceansalive.org
+    </div>
+</body>
+</html>

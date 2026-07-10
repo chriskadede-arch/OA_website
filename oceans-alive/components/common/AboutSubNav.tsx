@@ -16,7 +16,7 @@ export default function AboutSubNav() {
   const path = usePathname();
 
   return (
-    <nav className="sticky top-16 md:top-20 z-40 bg-ocean-midnight/96 backdrop-blur-md border-b border-white/[0.07] shadow-lg">
+    <nav className="sticky top-16 md:top-20 z-40 bg-ocean-midnight backdrop-blur-md border-b border-white/10 shadow-xl">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden gap-1 py-2.5">
           {SECTIONS.map((s) => {
@@ -30,8 +30,8 @@ export default function AboutSubNav() {
                 href={s.href}
                 className={`whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
                   active
-                    ? 'bg-ocean-turquoise text-ocean-midnight'
-                    : 'text-white/50 hover:text-white hover:bg-white/10'
+                    ? 'bg-ocean-turquoise text-ocean-midnight shadow-md'
+                    : 'text-white/70 hover:text-white hover:bg-white/15'
                 }`}
               >
                 {s.label}

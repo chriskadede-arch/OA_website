@@ -1,23 +1,9 @@
 import { MetadataRoute } from 'next';
 import { supabase } from '@/lib/supabase';
-import { SITE_URL } from '@/lib/constants';
+import { PROGRAMMES, SITE_URL, STATIC_BLOG_STORIES } from '@/lib/constants';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  try {
-    // Get all published blog posts
-    const { data: posts } = await supabase
-      .from('posts')
-      .select('slug, updated_at')
-      .eq('is_published', true);
-
-    // Get all resources
-    const { data: resources } = await supabase
-      .from('resources')
-      .select('id, updated_at')
-      .eq('is_published', true);
-
-    // Static pages
-    const staticPages = [
+  const staticPages = [
       {
         url: SITE_URL,
         lastModified: new Date(),
@@ -60,35 +46,60 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         changeFrequency: 'monthly' as const,
         priority: 0.7,
       },
+      {
+        url: `${SITE_URL}/partnerships/coral-guardian`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+      },
     ];
 
-    // Blog post pages
-    const blogPages = (posts || []).map((post: any) => ({
+  const blogPages = STATIC_BLOG_STORIES.map((post) => ({
+    url: `${SITE_URL}/blog/${post.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  const programmePages = PROGRAMMES.map((programme) => ({
+    url: `${SITE_URL}/programmes/${programme.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  try {
+    if (!supabase) {
+      return [...staticPages, ...blogPages, ...programmePages];
+    }
+
+    const { data: posts } = await supabase
+      .from('posts')
+      .select('slug, updated_at')
+      .eq('is_published', true);
+
+    const { data: resources } = await supabase
+      .from('resources')
+      .select('id, updated_at')
+      .eq('is_published', true);
+
+    const dbBlogPages = (posts || []).map((post: { slug: string; updated_at: string }) => ({
       url: `${SITE_URL}/blog/${post.slug}`,
       lastModified: new Date(post.updated_at),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     }));
 
-    // Resource pages
-    const resourcePages = (resources || []).map((resource: any) => ({
+    const resourcePages = (resources || []).map((resource: { id: string; updated_at: string }) => ({
       url: `${SITE_URL}/resources/${resource.id}`,
       lastModified: new Date(resource.updated_at),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     }));
 
-    return [...staticPages, ...blogPages, ...resourcePages];
+    return [...staticPages, ...dbBlogPages, ...programmePages, ...resourcePages];
   } catch (error) {
     console.error('Sitemap generation error:', error);
-    // Return at least static pages if database fails
-    return [
-      {
-        url: SITE_URL,
-        lastModified: new Date(),
-        changeFrequency: 'weekly' as const,
-        priority: 1,
-      },
-    ];
+    return [...staticPages, ...blogPages, ...programmePages];
   }
 }

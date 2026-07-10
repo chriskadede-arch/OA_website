@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oceans Alive Foundation - Ocean Conference Presentation</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --ocean-midnight: #001f3f;
+            --ocean-deep: #003d5c;
+            --ocean-medium: #006a8e;
+            --ocean-turquoise: #00a5cf;
+            --ocean-cyan: #00d4ff;
+            --ocean-light: #a0e7ff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--ocean-midnight);
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .slide-deck {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 80px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease;
+            background: linear-gradient(135deg, var(--ocean-midnight) 0%, var(--ocean-deep) 50%, var(--ocean-medium) 100%);
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Slide backgrounds */
+        .slide-1 { background: linear-gradient(135deg, var(--ocean-midnight), var(--ocean-deep)); }
+        .slide-2 { background: linear-gradient(135deg, var(--ocean-deep), var(--ocean-medium)); }
+        .slide-3 { background: linear-gradient(135deg, var(--ocean-medium), var(--ocean-turquoise)); }
+
+        /* Typography */
+        h1 {
+            font-size: 72px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--ocean-cyan), var(--ocean-turquoise));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--ocean-cyan);
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--ocean-light);
+        }
+
+        p {
+            font-size: 24px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 36px;
+            color: var(--ocean-light);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            font-size: 28px;
+            color: var(--ocean-cyan);
+            font-weight: 600;
+            margin-top: 30px;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            width: 100%;
+            max-width: 1400px;
+            margin: 40px 0;
+        }
+
+        .stat-box {
+            background: rgba(0, 165, 207, 0.15);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-10px);
+            border-color: var(--ocean-cyan);
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
+        }
+
+        .stat-number {
+            font-size: 56px;
+            font-weight: 900;
+            color: var(--ocean-cyan);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 20px;
+            color: #ffffff;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Pillars Grid */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 40px;
+        }
+
+        .pillar-card {
+            background: rgba(0, 165, 207, 0.1);
+            border-left: 4px solid var(--ocean-cyan);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .pillar-title {
+            font-size: 28px;
+            color: var(--ocean-cyan);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .pillar-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--ocean-light);
+            text-align: left;
+        }
+
+        /* List Styles */
+        .achievement-list {
+            list-style: none;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .achievement-list li {
+            font-size: 24px;
+            padding: 20px 30px;
+            margin: 15px 0;
+            background: rgba(0, 212, 255, 0.1);
+            border-left: 4px solid var(--ocean-cyan);
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .achievement-list li::before {
+            content: "✓ ";
+            color: var(--ocean-cyan);
+            font-weight: 900;
+            margin-right: 15px;
+        }
+
+        /* Chart Container */
+        .chart-container {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        /* Navigation */
+        .nav-controls {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: rgba(0, 212, 255, 0.2);
+            border: 2px solid var(--ocean-cyan);
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .nav-btn:hover {
+            background: var(--ocean-cyan);
+            transform: translateY(-2px);
+        }
+
+        .slide-counter {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            font-size: 20px;
+            color: var(--ocean-light);
+            z-index: 1000;
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--ocean-cyan);
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            background: linear-gradient(135deg, var(--ocean-turquoise), var(--ocean-cyan));
+            color: #fff;
+            padding: 20px 50px;
+            font-size: 24px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 40px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.6);
+        }
+
+        /* Highlights */
+        .highlight {
+            color: var(--ocean-cyan);
+            font-weight: 700;
+        }
+
+        .footer-info {
+            position: absolute;
+            bottom: 30px;
+            font-size: 16px;
+            color: var(--ocean-light);
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-deck">
+        <!-- Slide 1: Title -->
+        <div class="slide active" id="slide-1">
+            <div class="logo">OCEANS ALIVE</div>
+            <h1>When Communities Lead,<br>Oceans Thrive</h1>
+            <p class="subtitle">Ocean Conference 2026</p>
+            <p class="tagline">Building Coastal Community Capacity for Ocean Conservation</p>
+            <p style="font-size: 20px; margin-top: 40px; color: var(--ocean-light);">
+                Kilifi County, Kenya | Western Indian Ocean
+            </p>
+        </div>
+
+        <!-- Slide 2: Who We Are -->
+        <div class="slide" id="slide-2">
+            <h2>Who We Are</h2>
+            <p style="max-width: 1100px; font-size: 26px; margin-bottom: 40px;">
+                Oceans Alive Foundation pioneers <span class="highlight">community-led ocean conservation</span> across Kenya and the Western Indian Ocean region.
+            </p>
+            <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr); max-width: 1600px;">
+                <div class="stat-box">
+                    <div class="stat-number">20</div>
+                    <div class="stat-label">Years of Impact</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">17</div>
+                    <div class="stat-label">Beach Management Units</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">7,000+</div>
+                    <div class="stat-label">Households Empowered</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">12,000</div>
+                    <div class="stat-label">Hectares Co-Managed</div>
+                </div>
+            </div>
+            <p class="tagline" style="margin-top: 50px;">
+                From 2003 to today: transforming coastal communities through conservation
+            </p>
+        </div>
+
+        <!-- Slide 3: Kenya's First -->
+        <div class="slide" id="slide-3">
+            <h2>Kenya's Conservation Pioneers</h2>
+            <ul class="achievement-list">
+                <li><strong>First Locally Managed Marine Area (LMMA)</strong> – Kuruwitu Tengefu, established 2003 under traditional law</li>
+                <li><strong>First Co-Management Area (CMA)</strong> – Officially endorsed in 2022 under new BMU Regulations</li>
+                <li><strong>First County BMU Network</strong> – 17 Beach Management Units united across Kilifi County</li>
+                <li><strong>First IUCN SAGE Analysis</strong> – Site Assessment for Governance and Equity</li>
+            </ul>
+            <p class="tagline">Setting the standard for community-based marine governance in Kenya</p>
+        </div>
+
+        <!-- Slide 4: The 4 Pillars -->
+        <div class="slide" id="slide-4">
+            <h2>Our 4-Pillar Approach</h2>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <h3 class="pillar-title">🏛️ Governance</h3>
+                    <p class="pillar-text">Supporting fisheries communities in community-based natural resource management through Joint and Co-Management Areas, empowering fisher rights and BMU activities.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3 class="pillar-title">🌊 Environment</h3>
+                    <p class="pillar-text">Assisting sustainable management of ecosystems through coral reef restoration, marine protected areas, and catchment-to-reef management plans.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3 class="pillar-title">💰 Economic</h3>
+                    <p class="pillar-text">Supporting income sustainability in fishery value chains, safeguarding traditional livelihoods while offering diversified income opportunities. For every 1 fisher, 20 livelihoods benefit.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3 class="pillar-title">👥 Social</h3>
+                    <p class="pillar-text">Ensuring "do no harm, leave no one behind" by delivering household benefits through education, improved nutrition, and community harmony.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Ocean Recovery Impact -->
+        <div class="slide" id="slide-5">
+            <h2>Ocean Recovery: Proven Results</h2>
+            <div class="chart-container">
+                <canvas id="impactChart"></canvas>
+            </div>
+            <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="stat-box">
+                    <div class="stat-number">400%</div>
+                    <div class="stat-label">Fish Biomass Increase</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">30%</div>
+                    <div class="stat-label">Reef Recovery</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">17%</div>
+                    <div class="stat-label">Seagrass Regrowth</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">135%</div>
+                    <div class="stat-label">Income Improvement</div>
+                </div>
+            </div>
+            <p style="margin-top: 30px; font-size: 20px; color: var(--ocean-light);">
+                <em>Source: Wildlife Conservation Society (WCS) – 15 years of LMMA management data</em>
+            </p>
+        </div>
+
+        <!-- Slide 6: Coral Restoration -->
+        <div class="slide" id="slide-6">
+            <h2>Coral Restoration at Scale</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">25,000+</div>
+                    <div class="stat-label">Coral Colonies Planted</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">457</div>
+                    <div class="stat-label">Artificial Reefs</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">39 hac</div>
+                    <div class="stat-label">Reef Area Restored</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">32</div>
+                    <div class="stat-label">Coral Nursery Tables</div>
+                </div>
+            </div>
+            <p style="max-width: 900px; margin-top: 40px;">
+                Since 2019, our community divers have transplanted over <span class="highlight">25,000 coral colonies</span> across 39 hectares of degraded reef area, with an annual capacity to out-plant 25,000 coral juveniles.
+            </p>
+            <p class="tagline">Rebuilding the foundation of ocean life, one coral at a time</p>
+        </div>
+
+        <!-- Slide 7: Community Transformation -->
+        <div class="slide" id="slide-7">
+            <h2>Transforming 7,000+ Lives</h2>
+            <p style="max-width: 1000px; margin-bottom: 40px; font-size: 24px;">
+                Through the Kilifi County BMU Network, <span class="highlight">7,000 coastal households</span> are benefiting from improved governance, restored ecosystems, and diversified incomes.
+            </p>
+            <div class="chart-container">
+                <canvas id="householdsChart"></canvas>
+            </div>
+            <ul class="achievement-list" style="max-width: 1000px; margin-top: 40px;">
+                <li>Legal recognition and community rights through officially endorsed BMU Network</li>
+                <li>135% household income improvement from fish spillover effect</li>
+                <li>Sustainable income streams and diversified economic opportunities</li>
+                <li>Education programs, improved nutrition, and social empowerment</li>
+            </ul>
+        </div>
+
+        <!-- Slide 8: Learning & Leadership -->
+        <div class="slide" id="slide-8">
+            <h2>Building Future Ocean Stewards</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">2,800+</div>
+                    <div class="stat-label">Students & Advocates</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">50</div>
+                    <div class="stat-label">Schools Reached</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">300</div>
+                    <div class="stat-label">International Students</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">International Athletes</div>
+                </div>
+            </div>
+            <p style="margin-top: 40px; max-width: 1000px;">
+                Our Youth for Oceans (Y4O) program educates <span class="highlight">2,500 primary students</span> and <span class="highlight">300 international students</span> annually, while training <span class="highlight">15 filmmakers</span> as conservation advocates.
+            </p>
+            <p class="tagline">Creating ambassadors to lobby for sustainable coastal fisheries management</p>
+        </div>
+
+        <!-- Slide 9: Global Recognition -->
+        <div class="slide" id="slide-9">
+            <h2>Global Recognition & Impact</h2>
+            <ul class="achievement-list">
+                <li><strong>2017 IUCN Equator Award</strong> – Kuruwitu CBO recognized for community-led LMMA</li>
+                <li><strong>2022 IUCN Blue Champions Award</strong> – Celebrating 20 years of ocean conservation</li>
+                <li><strong>IUCN Panorama, Green Listing & Blue Wall</strong> – Featured for best practices</li>
+                <li><strong>IUCN/EU BIOPAMA Award</strong> – Funding to implement County BMU Network Plan</li>
+                <li><strong>Global Conferences</strong> – Marseille 2021, APAC 2022, Monaco 2022</li>
+            </ul>
+            <p class="tagline" style="margin-top: 40px;">
+                Sharing Kenya's community-led conservation model with the world
+            </p>
+        </div>
+
+        <!-- Slide 10: Call to Action -->
+        <div class="slide" id="slide-10">
+            <h2>Partner With Us</h2>
+            <p style="max-width: 900px; font-size: 28px; margin-bottom: 40px;">
+                Join us in scaling <span class="highlight">community-led ocean conservation</span> across the Western Indian Ocean
+            </p>
+            <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 1200px;">
+                <div class="stat-box">
+                    <h3 style="color: var(--ocean-cyan); margin-bottom: 15px;">Technical Support</h3>
+                    <p style="font-size: 18px; text-align: center;">LMMA toolkits, BMU establishment guides, CMA frameworks</p>
+                </div>
+                <div class="stat-box">
+                    <h3 style="color: var(--ocean-cyan); margin-bottom: 15px;">Capacity Building</h3>
+                    <p style="font-size: 18px; text-align: center;">Training programs, governance support, sustainable finance</p>
+                </div>
+                <div class="stat-box">
+                    <h3 style="color: var(--ocean-cyan); margin-bottom: 15px;">Research & Innovation</h3>
+                    <p style="font-size: 18px; text-align: center;">Data-driven conservation, monitoring systems, impact assessment</p>
+                </div>
+            </div>
+            <button class="cta-button">Let's Work Together</button>
+            <div class="footer-info">
+                www.oceansalive.org | Kilifi County, Kenya
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="slide-counter">
+        <span id="current-slide">1</span> / <span id="total-slides">10</span>
+    </div>
+    <div class="nav-controls">
+        <button class="nav-btn" onclick="previousSlide()">← Previous</button>
+        <button class="nav-btn" onclick="nextSlide()">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 10;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            if (n > totalSlides) currentSlide = 1;
+            if (n < 1) currentSlide = totalSlides;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide - 1].classList.add('active');
+            document.getElementById('current-slide').textContent = currentSlide;
+
+            // Initialize charts when reaching those slides
+            if (currentSlide === 5) initImpactChart();
+            if (currentSlide === 7) initHouseholdsChart();
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        function previousSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+            if (e.key === 'ArrowLeft') previousSlide();
+        });
+
+        // Impact Chart
+        function initImpactChart() {
+            const ctx = document.getElementById('impactChart');
+            if (ctx && !ctx.chart) {
+                ctx.chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Fish Biomass', 'Reef Recovery', 'Seagrass Regrowth', 'Income Improvement'],
+                        datasets: [{
+                            label: '% Increase',
+                            data: [400, 30, 17, 135],
+                            backgroundColor: [
+                                'rgba(0, 212, 255, 0.7)',
+                                'rgba(0, 165, 207, 0.7)',
+                                'rgba(0, 106, 142, 0.7)',
+                                'rgba(160, 231, 255, 0.7)'
+                            ],
+                            borderColor: [
+                                'rgba(0, 212, 255, 1)',
+                                'rgba(0, 165, 207, 1)',
+                                'rgba(0, 106, 142, 1)',
+                                'rgba(160, 231, 255, 1)'
+                            ],
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        plugins: {
+                            legend: { display: false },
+                            title: {
+                                display: true,
+                                text: '15 Years of LMMA Management Impact (WCS Data)',
+                                color: '#00d4ff',
+                                font: { size: 18, weight: 'bold' }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: { color: '#a0e7ff', font: { size: 14 } },
+                                grid: { color: 'rgba(160, 231, 255, 0.1)' }
+                            },
+                            x: {
+                                ticks: { color: '#a0e7ff', font: { size: 14 } },
+                                grid: { display: false }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Households Chart
+        function initHouseholdsChart() {
+            const ctx = document.getElementById('householdsChart');
+            if (ctx && !ctx.chart) {
+                ctx.chart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['KCBMU-NW (7,000 HH)', 'KBMU (500 HH)', 'KCW-CBO (300 HH)', 'Permaculture (135 HH)', 'Trash4Cash (19 HH)'],
+                        datasets: [{
+                            data: [7000, 500, 300, 135, 19],
+                            backgroundColor: [
+                                'rgba(0, 212, 255, 0.8)',
+                                'rgba(0, 165, 207, 0.8)',
+                                'rgba(0, 106, 142, 0.8)',
+                                'rgba(160, 231, 255, 0.8)',
+                                'rgba(0, 61, 92, 0.8)'
+                            ],
+                            borderColor: '#001f3f',
+                            borderWidth: 3
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: { color: '#ffffff', font: { size: 14 }, padding: 15 }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Household Impact Distribution',
+                                color: '#00d4ff',
+                                font: { size: 18, weight: 'bold' }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Initialize
+        document.getElementById('total-slides').textContent = totalSlides;
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

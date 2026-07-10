@@ -10,7 +10,7 @@ export const BRAND_COLORS = {
 // Site Metadata
 export const SITE_NAME = 'Oceans Alive Foundation';
 export const SITE_DESCRIPTION =
-  "Working with coastal communities to restore marine ecosystems, strengthen livelihoods, and create lasting positive change along Kenya's coast.";
+  "Creating, catalyzing, and scaling pragmatic, community-led solutions for ocean conservation across Kenya and the Western Indian Ocean. Working alongside coastal communities to strengthen fisheries management, protect marine ecosystems, and pioneer inclusive models of ocean stewardship.";
 export const SITE_URL = 'https://oceansalive.org';
 export const SITE_TWITTER = '@oceans_alive_kenya';
 export const SITE_INSTAGRAM = '@oceans_alive_kenya';
@@ -64,6 +64,7 @@ export const DONATION_AMOUNTS = [
   { label: '$25', value: 2500 },
   { label: '$50', value: 5000 },
   { label: '$100', value: 10000 },
+  { label: '$250', value: 25000 },
   { label: 'Custom', value: 0 },
 ];
 
@@ -116,8 +117,9 @@ export const SOCIAL_LINKS = [
 ];
 
 // Contact Info
-export const CONTACT_EMAIL = 'info@oceansalive.org';
-export const CONTACT_PHONE = '+254 712 345 678';
+export const CONTACT_EMAIL = 'info@oceansalivekenya.org';
+export const CONTACT_EMAIL_SECONDARY = 'des@oceansalivekenya.org';
+export const CONTACT_PHONE = '+254 732 807 935';
 export const CONTACT_ADDRESS = 'Vipingo, Kilifi County, Kenya';
 
 // Team
@@ -135,6 +137,27 @@ export const TEAM_MEMBERS = [
     bio: 'Founded Oceans Alive in 2003 alongside Kuruwitu fishermen. Has led the organisation from a 30-hectare sanctuary to a globally recognised model of community-led marine conservation - and Kenya\'s first ocean co-management plan.',
     image: '/images/team/des-bowden.webp',
     initials: 'DB',
+  },
+  {
+    name: 'Tilda Bowden',
+    role: 'Director / Education Development',
+    bio: 'Leads ocean education initiatives - connecting schools, youth groups, and community members to marine conservation through the living classroom at Kuruwitu.',
+    image: '/images/team/tilda-bowden.avif',
+    initials: 'TB',
+  },
+  {
+    name: 'Dickson Juma',
+    role: 'Community Liaison Officer',
+    bio: 'Works directly with coastal communities to strengthen engagement, build trust, and ensure conservation programmes reflect local knowledge and priorities.',
+    image: null,
+    initials: 'DJ',
+  },
+  {
+    name: 'John Dominic',
+    role: 'Technical Advisor',
+    bio: 'Provides specialist technical guidance on marine ecology, conservation methodology, and programme design - ensuring every OAF intervention is grounded in best practice.',
+    image: '/images/team/john-dominic.avif',
+    initials: 'JD',
   },
   {
     name: 'Lionel D Murage',
@@ -158,13 +181,6 @@ export const TEAM_MEMBERS = [
     initials: 'AM',
   },
   {
-    name: 'Tilda Bowden',
-    role: 'Director / Education Development',
-    bio: 'Leads ocean education initiatives - connecting schools, youth groups, and community members to marine conservation through the living classroom at Kuruwitu.',
-    image: '/images/team/tilda-bowden.avif',
-    initials: 'TB',
-  },
-  {
     name: 'Remmy Safari',
     role: 'Programme Manager',
     bio: 'Drives the BMU network and fisheries co-management programmes, supporting Beach Management Units and building governance structures that protect Kenya\'s coastal fisheries long-term.',
@@ -177,13 +193,6 @@ export const TEAM_MEMBERS = [
     bio: 'Leads hands-on coral nursery operations at Kuruwitu, training community reef gardeners and overseeing the planting and monitoring of 25,000+ coral colonies.',
     image: '/images/team/katana-ngala.avif',
     initials: 'KN',
-  },
-  {
-    name: 'John Dominic',
-    role: 'Technical Advisor',
-    bio: 'Provides specialist technical guidance on marine ecology, conservation methodology, and programme design - ensuring every OAF intervention is grounded in best practice.',
-    image: '/images/team/john-dominic.avif',
-    initials: 'JD',
   },
   {
     name: 'Roseline Kibogo',
@@ -203,7 +212,7 @@ export const TEAM_MEMBERS = [
     name: 'Cameron Bowden',
     role: 'Coral Outreach Officer',
     bio: 'Connects the coral restoration programme to wider audiences - engaging communities, schools, tourists, and media partners in the reef recovery work at Kuruwitu.',
-    image: null,
+    image: '/images/team/cameron.png',
     initials: 'CB',
   },
   {
@@ -217,73 +226,93 @@ export const TEAM_MEMBERS = [
     name: 'Patrick Kyengo',
     role: 'Monitoring & Evaluation Officer',
     bio: 'Leads impact measurement across all programmes, designing data collection systems and delivering evidence that informs both programme improvement and donor reporting.',
-    image: null,
+    image: '/images/team/Patrick.jpeg',
     initials: 'PK',
   },
   {
     name: 'Chris Adede',
-    role: 'Communications Officer',
+    role: 'Brand & Communication Manager',
     bio: 'Tells the story of Oceans Alive\'s work to the world - from Project REEL Kilifi media partnerships to social media, press, and advocacy content reaching global conservation audiences.',
     image: '/images/team/chris-adede.jpg',
     initials: 'CA',
   },
+  {
+    name: 'Julius Kitela',
+    role: 'Education Officer',
+    bio: 'Delivers ocean education programmes to schools and youth groups across Kilifi County, connecting the next generation to marine conservation.',
+    image: '/images/team/Julius.jpeg',
+    initials: 'JK',
+  },
+  {
+    name: 'Joel Nyanje',
+    role: 'Assistant Education Officer',
+    bio: 'Supports education programme delivery, helping coordinate school visits, field trips, and youth activities that bring marine conservation to life.',
+    image: '/images/team/Joel.jpeg',
+    initials: 'JN',
+  },
+  {
+    name: 'Nancy Ogega',
+    role: 'Marine Scientist & Ocean Researcher',
+    bio: 'Leads scientific research and marine ecology studies, translating field data into actionable conservation strategies and strengthening the evidence base that guides Oceans Alive\'s work across Kenya\'s coastline.',
+    image: '/images/team/Nancy.png',
+    initials: 'NO',
+  },
 ];
 
-// Impact Stats
+// Impact Stats - Updated June 2025 from Company Profile & Impact Report
 export const IMPACT_STATS = [
-  { label: 'Coral Colonies Hand-Planted', value: '25,000+' },
-  { label: 'Kuruwitu Co-Managed Area and plan', value: '120 km²' },
-  { label: 'Students & Youth Educated', value: '10,000+' },
-  { label: 'The oldest Community Conservation Area in Kenya', value: '21 Years' },
-  { label: 'Fish Biomass Increase within the sanctuary', value: '400%' },
-  { label: 'Coastline Protected', value: '640 km' },
-  { label: 'Women in Trash4Cash', value: '80+' },
-  { label: 'Community Members', value: '1,200+' },
+  { label: 'Years of Community-Led Impact', value: '20+' },
+  { label: 'Hectares Under Co-Management', value: '12,000' },
+  { label: 'Coral Colonies Replanted Since 2019', value: '25,000+' },
+  { label: 'Fish Biomass Increase in CCA', value: '400%' },
+  { label: 'CCAs Inspired Across Kenya', value: '30+' },
+  { label: 'Households Benefiting from Programs', value: '7,000+' },
+  { label: 'Women in Income Programs', value: '735+' },
 ];
 
-// OAF Timeline
+// OAF Timeline - Complete 20-Year Journey (2003-2025)
 export const TIMELINE = [
   {
     year: '2003',
-    title: 'A Community Takes Action',
-    body: 'Following a devastating coral bleaching event in the late 1990s, fish stocks declined and many fishing families struggled to make a living. In Kuruwitu, community members came together, supported by local resident Des Bowden, to find a way forward.',
-    tag: '',
+    title: 'Community Action Begins',
+    body: 'Kuruwitu community and founders took action to close an area from fishing, establishing Kenya\'s first community coastal conservation area (Tengefu) - a locally managed marine protected area that would become the model for national policy.',
+    tag: 'Origins',
   },
   {
-    year: '2006',
-    title: "Kenya's First Community Marine Sanctuary",
-    body: 'As part of a five-year management plan, the Kuruwitu community set aside 30 hectares of its inner lagoon as a protected area, known locally as a tengefu. What began as a local response to declining fish stocks became the foundation of a community-led approach to marine conservation.',
-    tag: 'Founding',
-  },
-  {
-    year: '2017',
-    title: 'Oceans Alive Takes Shape',
-    body: 'The Oceans Alive Foundation was established to support and expand the community-led conservation work taking place along Kenya\'s coast. Building on lessons from Kuruwitu, the organisation helps communities, government and partners work together.',
-    tag: '',
+    year: '2003 - 2018',
+    title: 'Model Proven with Data',
+    body: '15 years of data collection and community management deliver unprecedented results: 400% fish biomass increase, 30% coral recovery, 17% seagrass restoration, and 735% household income improvement in the surrounding area.',
+    tag: 'Evidence',
   },
   {
     year: '2017',
-    title: 'Equator Prize',
-    body: 'The Kuruwitu CBO, supported by Oceans Alive, received the UNDP Equator Prize for outstanding community-led marine conservation. Community representatives Katana Ngala and Shida Shoka travelled to New York to accept the award.',
-    tag: 'UNDP Prize',
+    title: 'Global Recognition & Foundation',
+    body: 'Oceans Alive Foundation established to share the CCA experience and tools. Community representatives traveled to New York to accept the UNDP Equator Prize. We supported the implementation of 12,000ha Kuruwitu Co-management Area (KCMA) as a model for the Tengefu.',
+    tag: 'Milestone Year',
   },
   {
     year: '2022',
-    title: '120 km² of Ocean Under Co-Management',
-    body: "Years of collaboration led to the formal establishment of the Kuruwitu Co-Managed Area. Covering 120 square kilometres of ocean, it marked a major step forward for community participation in marine governance on Kenya's coast.",
-    tag: 'Policy Landmark',
+    title: 'Policy Milestone',
+    body: 'Establishment of the first officially endorsed Kuruwitu Co-management Area (KCMA) for Kuruwitu BMU under new BMU Regulations. IUCN SAGE analysis - a policy landmark for Kenya.',
+    tag: 'Policy Milestone',
+  },
+  {
+    year: '2022',
+    title: 'IUCN Blue Champions Award',
+    body: 'Kuruwitu CBO wins the 2022 IUCN Blue Champions Award, further cementing global recognition of the community-led conservation model pioneered on Kenya\'s north coast.',
+    tag: 'Blue Champion',
   },
   {
     year: '2023',
-    title: 'Royal Recognition',
-    body: "In 2023, during a visit to Kuruwitu, His Majesty King Charles III placed a coral restoration block bearing his royal cypher into the water. The moment brought international attention to a conservation story that began with a local community.",
-    tag: 'Royal Visit',
+    title: 'Royal Visit to Kuruwitu',
+    body: 'His Majesty King Charles III visits Kuruwitu and places a coral restoration block into the water, bringing unprecedented international attention to community-led marine conservation in Kenya.',
+    tag: 'Royal Recognition',
   },
   {
     year: '2025',
-    title: 'Sharing the Model',
-    body: 'At the IUCN World Conservation Congress, the Kuruwitu experience was presented as an example of community-led marine conservation in practice. What began as a local response to a crisis is now informing conversations about marine stewardship across the Western Indian Ocean.',
-    tag: 'IUCN 2025',
+    title: 'Global Stage',
+    body: 'Oceans Alive presents at IUCN World Conservation Congress, showcasing the Kuruwitu model as a globally scalable blueprint. Featured in IUCN Panorama, Green Listing and Great Blue Wall - sharing lessons across the Western Indian Ocean region.',
+    tag: 'Global Stage',
   },
 ];
 
@@ -307,8 +336,8 @@ export const PROGRAMMES = [
     category: 'Governance',
     icon: '🌊',
     slug: 'co-management',
-    title: 'Community Co-Management (LMMA)',
-    description: "Kenya's first LMMA. 120 km² under a formal management plan signed in 2022, placing communities at the centre of marine governance. A landmark in Kenyan marine governance history.",
+    title: 'Community Co-Management (CCA)',
+    description: "Kenya's first CCA. 120 km² under a formal management plan signed in 2022, placing communities at the centre of marine governance. A landmark in Kenyan marine governance history.",
     stat: '120 km²',
     statLabel: 'Under Protection',
     href: '/programmes/co-management',
@@ -373,8 +402,8 @@ export const PROGRAMMES = [
     icon: '♻️',
     slug: 'trash4cash',
     title: 'Trash4Cash',
-    description: "Women's groups collect and sort plastic waste, selling to certified recyclers. Turning ocean pollution into household income and clean coastlines. 80+ women, 2+ tonnes of plastic monthly.",
-    stat: '80+',
+    description: "Women's groups collect and sort plastic waste, selling to certified recyclers. Turning ocean pollution into household income and clean coastlines. 120 women, 2+ tonnes of plastic monthly.",
+    stat: '120',
     statLabel: 'Women Employed',
     href: '/programmes/trash4cash',
     color: 'from-[#c47900] to-ocean-sunshine',
@@ -386,8 +415,8 @@ export const PROGRAMMES = [
     icon: '🐢',
     slug: 'turtle-protection',
     title: 'Turtle Protection',
-    description: 'Monitoring and protecting sea turtle nesting habitats along the Kilifi coast. Community rangers record nesting events and prevent poaching year-round along 640 km of coastline.',
-    stat: '640 km',
+    description: 'Monitoring and protecting sea turtle nesting habitats along the Kilifi coast. Community rangers record nesting events and prevent poaching year-round along 270 km of coastline.',
+    stat: '270 km',
     statLabel: 'Coastline Monitored',
     href: '/programmes/turtle-protection',
     color: 'from-ocean-midnight to-[#1a6b5a]',
@@ -413,7 +442,7 @@ export const PROGRAMMES = [
     slug: 'lift-network',
     title: 'LIFT Network',
     description: "Women's livelihoods, financial independence and eco-entrepreneurship. Building resilient coastal communities from the ground up through women's economic agency and conservation leadership.",
-    stat: '80+',
+    stat: '120',
     statLabel: 'Women Members',
     href: '/programmes/lift-network',
     color: 'from-[#c47900] to-ocean-sunshine',
@@ -452,7 +481,7 @@ export const PROGRAMMES = [
     slug: 'community-health',
     title: 'Community Health & Wellbeing',
     description: "Holistic programmes that link ocean health directly to community health - because the wellbeing of Kilifi's people and the health of its waters are inseparable.",
-    stat: '1,200+',
+    stat: '7,000+',
     statLabel: 'Community Members',
     href: '/programmes/community-health',
     color: 'from-[#1a6b5a] to-ocean-seafoam',
@@ -549,7 +578,7 @@ export const STATIC_BLOG_STORIES = [
     date: 'January 2025',
     readTime: '5 min read',
     featured: false,
-    stats: ['80+ women', '2+ tonnes monthly', '4 communities'],
+    stats: ['120 women', '2+ tonnes monthly', '4 communities'],
   },
   {
     id: 'youth-conservation',
@@ -649,7 +678,7 @@ export const STATIC_BLOG_STORIES = [
     date: 'February 2025',
     readTime: '5 min read',
     featured: false,
-    stats: ['80+ women employed', '2+ tonnes monthly', 'Economic independence'],
+    stats: ['120 women employed', '2+ tonnes monthly', 'Economic independence'],
   },
   {
     id: 'reef-gardener-journal',

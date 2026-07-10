@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { SDGS } from '@/lib/sdg-mapping';
 
 interface SDGBadgeProps {
@@ -7,13 +8,15 @@ interface SDGBadgeProps {
   size?: 'sm' | 'md' | 'lg';
   showTooltip?: boolean;
   className?: string;
+  useRealLogo?: boolean;
 }
 
 export default function SDGBadge({
   number,
   size = 'md',
   showTooltip = true,
-  className = ''
+  className = '',
+  useRealLogo = false
 }: SDGBadgeProps) {
   const sdg = SDGS[number];
 
@@ -24,6 +27,41 @@ export default function SDGBadge({
     md: 'w-14 h-14 text-xs',
     lg: 'w-20 h-20 text-base',
   };
+
+  const logoSizeClasses = {
+    sm: 'w-12 h-12',
+    md: 'w-16 h-16',
+    lg: 'w-24 h-24',
+  };
+
+  // Use local SDG logo images - check for jpg or png based on what we have
+  const jpgSdgs = [2, 4, 5, 8, 13, 14, 15, 17];
+  const pngSdgs = [1];
+  const hasJpg = jpgSdgs.includes(number);
+  const hasPng = pngSdgs.includes(number);
+  const logoPath = `/images/sdgs/sdg-${number}.${hasJpg ? 'jpg' : hasPng ? 'png' : 'png'}`;
+
+  if (useRealLogo) {
+    return (
+      <div
+        className={`relative group ${className}`}
+        title={showTooltip ? `SDG ${sdg.number}: ${sdg.name}` : undefined}
+      >
+        <div
+          className={`${logoSizeClasses[size]} rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105`}
+        >
+          <Image
+            src={logoPath}
+            alt={`SDG ${sdg.number}: ${sdg.name}`}
+            width={200}
+            height={200}
+            className="w-full h-full object-cover"
+            unoptimized
+          />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div

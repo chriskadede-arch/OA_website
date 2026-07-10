@@ -4,7 +4,7 @@ import { TEAM_MEMBERS } from '@/lib/constants';
 
 export const metadata = {
   title: 'Our Team - Oceans Alive Foundation',
-  description: 'Meet the Oceans Alive Foundation team - 15 specialists and 1,200+ community stewards protecting Kenya\'s coast.',
+  description: 'Meet the Oceans Alive Foundation team - 18 specialists and community stewards protecting Kenya\'s coast.',
 };
 
 const GRADIENTS = [
@@ -22,53 +22,16 @@ const GRADIENTS = [
 
 export default function TeamPage() {
   return (
-    <div className="bg-[#04090f] min-h-screen">
+    <div className="bg-white min-h-screen">
 
       {/* ══════════════════════════════════════════════════════════
-          HERO - Collage + giant type
+          HERO - Clean gradient background
       ══════════════════════════════════════════════════════════ */}
       <section className="relative min-h-[90vh] flex items-end overflow-hidden">
 
-        {/* Full-bleed background: scattered face collage */}
+        {/* Clean gradient background */}
         <div className="absolute inset-0">
-          {/* Base dark tint */}
-          <div className="absolute inset-0 bg-[#04090f]" />
-
-          {/* Scattered photo tiles - absolute positioned */}
-          {TEAM_MEMBERS.filter(m => m.image).map((m, i) => {
-            const positions = [
-              { top:'4%',  left:'38%', w:220, h:290, rot:'-4deg',  z:1 },
-              { top:'10%', left:'55%', w:170, h:220, rot:'3deg',   z:2 },
-              { top:'2%',  left:'70%', w:190, h:260, rot:'-2deg',  z:1 },
-              { top:'30%', left:'45%', w:200, h:270, rot:'5deg',   z:3 },
-              { top:'15%', left:'80%', w:150, h:200, rot:'-6deg',  z:2 },
-              { top:'45%', left:'60%', w:175, h:230, rot:'2deg',   z:1 },
-              { top:'35%', left:'78%', w:160, h:210, rot:'-3deg',  z:2 },
-              { top:'55%', left:'40%', w:210, h:280, rot:'4deg',   z:3 },
-              { top:'60%', left:'72%', w:155, h:205, rot:'-5deg',  z:1 },
-            ];
-            const pos = positions[i % positions.length];
-            return (
-              <div
-                key={m.name}
-                className="absolute overflow-hidden rounded-lg shadow-2xl ring-1 ring-white/10"
-                style={{
-                  top: pos.top, left: pos.left,
-                  width: pos.w, height: pos.h,
-                  transform: `rotate(${pos.rot})`,
-                  zIndex: pos.z,
-                  opacity: 0.35,
-                }}
-              >
-                <Image src={m.image!} alt={m.name} fill className="object-cover grayscale" />
-                <div className="absolute inset-0 bg-ocean-midnight/30" />
-              </div>
-            );
-          })}
-
-          {/* Gradient vignette - pulls focus left */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#04090f] via-[#04090f]/80 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#04090f] via-transparent to-[#04090f]/60" />
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-ocean-turquoise/5" />
         </div>
 
         {/* Foreground text */}
@@ -78,11 +41,11 @@ export default function TeamPage() {
           <div className="mb-10 overflow-hidden">
             <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-ocean-turquoise mb-6 flex items-center gap-3">
               <span className="w-10 h-px bg-ocean-turquoise/50" />
-              Oceans Alive Foundation · Chapter 05
+              Oceans Alive Foundation
             </p>
             <h1 className="font-poppins font-bold leading-[0.88] select-none">
-              <span className="block text-[clamp(64px,12vw,140px)] text-white">The</span>
-              <span className="block text-[clamp(64px,12vw,140px)] text-white">People</span>
+              <span className="block text-[clamp(64px,12vw,140px)] text-ocean-midnight">The</span>
+              <span className="block text-[clamp(64px,12vw,140px)] text-ocean-midnight">People</span>
               <span className="block text-[clamp(64px,12vw,140px)] text-ocean-turquoise">Behind</span>
               <span className="block text-[clamp(64px,12vw,140px)] text-ocean-turquoise">the Ocean.</span>
             </h1>
@@ -90,14 +53,14 @@ export default function TeamPage() {
 
           {/* Bottom: stats + description */}
           <div className="flex flex-col md:flex-row items-start md:items-end gap-10 max-w-xl">
-            <p className="text-white/45 text-base leading-relaxed">
-              15 specialists. 1,200+ community stewards. One coastline. Since 2003.
+            <p className="text-gray-600 text-base leading-relaxed">
+              18 specialists. Community stewards. One coastline. Since 2003.
             </p>
             <div className="flex gap-8 shrink-0">
-              {[['15','Core team'],['1.2k+','Community'],['20+','Years']].map(([v,l])=>(
+              {[['18','Core team'],['20+','Years']].map(([v,l])=>(
                 <div key={l}>
                   <div className="text-2xl font-poppins font-bold text-ocean-turquoise leading-none">{v}</div>
-                  <div className="text-[9px] text-white/30 uppercase tracking-widest mt-1">{l}</div>
+                  <div className="text-[9px] text-gray-400 uppercase tracking-widest mt-1">{l}</div>
                 </div>
               ))}
             </div>
@@ -106,15 +69,15 @@ export default function TeamPage() {
 
         {/* Scroll nudge */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-          <span className="text-[9px] text-white/20 uppercase tracking-widest">Scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-white/20 to-transparent" />
+          <span className="text-[9px] text-gray-400 uppercase tracking-widest">Scroll</span>
+          <div className="w-px h-8 bg-gradient-to-b from-gray-300 to-transparent" />
         </div>
       </section>
 
       {/* ══════════════════════════════════════════════════════════
-          TEAM GRID - Apple-inspired dark editorial grid
+          TEAM GRID - Apple-inspired editorial grid
       ══════════════════════════════════════════════════════════ */}
-      <section className="relative bg-black py-24 overflow-hidden">
+      <section className="relative bg-white py-24 overflow-hidden">
 
         {/* Subtle radial glow at the very top - like an iPhone wallpaper bloom */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] rounded-full opacity-30 pointer-events-none"
@@ -122,7 +85,7 @@ export default function TeamPage() {
 
         {/* Ghost watermark number */}
         <div
-          className="absolute bottom-0 right-0 font-poppins font-black leading-none select-none pointer-events-none text-white/[0.02]"
+          className="absolute bottom-0 right-0 font-poppins font-black leading-none select-none pointer-events-none text-gray-100"
           style={{ fontSize: 'clamp(220px, 32vw, 380px)' }}
         >
           15
@@ -132,16 +95,16 @@ export default function TeamPage() {
 
           {/* ── Apple-style section header ── */}
           <div className="text-center mb-16">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.45em] text-white/30 mb-4">
-              Chapter 05 · The Team
+            <p className="text-[10px] font-semibold uppercase tracking-[0.45em] text-gray-400 mb-4">
+              The Team
             </p>
-            <h2 className="font-poppins font-bold text-white leading-[1.0]"
+            <h2 className="font-poppins font-bold text-ocean-midnight leading-[1.0]"
               style={{ fontSize: 'clamp(40px, 6vw, 68px)' }}>
               The people<br />
-              <span className="text-white/40">behind the ocean.</span>
+              <span className="text-gray-400">behind the ocean.</span>
             </h2>
-            <p className="text-white/25 text-[13px] mt-4 tracking-wide">
-              15 specialists · Kilifi County, Kenya
+            <p className="text-gray-500 text-[13px] mt-4 tracking-wide">
+              19 specialists · Kilifi County, Kenya
             </p>
           </div>
 
@@ -154,9 +117,9 @@ export default function TeamPage() {
               return (
                 <div
                   key={member.name}
-                  className="group relative overflow-hidden rounded-[2.5rem] bg-[#111] col-span-1 aspect-square
-                    border border-white/[0.06] hover:border-white/[0.14]
-                    transition-all duration-500 ease-out cursor-default"
+                  className="group relative overflow-hidden rounded-[2.5rem] bg-gray-100 col-span-1 aspect-square
+                    border border-gray-200 hover:border-ocean-turquoise/30
+                    transition-all duration-500 ease-out cursor-default shadow-sm hover:shadow-lg"
                 >
                   {/* Full-bleed image or gradient placeholder */}
                   <div className="absolute inset-0">
@@ -191,7 +154,7 @@ export default function TeamPage() {
                   </div>
 
                   {/* Deep gradient scrim - text legibility */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight/90 via-ocean-midnight/40 to-transparent" />
 
                   {/* Top-right index badge */}
                   <div className="absolute top-4 right-4 z-10">
@@ -228,22 +191,22 @@ export default function TeamPage() {
             {/* ── Join card ── */}
             <Link
               href="/contact?type=Volunteer"
-              className="group relative col-span-1 aspect-square rounded-[2.5rem] overflow-hidden
-                border border-dashed border-white/[0.10] hover:border-white/[0.22]
-                flex items-center justify-center transition-all duration-500"
+              className="group relative col-span-1 aspect-square rounded-[2.5rem] overflow-hidden bg-gray-50
+                border border-dashed border-gray-300 hover:border-ocean-turquoise
+                flex items-center justify-center transition-all duration-500 shadow-sm hover:shadow-lg"
             >
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                style={{ background: 'radial-gradient(ellipse at center, rgba(46,191,209,0.05) 0%, transparent 70%)' }}
+                style={{ background: 'radial-gradient(ellipse at center, rgba(46,191,209,0.1) 0%, transparent 70%)' }}
               />
               <div className="relative text-center px-4">
-                <div className="w-8 h-8 rounded-xl border border-white/[0.12] group-hover:border-white/30 flex items-center justify-center mx-auto mb-2 transition-all duration-300 group-hover:scale-110">
-                  <span className="text-white/25 group-hover:text-white text-lg leading-none transition-colors">+</span>
+                <div className="w-8 h-8 rounded-xl border border-gray-300 group-hover:border-ocean-turquoise flex items-center justify-center mx-auto mb-2 transition-all duration-300 group-hover:scale-110">
+                  <span className="text-gray-400 group-hover:text-ocean-turquoise text-lg leading-none transition-colors">+</span>
                 </div>
-                <p className="text-[9px] font-semibold uppercase tracking-[0.25em] text-white/20 group-hover:text-white/50 transition-colors">
+                <p className="text-[9px] font-semibold uppercase tracking-[0.25em] text-gray-500 group-hover:text-ocean-turquoise transition-colors">
                   Join the team
                 </p>
-                <p className="text-[10px] text-white/12 mt-1">
+                <p className="text-[10px] text-gray-400 mt-1">
                   We&apos;re always looking for talent
                 </p>
               </div>
@@ -256,10 +219,10 @@ export default function TeamPage() {
       {/* ══════════════════════════════════════════════════════════
           COMMUNITY - Full-bleed with photo wash
       ══════════════════════════════════════════════════════════ */}
-      <section className="relative mt-2 overflow-hidden py-28 md:py-40">
+      <section className="relative mt-2 overflow-hidden py-28 md:py-40 bg-ocean-midnight">
         <div className="absolute inset-0">
           <Image src="/images/BMUS.jpg" alt="Community" fill className="object-cover opacity-15 grayscale" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#04090f] via-[#04090f]/90 to-[#04090f]/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ocean-midnight via-ocean-midnight/90 to-ocean-midnight/60" />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-6">
@@ -269,13 +232,13 @@ export default function TeamPage() {
                 <span className="w-6 h-px bg-ocean-turquoise/30" /> The Backbone
               </p>
               <h2 className="font-poppins font-bold leading-[0.9] mb-8">
-                <span className="block text-[clamp(48px,8vw,96px)] text-white">1,200+</span>
+                <span className="block text-[clamp(48px,8vw,96px)] text-white">7,000+</span>
                 <span className="block text-[clamp(32px,5vw,60px)] text-ocean-turquoise">Community</span>
                 <span className="block text-[clamp(32px,5vw,60px)] text-ocean-turquoise">Stewards</span>
               </h2>
               <p className="text-white/45 leading-relaxed max-w-lg text-base mb-8">
                 Fishers, reef monitors, women leaders, BMU reps, and community rangers -
-                the 1,200+ people who protect Kenya&apos;s coast because it is their home.
+                the 7,000+ people who protect Kenya&apos;s coast because it is their home.
               </p>
               <Link href="/about/story" className="inline-flex items-center gap-2 text-xs font-bold text-ocean-turquoise group/l hover:gap-4 transition-all">
                 Read our story <span className="group-hover/l:translate-x-1 transition-transform">→</span>
@@ -286,7 +249,7 @@ export default function TeamPage() {
               {[
                 ['40+','Reef Monitors','Certified community divers'],
                 ['12','BMU Reps','Across Kilifi County'],
-                ['80+','Women Leaders','Trash4Cash & LIFT Network'],
+                ['120','Women Leaders','Trash4Cash & LIFT Network'],
                 ['25+','Sea Rangers','Turtle & fishery patrol'],
               ].map(([count,role,desc])=>(
                 <div key={role} className="group/c rounded-2xl border border-white/[0.05] bg-white/[0.02] hover:bg-white/[0.05] hover:border-ocean-turquoise/20 p-6 transition-all duration-300">
@@ -303,7 +266,7 @@ export default function TeamPage() {
       {/* ══════════════════════════════════════════════════════════
           CTA - Dark split
       ══════════════════════════════════════════════════════════ */}
-      <section className="border-t border-white/[0.05] py-24">
+      <section className="border-t border-white/[0.05] py-24 bg-ocean-midnight">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>

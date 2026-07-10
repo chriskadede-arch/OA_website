@@ -1,0 +1,10 @@
+{
+  "liveServer.settings.root": "/oceans-alive/out",
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.CustomBrowser": null,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.wait": 100,
+  "liveServer.settings.mount": [
+    ["/", "./oceans-alive/out"]
+  ]
+}

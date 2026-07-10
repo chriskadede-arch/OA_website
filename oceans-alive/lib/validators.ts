@@ -30,8 +30,9 @@ export const contactFormSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
   subject: z
     .string()
-    .min(5, 'Subject must be at least 5 characters')
-    .max(255, 'Subject must not exceed 255 characters'),
+    .max(255, 'Subject must not exceed 255 characters')
+    .optional()
+    .or(z.literal('')),
   message: z
     .string()
     .min(10, 'Message must be at least 10 characters')

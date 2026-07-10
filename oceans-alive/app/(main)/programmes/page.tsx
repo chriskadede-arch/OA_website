@@ -242,7 +242,7 @@ export default function Programmes() {
             </div>
             <div className="grid grid-cols-3 gap-6 border-t border-white/20 pt-6">
               <div>
-                <div className="text-3xl font-poppins font-bold text-pink-200">80+</div>
+                <div className="text-3xl font-poppins font-bold text-pink-200">120</div>
                 <div className="text-xs text-white/70 uppercase tracking-wider mt-1">Women Employed</div>
               </div>
               <div>
@@ -320,7 +320,7 @@ export default function Programmes() {
             </div>
             <div className="grid grid-cols-3 gap-6 border-t border-white/20 pt-6">
               <div>
-                <div className="text-3xl font-poppins font-bold text-amber-200">17</div>
+                <div className="text-3xl font-poppins font-bold text-amber-200">18</div>
                 <div className="text-xs text-white/70 uppercase tracking-wider mt-1">BMUs in Network</div>
               </div>
               <div>

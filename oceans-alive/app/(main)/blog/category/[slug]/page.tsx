@@ -32,7 +32,7 @@ const CATEGORY_CONFIG = {
     heroImageAlt: 'Women in Trash4Cash collecting plastic on Kenya\'s coast',
     accentColor: 'ocean-seafoam' as const,
     stats: [
-      { number: '80+', label: 'Women in Trash4Cash' },
+      { number: '120', label: 'Women in Trash4Cash' },
       { number: '2+ t', label: 'Plastic Collected Monthly' },
       { number: 'LIFT', label: 'Women\'s Network' },
       { number: '2003', label: 'Since' },
@@ -115,7 +115,7 @@ const CATEGORY_CONFIG = {
       { number: '25,000+', label: 'Corals Planted' },
       { number: '400%', label: 'Fish Recovery' },
       { number: '150 km²', label: 'Co-Managed Ocean' },
-      { number: '80+', label: 'Women Empowered' },
+      { number: '120', label: 'Women Empowered' },
     ],
   },
   'community-news': {
@@ -131,7 +131,7 @@ const CATEGORY_CONFIG = {
       { number: '1,200+', label: 'Community Members' },
       { number: '4', label: 'Partner Communities' },
       { number: '12', label: 'BMU Representatives' },
-      { number: '640 km', label: 'Coastline Covered' },
+      { number: '270 km', label: 'Coastline Covered' },
     ],
   },
   'updates': {
@@ -256,10 +256,10 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
           src={config.heroImage}
           alt={config.heroImageAlt}
           fill
-          className="object-cover opacity-20"
+          className="object-cover opacity-35"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-ocean-midnight/40 via-ocean-midnight/70 to-ocean-midnight" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ocean-midnight/20 via-ocean-midnight/50 to-ocean-midnight" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 pt-24 pb-0">
           {/* Back */}
@@ -523,9 +523,9 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                   src={cat.image}
                   alt={cat.label}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-40"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-75"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/60 to-ocean-midnight/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight/60 via-ocean-midnight/25 to-transparent" />
 
                 <div className="relative z-10 p-5 flex flex-col justify-end h-full" style={{ minHeight: '140px' }}>
                   <p className="text-white/50 text-[10px] uppercase tracking-widest font-semibold mb-1">

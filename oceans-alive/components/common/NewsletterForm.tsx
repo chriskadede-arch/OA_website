@@ -31,11 +31,11 @@ export default function NewsletterForm({ variant = 'default' }: NewsletterFormPr
 
     try {
       const response = await apiClient.subscribeNewsletter(data.email, data.name);
-      setSubmitMessage('Thank you for subscribing! Check your email to confirm.');
+      setSubmitMessage('Thank you for subscribing! Our team has been notified.');
       reset();
     } catch (error: any) {
       setSubmitError(
-        error.response?.data?.error || 'Failed to subscribe. Please try again.'
+        error.response?.data?.error || error.message || 'Failed to subscribe. Please try again.'
       );
     } finally {
       setIsSubmitting(false);
@@ -44,19 +44,19 @@ export default function NewsletterForm({ variant = 'default' }: NewsletterFormPr
 
   if (variant === 'footer') {
     return (
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3">
-        <div className="flex flex-col sm:flex-row gap-3">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3 w-full">
+        <div className="flex flex-col sm:flex-row gap-3 w-full">
           <input
             {...register('email')}
             type="email"
             placeholder="Your email address"
-            className="flex-1 px-4 py-3 rounded-lg text-ocean-midnight bg-white focus:outline-none focus:ring-2 focus:ring-ocean-midnight"
+            className="flex-1 px-4 py-3 rounded-lg text-ocean-midnight bg-white focus:outline-none focus:ring-2 focus:ring-ocean-midnight min-w-0"
             disabled={isSubmitting}
           />
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-6 py-3 bg-ocean-midnight text-white rounded-lg font-poppins font-semibold hover:bg-ocean-sand transition-colors disabled:opacity-50"
+            className="px-6 py-3 bg-ocean-midnight text-white rounded-lg font-poppins font-semibold hover:bg-ocean-sand transition-colors disabled:opacity-50 shrink-0 whitespace-nowrap"
           >
             {isSubmitting ? 'Subscribing...' : 'Subscribe'}
           </button>

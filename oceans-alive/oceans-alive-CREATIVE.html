@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCEANS ALIVE - When Communities Lead</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --ocean-deep: #001233;
+            --ocean-mid: #0F766E;
+            --ocean-bright: #14B8A6;
+            --teal: #2DD4BF;
+            --lime: #84CC16;
+            --coral: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background: var(--ocean-deep);
+            color: white;
+            overflow: hidden;
+            cursor: default;
+        }
+
+        .presentation {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            background: radial-gradient(ellipse at top left, #0F766E 0%, #001233 50%, #000000 100%);
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            display: none;
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .slide.active {
+            display: block;
+            opacity: 1;
+            animation: slideReveal 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes slideReveal {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* HERO - Full screen split diagonal */
+        .hero-slide {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #001233 0%, #0F766E 50%, #14B8A6 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: left;
+            max-width: 1400px;
+            padding: 0 4rem;
+        }
+
+        .hero-super {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            color: var(--lime);
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero-title {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(5rem, 12vw, 10rem);
+            font-weight: 900;
+            line-height: 0.9;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--teal) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.03em;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            max-width: 800px;
+        }
+
+        .hero-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 2px;
+        }
+
+        /* Bento Grid Layouts */
+        .bento-container {
+            width: 100%;
+            height: 100%;
+            padding: 3rem;
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        /* Background Slide - Asymmetric Bento */
+        .bg-bento {
+            grid-template-columns: 1.2fr 1fr 0.8fr;
+            grid-template-rows: auto 1fr 1fr;
+            grid-template-areas:
+                "header header header"
+                "vision mission pillar1"
+                "who who pillar2";
+        }
+
+        .area-header { grid-area: header; }
+        .area-vision { grid-area: vision; }
+        .area-mission { grid-area: mission; }
+        .area-who { grid-area: who; }
+        .area-pillar1 { grid-area: pillar1; }
+        .area-pillar2 { grid-area: pillar2; }
+
+        /* Timeline - Vertical Stacked */
+        .timeline-bento {
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: auto repeat(5, 1fr);
+            grid-template-areas:
+                "header header"
+                "y2003 c2003"
+                "y2006 c2006"
+                "y2016 c2016"
+                "y2023 c2023"
+                "y2024 c2024";
+            gap: 1rem;
+        }
+
+        /* Ripple - Magazine Split */
+        .ripple-bento {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "header header"
+                "visual stats"
+                "cta cta";
+        }
+
+        .area-visual { grid-area: visual; }
+        .area-stats { grid-area: stats; display: flex; flex-direction: column; gap: 1.5rem; }
+        .area-cta { grid-area: cta; }
+
+        /* KCWA - Data Wall */
+        .kcwa-bento {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto 120px 1fr;
+            grid-template-areas:
+                "header header header header"
+                "stat1 stat2 stat3 stat4"
+                "impact impact economic economic";
+        }
+
+        .area-stat1 { grid-area: stat1; }
+        .area-stat2 { grid-area: stat2; }
+        .area-stat3 { grid-area: stat3; }
+        .area-stat4 { grid-area: stat4; }
+        .area-impact { grid-area: impact; }
+        .area-economic { grid-area: economic; }
+
+        /* KBMU - L-Shape */
+        .kbmu-bento {
+            grid-template-columns: 1.5fr 1fr;
+            grid-template-rows: auto 1fr 1fr;
+            grid-template-areas:
+                "header header"
+                "gov toolkit"
+                "science toolkit";
+        }
+
+        .area-gov { grid-area: gov; }
+        .area-science { grid-area: science; }
+        .area-toolkit { grid-area: toolkit; }
+
+        /* Network - T-Shape */
+        .network-bento {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto 150px 1fr;
+            grid-template-areas:
+                "header header header"
+                "stat-bmu stat-ha stat-hh"
+                "structure structure activities";
+        }
+
+        /* Coral - Z-Pattern */
+        .coral-bento {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto 140px 1fr;
+            grid-template-areas:
+                "header header header"
+                "coral nursery reef"
+                "achieve achieve engage";
+        }
+
+        .area-coral { grid-area: coral; }
+        .area-nursery { grid-area: nursery; }
+        .area-reef { grid-area: reef; }
+        .area-achieve { grid-area: achieve; }
+        .area-engage { grid-area: engage; }
+
+        /* Permaculture - Split Hero */
+        .perma-bento {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "header header"
+                "challenge methods"
+                "impact impact";
+        }
+
+        .area-challenge { grid-area: challenge; }
+        .area-methods { grid-area: methods; }
+        .area-impact-full { grid-area: impact; }
+
+        /* School - Diagonal */
+        .school-bento {
+            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-rows: auto 1fr 200px;
+            grid-template-areas:
+                "header header"
+                "programs media"
+                "programs total";
+        }
+
+        .area-programs { grid-area: programs; }
+        .area-media { grid-area: media; }
+        .area-total { grid-area: total; }
+
+        /* Plastic - Asymmetric */
+        .plastic-bento {
+            grid-template-columns: 1.3fr 1fr;
+            grid-template-rows: auto 1fr 180px;
+            grid-template-areas:
+                "header header"
+                "overview economic"
+                "stat stat";
+        }
+
+        .area-overview { grid-area: overview; }
+        .area-stat-full { grid-area: stat; }
+
+        /* Future - Triptych */
+        .future-bento {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto 1fr;
+            grid-template-areas:
+                "header header header"
+                "sea fish mangrove";
+        }
+
+        .area-sea { grid-area: sea; }
+        .area-fish { grid-area: fish; }
+        .area-mangrove { grid-area: mangrove; }
+
+        /* Partners - Wrap Grid */
+        .partners-bento {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto repeat(3, 1fr);
+            grid-template-areas:
+                "header header header header"
+                "p1 p2 p3 p4"
+                "p5 p6 p7 p8"
+                ". . . .";
+        }
+
+        /* Recognition - Side by Side */
+        .recog-bento {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr;
+            grid-template-areas:
+                "header header"
+                "awards conf";
+        }
+
+        .area-awards { grid-area: awards; }
+        .area-conf { grid-area: conf; }
+
+        /* Closing - Full Hero */
+        .closing-slide {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(ellipse at center, #0F766E 0%, #001233 100%);
+        }
+
+        /* Header Component */
+        .slide-header {
+            padding: 2rem;
+            border-bottom: 2px solid rgba(132, 204, 22, 0.3);
+        }
+
+        .slide-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--lime);
+            letter-spacing: 3px;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .slide-title {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffffff, var(--teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .slide-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* Card Styles */
+        .glass-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(20, 184, 166, 0.3);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            backdrop-filter: blur(20px);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(20,184,166,0.1) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .glass-box:hover::before {
+            opacity: 1;
+        }
+
+        .glass-box:hover {
+            border-color: var(--lime);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(20, 184, 166, 0.3);
+        }
+
+        .box-title {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--lime);
+            margin-bottom: 1rem;
+        }
+
+        .box-text {
+            color: rgba(255,255,255,0.9);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .box-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .box-list li {
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .box-list li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--lime);
+            font-weight: 700;
+        }
+
+        /* Stat Boxes */
+        .mega-stat {
+            background: linear-gradient(135deg, rgba(132,204,22,0.15) 0%, rgba(20,184,166,0.1) 100%);
+            border: 2px solid var(--lime);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .mega-stat::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(132,204,22,0.3) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .mega-stat:hover::after {
+            opacity: 1;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .mega-stat:hover {
+            transform: scale(1.08);
+            border-color: var(--teal);
+            box-shadow: 0 10px 50px rgba(132, 204, 22, 0.5);
+        }
+
+        .stat-number {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            color: var(--lime);
+            line-height: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.8);
+            margin-top: 0.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-desc {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.4;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Timeline Items */
+        .timeline-year {
+            background: rgba(132, 204, 22, 0.2);
+            border: 2px solid var(--lime);
+            border-radius: 1rem;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .year-text {
+            font-family: 'Sora', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--lime);
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid var(--lime);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .timeline-content:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(8px);
+        }
+
+        .timeline-title {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-text {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.6;
+        }
+
+        /* Closing CTA */
+        .closing-content {
+            max-width: 1200px;
+            padding: 0 4rem;
+        }
+
+        .closing-title {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(4rem, 8vw, 6rem);
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--lime) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .closing-text {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 3rem;
+            line-height: 1.4;
+        }
+
+        .closing-link {
+            font-size: 1.75rem;
+            color: var(--lime);
+            font-weight: 700;
+            text-decoration: none;
+            border-bottom: 2px solid var(--lime);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .closing-link:hover {
+            color: var(--teal);
+            border-color: var(--teal);
+            transform: translateY(-2px);
+        }
+
+        .closing-location {
+            font-size: 1.125rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 1.5rem;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            bottom: 2.5rem;
+            right: 2.5rem;
+            display: flex;
+            gap: 1rem;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            width: 60px;
+            height: 60px;
+            background: rgba(20, 184, 166, 0.15);
+            border: 2px solid var(--teal);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-btn:hover {
+            background: var(--lime);
+            border-color: var(--lime);
+            color: var(--ocean-deep);
+            transform: scale(1.15);
+        }
+
+        .counter {
+            position: fixed;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--lime);
+            z-index: 1000;
+            background: rgba(0, 18, 51, 0.9);
+            padding: 1rem 1.5rem;
+            border-radius: 2rem;
+            border: 2px solid rgba(20, 184, 166, 0.3);
+            backdrop-filter: blur(10px);
+            letter-spacing: 2px;
+        }
+
+        .counter #current {
+            color: var(--lime);
+            font-weight: 900;
+        }
+
+        /* Ripple Visual */
+        .ripple-visual {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ripple-circle {
+            width: 300px;
+            height: 300px;
+            border: 3px solid var(--lime);
+            border-radius: 50%;
+            position: absolute;
+            animation: rippleExpand 3s ease-out infinite;
+        }
+
+        .ripple-circle:nth-child(2) { animation-delay: 1s; }
+        .ripple-circle:nth-child(3) { animation-delay: 2s; }
+
+        @keyframes rippleExpand {
+            0% { transform: scale(0.5); opacity: 0.8; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+
+        .ripple-text {
+            font-family: 'Sora', sans-serif;
+            font-size: 5rem;
+            font-weight: 900;
+            color: var(--lime);
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+
+        <!-- SLIDE 1: HERO -->
+        <div class="slide hero-slide active">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-super">// KENYAN NGO • MARINE CONSERVATION</div>
+                <h1 class="hero-title">OCEANS<br>ALIVE</h1>
+                <p class="hero-tagline">When Communities Lead,<br>Oceans Thrive</p>
+                <div class="hero-label">WHO WE ARE</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: BACKGROUND -->
+        <div class="slide">
+            <div class="bento-container bg-bento">
+                <div class="area-header slide-header">
+                    <div class="slide-label">01 / FOUNDATION</div>
+                    <h2 class="slide-title">Background</h2>
+                    <p class="slide-subtitle">Community-Led Marine Conservation</p>
+                </div>
+
+                <div class="area-vision glass-box">
+                    <div class="box-title">Vision</div>
+                    <p class="box-text">Thriving coastal communities managing healthy, productive ocean ecosystems for present and future generations.</p>
+                </div>
+
+                <div class="area-mission glass-box">
+                    <div class="box-title">Mission</div>
+                    <p class="box-text">Empower coastal communities through community-led conservation, building capacity for sustainable marine resource management and economic resilience.</p>
+                </div>
+
+                <div class="area-who glass-box">
+                    <div class="box-title">Who We Are</div>
+                    <p class="box-text">Kenyan NGO supporting sustainable traditional marine fisheries across Kilifi County and the Western Indian Ocean region.</p>
+                </div>
+
+                <div class="area-pillar1 glass-box">
+                    <div class="box-title">Governance</div>
+                    <p class="box-text" style="font-size: 0.9rem;">BMU networks, policy application, co-management</p>
+                </div>
+
+                <div class="area-pillar2 glass-box">
+                    <div class="box-title">Environment</div>
+                    <p class="box-text" style="font-size: 0.9rem;">Coral restoration, habitat recovery, ecosystem health</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: TIMELINE -->
+        <div class="slide">
+            <div class="bento-container timeline-bento">
+                <div class="area-header slide-header">
+                    <div class="slide-label">02 / JOURNEY</div>
+                    <h2 class="slide-title">20 Years</h2>
+                    <p class="slide-subtitle">Community Conservation Evolution</p>
+                </div>
+
+                <div class="timeline-year" style="grid-area: y2003;">
+                    <span class="year-text">2003</span>
+                </div>
+                <div class="timeline-content" style="grid-area: c2003;">
+                    <h3 class="timeline-title">KCWA CBO Formed</h3>
+                    <p class="timeline-text">Founders concerned at overfishing formed Kuruwitu Conservation and Welfare Association</p>
+                </div>
+
+                <div class="timeline-year" style="grid-area: y2006;">
+                    <span class="year-text">2006</span>
+                </div>
+                <div class="timeline-content" style="grid-area: c2006;">
+                    <h3 class="timeline-title">First LMMA in Kenya</h3>
+                    <p class="timeline-text">Tengefu sanctuary established - 30 hectares protected</p>
+                </div>
+
+                <div class="timeline-year" style="grid-area: y2016;">
+                    <span class="year-text">2016</span>
+                </div>
+                <div class="timeline-content" style="grid-area: c2016;">
+                    <h3 class="timeline-title">NGO Registration</h3>
+                    <p class="timeline-text">Oceans Alive registered to scale impact across region</p>
+                </div>
+
+                <div class="timeline-year" style="grid-area: y2023;">
+                    <span class="year-text">2023</span>
+                </div>
+                <div class="timeline-content" style="grid-area: c2023;">
+                    <h3 class="timeline-title">First CMA Plan</h3>
+                    <p class="timeline-text">Kenya's first Co-Management Area plan developed</p>
+                </div>
+
+                <div class="timeline-year" style="grid-area: y2024;">
+                    <span class="year-text">2024</span>
+                </div>
+                <div class="timeline-content" style="grid-area: c2024;">
+                    <h3 class="timeline-title">County Network</h3>
+                    <p class="timeline-text">17 BMUs united in first county network</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: RIPPLE EFFECT -->
+        <div class="slide">
+            <div class="bento-container ripple-bento">
+                <div class="area-header slide-header">
+                    <div class="slide-label">03 / SCALE</div>
+                    <h2 class="slide-title">Ripple Effect</h2>
+                    <p class="slide-subtitle">30ha → 26,500ha</p>
+                </div>
+
+                <div class="area-visual">
+                    <div class="ripple-visual">
+                        <div class="ripple-circle"></div>
+                        <div class="ripple-circle"></div>
+                        <div class="ripple-circle"></div>
+                        <div class="ripple-text">883×</div>
+                    </div>
+                </div>
+
+                <div class="area-stats">
+                    <div class="mega-stat">
+                        <div class="stat-number">30 ha</div>
+                        <div class="stat-label">KCWA Sanctuary</div>
+                        <p class="stat-desc">Since 2006</p>
+                    </div>
+                    <div class="mega-stat">
+                        <div class="stat-number">12K ha</div>
+                        <div class="stat-label">KBMU CMA</div>
+                        <p class="stat-desc">First in Kenya</p>
+                    </div>
+                    <div class="mega-stat">
+                        <div class="stat-number">26.5K+ ha</div>
+                        <div class="stat-label">County Network</div>
+                        <p class="stat-desc">17 BMUs</p>
+                    </div>
+                </div>
+
+                <div class="area-cta glass-box">
+                    <p class="box-text" style="font-size: 1.5rem; text-align: center;">Community-led conservation scaling from one sanctuary to county-wide marine ecosystem management</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 5: KCWA -->
+        <div class="slide">
+            <div class="bento-container kcwa-bento">
+                <div class="area-header slide-header">
+                    <div class="slide-label">04 / PROOF</div>
+                    <h2 class="slide-title">KCWA Sanctuary</h2>
+                    <p class="slide-subtitle">20 Years of Measured Recovery</p>
+                </div>
+
+                <div class="area-stat1 mega-stat">
+                    <div class="stat-number">400%</div>
+                    <div class="stat-label">Biomass</div>
+                </div>
+                <div class="area-stat2 mega-stat">
+                    <div class="stat-number">30%</div>
+                    <div class="stat-label">Reef</div>
+                </div>
+                <div class="area-stat3 mega-stat">
+                    <div class="stat-number">17%</div>
+                    <div class="stat-label">Seagrass</div>
+                </div>
+                <div class="area-stat4 mega-stat">
+                    <div class="stat-number">135%</div>
+                    <div class="stat-label">Spillover</div>
+                </div>
+
+                <div class="area-impact glass-box">
+                    <div class="box-title">Conservation Impact</div>
+                    <ul class="box-list">
+                        <li>30-hectare no-take zone (Tengefu) managed by community</li>
+                        <li>15 years of protection yielding measurable recovery</li>
+                        <li>WCS data confirms ecosystem restoration</li>
+                        <li>First community-driven MPA in Kenya</li>
+                    </ul>
+                </div>
+
+                <div class="area-economic glass-box">
+                    <div class="box-title">Economic Benefits</div>
+                    <ul class="box-list">
+                        <li>USD 10K-20K/year tourism income</li>
+                        <li>300 households directly benefiting</li>
+                        <li>Improved catches from spillover</li>
+                        <li>Sustainable livelihoods model</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 6: KBMU -->
+        <div class="slide">
+            <div class="bento-container kbmu-bento">
+                <div class="area-header slide-header">
+                    <div class="slide-label">05 / GOVERNANCE</div>
+                    <h2 class="slide-title">KBMU Profile</h2>
+                    <p class="slide-subtitle">Kenya's First CMA</p>
+                </div>
+
+                <div class="area-gov glass-box">
+                    <div class="box-title">Governance Structure</div>
+                    <ul class="box-list">
+                        <li>300 members managing 12,000 hectares</li>
+                        <li>Constitution & by-laws operational</li>
+                        <li>Business plan for sustainability</li>
+                        <li>MCS plan active</li>
+                        <li>500 households benefiting</li>
+                    </ul>
+                </div>
+
+                <div class="area-science glass-box">
+                    <div class="box-title">Scientific Partnership</div>
+                    <ul class="box-list">
+                        <li>First IUCN SAGE analysis in Kenya</li>
+                        <li>CAS & FS surveys ongoing</li>
+                        <li>WCS data partnership</li>
+                        <li>IUCN/EU BIOPAMA award</li>
+                    </ul>
+                </div>
+
+                <div class="area-toolkit glass-box">
+                    <div class="box-title">Kenya Firsts</div>
+                    <ul class="box-list">
+                        <li>First officially endorsed CMA</li>
+                        <li>First 6-step BMU toolkit</li>
+                        <li>First SAGE analysis</li>
+                        <li>Constitution template</li>
+                        <li>MSP boundary plan</li>
+                        <li>Legal by-laws framework</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 7: NETWORK -->
+        <div class="slide">
+            <div class="bento-container network-bento">
+                <div class="area-header slide-header">
+                    <div class="slide-label">06 / NETWORK</div>
+                    <h2 class="slide-title">County BMU Network</h2>
+                    <p class="slide-subtitle">First in Kenya</p>
+                </div>
+
+                <div class="mega-stat" style="grid-area: stat-bmu;">
+                    <div class="stat-number">17</div>
+                    <div class="stat-label">BMUs</div>
+                </div>
+                <div class="mega-stat" style="grid-area: stat-ha;">
+                    <div class="stat-number">26.5K+</div>
+                    <div class="stat-label">Hectares</div>
+                </div>
+                <div class="mega-stat" style="grid-area: stat-hh;">
+                    <div class="stat-number">7,000+</div>
+                    <div class="stat-label">Households</div>
+                </div>
+
+                <div class="glass-box" style="grid-area: structure;">
+                    <div class="box-title">Network Structure</div>
+                    <ul class="box-list">
+                        <li>17 BMUs managing shared stocks</li>
+                        <li>5 Joint Co-Management Areas</li>
+                        <li>State of Fishery 2021 baseline</li>
+                        <li>IUCN/EU BIOPAMA award secured</li>
+                    </ul>
+                </div>
+
+                <div class="glass-box" style="grid-area: activities;">
+                    <div class="box-title">Activities</div>
+                    <ul class="box-list">
+                        <li>JCMA plans in development</li>
+                        <li>Leadership capacity building</li>
+                        <li>Equipment swap program</li>
+                        <li>Trawling zone advocacy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 8: CORAL -->
+        <div class="slide">
+            <div class="bento-container coral-bento">
+                <div class="area-header slide-header">
+                    <div class="slide-label">07 / RESTORATION</div>
+                    <h2 class="slide-title">Coral Restoration</h2>
+                    <p class="slide-subtitle">Rebuilding Reefs</p>
+                </div>
+
+                <div class="area-coral mega-stat">
+                    <div class="stat-number">25K+</div>
+                    <div class="stat-label">Corals</div>
+                </div>
+                <div class="area-nursery mega-stat">
+                    <div class="stat-number">32</div>
+                    <div class="stat-label">Nurseries</div>
+                </div>
+                <div class="area-reef mega-stat">
+                    <div class="stat-number">457</div>
+                    <div class="stat-label">Reefs</div>
+                </div>
+
+                <div class="area-achieve glass-box">
+                    <div class="box-title">Achievements</div>
+                    <ul class="box-list">
+                        <li>25,000 juveniles/year capacity</li>
+                        <li>39 hectares rehabilitated</li>
+                        <li>80 coral reef stars planted</li>
+                        <li>Cement & coral rock structures</li>
+                    </ul>
+                </div>
+
+                <div class="area-engage glass-box">
+                    <div class="box-title">Community</div>
+                    <ul class="box-list">
+                        <li>30 members trained (50% women)</li>
+                        <li>Toolkit published</li>
+                        <li>4,000 turtle hatchlings</li>
+                        <li>Bureni sister Tengefu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 9: PERMACULTURE -->
+        <div class="slide">
+            <div class="bento-container perma-bento">
+                <div class="area-header slide-header">
+                    <div class="slide-label">08 / NUTRITION</div>
+                    <h2 class="slide-title">Permaculture</h2>
+                    <p class="slide-subtitle">Climate-Smart Food Security</p>
+                </div>
+
+                <div class="area-challenge glass-box">
+                    <div class="box-title">The Challenge</div>
+                    <p class="box-text" style="margin-bottom: 1.5rem;">Kilifi coastal communities have lowest nutrition levels in region. Climate-smart solutions needed.</p>
+                    <div class="box-title" style="margin-top: 1.5rem;">Methods</div>
+                    <ul class="box-list">
+                        <li>Sack gardens (best results)</li>
+                        <li>Vertical gardens</li>
+                        <li>Spiral gardens</li>
+                        <li>Compost making</li>
+                    </ul>
+                </div>
+
+                <div class="area-methods glass-box">
+                    <div class="box-title">Impact</div>
+                    <ul class="box-list">
+                        <li>135 households adopted gardens</li>
+                        <li>Green leafy vegetables boost nutrition</li>
+                        <li>Supplemental income from surplus</li>
+                        <li>Water-efficient systems</li>
+                        <li>Demo farm for training</li>
+                        <li>Toolkit published</li>
+                    </ul>
+                </div>
+
+                <div class="area-impact-full mega-stat">
+                    <div class="stat-number">135</div>
+                    <div class="stat-label">Households Empowered</div>
+                    <p class="stat-desc">Climate-smart backyard food production</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 10: SCHOOL -->
+        <div class="slide">
+            <div class="bento-container school-bento">
+                <div class="area-header slide-header">
+                    <div class="slide-label">09 / EDUCATION</div>
+                    <h2 class="slide-title">School Program</h2>
+                    <p class="slide-subtitle">Future Ocean Stewards</p>
+                </div>
+
+                <div class="area-programs glass-box">
+                    <div class="box-title">Programs</div>
+                    <ul class="box-list">
+                        <li><strong>50 schools:</strong> Ecology films (DSTV Team Sayari)</li>
+                        <li><strong>50 schools:</strong> Coral restoration intro</li>
+                        <li><strong>8 schools:</strong> Marine biology deep-dive</li>
+                        <li><strong>6 BMUs:</strong> Shark/ray conservation</li>
+                        <li><strong>300:</strong> International students</li>
+                        <li><strong>13:</strong> ALU students</li>
+                    </ul>
+                </div>
+
+                <div class="area-media glass-box">
+                    <div class="box-title">Media</div>
+                    <ul class="box-list">
+                        <li>15 filmmakers trained</li>
+                        <li>10 films produced</li>
+                        <li>10 athlete ambassadors</li>
+                        <li>Global reach</li>
+                    </ul>
+                </div>
+
+                <div class="area-total mega-stat">
+                    <div class="stat-number">7,680+</div>
+                    <div class="stat-label">Total Learners</div>
+                    <p class="stat-desc">Building conservation ambassadors</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 11: PLASTIC -->
+        <div class="slide">
+            <div class="bento-container plastic-bento">
+                <div class="area-header slide-header">
+                    <div class="slide-label">10 / CLEAN OCEANS</div>
+                    <h2 class="slide-title">Mama Karanga</h2>
+                    <p class="slide-subtitle">Trash for Cash</p>
+                </div>
+
+                <div class="area-overview glass-box">
+                    <div class="box-title">Program</div>
+                    <ul class="box-list">
+                        <li>2024: Trash for Cash launched</li>
+                        <li>Beach & village clean-ups</li>
+                        <li>Eco-world partnership</li>
+                        <li>Plastic collection & sorting</li>
+                        <li>Women-led initiative</li>
+                    </ul>
+                </div>
+
+                <div class="area-economic glass-box">
+                    <div class="box-title">Economic Model</div>
+                    <ul class="box-list">
+                        <li>19 households earning</li>
+                        <li>VSLA savings scheme</li>
+                        <li>Pooled community investment</li>
+                        <li>Dual benefit: clean + income</li>
+                        <li>Scaling to other communities</li>
+                    </ul>
+                </div>
+
+                <div class="area-stat-full mega-stat">
+                    <div class="stat-number">19</div>
+                    <div class="stat-label">Households Benefiting</div>
+                    <p class="stat-desc">Turning plastic pollution into income</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 12: FUTURE -->
+        <div class="slide">
+            <div class="bento-container future-bento">
+                <div class="area-header slide-header">
+                    <div class="slide-label">11 / FUTURE</div>
+                    <h2 class="slide-title">Next Chapter</h2>
+                    <p class="slide-subtitle">Expanding Impact</p>
+                </div>
+
+                <div class="area-sea glass-box">
+                    <div class="box-title">Seaweed Farming</div>
+                    <p class="box-text">Sustainable farming to diversify livelihoods, restore ecosystems, and sequester carbon.</p>
+                </div>
+
+                <div class="area-fish glass-box">
+                    <div class="box-title">Fishermen Academy</div>
+                    <p class="box-text">Training center for sustainable practices, governance, business skills, and marine stewardship.</p>
+                </div>
+
+                <div class="area-mangrove glass-box">
+                    <div class="box-title">Mangrove Nursery</div>
+                    <p class="box-text">Large-scale nurseries for habitat restoration, shoreline protection, and climate resilience.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 13: PARTNERS -->
+        <div class="slide">
+            <div class="bento-container partners-bento">
+                <div class="area-header slide-header">
+                    <div class="slide-label">12 / PARTNERSHIPS</div>
+                    <h2 class="slide-title">Our Partners</h2>
+                    <p class="slide-subtitle">Collaborative Conservation</p>
+                </div>
+
+                <div class="glass-box" style="grid-area: p1; text-align: center;">
+                    <div class="box-title">WCS</div>
+                    <p class="box-text" style="font-size: 0.875rem;">Wildlife Conservation Society</p>
+                </div>
+                <div class="glass-box" style="grid-area: p2; text-align: center;">
+                    <div class="box-title">IUCN/EU</div>
+                    <p class="box-text" style="font-size: 0.875rem;">BIOPAMA</p>
+                </div>
+                <div class="glass-box" style="grid-area: p3; text-align: center;">
+                    <div class="box-title">Rochefeller</div>
+                    <p class="box-text" style="font-size: 0.875rem;">Foundation</p>
+                </div>
+                <div class="glass-box" style="grid-area: p4; text-align: center;">
+                    <div class="box-title">Body Shop</div>
+                    <p class="box-text" style="font-size: 0.875rem;">Foundation</p>
+                </div>
+                <div class="glass-box" style="grid-area: p5; text-align: center;">
+                    <div class="box-title">Vipingo Ridge</div>
+                    <p class="box-text" style="font-size: 0.875rem;">Concession</p>
+                </div>
+                <div class="glass-box" style="grid-area: p6; text-align: center;">
+                    <div class="box-title">LEAP</div>
+                    <p class="box-text" style="font-size: 0.875rem;">Student Tours</p>
+                </div>
+                <div class="glass-box" style="grid-area: p7; text-align: center;">
+                    <div class="box-title">Eco-world</div>
+                    <p class="box-text" style="font-size: 0.875rem;">Recyclers</p>
+                </div>
+                <div class="glass-box" style="grid-area: p8; text-align: center;">
+                    <div class="box-title">ALU</div>
+                    <p class="box-text" style="font-size: 0.875rem;">Leadership University</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 14: RECOGNITION -->
+        <div class="slide">
+            <div class="bento-container recog-bento">
+                <div class="area-header slide-header">
+                    <div class="slide-label">13 / RECOGNITION</div>
+                    <h2 class="slide-title">Global Recognition</h2>
+                    <p class="slide-subtitle">IUCN Awards</p>
+                </div>
+
+                <div class="area-awards glass-box">
+                    <div class="box-title">IUCN Features</div>
+                    <ul class="box-list">
+                        <li>2017 Equator Award (KCWA)</li>
+                        <li>2022 Blue Champions Award</li>
+                        <li>Panorama featured solution</li>
+                        <li>Green Listing recognition</li>
+                        <li>Blue Wall initiative</li>
+                    </ul>
+                </div>
+
+                <div class="area-conf glass-box">
+                    <div class="box-title">Conferences</div>
+                    <ul class="box-list">
+                        <li>2021 Marseille Conference</li>
+                        <li>2022 APAC Conference</li>
+                        <li>2022 Monaco Conference</li>
+                        <li>2022 Blue Champions event</li>
+                        <li>Global exposure & advocacy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 15: CLOSING -->
+        <div class="slide closing-slide">
+            <div class="closing-content">
+                <h1 class="closing-title">JOIN THE<br>OCEAN REVOLUTION</h1>
+                <p class="closing-text">Partner with us to scale community-led conservation across the Western Indian Ocean</p>
+                <a href="http://www.oceansalive.org" class="closing-link">www.oceansalive.org</a>
+                <p class="closing-location">Kilifi County, Kenya</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav">
+        <button class="nav-btn" onclick="prevSlide()">←</button>
+        <button class="nav-btn" onclick="nextSlide()">→</button>
+    </div>
+
+    <div class="counter">
+        <span id="current">01</span> / 15
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('current').textContent = String(currentSlide + 1).padStart(2, '0');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
+                e.preventDefault();
+                nextSlide();
+            }
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+            }
+            if (e.key === 'Home') {
+                e.preventDefault();
+                showSlide(0);
+            }
+            if (e.key === 'End') {
+                e.preventDefault();
+                showSlide(totalSlides - 1);
+            }
+        });
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchEndX < touchStartX - 50) nextSlide();
+            if (touchEndX > touchStartX + 50) prevSlide();
+        });
+    </script>
+</body>
+</html>

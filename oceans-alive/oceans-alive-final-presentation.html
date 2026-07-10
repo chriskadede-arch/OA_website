@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oceans Alive - Who We Are</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --ocean-dark: #001d3d;
+            --ocean-mid: #0077b6;
+            --ocean-bright: #00b4d8;
+            --ocean-light: #90e0ef;
+            --accent: #06ffa5;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background: var(--ocean-dark);
+            color: white;
+            overflow: hidden;
+        }
+
+        .presentation {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 60px 80px;
+            display: none;
+            flex-direction: column;
+            background: linear-gradient(135deg, var(--ocean-dark), #003566);
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        .slide-header {
+            margin-bottom: 40px;
+        }
+
+        .slide-number {
+            font-size: 14px;
+            color: var(--ocean-light);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .slide-title {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(40px, 6vw, 70px);
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .slide-subtitle {
+            font-size: 24px;
+            color: var(--ocean-light);
+        }
+
+        .content-grid {
+            display: grid;
+            gap: 30px;
+            flex: 1;
+        }
+
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+        .card {
+            background: rgba(0,119,182,0.15);
+            border: 1px solid rgba(72,202,228,0.3);
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .card h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 24px;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .card p, .card li {
+            color: var(--ocean-light);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card li::before {
+            content: "→ ";
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, rgba(6,255,165,0.2), rgba(0,180,216,0.1));
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Sora', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--ocean-light);
+            margin-top: 8px;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(0,119,182,0.1);
+            border-left: 4px solid var(--accent);
+            border-radius: 10px;
+        }
+
+        .timeline-year {
+            font-family: 'Sora', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .nav {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            width: 50px;
+            height: 50px;
+            background: rgba(6,255,165,0.2);
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            color: var(--accent);
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: var(--accent);
+            color: var(--ocean-dark);
+        }
+
+        .counter {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            font-size: 16px;
+            color: var(--ocean-light);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+        <!-- SLIDE 1: TITLE -->
+        <div class="slide active">
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <h1 style="font-family: 'Sora'; font-size: 100px; font-weight: 800; margin-bottom: 30px;">OCEANS ALIVE</h1>
+                <p style="font-size: 36px; color: var(--ocean-light); margin-bottom: 20px;">Who We Are</p>
+                <p style="font-size: 20px; color: var(--accent);">Ocean Conference 2026</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: BACKGROUND -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-number">02</div>
+                <h2 class="slide-title">Background</h2>
+            </div>
+            <div class="content-grid grid-2">
+                <div class="card">
+                    <h3>Who We Are</h3>
+                    <p>Oceans Alive is a Kenyan NGO supporting sustainable traditional marine fisheries across Kilifi County and the Western Indian Ocean region.</p>
+                </div>
+                <div class="card">
+                    <h3>Vision</h3>
+                    <p>Thriving coastal communities managing healthy, productive ocean ecosystems for present and future generations.</p>
+                </div>
+                <div class="card">
+                    <h3>Mission</h3>
+                    <p>To empower coastal communities through community-led conservation, building capacity for sustainable marine resource management and economic resilience.</p>
+                </div>
+                <div class="card">
+                    <h3>Approach</h3>
+                    <p>Community-driven conservation through 4 pillars: Governance, Environment, Economic, and Social development.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: HISTORY -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-number">03</div>
+                <h2 class="slide-title">Our Journey</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2003</div>
+                    <div>
+                        <h3 style="color: white; margin-bottom: 10px;">KCWA CBO Formed</h3>
+                        <p style="color: var(--ocean-light);">Founders concerned at overfishing formed Kuruwitu Conservation and Welfare Association CBO</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2006</div>
+                    <div>
+                        <h3 style="color: white; margin-bottom: 10px;">First Marine Sanctuary in Kenya</h3>
+                        <p style="color: var(--ocean-light);">Kuruwitu Community Marine Sanctuary (Tengefu) established - 30 hectares protected</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2019</div>
+                    <div>
+                        <h3 style="color: white; margin-bottom: 10px;">NGO Registration</h3>
+                        <p style="color: var(--ocean-light);">Oceans Alive registered as a marine conservation NGO to scale impact</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div>
+                        <h3 style="color: white; margin-bottom: 10px;">First CMA Plan in Kenya</h3>
+                        <p style="color: var(--ocean-light);">KBMU supported with Co-Management Area plan + KCWA re-constituted</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div>
+                        <h3 style="color: white; margin-bottom: 10px;">First BMU Network in Kenya</h3>
+                        <p style="color: var(--ocean-light);">Kilifi County 18 BMU Network formed - managing 26,500 hectares</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: MAPS -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-number">04</div>
+                <h2 class="slide-title">Our Reach - Ripple Effect</h2>
+            </div>
+            <div class="content-grid grid-3">
+                <div class="stat-box">
+                    <div class="stat-value">30 ha</div>
+                    <div class="stat-label">KCWA Sanctuary</div>
+                    <p style="margin-top: 15px; font-size: 14px;">Protected no-take zone since 2006</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">12,000 ha</div>
+                    <div class="stat-label">KBMU Co-Management Area</div>
+                    <p style="margin-top: 15px; font-size: 14px;">First CMA in Kenya (2023)</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">26,500 ha</div>
+                    <div class="stat-label">Kilifi County BMU Network</div>
+                    <p style="margin-top: 15px; font-size: 14px;">18 BMUs united (2024)</p>
+                </div>
+            </div>
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center; margin-top: 40px;">
+                <div style="text-align: center; padding: 40px; background: rgba(6,255,165,0.1); border-radius: 20px;">
+                    <h3 style="font-size: 32px; color: var(--accent); margin-bottom: 20px;">From 30 hectares to 26,500+ hectares</h3>
+                    <p style="font-size: 20px; color: var(--ocean-light);">The ripple effect of community-led conservation</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 5: KCWA SANCTUARY PROFILE -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-number">05</div>
+                <h2 class="slide-title">KCWA Sanctuary Profile</h2>
+                <p class="slide-subtitle">20 Years of Proven Impact</p>
+            </div>
+            <div class="content-grid" style="grid-template-columns: repeat(4, 1fr); margin-bottom: 30px;">
+                <div class="stat-box">
+                    <div class="stat-value">400%</div>
+                    <div class="stat-label">Biomass Increase</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">30%</div>
+                    <div class="stat-label">Coral Recovery</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">17%</div>
+                    <div class="stat-label">Seagrass Regrowth</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">135%</div>
+                    <div class="stat-label">Fishery Spillover</div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Community Protection Works</h3>
+                <ul>
+                    <li>30 hectare no-take zone (Tengefu) managed by community</li>
+                    <li>USD 10,000-20,000/year tourism income generated (declined due to COVID-19)</li>
+                    <li>300 households directly benefiting from improved catches and tourism</li>
+                    <li>First community-driven marine sanctuary in Kenya - setting the standard</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SLIDE 6: KBMU PROFILE -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-number">06</div>
+                <h2 class="slide-title">KBMU Profile</h2>
+                <p class="slide-subtitle">Kenya's First Co-Management Area</p>
+            </div>
+            <div class="content-grid grid-2">
+                <div class="card">
+                    <h3>Governance Structure</h3>
+                    <ul>
+                        <li>300 members manage 12,000 hectares</li>
+                        <li>Operate on basis of Constitution</li>
+                        <li>By-laws regulate fishermen behavior</li>
+                        <li>Business plan generates operation funds</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Management Tools</h3>
+                    <ul>
+                        <li>CMA Management Plan (First in Kenya - 2023)</li>
+                        <li>Catch data monitoring ongoing</li>
+                        <li>MCS (Monitoring, Control, Surveillance) system</li>
+                        <li>500 households benefiting from sustainable management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 7: KILIFI COUNTY BMU NETWORK -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-number">07</div>
+                <h2 class="slide-title">Kilifi County BMU Network</h2>
+                <p class="slide-subtitle">First County BMU Network in Kenya</p>
+            </div>
+            <div class="content-grid grid-2">
+                <div class="card">
+                    <h3>Scale & Scope</h3>
+                    <ul>
+                        <li>18 BMUs managing over 26,500 hectares</li>
+                        <li>7,000+ households benefiting</li>
+                        <li>Fishery managed by shared stocks</li>
+                        <li>5 Joint Co-Management Areas (JCMA)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Key Activities</h3>
+                    <ul>
+                        <li>JCMA Management plans in place</li>
+                        <li>Leadership capacity building supported</li>
+                        <li>Drag netting equipment swap program</li>
+                        <li>Advocacy capacity to restrict trawling zones</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 8: CORAL RESTORATION -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-number">08</div>
+                <h2 class="slide-title">Coral Restoration</h2>
+            </div>
+            <div class="content-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 30px;">
+                <div class="stat-box">
+                    <div class="stat-value">25,000+</div>
+                    <div class="stat-label">Corals Planted</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">32</div>
+                    <div class="stat-label">Coral Nurseries</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">457</div>
+                    <div class="stat-label">Artificial Reefs</div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Program Highlights</h3>
+                <ul>
+                    <li>2019: Initiated trials with various artificial reefs</li>
+                    <li>32 coral nurseries capable of 25,000 juveniles/year</li>
+                    <li>Cement block and coral rock artificial reefs deployed</li>
+                    <li>30 community members trained (50% women)</li>
+                    <li>39 hectares of degraded reef area rehabilitated</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SLIDE 9: PERMACULTURE -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-number">09</div>
+                <h2 class="slide-title">Permaculture Program</h2>
+                <p class="slide-subtitle">Addressing Food Security</p>
+            </div>
+            <div class="content-grid grid-2">
+                <div class="card">
+                    <h3>The Challenge</h3>
+                    <p>Kilifi coastal fishing communities have the lowest nutrition levels in the region. Climate-smart solutions needed.</p>
+                    <h3 style="margin-top: 20px;">Garden Methods Trialled</h3>
+                    <ul>
+                        <li>Spiral gardens</li>
+                        <li>Sack gardens (best results)</li>
+                        <li>Vertical sack gardens</li>
+                        <li>Compost making</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Impact</h3>
+                    <ul>
+                        <li>135 households adopted kitchen gardens</li>
+                        <li>Improved nutrition through green leafy vegetables</li>
+                        <li>Supplemental income generation</li>
+                        <li>Climate-smart, sustainable food systems</li>
+                        <li>Demo farm established for training</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 10: SCHOOL PROGRAM -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-number">10</div>
+                <h2 class="slide-title">School Program</h2>
+                <p class="slide-subtitle">Building Future Ocean Stewards</p>
+            </div>
+            <div class="content-grid grid-2">
+                <div class="card">
+                    <h3>Programs Delivered</h3>
+                    <ul>
+                        <li>50 schools: Aquatic & terrestrial ecology films (DSTV Team Sayari) - 3,500 learners</li>
+                        <li>50 schools: Introduction to coral restoration - 3,500 learners</li>
+                        <li>8 schools: Marine biology program - 200 learners</li>
+                        <li>6 BMUs: Elasmobranch conservation - 180 learners</li>
+                        <li>300 international gap year students: Marine conservation exposure</li>
+                    </ul>
+                </div>
+                <div class="stat-box" style="display: flex; flex-direction: column; justify-content: center;">
+                    <div class="stat-value">7,680+</div>
+                    <div class="stat-label">Total Learners Reached</div>
+                    <p style="margin-top: 20px; font-size: 16px;">Creating ambassadors for sustainable coastal fisheries management</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 11: PLASTIC POLLUTION -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-number">11</div>
+                <h2 class="slide-title">Plastic Pollution</h2>
+                <p class="slide-subtitle">Mama Karanga - Trash for Cash</p>
+            </div>
+            <div class="content-grid grid-2">
+                <div class="card">
+                    <h3>Program Overview</h3>
+                    <ul>
+                        <li>2024: Initiated trash for cash program</li>
+                        <li>Beach and village clean-ups</li>
+                        <li>19 households earning from recycling</li>
+                        <li>Partnership with Eco-world recyclers</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Economic Empowerment</h3>
+                    <ul>
+                        <li>Participants sell plastic to recyclers</li>
+                        <li>Pool money in VSLA (Village Savings and Loan) scheme</li>
+                        <li>Creating income while cleaning environment</li>
+                        <li>Primarily women-led initiative</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 12: FUTURE PROJECTS -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-number">12</div>
+                <h2 class="slide-title">Future Projects</h2>
+                <p class="slide-subtitle">Expanding Our Impact</p>
+            </div>
+            <div class="content-grid grid-3">
+                <div class="card">
+                    <h3>Seaweed Farming</h3>
+                    <p>Developing sustainable seaweed farming to diversify livelihoods and restore marine ecosystems.</p>
+                </div>
+                <div class="card">
+                    <h3>Fishermen Academy</h3>
+                    <p>Establishing a training center for sustainable fishing practices, governance, and business skills.</p>
+                </div>
+                <div class="card">
+                    <h3>Mangrove Nursery</h3>
+                    <p>Creating mangrove nurseries for coastal restoration and climate resilience.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 13: DONORS -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-number">13</div>
+                <h2 class="slide-title">Our Partners & Donors</h2>
+            </div>
+            <div class="content-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="card"><h3>Wildlife Conservation Society (WCS)</h3></div>
+                <div class="card"><h3>IUCN/EU BIOPAMA</h3></div>
+                <div class="card"><h3>Rochefeller Foundation</h3></div>
+                <div class="card"><h3>The Body Shop</h3></div>
+                <div class="card"><h3>Vipingo Ridge</h3></div>
+                <div class="card"><h3>LEAP</h3></div>
+                <div class="card"><h3>Eco-world</h3></div>
+                <div class="card"><h3>African Leadership University</h3></div>
+            </div>
+        </div>
+
+        <!-- SLIDE 14: CLOSING -->
+        <div class="slide">
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <h1 style="font-family: 'Sora'; font-size: 80px; font-weight: 800; margin-bottom: 30px; background: linear-gradient(135deg, white, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">JOIN THE OCEAN REVOLUTION</h1>
+                <p style="font-size: 32px; color: var(--ocean-light); margin-bottom: 40px;">Partner with us to scale community-led conservation</p>
+                <div style="margin-top: 40px;">
+                    <p style="font-size: 20px; color: var(--accent);">www.oceansalive.org</p>
+                    <p style="font-size: 18px; color: var(--ocean-light); margin-top: 10px;">Kilifi County, Kenya</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav">
+        <button class="nav-btn" onclick="prevSlide()">←</button>
+        <button class="nav-btn" onclick="nextSlide()">→</button>
+    </div>
+
+    <div class="counter">
+        <span id="current">1</span> / 14
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('current').textContent = currentSlide + 1;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+    </script>
+</body>
+</html>

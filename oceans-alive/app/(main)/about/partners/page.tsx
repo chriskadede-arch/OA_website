@@ -1,41 +1,81 @@
 import Link from 'next/link';
 import { PARTNERS } from '@/lib/constants';
 import PartnerCard from '@/components/common/PartnerCard';
+import PartnerCarousel from '@/components/common/PartnerCarousel';
+import PartnerLogo from '@/components/common/PartnerLogo';
 
 export const metadata = {
   title: 'Our Partners - Oceans Alive Foundation',
   description:
-    'Coral Guardian, Canon CENA, UK FCDO, UNDP, IUCN - the global network of organisations partnering with Oceans Alive to protect Kenya\'s coast.',
+    'Government, community, donors and supporters - the network of organizations partnering with Oceans Alive to protect Kenya\'s coast.',
 };
+
+type PartnerOrg = {
+  name: string;
+  role: string;
+  category: string;
+  link?: string;
+  logoPath?: string;
+  domain?: string;
+  bgColor?: string;
+  logoSize?: 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+};
+
+const PARTNER_ORGS: PartnerOrg[] = [
+  // Government Partners
+  { name: 'Kenya Fisheries Service (KeFS)', role: 'National Fisheries Partner', category: 'government', link: '/programs/governance-fisheries', logoPath: '/images/partners/kenya-fisheries.png' },
+  { name: 'County Government of Kilifi', role: 'Fisheries Directorate - Agriculture, Fisheries & Blue Economy, Livestock Development and Irrigation', category: 'government', link: '/programs/governance-fisheries', logoPath: '/images/partners/kilifi-county.jpg' },
+  { name: 'County Government of Mombasa', role: 'Fisheries Directorate', category: 'government', logoPath: '/images/partners/mombasa-county.jpg' },
+
+  // Community Partners
+  { name: 'Kuruwitu Beach Management Unit (KBMU)', role: 'Community Governance Partner', category: 'community', link: '/programs/governance-fisheries' },
+  { name: 'Kuruwitu Conservation & Welfare CBO (KCW-CBO)', role: 'Community-Based Organization', category: 'community' },
+
+  // Current Donors  - Using logos and domains with brand colors
+  { name: 'Coral Guardian', role: 'Coral Restoration Partner', category: 'donor', link: '/partnerships/coral-guardian', logoPath: '/images/partners/coral-guardian.png', bgColor: '#1a2332' },
+  { name: 'Blue Ventures', role: 'Conservation Funding Partner', category: 'donor', domain: 'blueventures.org', bgColor: '#0066cc' },
+  { name: 'OCEAN Community', role: 'Ocean Conservation Network', category: 'donor', logoPath: '/images/partners/ocean-community.png', bgColor: '#ffffff', logoSize: 'xxl' },
+  { name: 'Canon', role: 'Media & Documentation Partner', category: 'donor', link: '/programs/research-innovation', domain: 'canon.com', bgColor: '#ffffff', logoSize: 'xl' },
+  { name: 'DEFRA', role: 'UK Department for Environment, Food & Rural Affairs', category: 'donor', logoPath: '/images/partners/defra.jpg', bgColor: '#ffffff' },
+  { name: 'Saruni Basecamp Foundation', role: 'Community Support Partner', category: 'donor', logoPath: '/images/partners/saruni.png', bgColor: '#ffffff' },
+  { name: 'Conscious Travel', role: 'Sustainable Tourism Partner', category: 'donor', logoPath: '/images/partners/conscious-travel.png', bgColor: '#ffffff' },
+  { name: 'Seas4Life', role: 'Ocean Advocacy Partner', category: 'donor', logoPath: '/images/partners/seas4life.png', bgColor: '#5db9c4' },
+  { name: 'Oceans 5', role: 'Ocean Conservation Funder', category: 'donor', logoPath: '/images/partners/oceans5.jpg', bgColor: '#ffffff' },
+  { name: 'Ocean Eyes', role: 'Marine Conservation Partner', category: 'donor', logoPath: '/images/partners/ocean-eyes.jpg', bgColor: '#ffffff' },
+
+  // Supporters
+  { name: 'Vipingo Ridge', role: 'Local Supporter', category: 'supporter', logoPath: '/images/partners/vipingo-ridge.png', bgColor: '#ffffff' },
+  { name: 'The Leap', role: 'Community Supporter', category: 'supporter', logoPath: '/images/partners/the-leap.svg', bgColor: '#301535' },
+];
 
 const CATEGORIES = [
   {
-    label: 'Conservation & Reef Restoration',
-    names: ['Coral Guardian', 'Coral Reef Care', 'IUCN'],
+    label: 'Government Partners',
+    category: 'government',
+    color: 'from-[#6b3a00] to-[#9a5500]',
+    accentBg: 'bg-amber-400/10',
+    accentText: 'text-amber-300',
+  },
+  {
+    label: 'Community Partners',
+    category: 'community',
     color: 'from-[#1a6b5a] to-[#0e4a3c]',
     accentBg: 'bg-[#6ee7b7]/10',
     accentText: 'text-[#6ee7b7]',
   },
   {
-    label: 'Institutional & Development',
-    names: ['UK Government FCDO', 'UNDP Kenya', 'Platcorp Foundation'],
+    label: 'Current Donors',
+    category: 'donor',
     color: 'from-ocean-midnight to-[#0a3560]',
     accentBg: 'bg-ocean-turquoise/10',
     accentText: 'text-ocean-turquoise',
   },
   {
-    label: 'Media & Communications',
-    names: ['Canon Central & North Africa', 'Athlete Media Group'],
+    label: 'Supporters',
+    category: 'supporter',
     color: 'from-[#0a4f7a] to-[#0e6b8a]',
     accentBg: 'bg-sky-400/10',
     accentText: 'text-sky-300',
-  },
-  {
-    label: 'Government Partners',
-    names: ['Kenya Fisheries Service', 'Kilifi County Government'],
-    color: 'from-[#6b3a00] to-[#9a5500]',
-    accentBg: 'bg-amber-400/10',
-    accentText: 'text-amber-300',
   },
 ];
 
@@ -49,7 +89,7 @@ export default function PartnersPage() {
             <div>
               <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-6 flex items-center gap-3">
                 <span className="w-8 h-px bg-ocean-turquoise/50" />
-                Chapter 04 · Our Network
+                Our Network
               </p>
               <h1 className="font-poppins font-bold text-ocean-midnight text-5xl md:text-6xl leading-[0.95] mb-6">
                 Our<br />
@@ -62,61 +102,154 @@ export default function PartnersPage() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              {CATEGORIES.map((cat) => (
-                <div
-                  key={cat.label}
-                  className={`rounded-2xl bg-gradient-to-br ${cat.color} p-5`}
-                >
-                  <span className={`text-[10px] font-bold uppercase tracking-widest mb-3 block ${cat.accentText}`}>
-                    {cat.label}
-                  </span>
-                  <p className="text-white font-bold text-sm">{cat.names.length} partners</p>
-                </div>
-              ))}
+              {CATEGORIES.map((cat) => {
+                const count = PARTNER_ORGS.filter(p => p.category === cat.category).length;
+                return (
+                  <div
+                    key={cat.label}
+                    className={`rounded-2xl bg-gradient-to-br ${cat.color} p-5`}
+                  >
+                    <span className={`text-[10px] font-bold uppercase tracking-widest mb-3 block ${cat.accentText}`}>
+                      {cat.label}
+                    </span>
+                    <p className="text-white font-bold text-sm">{count} {count === 1 ? 'partner' : 'partners'}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Partner Cards by Category ────────────────────────────── */}
-      <section className="bg-gray-50 py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-6 space-y-16">
-          {CATEGORIES.map((cat) => {
-            const catPartners = PARTNERS.filter((p) => cat.names.includes(p.name));
-            return (
-              <div key={cat.label}>
-                {/* Category header */}
-                <div className="flex items-center gap-4 mb-8">
-                  <span className={`inline-block w-2 h-6 rounded-full bg-gradient-to-b ${cat.color}`} />
-                  <h2 className="text-sm font-bold uppercase tracking-widest text-gray-400">{cat.label}</h2>
-                  <div className="flex-1 h-px bg-gray-200" />
-                </div>
+      {/* ── Auto-scrolling Partner Carousel ─────────────────────────── */}
+      <PartnerCarousel />
 
-                {/* Cards */}
-                <div className={`grid grid-cols-2 md:grid-cols-${Math.min(catPartners.length, 4)} gap-4`}>
-                  {catPartners.map((p) => (
-                    <PartnerCard key={p.name} name={p.name} role={p.role} logo={p.logo} />
+      {/* ── Creative Partner Mosaic (Bento Grid) ─────────────────────────────── */}
+      <section className="bg-gray-50 py-16 border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4">
+
+            {/* Government Partners - Large Featured Block */}
+            <div className="lg:col-span-4">
+              <div className={`h-full rounded-2xl bg-gradient-to-br ${CATEGORIES[0].color} p-6 relative overflow-hidden`}>
+                <div className="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-white/5" />
+                <span className="text-[10px] font-bold uppercase tracking-widest text-white/50 mb-4 block">
+                  {CATEGORIES[0].label}
+                </span>
+                <div className="space-y-2">
+                  {PARTNER_ORGS.filter(p => p.category === 'government').map((partner) => (
+                    <div key={partner.name}>
+                      {partner.link ? (
+                        <Link href={partner.link} className="group block p-4 rounded-xl bg-white hover:bg-gray-50 border border-gray-200 transition-all">
+                          <div className="flex items-center gap-4">
+                            <PartnerLogo name={partner.name} domain={partner.domain} logoPath={partner.logoPath} size="lg" />
+                            <div className="flex-1 min-w-0">
+                              <h4 className="text-xs font-bold text-ocean-midnight mb-1 leading-tight">{partner.name}</h4>
+                              <p className="text-[9px] text-gray-500 leading-snug line-clamp-1">{partner.role}</p>
+                              <span className="text-[8px] text-ocean-turquoise font-bold mt-1 opacity-0 group-hover:opacity-100 transition-opacity">View →</span>
+                            </div>
+                          </div>
+                        </Link>
+                      ) : (
+                        <div className="p-4 rounded-xl bg-white border border-gray-200">
+                          <div className="flex items-center gap-4">
+                            <PartnerLogo name={partner.name} domain={partner.domain} logoPath={partner.logoPath} size="lg" />
+                            <div className="flex-1 min-w-0">
+                              <h4 className="text-xs font-bold text-ocean-midnight mb-1 leading-tight">{partner.name}</h4>
+                              <p className="text-[9px] text-gray-500 leading-snug line-clamp-1">{partner.role}</p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>
-            );
-          })}
-        </div>
-      </section>
+            </div>
 
-      {/* ── All Partners (quick grid) ─────────────────────────────── */}
-      <section className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-poppins font-bold text-ocean-midnight mb-3">All Partners</h2>
-            <p className="text-gray-500 text-sm max-w-xl mx-auto">
-              Every organisation listed here has contributed directly to our work on the Kenyan coast.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {PARTNERS.map((p) => (
-              <PartnerCard key={p.name} name={p.name} role={p.role} logo={p.logo} />
-            ))}
+            {/* Community Partners - Medium Block */}
+            <div className="lg:col-span-3">
+              <div className={`h-full rounded-2xl bg-gradient-to-br ${CATEGORIES[1].color} p-4 relative overflow-hidden min-h-[280px]`}>
+                <div className="absolute -right-4 -bottom-4 w-20 h-20 rounded-full bg-white/5" />
+                <span className="text-[9px] font-bold uppercase tracking-widest text-white/50 mb-3 block">
+                  {CATEGORIES[1].label}
+                </span>
+                <div className="space-y-2">
+                  {PARTNER_ORGS.filter(p => p.category === 'community').map((partner) => (
+                    <div key={partner.name}>
+                      {partner.link ? (
+                        <Link href={partner.link} className="group block p-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition-all">
+                          <h4 className="text-xs font-bold text-white leading-tight">{partner.name}</h4>
+                          <span className="text-[8px] text-white/80 font-bold mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity">View →</span>
+                        </Link>
+                      ) : (
+                        <div className="p-2 rounded-lg bg-white/10 border border-white/10">
+                          <h4 className="text-xs font-bold text-white leading-tight">{partner.name}</h4>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Supporters - Small Stacked */}
+            <div className="lg:col-span-2">
+              <div className={`rounded-2xl bg-gradient-to-br ${CATEGORIES[3].color} p-4 relative overflow-hidden min-h-[280px]`}>
+                <span className="text-[9px] font-bold uppercase tracking-widest text-white/50 mb-3 block">
+                  {CATEGORIES[3].label}
+                </span>
+                <div className="space-y-3">
+                  {PARTNER_ORGS.filter(p => p.category === 'supporter').map((partner) => (
+                    <div
+                      key={partner.name}
+                      className="p-4 rounded-lg h-20 flex items-center justify-center"
+                      style={{ backgroundColor: partner.bgColor || '#ffffff' }}
+                    >
+                      <PartnerLogo name={partner.name} domain={partner.domain} logoPath={partner.logoPath} size="md" className="w-full h-full" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Current Donors - Wide Multi-column Grid */}
+            <div className="lg:col-span-12">
+              <div className={`rounded-2xl bg-gradient-to-br ${CATEGORIES[2].color} p-6 relative overflow-hidden`}>
+                <div className="absolute -right-12 -top-12 w-40 h-40 rounded-full bg-white/5" />
+                <div className="absolute -left-8 -bottom-8 w-32 h-32 rounded-full bg-white/5" />
+                <span className="text-[10px] font-bold uppercase tracking-widest text-white/50 mb-4 block">
+                  {CATEGORIES[2].label}
+                </span>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+                  {PARTNER_ORGS.filter(p => p.category === 'donor').map((partner) => (
+                    <div key={partner.name} className="relative">
+                      {partner.link ? (
+                        <Link
+                          href={partner.link}
+                          className="group relative block p-5 rounded-xl hover:shadow-lg hover:ring-2 hover:ring-ocean-turquoise/50 transition-all h-28 flex items-center justify-center overflow-hidden"
+                          style={{ backgroundColor: partner.bgColor || '#ffffff' }}
+                        >
+                          <PartnerLogo name={partner.name} domain={partner.domain} logoPath={partner.logoPath} size={partner.logoSize || 'lg'} className="w-full h-full group-hover:scale-105 transition-transform" />
+                          {/* Arrow indicator for clickable logos */}
+                          <div className="absolute top-2 right-2 w-5 h-5 rounded-full bg-ocean-turquoise text-white flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                            →
+                          </div>
+                        </Link>
+                      ) : (
+                        <div
+                          className="p-5 rounded-xl h-28 flex items-center justify-center opacity-80"
+                          style={{ backgroundColor: partner.bgColor || '#ffffff' }}
+                        >
+                          <PartnerLogo name={partner.name} domain={partner.domain} logoPath={partner.logoPath} size={partner.logoSize || 'lg'} className="w-full h-full" />
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

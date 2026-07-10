@@ -8,6 +8,24 @@ export interface SDGIcon {
 }
 
 export const SDGS: Record<number, SDGIcon> = {
+  1: {
+    number: 1,
+    name: 'No Poverty',
+    color: '#E5243B',
+    description: 'End poverty in all its forms everywhere',
+  },
+  2: {
+    number: 2,
+    name: 'Zero Hunger',
+    color: '#DDA63A',
+    description: 'End hunger, achieve food security and improved nutrition',
+  },
+  3: {
+    number: 3,
+    name: 'Good Health and Well-being',
+    color: '#4C9F38',
+    description: 'Ensure healthy lives and promote well-being for all',
+  },
   4: {
     number: 4,
     name: 'Quality Education',
@@ -37,6 +55,12 @@ export const SDGS: Record<number, SDGIcon> = {
     name: 'Life Below Water',
     color: '#0A97D9',
     description: 'Conserve and sustainably use the oceans, seas and marine resources',
+  },
+  15: {
+    number: 15,
+    name: 'Life on Land',
+    color: '#56C02B',
+    description: 'Protect, restore and promote sustainable use of terrestrial ecosystems',
   },
   17: {
     number: 17,

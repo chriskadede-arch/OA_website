@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oceans Alive - Ocean Conference 2026</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ocean-950: #000814;
+            --ocean-900: #001d3d;
+            --ocean-800: #003566;
+            --ocean-700: #0353a4;
+            --ocean-500: #0077b6;
+            --ocean-400: #0096c7;
+            --ocean-300: #00b4d8;
+            --ocean-200: #48cae4;
+            --ocean-100: #90e0ef;
+            --ocean-50: #caf0f8;
+            --coral: #ef476f;
+            --sun: #ffd60a;
+            --lime: #06ffa5;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Manrope', -apple-system, sans-serif;
+            background: var(--ocean-950);
+            color: white;
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* SLIDE 1: CINEMATIC HERO */
+        .hero-slide {
+            background:
+                radial-gradient(circle at 80% 20%, rgba(0,180,216,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(239,71,111,0.1) 0%, transparent 50%),
+                linear-gradient(180deg, var(--ocean-950) 0%, var(--ocean-900) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid-pattern {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,180,216,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,180,216,0.03) 1px, transparent 1px);
+            background-size: 100px 100px;
+            mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%);
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            padding: 80px;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .hero-eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--ocean-200);
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.2s;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-title {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(64px, 13vw, 180px);
+            font-weight: 800;
+            line-height: 0.9;
+            letter-spacing: -0.03em;
+            background: linear-gradient(180deg, white 0%, var(--ocean-100) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.4s;
+        }
+
+        .hero-tagline {
+            font-size: clamp(20px, 3vw, 40px);
+            font-weight: 300;
+            color: var(--ocean-100);
+            margin-bottom: 60px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.6s;
+        }
+
+        .hero-metrics {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.8s;
+        }
+
+        .metric {
+            position: relative;
+        }
+
+        .metric::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, transparent, var(--ocean-300), transparent);
+        }
+
+        .metric:first-child::before { display: none; }
+
+        .metric-value {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(40px, 6vw, 72px);
+            font-weight: 700;
+            color: var(--ocean-200);
+            line-height: 1;
+        }
+
+        .metric-label {
+            font-size: 14px;
+            color: var(--ocean-100);
+            margin-top: 8px;
+            opacity: 0.7;
+        }
+
+        /* SLIDE 2: BENTO MASONRY */
+        .bento-slide {
+            background: var(--ocean-950);
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+        }
+
+        .section-kicker {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--ocean-300);
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(40px, 7vw, 80px);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: white;
+        }
+
+        .bento-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-auto-rows: 140px;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .bento-card {
+            background: linear-gradient(135deg, rgba(0,119,182,0.08) 0%, rgba(0,53,102,0.12) 100%);
+            border: 1px solid rgba(72,202,228,0.15);
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bento-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(72,202,228,0.1) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .bento-card:hover::before { opacity: 1; }
+
+        .bento-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(72,202,228,0.4);
+            box-shadow:
+                0 20px 60px rgba(0,180,216,0.25),
+                inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+
+        .bento-1 { grid-column: span 3; grid-row: span 2; }
+        .bento-2 { grid-column: span 2; grid-row: span 1; }
+        .bento-3 { grid-column: span 1; grid-row: span 1; }
+        .bento-4 { grid-column: span 2; grid-row: span 2; }
+        .bento-5 { grid-column: span 2; grid-row: span 1; }
+        .bento-6 { grid-column: span 2; grid-row: span 1; }
+        .bento-7 { grid-column: span 2; grid-row: span 2; }
+        .bento-8 { grid-column: span 2; grid-row: span 1; }
+        .bento-9 { grid-column: span 2; grid-row: span 1; }
+
+        .bento-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--ocean-200);
+            margin-bottom: 10px;
+        }
+
+        .bento-value {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 800;
+            color: white;
+            line-height: 1;
+        }
+
+        .bento-desc {
+            font-size: 15px;
+            color: var(--ocean-100);
+            line-height: 1.5;
+        }
+
+        .bento-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(239,71,111,0.15);
+            border: 1px solid rgba(239,71,111,0.3);
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: var(--coral);
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        /* SLIDE 3: SPLIT STATEMENT */
+        .statement-slide {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            background: linear-gradient(135deg, var(--ocean-950) 0%, var(--ocean-900) 100%);
+        }
+
+        .statement-left {
+            padding: 100px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .statement-left::before {
+            content: '"';
+            position: absolute;
+            top: 40px;
+            left: 30px;
+            font-family: 'Sora', serif;
+            font-size: 200px;
+            font-weight: 800;
+            color: rgba(72,202,228,0.05);
+            line-height: 1;
+        }
+
+        .statement-text {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(32px, 5vw, 68px);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .statement-highlight {
+            background: linear-gradient(135deg, var(--ocean-300), var(--lime));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .statement-body {
+            font-size: 20px;
+            line-height: 1.7;
+            color: var(--ocean-100);
+            max-width: 600px;
+        }
+
+        .statement-body p {
+            margin-bottom: 20px;
+        }
+
+        .statement-right {
+            background:
+                radial-gradient(circle at 50% 50%, rgba(0,180,216,0.2) 0%, transparent 70%),
+                radial-gradient(circle at 80% 30%, rgba(239,71,111,0.15) 0%, transparent 60%);
+            position: relative;
+        }
+
+        /* SLIDE 4: DATA WALL */
+        .data-wall-slide {
+            background: var(--ocean-950);
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            flex: 1;
+        }
+
+        .data-tile {
+            background: linear-gradient(135deg, rgba(0,119,182,0.1) 0%, rgba(0,83,164,0.05) 100%);
+            border: 1px solid rgba(72,202,228,0.2);
+            border-radius: 16px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .data-tile::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--ocean-300), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .data-tile:hover::after { opacity: 1; }
+
+        .data-tile:hover {
+            transform: scale(1.05);
+            border-color: rgba(72,202,228,0.5);
+            box-shadow: 0 25px 70px rgba(0,180,216,0.3);
+        }
+
+        .data-number {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(40px, 6vw, 64px);
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--ocean-200), var(--ocean-300));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .data-label {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--ocean-100);
+            line-height: 1.4;
+        }
+
+        /* SLIDE 5: TOOLKITS SHOWCASE */
+        .toolkit-slide {
+            background: linear-gradient(180deg, var(--ocean-950) 0%, var(--ocean-900) 100%);
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .toolkit-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            flex: 1;
+        }
+
+        .toolkit-card {
+            background: linear-gradient(135deg, rgba(0,119,182,0.08), transparent);
+            border: 1px solid rgba(72,202,228,0.2);
+            border-radius: 24px;
+            padding: 40px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .toolkit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--ocean-300), var(--lime));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .toolkit-card:hover::before { transform: scaleX(1); }
+
+        .toolkit-card:hover {
+            transform: translateY(-12px);
+            border-color: rgba(72,202,228,0.5);
+            box-shadow: 0 30px 80px rgba(0,180,216,0.3);
+        }
+
+        .toolkit-icon {
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+
+        .toolkit-title {
+            font-family: 'Sora', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .toolkit-list {
+            list-style: none;
+            font-size: 15px;
+            color: var(--ocean-100);
+            line-height: 1.8;
+        }
+
+        .toolkit-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+
+        .toolkit-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--ocean-300);
+            font-weight: 700;
+        }
+
+        /* SLIDE 6: TIMELINE VERTICAL */
+        .timeline-slide {
+            background: var(--ocean-950);
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .timeline-container {
+            flex: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg,
+                transparent 0%,
+                var(--ocean-300) 10%,
+                var(--ocean-300) 90%,
+                transparent 100%);
+            transform: translateX(-50%);
+        }
+
+        .timeline-event {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin: 50px 0;
+            position: relative;
+        }
+
+        .timeline-event::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, var(--ocean-300), var(--lime));
+            border: 4px solid var(--ocean-950);
+            border-radius: 50%;
+            box-shadow: 0 0 0 8px rgba(72,202,228,0.2);
+            z-index: 10;
+        }
+
+        .timeline-event:nth-child(even) .timeline-content:first-child {
+            grid-column: 2;
+        }
+
+        .timeline-event:nth-child(even) .timeline-content:last-child {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .timeline-content {
+            background: linear-gradient(135deg, rgba(0,119,182,0.1), rgba(0,83,164,0.05));
+            border: 1px solid rgba(72,202,228,0.2);
+            border-radius: 20px;
+            padding: 32px;
+        }
+
+        .timeline-year {
+            font-family: 'Sora', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--ocean-300);
+            margin-bottom: 12px;
+        }
+
+        .timeline-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .timeline-desc {
+            font-size: 16px;
+            color: var(--ocean-100);
+            line-height: 1.6;
+        }
+
+        /* SLIDE 7: PARTNERS GRID */
+        .partners-slide {
+            background: linear-gradient(135deg, var(--ocean-950), var(--ocean-900));
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+            flex: 1;
+        }
+
+        .partner-card {
+            background: rgba(0,119,182,0.08);
+            border: 1px solid rgba(72,202,228,0.15);
+            border-radius: 16px;
+            padding: 28px;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .partner-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(72,202,228,0.4);
+            box-shadow: 0 20px 50px rgba(0,180,216,0.25);
+        }
+
+        .partner-name {
+            font-weight: 700;
+            font-size: 18px;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .partner-type {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--ocean-200);
+            opacity: 0.8;
+        }
+
+        /* SLIDE 8: CTA FINALE */
+        .cta-slide {
+            background:
+                radial-gradient(circle at 50% 50%, rgba(0,180,216,0.15) 0%, transparent 70%),
+                linear-gradient(180deg, var(--ocean-900) 0%, var(--ocean-950) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-slide::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,180,216,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,180,216,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, black 30%, transparent 80%);
+        }
+
+        .cta-content {
+            max-width: 1000px;
+            z-index: 10;
+        }
+
+        .cta-title {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(48px, 10vw, 120px);
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, white, var(--ocean-100), var(--lime));
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+            animation: shine 4s linear infinite;
+        }
+
+        @keyframes shine {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .cta-subtitle {
+            font-size: clamp(18px, 3vw, 28px);
+            color: var(--ocean-100);
+            margin-bottom: 50px;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            font-family: 'Sora', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 20px 50px;
+            background: linear-gradient(135deg, var(--ocean-400), var(--ocean-300));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow:
+                0 20px 60px rgba(0,180,216,0.4),
+                inset 0 1px 0 rgba(255,255,255,0.3);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 25px 70px rgba(0,180,216,0.5);
+        }
+
+        .cta-footer {
+            margin-top: 60px;
+            font-size: 16px;
+            color: var(--ocean-200);
+        }
+
+        /* NAVIGATION */
+        .nav-dots {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .nav-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(144,224,239,0.2);
+            border: 2px solid rgba(72,202,228,0.4);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .nav-dot.active {
+            background: var(--ocean-300);
+            transform: scale(1.4);
+            box-shadow: 0 0 20px rgba(72,202,228,0.6);
+        }
+
+        .nav-arrows {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 16px;
+            z-index: 1000;
+        }
+
+        .nav-arrow {
+            width: 48px;
+            height: 48px;
+            background: rgba(72,202,228,0.15);
+            border: 1px solid rgba(72,202,228,0.3);
+            border-radius: 50%;
+            color: var(--ocean-200);
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-arrow:hover {
+            background: var(--ocean-300);
+            color: var(--ocean-950);
+            transform: scale(1.1);
+        }
+
+        .slide-number {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: var(--ocean-200);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <!-- SLIDE 1: CINEMATIC HERO -->
+    <div class="slide hero-slide active">
+        <div class="hero-grid-pattern"></div>
+        <div class="hero-content">
+            <div class="hero-eyebrow">OCEAN CONFERENCE 2026</div>
+            <h1 class="hero-title">OCEANS<br>ALIVE</h1>
+            <p class="hero-tagline">When Communities Lead, Oceans Thrive</p>
+            <div class="hero-metrics">
+                <div class="metric">
+                    <div class="metric-value">20</div>
+                    <div class="metric-label">YEARS</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">7,000+</div>
+                    <div class="metric-label">LIVES</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">400%</div>
+                    <div class="metric-label">RECOVERY</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 2: BENTO MASONRY -->
+    <div class="slide bento-slide">
+        <div class="section-header">
+            <div class="section-kicker">2003–2026</div>
+            <h2 class="section-title">The Journey</h2>
+        </div>
+        <div class="bento-container">
+            <div class="bento-card bento-1">
+                <div>
+                    <div class="bento-label">FOUNDATION</div>
+                    <div class="bento-value">2003</div>
+                </div>
+                <div class="bento-desc">First LMMA (Tengefu) established under traditional law – 30 ha protected</div>
+                <div class="bento-badge">Kenya's First</div>
+            </div>
+            <div class="bento-card bento-2">
+                <div class="bento-label">NGO CREATED</div>
+                <div class="bento-value">2016</div>
+            </div>
+            <div class="bento-card bento-3">
+                <div class="bento-value">17</div>
+                <div class="bento-label">BMUs</div>
+            </div>
+            <div class="bento-card bento-4">
+                <div>
+                    <div class="bento-label">GLOBAL RECOGNITION</div>
+                    <div class="bento-value">2017</div>
+                </div>
+                <div class="bento-desc">IUCN Equator Award for community-led conservation</div>
+            </div>
+            <div class="bento-card bento-5">
+                <div class="bento-label">FIRST CMA</div>
+                <div class="bento-value">2022</div>
+            </div>
+            <div class="bento-card bento-6">
+                <div class="bento-label">BLUE CHAMPIONS</div>
+                <div class="bento-value">2022</div>
+            </div>
+            <div class="bento-card bento-7">
+                <div>
+                    <div class="bento-label">HOUSEHOLDS EMPOWERED</div>
+                    <div class="bento-value">7,000+</div>
+                </div>
+                <div class="bento-desc">Across Kilifi County BMU Network</div>
+            </div>
+            <div class="bento-card bento-8">
+                <div class="bento-label">CORAL RESTORATION</div>
+                <div class="bento-value">25,000+</div>
+            </div>
+            <div class="bento-card bento-9">
+                <div class="bento-label">FISH BIOMASS</div>
+                <div class="bento-value">400%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 3: SPLIT STATEMENT -->
+    <div class="slide statement-slide">
+        <div class="statement-left">
+            <h2 class="statement-text">
+                WE DON'T JUST<br>
+                <span class="statement-highlight">STUDY OCEANS</span><br>
+                WE TRANSFORM THEM
+            </h2>
+            <div class="statement-body">
+                <p>Since 2003, we've pioneered community-led conservation that puts coastal communities at the heart of ocean recovery.</p>
+                <p><strong>For every 1 fisher, 20 livelihoods benefit in the value chain.</strong></p>
+                <p>From establishing Kenya's first LMMA to building a network of 17 Beach Management Units, we prove that when you empower communities, entire ecosystems flourish.</p>
+            </div>
+        </div>
+        <div class="statement-right"></div>
+    </div>
+
+    <!-- SLIDE 4: DATA WALL -->
+    <div class="slide data-wall-slide">
+        <div class="section-header">
+            <div class="section-kicker">BY THE NUMBERS</div>
+            <h2 class="section-title">Impact That Counts</h2>
+        </div>
+        <div class="data-grid">
+            <div class="data-tile"><div class="data-number">7,000+</div><div class="data-label">Households Empowered</div></div>
+            <div class="data-tile"><div class="data-number">300</div><div class="data-label">HH from KCW-CBO</div></div>
+            <div class="data-tile"><div class="data-number">500</div><div class="data-label">HH from KBMU</div></div>
+            <div class="data-tile"><div class="data-number">25,000+</div><div class="data-label">Corals Planted</div></div>
+            <div class="data-tile"><div class="data-number">457</div><div class="data-label">Artificial Reefs</div></div>
+            <div class="data-tile"><div class="data-number">39 hac</div><div class="data-label">Reef Restored</div></div>
+            <div class="data-tile"><div class="data-number">400%</div><div class="data-label">Fish Biomass Growth</div></div>
+            <div class="data-tile"><div class="data-number">30%</div><div class="data-label">Reef Recovery</div></div>
+            <div class="data-tile"><div class="data-number">135%</div><div class="data-label">Income Boost</div></div>
+            <div class="data-tile"><div class="data-number">2,800+</div><div class="data-label">Students Educated</div></div>
+            <div class="data-tile"><div class="data-number">50</div><div class="data-label">Schools Reached</div></div>
+            <div class="data-tile"><div class="data-number">4,000+</div><div class="data-label">Turtle Hatchlings</div></div>
+        </div>
+    </div>
+
+    <!-- SLIDE 5: TOOLKITS SHOWCASE -->
+    <div class="slide toolkit-slide">
+        <div class="section-header">
+            <div class="section-kicker">KNOWLEDGE SHARING</div>
+            <h2 class="section-title">Toolkits & Innovations</h2>
+        </div>
+        <div class="toolkit-grid">
+            <div class="toolkit-card">
+                <div class="toolkit-icon">📚</div>
+                <div class="toolkit-title">LMMA Toolkit</div>
+                <ul class="toolkit-list">
+                    <li>First in Kenya</li>
+                    <li>Management plans</li>
+                    <li>MCS frameworks</li>
+                    <li>Community guides</li>
+                </ul>
+            </div>
+            <div class="toolkit-card">
+                <div class="toolkit-icon">🛠️</div>
+                <div class="toolkit-title">BMU 6-Step Guide</div>
+                <ul class="toolkit-list">
+                    <li>Constitution templates</li>
+                    <li>Boundary mapping</li>
+                    <li>Legal by-laws</li>
+                    <li>Tenure security</li>
+                </ul>
+            </div>
+            <div class="toolkit-card">
+                <div class="toolkit-icon">📊</div>
+                <div class="toolkit-title">Data & Research</div>
+                <ul class="toolkit-list">
+                    <li>State of Fishery 2021</li>
+                    <li>CAS & FS surveys</li>
+                    <li>IUCN SAGE analysis</li>
+                    <li>WCS partnership data</li>
+                </ul>
+            </div>
+            <div class="toolkit-card">
+                <div class="toolkit-icon">🪸</div>
+                <div class="toolkit-title">Coral Program</div>
+                <ul class="toolkit-list">
+                    <li>32 nursery tables</li>
+                    <li>25,000 annual capacity</li>
+                    <li>80 coral reef stars</li>
+                    <li>Restoration toolkit</li>
+                </ul>
+            </div>
+            <div class="toolkit-card">
+                <div class="toolkit-icon">🌱</div>
+                <div class="toolkit-title">Permaculture</div>
+                <ul class="toolkit-list">
+                    <li>135 households reached</li>
+                    <li>Climate-smart gardens</li>
+                    <li>Demo farm</li>
+                    <li>Nutrition boost</li>
+                </ul>
+            </div>
+            <div class="toolkit-card">
+                <div class="toolkit-icon">♻️</div>
+                <div class="toolkit-title">Mama Karanga</div>
+                <ul class="toolkit-list">
+                    <li>Trash4Cash program</li>
+                    <li>19 households earning</li>
+                    <li>Beach clean-ups</li>
+                    <li>Eco-world partner</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 6: TIMELINE VERTICAL -->
+    <div class="slide timeline-slide">
+        <div class="section-header">
+            <div class="section-kicker">MILESTONES</div>
+            <h2 class="section-title">Global Recognition</h2>
+        </div>
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            <div class="timeline-event">
+                <div class="timeline-content">
+                    <div class="timeline-year">2017</div>
+                    <div class="timeline-title">IUCN Equator Award</div>
+                    <div class="timeline-desc">Global recognition for community-led LMMA – Kuruwitu CBO honored</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-desc">Featured in IUCN Panorama, Green Listing & Blue Wall</div>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-content">
+                    <div class="timeline-desc">10 internationally famous athletes as coral restoration advocates</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-year">2021-22</div>
+                    <div class="timeline-title">Global Conferences</div>
+                    <div class="timeline-desc">Marseille, APAC, Monaco – sharing Kenya's model worldwide</div>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-content">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-title">Blue Champions Award</div>
+                    <div class="timeline-desc">20 years of ocean conservation excellence recognized by IUCN</div>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-desc">10 films produced, 15 filmmakers trained as advocates</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 7: PARTNERS GRID -->
+    <div class="slide partners-slide">
+        <div class="section-header">
+            <div class="section-kicker">COLLABORATION</div>
+            <h2 class="section-title">Global Partners</h2>
+        </div>
+        <div class="partners-grid">
+            <div class="partner-card"><div class="partner-name">Wildlife Conservation Society</div><div class="partner-type">Research Partner</div></div>
+            <div class="partner-card"><div class="partner-name">IUCN/EU BIOPAMA</div><div class="partner-type">Funding Award</div></div>
+            <div class="partner-card"><div class="partner-name">Rochefeller Foundation</div><div class="partner-type">Grant Support</div></div>
+            <div class="partner-card"><div class="partner-name">The Body Shop</div><div class="partner-type">Grant Support</div></div>
+            <div class="partner-card"><div class="partner-name">Vipingo Ridge</div><div class="partner-type">Aquatic Concession</div></div>
+            <div class="partner-card"><div class="partner-name">LEAP</div><div class="partner-type">Student Tours</div></div>
+            <div class="partner-card"><div class="partner-name">Eco-world</div><div class="partner-type">Trash4Cash</div></div>
+            <div class="partner-card"><div class="partner-name">African Leadership Univ</div><div class="partner-type">13 Regional Students</div></div>
+        </div>
+    </div>
+
+    <!-- SLIDE 8: CTA FINALE -->
+    <div class="slide cta-slide">
+        <div class="cta-content">
+            <h2 class="cta-title">JOIN THE<br>OCEAN<br>REVOLUTION</h2>
+            <p class="cta-subtitle">Partner with us to scale community-led conservation<br>across the Western Indian Ocean</p>
+            <button class="cta-button">Let's Transform Oceans Together</button>
+            <div class="cta-footer">www.oceansalive.org<br>Kilifi County, Kenya</div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav-dots">
+        <div class="nav-dot active" onclick="goToSlide(1)"></div>
+        <div class="nav-dot" onclick="goToSlide(2)"></div>
+        <div class="nav-dot" onclick="goToSlide(3)"></div>
+        <div class="nav-dot" onclick="goToSlide(4)"></div>
+        <div class="nav-dot" onclick="goToSlide(5)"></div>
+        <div class="nav-dot" onclick="goToSlide(6)"></div>
+        <div class="nav-dot" onclick="goToSlide(7)"></div>
+        <div class="nav-dot" onclick="goToSlide(8)"></div>
+    </div>
+
+    <div class="nav-arrows">
+        <div class="nav-arrow" onclick="previousSlide()">←</div>
+        <div class="nav-arrow" onclick="nextSlide()">→</div>
+    </div>
+
+    <div class="slide-number"><span id="current">1</span> / 8</div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 8;
+
+        function showSlide(n) {
+            if (n > totalSlides) currentSlide = 1;
+            if (n < 1) currentSlide = totalSlides;
+
+            document.querySelectorAll('.slide').forEach(slide => slide.classList.remove('active'));
+            document.querySelectorAll('.nav-dot').forEach(dot => dot.classList.remove('active'));
+
+            document.querySelectorAll('.slide')[currentSlide - 1].classList.add('active');
+            document.querySelectorAll('.nav-dot')[currentSlide - 1].classList.add('active');
+            document.getElementById('current').textContent = currentSlide;
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        function previousSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+
+        function goToSlide(n) {
+            currentSlide = n;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+            if (e.key === 'ArrowLeft') previousSlide();
+        });
+
+        // Bento card mouse tracking
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                card.style.setProperty('--mouse-x', `${x}%`);
+                card.style.setProperty('--mouse-y', `${y}%`);
+            });
+        });
+    </script>
+</body>
+</html>

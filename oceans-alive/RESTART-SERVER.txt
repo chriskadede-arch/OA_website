@@ -1,0 +1,34 @@
+╔════════════════════════════════════════════════════════════════════╗
+║              RESTART DEVELOPMENT SERVER INSTRUCTIONS               ║
+╚════════════════════════════════════════════════════════════════════╝
+
+After updating .env.local file or adding Stripe keys, you MUST restart
+the server for changes to take effect.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+METHOD 1: Stop and Restart
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. In the terminal where the server is running, press: Ctrl+C
+2. Wait for it to stop completely
+3. Run: cd oceans-alive && npm run dev
+4. Wait for "Ready" message
+5. Open: http://localhost:3000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+When to Restart:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ After adding Stripe API keys to .env.local
+✅ After changing any NEXT_PUBLIC_* environment variables
+✅ After updating .env.local file
+✅ After installing new npm packages
+
+You do NOT need to restart for:
+❌ Regular code changes (hot reload handles this)
+❌ CSS/styling updates
+❌ Component modifications
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

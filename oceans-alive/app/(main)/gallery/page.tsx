@@ -13,6 +13,31 @@ const LOCAL_PREVIEWS = [
   { src: '/images/oceanday.jpg', alt: 'World Ocean Day celebration' },
 ];
 
+// All gallery photos from Display Photos and images folders
+const STATIC_GALLERY: GalleryItem[] = [
+  { id: '1', title: 'Coral Restoration Divers', description: 'Divers working on coral restoration at Kuruwitu', category: 'Coral Restoration', type: 'photo', image_url: '/images/divers.jpg', created_at: '', display_order: 1, is_published: true,  },
+  { id: '2', title: 'Trash4Cash Women', description: 'Women collecting plastic waste', category: 'Community Life', type: 'photo', image_url: '/images/trashforcash.jpg', created_at: '', display_order: 2, is_published: true,  },
+  { id: '3', title: 'Trash4Cash Collection', description: 'Plastic waste collection programme', category: 'Community Life', type: 'photo', image_url: '/images/trashforcash2.jpg', created_at: '', display_order: 3, is_published: true,  },
+  { id: '4', title: 'Trash4Cash Sorting', description: 'Sorting collected plastic waste', category: 'Community Life', type: 'photo', image_url: '/images/trashforcash3.jpg', created_at: '', display_order: 4, is_published: true,  },
+  { id: '5', title: 'BMU Meeting', description: 'Beach Management Unit community meeting', category: 'Community Life', type: 'photo', image_url: '/images/BMUmeeting.jpg', created_at: '', display_order: 5, is_published: true,  },
+  { id: '6', title: 'BMU Network', description: 'Kilifi BMU network gathering', category: 'Community Life', type: 'photo', image_url: '/images/BMUS.jpg', created_at: '', display_order: 6, is_published: true,  },
+  { id: '7', title: 'World Ocean Day', description: 'World Ocean Day celebration', category: 'Community Life', type: 'photo', image_url: '/images/oceanday.jpg', created_at: '', display_order: 7, is_published: true,  },
+  { id: '8', title: 'Fisher at Work', description: 'Local fisher in action', category: 'Community Life', type: 'photo', image_url: '/images/fisher.jpg', created_at: '', display_order: 8, is_published: true,  },
+  { id: '9', title: 'Farming in Action', description: 'Community farming activities', category: 'Community Life', type: 'photo', image_url: '/images/farmernaction.jpg', created_at: '', display_order: 9, is_published: true,  },
+  { id: '10', title: 'Women Learning', description: 'Women education programme', category: 'Community Life', type: 'photo', image_url: '/images/womenlearning.jpg', created_at: '', display_order: 10, is_published: true,  },
+  { id: '11', title: 'Women Education', description: 'Women learning session', category: 'Community Life', type: 'photo', image_url: '/images/womenlearning2.jpg', created_at: '', display_order: 11, is_published: true,  },
+  { id: '12', title: 'Youth Education', description: 'Children learning about ocean conservation', category: 'Community Life', type: 'photo', image_url: '/images/kids.jpg', created_at: '', display_order: 12, is_published: true,  },
+  { id: '13', title: 'Learning Programme', description: 'Ocean education programme', category: 'Community Life', type: 'photo', image_url: '/images/learning.jpg', created_at: '', display_order: 13, is_published: true,  },
+  { id: '14', title: 'Coral Teaching', description: 'Teaching about coral restoration', category: 'Coral Restoration', type: 'photo', image_url: '/images/coralteaching.jpg', created_at: '', display_order: 14, is_published: true,  },
+  { id: '15', title: 'Interns Program', description: 'Interns working on conservation', category: 'Community Life', type: 'photo', image_url: '/images/interns.jpg', created_at: '', display_order: 15, is_published: true,  },
+  { id: '16', title: 'Capacity Assessment', description: 'Community capacity building', category: 'Community Life', type: 'photo', image_url: '/images/Capacityassess.jpg', created_at: '', display_order: 16, is_published: true,  },
+  { id: '17', title: 'Coastal Communities', description: 'Coastal community members', category: 'Community Life', type: 'photo', image_url: '/images/communities.jpg', created_at: '', display_order: 17, is_published: true,  },
+  { id: '18', title: 'Ocean Culture Life', description: 'Ocean culture and community', category: 'Ocean Landscapes', type: 'photo', image_url: '/images/oceanculturelife.jpg', created_at: '', display_order: 18, is_published: true,  },
+  { id: '19', title: 'Ocean Men', description: 'Local fishermen', category: 'Community Life', type: 'photo', image_url: '/images/oceansmen.jpg', created_at: '', display_order: 19, is_published: true,  },
+  { id: '20', title: 'Farmers Group', description: 'Community farmers', category: 'Community Life', type: 'photo', image_url: '/images/farmers.jpg', created_at: '', display_order: 20, is_published: true,  },
+  { id: '21', title: 'Kamakuji CMA', description: 'Kamakuji Conservation Area', category: 'Ocean Landscapes', type: 'photo', image_url: '/images/kamakukijcma.jpg', created_at: '', display_order: 21, is_published: true,  },
+];
+
 export default function Gallery() {
   const [items, setItems] = useState<GalleryItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -29,12 +54,25 @@ export default function Gallery() {
     try {
       const response = await apiClient.getGalleryItems(1, 24, selectedType || undefined);
       let data = response.data || [];
+
+      // If API returns no data, use static gallery
+      if (data.length === 0) {
+        data = STATIC_GALLERY;
+      }
+
+      // Filter by type
+      if (selectedType) {
+        data = data.filter((item: GalleryItem) => item.type === selectedType);
+      }
+
+      // Filter by category
       if (selectedCategory) {
         data = data.filter((item: GalleryItem) => item.category === selectedCategory);
       }
+
       setItems(data);
     } catch {
-      setItems([]);
+      setItems(STATIC_GALLERY);
     } finally {
       setLoading(false);
     }

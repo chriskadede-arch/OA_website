@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCEANS ALIVE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --ocean: #001233; --teal: #0F766E; --bright: #14B8A6; --lime: #84CC16; }
+        body { font-family: 'Manrope', sans-serif; background: var(--ocean); color: white; overflow: hidden; }
+        .presentation { width: 100vw; height: 100vh; }
+        .slide { width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0; visibility: hidden; transition: opacity 0.3s; }
+        .slide.active { opacity: 1; visibility: visible; }
+
+        /* HERO */
+        .s1 { display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #001233 0%, #0F766E 50%, #14B8A6 100%); clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+        .s1 .w { max-width: 1400px; padding: 0 4rem; }
+        .s1 .sp { font-family: 'JetBrains Mono', monospace; font-size: 1rem; color: var(--lime); letter-spacing: 4px; margin-bottom: 1rem; font-weight: 600; }
+        .s1 h1 { font-family: 'Sora', sans-serif; font-size: clamp(5rem, 12vw, 10rem); font-weight: 900; line-height: 0.9; margin-bottom: 2rem; background: linear-gradient(135deg, #fff 0%, #2DD4BF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.03em; }
+        .s1 .tg { font-size: clamp(1.5rem, 3vw, 2.5rem); font-weight: 700; max-width: 800px; margin-bottom: 1rem; }
+        .s1 .lb { font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; color: rgba(255,255,255,0.6); letter-spacing: 2px; }
+
+        /* WHO WE ARE - MAGAZINE SPREAD */
+        .s2 { background: var(--ocean); position: relative; overflow: hidden; }
+        .s2 .bg-txt { position: absolute; top: -5%; left: -2%; font-family: 'Sora', sans-serif; font-size: clamp(10rem, 20vw, 18rem); font-weight: 900; color: rgba(132,204,22,0.08); line-height: 0.85; z-index: 0; white-space: nowrap; transform: rotate(-5deg); }
+        .s2 .main { position: absolute; top: 12%; left: 8%; width: 48%; z-index: 2; }
+        .s2 .lb { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--lime); letter-spacing: 3px; margin-bottom: 1rem; text-transform: uppercase; }
+        .s2 h2 { font-family: 'Sora', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: white; line-height: 1.1; margin-bottom: 1.5rem; }
+        .s2 p { font-size: 1.125rem; line-height: 1.8; color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+        .s2 strong { color: var(--lime); font-weight: 800; }
+        .s2 .aim { position: absolute; bottom: 10%; right: 8%; width: 42%; background: linear-gradient(135deg, var(--lime), var(--bright)); color: var(--ocean); padding: 3rem; transform: rotate(2deg); z-index: 3; }
+        .s2 .aim h3 { font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 900; margin-bottom: 1rem; line-height: 1.2; }
+        .s2 .aim p { font-size: 1.125rem; line-height: 1.7; font-weight: 600; color: rgba(0,18,51,0.9); }
+        .s2 .pill { position: absolute; top: 8%; right: 10%; background: rgba(132,204,22,0.2); border: 2px solid var(--lime); padding: 1rem 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; font-weight: 700; letter-spacing: 2px; transform: rotate(-3deg); }
+
+        /* TIMELINE - VERTICAL RIVER */
+        .s3 { background: linear-gradient(135deg, var(--ocean) 0%, var(--teal) 100%); padding: 4rem 6rem; overflow-y: auto; position: relative; }
+        .s3::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, transparent, var(--lime), transparent); }
+        .s3 .hd { text-align: center; margin-bottom: 4rem; }
+        .s3 .lb { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--lime); letter-spacing: 3px; margin-bottom: 0.5rem; }
+        .s3 h2 { font-family: 'Sora', sans-serif; font-size: clamp(3rem, 7vw, 6rem); font-weight: 900; background: linear-gradient(135deg, #fff, var(--lime)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .s3 .item { display: flex; margin-bottom: 4rem; position: relative; }
+        .s3 .item:nth-child(even) { flex-direction: row-reverse; }
+        .s3 .yr { width: 45%; display: flex; justify-content: flex-end; padding-right: 3rem; align-items: center; }
+        .s3 .item:nth-child(even) .yr { justify-content: flex-start; padding-right: 0; padding-left: 3rem; }
+        .s3 .yr span { font-family: 'Sora', sans-serif; font-size: 5rem; font-weight: 900; color: var(--lime); line-height: 1; }
+        .s3 .dot { width: 10%; display: flex; justify-content: center; align-items: center; position: relative; }
+        .s3 .dot::after { content: ''; width: 20px; height: 20px; background: var(--lime); border-radius: 50%; border: 4px solid var(--ocean); }
+        .s3 .cnt { width: 45%; padding-left: 3rem; }
+        .s3 .item:nth-child(even) .cnt { padding-left: 0; padding-right: 3rem; text-align: right; }
+        .s3 h3 { font-family: 'Sora', sans-serif; font-size: 1.75rem; font-weight: 800; color: white; margin-bottom: 0.75rem; }
+        .s3 p { font-size: 1.125rem; color: rgba(255,255,255,0.85); line-height: 1.7; }
+
+        /* RIPPLE - MINIMALIST CENTER */
+        .s4 { background: var(--ocean); display: flex; align-items: center; justify-content: center; position: relative; }
+        .s4 .bg { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .s4 .c { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 2px solid var(--lime); border-radius: 50%; opacity: 0; animation: exp 4s ease-out infinite; }
+        .s4 .c:nth-child(2) { animation-delay: 1.3s; }
+        .s4 .c:nth-child(3) { animation-delay: 2.6s; }
+        @keyframes exp { 0% { width: 100px; height: 100px; opacity: 0.6; } 100% { width: 1400px; height: 1400px; opacity: 0; } }
+        .s4 .ctr { position: relative; z-index: 10; text-align: center; }
+        .s4 .lb { font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; color: var(--lime); letter-spacing: 3px; margin-bottom: 2rem; }
+        .s4 .big { font-family: 'Sora', sans-serif; font-size: clamp(10rem, 20vw, 18rem); font-weight: 900; color: var(--lime); line-height: 1; margin-bottom: 1rem; }
+        .s4 .ds { font-size: 1.5rem; color: rgba(255,255,255,0.8); margin-bottom: 4rem; text-transform: uppercase; letter-spacing: 3px; }
+        .s4 .sts { display: flex; gap: 5rem; justify-content: center; }
+        .s4 .st { text-align: center; }
+        .s4 .st .n { font-family: 'Sora', sans-serif; font-size: 3.5rem; font-weight: 900; background: linear-gradient(135deg, var(--lime), var(--bright)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .s4 .st .l { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: rgba(255,255,255,0.7); margin-top: 0.75rem; letter-spacing: 2px; }
+
+        /* KCWA - LAYERED COLLAGE */
+        .s5 { background: linear-gradient(180deg, var(--ocean), var(--teal)); position: relative; overflow: hidden; }
+        .s5 .ghost { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Sora', sans-serif; font-size: clamp(8rem, 15vw, 14rem); font-weight: 900; color: rgba(132,204,22,0.06); z-index: 0; text-align: center; line-height: 0.9; white-space: nowrap; }
+        .s5 .hd { position: absolute; top: 8%; left: 8%; z-index: 4; }
+        .s5 .hd .lb { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--lime); letter-spacing: 3px; margin-bottom: 0.5rem; }
+        .s5 .hd h2 { font-family: 'Sora', sans-serif; font-size: 3.5rem; font-weight: 900; color: white; }
+        .s5 .hd p { font-size: 1.125rem; color: rgba(255,255,255,0.7); margin-top: 0.5rem; }
+        .s5 .stats { position: absolute; top: 25%; right: 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; z-index: 2; }
+        .s5 .stat { background: rgba(0,18,51,0.9); border: 3px solid var(--lime); padding: 2rem; text-align: center; min-width: 140px; }
+        .s5 .stat .n { font-family: 'Sora', sans-serif; font-size: 3.5rem; font-weight: 900; color: var(--lime); line-height: 1; }
+        .s5 .stat .l { font-size: 0.875rem; color: white; margin-top: 0.5rem; text-transform: uppercase; }
+        .s5 .box1 { position: absolute; bottom: 20%; left: 8%; width: 38%; background: rgba(255,255,255,0.08); padding: 2.5rem; border-left: 8px solid var(--lime); z-index: 3; }
+        .s5 .box2 { position: absolute; bottom: 12%; right: 12%; width: 40%; background: rgba(132,204,22,0.15); border: 3px solid var(--bright); padding: 2.5rem; z-index: 1; }
+        .s5 h3 { font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--lime); margin-bottom: 1rem; }
+        .s5 ul { list-style: none; padding: 0; }
+        .s5 li { color: rgba(255,255,255,0.9); margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; line-height: 1.6; }
+        .s5 li::before { content: "▸"; position: absolute; left: 0; color: var(--lime); font-weight: 900; }
+
+        /* KBMU - DYNAMIC SPLIT */
+        .s6 { background: var(--ocean); display: flex; position: relative; }
+        .s6::before { content: ''; position: absolute; top: 0; bottom: 0; left: 42%; width: 100px; background: linear-gradient(90deg, var(--teal), transparent); z-index: 1; }
+        .s6 .lt { width: 42%; background: linear-gradient(135deg, var(--teal), var(--ocean)); padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; }
+        .s6 .rt { width: 58%; padding: 4rem; display: flex; flex-direction: column; gap: 2.5rem; justify-content: center; }
+        .s6 .lb { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--lime); letter-spacing: 3px; margin-bottom: 1rem; }
+        .s6 h2 { font-family: 'Sora', sans-serif; font-size: clamp(3.5rem, 7vw, 6rem); font-weight: 900; line-height: 0.85; background: linear-gradient(135deg, white, var(--lime)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 2rem; }
+        .s6 .sub { font-size: 1.25rem; color: rgba(255,255,255,0.8); line-height: 1.5; }
+        .s6 .blk { background: rgba(255,255,255,0.05); border-left: 6px solid var(--lime); padding: 2rem; }
+        .s6 .blk h3 { font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 800; color: white; margin-bottom: 1rem; }
+        .s6 ul { list-style: none; padding: 0; }
+        .s6 li { color: rgba(255,255,255,0.85); margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; line-height: 1.6; }
+        .s6 li::before { content: "▸"; position: absolute; left: 0; color: var(--lime); font-weight: 900; }
+
+        /* NETWORK - ORBITAL */
+        .s7 { background: radial-gradient(ellipse at center, var(--teal), var(--ocean)); display: flex; align-items: center; justify-content: center; position: relative; padding: 4rem; }
+        .s7 .hd { position: absolute; top: 3rem; left: 4rem; }
+        .s7 .hd .lb { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--lime); letter-spacing: 3px; margin-bottom: 0.5rem; }
+        .s7 .hd h2 { font-family: 'Sora', sans-serif; font-size: 3.5rem; font-weight: 900; color: white; }
+        .s7 .orb { position: relative; width: 550px; height: 550px; }
+        .s7 .core { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 320px; height: 320px; background: linear-gradient(135deg, var(--lime), var(--bright)); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 40px 100px rgba(132,204,22,0.6); }
+        .s7 .core .n { font-family: 'Sora', sans-serif; font-size: 7rem; font-weight: 900; color: var(--ocean); line-height: 1; }
+        .s7 .core .l { font-family: 'JetBrains Mono', monospace; font-size: 1rem; color: var(--ocean); font-weight: 700; letter-spacing: 2px; margin-top: 1rem; }
+        .s7 .sat { position: absolute; background: rgba(0,18,51,0.95); border: 3px solid var(--bright); padding: 1.5rem 2rem; backdrop-filter: blur(10px); text-align: center; min-width: 150px; border-radius: 0.5rem; }
+        .s7 .sat .n { font-family: 'Sora', sans-serif; font-size: 2.5rem; font-weight: 900; color: var(--lime); line-height: 1; }
+        .s7 .sat .l { font-size: 0.75rem; color: rgba(255,255,255,0.8); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        .s7 .t { top: -70px; left: 50%; transform: translateX(-50%); }
+        .s7 .b { bottom: -70px; left: 50%; transform: translateX(-50%); }
+        .s7 .ls { left: -90px; top: 50%; transform: translateY(-50%); }
+        .s7 .rs { right: -90px; top: 50%; transform: translateY(-50%); }
+
+        /* CORAL - EXPLOSIVE */
+        .s8 { background: var(--ocean); position: relative; overflow: hidden; }
+        .s8 .huge { position: absolute; top: 15%; left: -8%; font-family: 'Sora', sans-serif; font-size: clamp(12rem, 25vw, 22rem); font-weight: 900; line-height: 0.85; background: linear-gradient(135deg, var(--lime), var(--bright)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; transform: rotate(-8deg); z-index: 1; }
+        .s8 .top { position: absolute; top: 8%; right: 10%; z-index: 2; }
+        .s8 .top .lb { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--lime); letter-spacing: 3px; margin-bottom: 0.5rem; }
+        .s8 .top h2 { font-family: 'Sora', sans-serif; font-size: 2.5rem; font-weight: 900; color: white; }
+        .s8 .mini { position: absolute; top: 22%; right: 10%; display: flex; gap: 2rem; z-index: 2; }
+        .s8 .mini .st { text-align: center; background: rgba(0,18,51,0.8); border: 2px solid var(--bright); padding: 1.5rem 2rem; }
+        .s8 .mini .n { font-family: 'Sora', sans-serif; font-size: 3rem; font-weight: 900; color: var(--lime); line-height: 1; }
+        .s8 .mini .l { font-size: 0.75rem; color: rgba(255,255,255,0.7); margin-top: 0.5rem; text-transform: uppercase; }
+        .s8 .lst { position: absolute; bottom: 12%; right: 8%; width: 48%; background: rgba(255,255,255,0.08); padding: 2.5rem; border-top: 6px solid var(--bright); z-index: 2; }
+        .s8 .lst h3 { font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--lime); margin-bottom: 1.5rem; }
+        .s8 ul { list-style: none; padding: 0; }
+        .s8 li { color: rgba(255,255,255,0.85); margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; line-height: 1.6; }
+        .s8 li::before { content: "▸"; position: absolute; left: 0; color: var(--lime); font-weight: 900; }
+
+        /* PERMACULTURE - CONTRAST */
+        .s9 { display: flex; }
+        .s9 .hlf { width: 50%; padding: 4rem 3.5rem; display: flex; flex-direction: column; justify-content: center; }
+        .s9 .lt { background: linear-gradient(135deg, var(--ocean), var(--teal)); }
+        .s9 .rt { background: var(--ocean); align-items: center; text-align: center; }
+        .s9 .lb { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--lime); letter-spacing: 3px; margin-bottom: 1rem; }
+        .s9 h2 { font-family: 'Sora', sans-serif; font-size: clamp(3rem, 6vw, 5rem); font-weight: 900; background: linear-gradient(135deg, white, var(--lime)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 2rem; line-height: 1; }
+        .s9 h3 { font-family: 'Sora', sans-serif; font-size: 1.75rem; font-weight: 800; color: var(--lime); margin-bottom: 1rem; margin-top: 2rem; }
+        .s9 p { font-size: 1.125rem; line-height: 1.7; color: rgba(255,255,255,0.9); }
+        .s9 .mg { font-family: 'Sora', sans-serif; font-size: clamp(8rem, 15vw, 13rem); font-weight: 900; color: var(--lime); line-height: 1; margin: 2.5rem 0; }
+        .s9 .mgl { font-size: 1.25rem; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
+        .s9 ul { list-style: none; padding: 0; text-align: left; max-width: 500px; margin: 2.5rem auto 0; }
+        .s9 li { color: rgba(255,255,255,0.85); margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; line-height: 1.6; }
+        .s9 li::before { content: "▸"; position: absolute; left: 0; color: var(--lime); font-weight: 900; }
+
+        /* SCHOOL - DYNAMIC GRID */
+        .s10 { background: linear-gradient(45deg, var(--ocean), var(--teal)); padding: 4rem; display: grid; grid-template-columns: 1.6fr 1fr; grid-template-rows: auto 1fr; gap: 2.5rem; grid-template-areas: "hd hd" "prg st"; }
+        .s10 .hd { grid-area: hd; }
+        .s10 .lb { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--lime); letter-spacing: 3px; margin-bottom: 0.5rem; }
+        .s10 h2 { font-family: 'Sora', sans-serif; font-size: clamp(3rem, 7vw, 6rem); font-weight: 900; background: linear-gradient(135deg, white, var(--lime)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .s10 .prg { grid-area: prg; background: rgba(255,255,255,0.05); padding: 2.5rem; border-left: 8px solid var(--lime); }
+        .s10 .prg h3 { font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 800; color: white; margin-bottom: 1.5rem; }
+        .s10 ul { list-style: none; padding: 0; }
+        .s10 li { color: rgba(255,255,255,0.85); margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; line-height: 1.6; }
+        .s10 li::before { content: "▸"; position: absolute; left: 0; color: var(--lime); font-weight: 900; }
+        .s10 .st { grid-area: st; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(132,204,22,0.25), rgba(20,184,166,0.15)); border: 5px solid var(--lime); padding: 3rem; text-align: center; }
+        .s10 .st .n { font-family: 'Sora', sans-serif; font-size: clamp(5rem, 10vw, 9rem); font-weight: 900; color: var(--lime); line-height: 1; }
+        .s10 .st .l { font-size: 1rem; color: white; margin-top: 1.5rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
+
+        /* PLASTIC - CHAOS STACK */
+        .s11 { background: radial-gradient(ellipse at bottom right, var(--teal), var(--ocean)); padding: 4rem; position: relative; }
+        .s11 .hd { position: relative; z-index: 5; margin-bottom: 3rem; }
+        .s11 .lb { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--lime); letter-spacing: 3px; margin-bottom: 0.5rem; }
+        .s11 h2 { font-family: 'Sora', sans-serif; font-size: clamp(3rem, 7vw, 6rem); font-weight: 900; background: linear-gradient(135deg, white, var(--lime)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .s11 .c1 { position: absolute; top: 28%; left: 8%; width: 46%; background: rgba(255,255,255,0.08); padding: 2.5rem; border-left: 8px solid var(--lime); z-index: 3; transform: rotate(-1deg); }
+        .s11 .c2 { position: absolute; top: 38%; right: 10%; width: 44%; background: rgba(132,204,22,0.18); border: 3px solid var(--lime); padding: 2.5rem; z-index: 2; transform: rotate(2deg); }
+        .s11 .c3 { position: absolute; bottom: 12%; left: 28%; background: linear-gradient(135deg, var(--lime), var(--bright)); color: var(--ocean); padding: 3.5rem 4rem; transform: rotate(-3deg); z-index: 4; text-align: center; box-shadow: 0 30px 80px rgba(132,204,22,0.5); }
+        .s11 h3 { font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; }
+        .s11 .c1 h3, .s11 .c2 h3 { color: var(--lime); }
+        .s11 ul { list-style: none; padding: 0; }
+        .s11 li { margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; line-height: 1.6; }
+        .s11 .c1 li, .s11 .c2 li { color: rgba(255,255,255,0.85); }
+        .s11 .c1 li::before, .s11 .c2 li::before { content: "▸"; position: absolute; left: 0; color: var(--lime); font-weight: 900; }
+        .s11 .c3 .n { font-family: 'Sora', sans-serif; font-size: 5.5rem; font-weight: 900; line-height: 1; }
+        .s11 .c3 .l { font-size: 1.125rem; font-weight: 700; margin-top: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* FUTURE - BRUTALIST */
+        .s12 { background: var(--ocean); padding: 4rem; display: flex; flex-direction: column; }
+        .s12 .hd { margin-bottom: 3rem; }
+        .s12 .lb { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--lime); letter-spacing: 3px; margin-bottom: 0.5rem; }
+        .s12 h2 { font-family: 'Sora', sans-serif; font-size: clamp(3rem, 7vw, 6rem); font-weight: 900; background: linear-gradient(135deg, white, var(--lime)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .s12 .blks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; flex: 1; }
+        .s12 .blk { background: linear-gradient(135deg, rgba(132,204,22,0.2), rgba(20,184,166,0.1)); border: 5px solid var(--lime); padding: 3rem; display: flex; flex-direction: column; justify-content: center; position: relative; transition: transform 0.3s; }
+        .s12 .blk:hover { transform: rotate(-3deg) scale(1.05); box-shadow: 0 30px 80px rgba(132,204,22,0.5); }
+        .s12 .blk:nth-child(2):hover { transform: rotate(3deg) scale(1.05); }
+        .s12 .blk .nm { font-family: 'Sora', sans-serif; font-size: 4.5rem; font-weight: 900; color: rgba(132,204,22,0.3); position: absolute; top: 1rem; right: 1.5rem; line-height: 1; }
+        .s12 .blk h3 { font-family: 'Sora', sans-serif; font-size: 1.75rem; font-weight: 800; color: var(--lime); margin-bottom: 1rem; }
+        .s12 .blk p { color: rgba(255,255,255,0.85); line-height: 1.7; font-size: 1.125rem; }
+
+        /* PARTNERS - FLOATING */
+        .s13 { background: radial-gradient(circle at top, var(--teal), var(--ocean)); padding: 4rem; display: flex; flex-direction: column; }
+        .s13 .hd { margin-bottom: 3rem; }
+        .s13 .lb { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--lime); letter-spacing: 3px; margin-bottom: 0.5rem; }
+        .s13 h2 { font-family: 'Sora', sans-serif; font-size: clamp(3rem, 7vw, 6rem); font-weight: 900; background: linear-gradient(135deg, white, var(--lime)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .s13 .grd { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; flex: 1; align-content: center; }
+        .s13 .crd { background: rgba(255,255,255,0.05); border: 2px solid rgba(132,204,22,0.3); padding: 2rem; text-align: center; transition: all 0.3s; border-radius: 0.5rem; }
+        .s13 .crd:hover { border-color: var(--lime); transform: translateY(-12px); box-shadow: 0 20px 60px rgba(132,204,22,0.4); }
+        .s13 .crd h3 { font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--lime); margin-bottom: 0.5rem; }
+        .s13 .crd p { font-size: 0.875rem; color: rgba(255,255,255,0.7); }
+
+        /* RECOGNITION - WALL */
+        .s14 { background: linear-gradient(135deg, var(--ocean), var(--teal), var(--ocean)); padding: 4rem; display: flex; gap: 4rem; }
+        .s14 .col { flex: 1; }
+        .s14 .col:last-child { border-left: 5px solid var(--lime); padding-left: 3.5rem; }
+        .s14 .lb { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--lime); letter-spacing: 3px; margin-bottom: 0.5rem; }
+        .s14 h2 { font-family: 'Sora', sans-serif; font-size: 3rem; font-weight: 900; color: white; margin-bottom: 2rem; }
+        .s14 h3 { font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800; color: var(--lime); margin-bottom: 2rem; }
+        .s14 .itm { background: rgba(255,255,255,0.05); border-left: 5px solid var(--lime); padding: 1.5rem; margin-bottom: 1.5rem; transition: all 0.3s; }
+        .s14 .itm:hover { background: rgba(255,255,255,0.1); transform: translateX(12px); }
+        .s14 .yr { font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; color: var(--lime); margin-bottom: 0.5rem; font-weight: 700; }
+        .s14 .nm { font-family: 'Sora', sans-serif; font-size: 1.25rem; font-weight: 700; color: white; }
+
+        /* NAV */
+        .nav { position: fixed; bottom: 2.5rem; right: 2.5rem; display: flex; gap: 1rem; z-index: 1000; }
+        .nav-btn { width: 60px; height: 60px; background: rgba(20,184,166,0.15); border: 2px solid var(--bright); border-radius: 50%; color: white; font-size: 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s; backdrop-filter: blur(10px); }
+        .nav-btn:hover { background: var(--lime); border-color: var(--lime); color: var(--ocean); transform: scale(1.15); }
+        .counter { position: fixed; top: 2.5rem; right: 2.5rem; font-family: 'JetBrains Mono', monospace; font-size: 1rem; font-weight: 700; color: var(--lime); z-index: 1000; background: rgba(0,18,51,0.9); padding: 1rem 1.5rem; border-radius: 2rem; border: 2px solid rgba(20,184,166,0.3); backdrop-filter: blur(10px); letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+
+        <!-- 1: HERO -->
+        <div class="slide s1 active">
+            <div class="w">
+                <div class="sp">// KENYAN NGO • MARINE CONSERVATION</div>
+                <h1>OCEANS<br>ALIVE</h1>
+                <p class="tg">When Communities Lead,<br>Oceans Thrive</p>
+                <div class="lb">WHO WE ARE</div>
+            </div>
+        </div>
+
+        <!-- 2: WHO WE ARE - FIXED TEXT -->
+        <div class="slide s2">
+            <div class="bg-txt">OCEANS<br>ALIVE</div>
+            <div class="pill">EST. 2016</div>
+            <div class="main">
+                <div class="lb">01 / FOUNDATION</div>
+                <h2>Our Story</h2>
+                <p>Oceans Alive pre-history originates from <strong>2003</strong>, when founders and the local artisanal traditional fisheries community took action to close an area from fishing and established a community coastal conservation area (CCA) locally known as a <strong>'Tengefu'</strong>.</p>
+                <p>This area is recognized as a community driven marine protected area (MPA) or globally as a <strong>Locally Managed Marine Area (LMMA)</strong>.</p>
+                <p>The founders experience resulted in a demand to share the knowledge such that in <strong>2016</strong>, they created an NGO, called <strong>Oceans Alive (OA)</strong>.</p>
+            </div>
+            <div class="aim">
+                <h3>Strategic Aims</h3>
+                <p>Act as a conduit to share the LMMA experience and tools, offering technical support to upscale to the 17 neighbouring fishing communities registered as Beach Management Units (BMU).</p>
+            </div>
+        </div>
+
+        <!-- 3: TIMELINE -->
+        <div class="slide s3">
+            <div class="hd">
+                <div class="lb">02 / JOURNEY</div>
+                <h2>20 Years</h2>
+            </div>
+            <div class="item">
+                <div class="yr"><span>2003</span></div>
+                <div class="dot"></div>
+                <div class="cnt">
+                    <h3>KCWA CBO Formed</h3>
+                    <p>Founders concerned at overfishing formed Kuruwitu Conservation and Welfare Association</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="yr"><span>2006</span></div>
+                <div class="dot"></div>
+                <div class="cnt">
+                    <h3>First LMMA in Kenya</h3>
+                    <p>Tengefu sanctuary established - 30 hectares protected</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="yr"><span>2016</span></div>
+                <div class="dot"></div>
+                <div class="cnt">
+                    <h3>NGO Registration</h3>
+                    <p>Oceans Alive registered to scale impact across region</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="yr"><span>2023</span></div>
+                <div class="dot"></div>
+                <div class="cnt">
+                    <h3>First CMA Plan</h3>
+                    <p>Kenya's first Co-Management Area plan developed</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="yr"><span>2024</span></div>
+                <div class="dot"></div>
+                <div class="cnt">
+                    <h3>County Network</h3>
+                    <p>17 BMUs united in first county network</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4: RIPPLE -->
+        <div class="slide s4">
+            <div class="bg">
+                <div class="c"></div>
+                <div class="c"></div>
+                <div class="c"></div>
+            </div>
+            <div class="ctr">
+                <div class="lb">03 / SCALE</div>
+                <div class="big">883×</div>
+                <div class="ds">EXPANSION</div>
+                <div class="sts">
+                    <div class="st">
+                        <div class="n">30 ha</div>
+                        <div class="l">KCWA</div>
+                    </div>
+                    <div class="st">
+                        <div class="n">12K ha</div>
+                        <div class="l">KBMU</div>
+                    </div>
+                    <div class="st">
+                        <div class="n">26.5K+</div>
+                        <div class="l">NETWORK</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5: KCWA -->
+        <div class="slide s5">
+            <div class="ghost">PROVEN<br>IMPACT</div>
+            <div class="hd">
+                <div class="lb">04 / PROOF</div>
+                <h2>KCWA Sanctuary</h2>
+                <p>20 Years of Measured Recovery</p>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="n">400%</div>
+                    <div class="l">Biomass</div>
+                </div>
+                <div class="stat">
+                    <div class="n">30%</div>
+                    <div class="l">Reef</div>
+                </div>
+                <div class="stat">
+                    <div class="n">17%</div>
+                    <div class="l">Seagrass</div>
+                </div>
+                <div class="stat">
+                    <div class="n">135%</div>
+                    <div class="l">Spillover</div>
+                </div>
+            </div>
+            <div class="box1">
+                <h3>Conservation Impact</h3>
+                <ul>
+                    <li>30-hectare no-take zone</li>
+                    <li>WCS data confirms recovery</li>
+                    <li>First community MPA in Kenya</li>
+                </ul>
+            </div>
+            <div class="box2">
+                <h3>Economic Benefits</h3>
+                <ul>
+                    <li>USD 10K-20K/year tourism</li>
+                    <li>300 households benefiting</li>
+                    <li>Sustainable livelihoods</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 6: KBMU -->
+        <div class="slide s6">
+            <div class="lt">
+                <div class="lb">05 / GOVERNANCE</div>
+                <h2>KBMU<br>Profile</h2>
+                <p class="sub">Kenya's First Co-Management Area</p>
+            </div>
+            <div class="rt">
+                <div class="blk">
+                    <h3>Kenya Firsts</h3>
+                    <ul>
+                        <li>First officially endorsed CMA</li>
+                        <li>First 6-step BMU toolkit</li>
+                        <li>First IUCN SAGE analysis</li>
+                        <li>300 members managing 12,000 ha</li>
+                        <li>500 households benefiting</li>
+                    </ul>
+                </div>
+                <div class="blk">
+                    <h3>Scientific Partnership</h3>
+                    <ul>
+                        <li>CAS & FS surveys ongoing</li>
+                        <li>WCS data partnership</li>
+                        <li>IUCN/EU BIOPAMA award</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7: NETWORK -->
+        <div class="slide s7">
+            <div class="hd">
+                <div class="lb">06 / NETWORK</div>
+                <h2>County BMU Network</h2>
+            </div>
+            <div class="orb">
+                <div class="core">
+                    <div class="n">17</div>
+                    <div class="l">BMUs UNITED</div>
+                </div>
+                <div class="sat t">
+                    <div class="n">26.5K+</div>
+                    <div class="l">Hectares</div>
+                </div>
+                <div class="sat b">
+                    <div class="n">FIRST</div>
+                    <div class="l">In Kenya</div>
+                </div>
+                <div class="sat ls">
+                    <div class="n">7,000+</div>
+                    <div class="l">Households</div>
+                </div>
+                <div class="sat rs">
+                    <div class="n">5</div>
+                    <div class="l">JCMAs</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8: CORAL -->
+        <div class="slide s8">
+            <div class="huge">25K+</div>
+            <div class="top">
+                <div class="lb">07 / RESTORATION</div>
+                <h2>Coral Restoration</h2>
+            </div>
+            <div class="mini">
+                <div class="st">
+                    <div class="n">32</div>
+                    <div class="l">Nurseries</div>
+                </div>
+                <div class="st">
+                    <div class="n">457</div>
+                    <div class="l">Reefs</div>
+                </div>
+            </div>
+            <div class="lst">
+                <h3>Impact Achievements</h3>
+                <ul>
+                    <li>39 hectares rehabilitated</li>
+                    <li>80 coral reef stars planted</li>
+                    <li>30 members trained (50% women)</li>
+                    <li>4,000 turtle hatchlings protected</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 9: PERMACULTURE -->
+        <div class="slide s9">
+            <div class="hlf lt">
+                <div class="lb">08 / NUTRITION</div>
+                <h2>Permaculture</h2>
+                <h3>Challenge</h3>
+                <p>Kilifi coastal communities have lowest nutrition levels. Climate-smart solutions needed.</p>
+                <h3>Methods</h3>
+                <p>Sack gardens, vertical gardens, spiral gardens, compost making, demo farm</p>
+            </div>
+            <div class="hlf rt">
+                <div class="mg">135</div>
+                <div class="mgl">Households</div>
+                <ul>
+                    <li>Green leafy vegetables boost nutrition</li>
+                    <li>Supplemental income from surplus</li>
+                    <li>Water-efficient systems</li>
+                    <li>Toolkit published</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 10: SCHOOL -->
+        <div class="slide s10">
+            <div class="hd">
+                <div class="lb">09 / EDUCATION</div>
+                <h2>School Program</h2>
+            </div>
+            <div class="prg">
+                <h3>Programs Delivered</h3>
+                <ul>
+                    <li>50 schools: Ecology films (DSTV Team Sayari)</li>
+                    <li>50 schools: Coral restoration intro</li>
+                    <li>8 schools: Marine biology deep-dive</li>
+                    <li>6 BMUs: Shark/ray conservation</li>
+                    <li>300 international students</li>
+                    <li>13 ALU students</li>
+                    <li>15 filmmakers trained</li>
+                    <li>10 films produced</li>
+                    <li>10 athlete ambassadors</li>
+                </ul>
+            </div>
+            <div class="st">
+                <div>
+                    <div class="n">7,680+</div>
+                    <div class="l">Total Learners</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 11: PLASTIC -->
+        <div class="slide s11">
+            <div class="hd">
+                <div class="lb">10 / CLEAN OCEANS</div>
+                <h2>Mama Karanga</h2>
+            </div>
+            <div class="c1">
+                <h3>Trash for Cash Program</h3>
+                <ul>
+                    <li>2024: Program launched</li>
+                    <li>Beach & village clean-ups</li>
+                    <li>Eco-world partnership</li>
+                    <li>Women-led initiative</li>
+                </ul>
+            </div>
+            <div class="c2">
+                <h3>Economic Model</h3>
+                <ul>
+                    <li>VSLA savings scheme</li>
+                    <li>Pooled community investment</li>
+                    <li>Dual benefit: clean + income</li>
+                </ul>
+            </div>
+            <div class="c3">
+                <div class="n">19</div>
+                <div class="l">Households Benefiting</div>
+            </div>
+        </div>
+
+        <!-- 12: FUTURE -->
+        <div class="slide s12">
+            <div class="hd">
+                <div class="lb">11 / FUTURE</div>
+                <h2>Next Chapter</h2>
+            </div>
+            <div class="blks">
+                <div class="blk">
+                    <div class="nm">01</div>
+                    <h3>Seaweed Farming</h3>
+                    <p>Sustainable farming to diversify livelihoods and restore ecosystems</p>
+                </div>
+                <div class="blk">
+                    <div class="nm">02</div>
+                    <h3>Fishermen Academy</h3>
+                    <p>Training center for sustainable practices and marine stewardship</p>
+                </div>
+                <div class="blk">
+                    <div class="nm">03</div>
+                    <h3>Mangrove Nursery</h3>
+                    <p>Large-scale restoration for habitat and climate resilience</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 13: PARTNERS -->
+        <div class="slide s13">
+            <div class="hd">
+                <div class="lb">12 / PARTNERSHIPS</div>
+                <h2>Our Partners</h2>
+            </div>
+            <div class="grd">
+                <div class="crd"><h3>WCS</h3><p>Wildlife Conservation Society</p></div>
+                <div class="crd"><h3>IUCN/EU</h3><p>BIOPAMA</p></div>
+                <div class="crd"><h3>Rochefeller</h3><p>Foundation</p></div>
+                <div class="crd"><h3>Body Shop</h3><p>Foundation</p></div>
+                <div class="crd"><h3>Vipingo Ridge</h3><p>Concession</p></div>
+                <div class="crd"><h3>LEAP</h3><p>Student Tours</p></div>
+                <div class="crd"><h3>Eco-world</h3><p>Recyclers</p></div>
+                <div class="crd"><h3>ALU</h3><p>Leadership University</p></div>
+            </div>
+        </div>
+
+        <!-- 14: RECOGNITION -->
+        <div class="slide s14">
+            <div class="col">
+                <div class="lb">13 / RECOGNITION</div>
+                <h2>IUCN Awards</h2>
+                <div class="itm">
+                    <div class="yr">2017</div>
+                    <div class="nm">IUCN Equator Award</div>
+                </div>
+                <div class="itm">
+                    <div class="yr">2022</div>
+                    <div class="nm">Blue Champions Award</div>
+                </div>
+                <div class="itm">
+                    <div class="yr">—</div>
+                    <div class="nm">Panorama Featured Solution</div>
+                </div>
+                <div class="itm">
+                    <div class="yr">—</div>
+                    <div class="nm">Green Listing Recognition</div>
+                </div>
+                <div class="itm">
+                    <div class="yr">—</div>
+                    <div class="nm">Blue Wall Initiative</div>
+                </div>
+            </div>
+            <div class="col">
+                <h3>Conferences</h3>
+                <div class="itm">
+                    <div class="yr">2021</div>
+                    <div class="nm">Marseille Conference</div>
+                </div>
+                <div class="itm">
+                    <div class="yr">2022</div>
+                    <div class="nm">APAC Conference</div>
+                </div>
+                <div class="itm">
+                    <div class="yr">2022</div>
+                    <div class="nm">Monaco Conference</div>
+                </div>
+                <div class="itm">
+                    <div class="yr">2022</div>
+                    <div class="nm">Blue Champions Event</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 15: CLOSING -->
+        <div class="slide s1">
+            <div style="text-align: center; max-width: 1200px; padding: 0 4rem; position: relative; z-index: 1;">
+                <h1 style="margin-bottom: 2rem;">JOIN THE<br>OCEAN<br>REVOLUTION</h1>
+                <p style="font-size: clamp(1.5rem, 3vw, 2rem); color: rgba(255,255,255,0.9); margin-bottom: 3rem;">Partner with us to scale community-led conservation</p>
+                <a href="http://www.oceansalive.org" style="font-size: 1.75rem; color: var(--lime); font-weight: 700; text-decoration: none; border-bottom: 3px solid var(--lime); padding-bottom: 0.5rem;">www.oceansalive.org</a>
+                <p style="font-size: 1.125rem; color: rgba(255,255,255,0.7); margin-top: 1.5rem;">Kilifi County, Kenya</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="nav">
+        <button class="nav-btn" onclick="prevSlide()">←</button>
+        <button class="nav-btn" onclick="nextSlide()">→</button>
+    </div>
+
+    <div class="counter"><span id="current">01</span> / 15</div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('current').textContent = String(currentSlide + 1).padStart(2, '0');
+        }
+
+        function nextSlide() { showSlide(currentSlide + 1); }
+        function prevSlide() { showSlide(currentSlide - 1); }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
+            if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
+        });
+
+        let touchStartX = 0;
+        document.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; });
+        document.addEventListener('touchend', e => {
+            let touchEndX = e.changedTouches[0].screenX;
+            if (touchEndX < touchStartX - 50) nextSlide();
+            if (touchEndX > touchStartX + 50) prevSlide();
+        });
+    </script>
+</body>
+</html>

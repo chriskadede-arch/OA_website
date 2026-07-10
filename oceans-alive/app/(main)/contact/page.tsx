@@ -77,8 +77,7 @@ export default function Contact() {
                 <span className="text-ocean-turquoise">Together</span>
               </h1>
               <p className="text-lg text-white/70 leading-relaxed mb-10 max-w-md">
-                Whether you want to partner, volunteer, donate, or just learn more - our team
-                in Kilifi responds within 48 hours.
+                Whether you want to partner, volunteer, donate, or just learn more - we're here to connect with you.
               </p>
 
               <div className="space-y-4">
@@ -121,11 +120,6 @@ export default function Contact() {
               {/* Floating fisher card */}
               <div className="absolute -bottom-5 -left-5 w-36 h-28 rounded-xl overflow-hidden border-4 border-ocean-midnight shadow-xl">
                 <Image src="/images/fisher.jpg" alt="Kilifi fisherman" fill className="object-cover" />
-              </div>
-              {/* Floating stat pill */}
-              <div className="absolute -top-4 -right-4 bg-ocean-turquoise rounded-xl px-4 py-3 text-white text-center shadow-lg">
-                <div className="text-xl font-poppins font-bold leading-none">48h</div>
-                <div className="text-[9px] font-bold uppercase tracking-widest opacity-80 mt-0.5">Response</div>
               </div>
             </div>
           </div>
@@ -337,18 +331,6 @@ export default function Contact() {
                       </div>
                     </a>
 
-                    {/* Response time */}
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
-                        <svg className="w-4 h-4 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <p className="text-[9px] font-bold uppercase tracking-widest text-ocean-turquoise mb-0.5">Response Time</p>
-                        <p className="text-white text-sm">Within 48 hours</p>
-                      </div>
-                    </div>
                   </div>
 
                   {/* Social */}

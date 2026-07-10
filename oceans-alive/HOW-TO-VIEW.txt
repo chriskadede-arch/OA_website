@@ -1,0 +1,110 @@
+╔══════════════════════════════════════════════════════════════╗
+║          OCEANS ALIVE PRESENTATION - VIEWING GUIDE           ║
+╚══════════════════════════════════════════════════════════════╝
+
+⚠️  IMPORTANT: Images won't load if you open the HTML file directly
+    from a ZIP file or file manager on mobile devices due to browser
+    security restrictions.
+
+══════════════════════════════════════════════════════════════════
+
+📱 FOR MOBILE (iOS/Android):
+
+OPTION 1 - Upload to Cloud Storage (RECOMMENDED)
+────────────────────────────────────────────────
+1. Extract the ZIP file completely
+2. Upload the ENTIRE folder to:
+   • Google Drive
+   • Dropbox
+   • OneDrive
+   • iCloud Drive
+
+3. Open the folder in the cloud storage app
+4. Tap on "oceans-alive-MOBILE.html"
+5. Select "Open in Browser" or "Preview"
+
+✓ This method works 100% of the time
+
+
+OPTION 2 - Use a File Browser App
+──────────────────────────────────
+1. Extract ZIP completely
+2. Download a file manager app that supports HTML preview:
+   • iOS: Documents by Readdle
+   • Android: Cx File Explorer or Total Commander
+
+3. Navigate to the extracted folder
+4. Open oceans-alive-MOBILE.html in the app's browser
+
+
+OPTION 3 - Use a Local Server App (Advanced)
+─────────────────────────────────────────────
+1. Extract ZIP
+2. Install "HTTP Server" app (available on both iOS/Android)
+3. Point the app to the extracted folder
+4. Open the local URL in your browser
+
+══════════════════════════════════════════════════════════════════
+
+💻 FOR DESKTOP (Windows/Mac/Linux):
+
+Simply double-click "oceans-alive-MOBILE.html" - it will open
+in your default browser with all images loading correctly.
+
+If images still don't load:
+1. Make sure the 'public' folder is in the same location as the HTML
+2. Try a different browser (Chrome or Firefox recommended)
+3. Check if antivirus is blocking local file access
+
+══════════════════════════════════════════════════════════════════
+
+📂 REQUIRED FOLDER STRUCTURE:
+
+Your extracted folder should look like this:
+
+YourFolder/
+  ├── oceans-alive-MOBILE.html  ← Main presentation
+  ├── TEST-IMAGES.html          ← Test if images load
+  ├── SIMPLE-TEST.html          ← Simple diagnostic
+  ├── README-MOBILE.txt
+  ├── HOW-TO-VIEW.txt          ← This file
+  └── public/
+      ├── logo.png
+      └── images/
+          └── gallery/
+              ├── oceanculturelife.jpg
+              ├── communities.jpg
+              ├── divers.jpg
+              └── ... (40+ more images)
+
+══════════════════════════════════════════════════════════════════
+
+🔧 TROUBLESHOOTING:
+
+❌ "Images not showing" on mobile
+→ You must upload to cloud storage or use a file browser app
+→ Direct file:// access is blocked by mobile browsers
+
+❌ "Images not showing" on desktop
+→ Ensure 'public' folder is next to the HTML file
+→ Try right-click → Open With → Chrome/Firefox
+
+❌ "Can't extract ZIP" on mobile
+→ Use built-in Files app (iOS) or any ZIP app (Android)
+→ Make sure you "Extract" not just "Preview"
+
+══════════════════════════════════════════════════════════════════
+
+✅ VERIFY YOUR SETUP:
+
+1. Open "TEST-IMAGES.html" first
+2. You should see 3 images with green "✓ PASS" badges
+3. If all pass → open "oceans-alive-MOBILE.html"
+4. If any fail → check folder structure above
+
+══════════════════════════════════════════════════════════════════
+
+📧 Need help? Contact: Oceans Alive Foundation
+🌐 Website: www.oceansalive.org
+
+═══════════════════════════════════════════════════════════════════

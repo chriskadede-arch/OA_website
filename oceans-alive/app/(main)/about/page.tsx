@@ -57,12 +57,12 @@ const CHAPTERS = [
     num: '05',
     title: 'Our Team',
     subtitle: 'The people behind the work',
-    body: 'From reef monitors to policy advocates - meet the core team and 1,200+ community stewards driving daily change in Kilifi County.',
+    body: 'From reef monitors to policy advocates - meet the core team and 7,000+ community stewards driving daily change in Kilifi County.',
     href: '/about/team',
     gradient: 'from-[#022F4E] to-[#1a4f5a]',
     accent: 'ocean-turquoise',
     image: '/images/communities.jpg',
-    wide: true,
+    wide: false,
   },
 ];
 
@@ -122,7 +122,7 @@ export default function AboutHub() {
                 href={ch.href}
                 className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br ${ch.gradient} p-8 flex flex-col justify-between hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ${
                   i === 0 ? 'min-h-[320px] lg:col-span-2' : 'min-h-[260px]'
-                } ${i === 4 ? 'lg:col-span-2' : ''}`}
+                }`}
               >
                 {/* Background photo */}
                 {ch.image && (

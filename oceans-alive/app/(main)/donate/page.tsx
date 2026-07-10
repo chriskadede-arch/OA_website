@@ -5,18 +5,13 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  EmbeddedCheckoutProvider,
-  EmbeddedCheckout,
-} from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
 import { donationSchema, DonationFormData } from '@/lib/validators';
 import { DONATION_AMOUNTS, IMPACT_STATS } from '@/lib/constants';
 import { apiClient } from '@/lib/api-client';
+import { usesPhpForms } from '@/lib/php-forms';
+import StripePaymentForm from '@/components/common/StripePaymentForm';
 
-const stripePromise = loadStripe(
-  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || ''
-);
+const USE_PHP_FORMS = usesPhpForms();
 
 const IMPACT_MAP: Record<number, { what: string; img: string }> = {
   500:   { what: 'Plants 1 coral fragment in Kuruwitu reef', img: '/images/divers.jpg' },
@@ -24,16 +19,18 @@ const IMPACT_MAP: Record<number, { what: string; img: string }> = {
   2500:  { what: 'Plants 5 coral fragments - the most popular gift', img: '/images/oceansmen.jpg' },
   5000:  { what: 'Funds one school ocean education day', img: '/images/kids.jpg' },
   10000: { what: 'Covers one community diver certification', img: '/images/coralteaching.jpg' },
+  25000: { what: 'Makes a significant impact - Royal-approved conservation', img: '/images/king-charles-coral.jpg' },
   0:     { what: 'Choose your own level of impact', img: '/images/communities.jpg' },
 };
 
-const STEPS = ['Amount', 'Your Info', 'Payment'];
+const STEPS = USE_PHP_FORMS ? ['Amount', 'Your Info', 'Confirmation'] : ['Amount', 'Your Info', 'Payment'];
 
 export default function Donate() {
   const [customAmount, setCustomAmount] = useState('');
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
-  const [clientSecret, setClientSecret] = useState('');
-  const [donationStep, setDonationStep] = useState<'select' | 'form' | 'payment'>('select');
+  const [donationStep, setDonationStep] = useState<'select' | 'form' | 'payment' | 'success'>('select');
+  const [confirmationMessage, setConfirmationMessage] = useState('');
+  const [clientSecret, setClientSecret] = useState<string | null>(null);
 
   const {
     register,
@@ -50,7 +47,7 @@ export default function Donate() {
     return parsed > 0 ? Math.round(parsed * 100) : 0;
   };
 
-  const stepIndex = { select: 0, form: 1, payment: 2 }[donationStep];
+  const stepIndex = { select: 0, form: 1, payment: 2, success: 2 }[donationStep];
 
   const onSubmit = async (data: DonationFormData) => {
     const amount = getFinalAmount();
@@ -59,15 +56,44 @@ export default function Donate() {
       return;
     }
     try {
-      const response = await apiClient.createDonationIntent({
-        amount,
-        donor_name: data.donor_name,
-        donor_email: data.donor_email,
-        donation_type: data.donation_type,
-        message: data.message,
+      // Call the new API route directly
+      const response = await fetch('/api/create-payment-intent', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          amount,
+          donor_name: data.donor_name,
+          donor_email: data.donor_email,
+          donation_type: data.donation_type,
+          message: data.message,
+          currency: data.currency,
+        }),
       });
-      if (response.data?.clientSecret) {
-        setClientSecret(response.data.clientSecret);
+
+      if (!response.ok) {
+        const errorData = await response.json();
+
+        // Show helpful message if Stripe isn't configured
+        if (response.status === 503) {
+          alert(
+            'Payment processing is not yet configured.\n\n' +
+            'To enable card payments:\n' +
+            '1. Create a free Stripe account at dashboard.stripe.com\n' +
+            '2. Get your API keys\n' +
+            '3. Add them to the .env.local file\n' +
+            '4. Restart the development server\n\n' +
+            'See QUICK-START-STRIPE.txt for detailed instructions.'
+          );
+          return;
+        }
+
+        throw new Error(errorData.error || 'Failed to create payment intent');
+      }
+
+      const { clientSecret: secret } = await response.json();
+
+      if (secret) {
+        setClientSecret(secret);
         setDonationStep('payment');
       }
     } catch (error: any) {
@@ -81,42 +107,44 @@ export default function Donate() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="bg-ocean-midnight py-24 md:py-28 overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="relative bg-ocean-midnight py-24 md:py-28 overflow-hidden">
+        {/* King Charles Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/king-charles-coral.jpg"
+            alt="King Charles III with coral restoration"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-ocean-midnight/75" />
+        </div>
+
+        <div className="relative z-10 max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-5 flex items-center gap-3">
                 <span className="w-8 h-px bg-ocean-turquoise inline-block" />
-                Kilifi County, Kenya
+                Support Ocean Conservation
               </p>
               <h1 className="font-poppins font-bold text-white text-5xl md:text-6xl leading-tight mb-6">
                 Every Dollar<br />
-                <span className="text-ocean-turquoise">Restores a Reef</span>
+                <span className="text-ocean-turquoise">Makes a Difference</span>
               </h1>
-              <p className="text-lg text-white/70 leading-relaxed mb-10 max-w-md">
+              <p className="text-lg text-white/90 leading-relaxed mb-10 max-w-md">
                 Your donation directly funds coral restoration, community conservation,
                 and sustainable livelihoods on Kenya's coastline.
               </p>
-              <div className="grid grid-cols-3 gap-6">
-                {[
-                  { v: '$25', l: '= 5 Coral Fragments' },
-                  { v: '85%', l: 'Coral Survival Rate' },
-                  { v: '24,800', l: 'Colonies Planted' },
-                ].map((s) => (
-                  <div key={s.l}>
-                    <div className="text-2xl font-poppins font-bold text-ocean-turquoise">{s.v}</div>
-                    <div className="text-[10px] text-white/50 uppercase tracking-widest mt-1">{s.l}</div>
-                  </div>
-                ))}
-              </div>
             </div>
             <div className="relative hidden lg:block">
-              <div className="relative h-80 rounded-2xl overflow-hidden">
-                <Image src="/images/divers.jpg" alt="Coral restoration divers" fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight/60 to-transparent" />
-              </div>
-              <div className="absolute -bottom-4 -left-4 w-40 h-28 rounded-xl overflow-hidden border-4 border-ocean-midnight shadow-xl">
-                <Image src="/images/kids.jpg" alt="Ocean education" fill className="object-cover" />
+              <div className="relative h-[500px] rounded-2xl overflow-hidden border-4 border-ocean-turquoise/30 shadow-2xl">
+                <Image
+                  src="/images/king-cypher-coral.jpg"
+                  alt="Royal cypher coral restoration - King Charles III"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -161,71 +189,70 @@ export default function Donate() {
 
           {/* ── Step 1: Amount ─── */}
           {donationStep === 'select' && (
-            <div className="max-w-3xl mx-auto">
-              <div className="mb-10">
+            <div className="max-w-4xl mx-auto">
+              <div className="mb-10 text-center">
                 <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-2">Step 1</p>
-                <h2 className="text-3xl font-poppins font-bold text-ocean-midnight">Choose Your Impact</h2>
+                <h2 className="text-3xl font-poppins font-bold text-ocean-midnight mb-3">Your $250 Donation Impact</h2>
+                <p className="text-gray-600">Royal-approved conservation that covers comprehensive ocean restoration</p>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
-                {DONATION_AMOUNTS.slice(0, -1).map((option) => {
-                  const impact = IMPACT_MAP[option.value];
-                  const isSelected = selectedAmount === option.value;
-                  return (
-                    <button
-                      key={option.value}
-                      onClick={() => { setSelectedAmount(option.value); setCustomAmount(''); }}
-                      className={`p-5 rounded-2xl text-left border-2 transition-all duration-200 group ${
-                        isSelected
-                          ? 'border-ocean-turquoise bg-ocean-turquoise/8'
-                          : 'border-gray-100 bg-gray-50 hover:border-ocean-turquoise/40 hover:bg-white'
-                      }`}
-                    >
-                      <div className={`text-2xl font-poppins font-bold mb-2 ${isSelected ? 'text-ocean-turquoise' : 'text-ocean-midnight'}`}>
-                        {option.label}
-                      </div>
-                      <p className="text-[11px] text-gray-500 leading-snug">{impact?.what}</p>
-                    </button>
-                  );
-                })}
+              {/* Fixed $250 amount display */}
+              <div className="mb-8 p-8 rounded-2xl border-4 border-ocean-turquoise bg-ocean-turquoise/5 text-center">
+                <div className="text-6xl font-poppins font-bold text-ocean-turquoise mb-2">$250</div>
+                <p className="text-sm text-gray-600 uppercase tracking-wider">Comprehensive Conservation Package</p>
               </div>
 
+              {/* What $250 covers */}
               <div className="mb-8">
-                <label className="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">
-                  Custom Amount (USD)
-                </label>
-                <div className="flex gap-0 rounded-xl border border-gray-200 overflow-hidden focus-within:border-ocean-turquoise transition-colors">
-                  <span className="flex items-center px-4 bg-gray-50 text-gray-500 font-semibold border-r border-gray-200">$</span>
+                <h3 className="text-lg font-bold text-ocean-midnight mb-4 text-center">Your $250 donation covers:</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {[
+                    { text: 'Plants coral fragments in Kuruwitu reef' },
+                    { text: 'Supports community fishers' },
+                    { text: 'Plants multiple coral colonies' },
+                    { text: 'Funds school ocean education days' },
+                    { text: 'Covers community diver certification' },
+                    { text: 'Makes a significant impact - Royal-approved conservation' },
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200">
+                      <span className="w-2 h-2 rounded-full bg-ocean-turquoise mt-1.5 shrink-0"></span>
+                      <p className="text-sm text-gray-700 leading-relaxed">{item.text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Custom amount option */}
+              <div className="mb-6">
+                <label className="block text-sm font-semibold text-ocean-midnight mb-3">Or enter custom amount (USD)</label>
+                <div className="relative">
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xl font-bold text-gray-400">$</span>
                   <input
                     type="number"
-                    value={customAmount}
-                    onChange={(e) => { setCustomAmount(e.target.value); setSelectedAmount(null); }}
-                    placeholder="Enter amount"
-                    className="flex-1 px-4 py-3 text-sm text-ocean-midnight focus:outline-none"
                     min="1"
                     step="0.01"
+                    value={customAmount}
+                    onChange={(e) => {
+                      setCustomAmount(e.target.value);
+                      setSelectedAmount(null);
+                    }}
+                    placeholder="0.00"
+                    className="w-full rounded-xl border-2 border-gray-200 pl-10 pr-4 py-4 text-lg text-ocean-midnight placeholder:text-gray-300 focus:outline-none focus:border-ocean-turquoise transition-colors"
                   />
                 </div>
               </div>
 
-              {getFinalAmount() > 0 && (
-                <div className="mb-6 p-4 rounded-xl bg-ocean-midnight/5 border border-ocean-midnight/10 flex items-center gap-3">
-                  <svg className="w-5 h-5 text-ocean-turquoise shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <p className="text-sm text-ocean-midnight">
-                    <span className="font-bold text-ocean-turquoise">${dollarAmount}</span>
-                    {' '}- {activeImpact?.what ?? 'Custom impact'}
-                  </p>
-                </div>
-              )}
-
               <button
-                onClick={() => setDonationStep('form')}
-                disabled={getFinalAmount() === 0}
-                className="w-full py-4 bg-ocean-midnight text-white font-bold rounded-xl hover:bg-ocean-turquoise transition-all duration-300 text-sm tracking-wide disabled:opacity-40 disabled:cursor-not-allowed"
+                onClick={() => {
+                  const amt = getFinalAmount();
+                  if (amt < 100) {
+                    setSelectedAmount(25000);
+                  }
+                  setDonationStep('form');
+                }}
+                className="w-full py-4 bg-ocean-midnight text-white font-bold rounded-xl hover:bg-ocean-turquoise transition-all duration-300 text-sm tracking-wide shadow-lg"
               >
-                Continue →
+                Proceed with Donation →
               </button>
             </div>
           )}
@@ -305,7 +332,7 @@ export default function Donate() {
                       disabled={isSubmitting}
                       className="flex-[2] py-3.5 bg-ocean-midnight text-white font-bold rounded-xl hover:bg-ocean-turquoise transition-all duration-300 text-sm disabled:opacity-50"
                     >
-                      {isSubmitting ? 'Processing...' : 'Continue to Payment →'}
+                      {isSubmitting ? 'Processing...' : USE_PHP_FORMS ? 'Submit Donation Request →' : 'Continue to Payment →'}
                     </button>
                   </div>
                 </form>
@@ -353,11 +380,55 @@ export default function Donate() {
             <div className="max-w-2xl mx-auto">
               <div className="mb-8">
                 <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-2">Step 3</p>
-                <h2 className="text-3xl font-poppins font-bold text-ocean-midnight">Complete Your Donation</h2>
+                <h2 className="text-3xl font-poppins font-bold text-ocean-midnight mb-3">
+                  Complete Your Donation
+                </h2>
+                <p className="text-gray-600 text-sm">
+                  Enter your card details below. All payments are securely processed by Stripe.
+                </p>
               </div>
-              <EmbeddedCheckoutProvider stripe={stripePromise} options={{ clientSecret }}>
-                <EmbeddedCheckout />
-              </EmbeddedCheckoutProvider>
+
+              <StripePaymentForm
+                clientSecret={clientSecret}
+                amount={getFinalAmount()}
+                onSuccess={() => {
+                  // Redirect is handled by Stripe
+                }}
+                onBack={() => {
+                  setDonationStep('form');
+                  setClientSecret(null);
+                }}
+              />
+
+              <div className="mt-8 p-4 rounded-xl bg-gray-50 border border-gray-200">
+                <p className="text-xs text-gray-600 leading-relaxed">
+                  <strong>Secure Payment:</strong> Your payment information is encrypted and never stored on our servers.
+                  We use Stripe, a PCI-compliant payment processor trusted by millions of businesses worldwide.
+                </p>
+              </div>
+            </div>
+          )}
+
+          {USE_PHP_FORMS && donationStep === 'success' && (
+            <div className="max-w-2xl mx-auto text-center">
+              <div className="w-16 h-16 rounded-full bg-ocean-turquoise/15 border-2 border-ocean-turquoise flex items-center justify-center mx-auto mb-6">
+                <svg className="w-7 h-7 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-2">Step 3</p>
+              <h2 className="text-3xl font-poppins font-bold text-ocean-midnight mb-4">Thank You for Your Support</h2>
+              <p className="text-gray-600 leading-relaxed mb-8">{confirmationMessage}</p>
+              <p className="text-sm text-gray-500 mb-8">
+                Our team at <strong>info@oceansalivekenya.org</strong> and{' '}
+                <strong>des@oceansalivekenya.org</strong> has been notified and will follow up with payment details.
+              </p>
+              <Link
+                href="/"
+                className="inline-flex items-center justify-center px-8 py-3.5 bg-ocean-midnight text-white font-bold rounded-xl hover:bg-ocean-turquoise transition-all duration-300 text-sm tracking-wide"
+              >
+                Back to Home
+              </Link>
             </div>
           )}
         </div>
@@ -386,7 +457,7 @@ export default function Donate() {
                 },
                 {
                   q: 'What payment methods do you accept?',
-                  a: 'All major credit cards, debit cards, and digital wallets through our secure Stripe integration.',
+                  a: 'We accept all major credit cards (Visa, Mastercard, Amex), debit cards, Apple Pay, and Google Pay through our secure Stripe payment system.',
                 },
                 {
                   q: 'How will I know my donation made a difference?',

@@ -208,7 +208,7 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
       "The programme is part of the LIFT Network - Oceans Alive's broader women's economic empowerment and conservation leadership platform. By placing income generation and environmental protection in the same hands, Trash4Cash makes conservation something women do for their own futures, not something done to their environment.",
     ],
     highlights: [
-      { label: 'Women Participants', value: '80+' },
+      { label: 'Women Participants', value: '120' },
       { label: 'Plastic Collected Monthly', value: '2+ tonnes' },
       { label: 'Communities', value: '4' },
       { label: 'Plastic Entering Oceans Annually', value: '8M tonnes' },
@@ -238,11 +238,11 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
     heroImageAlt: 'Community celebration of ocean conservation at Kilifi - World Ocean Day',
     longDescription: [
       "Sea turtles have swum Kenya's coastline for millions of years. Today, three species - the green turtle, hawksbill turtle, and loggerhead - nest along the Kilifi coast. All three are threatened.",
-      "Oceans Alive community rangers monitor nesting beaches year-round along 640 km of coastline, recording nesting events, tagging females, and protecting nests from poachers and disturbance. Data collected by the rangers feeds into Kenya's national turtle monitoring programme.",
+      "Oceans Alive community rangers monitor nesting beaches year-round along 270 km of coastline, recording nesting events, tagging females, and protecting nests from poachers and disturbance. Data collected by the rangers feeds into Kenya's national turtle monitoring programme.",
       "The programme is built on the understanding that communities who live alongside nesting turtles are the most effective guardians of those turtles. Community rangers are paid local people - often former poachers - who have chosen stewardship over exploitation because it supports their families and their identity.",
     ],
     highlights: [
-      { label: 'Coastline Monitored', value: '640 km' },
+      { label: 'Coastline Monitored', value: '270 km' },
       { label: 'Species Protected', value: '3 turtle species' },
       { label: 'Monitoring', value: 'Year-round' },
       { label: 'Community Rangers', value: 'Local residents' },
@@ -259,7 +259,7 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
     heroImage: '/images/man.jpg',
     heroImageAlt: 'Marine policy documentation and governance work at Oceans Alive',
     longDescription: [
-      "Conservation without policy is just gardening. Oceans Alive translates twenty years of community-collected data and field experience into national marine policy frameworks - ensuring that what works in Kilifi shapes how Kenya manages its entire 640 km coastline.",
+      "Conservation without policy is just gardening. Oceans Alive translates twenty years of community-collected data and field experience into national marine policy frameworks - ensuring that what works in Kilifi shapes how Kenya manages its entire 270 km coastline.",
       "In 2022, OAF delivered Kenya's first ocean co-management plan under new government guidelines - a legal document placing 150 km² under community stewardship. In 2025, the Kuruwitu model was presented at the IUCN World Conservation Congress as a globally scalable blueprint for community-led marine governance.",
       'The Marine Governance & Policy programme supports communities in generating the evidence that policymakers need, represents community interests at county and national government level, and advocates for legal frameworks that recognise community marine tenure across the Western Indian Ocean.',
     ],
@@ -286,7 +286,7 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
       "Through LIFT, women participate in BMU meetings, co-management planning sessions, and conservation monitoring. They are not beneficiaries of conservation - they are its architects.",
     ],
     highlights: [
-      { label: 'Women Members', value: '80+' },
+      { label: 'Women Members', value: '120' },
       { label: 'Programmes Connected', value: 'Trash4Cash · Kitchen Gardens · Eco-Tourism' },
       { label: 'County', value: 'Kilifi' },
       { label: 'Focus', value: 'Economic agency + conservation leadership' },

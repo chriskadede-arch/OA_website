@@ -26,7 +26,7 @@ export default function StoryPage() {
         <div className="relative max-w-6xl mx-auto px-6 py-28 md:py-40">
           <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-6 flex items-center gap-3">
             <span className="w-8 h-px bg-ocean-turquoise/50" />
-            Chapter 01
+            Our Story
           </p>
           <h1 className="font-poppins font-bold text-white text-5xl md:text-7xl leading-[0.95] mb-8 max-w-3xl">
             Our<br />
@@ -123,90 +123,82 @@ export default function StoryPage() {
         </div>
       </section>
 
-      {/* ── Timeline ─────────────────────────────────────────────── */}
-      <section className="bg-[#040f1a] py-20 md:py-28 overflow-hidden">
-        {/* Dot pattern */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.07]"
-          style={{
-            backgroundImage: 'radial-gradient(circle, rgba(46,191,209,1) 1px, transparent 1px)',
-            backgroundSize: '28px 28px',
-          }}
-        />
-        <div className="relative max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-4 flex items-center justify-center gap-3">
-              <span className="w-6 h-px bg-ocean-turquoise/50" />
-              Two Decades of Impact
-              <span className="w-6 h-px bg-ocean-turquoise/50" />
-            </p>
-            <h2 className="text-4xl md:text-5xl font-poppins font-bold text-white">
-              Milestones That Matter
-            </h2>
-          </div>
-
-          <div className="max-w-3xl mx-auto">
-            {TIMELINE.map((item, i) => (
-              <div key={item.year} className="flex gap-0 group">
-
-                {/* Year + line */}
-                <div className="flex flex-col items-center mr-8 shrink-0">
-                  <div className="relative">
-                    <div className="w-14 h-14 rounded-full bg-ocean-midnight border-2 border-ocean-turquoise/40 flex items-center justify-center shadow-lg shadow-ocean-turquoise/10 group-hover:border-ocean-turquoise group-hover:shadow-ocean-turquoise/30 transition-all duration-300">
-                      <span className="text-[10px] font-bold text-ocean-turquoise">{item.year}</span>
-                    </div>
-                    {/* Glow ring */}
-                    <div className="absolute inset-0 rounded-full bg-ocean-turquoise/5 scale-0 group-hover:scale-150 transition-transform duration-500 opacity-0 group-hover:opacity-100" />
-                  </div>
-                  {i < TIMELINE.length - 1 && (
-                    <div className="w-px flex-1 bg-gradient-to-b from-ocean-turquoise/30 to-ocean-turquoise/5 mt-2 min-h-[60px]" />
-                  )}
-                </div>
-
-                {/* Content */}
-                <div className="pb-12 pt-3 flex-1">
-                  {item.tag && (
-                    <span className="inline-block text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise bg-ocean-turquoise/10 border border-ocean-turquoise/20 px-2.5 py-1 rounded-full mb-3">
-                      {item.tag}
-                    </span>
-                  )}
-                  <h3 className="text-xl font-poppins font-bold text-white mb-3 leading-tight">
-                    {item.title}
-                  </h3>
-                  <p className="text-white/50 leading-relaxed text-sm">
-                    {item.body}
-                  </p>
-                </div>
-
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Impact Stats ─────────────────────────────────────────── */}
-      <section className="bg-ocean-midnight py-16 md:py-20">
+      {/* Story Content & Timeline from Homepage */}
+      <section className="bg-white py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-10 text-center flex items-center justify-center gap-3">
-            <span className="w-6 h-px bg-ocean-turquoise/50" />
-            The Numbers Behind the Story
-            <span className="w-6 h-px bg-ocean-turquoise/50" />
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {IMPACT_STATS.map((stat, i) => (
-              <div
-                key={i}
-                className="relative group text-center p-6 rounded-2xl bg-white/[0.04] border border-white/[0.07] hover:bg-white/[0.07] hover:border-ocean-turquoise/30 transition-all duration-300"
-              >
-                <div className="text-3xl md:text-4xl font-poppins font-bold text-ocean-turquoise mb-2">
-                  {stat.value}
-                </div>
-                <p className="text-xs text-white/45 leading-snug">{stat.label}</p>
+          {/* Underwater Image 1 */}
+          <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden mb-12">
+            <Image
+              src="/images/coral-reef.jpg"
+              alt="Coral reef with fish at Kuruwitu"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-16 items-start">
+            <div>
+              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">Our Journey</p>
+              <h2 className="text-4xl md:text-5xl font-poppins font-bold text-ocean-midnight mb-6 leading-tight">
+                Reimagining Marine Conservation through community leadership on Kenya's Coast
+              </h2>
+              <p className="text-gray-700 text-lg leading-relaxed mb-4">
+                In the late 90s, when coral bleaching devastated Kenya's reefs and fish stocks collapsed, Kuruwitu's fishing community took action - establishing Kenya's first community-driven marine protected area, a 30-hectare Tengefu.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                During the first 15 years of management, unprecedented results were delivered: 400% fish biomass increase, 30% coral recovery, 17% seagrass restoration, and 735% household income improvement in the surrounding area. A working model was created.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                In 2016, Oceans Alive Foundation was established to share this proven Community Conservation Area (CCA) experience, offering technical support to scale across 17 neighbouring Beach Management Units. Today, we support 12,000 hectares of co-managed ocean and 7,000+ households across Kilifi County.
+              </p>
+
+              {/* Underwater Image - aligned with timeline */}
+              <div className="relative w-full h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-lg mt-12">
+                <Image
+                  src="/images/coralteaching.jpg"
+                  alt="Coral restoration education and training"
+                  fill
+                  className="object-cover"
+                />
               </div>
-            ))}
+            </div>
+
+            {/* Timeline */}
+            <div className="space-y-0">
+              {TIMELINE.map((item, i) => {
+                // Handle year ranges differently
+                const isRange = item.year.includes('-');
+                const displayYear = isRange ? '03-18' : item.year.slice(2);
+
+                return (
+                <div key={item.year} className="flex gap-5 pb-8 last:pb-0">
+                  <div className="flex flex-col items-center">
+                    <div className={`${isRange ? 'w-14' : 'w-10'} h-10 rounded-full bg-ocean-turquoise/10 border-2 border-ocean-turquoise flex items-center justify-center shrink-0`}>
+                      <span className="text-[10px] font-bold text-ocean-turquoise">{displayYear}</span>
+                    </div>
+                    {i < TIMELINE.length - 1 && <div className="w-px flex-1 bg-ocean-turquoise/20 mt-2" />}
+                  </div>
+                  <div className="pt-1 pb-6">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-xs font-bold text-ocean-turquoise uppercase tracking-wider">{item.year}</span>
+                      {item.tag && (
+                        <span className="text-[10px] bg-ocean-turquoise/10 text-ocean-turquoise px-2 py-0.5 rounded-full font-semibold">
+                          {item.tag}
+                        </span>
+                      )}
+                    </div>
+                    <h4 className="font-poppins font-bold text-ocean-midnight mb-1">{item.title}</h4>
+                    <p className="text-sm text-gray-600 leading-relaxed">{item.body}</p>
+                  </div>
+                </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
+
 
       {/* ── Next Chapter CTA ─────────────────────────────────────── */}
       <section className="bg-white py-14">

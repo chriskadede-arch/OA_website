@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oceans Alive - Laptop Cover Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        .laptop-cover {
+            width: 1920px;
+            height: 1080px;
+            position: relative;
+            background: linear-gradient(135deg, #001f3f 0%, #003d5c 30%, #006a8e 60%, #00a5cf 100%);
+            overflow: hidden;
+        }
+
+        /* Animated Ripple Effect Background */
+        .ripple-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid rgba(0, 165, 207, 0.4);
+            animation: ripple-animation 8s infinite ease-out;
+        }
+
+        .ripple:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .ripple:nth-child(2) {
+            width: 600px;
+            height: 600px;
+            top: 40%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .ripple:nth-child(3) {
+            width: 500px;
+            height: 500px;
+            bottom: 10%;
+            left: 30%;
+            animation-delay: 4s;
+        }
+
+        .ripple:nth-child(4) {
+            width: 700px;
+            height: 700px;
+            top: 10%;
+            right: 5%;
+            animation-delay: 6s;
+        }
+
+        .ripple:nth-child(5) {
+            width: 800px;
+            height: 800px;
+            bottom: 20%;
+            right: 25%;
+            animation-delay: 3s;
+        }
+
+        @keyframes ripple-animation {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Wave Pattern Overlay */
+        .wave-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%2300a5cf"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%2300a5cf"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%2300a5cf"/></svg>');
+            background-size: cover;
+            background-position: bottom;
+            opacity: 0.3;
+            animation: wave-move 15s infinite linear;
+        }
+
+        @keyframes wave-move {
+            0% {
+                background-position-x: 0;
+            }
+            100% {
+                background-position-x: 1200px;
+            }
+        }
+
+        /* Content Container */
+        .content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 60px 80px;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+        }
+
+        .logo-text {
+            font-size: 72px;
+            font-weight: 900;
+            color: #00d4ff;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.5), 0 0 60px rgba(0, 165, 207, 0.3);
+            margin-bottom: 20px;
+            animation: glow-pulse 3s infinite alternate;
+        }
+
+        @keyframes glow-pulse {
+            0% {
+                text-shadow: 0 0 30px rgba(0, 212, 255, 0.5), 0 0 60px rgba(0, 165, 207, 0.3);
+            }
+            100% {
+                text-shadow: 0 0 40px rgba(0, 212, 255, 0.8), 0 0 80px rgba(0, 165, 207, 0.5);
+            }
+        }
+
+        .tagline {
+            font-size: 36px;
+            color: #ffffff;
+            font-weight: 600;
+            font-style: italic;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #a0e7ff;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        /* Stats Grid */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin: 0 auto;
+            max-width: 1600px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(0, 165, 207, 0.15), rgba(0, 212, 255, 0.1));
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 32px rgba(0, 165, 207, 0.2);
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .stat-card:nth-child(1) { animation-delay: 0s; }
+        .stat-card:nth-child(2) { animation-delay: 1.5s; }
+        .stat-card:nth-child(3) { animation-delay: 3s; }
+        .stat-card:nth-child(4) { animation-delay: 4.5s; }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            border-color: rgba(0, 212, 255, 0.6);
+            box-shadow: 0 12px 48px rgba(0, 212, 255, 0.4);
+        }
+
+        .stat-number {
+            font-size: 56px;
+            font-weight: 900;
+            color: #00d4ff;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+        }
+
+        .stat-label {
+            font-size: 18px;
+            color: #ffffff;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Footer Section */
+        .footer {
+            text-align: center;
+        }
+
+        .achievements {
+            font-size: 22px;
+            color: #a0e7ff;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 1.5px;
+        }
+
+        .mission {
+            font-size: 18px;
+            color: #ffffff;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.6), transparent);
+            border-radius: 50%;
+            animation: float-particle 10s infinite ease-in-out;
+        }
+
+        .particle:nth-child(1) {
+            width: 8px;
+            height: 8px;
+            top: 15%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .particle:nth-child(2) {
+            width: 12px;
+            height: 12px;
+            top: 60%;
+            left: 80%;
+            animation-delay: 2s;
+        }
+
+        .particle:nth-child(3) {
+            width: 6px;
+            height: 6px;
+            top: 80%;
+            left: 30%;
+            animation-delay: 4s;
+        }
+
+        .particle:nth-child(4) {
+            width: 10px;
+            height: 10px;
+            top: 25%;
+            right: 10%;
+            animation-delay: 6s;
+        }
+
+        @keyframes float-particle {
+            0%, 100% {
+                transform: translate(0, 0);
+                opacity: 0.4;
+            }
+            50% {
+                transform: translate(30px, -50px);
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="laptop-cover">
+        <!-- Animated Ripple Background -->
+        <div class="ripple-container">
+            <div class="ripple"></div>
+            <div class="ripple"></div>
+            <div class="ripple"></div>
+            <div class="ripple"></div>
+            <div class="ripple"></div>
+        </div>
+
+        <!-- Wave Overlay -->
+        <div class="wave-overlay"></div>
+
+        <!-- Floating Particles -->
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Header -->
+            <div class="header">
+                <div class="logo-text">OCEANS ALIVE</div>
+                <div class="tagline">When Communities Lead, Oceans Thrive</div>
+                <div class="subtitle">Foundation</div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number">20</div>
+                    <div class="stat-label">Years</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">7,000+</div>
+                    <div class="stat-label">Lives Transformed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">25,000+</div>
+                    <div class="stat-label">Corals Planted</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">400%</div>
+                    <div class="stat-label">Ocean Recovery</div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="achievements">
+                    Kenya's First LMMA • First Co-Management Area • First County BMU Network
+                </div>
+                <div class="mission">
+                    Building Coastal Community Capacity for Ocean Conservation
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

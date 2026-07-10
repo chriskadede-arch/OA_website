@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oceans Alive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --black: #1d1d1f;
+            --white: #ffffff;
+            --gray: #86868b;
+            --light-gray: #f5f5f7;
+            --blue: #0071e3;
+            --dark-blue: #005bb5;
+        }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--white); color: var(--black); overflow: hidden; }
+        .presentation { width: 100vw; height: 100vh; position: relative; }
+        .slide { width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0; visibility: hidden; transition: opacity 0.5s ease; }
+        .slide.active { opacity: 1; visibility: visible; }
+
+        /* HERO */
+        .hero { background: var(--black); color: var(--white); display: flex; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: url('public/images/gallery/divers.jpg') center/cover; opacity: 0.3; }
+        .hero-content { position: relative; z-index: 1; max-width: 900px; padding: 0 2rem; }
+        .hero-super { font-size: 1.125rem; font-weight: 600; color: var(--gray); margin-bottom: 1rem; letter-spacing: 0.5px; }
+        .hero h1 { font-size: clamp(4rem, 10vw, 7rem); font-weight: 700; line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-tag { font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 400; color: var(--gray); margin-bottom: 2rem; }
+
+        /* WHO */
+        .who { background: var(--white); padding: 5rem 4rem; display: flex; gap: 4rem; }
+        .who-left { flex: 1; }
+        .who-right { flex: 1; position: relative; }
+        .who-img { width: 100%; height: 600px; object-fit: cover; border-radius: 1.5rem; }
+        .label { font-size: 0.875rem; font-weight: 600; color: var(--blue); margin-bottom: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase; }
+        .title { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; margin-bottom: 2rem; letter-spacing: -0.01em; }
+        .who p { font-size: 1.125rem; line-height: 1.7; color: var(--black); margin-bottom: 1.25rem; font-weight: 400; }
+        .who strong { font-weight: 700; color: var(--blue); }
+        .who-aim { margin-top: 2rem; padding: 2rem; background: var(--light-gray); border-radius: 1rem; }
+        .who-aim h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
+        .who-aim p { font-size: 1.125rem; line-height: 1.7; }
+
+        /* TIMELINE */
+        .timeline { background: var(--black); color: var(--white); padding: 5rem 4rem; overflow-y: auto; }
+        .timeline-items { display: flex; flex-direction: column; gap: 3rem; margin-top: 3rem; }
+        .timeline-item { display: grid; grid-template-columns: 120px 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .timeline-item:last-child { border-bottom: none; }
+        .timeline-year { font-size: 3rem; font-weight: 700; color: var(--blue); }
+        .timeline-content h3 { font-size: 1.75rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .timeline-content p { font-size: 1.125rem; color: var(--gray); line-height: 1.7; }
+
+        /* RIPPLE */
+        .ripple { background: linear-gradient(135deg, #0071e3 0%, #005bb5 100%); color: var(--white); display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem; position: relative; overflow: hidden; }
+        .ripple::before { content: ''; position: absolute; inset: 0; background: url('public/images/gallery/oceanculturelife.jpg') center/cover; opacity: 0.15; }
+        .ripple-content { position: relative; z-index: 1; }
+        .ripple-big { font-size: clamp(8rem, 15vw, 12rem); font-weight: 800; line-height: 1; margin: 2rem 0; }
+        .ripple-desc { font-size: 1.5rem; font-weight: 300; margin-bottom: 4rem; letter-spacing: 2px; }
+        .ripple-stats { display: flex; gap: 5rem; justify-content: center; }
+        .ripple-stat { text-align: center; }
+        .ripple-stat .n { font-size: 3.5rem; font-weight: 700; line-height: 1; }
+        .ripple-stat .l { font-size: 0.875rem; color: rgba(255,255,255,0.7); margin-top: 0.75rem; font-weight: 500; letter-spacing: 1px; }
+
+        /* KCWA */
+        .kcwa { background: var(--white); padding: 5rem 4rem; }
+        .kcwa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; margin-bottom: 3rem; }
+        .kcwa-img { width: 100%; height: 300px; object-fit: cover; border-radius: 1rem; }
+        .kcwa-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 3rem; }
+        .kcwa-stat { background: var(--light-gray); padding: 2.5rem 2rem; border-radius: 1rem; text-align: center; }
+        .kcwa-stat .n { font-size: 3.5rem; font-weight: 700; color: var(--blue); line-height: 1; }
+        .kcwa-stat .l { font-size: 0.875rem; color: var(--gray); margin-top: 0.75rem; font-weight: 500; }
+        .kcwa-content { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .kcwa-box { padding: 2rem; background: var(--light-gray); border-radius: 1rem; }
+        .kcwa-box h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.25rem; }
+        .kcwa-box ul { list-style: none; padding: 0; }
+        .kcwa-box li { color: var(--black); margin-bottom: 0.875rem; padding-left: 1.5rem; position: relative; line-height: 1.6; font-size: 1.063rem; }
+        .kcwa-box li::before { content: "•"; position: absolute; left: 0; color: var(--blue); font-weight: 700; font-size: 1.5rem; }
+
+        /* KBMU */
+        .kbmu { background: var(--black); color: var(--white); padding: 5rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .kbmu-left { }
+        .kbmu-img { width: 100%; height: 500px; object-fit: cover; border-radius: 1rem; margin-top: 2rem; }
+        .kbmu-right { display: flex; flex-direction: column; gap: 2rem; }
+        .kbmu-box { padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 1rem; border: 1px solid rgba(255,255,255,0.1); }
+        .kbmu-box h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.25rem; color: var(--white); }
+        .kbmu-box ul { list-style: none; padding: 0; }
+        .kbmu-box li { color: var(--gray); margin-bottom: 0.875rem; padding-left: 1.5rem; position: relative; line-height: 1.6; font-size: 1.063rem; }
+        .kbmu-box li::before { content: "•"; position: absolute; left: 0; color: var(--blue); font-weight: 700; font-size: 1.5rem; }
+
+        /* NETWORK */
+        .network { background: var(--white); padding: 5rem 4rem; display: flex; flex-direction: column; align-items: center; }
+        .network-img { width: 100%; max-width: 900px; height: 400px; object-fit: cover; border-radius: 1.5rem; margin: 3rem 0; }
+        .network-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; width: 100%; max-width: 900px; }
+        .network-stat { background: var(--light-gray); padding: 3rem 2rem; border-radius: 1rem; text-align: center; }
+        .network-stat .n { font-size: 4rem; font-weight: 700; color: var(--blue); line-height: 1; }
+        .network-stat .l { font-size: 0.875rem; color: var(--gray); margin-top: 1rem; font-weight: 500; }
+
+        /* CORAL */
+        .coral { background: var(--black); color: var(--white); padding: 5rem 4rem; }
+        .coral-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
+        .coral-img { width: 100%; height: 500px; object-fit: cover; border-radius: 1rem; }
+        .coral-content { }
+        .coral-hero { font-size: clamp(6rem, 12vw, 9rem); font-weight: 800; color: var(--blue); line-height: 1; margin-bottom: 2rem; }
+        .coral-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+        .coral-stat { background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 1rem; text-align: center; }
+        .coral-stat .n { font-size: 3rem; font-weight: 700; color: var(--blue); line-height: 1; }
+        .coral-stat .l { font-size: 0.875rem; color: var(--gray); margin-top: 0.75rem; }
+        .coral-list h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.25rem; }
+        .coral-list ul { list-style: none; padding: 0; }
+        .coral-list li { color: var(--gray); margin-bottom: 0.875rem; padding-left: 1.5rem; position: relative; line-height: 1.6; }
+        .coral-list li::before { content: "•"; position: absolute; left: 0; color: var(--blue); font-weight: 700; font-size: 1.5rem; }
+
+        /* PERMA */
+        .perma { background: var(--white); padding: 5rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .perma-left { }
+        .perma-img { width: 100%; height: 400px; object-fit: cover; border-radius: 1rem; margin-top: 2rem; }
+        .perma-right { display: flex; flex-direction: column; justify-content: center; }
+        .perma h3 { font-size: 1.75rem; font-weight: 600; margin-bottom: 1rem; margin-top: 2rem; }
+        .perma p { font-size: 1.125rem; line-height: 1.7; color: var(--black); }
+        .perma-big { font-size: clamp(8rem, 15vw, 11rem); font-weight: 800; color: var(--blue); line-height: 1; margin: 2rem 0 1rem; }
+        .perma-label { font-size: 1.25rem; color: var(--gray); font-weight: 500; margin-bottom: 2rem; }
+        .perma ul { list-style: none; padding: 0; }
+        .perma li { color: var(--black); margin-bottom: 0.875rem; padding-left: 1.5rem; position: relative; line-height: 1.6; }
+        .perma li::before { content: "•"; position: absolute; left: 0; color: var(--blue); font-weight: 700; font-size: 1.5rem; }
+
+        /* SCHOOL */
+        .school { background: var(--black); color: var(--white); padding: 5rem 4rem; display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; }
+        .school-programs { }
+        .school-img { width: 100%; height: 300px; object-fit: cover; border-radius: 1rem; margin-top: 2rem; }
+        .school h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.25rem; margin-top: 2rem; }
+        .school ul { list-style: none; padding: 0; }
+        .school li { color: var(--gray); margin-bottom: 0.875rem; padding-left: 1.5rem; position: relative; line-height: 1.6; }
+        .school li::before { content: "•"; position: absolute; left: 0; color: var(--blue); font-weight: 700; font-size: 1.5rem; }
+        .school-stat { background: rgba(255,255,255,0.05); border-radius: 1rem; padding: 3rem; text-align: center; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+        .school-stat .n { font-size: clamp(5rem, 10vw, 7rem); font-weight: 800; color: var(--blue); line-height: 1; }
+        .school-stat .l { font-size: 1rem; color: var(--gray); margin-top: 1.5rem; font-weight: 500; }
+
+        /* PLASTIC */
+        .plastic { background: var(--white); padding: 5rem 4rem; }
+        .plastic-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-top: 3rem; margin-bottom: 3rem; }
+        .plastic-img { width: 100%; height: 250px; object-fit: cover; border-radius: 1rem; }
+        .plastic-content { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem; }
+        .plastic-box { padding: 2rem; background: var(--light-gray); border-radius: 1rem; }
+        .plastic-box h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.25rem; }
+        .plastic-box ul { list-style: none; padding: 0; }
+        .plastic-box li { color: var(--black); margin-bottom: 0.875rem; padding-left: 1.5rem; position: relative; line-height: 1.6; }
+        .plastic-box li::before { content: "•"; position: absolute; left: 0; color: var(--blue); font-weight: 700; font-size: 1.5rem; }
+        .plastic-stat { background: var(--blue); color: var(--white); padding: 3rem; border-radius: 1rem; text-align: center; }
+        .plastic-stat .n { font-size: 5rem; font-weight: 800; line-height: 1; }
+        .plastic-stat .l { font-size: 1.125rem; margin-top: 1rem; font-weight: 500; }
+
+        /* FUTURE */
+        .future { background: var(--black); color: var(--white); padding: 5rem 4rem; }
+        .future-blocks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 3rem; }
+        .future-block { background: rgba(255,255,255,0.05); border-radius: 1rem; padding: 3rem; transition: transform 0.3s ease; border: 1px solid rgba(255,255,255,0.1); }
+        .future-block:hover { transform: translateY(-8px); }
+        .future-block h3 { font-size: 1.75rem; font-weight: 600; margin-bottom: 1.25rem; color: var(--blue); }
+        .future-block p { color: var(--gray); line-height: 1.7; font-size: 1.063rem; }
+
+        /* RECOG */
+        .recog { background: var(--black); color: var(--white); padding: 5rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .recog-col h3 { font-size: 2rem; font-weight: 600; margin-bottom: 2rem; color: var(--blue); }
+        .recog-item { padding: 1.5rem; margin-bottom: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 0.75rem; transition: all 0.3s; border: 1px solid rgba(255,255,255,0.1); }
+        .recog-item:hover { background: rgba(255,255,255,0.08); transform: translateX(8px); }
+        .recog-year { font-size: 0.875rem; color: var(--blue); margin-bottom: 0.5rem; font-weight: 600; }
+        .recog-name { font-size: 1.25rem; font-weight: 600; color: var(--white); }
+
+        /* NAV */
+        .nav { position: fixed; bottom: 2rem; right: 2rem; display: flex; gap: 0.75rem; z-index: 1000; }
+        .nav-btn { width: 48px; height: 48px; background: rgba(0,0,0,0.8); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; color: white; font-size: 1.25rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+        .nav-btn:hover { background: var(--blue); transform: scale(1.1); }
+        .counter { position: fixed; top: 2rem; right: 2rem; font-size: 0.875rem; font-weight: 500; color: var(--gray); z-index: 1000; background: rgba(0,0,0,0.8); backdrop-filter: blur(20px); padding: 0.75rem 1.25rem; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.1); }
+        .counter #current { color: var(--white); font-weight: 700; }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+
+        <!-- 1: HERO -->
+        <div class="slide hero active">
+            <div class="hero-content">
+                <div class="hero-super">Kenyan NGO • Marine Conservation</div>
+                <h1>Oceans Alive</h1>
+                <p class="hero-tag">When Communities Lead,<br>Oceans Thrive</p>
+            </div>
+        </div>
+
+        <!-- 2: WHO WE ARE -->
+        <div class="slide who">
+            <div class="who-left">
+                <div class="label">Foundation</div>
+                <h2 class="title">Our Story</h2>
+                <p>Oceans Alive pre-history originates from <strong>2003</strong>, when founders and the local artisanal traditional fisheries community took action to close an area from fishing and established a community coastal conservation area (CCA) locally known as a <strong>'Tengefu'</strong>.</p>
+                <p>This area is recognized as a community driven marine protected area (MPA) or globally as a <strong>Locally Managed Marine Area (LMMA)</strong>.</p>
+                <p>The founders experience resulted in a demand to share the knowledge such that in <strong>2016</strong>, they created an NGO, called <strong>Oceans Alive (OA)</strong>.</p>
+                <div class="who-aim">
+                    <h3>Strategic Aims</h3>
+                    <p>Act as a conduit to share the LMMA experience and tools, offering technical support to upscale to the 18 neighbouring fishing communities registered as Beach Management Units (BMU).</p>
+                </div>
+            </div>
+            <div class="who-right">
+                <img src="public/images/gallery/communities.jpg" alt="Community" class="who-img">
+            </div>
+        </div>
+
+        <!-- 3: TIMELINE -->
+        <div class="slide timeline">
+            <div class="label">Journey</div>
+            <h2 class="title">20 Years</h2>
+            <div class="timeline-items">
+                <div class="timeline-item">
+                    <div class="timeline-year">2003</div>
+                    <div class="timeline-content">
+                        <h3>KCWA CBO Formed</h3>
+                        <p>Founders concerned at overfishing formed Kuruwitu Conservation and Welfare Association</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2006</div>
+                    <div class="timeline-content">
+                        <h3>First LMMA in Kenya</h3>
+                        <p>Tengefu sanctuary established - 30 hectares protected</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2016</div>
+                    <div class="timeline-content">
+                        <h3>NGO Registration</h3>
+                        <p>Oceans Alive registered to scale impact across region</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <h3>First CMA Plan</h3>
+                        <p>Kenya's first Co-Management Area plan developed</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h3>County Network</h3>
+                        <p>18 BMUs united in first county network</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4: RIPPLE -->
+        <div class="slide ripple">
+            <div class="ripple-content">
+                <div class="label" style="color: white;">Scale</div>
+                <div class="ripple-big">883×</div>
+                <div class="ripple-desc">EXPANSION</div>
+                <div class="ripple-stats">
+                    <div class="ripple-stat">
+                        <div class="n">30 ha</div>
+                        <div class="l">KCWA</div>
+                    </div>
+                    <div class="ripple-stat">
+                        <div class="n">12K ha</div>
+                        <div class="l">KBMU</div>
+                    </div>
+                    <div class="ripple-stat">
+                        <div class="n">26.5K+</div>
+                        <div class="l">NETWORK</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5: KCWA -->
+        <div class="slide kcwa">
+            <div class="label">Proof</div>
+            <h2 class="title">KCWA Sanctuary</h2>
+            <div class="kcwa-grid">
+                <img src="public/images/gallery/divers.jpg" alt="Sanctuary" class="kcwa-img">
+                <img src="public/images/gallery/ACROPORA.jpg" alt="Coral" class="kcwa-img">
+            </div>
+            <div class="kcwa-stats">
+                <div class="kcwa-stat">
+                    <div class="n">400%</div>
+                    <div class="l">Biomass</div>
+                </div>
+                <div class="kcwa-stat">
+                    <div class="n">30%</div>
+                    <div class="l">Reef</div>
+                </div>
+                <div class="kcwa-stat">
+                    <div class="n">17%</div>
+                    <div class="l">Seagrass</div>
+                </div>
+                <div class="kcwa-stat">
+                    <div class="n">135%</div>
+                    <div class="l">Spillover</div>
+                </div>
+            </div>
+            <div class="kcwa-content">
+                <div class="kcwa-box">
+                    <h3>Conservation Impact</h3>
+                    <ul>
+                        <li>30-hectare no-take zone</li>
+                        <li>WCS data confirms recovery</li>
+                        <li>First community MPA in Kenya</li>
+                    </ul>
+                </div>
+                <div class="kcwa-box">
+                    <h3>Economic Benefits</h3>
+                    <ul>
+                        <li>USD 10K-20K/year tourism</li>
+                        <li>300 households benefiting</li>
+                        <li>Sustainable livelihoods</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6: KBMU -->
+        <div class="slide kbmu">
+            <div class="kbmu-left">
+                <div class="label" style="color: var(--blue);">Governance</div>
+                <h2 class="title" style="color: white;">KBMU Profile</h2>
+                <img src="public/images/gallery/BMUmeeting.jpg" alt="BMU Meeting" class="kbmu-img">
+            </div>
+            <div class="kbmu-right">
+                <div class="kbmu-box">
+                    <h3>Kenya Firsts</h3>
+                    <ul>
+                        <li>First officially endorsed CMA</li>
+                        <li>First 6-step BMU toolkit</li>
+                        <li>First IUCN SAGE analysis</li>
+                        <li>300 members managing 12,000 ha</li>
+                        <li>500 households benefiting</li>
+                    </ul>
+                </div>
+                <div class="kbmu-box">
+                    <h3>Scientific Partnership</h3>
+                    <ul>
+                        <li>CAS & FS surveys ongoing</li>
+                        <li>WCS data partnership</li>
+                        <li>IUCN/EU BIOPAMA award</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7: NETWORK -->
+        <div class="slide network">
+            <div class="label">Network</div>
+            <h2 class="title">County BMU Network</h2>
+            <img src="public/images/gallery/kamakukijcma.jpg" alt="Network" class="network-img">
+            <div class="network-stats">
+                <div class="network-stat">
+                    <div class="n">18</div>
+                    <div class="l">BMUs United</div>
+                </div>
+                <div class="network-stat">
+                    <div class="n">26.5K+</div>
+                    <div class="l">Hectares</div>
+                </div>
+                <div class="network-stat">
+                    <div class="n">7,000+</div>
+                    <div class="l">Households</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8: CORAL -->
+        <div class="slide coral">
+            <div class="label" style="color: var(--blue);">Restoration</div>
+            <h2 class="title" style="color: white;">Coral Restoration</h2>
+            <div class="coral-grid">
+                <img src="public/images/gallery/coralteaching.jpg" alt="Coral" class="coral-img">
+                <div class="coral-content">
+                    <div class="coral-hero">25K+</div>
+                    <div class="coral-mini">
+                        <div class="coral-stat">
+                            <div class="n">32</div>
+                            <div class="l">Nurseries</div>
+                        </div>
+                        <div class="coral-stat">
+                            <div class="n">457</div>
+                            <div class="l">Reefs</div>
+                        </div>
+                    </div>
+                    <div class="coral-list">
+                        <h3>Impact</h3>
+                        <ul>
+                            <li>39 hectares rehabilitated</li>
+                            <li>80 coral reef stars planted</li>
+                            <li>30 members trained (50% women)</li>
+                            <li>4,000 turtle hatchlings</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9: PERMACULTURE -->
+        <div class="slide perma">
+            <div class="perma-left">
+                <div class="label">Nutrition</div>
+                <h2 class="title">Permaculture</h2>
+                <h3>Challenge</h3>
+                <p>Kilifi coastal communities have lowest nutrition levels. Climate-smart solutions needed.</p>
+                <h3>Methods</h3>
+                <p>Sack gardens, vertical gardens, spiral gardens, compost making, demo farm</p>
+                <img src="public/images/gallery/farmers.jpg" alt="Farmers" class="perma-img">
+            </div>
+            <div class="perma-right">
+                <div class="perma-big">135</div>
+                <div class="perma-label">Households</div>
+                <ul>
+                    <li>Green leafy vegetables boost nutrition</li>
+                    <li>Supplemental income from surplus</li>
+                    <li>Water-efficient systems</li>
+                    <li>Toolkit published</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 10: SCHOOL -->
+        <div class="slide school">
+            <div class="school-programs">
+                <div class="label" style="color: var(--blue);">Education</div>
+                <h2 class="title" style="color: white;">School Program</h2>
+                <h3>Programs Delivered</h3>
+                <ul>
+                    <li>50 schools: Ecology films (DSTV Team Sayari)</li>
+                    <li>50 schools: Coral restoration intro</li>
+                    <li>8 schools: Marine biology deep-dive</li>
+                    <li>6 BMUs: Shark/ray conservation</li>
+                    <li>300 international students</li>
+                    <li>13 ALU students</li>
+                    <li>15 filmmakers trained</li>
+                    <li>10 films produced</li>
+                    <li>10 athlete ambassadors</li>
+                </ul>
+                <img src="public/images/gallery/kids.jpg" alt="School" class="school-img">
+            </div>
+            <div class="school-stat">
+                <div class="n">7,680+</div>
+                <div class="l">Total Learners</div>
+            </div>
+        </div>
+
+        <!-- 11: PLASTIC -->
+        <div class="slide plastic">
+            <div class="label">Clean Oceans</div>
+            <h2 class="title">Mama Karanga</h2>
+            <div class="plastic-grid">
+                <img src="public/images/gallery/trashforcash.jpg" alt="Trash" class="plastic-img">
+                <img src="public/images/gallery/trashforcash2.jpg" alt="Trash2" class="plastic-img">
+                <img src="public/images/gallery/trashforcash3.jpg" alt="Trash3" class="plastic-img">
+            </div>
+            <div class="plastic-content">
+                <div class="plastic-box">
+                    <h3>Program Overview</h3>
+                    <ul>
+                        <li>2024: Program launched</li>
+                        <li>Beach & village clean-ups</li>
+                        <li>Eco-world partnership</li>
+                        <li>Women-led initiative</li>
+                    </ul>
+                </div>
+                <div class="plastic-box">
+                    <h3>Economic Model</h3>
+                    <ul>
+                        <li>VSLA savings scheme</li>
+                        <li>Pooled community investment</li>
+                        <li>Dual benefit: clean + income</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="plastic-stat">
+                <div class="n">19</div>
+                <div class="l">Households Benefiting</div>
+            </div>
+        </div>
+
+        <!-- 12: FUTURE -->
+        <div class="slide future">
+            <div class="label" style="color: var(--blue);">Future</div>
+            <h2 class="title" style="color: white;">Next Chapter</h2>
+            <div class="future-blocks">
+                <div class="future-block">
+                    <h3>Seaweed Farming</h3>
+                    <p>Sustainable farming to diversify livelihoods and restore ecosystems</p>
+                </div>
+                <div class="future-block">
+                    <h3>Fishermen Academy</h3>
+                    <p>Training center for sustainable practices and marine stewardship</p>
+                </div>
+                <div class="future-block">
+                    <h3>Mangrove Nursery</h3>
+                    <p>Large-scale restoration for habitat and climate resilience</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 13: RECOGNITION -->
+        <div class="slide recog">
+            <div class="recog-col">
+                <div class="label" style="color: var(--blue);">Recognition</div>
+                <h3>IUCN Awards</h3>
+                <div class="recog-item">
+                    <div class="recog-year">2017</div>
+                    <div class="recog-name">IUCN Equator Award</div>
+                </div>
+                <div class="recog-item">
+                    <div class="recog-year">2022</div>
+                    <div class="recog-name">Blue Champions Award</div>
+                </div>
+                <div class="recog-item">
+                    <div class="recog-year">—</div>
+                    <div class="recog-name">Panorama Featured Solution</div>
+                </div>
+                <div class="recog-item">
+                    <div class="recog-year">—</div>
+                    <div class="recog-name">Green Listing Recognition</div>
+                </div>
+                <div class="recog-item">
+                    <div class="recog-year">—</div>
+                    <div class="recog-name">Blue Wall Initiative</div>
+                </div>
+            </div>
+            <div class="recog-col">
+                <h3>Conferences</h3>
+                <div class="recog-item">
+                    <div class="recog-year">2021</div>
+                    <div class="recog-name">Marseille Conference</div>
+                </div>
+                <div class="recog-item">
+                    <div class="recog-year">2022</div>
+                    <div class="recog-name">APAC Conference</div>
+                </div>
+                <div class="recog-item">
+                    <div class="recog-year">2022</div>
+                    <div class="recog-name">Monaco Conference</div>
+                </div>
+                <div class="recog-item">
+                    <div class="recog-year">2022</div>
+                    <div class="recog-name">Blue Champions Event</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 14: CLOSING -->
+        <div class="slide hero">
+            <div style="text-align: center; max-width: 900px; padding: 0 2rem; position: relative; z-index: 1;">
+                <h1>Join the<br>Ocean Revolution</h1>
+                <p style="font-size: clamp(1.5rem, 3vw, 2rem); color: var(--gray); margin-bottom: 3rem;">Partner with us to scale community-led conservation</p>
+                <a href="http://www.oceansalive.org" style="font-size: 1.5rem; color: var(--blue); font-weight: 600; text-decoration: none; padding: 1rem 2rem; background: rgba(255,255,255,0.1); border-radius: 2rem; display: inline-block; border: 1px solid rgba(255,255,255,0.2);">www.oceansalive.org</a>
+                <p style="font-size: 1rem; color: var(--gray); margin-top: 2rem;">Kilifi County, Kenya</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="nav">
+        <button class="nav-btn" onclick="prevSlide()">←</button>
+        <button class="nav-btn" onclick="nextSlide()">→</button>
+    </div>
+
+    <div class="counter"><span id="current">01</span> / 14</div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('current').textContent = String(currentSlide + 1).padStart(2, '0');
+        }
+
+        function nextSlide() { showSlide(currentSlide + 1); }
+        function prevSlide() { showSlide(currentSlide - 1); }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
+            if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
+        });
+
+        let touchStartX = 0;
+        document.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; });
+        document.addEventListener('touchend', e => {
+            let touchEndX = e.changedTouches[0].screenX;
+            if (touchEndX < touchStartX - 50) nextSlide();
+            if (touchEndX > touchStartX + 50) prevSlide();
+        });
+    </script>
+</body>
+</html>

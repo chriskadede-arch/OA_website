@@ -77,13 +77,14 @@ export default function Footer() {
           <div>
             {/* Logo */}
             <Link href="/" className="group inline-block mb-6">
-              <div className="overflow-hidden rounded-2xl ring-1 ring-ocean-turquoise/30 shadow-[0_0_40px_rgba(46,191,209,0.18),0_6px_24px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_55px_rgba(46,191,209,0.30)] transition-shadow duration-500">
+              <div className="overflow-hidden rounded-2xl bg-white p-3 ring-1 ring-ocean-turquoise/30 shadow-[0_0_40px_rgba(46,191,209,0.18),0_6px_24px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_55px_rgba(46,191,209,0.30)] transition-shadow duration-500">
                 <Image
                   src="/logo.png"
                   alt="Oceans Alive Foundation"
                   width={960}
                   height={540}
-                  className="h-16 w-auto object-contain block"
+                  className="h-14 w-auto object-contain block"
+                  priority
                 />
               </div>
             </Link>
@@ -184,9 +185,22 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-white/40">
-            © {currentYear} {SITE_NAME}. Registered Not-for-Profit Trust, Kenya. All rights reserved. · Protecting Oceans Since 2003
-          </p>
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <p className="text-xs text-white/40">
+              © {currentYear} {SITE_NAME}. Registered Not-for-Profit Trust, Kenya. All rights reserved. · Protecting Oceans Since 2003
+            </p>
+            <p className="text-xs text-white/30">
+              Website built by{' '}
+              <a
+                href="https://www.linkedin.com/in/chrisadede/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ocean-turquoise hover:text-white transition-colors font-semibold"
+              >
+                Ades Media
+              </a>
+            </p>
+          </div>
           <div className="flex gap-5 text-xs text-white/40">
             <Link href="#" className="hover:text-ocean-turquoise transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-ocean-turquoise transition-colors">Terms of Service</Link>

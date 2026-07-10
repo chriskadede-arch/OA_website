@@ -7,6 +7,9 @@ node_modules/
 .next/
 out/
 build/
+godaddy-upload/
+dist/
+dist_build/
 *.tsbuildinfo
 
 # Environment variables

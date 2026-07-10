@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Image Test</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f0f0f0; }
+        .test { background: white; padding: 20px; margin: 10px 0; border-radius: 8px; }
+        img { max-width: 100%; border: 2px solid #ddd; margin: 10px 0; }
+        .error { color: red; font-weight: bold; }
+        .success { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Image Path Test</h1>
+    <p>Current page location: <span id="location"></span></p>
+
+    <div class="test">
+        <h2>Test 1: Logo</h2>
+        <p>Path: public/logo.png</p>
+        <img src="public/logo.png"
+             onload="this.nextElementSibling.className='success'; this.nextElementSibling.textContent='✓ Image loaded successfully!'"
+             onerror="this.nextElementSibling.className='error'; this.nextElementSibling.textContent='✗ Failed to load. File not found or path incorrect.'">
+        <p id="result1">Loading...</p>
+    </div>
+
+    <div class="test">
+        <h2>Test 2: Ocean Image</h2>
+        <p>Path: public/images/gallery/oceanculturelife.jpg</p>
+        <img src="public/images/gallery/oceanculturelife.jpg"
+             onload="this.nextElementSibling.className='success'; this.nextElementSibling.textContent='✓ Image loaded successfully!'"
+             onerror="this.nextElementSibling.className='error'; this.nextElementSibling.textContent='✗ Failed to load. Check if gallery folder exists.'">
+        <p id="result2">Loading...</p>
+    </div>
+
+    <div class="test">
+        <h2>Test 3: Communities Image</h2>
+        <p>Path: public/images/gallery/communities.jpg</p>
+        <img src="public/images/gallery/communities.jpg"
+             onload="this.nextElementSibling.className='success'; this.nextElementSibling.textContent='✓ Image loaded successfully!'"
+             onerror="this.nextElementSibling.className='error'; this.nextElementSibling.textContent='✗ Failed to load.'">
+        <p id="result3">Loading...</p>
+    </div>
+
+    <script>
+        document.getElementById('location').textContent = window.location.href;
+
+        // Log to console for debugging
+        console.log('Page URL:', window.location.href);
+        console.log('Base:', document.baseURI);
+
+        // Check if we can access the file system
+        fetch('public/logo.png')
+            .then(r => console.log('Fetch test: Logo accessible'))
+            .catch(e => console.error('Fetch test failed:', e));
+    </script>
+</body>
+</html>

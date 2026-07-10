@@ -7,13 +7,17 @@ interface SDGRowProps {
   size?: 'sm' | 'md' | 'lg';
   label?: string;
   className?: string;
+  useRealLogos?: boolean;
+  showTooltip?: boolean;
 }
 
 export default function SDGRow({
   sdgs,
   size = 'sm',
   label,
-  className = ''
+  className = '',
+  useRealLogos = false,
+  showTooltip = true
 }: SDGRowProps) {
   if (!sdgs || sdgs.length === 0) return null;
 
@@ -26,7 +30,7 @@ export default function SDGRow({
       )}
       <div className="flex items-center gap-2 flex-wrap">
         {sdgs.map((sdgNumber) => (
-          <SDGBadge key={sdgNumber} number={sdgNumber} size={size} />
+          <SDGBadge key={sdgNumber} number={sdgNumber} size={size} useRealLogo={useRealLogos} showTooltip={showTooltip} />
         ))}
       </div>
     </div>
