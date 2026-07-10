@@ -252,9 +252,9 @@ export const TEAM_MEMBERS = [
   },
   {
     name: 'Nancy Ogega',
-    role: 'Marine Scientist & Ocean Researcher',
+    role: 'Coral Scientific Outreach Officer',
     bio: 'Leads scientific research and marine ecology studies, translating field data into actionable conservation strategies and strengthening the evidence base that guides Oceans Alive\'s work across Kenya\'s coastline.',
-    image: '/images/team/Nancy.png',
+    image: '/images/team/Nancy1.jpeg',
     initials: 'NO',
   },
 ];
