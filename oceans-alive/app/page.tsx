@@ -5,6 +5,8 @@ import SDGRow from '@/components/common/SDGRow';
 import { IMPACT_STATS, TIMELINE } from '@/lib/constants';
 import { PRIMARY_SDGS } from '@/lib/sdg-mapping';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function Home() {
   return (
     <>
@@ -17,7 +19,7 @@ export default function Home() {
           <div className="absolute inset-0 overflow-hidden" style={{ clipPath: 'polygon(0 0, 38% 0, 28% 100%, 0 100%)' }}>
             <div className="absolute inset-0 w-full h-full" style={{ transform: 'translateX(-35%)' }}>
               <img
-                src="/images/P5310100.jpg"
+                src={`${basePath}/images/P5310100.jpg`}
                 alt="Ocean conservation work"
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{
@@ -39,7 +41,7 @@ export default function Home() {
           {/* Image 2 - Center with diagonal on both edges */}
           <div className="absolute inset-0 overflow-hidden" style={{ clipPath: 'polygon(38% 0, 72% 0, 62% 100%, 28% 100%)' }}>
             <img
-              src="/images/divers.jpg"
+              src={`${basePath}/images/divers.jpg`}
               alt="Divers and ocean conservation"
               className="absolute inset-0 w-full h-full object-cover"
               style={{
@@ -57,7 +59,7 @@ export default function Home() {
           {/* Image 3 - Right side with diagonal on left edge - ZOOMED IN for details */}
           <div className="absolute inset-0 overflow-hidden" style={{ clipPath: 'polygon(72% 0, 100% 0, 100% 100%, 62% 100%)' }}>
             <img
-              src="/images/IMG_4955.jpg"
+              src={`${basePath}/images/IMG_4955.jpg`}
               alt="Ocean conservation in Kenya"
               className="absolute inset-0 w-full h-full object-cover"
               style={{
