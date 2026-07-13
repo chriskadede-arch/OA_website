@@ -5,9 +5,11 @@ import SDGRow from '@/components/common/SDGRow';
 import { IMPACT_STATS, TIMELINE } from '@/lib/constants';
 import { PRIMARY_SDGS } from '@/lib/sdg-mapping';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 export default function Home() {
+  // basePath is handled by Next.js config for Image components
+  // For raw img tags, we need to add it manually
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   return (
     <>
       {/* Hero */}

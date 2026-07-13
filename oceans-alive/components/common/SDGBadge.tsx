@@ -56,7 +56,6 @@ export default function SDGBadge({
             width={200}
             height={200}
             className="w-full h-full object-cover"
-            unoptimized
           />
         </div>
       </div>
