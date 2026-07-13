@@ -146,6 +146,13 @@ export const TEAM_MEMBERS = [
     initials: 'TB',
   },
   {
+    name: 'Remmy Safari',
+    role: 'Programme Manager',
+    bio: 'Drives the BMU network and fisheries co-management programmes, supporting Beach Management Units and building governance structures that protect Kenya\'s coastal fisheries long-term.',
+    image: '/images/team/remmy-safari.avif',
+    initials: 'RS',
+  },
+  {
     name: 'Dickson Juma',
     role: 'Community Liaison Officer',
     bio: 'Works directly with coastal communities to strengthen engagement, build trust, and ensure conservation programmes reflect local knowledge and priorities.',
@@ -179,13 +186,6 @@ export const TEAM_MEMBERS = [
     bio: 'Coordinates international partnerships, donor relationships, and programme stakeholder engagement across Kilifi County, keeping OAF\'s projects on track and on mission.',
     image: null,
     initials: 'AM',
-  },
-  {
-    name: 'Remmy Safari',
-    role: 'Programme Manager',
-    bio: 'Drives the BMU network and fisheries co-management programmes, supporting Beach Management Units and building governance structures that protect Kenya\'s coastal fisheries long-term.',
-    image: '/images/team/remmy-safari.avif',
-    initials: 'RS',
   },
   {
     name: 'Katana Ngala',
