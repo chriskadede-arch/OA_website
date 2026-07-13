@@ -149,7 +149,7 @@ export const TEAM_MEMBERS = [
     name: 'Dickson Juma',
     role: 'Community Liaison Officer',
     bio: 'Works directly with coastal communities to strengthen engagement, build trust, and ensure conservation programmes reflect local knowledge and priorities.',
-    image: null,
+    image: '/images/team/dickson-juma.jpeg',
     initials: 'DJ',
   },
   {
