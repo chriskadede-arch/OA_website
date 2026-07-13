@@ -32,13 +32,11 @@ jobs:
         working-directory: oceans-alive
         run: npm ci
 
-      - name: Build static export
+      - name: Build static export for GitHub Pages
         working-directory: oceans-alive
-        env:
-          NEXT_STATIC_EXPORT: '1'
         run: |
           mv app/api /tmp/api-backup || true
-          npm run build
+          npm run build:github
           touch out/.nojekyll
 
       - name: Setup Pages
