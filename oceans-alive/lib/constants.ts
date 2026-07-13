@@ -267,7 +267,7 @@ export const IMPACT_STATS = [
   { label: 'Fish Biomass Increase in CCA', value: '400%' },
   { label: 'CCAs Inspired Across Kenya', value: '30+' },
   { label: 'Households Benefiting from Programs', value: '7,000+' },
-  { label: 'Women in Income Programs', value: '735+' },
+  { label: 'Women in Income Programs', value: '135+' },
 ];
 
 // OAF Timeline - Complete 20-Year Journey (2003-2025)
@@ -507,7 +507,7 @@ export const PARTNERS = [
   {
     name: 'Coral Guardian',
     role: 'Coral Restoration Partner',
-    logo: 'https://www.coralguardian.org/app/themes/coralguardian-theme/library/img/logo-coral-guardian.svg',
+    logo: '/images/partners/coral-guardian.png',
   },
   {
     name: 'Canon Central & North Africa',
@@ -515,44 +515,139 @@ export const PARTNERS = [
     logo: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/Canon_logo.svg',
   },
   {
-    name: 'Platcorp Foundation',
-    role: 'Funding Partner',
-    logo: 'https://www.platcorpgroup.com/media/ahank4bv/plat-foundation-logo.png',
-  },
-  {
-    name: 'Athlete Media Group',
-    role: 'Media Partner',
-    logo: null,
-  },
-  {
-    name: 'UK Government FCDO',
-    role: 'Institutional Funder',
-    logo: null,
-  },
-  {
-    name: 'Coral Reef Care',
-    role: 'Reef Restoration Partner',
-    logo: 'https://www.coralreefcare.com/img/coralreefcarelogo.svg',
-  },
-  {
-    name: 'UNDP Kenya',
-    role: 'Equator Prize · Development Partner',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/9/9f/UNDP_logo.svg',
-  },
-  {
     name: 'Kenya Fisheries Service',
     role: 'Government Partner',
-    logo: null,
+    logo: '/images/partners/kenya-fisheries.png',
   },
   {
     name: 'Kilifi County Government',
     role: 'County Government Partner',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Seal_of_Kilifi_County.png',
+    logo: '/images/partners/Kilifi County Government.png',
   },
   {
     name: 'IUCN',
     role: 'International Conservation Partner',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/IUCN_logo.svg',
+    logo: '/images/partners/IUCN.png',
+  },
+  {
+    name: 'UNDP',
+    role: 'Development Partner',
+    logo: '/images/partners/UNDP.png',
+  },
+  {
+    name: 'USAID',
+    role: 'Development Partner',
+    logo: '/images/partners/USAID.png',
+  },
+  {
+    name: 'Kenya Wildlife Service',
+    role: 'Conservation Partner',
+    logo: '/images/partners/Kenya Wildlife Service KWS.png',
+  },
+  {
+    name: 'National Geographic',
+    role: 'Media Partner',
+    logo: '/images/partners/National Geographic.png',
+  },
+  {
+    name: 'IFAW',
+    role: 'Animal Welfare Partner',
+    logo: '/images/partners/IFAW International Fund for Animal Welfare.png',
+  },
+  {
+    name: 'Fauna & Flora International',
+    role: 'Conservation Partner',
+    logo: '/images/partners/Fauna and Flora International.png',
+  },
+  {
+    name: 'WCS',
+    role: 'Wildlife Conservation Partner',
+    logo: '/images/partners/WCS Wildlife Conservation Society.png',
+  },
+  {
+    name: 'The Ocean Conservation Trust',
+    role: 'Ocean Conservation Partner',
+    logo: '/images/partners/The Ocean Conservation Trust.png',
+  },
+  {
+    name: 'The Ocean Decade',
+    role: 'UN Ocean Partner',
+    logo: '/images/partners/The Ocean Decade UN.png',
+  },
+  {
+    name: 'Seas4Life',
+    role: 'Ocean Advocacy Partner',
+    logo: '/images/partners/Seas4Life.png',
+  },
+  {
+    name: 'The Conscious Travel Foundation',
+    role: 'Sustainable Tourism Partner',
+    logo: '/images/partners/The Conscious Travel Foundation.png',
+  },
+  {
+    name: 'Saruni Basecamp',
+    role: 'Tourism Partner',
+    logo: '/images/partners/saruni.png',
+  },
+  {
+    name: 'Vipingo Ridge',
+    role: 'Local Supporter',
+    logo: '/images/partners/vipingo-ridge.png',
+  },
+  {
+    name: 'The Leap',
+    role: 'Community Supporter',
+    logo: '/images/partners/the-leap.svg',
+  },
+  {
+    name: 'Ocean Eyes',
+    role: 'Marine Conservation Partner',
+    logo: '/images/partners/ocean-eyes.jpg',
+  },
+  {
+    name: 'Oceans 5',
+    role: 'Ocean Conservation Funder',
+    logo: '/images/partners/oceans5.jpg',
+  },
+  {
+    name: 'DEFRA',
+    role: 'UK Government Partner',
+    logo: '/images/partners/defra.jpg',
+  },
+  {
+    name: 'Platinum Credit',
+    role: 'Financial Partner',
+    logo: '/images/partners/Platinum Credit.png',
+  },
+  {
+    name: 'DSTV',
+    role: 'Media Partner',
+    logo: '/images/partners/DSTV.png',
+  },
+  {
+    name: 'Downe House School',
+    role: 'Education Partner',
+    logo: '/images/partners/Downe House School.png',
+  },
+  {
+    name: 'The Habitats Trust Kenya',
+    role: 'Conservation Partner',
+    logo: '/images/partners/The Habitats Trust Kenya.png',
+  },
+  {
+    name: 'Wildlife Direct',
+    role: 'Wildlife Conservation Partner',
+    logo: '/images/partners/Wildlife Direct.png',
+  },
+  {
+    name: 'Ocean Sole Kenya',
+    role: 'Upcycling Partner',
+    logo: '/images/partners/Ocean Sole Kenya.png',
+  },
+  {
+    name: 'Kuruwitu Conservation & Welfare CBO',
+    role: 'Community Partner',
+    logo: '/images/partners/Kuruwitu Conservation and Welfare CBO.png',
   },
 ];
 

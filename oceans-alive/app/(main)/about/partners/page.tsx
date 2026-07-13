@@ -127,36 +127,35 @@ export default function PartnersPage() {
       {/* ── Creative Partner Mosaic (Bento Grid) ─────────────────────────────── */}
       <section className="bg-gray-50 py-16 border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4">
+          {/* First Row: Government (left) + Current Donors (center) + Supporters (right) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mb-4">
 
-            {/* Government Partners - Large Featured Block */}
-            <div className="lg:col-span-4">
-              <div className={`h-full rounded-2xl bg-gradient-to-br ${CATEGORIES[0].color} p-6 relative overflow-hidden`}>
-                <div className="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-white/5" />
-                <span className="text-[10px] font-bold uppercase tracking-widest text-white/50 mb-4 block">
+            {/* Government Partners - Compact Left Column */}
+            <div className="lg:col-span-3">
+              <div className={`h-full rounded-2xl bg-gradient-to-br ${CATEGORIES[0].color} p-4 relative overflow-hidden`}>
+                <div className="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-white/5" />
+                <span className="text-[9px] font-bold uppercase tracking-widest text-white/50 mb-3 block">
                   {CATEGORIES[0].label}
                 </span>
                 <div className="space-y-2">
                   {PARTNER_ORGS.filter(p => p.category === 'government').map((partner) => (
                     <div key={partner.name}>
                       {partner.link ? (
-                        <Link href={partner.link} className="group block p-4 rounded-xl bg-white hover:bg-gray-50 border border-gray-200 transition-all">
-                          <div className="flex items-center gap-4">
-                            <PartnerLogo name={partner.name} domain={partner.domain} logoPath={partner.logoPath} size="lg" />
+                        <Link href={partner.link} className="group block p-3 rounded-lg bg-white hover:bg-gray-50 border border-gray-200 transition-all">
+                          <div className="flex items-center gap-2">
+                            <PartnerLogo name={partner.name} domain={partner.domain} logoPath={partner.logoPath} size="md" />
                             <div className="flex-1 min-w-0">
-                              <h4 className="text-xs font-bold text-ocean-midnight mb-1 leading-tight">{partner.name}</h4>
-                              <p className="text-[9px] text-gray-500 leading-snug line-clamp-1">{partner.role}</p>
-                              <span className="text-[8px] text-ocean-turquoise font-bold mt-1 opacity-0 group-hover:opacity-100 transition-opacity">View →</span>
+                              <h4 className="text-[10px] font-bold text-ocean-midnight leading-tight line-clamp-1">{partner.name}</h4>
+                              <span className="text-[8px] text-ocean-turquoise font-bold opacity-0 group-hover:opacity-100 transition-opacity">View →</span>
                             </div>
                           </div>
                         </Link>
                       ) : (
-                        <div className="p-4 rounded-xl bg-white border border-gray-200">
-                          <div className="flex items-center gap-4">
-                            <PartnerLogo name={partner.name} domain={partner.domain} logoPath={partner.logoPath} size="lg" />
+                        <div className="p-3 rounded-lg bg-white border border-gray-200">
+                          <div className="flex items-center gap-2">
+                            <PartnerLogo name={partner.name} domain={partner.domain} logoPath={partner.logoPath} size="md" />
                             <div className="flex-1 min-w-0">
-                              <h4 className="text-xs font-bold text-ocean-midnight mb-1 leading-tight">{partner.name}</h4>
-                              <p className="text-[9px] text-gray-500 leading-snug line-clamp-1">{partner.role}</p>
+                              <h4 className="text-[10px] font-bold text-ocean-midnight leading-tight line-clamp-1">{partner.name}</h4>
                             </div>
                           </div>
                         </div>
@@ -167,61 +166,21 @@ export default function PartnersPage() {
               </div>
             </div>
 
-            {/* Community Partners - Medium Block */}
-            <div className="lg:col-span-3">
-              <div className={`h-full rounded-2xl bg-gradient-to-br ${CATEGORIES[1].color} p-4 relative overflow-hidden min-h-[280px]`}>
-                <div className="absolute -right-4 -bottom-4 w-20 h-20 rounded-full bg-white/5" />
-                <span className="text-[9px] font-bold uppercase tracking-widest text-white/50 mb-3 block">
-                  {CATEGORIES[1].label}
-                </span>
-                <div className="space-y-2">
-                  {PARTNER_ORGS.filter(p => p.category === 'community').map((partner) => (
-                    <div key={partner.name}>
-                      {partner.link ? (
-                        <Link href={partner.link} className="group block p-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition-all">
-                          <h4 className="text-xs font-bold text-white leading-tight">{partner.name}</h4>
-                          <span className="text-[8px] text-white/80 font-bold mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity">View →</span>
-                        </Link>
-                      ) : (
-                        <div className="p-2 rounded-lg bg-white/10 border border-white/10">
-                          <h4 className="text-xs font-bold text-white leading-tight">{partner.name}</h4>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Supporters - Small Stacked */}
-            <div className="lg:col-span-2">
-              <div className={`rounded-2xl bg-gradient-to-br ${CATEGORIES[3].color} p-4 relative overflow-hidden min-h-[280px]`}>
-                <span className="text-[9px] font-bold uppercase tracking-widest text-white/50 mb-3 block">
-                  {CATEGORIES[3].label}
-                </span>
-                <div className="space-y-3">
-                  {PARTNER_ORGS.filter(p => p.category === 'supporter').map((partner) => (
-                    <div
-                      key={partner.name}
-                      className="p-4 rounded-lg h-20 flex items-center justify-center"
-                      style={{ backgroundColor: partner.bgColor || '#ffffff' }}
-                    >
-                      <PartnerLogo name={partner.name} domain={partner.domain} logoPath={partner.logoPath} size="md" className="w-full h-full" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Current Donors - Wide Multi-column Grid */}
-            <div className="lg:col-span-12">
+            {/* Current Donors - Wide Center Column */}
+            <div className="lg:col-span-6">
               <div className={`rounded-2xl bg-gradient-to-br ${CATEGORIES[2].color} p-6 relative overflow-hidden`}>
                 <div className="absolute -right-12 -top-12 w-40 h-40 rounded-full bg-white/5" />
                 <div className="absolute -left-8 -bottom-8 w-32 h-32 rounded-full bg-white/5" />
-                <span className="text-[10px] font-bold uppercase tracking-widest text-white/50 mb-4 block">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-white/50 mb-2 block">
                   {CATEGORIES[2].label}
                 </span>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+                <p className="text-white/40 italic text-xs mb-4 flex items-center gap-2">
+                  <svg className="w-3 h-3 text-ocean-turquoise/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                  </svg>
+                  Click any partner to discover the story behind our collaboration
+                </p>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                   {PARTNER_ORGS.filter(p => p.category === 'donor').map((partner) => (
                     <div key={partner.name} className="relative">
                       {partner.link ? (
@@ -250,6 +209,55 @@ export default function PartnersPage() {
               </div>
             </div>
 
+            {/* Supporters - Compact Right Column */}
+            <div className="lg:col-span-3">
+              <div className={`h-full rounded-2xl bg-gradient-to-br ${CATEGORIES[3].color} p-4 relative overflow-hidden`}>
+                <div className="absolute -left-6 -bottom-6 w-24 h-24 rounded-full bg-white/5" />
+                <span className="text-[9px] font-bold uppercase tracking-widest text-white/50 mb-3 block">
+                  {CATEGORIES[3].label}
+                </span>
+                <div className="space-y-2">
+                  {PARTNER_ORGS.filter(p => p.category === 'supporter').map((partner) => (
+                    <div
+                      key={partner.name}
+                      className="p-3 rounded-lg h-20 flex items-center justify-center"
+                      style={{ backgroundColor: partner.bgColor || '#ffffff' }}
+                    >
+                      <PartnerLogo name={partner.name} domain={partner.domain} logoPath={partner.logoPath} size="sm" className="w-full h-full" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Second Row: Community Partners Full Width */}
+          <div className="grid grid-cols-1 gap-4">
+            <div className="lg:col-span-12">
+              <div className={`rounded-2xl bg-gradient-to-br ${CATEGORIES[1].color} p-4 relative overflow-hidden`}>
+                <div className="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-white/5" />
+                <span className="text-[9px] font-bold uppercase tracking-widest text-white/50 mb-3 block">
+                  {CATEGORIES[1].label}
+                </span>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  {PARTNER_ORGS.filter(p => p.category === 'community').map((partner) => (
+                    <div key={partner.name}>
+                      {partner.link ? (
+                        <Link href={partner.link} className="group block p-3 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition-all">
+                          <h4 className="text-xs font-bold text-white leading-tight">{partner.name}</h4>
+                          <span className="text-[8px] text-white/80 font-bold mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity">View →</span>
+                        </Link>
+                      ) : (
+                        <div className="p-3 rounded-lg bg-white/10 border border-white/10">
+                          <h4 className="text-xs font-bold text-white leading-tight">{partner.name}</h4>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
