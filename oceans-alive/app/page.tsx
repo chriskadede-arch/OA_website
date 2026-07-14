@@ -376,7 +376,7 @@ export default function Home() {
       </section>
 
       {/* - Newsletter ------------------- */}
-      <section className="relative overflow-hidden bg-[#040f1a] py-24 md:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-gray-50 to-[#040f1a] py-24 md:py-32">
 
         {/* Dot grid texture */}
         <div className="absolute inset-0 [background-image:radial-gradient(circle,rgba(46,191,209,0.18)_1px,transparent_1px)] [background-size:28px_28px] opacity-30 pointer-events-none" />
@@ -386,11 +386,6 @@ export default function Home() {
         <div className="absolute -bottom-56 left-1/2 -translate-x-1/2 w-[740px] h-[740px] rounded-full border border-ocean-turquoise/[0.10] pointer-events-none" />
         <div className="absolute -bottom-36 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full border border-ocean-turquoise/[0.14] pointer-events-none" />
         <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[280px] h-[280px] rounded-full border-2 border-ocean-turquoise/[0.18] pointer-events-none" />
-        {/* Glowing epicentre at the bottom */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-5 h-5 rounded-full bg-ocean-turquoise shadow-[0_0_40px_12px_rgba(46,191,209,0.4)] pointer-events-none" />
-
-        {/* Top fade so arcs don't bleed upward */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#040f1a] via-transparent to-[#040f1a] pointer-events-none" />
 
         {/* Rotated side text - left edge */}
         <div className="hidden lg:block absolute left-4 top-1/2 -translate-y-1/2 rotate-[-90deg] origin-center select-none pointer-events-none">
