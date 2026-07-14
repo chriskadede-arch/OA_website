@@ -36,15 +36,14 @@ export default function BlueVenturesPage() {
 
             {/* Blue Ventures Logo */}
             <div className="mb-8 flex justify-center">
-              <div className="relative w-64 h-32 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 flex items-center justify-center p-6">
+              <div className="relative w-64 h-32 bg-white rounded-2xl border border-white/20 flex items-center justify-center p-6">
                 <Image
-                  src="https://logo.clearbit.com/blueventures.org"
+                  src="/images/partners/blue-ventures.png"
                   alt="Blue Ventures"
                   width={256}
                   height={128}
-                  className="object-contain w-full h-full p-4"
+                  className="object-contain w-full h-full"
                   priority
-                  unoptimized
                 />
               </div>
             </div>
