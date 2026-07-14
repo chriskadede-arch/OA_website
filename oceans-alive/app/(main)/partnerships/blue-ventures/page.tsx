@@ -48,14 +48,15 @@ export default function BlueVenturesPage() {
             </div>
 
             <h1 className="font-poppins font-bold text-white text-5xl md:text-7xl leading-[0.95] mb-8">
-              Strengthening Fisheries,<br />
-              <span className="text-cyan-300">Empowering Communities</span>
+              Strengthening Fisheries<br />
+              <span className="text-cyan-300">Monitoring Capacity</span>
             </h1>
 
             <p className="text-white/70 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto mb-12">
-              Together with Blue Ventures, we're building fisheries monitoring and co-management
-              capacity across 304 km² of Kenya's coastal waters - from data to governance, from
-              compliance to community resilience.
+              A two-phase project to strengthen the fisheries monitoring and co-management capacity
+              of five Beach Management Units within the KAMAMKUKI Joint Co-Management Area,
+              promoting the use of reliable fisheries and ecological information to support informed,
+              adaptive management of shared coastal resources.
             </p>
 
             {/* Glass Cards Row */}
@@ -100,18 +101,18 @@ export default function BlueVenturesPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p className="text-lg">
-                  <strong className="text-ocean-midnight">KAMAMKUKI</strong> brings together five Beach Management
-                  Units across Kilifi and Mombasa Counties — Kuruwitu, Kanamai, Mtwapa, Marina, and Kidongo —
-                  managing 304 km² of shared coastal and marine waters.
+                  The <strong className="text-ocean-midnight">KAMAMKUKI JCMA</strong> spans approximately 304 km² of coastal
+                  and marine waters within Kenya's territorial sea. It brings together the Kuruwitu, Kanamai and Mtwapa BMUs
+                  in Kilifi County and the Marina and Kidongo BMUs in Mombasa County.
                 </p>
                 <p>
-                  This Joint Co-Management Area (JCMA) operates under Kenya's Fisheries Management and Development
-                  Act No. 35 of 2016, working alongside the Kenya Fisheries Service (KeFS) and county governments
-                  to sustainably manage fisheries resources that cross administrative boundaries.
+                  These institutions work alongside the Kenya Fisheries Service (KeFS) and the respective county governments
+                  to manage shared fisheries resources under the framework established by the Fisheries Management and
+                  Development Act No. 35 of 2016.
                 </p>
                 <p className="text-sm italic text-gray-500 border-l-4 border-[#0066cc] pl-4 py-2 bg-gray-50 rounded-r-lg">
-                  "A model for cross-county collaboration — where communities, governments, and partners work
-                  together to restore fisheries and build resilience."
+                  "The project's approach is centred on building the capacity of BMUs and allied co-management institutions
+                  to implement fisheries regulations and management measures effectively and accountably."
                 </p>
               </div>
             </div>
@@ -173,7 +174,8 @@ export default function BlueVenturesPage() {
               <span className="text-[#0066cc]">Step by Step</span>
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              From October 2024 to November 2026, the project unfolds in two strategic phases.
+              The project responds to a set of interrelated pressures on the JCMA's fisheries and
+              unfolds in two strategic phases from October 2024 to November 2026.
             </p>
           </div>
 
@@ -201,8 +203,9 @@ export default function BlueVenturesPage() {
                         </span>
                       </div>
                       <p className="text-gray-600 text-lg leading-relaxed">
-                        Diagnosing governance and capacity gaps, establishing fisheries catch-monitoring
-                        systems at ten landing sites across the KAMAMKUKI JCMA.
+                        Phase 1 focused on diagnosing and addressing governance and institutional capacity gaps
+                        across the five BMUs and establishing a fisheries catch-monitoring system at ten landing
+                        sites within the JCMA.
                       </p>
                     </div>
                   </div>
@@ -274,8 +277,11 @@ export default function BlueVenturesPage() {
                         </span>
                       </div>
                       <p className="text-gray-600 text-lg leading-relaxed">
-                        Building on Phase 1 foundations across four priority areas: governance, peer learning,
-                        financial resilience, and evidence-based monitoring.
+                        Phase 2 builds on those foundations across four priority areas: strengthening BMU governance
+                        and compliance through a structured mentorship programme; promoting peer learning, knowledge
+                        exchange and collaboration among BMUs; improving the financial resilience of fisheries-dependent
+                        communities through Village Savings and Loan Associations (VSLAs); and deepening fisheries and
+                        ecological monitoring to support evidence-based management decisions.
                       </p>
                     </div>
                   </div>
@@ -349,8 +355,11 @@ export default function BlueVenturesPage() {
               <span className="text-cyan-300">Pressures</span>
             </h2>
             <p className="text-white/70 text-lg max-w-3xl mx-auto">
-              Kenya's coastal fisheries face a complex web of challenges that demand coordinated,
-              evidence-based solutions.
+              The project responds to a set of interrelated pressures on the JCMA's fisheries:
+              destructive and illegal fishing practices, declining fish stocks, habitat degradation,
+              weak enforcement, limited institutional capacity within co-management bodies, and the
+              growing economic vulnerability of coastal communities whose livelihoods depend on
+              increasingly stressed resources.
             </p>
           </div>
 
@@ -445,8 +454,9 @@ export default function BlueVenturesPage() {
               <span className="text-[#0066cc]">Approach</span>
             </h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Building the capacity of BMUs and co-management institutions to implement fisheries
-              regulations effectively, accountably, and sustainably.
+              Interventions span governance and institutional development, fisheries catch and ecological
+              monitoring, compliance strengthening, financial resilience for fisheries-dependent households,
+              and community food security.
             </p>
           </div>
 
@@ -467,16 +477,16 @@ export default function BlueVenturesPage() {
               <div className="space-y-4">
                 {[
                   {
-                    title: 'BMU Mentorship',
-                    desc: 'Structured capacity-building for Beach Management Unit leaders',
+                    title: 'Structured Mentorship',
+                    desc: 'BMU governance and compliance strengthening programme',
                   },
                   {
-                    title: 'Compliance Strengthening',
-                    desc: 'Tools and training for effective fisheries enforcement',
+                    title: 'Compliance Assessments',
+                    desc: 'Regular monitoring and enforcement capacity building',
                   },
                   {
-                    title: 'Institutional Assessment',
-                    desc: 'Regular monitoring of governance capacity and gaps',
+                    title: 'Institutional Development',
+                    desc: 'Addressing capacity gaps in co-management bodies',
                   },
                 ].map((item, idx) => (
                   <div
@@ -513,16 +523,16 @@ export default function BlueVenturesPage() {
               <div className="space-y-4">
                 {[
                   {
-                    title: 'Catch Data Collection',
-                    desc: 'Daily monitoring at 10 landing sites across the JCMA',
+                    title: 'Fisheries Catch Monitoring',
+                    desc: 'Ongoing data collection at ten landing sites within the JCMA',
                   },
                   {
-                    title: 'Ecological Surveys',
-                    desc: 'Community resource assessments and baseline data',
+                    title: 'Community Resource Surveys',
+                    desc: 'Ecological monitoring and baseline assessments',
                   },
                   {
                     title: 'Data-Feedback Sessions',
-                    desc: 'Sharing findings with BMUs for adaptive management',
+                    desc: 'Stakeholder engagement to support adaptive management',
                   },
                 ].map((item, idx) => (
                   <div
@@ -560,15 +570,15 @@ export default function BlueVenturesPage() {
                 {[
                   {
                     title: 'Village Savings & Loans (VSLAs)',
-                    desc: 'Community-managed savings groups for fishing households',
+                    desc: 'Improving financial resilience of fisheries-dependent communities',
                   },
                   {
-                    title: 'Economic Diversification',
-                    desc: 'Reducing dependence on stressed fisheries resources',
+                    title: 'Community Financial Resilience',
+                    desc: 'Building economic buffers for vulnerable households',
                   },
                   {
-                    title: 'Household Resilience',
-                    desc: 'Building financial buffers for vulnerable coastal communities',
+                    title: 'Reducing Resource Pressure',
+                    desc: 'Alternative income sources to decrease fisheries dependence',
                   },
                 ].map((item, idx) => (
                   <div
@@ -606,15 +616,15 @@ export default function BlueVenturesPage() {
                 {[
                   {
                     title: 'Exchange Visits',
-                    desc: 'Cross-BMU learning and best practice sharing',
+                    desc: 'Promoting peer learning and knowledge exchange among BMUs',
                   },
                   {
-                    title: 'Knowledge Networks',
-                    desc: 'Building collaboration between five Beach Management Units',
+                    title: 'Collaboration Networks',
+                    desc: 'Building partnerships between five Beach Management Units',
                   },
                   {
-                    title: 'Community Workshops',
-                    desc: 'Stakeholder engagement and technical partnerships',
+                    title: 'Stakeholder Engagement',
+                    desc: 'Technical partnerships and community participation',
                   },
                 ].map((item, idx) => (
                   <div
@@ -663,8 +673,8 @@ export default function BlueVenturesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 {
-                  title: 'Stronger Co-Management',
-                  desc: 'Functional, accountable systems that endure beyond project cycles',
+                  title: 'Stronger Co-Management System',
+                  desc: 'Better-coordinated co-management supported by capable BMUs',
                   icon: (
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -672,17 +682,8 @@ export default function BlueVenturesPage() {
                   ),
                 },
                 {
-                  title: 'Capable BMUs',
-                  desc: 'Trained, equipped Beach Management Units leading their own governance',
-                  icon: (
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
-                  ),
-                },
-                {
-                  title: 'Reliable Fisheries Data',
-                  desc: 'Evidence-based management informed by continuous monitoring',
+                  title: 'Reliable Fisheries Information',
+                  desc: 'Continuous monitoring and data collection systems',
                   icon: (
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -691,7 +692,7 @@ export default function BlueVenturesPage() {
                 },
                 {
                   title: 'Improved Compliance',
-                  desc: 'Effective enforcement of fisheries regulations and management measures',
+                  desc: 'Strengthened enforcement and adherence to fisheries regulations',
                   icon: (
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -699,8 +700,8 @@ export default function BlueVenturesPage() {
                   ),
                 },
                 {
-                  title: 'Community Financial Resilience',
-                  desc: 'Diversified livelihoods reducing pressure on stressed fisheries',
+                  title: 'Greater Community Financial Resilience',
+                  desc: 'VSLAs and alternative income sources for fishing households',
                   icon: (
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -713,6 +714,15 @@ export default function BlueVenturesPage() {
                   icon: (
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  ),
+                },
+                {
+                  title: 'Self-Sustaining Systems',
+                  desc: 'Functional, accountable systems that endure beyond the project period',
+                  icon: (
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
                   ),
                 },
@@ -734,9 +744,8 @@ export default function BlueVenturesPage() {
             {/* Vision Statement */}
             <div className="mt-10 pt-8 border-t border-white/10">
               <p className="text-white/60 text-sm italic text-center max-w-3xl mx-auto">
-                "The goal is functional, accountable, and self-sustaining systems for fisheries co-management
-                that endure beyond the project period — because the communities that depend on these resources
-                are the ones leading their protection."
+                "These activities are designed to establish functional, accountable and self-sustaining systems
+                for fisheries co-management that endure beyond the project period."
               </p>
             </div>
           </div>
@@ -753,9 +762,9 @@ export default function BlueVenturesPage() {
                 <span className="text-[#0066cc]">Fisheries Management</span>
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Your contribution directly funds fisheries monitoring, BMU capacity building, and
-                community financial resilience across the KAMAMKUKI Joint Co-Management Area —
-                empowering coastal communities to manage their own resources sustainably.
+                Your contribution directly supports fisheries catch monitoring, governance strengthening,
+                community financial resilience through VSLAs, and peer learning networks across the
+                KAMAMKUKI Joint Co-Management Area — building capacity for sustainable fisheries management.
               </p>
               <Link
                 href="/donate"
