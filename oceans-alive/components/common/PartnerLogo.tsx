@@ -54,6 +54,26 @@ export default function PartnerLogo({ name, domain, logoPath, size = 'md', class
   }
 
   if (logoSrc && !imgError) {
+    // Use Next.js Image for local files, regular img for external URLs
+    const isLocalImage = logoPath && logoPath.startsWith('/');
+
+    if (isLocalImage) {
+      return (
+        <div className={`flex items-center justify-center ${className}`}>
+          <Image
+            src={logoSrc}
+            alt={`${name} logo`}
+            width={200}
+            height={200}
+            className={`${logoSizeClasses[size]} w-auto h-auto object-contain transition-all duration-300`}
+            onError={() => {
+              setImgError(true);
+            }}
+          />
+        </div>
+      );
+    }
+
     return (
       <div className={`flex items-center justify-center ${className}`}>
         <img

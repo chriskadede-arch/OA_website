@@ -26,6 +26,8 @@ const nextConfig = {
         'www.coralguardian.org',
         'www.coralreefcare.com',
         'www.platcorpgroup.com',
+        'www.google.com',
+        'logo.clearbit.com',
       ],
       formats: ['image/avif', 'image/webp'],
     },
