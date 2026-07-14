@@ -33,7 +33,7 @@ const PARTNER_ORGS: PartnerOrg[] = [
 
   // Current Donors  - Using logos and domains with brand colors
   { name: 'Coral Guardian', role: 'Coral Restoration Partner', category: 'donor', link: '/partnerships/coral-guardian', logoPath: '/images/partners/coral-guardian.png', bgColor: '#1a2332' },
-  { name: 'Blue Ventures', role: 'Conservation Funding Partner', category: 'donor', domain: 'blueventures.org', bgColor: '#0066cc' },
+  { name: 'Blue Ventures', role: 'Conservation Funding Partner', category: 'donor', link: '/partnerships/blue-ventures', domain: 'blueventures.org', bgColor: '#0066cc' },
   { name: 'OCEAN Community', role: 'Ocean Conservation Network', category: 'donor', logoPath: '/images/partners/ocean-community.png', bgColor: '#ffffff', logoSize: 'xxl' },
   { name: 'Canon', role: 'Media & Documentation Partner', category: 'donor', link: '/programs/research-innovation', domain: 'canon.com', bgColor: '#ffffff', logoSize: 'xl' },
   { name: 'DEFRA', role: 'UK Department for Environment, Food & Rural Affairs', category: 'donor', logoPath: '/images/partners/defra.jpg', bgColor: '#ffffff' },
