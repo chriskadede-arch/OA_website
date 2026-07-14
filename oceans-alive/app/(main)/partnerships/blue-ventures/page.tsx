@@ -40,9 +40,11 @@ export default function BlueVenturesPage() {
                 <Image
                   src="https://logo.clearbit.com/blueventures.org"
                   alt="Blue Ventures"
-                  fill
-                  className="object-contain p-4"
+                  width={256}
+                  height={128}
+                  className="object-contain w-full h-full p-4"
                   priority
+                  unoptimized
                 />
               </div>
             </div>
