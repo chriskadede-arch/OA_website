@@ -78,7 +78,7 @@ export default function MissionPage() {
             <div className="mb-8 pb-8">
               <h3 className="text-sm font-bold uppercase tracking-widest text-ocean-turquoise mb-4">Our Mission</h3>
               <p className="text-gray-700 text-xl font-semibold leading-relaxed">
-                To create, catalyse, and scale pragmatic, community-led solutions for ocean conservation across Kenya and the Western Indian Ocean region. We work as a conduit to share proven LMMA tools and technical support, empowering coastal communities to become the primary stewards of their marine resources.
+                To create, connect and catalyze co-management initiatives by providing support to BMU and Coastal Indigenous People and Local Communities (IPLC), sharing relevant knowledge and building capacity.
               </p>
             </div>
 
@@ -97,7 +97,7 @@ export default function MissionPage() {
                   <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                     <h4 className="font-poppins font-bold text-ocean-midnight mb-3">The Pressure</h4>
                     <p className="text-gray-600 leading-relaxed text-sm">
-                      Population growth has driven an exponential increase in the number of artisanal fishers. As fish stocks have dwindled, illegal dragnets have proliferated — destroying coral and seagrass habitats and taking increasingly small juvenile fish. Governance capacity is weak and gear restrictions remain largely unenforced.
+                      Population growth has driven an exponential increase in the number of artisanal fishers. As fish stocks have dwindled, illegal, unreported and unregulated (IUU) fishing — including dragnets — has proliferated, destroying coral and seagrass habitats and taking increasingly small juvenile fish. Governance capacity is weak and gear restrictions remain largely unenforced.
                     </p>
                   </div>
 
@@ -117,7 +117,7 @@ export default function MissionPage() {
                     <div>
                       <h4 className="font-poppins font-bold text-ocean-turquoise mb-2">What Actually Works</h4>
                       <p className="text-white/80 leading-relaxed">
-                        Of 26 Kenyan communities that agreed to set aside voluntary fisheries closures over the past 20 years, only a handful are showing ecological and social improvement and in each case, success is linked to long-term, place-based community organisation.
+                        Of some 30 Kenyan communities that set aside voluntary fisheries closures over the past 20 years, only a handful show ecological and social improvement — and in each case success is linked to long-term, place-based community organisation and strong partnership. With 20+ years of engagement in the region, Oceans Alive fills the gap between community effort and the technical, institutional and financial support needed to sustain it.
                       </p>
                     </div>
                   </div>
@@ -138,7 +138,7 @@ export default function MissionPage() {
                 Our Vision
               </p>
               <p className="text-white text-2xl md:text-3xl font-poppins font-bold leading-snug">
-                Coastal communities across the Western Indian Ocean thriving alongside healthy, biodiverse, productive ocean ecosystems—governed by and for the people who depend on them, with legal tenure, scientific backing, and sustainable livelihoods secured.
+                Marine conservation of Kenya's coastline and its coastal Indigenous People and Local Communities (IPLC) resource use in balance with nature to support well-being and sustainable livelihoods.
               </p>
             </div>
             <div className="text-right hidden md:block">

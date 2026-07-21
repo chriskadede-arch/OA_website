@@ -28,8 +28,8 @@ export default function OceanRecoveryPage() {
           <div className="mt-12 pt-8 border-t border-white/20">
             <div className="flex flex-wrap justify-center gap-3 mb-6">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-5 py-3">
-                <div className="text-3xl font-poppins font-bold text-white">25,000+</div>
-                <div className="text-[10px] text-white/60 uppercase tracking-wide">Corals Planted</div>
+                <div className="text-3xl font-poppins font-bold text-white">15,000+</div>
+                <div className="text-[10px] text-white/60 uppercase tracking-wide">Corals Out-Planted Since 2019</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-5 py-3">
                 <div className="text-3xl font-poppins font-bold text-white">457</div>
@@ -56,12 +56,12 @@ export default function OceanRecoveryPage() {
           {/* Featured Project - Tengefu LMMA */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border-l-8 border-ocean-turquoise">
             <div className="flex items-start gap-3 mb-4">
-              <div className="bg-ocean-turquoise/10 rounded-lg px-3 py-1 text-ocean-turquoise font-bold text-sm">20 Year Journey</div>
-              <div className="bg-amber-100 rounded-lg px-3 py-1 text-amber-700 font-bold text-sm">First in Kenya</div>
+              <div className="bg-ocean-turquoise/10 rounded-lg px-3 py-1 text-ocean-turquoise font-bold text-sm">18+ Year Journey</div>
+              <div className="bg-amber-100 rounded-lg px-3 py-1 text-amber-700 font-bold text-sm">One of Kenya's Earliest</div>
             </div>
-            <h3 className="text-2xl font-poppins font-bold text-ocean-midnight mb-4">30 hac LMMA - Kuruwitu Tengefu</h3>
+            <h3 className="text-2xl font-poppins font-bold text-ocean-midnight mb-4">30-ha Tengefu LMMA</h3>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Established in 2003, Kenya's first community-driven marine protected area. 15 years of management delivered extraordinary ecosystem recovery and economic benefits for 300+ households.
+              Established by the Kuruwitu community in 2006, one of Kenya's earliest community-driven Locally Managed Marine Areas. Around 15 years of community management delivered strong ecosystem recovery and economic benefits for 300+ households.
             </p>
 
             {/* Impact Timeline */}
@@ -74,7 +74,7 @@ export default function OceanRecoveryPage() {
               <div className="bg-gradient-to-br from-green-600 to-teal-600 rounded-xl p-4 text-center">
                 <div className="text-3xl font-bold text-white mb-1">30%</div>
                 <div className="text-xs text-white/70 uppercase">Reef Recovery</div>
-                <div className="text-xs text-white/50 mt-2">15 Years</div>
+                <div className="text-xs text-white/50 mt-2">WCS Data ~15 years</div>
               </div>
               <div className="bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl p-4 text-center">
                 <div className="text-3xl font-bold text-white mb-1">17%</div>

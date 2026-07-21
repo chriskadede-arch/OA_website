@@ -88,31 +88,41 @@ export default function Home() {
               Oceans Alive
             </h1>
             <h2 className="font-poppins font-bold text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-6">
-              Building a Future Where Oceans and Communities<br />
-              <span className="text-white">Thrive Together</span>
+              Coastal Communities. Healthier Reefs.<br />
+              <span className="text-white">Stronger Fisheries Governance.</span>
             </h2>
             <p className="text-base md:text-lg text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto">
-              Creating, catalyzing, and scaling pragmatic, community-led solutions for ocean conservation across Kenya and the Western Indian Ocean region. Empowering coastal communities as the primary stewards of their marine resources.
+              Oceans Alive works with coastal communities, Beach Management Units, government agencies and conservation partners to strengthen fisheries co-management, restore marine ecosystems and build resilient coastal livelihoods in Kenya. Drawing on more than two decades of learning from Kuruwitu, we connect local knowledge, practical conservation, science and policy to support locally led marine stewardship.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/programmes"
+                href="/about/story"
                 className="px-7 py-3.5 bg-ocean-midnight text-white font-bold rounded-xl hover:bg-white hover:text-ocean-turquoise transition-all duration-200 shadow-lg"
               >
-                Our Programmes
+                Learn Our Story
               </Link>
               <Link
-                href="/about"
+                href="/donate"
                 className="px-7 py-3.5 border border-white/30 text-white font-semibold rounded-xl hover:border-ocean-turquoise hover:text-ocean-turquoise transition-all duration-200"
               >
-                Our Story
+                Support Our Work
               </Link>
             </div>
 
           </div>
         </div>
 
+      </section>
+
+      {/* - How We Work ------------------- */}
+      <section className="bg-white py-16 md:py-20 border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">How We Work</p>
+          <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
+            We work through community institutions and formal co-management structures, in collaboration with government, technical partners and donors. Oceans Alive's role is to facilitate, strengthen capacity, provide technical advice, monitor, mobilise funding, support learning and document lessons — so that coastal communities remain the primary stewards of their marine resources.
+          </p>
+        </div>
       </section>
 
       {/* - Impact Stats (dark immersive) ---------─ */}
@@ -127,7 +137,7 @@ export default function Home() {
             </div>
             <div className="lg:pt-3">
               <p className="text-white/60 text-lg leading-relaxed">
-                From establishing Kenya's first community-driven Community Conservation Area (CCA) in 2003, to 15 years of proven results (400% fish biomass increase, 30% coral recovery), to Kenya's first Co-Management Plan in 2022 - placing 12,000 hectares under community stewardship.
+                From establishing one of Kenya's earliest community-driven Locally Managed Marine Areas in 2006, to around 15 years of proven results (400% fish biomass increase, 30% reef recovery, 17% seagrass regrowth), to Kenya's first officially endorsed Co-Management Plan in 2022 — placing 120 km² under community stewardship.
               </p>
             </div>
           </div>

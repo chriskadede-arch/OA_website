@@ -261,58 +261,78 @@ export const TEAM_MEMBERS = [
 
 // Impact Stats - Updated June 2025 from Company Profile & Impact Report
 export const IMPACT_STATS = [
-  { label: 'Years of Community-Led Impact', value: '20+' },
-  { label: 'Hectares Under Co-Management', value: '12,000' },
-  { label: 'Coral Colonies Replanted Since 2019', value: '25,000+' },
-  { label: 'Fish Biomass Increase in CCA', value: '400%' },
-  { label: 'CCAs Inspired Across Kenya', value: '30+' },
-  { label: 'Households Benefiting from Programs', value: '7,000+' },
-  { label: 'Women in Income Programs', value: '135+' },
+  { label: 'Years of Community-Led Conservation', value: '20+' },
+  { label: '120 km² Under Kuruwitu Co-Management Plan', value: '12,000 ha' },
+  { label: 'Coral Colonies Out-Planted Since 2019', value: '15,000+' },
+  { label: 'Fish Biomass Increase (15 years WCS data)', value: '400%' },
+  { label: 'Fishing Communities Replicating Model', value: '30' },
+  { label: 'School Children Reached', value: '10,000+' },
+  { label: 'Women Engaged in Livelihood Programs', value: '735+' },
 ];
 
-// OAF Timeline - Complete 20-Year Journey (2003-2025)
+// Two-Track Timeline - Kuruwitu Community Journey + Oceans Alive Organisational Journey
 export const TIMELINE = [
+  // THE KURUWITU COMMUNITY JOURNEY
   {
     year: '2003',
-    title: 'Community Action Begins',
-    body: 'Kuruwitu community and founders took action to close an area from fishing, establishing Kenya\'s first community coastal conservation area (Tengefu) - a locally managed marine protected area that would become the model for national policy.',
-    tag: 'Origins',
+    title: 'Community Action',
+    body: 'Kuruwitu fishers form the Kuruwitu Conservation and Welfare Association (KCWA), later the KCW-CBO.',
+    tag: 'Community Led',
   },
   {
-    year: '2003 - 2018',
-    title: 'Model Proven with Data',
-    body: '15 years of data collection and community management deliver unprecedented results: 400% fish biomass increase, 30% coral recovery, 17% seagrass restoration, and 735% household income improvement in the surrounding area.',
-    tag: 'Evidence',
+    year: '2006',
+    title: 'One of Kenya\'s Earliest LMMAs',
+    body: 'The community closes a 30-ha area from fishing, establishing the Tengefu — one of Kenya\'s earliest community-driven Locally Managed Marine Areas.',
+    tag: 'Community Led',
+  },
+  {
+    year: '2006–2018',
+    title: 'Community Management & Ecological Recovery',
+    body: 'Community management with loan schemes, alternative livelihoods, peer visits and data collection. Around 15 years of monitoring shows 400% fish biomass increase, 30% reef recovery, 17% seagrass regrowth (WCS data).',
+    tag: 'Community Led',
   },
   {
     year: '2017',
-    title: 'Global Recognition & Foundation',
-    body: 'Oceans Alive Foundation established to share the CCA experience and tools. Community representatives traveled to New York to accept the UNDP Equator Prize. We supported the implementation of 12,000ha Kuruwitu Co-management Area (KCMA) as a model for the Tengefu.',
-    tag: 'Milestone Year',
-  },
-  {
-    year: '2022',
-    title: 'Policy Milestone',
-    body: 'Establishment of the first officially endorsed Kuruwitu Co-management Area (KCMA) for Kuruwitu BMU under new BMU Regulations. IUCN SAGE analysis - a policy landmark for Kenya.',
-    tag: 'Policy Milestone',
+    title: 'UNDP Equator Prize',
+    body: 'The KCW-CBO is awarded the UNDP Equator Prize for community-run marine resource management.',
+    tag: 'Community Led',
   },
   {
     year: '2022',
     title: 'IUCN Blue Champions Award',
-    body: 'Kuruwitu CBO wins the 2022 IUCN Blue Champions Award, further cementing global recognition of the community-led conservation model pioneered on Kenya\'s north coast.',
-    tag: 'Blue Champion',
+    body: 'The KCW-CBO receives the IUCN Blue Champions Award.',
+    tag: 'Community Led',
+  },
+  // THE OCEANS ALIVE ORGANISATIONAL JOURNEY
+  {
+    year: '2016',
+    title: 'Oceans Alive Established',
+    body: 'Oceans Alive established as a separate organisation to document, support and share community-led marine conservation.',
+    tag: 'Oceans Alive',
+  },
+  {
+    year: '2016–2022',
+    title: 'Supporting Co-Management Development',
+    body: 'Support to the development of the Kuruwitu Co-Management Area with the Kuruwitu BMU and government.',
+    tag: 'Oceans Alive',
+  },
+  {
+    year: '2022',
+    title: 'First Officially Endorsed CMA',
+    body: 'Kuruwitu CMA officially endorsed under the BMU Regulations; Kilifi County BMU Network (17 BMUs) endorsed; first IUCN SAGE analysis in Kenya.',
+    tag: 'Oceans Alive',
   },
   {
     year: '2023',
-    title: 'Royal Visit to Kuruwitu',
-    body: 'His Majesty King Charles III visits Kuruwitu and places a coral restoration block into the water, bringing unprecedented international attention to community-led marine conservation in Kenya.',
-    tag: 'Royal Recognition',
+    title: 'Royal Visit',
+    body: 'His Majesty King Charles III visits Kuruwitu and places a coral-restoration unit, drawing international attention to community-led conservation.',
+    tag: 'Oceans Alive',
   },
   {
-    year: '2025',
-    title: 'Global Stage',
-    body: 'Oceans Alive presents at IUCN World Conservation Congress, showcasing the Kuruwitu model as a globally scalable blueprint. Featured in IUCN Panorama, Green Listing and Great Blue Wall - sharing lessons across the Western Indian Ocean region.',
-    tag: 'Global Stage',
+    year: '2023–present',
+    title: 'Expansion & Partnerships',
+    body: 'Expansion to the KAMAMKUKI Joint Co-Management Area and continued partnerships under the 2024–2028 Strategy.',
+    tag: 'Oceans Alive',
   },
 ];
 
