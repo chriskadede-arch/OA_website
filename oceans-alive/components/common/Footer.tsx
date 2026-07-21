@@ -181,7 +181,7 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-col items-center md:items-start gap-2">
             <p className="text-xs text-white/40">
-              © {currentYear} {SITE_NAME}. Registered Not-for-Profit Trust, Kenya. All rights reserved. · Protecting Oceans Since 2003
+              © {currentYear} Oceans Alive. Registered as Oceans Alive Trust, Kenya. Community-led conservation at Kuruwitu since 2003; Oceans Alive since 2016.
             </p>
             <p className="text-xs text-white/30">
               Website built by{' '}
