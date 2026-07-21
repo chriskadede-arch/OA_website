@@ -19,11 +19,18 @@ const IMPACT_MAP: Record<number, { what: string; img: string }> = {
   2500:  { what: 'Plants 5 coral fragments - the most popular gift', img: '/images/oceansmen.jpg' },
   5000:  { what: 'Funds one school ocean education day', img: '/images/kids.jpg' },
   10000: { what: 'Covers one community diver certification', img: '/images/coralteaching.jpg' },
-  25000: { what: 'Makes a significant impact - Royal-approved conservation', img: '/images/king-charles-coral.jpg' },
+  25000: { what: 'Makes a comprehensive impact across all programs', img: '/images/communities.jpg' },
   0:     { what: 'Choose your own level of impact', img: '/images/communities.jpg' },
 };
 
 const STEPS = USE_PHP_FORMS ? ['Amount', 'Your Info', 'Confirmation'] : ['Amount', 'Your Info', 'Payment'];
+
+const ALLOCATION_BREAKDOWN = [
+  { text: 'Coral restoration & reef monitoring', percentage: 40, color: 'bg-ocean-turquoise' },
+  { text: 'Community fisheries & BMU support', percentage: 25, color: 'bg-blue-600' },
+  { text: 'Ocean education & youth programmes', percentage: 20, color: 'bg-amber-500' },
+  { text: 'Women\'s livelihoods & food security', percentage: 15, color: 'bg-purple-600' },
+];
 
 export default function Donate() {
   const [customAmount, setCustomAmount] = useState('');
@@ -108,17 +115,17 @@ export default function Donate() {
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative bg-ocean-midnight py-24 md:py-28 overflow-hidden">
-        {/* King Charles Background Image */}
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/king-charles-coral.jpg"
-            alt="King Charles III with coral restoration"
+            src="/images/divers.jpg"
+            alt="Ocean conservation in action"
             fill
             className="object-cover object-center"
             priority
           />
           {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-ocean-midnight/75" />
+          <div className="absolute inset-0 bg-ocean-midnight/80" />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-6">
@@ -129,19 +136,19 @@ export default function Donate() {
                 Support Ocean Conservation
               </p>
               <h1 className="font-poppins font-bold text-white text-5xl md:text-6xl leading-tight mb-6">
-                Every Dollar<br />
+                Every Contribution<br />
                 <span className="text-ocean-turquoise">Makes a Difference</span>
               </h1>
               <p className="text-lg text-white/90 leading-relaxed mb-10 max-w-md">
-                Your donation directly funds coral restoration, community conservation,
-                and sustainable livelihoods on Kenya's coastline.
+                A single contribution that supports coral restoration, community fisheries
+                and ocean education on Kenya's coast.
               </p>
             </div>
             <div className="relative hidden lg:block">
               <div className="relative h-[500px] rounded-2xl overflow-hidden border-4 border-ocean-turquoise/30 shadow-2xl">
                 <Image
-                  src="/images/king-cypher-coral.jpg"
-                  alt="Royal cypher coral restoration - King Charles III"
+                  src="/images/coralteaching.jpg"
+                  alt="Community ocean education and coral restoration"
                   fill
                   className="object-cover"
                 />
@@ -192,38 +199,61 @@ export default function Donate() {
             <div className="max-w-4xl mx-auto">
               <div className="mb-10 text-center">
                 <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-2">Step 1</p>
-                <h2 className="text-3xl font-poppins font-bold text-ocean-midnight mb-3">Your $250 Donation Impact</h2>
-                <p className="text-gray-600">Royal-approved conservation that covers comprehensive ocean restoration</p>
+                <h2 className="text-3xl font-poppins font-bold text-ocean-midnight mb-3">Choose Your Donation Amount</h2>
+                <p className="text-gray-600">Support comprehensive ocean conservation on Kenya's coast</p>
               </div>
 
               {/* Fixed $250 amount display */}
               <div className="mb-8 p-8 rounded-2xl border-4 border-ocean-turquoise bg-ocean-turquoise/5 text-center">
                 <div className="text-6xl font-poppins font-bold text-ocean-turquoise mb-2">$250</div>
-                <p className="text-sm text-gray-600 uppercase tracking-wider">Comprehensive Conservation Package</p>
+                <p className="text-sm text-gray-600 uppercase tracking-wider">Recommended Contribution</p>
               </div>
 
-              {/* What $250 covers */}
+              {/* How Your $250 is Used - Creative Visual Breakdown */}
               <div className="mb-8">
-                <h3 className="text-lg font-bold text-ocean-midnight mb-4 text-center">Your $250 donation covers:</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {[
-                    { text: 'Plants coral fragments in Kuruwitu reef' },
-                    { text: 'Supports community fishers' },
-                    { text: 'Plants multiple coral colonies' },
-                    { text: 'Funds school ocean education days' },
-                    { text: 'Covers community diver certification' },
-                    { text: 'Makes a significant impact - Royal-approved conservation' },
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-200">
-                      <span className="w-2 h-2 rounded-full bg-ocean-turquoise mt-1.5 shrink-0"></span>
-                      <p className="text-sm text-gray-700 leading-relaxed">{item.text}</p>
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-poppins font-bold text-ocean-midnight mb-2">How Your $250 is Used</h3>
+                  <p className="text-xs text-gray-500 italic">Allocation percentages to be confirmed with Finance</p>
+                </div>
+
+                {/* Visual Impact Breakdown with Progress Bars */}
+                <div className="space-y-4 mb-6">
+                  {ALLOCATION_BREAKDOWN.map((item, i) => (
+                    <div key={i}>
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-sm font-semibold text-ocean-midnight">{item.text}</span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-bold text-gray-400">${(250 * item.percentage / 100).toFixed(0)}</span>
+                          <span className="text-lg font-bold text-ocean-turquoise">{item.percentage}%</span>
+                        </div>
+                      </div>
+                      <div className="relative h-3 bg-gray-100 rounded-full overflow-hidden">
+                        <div
+                          className={`h-full ${item.color} rounded-full transition-all duration-1000 ease-out`}
+                          style={{ width: `${item.percentage}%` }}
+                        />
+                      </div>
                     </div>
                   ))}
+                </div>
+
+                {/* Total Impact Summary */}
+                <div className="p-5 rounded-2xl bg-gradient-to-br from-ocean-midnight to-ocean-midnight/90 text-white">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-xs uppercase tracking-wider text-ocean-turquoise mb-1">Your Total Impact</p>
+                      <p className="text-2xl font-bold">$250</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-xs text-white/60 mb-1">Supporting</p>
+                      <p className="text-lg font-semibold">4 Key Programs</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               {/* Custom amount option */}
-              <div className="mb-6">
+              <div className="mb-8">
                 <label className="block text-sm font-semibold text-ocean-midnight mb-3">Or enter custom amount (USD)</label>
                 <div className="relative">
                   <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xl font-bold text-gray-400">$</span>
@@ -239,6 +269,35 @@ export default function Donate() {
                     placeholder="0.00"
                     className="w-full rounded-xl border-2 border-gray-200 pl-10 pr-4 py-4 text-lg text-ocean-midnight placeholder:text-gray-300 focus:outline-none focus:border-ocean-turquoise transition-colors"
                   />
+                </div>
+              </div>
+
+              {/* Transparency & Accountability */}
+              <div className="mb-8 p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-white border-2 border-gray-100">
+                <div className="flex items-center gap-2 mb-4">
+                  <svg className="w-5 h-5 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                  <h3 className="text-lg font-bold text-ocean-midnight">Your Trust Matters</h3>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <p className="font-semibold text-ocean-midnight mb-1">💳 Secure Processing</p>
+                    <p className="text-gray-600 text-xs">Stripe-powered. All major cards, Apple Pay, Google Pay. USD, EUR, GBP, KES accepted.</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-ocean-midnight mb-1">📄 Tax Status</p>
+                    <p className="text-gray-600 text-xs">Registered Kenya not-for-profit. Tax deductibility varies by jurisdiction.</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-ocean-midnight mb-1">🔒 Data Security</p>
+                    <p className="text-gray-600 text-xs">SSL encrypted. PCI compliant. Your information never shared with third parties.</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-ocean-midnight mb-1">📊 Accountability</p>
+                    <p className="text-gray-600 text-xs">Quarterly impact reports. Annual financials available on request.</p>
+                  </div>
                 </div>
               </div>
 
@@ -356,17 +415,14 @@ export default function Donate() {
 
                 <h3 className="text-sm font-poppins font-bold text-ocean-midnight mb-4 uppercase tracking-wide">Where Your Money Goes</h3>
                 <div className="space-y-3">
-                  {[
-                    { label: 'Coral Restoration', desc: 'Growing & transplanting reef fragments' },
-                    { label: 'Community Education', desc: 'Ocean literacy for schools & fishers' },
-                    { label: 'Women\'s Livelihoods', desc: 'Trash4Cash & LIFT Network' },
-                    { label: 'Marine Governance', desc: 'BMU networks & policy advocacy' },
-                  ].map((item) => (
-                    <div key={item.label} className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-ocean-turquoise mt-2 shrink-0" />
-                      <div>
-                        <p className="text-sm font-semibold text-ocean-midnight leading-tight">{item.label}</p>
-                        <p className="text-xs text-gray-400">{item.desc}</p>
+                  {ALLOCATION_BREAKDOWN.map((item) => (
+                    <div key={item.text} className="flex items-start gap-3">
+                      <div className="w-10 h-10 rounded-lg bg-ocean-turquoise/10 flex items-center justify-center shrink-0">
+                        <span className="text-xs font-bold text-ocean-turquoise">{item.percentage}%</span>
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm font-semibold text-ocean-midnight leading-tight capitalize">{item.text}</p>
+                        <p className="text-xs text-gray-400">${(250 * item.percentage / 100).toFixed(0)}</p>
                       </div>
                     </div>
                   ))}
@@ -449,19 +505,23 @@ export default function Donate() {
               {[
                 {
                   q: 'Is my donation tax-deductible?',
-                  a: 'Oceans Alive Foundation is a registered Kenyan not-for-profit. Please check your local tax laws for deductibility in your country.',
+                  a: 'Oceans Alive Foundation is a registered not-for-profit organization in Kenya. Tax deductibility varies by jurisdiction - please consult with your tax advisor regarding deductibility in your country.',
                 },
                 {
                   q: 'Can I set up a recurring donation?',
                   a: 'Yes - select Monthly Donation during checkout. You can cancel anytime with no obligation.',
                 },
                 {
-                  q: 'What payment methods do you accept?',
-                  a: 'We accept all major credit cards (Visa, Mastercard, Amex), debit cards, Apple Pay, and Google Pay through our secure Stripe payment system.',
+                  q: 'What payment methods and currencies do you accept?',
+                  a: 'We accept all major credit cards (Visa, Mastercard, Amex), debit cards, Apple Pay, and Google Pay through our secure Stripe payment system. Payments can be made in USD, EUR, GBP, and KES.',
                 },
                 {
                   q: 'How will I know my donation made a difference?',
-                  a: 'We send quarterly impact updates by email. Subscribe to our newsletter for field reports from Kilifi.',
+                  a: 'Donors receive quarterly impact newsletters detailing program outcomes and field updates from Kilifi County. Annual financial reports are available upon request.',
+                },
+                {
+                  q: 'Are donations unrestricted or designated?',
+                  a: 'All donations are unrestricted unless you specify otherwise, allowing us to direct funds where they are needed most across all four program areas.',
                 },
               ].map((faq) => (
                 <div key={faq.q} className="border-b border-white/10 pb-6 last:border-b-0 last:pb-0">

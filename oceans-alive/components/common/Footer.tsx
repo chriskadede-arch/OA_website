@@ -88,15 +88,9 @@ export default function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-sm text-white/60 leading-relaxed mb-5">
+            <p className="text-sm text-white/60 leading-relaxed mb-8">
               Working with coastal communities to restore marine ecosystems, strengthen livelihoods, and create lasting positive change along Kenya's coast.
             </p>
-
-            {/* SDG Badges */}
-            <div className="mb-5">
-              <p className="text-[10px] text-white/30 uppercase tracking-wider mb-3">Contributing to UN SDGs</p>
-              <SDGRow sdgs={PRIMARY_SDGS} size="sm" />
-            </div>
 
             <div className="flex gap-3">
               {SOCIAL.map((s) => (

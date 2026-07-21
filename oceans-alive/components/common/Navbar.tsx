@@ -70,12 +70,10 @@ const MEGA_NAV: MegaNavItem[] = [
       {
         title: 'About Us',
         items: [
-          { label: 'Overview', href: '/about', description: 'Complete overview of Oceans Alive Foundation' },
-          { label: 'Our Story', href: '/about/story', description: 'Founded 2003 by Desmond Bowden & Kuruwitu fishermen' },
-          { label: 'Mission & Vision', href: '/about/mission', description: 'Our purpose and guiding principles' },
-          { label: 'Recognition & Awards', href: '/about/recognition', description: 'UNDP Equator Prize · Royal Visit · IUCN 2025' },
-          { label: 'Our Partners', href: '/about/partners', description: 'Coral Guardian, Canon CENA, UK FCDO & more' },
-          { label: 'Our Team', href: '/about/team', description: 'The people behind the work in Kilifi County' },
+          { label: 'Our Story', href: '/about/story', description: '20+ years of community conservation' },
+          { label: 'Mission & Vision', href: '/about/mission', description: 'Our purpose & values' },
+          { label: 'Our Team', href: '/about/team', description: 'People behind the work' },
+          { label: 'Partners', href: '/about/partners', description: 'Our collaborators' },
         ],
       },
       {
@@ -96,6 +94,7 @@ const MEGA_NAV: MegaNavItem[] = [
       {
         title: 'Blog & Stories',
         items: [
+          { label: 'Kuruwitu Story', href: '/learn/kuruwitu', description: 'Kenya\'s first community-led marine conservation area' },
           { label: 'Impact Stories', href: '/blog/category/impact-stories', description: 'Real results from our fieldwork' },
           { label: 'Community News & Updates', href: '/blog/category/community-news', description: 'Updates from local communities and OAF announcements' },
         ],

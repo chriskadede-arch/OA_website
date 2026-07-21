@@ -151,12 +151,6 @@ export default function Home() {
                 <span key={a} className="text-xs text-white/40 font-semibold">{a}</span>
               ))}
             </div>
-
-            {/* SDGs - Real UN Logos */}
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-4">
-              <span className="text-[9px] text-white/25 uppercase tracking-widest">Contributing to UN SDGs</span>
-              <SDGRow sdgs={PRIMARY_SDGS} size="md" useRealLogos={true} />
-            </div>
           </div>
         </div>
       </section>
@@ -313,69 +307,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* - Women & Ocean -----------------─ */}
-      <section className="relative bg-gradient-to-br from-[#1a6b5a] to-ocean-seafoam py-16 md:py-20 overflow-hidden">
-        {/* Background Image - Covers Entire Section */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/trashforcash.jpg"
-            alt="Women in Kilifi's Trash4Cash programme"
-            fill
-            className="object-cover opacity-70"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a6b5a]/40 to-ocean-seafoam/30" />
-        </div>
-
-        <div className="relative max-w-6xl mx-auto px-6 z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-white text-xs font-bold uppercase tracking-widest mb-4 drop-shadow-lg">Women & Ocean</p>
-              <h2 className="text-4xl font-poppins font-bold text-white mb-6 drop-shadow-lg">
-                Women at the Heart of Conservation
-              </h2>
-              <p className="text-white leading-relaxed mb-4 drop-shadow-md">
-                Through Oceans Alive's Social, Health and Environment programme, women are helping shape the future of conservation across Kilifi County.
-              </p>
-              <p className="text-white leading-relaxed mb-4 drop-shadow-md">
-                From coral restoration and community leadership to small businesses and recycling initiatives, women are creating practical solutions that benefit both people and the environment.
-              </p>
-              <p className="text-white leading-relaxed mb-8 drop-shadow-md">
-                Today, more than 120 women collect, sort and sell over two tonnes of plastic each month, turning waste into income while helping protect the coast they call home.
-              </p>
-              <Link
-                href="/programmes/trash4cash"
-                className="inline-flex items-center gap-2 bg-white text-[#1a6b5a] font-bold px-6 py-3 rounded-xl hover:bg-ocean-midnight hover:text-white transition-all duration-200 shadow-xl"
-              >
-                Support Women's Programmes →
-              </Link>
-            </div>
-            <div className="relative w-full h-[600px] lg:h-[700px]">
-              {/* Overlapping Image 1 - Top Right */}
-              <div className="absolute top-12 right-6 md:right-12 w-64 md:w-80 lg:w-96 h-52 md:h-64 lg:h-72 rounded-2xl overflow-hidden shadow-2xl border-4 md:border-6 border-white transform rotate-6 hover:rotate-3 hover:scale-105 transition-all duration-300 z-10">
-                <Image
-                  src="/images/womenlearning.jpg"
-                  alt="Women learning and empowerment"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Overlapping Image 2 - Bottom Left */}
-              <div className="absolute bottom-12 left-6 md:left-12 w-72 md:w-88 lg:w-[420px] h-56 md:h-72 lg:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 md:border-6 border-white transform -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 z-20">
-                <Image
-                  src="/images/womenlearning2.jpg"
-                  alt="Women in community programs"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* - Newsletter ------------------- */}
+      {/* - Stay Connected & Get Involved (Combined) ------------------- */}
       <section className="relative overflow-hidden bg-gradient-to-b from-white via-gray-50 to-[#040f1a] py-24 md:py-32">
 
         {/* Dot grid texture */}
@@ -396,7 +328,7 @@ export default function Home() {
 
         {/* - Content - */}
         <div className="relative z-10 max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-16 items-center mb-16">
 
             {/* Left */}
             <div>
@@ -457,40 +389,38 @@ export default function Home() {
             </div>
 
           </div>
-        </div>
-      </section>
 
-      {/* - Final CTA -------------------─ */}
-      <section className="bg-white py-14 border-t border-gray-100">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <h3 className="text-2xl font-poppins font-bold text-ocean-midnight">
-                Ready to make an impact?
-              </h3>
-              <p className="text-ocean-turquoise mt-1">
-                Join us
-              </p>
-            </div>
-            <div className="flex items-center gap-4 shrink-0">
-              <Link
-                href="/donate"
-                className="px-6 py-3 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-ocean-midnight transition-all duration-200"
-              >
-                Donate
-              </Link>
-              <Link
-                href="/contact?type=Volunteer"
-                className="px-6 py-3 border border-gray-200 text-ocean-midnight font-semibold rounded-xl hover:border-ocean-turquoise hover:text-ocean-turquoise transition-all duration-200"
-              >
-                Volunteer
-              </Link>
-              <Link
-                href="/contact?type=Partnership"
-                className="px-6 py-3 border border-gray-200 text-ocean-midnight font-semibold rounded-xl hover:border-ocean-turquoise hover:text-ocean-turquoise transition-all duration-200"
-              >
-                Partner With Us
-              </Link>
+          {/* Ready to Make an Impact - Integrated CTA */}
+          <div className="relative pt-16 border-t border-white/10">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div>
+                <h3 className="text-3xl font-poppins font-bold text-white mb-2">
+                  Ready to Make an Impact?
+                </h3>
+                <p className="text-ocean-turquoise text-lg font-semibold">
+                  Join us in protecting Kenya's coast
+                </p>
+              </div>
+              <div className="flex items-center gap-4 shrink-0 flex-wrap justify-center">
+                <Link
+                  href="/donate"
+                  className="px-6 py-3 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-white hover:text-ocean-turquoise transition-all duration-200 shadow-lg"
+                >
+                  Donate
+                </Link>
+                <Link
+                  href="/contact?type=Volunteer"
+                  className="px-6 py-3 border border-white/30 text-white font-semibold rounded-xl hover:border-ocean-turquoise hover:bg-ocean-turquoise/10 transition-all duration-200"
+                >
+                  Volunteer
+                </Link>
+                <Link
+                  href="/contact?type=Partnership"
+                  className="px-6 py-3 border border-white/30 text-white font-semibold rounded-xl hover:border-ocean-turquoise hover:bg-ocean-turquoise/10 transition-all duration-200"
+                >
+                  Partner With Us
+                </Link>
+              </div>
             </div>
           </div>
         </div>
