@@ -202,7 +202,7 @@ export default function Home() {
                     Strengthen Coastal Education
                   </h3>
                   <p className="text-sm text-white/85 mb-3 leading-relaxed max-w-lg">
-                    We turn Kuruwitu into a living classroom where ocean meets action. <strong>10,000+ learners</strong>—from primary students to international interns—gain hands-on experience in coral restoration, permaculture, and community-led conservation. Through <strong>Project REEL Kilifi</strong>, we equip local filmmakers to tell Kenya's ocean stories to the world. <em>Leaving no one behind through education and community harmony.</em>
+                    Kuruwitu becomes a living classroom. <strong>10,000+ learners</strong> gain hands-on experience in coral restoration and conservation. Building ocean leaders through education and community harmony.
                   </p>
                   <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
                     Explore programmes <span className="text-lg">→</span>
@@ -236,7 +236,7 @@ export default function Home() {
                     Promote Marine Ecosystem Integrity
                   </h3>
                   <p className="text-sm text-white/85 mb-3 leading-relaxed max-w-lg">
-                    Fishers become reef gardeners. Through <strong>120 km² of co-managed waters</strong> and <strong>18 BMUs in Kilifi Network</strong>, we've transformed extractors into stewards. The result? <strong>25,000+ corals planted</strong>, <strong>400% fish biomass increase</strong>, and communities protecting what they once depleted. <em>Sustainable management from catchment to reef—proof that people and ecosystems recover together.</em>
+                    Fishers become reef gardeners. <strong>120 km² co-managed</strong>, <strong>25,000+ corals planted</strong>, <strong>400% fish biomass increase</strong>. Proof that people and ecosystems recover together.
                   </p>
                   <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
                     Explore programmes <span className="text-lg">→</span>
@@ -270,7 +270,7 @@ export default function Home() {
                     Promote Food Security & Income
                   </h3>
                   <p className="text-sm text-white/85 mb-3 leading-relaxed max-w-lg">
-                    When families eat from their gardens, oceans breathe easier. <strong>735+ women</strong> now lead livelihoods that don't depend on overfished stocks. Through <strong>Trash4Cash</strong>, mothers turn plastic into income (<strong>2+ tonnes monthly</strong>). <strong>600+ households</strong> grow food using climate-smart permaculture. <em>Diversified income generating activities—the ocean isn't their only option anymore, it's their choice to protect.</em>
+                    When families eat from gardens, oceans breathe easier. <strong>735+ women</strong> in Trash4Cash and permaculture. <strong>600+ households</strong> with food security. The ocean isn't their only option—it's their choice to protect.
                   </p>
                   <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
                     Explore programmes <span className="text-lg">→</span>
@@ -304,7 +304,7 @@ export default function Home() {
                     Strengthen Institutional Capacity
                   </h3>
                   <p className="text-sm text-white/85 mb-3 leading-relaxed max-w-lg">
-                    Community passion needs professional backbone. We bridge grassroots wisdom with <strong>audit-ready science</strong>, coordinate <strong>18 BMUs across 120 km²</strong> of co-managed waters, and support communities in applying fisheries policies. Recognized by <strong>Royal Visit 2023</strong> and <strong>IUCN Blue Champions Award</strong>, we prove that <em>Joint and Co-Management Areas work—when community rights meet institutional support.</em>
+                    Community passion meets professional backbone. <strong>Audit-ready science</strong>, <strong>18 BMUs coordinated</strong>, <strong>Royal Visit 2023</strong> recognition. Joint and Co-Management Areas work when community rights meet institutional support.
                   </p>
                   <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
                     Explore programmes <span className="text-lg">→</span>

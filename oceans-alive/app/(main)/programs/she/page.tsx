@@ -19,7 +19,7 @@ export default function SHEProgramPage() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-32">
           <div className="text-6xl font-poppins font-bold text-white/20 mb-4">02</div>
-          <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Social Health Environment</h1>
+          <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Promote Food Security & Income</h1>
           <p className="text-xl text-white/90 max-w-3xl mb-4 leading-relaxed">
             Sustainable Households & Enterprises
           </p>

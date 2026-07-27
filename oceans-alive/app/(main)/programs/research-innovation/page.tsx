@@ -19,7 +19,7 @@ export default function ResearchInnovationPage() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-32">
           <div className="text-6xl font-poppins font-bold text-white/20 mb-4">05</div>
-          <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Research, Innovation & Sustainable Finance</h1>
+          <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Strengthen Institutional Capacity</h1>
           <p className="text-xl text-white/90 max-w-3xl mb-8 leading-relaxed">
             This programme generates the evidence, innovation and financial sustainability that support long-term conservation. It combines scientific monitoring (in partnership with WCS), community knowledge and sustainable revenue models.
           </p>

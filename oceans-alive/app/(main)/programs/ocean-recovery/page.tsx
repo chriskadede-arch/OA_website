@@ -19,7 +19,7 @@ export default function OceanRecoveryPage() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-32">
           <div className="text-6xl font-poppins font-bold text-white/20 mb-4">01</div>
-          <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Ocean Recovery</h1>
+          <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Promote Marine Ecosystem Integrity</h1>
           <p className="text-xl text-white/90 max-w-3xl mb-8 leading-relaxed">
             Healthy oceans support healthy communities. Our Ocean Recovery programme helps coastal communities protect and restore the ecosystems they depend on — from coral reefs and fisheries to sea-turtle habitats. Coral restoration is one of several workstreams within this programme, alongside fisheries and habitat management.
           </p>
