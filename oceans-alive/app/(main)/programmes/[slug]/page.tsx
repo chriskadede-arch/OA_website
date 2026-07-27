@@ -563,14 +563,14 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
               Related Programmes
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {related.map((r) => (
+              {related.map((r, index) => (
                 <Link
                   key={r.slug}
                   href={`/programmes/${r.slug}`}
                   className={`group relative overflow-hidden rounded-2xl bg-gradient-to-br ${r.color} p-7 text-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <span className="text-2xl font-poppins font-bold text-white/25">{r.number}</span>
+                    <span className="text-2xl font-poppins font-bold text-white/25">{String(index + 1).padStart(2, '0')}</span>
                     <span className="text-[10px] font-bold uppercase tracking-wider bg-white/10 px-2 py-0.5 rounded-full">{r.category}</span>
                   </div>
                   <h3 className="text-base font-poppins font-bold mb-2">{r.title}</h3>
