@@ -317,11 +317,8 @@ export default function SHEProgramPage() {
               <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-6 drop-shadow-lg">
                 Women Leading Conservation
               </h2>
-              <p className="text-white/90 leading-relaxed mb-4 drop-shadow-md">
-                Through the SHE programme, women shape conservation across Kilifi County. From coral restoration to recycling initiatives, they create solutions that benefit people and the environment.
-              </p>
-              <p className="text-white/90 leading-relaxed mb-8 drop-shadow-md">
-                <strong>120+ women</strong> collect and sell over <strong>2 tonnes of plastic monthly</strong>, turning waste into income while protecting the coast.
+              <p className="text-white/90 leading-relaxed mb-8 drop-shadow-md text-lg">
+                <strong>120+ women</strong> collect over <strong>2 tonnes of plastic monthly</strong>, turning waste into income while protecting Kenya's coast.
               </p>
               <Link
                 href="/programmes/trash4cash"
