@@ -289,8 +289,9 @@ export default function SHEProgramPage() {
       {/* Next Strategic Objective Link */}
       <section className="bg-gradient-to-br from-pink-50 to-purple-50 py-12">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <Link href="/programs/research-innovation" className="inline-flex items-center gap-2 px-6 py-3 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-ocean-midnight transition-colors">
-            Next: Strengthen Institutional Capacity →
+          <Link href="/programs/research-innovation" className="inline-flex items-center gap-3 px-6 py-3 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-ocean-midnight transition-colors">
+            <span className="text-white/60 text-sm">4 of 4</span>
+            <span>Next: Strengthen Institutional Capacity →</span>
           </Link>
         </div>
       </section>

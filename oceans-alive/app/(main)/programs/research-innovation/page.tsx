@@ -299,8 +299,9 @@ export default function ResearchInnovationPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <Link href="/programs/learning-leadership" className="inline-flex items-center gap-2 px-6 py-3 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-ocean-midnight transition-colors">
-              Next: Strengthen Coastal Education →
+            <Link href="/programs/learning-leadership" className="inline-flex items-center gap-3 px-6 py-3 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-ocean-midnight transition-colors">
+              <span className="text-white/60 text-sm">1 of 4</span>
+              <span>Next: Strengthen Coastal Education →</span>
             </Link>
           </div>
         </div>

@@ -265,8 +265,9 @@ export default function LearningLeadershipPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <Link href="/programs/ocean-recovery" className="inline-flex items-center gap-2 px-6 py-3 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-ocean-midnight transition-colors">
-              Next: Promote Marine Ecosystem Integrity →
+            <Link href="/programs/ocean-recovery" className="inline-flex items-center gap-3 px-6 py-3 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-ocean-midnight transition-colors">
+              <span className="text-white/60 text-sm">2 of 4</span>
+              <span>Next: Promote Marine Ecosystem Integrity →</span>
             </Link>
           </div>
         </div>
