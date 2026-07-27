@@ -21,7 +21,7 @@ export default function GovernanceFisheriesPage() {
           <div className="text-6xl font-poppins font-bold text-white/20 mb-4">04</div>
           <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Governance & Sustainable Fisheries</h1>
           <p className="text-xl text-white/90 max-w-3xl mb-8 leading-relaxed">
-            Strong, collaborative governance is at the core of what Oceans Alive does — at least as central as coral restoration. This programme strengthens local institutions, supports communities to participate in decision-making, and promotes sustainable fisheries management through collaborative governance.
+            Strong, collaborative governance is at the core of what Oceans Alive does  -  at least as central as coral restoration. This programme strengthens local institutions, supports communities to participate in decision-making, and promotes sustainable fisheries management through collaborative governance.
           </p>
 
           {/* Key Impact Metrics */}
@@ -139,7 +139,7 @@ export default function GovernanceFisheriesPage() {
                 <h3 className="text-xl font-poppins font-bold text-ocean-midnight">BMU capacity & operations</h3>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Support to build the capacity of conservation CBOs and BMUs — patrol boats, uniforms, scout training and grants for operations.
+                Support to build the capacity of conservation CBOs and BMUs  -  patrol boats, uniforms, scout training and grants for operations.
               </p>
               <div className="space-y-2">
                 <div className="bg-green-50 rounded-lg p-3">

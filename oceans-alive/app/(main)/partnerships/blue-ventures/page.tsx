@@ -765,7 +765,7 @@ export default function BlueVenturesPage() {
               <p className="text-gray-600 leading-relaxed mb-8">
                 Your contribution directly supports fisheries catch monitoring, governance strengthening,
                 community financial resilience through VSLAs, and peer learning networks across the
-                KAMAMKUKI Joint Co-Management Area — building capacity for sustainable fisheries management.
+                KAMAMKUKI Joint Co-Management Area  -  building capacity for sustainable fisheries management.
               </p>
               <Link
                 href="/donate"

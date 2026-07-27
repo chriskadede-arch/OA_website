@@ -21,7 +21,7 @@ export default function Programmes() {
             Our <span className="text-ocean-turquoise">5 Programs</span>
           </h1>
           <p className="text-xl text-white/80 max-w-2xl leading-relaxed mb-10">
-            Five integrated programs spanning ocean recovery, women's empowerment, learning & leadership, governance, and research—forming a complete model for community-led conservation that centers the people who depend on the sea.
+            Five integrated programs spanning ocean recovery, women's empowerment, learning & leadership, governance, and research - forming a complete model for community-led conservation that centers the people who depend on the sea.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl">
             {[
@@ -174,7 +174,7 @@ export default function Programmes() {
               5 Integrated Programs
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Five interconnected programs spanning ocean recovery, women's empowerment, learning, governance, and research—forming a complete model for community-led conservation.
+              Five interconnected programs spanning ocean recovery, women's empowerment, learning, governance, and research - forming a complete model for community-led conservation.
             </p>
           </div>
 

@@ -58,10 +58,10 @@ export default function KuruwitiPage() {
                   In the early 2000s, Kuruwitu's fishers saw their catch declining year after year. Instead of waiting for outside intervention, they took action themselves.
                 </p>
                 <p className="leading-relaxed">
-                  Led by local community leaders and fishermen, the <strong>Kuruwitu Conservation and Welfare Association (KCW-CBO)</strong> was formed. In 2003, they established Kenya's first Community Conservation Area (CCA)—a voluntary no-take zone managed entirely by the community.
+                  Led by local community leaders and fishermen, the <strong>Kuruwitu Conservation and Welfare Association (KCW-CBO)</strong> was formed. In 2003, they established Kenya's first Community Conservation Area (CCA) - a voluntary no-take zone managed entirely by the community.
                 </p>
                 <p className="leading-relaxed">
-                  This wasn't a project imposed from outside. It was born from local wisdom, driven by local leadership, and sustained by local commitment. The fishers of Kuruwitu decided their future—and created a model that would inspire conservation efforts across Kenya's coast.
+                  This wasn't a project imposed from outside. It was born from local wisdom, driven by local leadership, and sustained by local commitment. The fishers of Kuruwitu decided their future - and created a model that would inspire conservation efforts across Kenya's coast.
                 </p>
               </div>
             </div>

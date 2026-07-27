@@ -130,7 +130,7 @@ export default function Home() {
             </div>
             <div className="lg:pt-3">
               <p className="text-white/60 text-lg leading-relaxed">
-                We work through community institutions and formal co-management structures, in collaboration with government, technical partners and donors. Oceans Alive's role is to facilitate, strengthen capacity, provide technical advice, monitor, mobilise funding, support learning and document lessons — so that coastal communities remain the primary stewards of their marine resources.
+                We work through community institutions and formal co-management structures, in collaboration with government, technical partners and donors. Oceans Alive's role is to facilitate, strengthen capacity, provide technical advice, monitor, mobilise funding, support learning and document lessons  -  so that coastal communities remain the primary stewards of their marine resources.
               </p>
             </div>
           </div>
@@ -271,7 +271,7 @@ export default function Home() {
                     Promote Food Security & Income
                   </h3>
                   <p className="text-sm text-white/85 mb-3 leading-relaxed max-w-lg">
-                    When families eat from gardens, oceans breathe easier. <strong>735+ women</strong> in Trash4Cash and permaculture. <strong>600+ households</strong> with food security. The ocean isn't their only option—it's their choice to protect.
+                    When families eat from gardens, oceans breathe easier. <strong>735+ women</strong> in Trash4Cash and permaculture. <strong>600+ households</strong> with food security. The ocean isn't their only option - it's their choice to protect.
                   </p>
                   <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
                     Explore programmes <span className="text-lg">→</span>

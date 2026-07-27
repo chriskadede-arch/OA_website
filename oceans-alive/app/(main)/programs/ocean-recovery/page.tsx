@@ -21,7 +21,7 @@ export default function OceanRecoveryPage() {
           <div className="text-6xl font-poppins font-bold text-white/20 mb-4">01</div>
           <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Promote Marine Ecosystem Integrity</h1>
           <p className="text-xl text-white/90 max-w-3xl mb-8 leading-relaxed">
-            Healthy oceans support healthy communities. Our Ocean Recovery programme helps coastal communities protect and restore the ecosystems they depend on — from coral reefs and fisheries to sea-turtle habitats. Coral restoration is one of several workstreams within this programme, alongside fisheries and habitat management.
+            Healthy oceans support healthy communities. Our Ocean Recovery programme helps coastal communities protect and restore the ecosystems they depend on  -  from coral reefs and fisheries to sea-turtle habitats. Coral restoration is one of several workstreams within this programme, alongside fisheries and habitat management.
           </p>
 
           {/* Key Impact Metrics */}
@@ -162,13 +162,13 @@ export default function OceanRecoveryPage() {
             </div>
             <div className="prose prose-lg prose-invert max-w-none">
               <p className="text-white/90 leading-relaxed mb-4">
-                Since 2019, Oceans Alive has partnered with Coral Guardian International and Coral Reef Care to build Kenya's most active community-led coral nursery. But this isn't scientists doing the work—it's fishers. The same men and women who once extracted from the reef are now trained and employed as certified reef gardeners, maintaining 32 underwater nursery tables where coral fragments grow before being transplanted to 457 artificial reef structures.
+                Since 2019, Oceans Alive has partnered with Coral Guardian International and Coral Reef Care to build Kenya's most active community-led coral nursery. But this isn't scientists doing the work - it's fishers. The same men and women who once extracted from the reef are now trained and employed as certified reef gardeners, maintaining 32 underwater nursery tables where coral fragments grow before being transplanted to 457 artificial reef structures.
               </p>
               <p className="text-white/90 leading-relaxed mb-4">
-                The process is meticulous: coral fragments are carefully attached to nursery tables, monitored for growth, and once mature, transplanted onto degraded reef areas. The 85% survival rate proves the method works—but the real transformation is human, not ecological. Fishers who once saw coral as backdrop now understand it as the foundation of their livelihoods. They track growth rates, identify diseases, and protect restoration sites from damage.
+                The process is meticulous: coral fragments are carefully attached to nursery tables, monitored for growth, and once mature, transplanted onto degraded reef areas. The 85% survival rate proves the method works - but the real transformation is human, not ecological. Fishers who once saw coral as backdrop now understand it as the foundation of their livelihoods. They track growth rates, identify diseases, and protect restoration sites from damage.
               </p>
               <p className="text-white/90 leading-relaxed">
-                This partnership model—international expertise meeting local stewardship—creates lasting change. Coral Guardian provides technical training and monitoring protocols. Coral Reef Care supplies materials and scientific guidance. Oceans Alive coordinates the community side. And the fishers? They own it. When external partners eventually leave, the reef gardeners remain. That's how 25,000+ corals across 39 hectares doesn't become a one-time project—it becomes a way of life.
+                This partnership model - international expertise meeting local stewardship - creates lasting change. Coral Guardian provides technical training and monitoring protocols. Coral Reef Care supplies materials and scientific guidance. Oceans Alive coordinates the community side. And the fishers? They own it. When external partners eventually leave, the reef gardeners remain. That's how 25,000+ corals across 39 hectares doesn't become a one-time project - it becomes a way of life.
               </p>
             </div>
           </div>
@@ -181,13 +181,13 @@ export default function OceanRecoveryPage() {
             </div>
             <h3 className="text-2xl font-poppins font-bold text-ocean-midnight mb-4">The 30-Hectare Sanctuary That Changed Everything</h3>
             <p className="text-gray-700 leading-relaxed mb-6">
-              The 30-hectare Tengefu sanctuary at Kuruwitu wasn't Kenya's largest protected area. But it was the most important, because it proved that community-led conservation works—not as a pilot, but as a model that could scale. Around 15 years of community management delivered measurable recovery, economic benefits for 300+ households, and a blueprint that reached national policy.
+              The 30-hectare Tengefu sanctuary at Kuruwitu wasn't Kenya's largest protected area. But it was the most important, because it proved that community-led conservation works - not as a pilot, but as a model that could scale. Around 15 years of community management delivered measurable recovery, economic benefits for 300+ households, and a blueprint that reached national policy.
             </p>
 
             <div className="bg-blue-50 rounded-lg p-4 mb-6">
               <h4 className="font-bold text-ocean-midnight mb-2">Kuruwitu Co-Management Area (Historic Milestone, 2022)</h4>
               <p className="text-gray-700 text-sm leading-relaxed">
-                120 km² (12,000 hectares) under Kenya's first officially endorsed Co-Management Plan. Developed by the Kuruwitu BMU with Kenya Fisheries Service, Kilifi County Government, and Oceans Alive's technical support. This wasn't handed down—it was built from the ground up, complete with the first 6-step toolkit and Kenya's first IUCN SAGE analysis. Community passion met institutional backbone, and policy followed.
+                120 km² (12,000 hectares) under Kenya's first officially endorsed Co-Management Plan. Developed by the Kuruwitu BMU with Kenya Fisheries Service, Kilifi County Government, and Oceans Alive's technical support. This wasn't handed down - it was built from the ground up, complete with the first 6-step toolkit and Kenya's first IUCN SAGE analysis. Community passion met institutional backbone, and policy followed.
               </p>
             </div>
 
@@ -233,7 +233,7 @@ export default function OceanRecoveryPage() {
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Since 2019, Oceans Alive has partnered with Coral Guardian International and Coral Reef Care to build Kenya's most active community-led coral nursery at Kuruwitu. The same fishers whose livelihoods depend on the reef are now trained and employed as certified reef gardeners—planting, monitoring, and protecting the future they once took for granted.
+                Since 2019, Oceans Alive has partnered with Coral Guardian International and Coral Reef Care to build Kenya's most active community-led coral nursery at Kuruwitu. The same fishers whose livelihoods depend on the reef are now trained and employed as certified reef gardeners - planting, monitoring, and protecting the future they once took for granted.
               </p>
               <div className="grid grid-cols-3 gap-3 mb-3">
                 <div className="bg-pink-50 rounded-lg p-3 text-center">

@@ -94,7 +94,7 @@ export default function ResearchInnovationPage() {
                     </svg>
                   </div>
                   <h4 className="text-lg font-bold text-white mb-2">Joint Co-Management</h4>
-                  <p className="text-white/70 text-sm">120 km² under Kenya's first Co-Management Plan—community rights meet institutional support.</p>
+                  <p className="text-white/70 text-sm">120 km² under Kenya's first Co-Management Plan - community rights meet institutional support.</p>
                 </div>
 
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
@@ -167,7 +167,7 @@ export default function ResearchInnovationPage() {
                 The Kuruwitu model works because it's backed by rigorous science, sustainable finance, and institutional support. Community-led doesn't mean community-alone. Oceans Alive provides the technical expertise, monitoring infrastructure, and evidence base that turns grassroots passion into policy-ready conservation.
               </p>
               <p className="text-white/90 leading-relaxed mb-4">
-                In partnership with Wildlife Conservation Society (WCS), we conduct quarterly monitoring surveys that track ecosystem health across coral cover, fish biomass, and seagrass recovery. This isn't data for journals—it's proof that the model works. When the Royal Family visited Kuruwitu in 2023, when IUCN awarded the Blue Champions recognition in 2022, when Kenya's government endorsed the first Co-Management Plan—they did it because the evidence was undeniable.
+                In partnership with Wildlife Conservation Society (WCS), we conduct quarterly monitoring surveys that track ecosystem health across coral cover, fish biomass, and seagrass recovery. This isn't data for journals - it's proof that the model works. When the Royal Family visited Kuruwitu in 2023, when IUCN awarded the Blue Champions recognition in 2022, when Kenya's government endorsed the first Co-Management Plan - they did it because the evidence was undeniable.
               </p>
               <p className="text-white/90 leading-relaxed">
                 This programme also generates the sustainable revenue models that keep conservation alive beyond donor cycles: economic assessments, business plans, aquatic ecotourism concessions with Vipingo Ridge and LEAP, grants from IUCN/EU BIOPAMA, and KCW-CBO revenue streams generating USD 10–20K annually. Conservation that doesn't pay for itself doesn't last.
@@ -185,7 +185,7 @@ export default function ResearchInnovationPage() {
             </div>
             <div className="p-6">
               <p className="text-gray-700 leading-relaxed mb-6">
-                In partnership with WCS, Oceans Alive conducts quarterly monitoring surveys that track the health of Kuruwitu's marine ecosystems. These aren't academic exercises—they're the proof that community-led conservation delivers measurable, long-term recovery. Fifteen years of data show a 400% increase in fish biomass, 30% reef recovery, 17% seagrass regrowth, and an 85% coral survival rate in restoration sites.
+                In partnership with WCS, Oceans Alive conducts quarterly monitoring surveys that track the health of Kuruwitu's marine ecosystems. These aren't academic exercises - they're the proof that community-led conservation delivers measurable, long-term recovery. Fifteen years of data show a 400% increase in fish biomass, 30% reef recovery, 17% seagrass regrowth, and an 85% coral survival rate in restoration sites.
               </p>
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="flex items-start gap-3">
@@ -211,7 +211,7 @@ export default function ResearchInnovationPage() {
                   <div>
                     <h4 className="text-lg font-poppins font-bold text-ocean-midnight mb-3">Coral & Ecosystem Health</h4>
                     <p className="text-gray-700 leading-relaxed">
-                      Regular assessments measure coral cover, recruitment, and reef condition. An 85% survival rate in coral restoration sites demonstrates that community-led restoration isn't just symbolic—it's rebuilding reefs at scale, backed by science.
+                      Regular assessments measure coral cover, recruitment, and reef condition. An 85% survival rate in coral restoration sites demonstrates that community-led restoration isn't just symbolic - it's rebuilding reefs at scale, backed by science.
                     </p>
                   </div>
                 </div>
@@ -219,7 +219,7 @@ export default function ResearchInnovationPage() {
               <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-xl p-5">
                 <div className="text-sm font-bold text-cyan-700 mb-2">Evidence That Changed Policy</div>
                 <div className="text-xs text-gray-600 leading-relaxed">
-                  This monitoring data underpinned Kenya's first officially endorsed Co-Management Plan (2022), Kenya's first IUCN SAGE analysis, and the development of the 6-step co-management toolkit now being adopted across Kilifi County's 18 BMUs. Science didn't replace community wisdom—it amplified it.
+                  This monitoring data underpinned Kenya's first officially endorsed Co-Management Plan (2022), Kenya's first IUCN SAGE analysis, and the development of the 6-step co-management toolkit now being adopted across Kilifi County's 18 BMUs. Science didn't replace community wisdom - it amplified it.
                 </div>
               </div>
             </div>
@@ -258,7 +258,7 @@ export default function ResearchInnovationPage() {
                 <div className="text-xs text-blue-600 font-bold uppercase mt-1">18 BMUs | 120 km² Co-Managed</div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Oceans Alive coordinates the Kilifi County BMU Network—18 Beach Management Units managing 120 km² of co-managed waters. This isn't bureaucracy; it's how fisher voices reach county and national policy. We support BMUs in applying fisheries policies, developing co-management plans, and ensuring that community rights are recognized and protected.
+                Oceans Alive coordinates the Kilifi County BMU Network - 18 Beach Management Units managing 120 km² of co-managed waters. This isn't bureaucracy; it's how fisher voices reach county and national policy. We support BMUs in applying fisheries policies, developing co-management plans, and ensuring that community rights are recognized and protected.
               </p>
               <div className="bg-blue-50 rounded-lg p-4">
                 <div className="text-sm font-bold text-blue-700 mb-2">What BMUs Control</div>

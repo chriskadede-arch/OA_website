@@ -167,13 +167,13 @@ export default function LearningLeadershipPage() {
             </div>
             <div className="prose prose-lg prose-invert max-w-none">
               <p className="text-white/90 leading-relaxed mb-4">
-                Kuruwitu isn't just a marine sanctuary—it's a living classroom where conservation becomes real. Every year, students from across Kilifi County arrive to snorkel above coral gardens, identify reef species, and hear stories from community divers about what the reef looked like before, and what it looks like now. This is ocean literacy rooted in living evidence, not textbook theory.
+                Kuruwitu isn't just a marine sanctuary - it's a living classroom where conservation becomes real. Every year, students from across Kilifi County arrive to snorkel above coral gardens, identify reef species, and hear stories from community divers about what the reef looked like before, and what it looks like now. This is ocean literacy rooted in living evidence, not textbook theory.
               </p>
               <p className="text-white/90 leading-relaxed mb-4">
-                Since 2016, Oceans Alive has walked alongside coastal communities to turn their vision for a healthy ocean into reality. We don't just teach—we build learning platforms where knowledge flows in every direction: from elders to youth, from fishers to scientists, from Kuruwitu to the world.
+                Since 2016, Oceans Alive has walked alongside coastal communities to turn their vision for a healthy ocean into reality. We don't just teach - we build learning platforms where knowledge flows in every direction: from elders to youth, from fishers to scientists, from Kuruwitu to the world.
               </p>
               <p className="text-white/90 leading-relaxed">
-                Education here is cross-cutting and intergenerational. When primary school children plant corals alongside certified community divers, when international students learn permaculture from Mama Karanga women, when African Leadership University students document fisher stories through Project REEL—that's when conservation becomes a movement, not a project.
+                Education here is cross-cutting and intergenerational. When primary school children plant corals alongside certified community divers, when international students learn permaculture from Mama Karanga women, when African Leadership University students document fisher stories through Project REEL - that's when conservation becomes a movement, not a project.
               </p>
             </div>
           </div>
@@ -191,7 +191,7 @@ export default function LearningLeadershipPage() {
                 Over 10,000 school children have stepped into the ocean at Kuruwitu. Not as tourists, but as learners. They've planted corals with community divers, documented marine species, learned permaculture from LIFT Network women, and carried those lessons home.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Seven schools now partner directly with the Y4O program for long-term coral management and restoration education. International students—300 from Europe and North America, 13 from African Leadership University—arrive to learn, then leave as ambassadors lobbying for sustainable coastal fisheries management globally. Fifteen filmmakers have been trained to tell these stories. Ten films have reached screens worldwide.
+                Seven schools now partner directly with the Y4O program for long-term coral management and restoration education. International students - 300 from Europe and North America, 13 from African Leadership University - arrive to learn, then leave as ambassadors lobbying for sustainable coastal fisheries management globally. Fifteen filmmakers have been trained to tell these stories. Ten films have reached screens worldwide.
               </p>
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="bg-green-50 rounded-xl p-4 text-center">
@@ -219,7 +219,7 @@ export default function LearningLeadershipPage() {
                 <div className="text-xs text-ocean-turquoise font-bold uppercase mt-1">Storytelling & Knowledge Exchange</div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Intergenerational knowledge doesn't live in reports—it lives in stories. Project REEL trains young filmmakers to document fisher voices, community wisdom, and the Kuruwitu journey. These aren't promotional videos; they're living archives of what works, what failed, and why it matters.
+                Intergenerational knowledge doesn't live in reports - it lives in stories. Project REEL trains young filmmakers to document fisher voices, community wisdom, and the Kuruwitu journey. These aren't promotional videos; they're living archives of what works, what failed, and why it matters.
               </p>
               <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-lg p-4">
                 <div className="text-sm font-bold text-green-700 mb-2">Capturing Community Wisdom</div>
@@ -238,7 +238,7 @@ export default function LearningLeadershipPage() {
                 <div className="text-xs text-amber-600 font-bold uppercase mt-1">Global Recognition, Local Roots</div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                What began at Kuruwitu is now recognized on world stages. The Fisher Folk Academy represents a model that centers community leadership, not external consultants. From IUCN conferences in Marseille, Monaco, and the Asia-Pacific region to the 2022 Blue Champions Award, the world is watching—and learning.
+                What began at Kuruwitu is now recognized on world stages. The Fisher Folk Academy represents a model that centers community leadership, not external consultants. From IUCN conferences in Marseille, Monaco, and the Asia-Pacific region to the 2022 Blue Champions Award, the world is watching - and learning.
               </p>
               <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg p-4">
                 <div className="text-sm font-bold text-amber-700 mb-2">International Platforms</div>

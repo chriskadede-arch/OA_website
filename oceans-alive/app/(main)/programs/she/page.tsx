@@ -85,7 +85,7 @@ export default function SHEProgramPage() {
                     </svg>
                   </div>
                   <h4 className="text-lg font-bold text-white mb-2">Diversified Income (DIGs)</h4>
-                  <p className="text-white/70 text-sm">735+ women in Trash4Cash, permaculture, LIFT Network—economic options beyond fishing.</p>
+                  <p className="text-white/70 text-sm">735+ women in Trash4Cash, permaculture, LIFT Network - economic options beyond fishing.</p>
                 </div>
 
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
@@ -99,7 +99,7 @@ export default function SHEProgramPage() {
                     </svg>
                   </div>
                   <h4 className="text-lg font-bold text-white mb-2">Value Chain Support</h4>
-                  <p className="text-white/70 text-sm">For every 1 fisher, 20 livelihoods benefit—supporting the entire coastal economy.</p>
+                  <p className="text-white/70 text-sm">For every 1 fisher, 20 livelihoods benefit - supporting the entire coastal economy.</p>
                 </div>
 
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
@@ -133,7 +133,7 @@ export default function SHEProgramPage() {
                 </svg>
               </div>
               <h3 className="text-lg font-poppins font-bold text-ocean-midnight mb-2">Trash4Cash Recycling</h3>
-              <p className="text-gray-600 text-sm">120+ women collect, sort and sell plastic waste—turning 2+ tonnes of ocean pollution into monthly household income.</p>
+              <p className="text-gray-600 text-sm">120+ women collect, sort and sell plastic waste - turning 2+ tonnes of ocean pollution into monthly household income.</p>
             </div>
 
             <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-green-500 hover:shadow-xl transition-shadow">
@@ -169,13 +169,13 @@ export default function SHEProgramPage() {
             </div>
             <div className="prose prose-lg prose-invert max-w-none">
               <p className="text-white/90 leading-relaxed mb-4">
-                Conservation is strongest when communities have secure livelihoods and economic independence. This isn't feel-good rhetoric—it's the foundational principle behind the Social, Health & Environment programme. When coastal women have diversified income options, when households grow their own food, when plastic waste becomes a paycheck instead of ocean pollution—that's when conservation moves from a moral argument to a livelihood strategy.
+                Conservation is strongest when communities have secure livelihoods and economic independence. This isn't feel-good rhetoric - it's the foundational principle behind the Social, Health & Environment programme. When coastal women have diversified income options, when households grow their own food, when plastic waste becomes a paycheck instead of ocean pollution - that's when conservation moves from a moral argument to a livelihood strategy.
               </p>
               <p className="text-white/90 leading-relaxed mb-4">
-                For every 1 fisher on the water, 20 livelihoods benefit in the value chain. That's 20 families whose futures depend on a healthy ocean—not because they're convinced by campaigns, but because their income depends on it. This programme recognizes that economic sustainability and environmental sustainability aren't separate goals. They're the same fight.
+                For every 1 fisher on the water, 20 livelihoods benefit in the value chain. That's 20 families whose futures depend on a healthy ocean - not because they're convinced by campaigns, but because their income depends on it. This programme recognizes that economic sustainability and environmental sustainability aren't separate goals. They're the same fight.
               </p>
               <p className="text-white/90 leading-relaxed">
-                This isn't aid—it's agency. And when women lead economic empowerment, entire communities shift toward conservation as a livelihood strategy, not a sacrifice.
+                This isn't aid - it's agency. And when women lead economic empowerment, entire communities shift toward conservation as a livelihood strategy, not a sacrifice.
               </p>
             </div>
           </div>
@@ -190,10 +190,10 @@ export default function SHEProgramPage() {
             </div>
             <div className="p-6">
               <p className="text-gray-700 leading-relaxed mb-4">
-                Eight million tonnes of plastic enter the world's oceans every year. On the Kilifi coast, the women of the Trash4Cash programme are fighting back—and getting paid for it. More than 120 women across four communities now collect, sort, and sell plastic waste to certified recyclers, collecting over two tonnes of plastic waste every month.
+                Eight million tonnes of plastic enter the world's oceans every year. On the Kilifi coast, the women of the Trash4Cash programme are fighting back - and getting paid for it. More than 120 women across four communities now collect, sort, and sell plastic waste to certified recyclers, collecting over two tonnes of plastic waste every month.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                What would otherwise end up choking sea turtles and suffocating coral becomes household income. Trash4Cash is part of the LIFT Network—Oceans Alive's broader women's economic empowerment platform. By placing income generation and environmental protection in the same hands, we make conservation something women do for their own futures, not something done to their environment.
+                What would otherwise end up choking sea turtles and suffocating coral becomes household income. Trash4Cash is part of the LIFT Network - Oceans Alive's broader women's economic empowerment platform. By placing income generation and environmental protection in the same hands, we make conservation something women do for their own futures, not something done to their environment.
               </p>
               <div className="grid grid-cols-3 gap-3">
                 <div className="bg-pink-50 rounded-lg p-3 text-center">
@@ -230,10 +230,10 @@ export default function SHEProgramPage() {
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                When coastal fishing families have backyard permaculture gardens growing leafy vegetables and resilient indigenous crops, they eat better—and fish less. This isn't just about nutrition. It's about reducing pressure on overexploited fish stocks by giving families an alternative source of food and income.
+                When coastal fishing families have backyard permaculture gardens growing leafy vegetables and resilient indigenous crops, they eat better - and fish less. This isn't just about nutrition. It's about reducing pressure on overexploited fish stocks by giving families an alternative source of food and income.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                The programme is intentionally integrated with LIFT Network, Trash4Cash, and coral restoration—because a community that has food security is a community that can afford to let the reef recover.
+                The programme is intentionally integrated with LIFT Network, Trash4Cash, and coral restoration - because a community that has food security is a community that can afford to let the reef recover.
               </p>
               <div className="bg-green-50 rounded-lg p-4">
                 <div className="text-2xl font-bold text-green-700 mb-1">600+</div>
@@ -258,10 +258,10 @@ export default function SHEProgramPage() {
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Coastal women are disproportionately affected by declining fish stocks and ocean degradation—and disproportionately excluded from the governance decisions that shape their futures. The LIFT Network (Livelihoods, Independence, Finance, Transformation) changes that.
+                Coastal women are disproportionately affected by declining fish stocks and ocean degradation - and disproportionately excluded from the governance decisions that shape their futures. The LIFT Network (Livelihoods, Independence, Finance, Transformation) changes that.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Women now participate in BMU meetings, co-management planning sessions, and conservation monitoring. They're not beneficiaries of conservation—they're its architects. Through savings groups, entrepreneurship training, and leadership development, women are reshaping what coastal conservation looks like.
+                Women now participate in BMU meetings, co-management planning sessions, and conservation monitoring. They're not beneficiaries of conservation - they're its architects. Through savings groups, entrepreneurship training, and leadership development, women are reshaping what coastal conservation looks like.
               </p>
               <div className="bg-purple-50 rounded-lg p-4">
                 <div className="text-lg font-bold text-purple-700">735+ Women Engaged</div>
