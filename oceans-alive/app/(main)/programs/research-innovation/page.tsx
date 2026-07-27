@@ -18,7 +18,7 @@ export default function ResearchInnovationPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-32">
-          <div className="text-6xl font-poppins font-bold text-white/20 mb-4">05</div>
+          <div className="text-6xl font-poppins font-bold text-white/20 mb-4">04</div>
           <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Strengthen Institutional Capacity</h1>
           <p className="text-xl text-white/90 max-w-3xl mb-8 leading-relaxed">
             This programme generates the evidence, innovation and financial sustainability that support long-term conservation. It combines scientific monitoring (in partnership with WCS), community knowledge and sustainable revenue models.

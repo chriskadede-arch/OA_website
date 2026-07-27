@@ -155,13 +155,29 @@ export default function Resources() {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
               {[
-                { icon: '📄', label: 'Toolkits & Guides', value: '25+' },
-                { icon: '🎥', label: 'Impact Videos', value: '15+' },
-                { icon: '📰', label: 'Press & Articles', value: '30+' },
-                { icon: '📊', label: 'Case Studies', value: '10+' },
+                {
+                  svg: <svg className="w-10 h-10 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>,
+                  label: 'Toolkits & Guides',
+                  value: '25+'
+                },
+                {
+                  svg: <svg className="w-10 h-10 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>,
+                  label: 'Impact Videos',
+                  value: '15+'
+                },
+                {
+                  svg: <svg className="w-10 h-10 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>,
+                  label: 'Press & Articles',
+                  value: '30+'
+                },
+                {
+                  svg: <svg className="w-10 h-10 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>,
+                  label: 'Case Studies',
+                  value: '10+'
+                },
               ].map((stat) => (
                 <div key={stat.label} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4">
-                  <div className="text-3xl mb-2">{stat.icon}</div>
+                  <div className="mb-2">{stat.svg}</div>
                   <div className="text-2xl font-poppins font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-xs text-white/50 uppercase tracking-wider">{stat.label}</div>
                 </div>
@@ -185,9 +201,24 @@ export default function Resources() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-center gap-3">
             {[
-              { id: 'downloads', label: 'Toolkits & Downloads', icon: '📥', count: filtered.length },
-              { id: 'videos', label: 'Videos & Films', icon: '🎬', count: FEATURED_VIDEOS.length },
-              { id: 'articles', label: 'What Others Say', icon: '📰', count: EXTERNAL_ARTICLES.length },
+              {
+                id: 'downloads',
+                label: 'Toolkits & Downloads',
+                icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>,
+                count: filtered.length
+              },
+              {
+                id: 'videos',
+                label: 'Videos & Films',
+                icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>,
+                count: FEATURED_VIDEOS.length
+              },
+              {
+                id: 'articles',
+                label: 'What Others Say',
+                icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>,
+                count: EXTERNAL_ARTICLES.length
+              },
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -199,7 +230,7 @@ export default function Resources() {
                 }`}
               >
                 <div className="flex items-center gap-3">
-                  <span className="text-2xl">{tab.icon}</span>
+                  <div className={activeTab === tab.id ? 'text-white' : 'text-ocean-turquoise'}>{tab.icon}</div>
                   <div className="text-left">
                     <div>{tab.label}</div>
                     <div className={`text-xs font-normal ${activeTab === tab.id ? 'text-white/70' : 'text-gray-400'}`}>

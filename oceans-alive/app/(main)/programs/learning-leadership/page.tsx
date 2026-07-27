@@ -18,7 +18,7 @@ export default function LearningLeadershipPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-32">
-          <div className="text-6xl font-poppins font-bold text-white/20 mb-4">03</div>
+          <div className="text-6xl font-poppins font-bold text-white/20 mb-4">01</div>
           <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Strengthen Coastal Education</h1>
           <p className="text-xl text-white/90 max-w-3xl mb-8 leading-relaxed">
             Lasting conservation depends on knowledge, skills and local leadership. Using the ocean as a classroom, this programme helps youth, community members and practitioners build the confidence and experience to lead change. It is delivered together with the KCW-CBO, the Kuruwitu BMU, schools and local practitioners, with OA as facilitator and programme partner. Learning and lessons-sharing are cross-cutting and intergenerational, not youth-only.
