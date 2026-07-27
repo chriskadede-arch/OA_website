@@ -128,12 +128,37 @@ The 5th programme (Governance & Fisheries) is integrated into Strategic Objectiv
 
 ---
 
-## Next Steps:
+## Deployment Status:
 
 ✅ Team order updated
 ✅ Strategic objectives section created with 4 cards
 ✅ Content is creative, detailed, and metric-driven
 ✅ Design is professional and engaging
-✅ Build completed successfully
+✅ Production build completed with `/OA_website` basePath
+✅ Ready for GoDaddy upload
 
-Ready for deployment!
+## How to Upload to GoDaddy:
+
+### Option 1: Using the godaddy-upload directory
+1. Navigate to: `c:\Users\chris\Desktop\godaddy-upload`
+2. Delete all old files in that directory
+3. Copy all files from `c:\Users\chris\Desktop\oa_website\` (root directory) to `c:\Users\chris\Desktop\godaddy-upload\`
+4. Use FileZilla to upload from godaddy-upload to your GoDaddy server
+
+### Option 2: Direct upload
+1. All production files are in the root: `c:\Users\chris\Desktop\oa_website\`
+2. Upload the following to your GoDaddy `/public_html/OA_website/` folder:
+   - All `.html` files
+   - `_next/` folder
+   - `images/` folder  
+   - All other assets
+
+### Verification:
+After upload, visit your live site and verify:
+- Homepage shows "Our Strategic Objectives" (not "Interlocking Programs")
+- Team page has Ledama as last member (#22)
+- Team page has Chris Adede at position #11 (after Katana)
+- All 4 strategic objective cards display with proper content and metrics
+
+### Files Ready for Upload:
+All files in `c:\Users\chris\Desktop\oa_website\` (excluding the `oceans-alive/` source folder)
