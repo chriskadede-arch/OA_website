@@ -305,7 +305,7 @@ export default function Home() {
                     Strengthen Institutional Capacity
                   </h3>
                   <p className="text-sm text-white/85 mb-3 leading-relaxed max-w-lg">
-                    <strong>18 BMUs coordinated</strong>, <strong>audit-ready science</strong>, <strong>Royal Visit 2023</strong>.
+                    <strong>18 BMUs</strong>, <strong>audit-ready science</strong>, <strong>Royal Visit 2023</strong>.
                   </p>
                   <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
                     Explore programmes <span className="text-lg">→</span>
