@@ -53,13 +53,12 @@ const INVOLVE_CARDS = [
 
 // ─── Nav Data ─────────────────────────────────────────────────────────────────
 
-// 5 Main Programs for Navigation
-const FIVE_PROGRAMS = [
-  { title: 'Ocean Recovery', description: 'Coral, reefs & marine ecosystems', href: '/programs/ocean-recovery' },
-  { title: 'Social Health Environment', description: 'Women\'s livelihoods & empowerment', href: '/programs/she' },
-  { title: 'Learning & Leadership', description: 'Education & capacity building', href: '/programs/learning-leadership' },
-  { title: 'Governance & Fisheries', description: 'Community governance & BMUs', href: '/programs/governance-fisheries' },
-  { title: 'Research & Innovation', description: 'Monitoring & sustainable finance', href: '/programs/research-innovation' },
+// 4 Strategic Objectives for Navigation
+const STRATEGIC_OBJECTIVES = [
+  { title: 'Strengthen Coastal Education', description: 'Ocean literacy & environmental awareness', href: '/programs/learning-leadership' },
+  { title: 'Promote Marine Ecosystem Integrity', description: 'Coral restoration & fisheries co-management', href: '/programs/ocean-recovery' },
+  { title: 'Promote Food Security & Income', description: 'Women\'s empowerment & climate-smart livelihoods', href: '/programs/she' },
+  { title: 'Strengthen Institutional Capacity', description: 'Research, monitoring & strategic partnerships', href: '/programs/research-innovation' },
 ];
 
 const MEGA_NAV: MegaNavItem[] = [
@@ -81,9 +80,9 @@ const MEGA_NAV: MegaNavItem[] = [
         ],
       },
       {
-        title: 'Our Programs',
+        title: 'Strategic Objectives',
         compact: true,
-        items: FIVE_PROGRAMS.map((p) => ({
+        items: STRATEGIC_OBJECTIVES.map((p) => ({
           label: p.title,
           href: p.href,
           description: p.description,
@@ -180,19 +179,19 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
                 </div>
               </div>
 
-              {/* Our Programs Section */}
+              {/* Strategic Objectives Section */}
               <div className="pt-6 border-t border-white/10">
                 <div className="flex items-center justify-between mb-6">
                   <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise flex items-center gap-2">
                     <span className="w-4 h-px bg-ocean-turquoise/40 inline-block" />
-                    Our Programs
+                    Strategic Objectives
                   </p>
                   <Link
                     href="/programmes"
                     onClick={onClose}
                     className="text-[10px] text-white/30 hover:text-ocean-turquoise transition-colors font-medium"
                   >
-                    See all →
+                    See all programmes →
                   </Link>
                 </div>
                 <div className="space-y-0.5">

@@ -181,7 +181,7 @@ export default function Home() {
             <Link
               href="/programs/learning-leadership"
               className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10"
-              style={{ minHeight: '320px' }}
+              style={{ minHeight: '260px' }}
             >
               <Image
                 src="/images/kids.jpg"
@@ -189,7 +189,7 @@ export default function Home() {
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-green-900 via-green-900/80 to-green-900/30" />
+              <div className="absolute inset-0 bg-gradient-to-t from-green-900 via-green-900/85 to-green-900/35" />
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
                   <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
@@ -201,14 +201,9 @@ export default function Home() {
                   <h3 className="text-xl md:text-2xl font-poppins font-bold text-white mb-2 leading-tight">
                     Strengthen Coastal Environmental Education
                   </h3>
-                  <p className="text-sm text-white/80 mb-3 leading-relaxed">
-                    Using Kuruwitu as a living classroom, we provide hands-on ocean literacy to 10,000+ learners—students, interns, and communities—building the next generation of ocean stewards.
+                  <p className="text-sm text-white/85 mb-3 leading-relaxed max-w-lg">
+                    We turn Kuruwitu into a living classroom where ocean meets action. <strong>10,000+ learners</strong>—from primary students to international interns—gain hands-on experience in coral restoration, permaculture, and community-led conservation. Through <strong>Project REEL Kilifi</strong>, we equip local filmmakers to tell Kenya's ocean stories to the world.
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Learning & Leadership</span>
-                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Living Classroom</span>
-                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Project REEL</span>
-                  </div>
                   <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
                     Explore programmes <span className="text-lg">→</span>
                   </span>
@@ -220,7 +215,7 @@ export default function Home() {
             <Link
               href="/programs/ocean-recovery"
               className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10"
-              style={{ minHeight: '320px' }}
+              style={{ minHeight: '260px' }}
             >
               <Image
                 src="/images/divers.jpg"
@@ -228,7 +223,7 @@ export default function Home() {
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/80 to-ocean-midnight/30" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/85 to-ocean-midnight/35" />
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
                   <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
@@ -240,14 +235,9 @@ export default function Home() {
                   <h3 className="text-xl md:text-2xl font-poppins font-bold text-white mb-2 leading-tight">
                     Promote Marine Ecosystem Integrity
                   </h3>
-                  <p className="text-sm text-white/80 mb-3 leading-relaxed">
-                    Transforming fishers into reef stewards across 120 km² under co-management. With 25,000+ corals restored and 400% fish biomass increase, we're proving community-led conservation works.
+                  <p className="text-sm text-white/85 mb-3 leading-relaxed max-w-lg">
+                    Fishers become reef gardeners. Through <strong>120 km² of co-managed waters</strong> and <strong>18 BMUs in Kilifi Network</strong>, we've transformed extractors into stewards. The result? <strong>25,000+ corals planted</strong>, <strong>400% fish biomass increase</strong>, and communities protecting what they once depleted. Proof that people and reefs recover together.
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Ocean Recovery</span>
-                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Coral Restoration</span>
-                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">BMU Network</span>
-                  </div>
                   <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
                     Explore programmes <span className="text-lg">→</span>
                   </span>
@@ -259,7 +249,7 @@ export default function Home() {
             <Link
               href="/programs/she"
               className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10"
-              style={{ minHeight: '320px' }}
+              style={{ minHeight: '260px' }}
             >
               <Image
                 src="/images/trashforcash.jpg"
@@ -267,7 +257,7 @@ export default function Home() {
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-pink-900 via-pink-900/80 to-pink-900/30" />
+              <div className="absolute inset-0 bg-gradient-to-t from-pink-900 via-pink-900/85 to-pink-900/35" />
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
                   <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
@@ -279,14 +269,9 @@ export default function Home() {
                   <h3 className="text-xl md:text-2xl font-poppins font-bold text-white mb-2 leading-tight">
                     Promote Food Security & Income Diversification
                   </h3>
-                  <p className="text-sm text-white/80 mb-3 leading-relaxed">
-                    Integrating land-based prosperity with marine health. 735+ women lead livelihoods, 600+ households practice climate-smart permaculture, and circular economy programmes reduce fishing pressure.
+                  <p className="text-sm text-white/85 mb-3 leading-relaxed max-w-lg">
+                    When families eat from their gardens, oceans breathe easier. <strong>735+ women</strong> now lead livelihoods that don't depend on overfished stocks. Through <strong>Trash4Cash</strong>, mothers turn plastic into income (<strong>2+ tonnes monthly</strong>). <strong>600+ households</strong> grow food using climate-smart permaculture. The ocean isn't their only option anymore—it's their choice to protect.
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">SHE Initiative</span>
-                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Trash4Cash</span>
-                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Kitchen Gardens</span>
-                  </div>
                   <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
                     Explore programmes <span className="text-lg">→</span>
                   </span>
@@ -298,7 +283,7 @@ export default function Home() {
             <Link
               href="/programs/research-innovation"
               className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10"
-              style={{ minHeight: '320px' }}
+              style={{ minHeight: '260px' }}
             >
               <Image
                 src="/images/oceansmen.jpg"
@@ -306,7 +291,7 @@ export default function Home() {
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-cyan-900 via-cyan-900/80 to-cyan-900/30" />
+              <div className="absolute inset-0 bg-gradient-to-t from-cyan-900 via-cyan-900/85 to-cyan-900/35" />
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
                   <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
@@ -318,14 +303,9 @@ export default function Home() {
                   <h3 className="text-xl md:text-2xl font-poppins font-bold text-white mb-2 leading-tight">
                     Strengthen Institutional Capacity
                   </h3>
-                  <p className="text-sm text-white/80 mb-3 leading-relaxed">
-                    As a professional, community-linked intermediary, we provide technical expertise, audit-ready metrics, and multi-fund coordination—delivering the evidence and infrastructure needed for scalable impact.
+                  <p className="text-sm text-white/85 mb-3 leading-relaxed max-w-lg">
+                    Community passion needs professional backbone. We bridge grassroots wisdom with <strong>audit-ready science</strong>, coordinate funding across <strong>UK FCDO, UNDP, IUCN</strong>, and track every coral, every kilo of fish. Recognized by <strong>Royal Visit 2023</strong> and <strong>IUCN Blue Champions Award</strong>, we prove local models can scale globally—when data meets determination.
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Research & Innovation</span>
-                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">M&E Systems</span>
-                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Strategic Partnerships</span>
-                  </div>
                   <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
                     Explore programmes <span className="text-lg">→</span>
                   </span>
