@@ -271,7 +271,7 @@ export default function Home() {
                     Promote Food Security & Income
                   </h3>
                   <p className="text-sm text-white/85 mb-3 leading-relaxed max-w-lg">
-                    When families eat from gardens, oceans breathe easier. <strong>735+ women</strong> in Trash4Cash and permaculture. <strong>600+ households</strong> with food security.
+                    <strong>735+ women</strong> in Trash4Cash. <strong>600+ households</strong> with food security.
                   </p>
                   <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
                     Explore programmes <span className="text-lg">→</span>
