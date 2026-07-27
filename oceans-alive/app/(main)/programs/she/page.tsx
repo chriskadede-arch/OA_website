@@ -297,7 +297,7 @@ export default function SHEProgramPage() {
       </section>
 
       {/* Women at the Heart of Conservation */}
-      <section className="relative bg-gradient-to-br from-ocean-midnight to-[#0a4f7a] py-16 md:py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-ocean-midnight to-[#0a4f7a] py-12 md:py-14 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -327,9 +327,9 @@ export default function SHEProgramPage() {
                 Support Women's Programmes →
               </Link>
             </div>
-            <div className="relative w-full h-[600px] lg:h-[700px]">
+            <div className="relative w-full h-[350px] lg:h-[400px]">
               {/* Overlapping Image 1 - Top Right */}
-              <div className="absolute top-12 right-6 md:right-12 w-64 md:w-80 lg:w-96 h-52 md:h-64 lg:h-72 rounded-2xl overflow-hidden shadow-2xl border-4 md:border-6 border-white transform rotate-6 hover:rotate-3 hover:scale-105 transition-all duration-300 z-10">
+              <div className="absolute top-6 right-6 md:right-12 w-52 md:w-64 lg:w-72 h-40 md:h-48 lg:h-52 rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-6 hover:rotate-3 hover:scale-105 transition-all duration-300 z-10">
                 <Image
                   src="/images/womenlearning.jpg"
                   alt="Women learning and empowerment"
@@ -339,7 +339,7 @@ export default function SHEProgramPage() {
               </div>
 
               {/* Overlapping Image 2 - Bottom Left */}
-              <div className="absolute bottom-12 left-6 md:left-12 w-72 md:w-88 lg:w-[420px] h-56 md:h-72 lg:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 md:border-6 border-white transform -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 z-20">
+              <div className="absolute bottom-6 left-6 md:left-12 w-60 md:w-72 lg:w-80 h-44 md:h-52 lg:h-56 rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 z-20">
                 <Image
                   src="/images/womenlearning2.jpg"
                   alt="Women in community programs"
