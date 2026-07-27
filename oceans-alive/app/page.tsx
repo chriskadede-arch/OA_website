@@ -176,12 +176,13 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Strategic Objective 1: Strengthen Coastal Environmental Education → SOCIAL PILLAR */}
+          {/* Creative Bento-Box Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+            {/* Strategic Objective 1: Strengthen Coastal Environmental Education → SOCIAL PILLAR - TALL LEFT */}
             <Link
               href="/programs/learning-leadership"
-              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10"
-              style={{ minHeight: '260px' }}
+              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10 md:col-span-5 md:row-span-2"
+              style={{ minHeight: '540px' }}
             >
               <Image
                 src="/images/kids.jpg"
@@ -211,10 +212,10 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Strategic Objective 2: Promote Marine Ecosystem Integrity → ENVIRONMENT PILLAR */}
+            {/* Strategic Objective 2: Promote Marine Ecosystem Integrity → ENVIRONMENT PILLAR - TOP RIGHT WIDE */}
             <Link
               href="/programs/ocean-recovery"
-              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10"
+              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10 md:col-span-7"
               style={{ minHeight: '260px' }}
             >
               <Image
@@ -245,10 +246,10 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Strategic Objective 3: Promote Food Security & Income → ECONOMIC PILLAR */}
+            {/* Strategic Objective 3: Promote Food Security & Income → ECONOMIC PILLAR - BOTTOM RIGHT SMALL */}
             <Link
               href="/programs/she"
-              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10"
+              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10 md:col-span-4"
               style={{ minHeight: '260px' }}
             >
               <Image
@@ -279,10 +280,10 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Strategic Objective 4: Strengthen Institutional Capacity → GOVERNANCE PILLAR */}
+            {/* Strategic Objective 4: Strengthen Institutional Capacity → GOVERNANCE PILLAR - BOTTOM RIGHT MEDIUM */}
             <Link
               href="/programs/research-innovation"
-              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10"
+              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10 md:col-span-3"
               style={{ minHeight: '260px' }}
             >
               <Image
