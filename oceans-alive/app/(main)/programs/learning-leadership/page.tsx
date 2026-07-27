@@ -21,7 +21,7 @@ export default function LearningLeadershipPage() {
           <div className="text-6xl font-poppins font-bold text-white/20 mb-4">03</div>
           <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Learning & Leadership</h1>
           <p className="text-xl text-white/90 max-w-3xl mb-8 leading-relaxed">
-            Lasting conservation depends on knowledge, skills and local leadership. Our Learning & Leadership Program uses the ocean as a classroom, helping young people, community members and conservation practitioners build the confidence and experience needed to lead change.
+            Lasting conservation depends on knowledge, skills and local leadership. Using the ocean as a classroom, this programme helps youth, community members and practitioners build the confidence and experience to lead change. It is delivered together with the KCW-CBO, the Kuruwitu BMU, schools and local practitioners, with OA as facilitator and programme partner. Learning and lessons-sharing are cross-cutting and intergenerational, not youth-only.
           </p>
 
           {/* Impact Boxes */}
@@ -29,19 +29,19 @@ export default function LearningLeadershipPage() {
             <div className="flex flex-wrap justify-center gap-2 mb-6">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-4 py-3 min-w-[130px]">
                 <div className="text-2xl font-poppins font-bold text-white">10,000+</div>
-                <div className="text-[9px] text-white/50 uppercase">Students Educated</div>
+                <div className="text-[9px] text-white/50 uppercase">School Children Reached</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-4 py-3 min-w-[130px]">
-                <div className="text-2xl font-poppins font-bold text-white">200+</div>
-                <div className="text-[9px] text-white/50 uppercase">Volunteers Trained</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-4 py-3 min-w-[130px]">
-                <div className="text-2xl font-poppins font-bold text-white">Kilifi</div>
-                <div className="text-[9px] text-white/50 uppercase">County-Wide</div>
+                <div className="text-2xl font-poppins font-bold text-white">50</div>
+                <div className="text-[9px] text-white/50 uppercase">Schools Reached</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-4 py-3 min-w-[130px]">
                 <div className="text-2xl font-poppins font-bold text-white">40+</div>
                 <div className="text-[9px] text-white/50 uppercase">International Interns</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-4 py-3 min-w-[130px]">
+                <div className="text-2xl font-poppins font-bold text-white">10+</div>
+                <div className="text-[9px] text-white/50 uppercase">Films Produced</div>
               </div>
             </div>
             <div className="flex justify-center items-center gap-3">
@@ -97,7 +97,7 @@ export default function LearningLeadershipPage() {
             </div>
             <div className="p-6">
               <p className="text-gray-700 leading-relaxed mb-6">
-                Thousands of students visit Kuruwitu each year to learn about marine ecosystems, coral restoration, backyard climate-smart permaculture, and sustainable resource management—becoming future ambassadors for coastal fisheries conservation.
+                Students visit Kuruwitu each year to learn about marine ecosystems, coral restoration, permaculture and sustainable resource management, becoming ambassadors for coastal fisheries conservation. 7 schools partner on coral management and restoration education.
               </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-green-50 rounded-xl p-5">
@@ -167,15 +167,10 @@ export default function LearningLeadershipPage() {
             <div className="flex items-start justify-between gap-6">
               <div className="flex-1">
                 <div className="bg-white/20 rounded-lg px-3 py-1 text-white font-bold text-sm inline-block mb-3">Knowledge Building</div>
-                <h3 className="text-2xl font-poppins font-bold mb-3">Citizen Science & Community Monitoring</h3>
+                <h3 className="text-2xl font-poppins font-bold mb-3">Citizen science & community monitoring</h3>
                 <p className="text-white/90 leading-relaxed">
-                  Community members, students and visitors contribute to monitoring and research through toolkits, templates, museums and educational materials—helping build knowledge while supporting conservation across 17 BMUs.
+                  Community members, students and visitors contribute to monitoring and research through toolkits, templates and educational materials, supporting conservation across the Kilifi County BMU network.
                 </p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center min-w-[160px]">
-                <div className="text-4xl font-bold text-white">10 Athletes</div>
-                <div className="text-xs text-white/70 uppercase mt-2">International Fame</div>
-                <div className="text-xs text-white/50 mt-1">Coral Restoration Advocates</div>
               </div>
             </div>
           </div>

@@ -70,7 +70,7 @@ export default function MissionPage() {
           <div className="flex items-center gap-4 mb-14">
             <div className="w-10 h-px bg-ocean-midnight/20" />
             <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-              Desmond Bowden - Founder, Oceans Alive Foundation
+              Des Bowden, Co-Founder & CEO, Oceans Alive | Co-Founder & Patron, Kuruwitu Conservation
             </span>
           </div>
 
@@ -84,42 +84,38 @@ export default function MissionPage() {
 
             {/* The Challenge */}
             <div className="mt-12 pt-12 border-t border-gray-200">
-              <h3 className="text-sm font-bold uppercase tracking-widest text-ocean-turquoise mb-6">The Challenge We Are Addressing</h3>
+              <h3 className="text-sm font-bold uppercase tracking-widest text-ocean-turquoise mb-8">The Challenge We Are Addressing</h3>
 
-              <div className="space-y-6">
-                <div className="bg-gradient-to-r from-ocean-turquoise/5 to-transparent border-l-4 border-ocean-turquoise p-6 rounded-r-xl">
-                  <p className="text-gray-700 text-lg leading-relaxed font-medium">
-                    Along the coast of East Africa, fishing, fish processing, and fish vending are cultural traditions with a history going back millennia. But what has changed profoundly are the prospects of fishing communities in terms of wellbeing and economic empowerment.
+              <div className="space-y-8">
+                {/* First Paragraph */}
+                <div className="relative bg-gradient-to-r from-ocean-turquoise/5 via-ocean-turquoise/3 to-transparent border-l-4 border-ocean-turquoise p-8 rounded-r-2xl">
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    For generations, Kenya's coastal people have relied on the ocean for food and work. Today, this way of life is under threat. Coral reefs are struggling because of climate change, pollution, and overfishing. When the reef suffers, families face hard times, with fewer fish to catch and less money to support their homes.
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                    <h4 className="font-poppins font-bold text-ocean-midnight mb-3">The Pressure</h4>
-                    <p className="text-gray-600 leading-relaxed text-sm">
-                      Population growth has driven an exponential increase in the number of artisanal fishers. As fish stocks have dwindled, illegal, unreported and unregulated (IUU) fishing — including dragnets — has proliferated, destroying coral and seagrass habitats and taking increasingly small juvenile fish. Governance capacity is weak and gear restrictions remain largely unenforced.
-                    </p>
-                  </div>
-
-                  <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                    <h4 className="font-poppins font-bold text-ocean-midnight mb-3">The Pattern</h4>
-                    <p className="text-gray-600 leading-relaxed text-sm">
-                      With 29+ years of NGO engagement in the region, there is little sign of improvement in ecosystems, fish populations, or coastal wellbeing. Decisions are mainly driven by NGOs who arrive with projects but rarely build lasting community leadership.
-                    </p>
-                  </div>
+                {/* Second Paragraph */}
+                <div className="bg-gradient-to-r from-gray-50 to-white border-l-4 border-ocean-midnight/30 p-8 rounded-r-2xl">
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    Due to population growth, more people are now fishing than ever before, and this has caused fish numbers to drop. To catch what they need, some fishers use nets that are <span className="font-semibold text-ocean-midnight">illegal, unreported and unregulated (IUU)</span>. These methods destroy coral and seagrass and catch fish that are too small before they have reproduced, and because there is little help from local authorities to stop these harmful practices, the ocean continues to suffer.
+                  </p>
                 </div>
 
-                <div className="bg-ocean-midnight rounded-xl p-6 text-white">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-ocean-turquoise/20 flex items-center justify-center shrink-0 mt-1">
-                      <span className="text-ocean-turquoise text-xl">✓</span>
+                {/* What Actually Works */}
+                <div className="relative overflow-hidden bg-gradient-to-br from-ocean-midnight to-ocean-midnight/90 rounded-2xl p-10 md:p-12">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(46,191,209,0.15),transparent_50%)]"></div>
+                  <div className="absolute bottom-0 right-0 w-96 h-96 bg-ocean-turquoise/5 rounded-full blur-3xl"></div>
+
+                  <div className="relative">
+                    <div className="flex items-center gap-3 mb-5">
+                      <div className="w-2 h-2 rounded-full bg-ocean-turquoise"></div>
+                      <div className="w-2 h-2 rounded-full bg-ocean-turquoise/60"></div>
+                      <div className="w-2 h-2 rounded-full bg-ocean-turquoise/30"></div>
                     </div>
-                    <div>
-                      <h4 className="font-poppins font-bold text-ocean-turquoise mb-2">What Actually Works</h4>
-                      <p className="text-white/80 leading-relaxed">
-                        Of some 30 Kenyan communities that set aside voluntary fisheries closures over the past 20 years, only a handful show ecological and social improvement — and in each case success is linked to long-term, place-based community organisation and strong partnership. With 20+ years of engagement in the region, Oceans Alive fills the gap between community effort and the technical, institutional and financial support needed to sustain it.
-                      </p>
-                    </div>
+                    <h4 className="font-poppins font-bold text-ocean-turquoise mb-6 text-3xl">What Actually Works</h4>
+                    <p className="text-white/90 leading-relaxed text-xl max-w-4xl">
+                      Conservation thrives when communities are well-organised and work in strong, long-term partnerships. For over 10 years, Oceans Alive has walked alongside coastal communities to provide the technical, institutional, and financial support needed to turn their vision for a healthy ocean into a reality.
+                    </p>
                   </div>
                 </div>
               </div>

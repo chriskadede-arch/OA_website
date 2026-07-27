@@ -88,8 +88,7 @@ export default function Home() {
               Oceans Alive
             </h1>
             <h2 className="font-poppins font-bold text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-6">
-              Coastal Communities. Healthier Reefs.<br />
-              <span className="text-white">Stronger Fisheries Governance.</span>
+              Healthy Oceans, Healthy Communities
             </h2>
             <p className="text-base md:text-lg text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto">
               Oceans Alive works with coastal communities, Beach Management Units, government agencies and conservation partners to strengthen fisheries co-management, restore marine ecosystems and build resilient coastal livelihoods in Kenya. Drawing on more than two decades of learning from Kuruwitu, we connect local knowledge, practical conservation, science and policy to support locally led marine stewardship.
@@ -115,40 +114,34 @@ export default function Home() {
 
       </section>
 
-      {/* - How We Work ------------------- */}
-      <section className="bg-white py-16 md:py-20 border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">How We Work</p>
-          <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
-            We work through community institutions and formal co-management structures, in collaboration with government, technical partners and donors. Oceans Alive's role is to facilitate, strengthen capacity, provide technical advice, monitor, mobilise funding, support learning and document lessons — so that coastal communities remain the primary stewards of their marine resources.
-          </p>
-        </div>
-      </section>
 
       {/* - Impact Stats (dark immersive) ---------─ */}
       <section className="bg-ocean-midnight py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-14">
             <div>
-              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">20-Year Journey of Impact</p>
-              <h2 className="text-4xl md:text-5xl font-poppins font-bold text-white leading-tight">
-                Two Decades of<br />Community-Led Conservation
+              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">Our Story</p>
+              <h2 className="text-4xl md:text-5xl font-poppins font-bold text-white leading-tight mb-6">
+                Two Decades of Impact
               </h2>
+              <p className="text-white/60 text-lg leading-relaxed">
+                <span className="text-white font-bold">20+ years of community-led conservation</span> at Kuruwitu: Oceans Alive was founded in <span className="text-white font-bold">2016</span> to scale and support the community-led approach started by the <span className="text-white font-bold">Kuruwitu-CBO in 2003</span>
+              </p>
             </div>
             <div className="lg:pt-3">
               <p className="text-white/60 text-lg leading-relaxed">
-                From establishing one of Kenya's earliest community-driven Locally Managed Marine Areas in 2006, to around 15 years of proven results (400% fish biomass increase, 30% reef recovery, 17% seagrass regrowth), to Kenya's first officially endorsed Co-Management Plan in 2022 — placing 120 km² under community stewardship.
+                We work through community institutions and formal co-management structures, in collaboration with government, technical partners and donors. Oceans Alive's role is to facilitate, strengthen capacity, provide technical advice, monitor, mobilise funding, support learning and document lessons — so that coastal communities remain the primary stewards of their marine resources.
               </p>
             </div>
           </div>
 
           <div className="flex flex-wrap md:flex-nowrap gap-0 border-l border-t border-b border-white/10">
             {IMPACT_STATS.map((stat, i) => (
-              <div key={i} className="flex-1 min-w-0 py-6 px-4 border-r border-white/10 text-center">
-                <div className="text-xl md:text-2xl font-poppins font-bold text-ocean-turquoise mb-1">
+              <div key={i} className="flex-1 min-w-0 py-4 px-3 border-r border-white/10 text-center">
+                <div className="text-lg md:text-xl font-poppins font-bold text-ocean-turquoise mb-1">
                   {stat.value}
                 </div>
-                <p className="text-[10px] md:text-xs text-white/50 leading-tight">{stat.label}</p>
+                <p className="text-[9px] md:text-[10px] text-white/50 leading-tight">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -165,184 +158,202 @@ export default function Home() {
         </div>
       </section>
 
-      {/* - 5 Programs Cards -------------─ */}
-      <section className="bg-white py-16 md:py-24">
+      {/* - 4 Strategic Objectives Cards -------------─ */}
+      <section className="bg-white py-12 md:py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
             <div>
-              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-3">Our Work</p>
-              <h2 className="text-4xl md:text-5xl font-poppins font-bold text-ocean-midnight leading-tight">
-                Interlocking<br />Programs
+              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-2">Our Work</p>
+              <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight">
+                Our Strategic Objectives
               </h2>
             </div>
             <Link
               href="/programmes"
-              className="shrink-0 inline-flex items-center gap-2 text-ocean-turquoise font-bold hover:text-ocean-midnight transition-colors"
+              className="shrink-0 inline-flex items-center gap-2 text-ocean-turquoise font-bold hover:text-ocean-midnight transition-colors text-sm"
             >
-              View all 5 programs →
+              Explore our programmes →
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
-            {/* Program 1: Ocean Recovery */}
-            <Link
-              href="/programs/ocean-recovery"
-              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 lg:col-span-2"
-              style={{ minHeight: '320px' }}
-            >
-              <Image
-                src="/images/divers.jpg"
-                alt="Ocean Recovery"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/70 to-ocean-midnight/20" />
-              <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                <div className="text-4xl font-poppins font-bold text-white/30 mb-2">01</div>
-                <h3 className="text-xl font-poppins font-bold text-white mb-2 leading-tight">Ocean Recovery</h3>
-                <p className="text-sm text-white/70 mb-4">Coral restoration, fisheries & marine ecosystems</p>
-                <div className="flex items-center gap-2 mb-3">
-                  <SDGRow sdgs={[14, 13, 17]} size="sm" showTooltip={false} />
-                </div>
-                <span className="text-xs font-bold text-ocean-turquoise group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-                  Learn more →
-                </span>
-              </div>
-            </Link>
-
-            {/* Program 2: Social Health Environment */}
-            <Link
-              href="/programs/she"
-              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 lg:col-span-2"
-              style={{ minHeight: '320px' }}
-            >
-              <Image
-                src="/images/trashforcash.jpg"
-                alt="Social Health Environment Program"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-pink-900 via-pink-900/70 to-pink-900/20" />
-              <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                <div className="text-4xl font-poppins font-bold text-white/30 mb-2">02</div>
-                <h3 className="text-xl font-poppins font-bold text-white mb-2 leading-tight">Social Health Environment</h3>
-                <p className="text-sm text-white/70 mb-4">Women's empowerment & sustainable livelihoods</p>
-                <div className="flex items-center gap-2 mb-3">
-                  <SDGRow sdgs={[5, 8, 14, 13]} size="sm" showTooltip={false} />
-                </div>
-                <span className="text-xs font-bold text-ocean-turquoise group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-                  Learn more →
-                </span>
-              </div>
-            </Link>
-
-            {/* Program 3: Learning & Leadership */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Strategic Objective 1: Strengthen Coastal Environmental Education and Awareness */}
             <Link
               href="/programs/learning-leadership"
-              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 lg:col-span-2"
+              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10"
               style={{ minHeight: '320px' }}
             >
               <Image
                 src="/images/kids.jpg"
-                alt="Learning & Leadership"
+                alt="Coastal Environmental Education"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-green-900 via-green-900/70 to-green-900/20" />
-              <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                <div className="text-4xl font-poppins font-bold text-white/30 mb-2">03</div>
-                <h3 className="text-xl font-poppins font-bold text-white mb-2 leading-tight">Learning & Leadership</h3>
-                <p className="text-sm text-white/70 mb-4">Ocean education & capacity building</p>
-                <div className="flex items-center gap-2 mb-3">
-                  <SDGRow sdgs={[4, 14, 13]} size="sm" showTooltip={false} />
+              <div className="absolute inset-0 bg-gradient-to-t from-green-900 via-green-900/80 to-green-900/30" />
+              <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                <div className="flex items-start justify-between">
+                  <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
+                    <span className="text-xs font-bold text-white uppercase tracking-wider">Education & Awareness</span>
+                  </div>
+                  <div className="text-3xl font-poppins font-black text-white/20">01</div>
                 </div>
-                <span className="text-xs font-bold text-ocean-turquoise group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-                  Learn more →
-                </span>
+                <div>
+                  <h3 className="text-xl md:text-2xl font-poppins font-bold text-white mb-2 leading-tight">
+                    Strengthen Coastal Environmental Education
+                  </h3>
+                  <p className="text-sm text-white/80 mb-3 leading-relaxed">
+                    Using Kuruwitu as a living classroom, we provide hands-on ocean literacy to 10,000+ learners—students, interns, and communities—building the next generation of ocean stewards.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Learning & Leadership</span>
+                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Living Classroom</span>
+                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Project REEL</span>
+                  </div>
+                  <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
+                    Explore programmes <span className="text-lg">→</span>
+                  </span>
+                </div>
               </div>
             </Link>
 
-            {/* Program 4: Governance & Fisheries */}
+            {/* Strategic Objective 2: Promote Long-term Integrity of Coastal/Marine Ecosystems */}
             <Link
-              href="/programs/governance-fisheries"
-              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 lg:col-span-3"
+              href="/programs/ocean-recovery"
+              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10"
               style={{ minHeight: '320px' }}
             >
               <Image
-                src="/images/kamakukijcma.jpg"
-                alt="Governance & Fisheries"
+                src="/images/divers.jpg"
+                alt="Marine Ecosystem Integrity"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-amber-900 via-amber-900/70 to-amber-900/20" />
-              <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                <div className="text-4xl font-poppins font-bold text-white/30 mb-2">04</div>
-                <h3 className="text-xl font-poppins font-bold text-white mb-2 leading-tight">Governance & Fisheries</h3>
-                <p className="text-sm text-white/70 mb-4">Community governance & sustainable fisheries</p>
-                <div className="flex items-center gap-2 mb-3">
-                  <SDGRow sdgs={[14, 17, 8]} size="sm" showTooltip={false} />
+              <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/80 to-ocean-midnight/30" />
+              <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                <div className="flex items-start justify-between">
+                  <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
+                    <span className="text-xs font-bold text-white uppercase tracking-wider">Marine Ecosystems</span>
+                  </div>
+                  <div className="text-3xl font-poppins font-black text-white/20">02</div>
                 </div>
-                <span className="text-xs font-bold text-ocean-turquoise group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-                  Learn more →
-                </span>
+                <div>
+                  <h3 className="text-xl md:text-2xl font-poppins font-bold text-white mb-2 leading-tight">
+                    Promote Marine Ecosystem Integrity
+                  </h3>
+                  <p className="text-sm text-white/80 mb-3 leading-relaxed">
+                    Transforming fishers into reef stewards across 120 km² under co-management. With 25,000+ corals restored and 400% fish biomass increase, we're proving community-led conservation works.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Ocean Recovery</span>
+                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Coral Restoration</span>
+                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">BMU Network</span>
+                  </div>
+                  <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
+                    Explore programmes <span className="text-lg">→</span>
+                  </span>
+                </div>
               </div>
             </Link>
 
-            {/* Program 5: Research & Innovation */}
+            {/* Strategic Objective 3: Promote Food Security and Diversification of Income */}
+            <Link
+              href="/programs/she"
+              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10"
+              style={{ minHeight: '320px' }}
+            >
+              <Image
+                src="/images/trashforcash.jpg"
+                alt="Food Security and Livelihoods"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-pink-900 via-pink-900/80 to-pink-900/30" />
+              <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                <div className="flex items-start justify-between">
+                  <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
+                    <span className="text-xs font-bold text-white uppercase tracking-wider">Food & Income</span>
+                  </div>
+                  <div className="text-3xl font-poppins font-black text-white/20">03</div>
+                </div>
+                <div>
+                  <h3 className="text-xl md:text-2xl font-poppins font-bold text-white mb-2 leading-tight">
+                    Promote Food Security & Income Diversification
+                  </h3>
+                  <p className="text-sm text-white/80 mb-3 leading-relaxed">
+                    Integrating land-based prosperity with marine health. 735+ women lead livelihoods, 600+ households practice climate-smart permaculture, and circular economy programmes reduce fishing pressure.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">SHE Initiative</span>
+                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Trash4Cash</span>
+                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Kitchen Gardens</span>
+                  </div>
+                  <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
+                    Explore programmes <span className="text-lg">→</span>
+                  </span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Strategic Objective 4: Strengthen OA Institutional Capacity */}
             <Link
               href="/programs/research-innovation"
-              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 lg:col-span-3"
+              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10"
               style={{ minHeight: '320px' }}
             >
               <Image
                 src="/images/oceansmen.jpg"
-                alt="Research & Innovation"
+                alt="Institutional Capacity"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-cyan-900 via-cyan-900/70 to-cyan-900/20" />
-              <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                <div className="text-4xl font-poppins font-bold text-white/30 mb-2">05</div>
-                <h3 className="text-xl font-poppins font-bold text-white mb-2 leading-tight">Research & Innovation</h3>
-                <p className="text-sm text-white/70 mb-4">Monitoring & sustainable finance</p>
-                <div className="flex items-center gap-2 mb-3">
-                  <SDGRow sdgs={[14, 13, 17]} size="sm" showTooltip={false} />
+              <div className="absolute inset-0 bg-gradient-to-t from-cyan-900 via-cyan-900/80 to-cyan-900/30" />
+              <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                <div className="flex items-start justify-between">
+                  <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
+                    <span className="text-xs font-bold text-white uppercase tracking-wider">Institutional Strength</span>
+                  </div>
+                  <div className="text-3xl font-poppins font-black text-white/20">04</div>
                 </div>
-                <span className="text-xs font-bold text-ocean-turquoise group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-                  Learn more →
-                </span>
+                <div>
+                  <h3 className="text-xl md:text-2xl font-poppins font-bold text-white mb-2 leading-tight">
+                    Strengthen Institutional Capacity
+                  </h3>
+                  <p className="text-sm text-white/80 mb-3 leading-relaxed">
+                    As a professional, community-linked intermediary, we provide technical expertise, audit-ready metrics, and multi-fund coordination—delivering the evidence and infrastructure needed for scalable impact.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Research & Innovation</span>
+                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">M&E Systems</span>
+                    <span className="text-[10px] px-2 py-1 bg-white/10 text-white/70 rounded">Strategic Partnerships</span>
+                  </div>
+                  <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
+                    Explore programmes <span className="text-lg">→</span>
+                  </span>
+                </div>
               </div>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* - Stay Connected & Get Involved (Combined) ------------------- */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-gray-50 to-[#040f1a] py-24 md:py-32">
+      {/* - Stay Connected & Get Involved (Compact Combined) ------------------- */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-ocean-midnight to-ocean-turquoise/30 py-8 md:py-10">
 
         {/* Dot grid texture */}
         <div className="absolute inset-0 [background-image:radial-gradient(circle,rgba(46,191,209,0.18)_1px,transparent_1px)] [background-size:28px_28px] opacity-30 pointer-events-none" />
 
-        {/* Rising arc waves from the bottom */}
-        <div className="absolute -bottom-72 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] rounded-full border border-ocean-turquoise/[0.07] pointer-events-none" />
+        {/* Rising arc waves from the bottom - reduced */}
         <div className="absolute -bottom-56 left-1/2 -translate-x-1/2 w-[740px] h-[740px] rounded-full border border-ocean-turquoise/[0.10] pointer-events-none" />
-        <div className="absolute -bottom-36 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full border border-ocean-turquoise/[0.14] pointer-events-none" />
         <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[280px] h-[280px] rounded-full border-2 border-ocean-turquoise/[0.18] pointer-events-none" />
 
-        {/* Rotated side text - left edge */}
-        <div className="hidden lg:block absolute left-4 top-1/2 -translate-y-1/2 rotate-[-90deg] origin-center select-none pointer-events-none">
-          <span className="text-[10px] font-bold uppercase tracking-[0.45em] text-ocean-turquoise/20 whitespace-nowrap">
-            Kilifi · Kenya · Est. 2017
-          </span>
-        </div>
 
         {/* - Content - */}
         <div className="relative z-10 max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-16 items-center mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 items-start">
 
-            {/* Left */}
+            {/* Left - Compact heading */}
             <div>
-              <div className="flex items-center gap-3 mb-8">
+              <div className="flex items-center gap-3 mb-5">
                 <span className="relative flex h-2.5 w-2.5 shrink-0">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-ocean-turquoise opacity-75" />
                   <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-ocean-turquoise" />
@@ -350,88 +361,58 @@ export default function Home() {
                 <span className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em]">Stay Connected</span>
               </div>
 
-              <h2 className="font-poppins font-bold leading-[1.02] mb-6">
-                <span className="block text-5xl md:text-6xl xl:text-7xl text-white">Join the Mission.</span>
-                <span className="block text-5xl md:text-6xl xl:text-7xl text-ocean-turquoise">Protect the Sea.</span>
+              <h2 className="font-poppins font-bold leading-[1.1] mb-4">
+                <span className="block text-3xl md:text-4xl text-white">Join the Mission.</span>
+                <span className="block text-3xl md:text-4xl text-ocean-turquoise">Protect the Sea.</span>
               </h2>
 
-              <p className="text-white/55 text-lg leading-relaxed max-w-sm mb-10">
-                Quarterly updates from the field - conservation progress, stories from Kilifi's coast,
-                and real ways to support the work.
+              <p className="text-white/55 text-sm leading-relaxed max-w-md mb-6">
+                Field updates and ways to support.
               </p>
 
-              {/* Topic pills */}
-              <div className="flex flex-wrap gap-3">
-                {['Field Reports', 'Coral Updates', 'Impact Stories', 'Ways to Help'].map((t) => (
-                  <span
-                    key={t}
-                    className="px-4 py-2 rounded-full border border-ocean-turquoise/25 text-ocean-turquoise/65 text-xs font-semibold uppercase tracking-wider"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Right - form card */}
-            <div className="relative">
-              <p className="absolute -top-7 -left-1 text-[100px] font-poppins font-black text-ocean-turquoise/[0.04] leading-none select-none pointer-events-none">
-                OAF
-              </p>
-
-              <div className="relative bg-white/[0.04] border border-white/[0.08] rounded-2xl p-8 md:p-12">
-                <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-ocean-turquoise/40 to-transparent" />
-
-                <h3 className="text-2xl font-poppins font-bold text-white mb-2">
-                  Get Updates on Our Work
-                </h3>
-                <p className="text-white/45 text-sm leading-relaxed mb-8">
-                  Subscribe for quarterly updates on conservation progress, educational resources,
-                  and opportunities to make an impact along Kenya's coast.
-                </p>
-
-                <NewsletterForm variant="footer" />
-
-                <p className="text-xs text-white/20 text-center mt-6 pt-5 border-t border-white/[0.06]">
-                  Quarterly · No spam · Unsubscribe anytime
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Ready to Make an Impact - Integrated CTA */}
-          <div className="relative pt-16 border-t border-white/10">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-              <div>
-                <h3 className="text-3xl font-poppins font-bold text-white mb-2">
-                  Ready to Make an Impact?
-                </h3>
-                <p className="text-ocean-turquoise text-lg font-semibold">
-                  Join us in protecting Kenya's coast
-                </p>
-              </div>
-              <div className="flex items-center gap-4 shrink-0 flex-wrap justify-center">
+              {/* Integrated CTA buttons */}
+              <div className="flex items-center gap-3 flex-wrap">
                 <Link
                   href="/donate"
-                  className="px-6 py-3 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-white hover:text-ocean-turquoise transition-all duration-200 shadow-lg"
+                  className="px-5 py-2.5 bg-ocean-turquoise text-white font-bold text-sm rounded-lg hover:bg-white hover:text-ocean-turquoise transition-all duration-200 shadow-lg"
                 >
                   Donate
                 </Link>
                 <Link
                   href="/contact?type=Volunteer"
-                  className="px-6 py-3 border border-white/30 text-white font-semibold rounded-xl hover:border-ocean-turquoise hover:bg-ocean-turquoise/10 transition-all duration-200"
+                  className="px-5 py-2.5 border border-white/30 text-white font-semibold text-sm rounded-lg hover:border-ocean-turquoise hover:bg-ocean-turquoise/10 transition-all duration-200"
                 >
                   Volunteer
                 </Link>
                 <Link
                   href="/contact?type=Partnership"
-                  className="px-6 py-3 border border-white/30 text-white font-semibold rounded-xl hover:border-ocean-turquoise hover:bg-ocean-turquoise/10 transition-all duration-200"
+                  className="px-5 py-2.5 border border-white/30 text-white font-semibold text-sm rounded-lg hover:border-ocean-turquoise hover:bg-ocean-turquoise/10 transition-all duration-200"
                 >
-                  Partner With Us
+                  Partner
                 </Link>
               </div>
             </div>
+
+            {/* Right - Compact form card */}
+            <div className="relative">
+              <div className="relative bg-white/[0.04] border border-white/[0.08] rounded-xl p-6">
+                <div className="absolute top-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-ocean-turquoise/40 to-transparent" />
+
+                <h3 className="text-lg font-poppins font-bold text-white mb-1.5">
+                  Get Updates
+                </h3>
+                <p className="text-white/45 text-xs leading-relaxed mb-5">
+                  Conservation progress & opportunities to make an impact.
+                </p>
+
+                <NewsletterForm variant="footer" />
+
+                <p className="text-[10px] text-white/20 text-center mt-4 pt-3 border-t border-white/[0.06]">
+                  Quarterly · No spam · Unsubscribe anytime
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

@@ -404,29 +404,6 @@ export default function Programmes() {
         </div>
       </section>
 
-      {/* ── Partners ─────────────────────────────────────────── */}
-      <section className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-3">International Partnerships</p>
-            <h2 className="text-3xl font-poppins font-bold text-ocean-midnight">
-              World-Class Expertise Supporting Community-Led Action
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-0 border border-gray-100 rounded-2xl overflow-hidden">
-            {PARTNERS.map((p) => (
-              <div
-                key={p.name}
-                className="p-6 border-r border-b border-gray-100 last:border-r-0 hover:bg-ocean-turquoise/5 transition-colors text-center"
-              >
-                <div className="font-poppins font-bold text-sm text-ocean-midnight mb-1">{p.name}</div>
-                <div className="text-xs text-gray-400">{p.role}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Get Involved CTA ──────────────────────────────────── */}
       <section className="bg-ocean-turquoise py-14">
         <div className="max-w-6xl mx-auto px-6">

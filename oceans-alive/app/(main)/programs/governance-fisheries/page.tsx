@@ -21,19 +21,27 @@ export default function GovernanceFisheriesPage() {
           <div className="text-6xl font-poppins font-bold text-white/20 mb-4">04</div>
           <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Governance & Sustainable Fisheries</h1>
           <p className="text-xl text-white/90 max-w-3xl mb-8 leading-relaxed">
-            Strong governance is essential for effective conservation. This program strengthens local institutions, empowers communities to participate in decision-making and promotes sustainable fisheries management through collaborative governance systems.
+            Strong, collaborative governance is at the core of what Oceans Alive does — at least as central as coral restoration. This programme strengthens local institutions, supports communities to participate in decision-making, and promotes sustainable fisheries management through collaborative governance.
           </p>
 
           {/* Key Impact Metrics */}
           <div className="mt-12 pt-8 border-t border-white/20">
-            <div className="flex flex-wrap justify-center gap-3 mb-6">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-5 py-3">
-                <div className="text-3xl font-poppins font-bold text-white">17</div>
-                <div className="text-[10px] text-white/60 uppercase tracking-wide">BMUs in Network</div>
+            <div className="flex flex-wrap justify-center gap-2 mb-6">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-4 py-3 min-w-[130px]">
+                <div className="text-2xl font-poppins font-bold text-white">17</div>
+                <div className="text-[9px] text-white/50 uppercase">BMUs in Network</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-5 py-3">
-                <div className="text-3xl font-poppins font-bold text-white">12,000ha</div>
-                <div className="text-[10px] text-white/60 uppercase tracking-wide">Ocean Co-Managed</div>
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-4 py-3 min-w-[130px]">
+                <div className="text-2xl font-poppins font-bold text-white">265,000 ha</div>
+                <div className="text-[9px] text-white/50 uppercase">Kilifi County Network</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-4 py-3 min-w-[130px]">
+                <div className="text-2xl font-poppins font-bold text-white">7,000</div>
+                <div className="text-[9px] text-white/50 uppercase">Fishers/Households</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-4 py-3 min-w-[130px]">
+                <div className="text-2xl font-poppins font-bold text-white">6-Step</div>
+                <div className="text-[9px] text-white/50 uppercase">CMA Toolkit</div>
               </div>
             </div>
             <div className="flex justify-center items-center gap-3">
@@ -52,17 +60,18 @@ export default function GovernanceFisheriesPage() {
           {/* Policy Milestones Banner */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
             <div className="text-center mb-6">
-              <div className="text-sm text-gray-500 uppercase tracking-wide mb-2">Historic Policy Landmarks</div>
+              <div className="text-sm text-gray-500 uppercase tracking-wide mb-2">Milestones in Kenyan Co-Management</div>
               <div className="text-3xl font-bold text-amber-700">First in Kenya</div>
+              <p className="text-sm text-gray-600 mt-2">Developed by communities and government, with OA providing technical support.</p>
             </div>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="bg-gradient-to-br from-orange-100 to-red-100 rounded-xl p-5 text-center">
-                <div className="text-xl font-bold text-orange-700 mb-2">First CMA</div>
-                <div className="text-sm text-gray-600">Co-Management Area endorsed (2022)</div>
+                <div className="text-xl font-bold text-orange-700 mb-2">First CMA endorsed (2022)</div>
+                <div className="text-sm text-gray-600">Co-Management Area</div>
               </div>
               <div className="bg-gradient-to-br from-yellow-100 to-amber-100 rounded-xl p-5 text-center">
                 <div className="text-xl font-bold text-yellow-700 mb-2">First BMU Network</div>
-                <div className="text-sm text-gray-600">County-level network (Kilifi)</div>
+                <div className="text-sm text-gray-600">Officially endorsed county network (Kilifi)</div>
               </div>
             </div>
           </div>
@@ -77,20 +86,24 @@ export default function GovernanceFisheriesPage() {
             </div>
             <div className="p-6">
               <p className="text-gray-700 leading-relaxed mb-6">
-                Establishment of the first officially endorsed County BMU Network (CBMU-NW) for 17 BMUs under new BMU Regulations. Development of first 6-step toolkit, constitution, boundary jurisdiction, State of Fishery 2021 report, and joint management plans—secured IUCN/EU BIOPAMA award for implementation.
+                17 BMUs · 265,000 ha · 7,000 fishers/households benefiting · 6-step toolkit · State of Fishery 2021 report · IUCN/EU BIOPAMA support.
               </p>
-              <div className="grid md:grid-cols-3 gap-4">
+              <div className="grid md:grid-cols-4 gap-4">
                 <div className="bg-gradient-to-br from-amber-600 to-orange-700 rounded-xl p-5 text-center text-white">
                   <div className="text-4xl font-bold mb-1">17</div>
-                  <div className="text-xs uppercase opacity-90">BMUs in Network</div>
+                  <div className="text-xs uppercase opacity-90">BMUs</div>
                 </div>
                 <div className="bg-gradient-to-br from-green-600 to-teal-600 rounded-xl p-5 text-center text-white">
-                  <div className="text-4xl font-bold mb-1">7,000+</div>
-                  <div className="text-xs uppercase opacity-90">Households Benefiting</div>
+                  <div className="text-4xl font-bold mb-1">265,000</div>
+                  <div className="text-xs uppercase opacity-90">Hectares</div>
                 </div>
                 <div className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl p-5 text-center text-white">
+                  <div className="text-4xl font-bold mb-1">7,000</div>
+                  <div className="text-xs uppercase opacity-90">Fishers/Households</div>
+                </div>
+                <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl p-5 text-center text-white">
                   <div className="text-4xl font-bold mb-1">6-Step</div>
-                  <div className="text-xs uppercase opacity-90">CMA Toolkit</div>
+                  <div className="text-xs uppercase opacity-90">Toolkit</div>
                 </div>
               </div>
             </div>
@@ -104,17 +117,17 @@ export default function GovernanceFisheriesPage() {
                 <h3 className="text-xl font-poppins font-bold text-ocean-midnight">First Co-Management Area</h3>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Wide engagement of Kuruwitu BMU community to develop Kenya's first officially endorsed CMA under new BMU Regulations. Undertaking of first IUCN Site Assessment for Governance and Equity (SAGE) analysis - a historic policy landmark placing communities at the centre.
+                Developed with the Kuruwitu BMU under the BMU Regulations; includes Kenya's first IUCN SAGE (Site Assessment for Governance and Equity) analysis, placing communities at the centre of marine governance.
               </p>
               <div className="bg-blue-50 rounded-lg p-4">
                 <div className="flex items-center gap-3">
                   <div>
                     <div className="text-2xl font-bold text-blue-700">IUCN SAGE</div>
-                    <div className="text-xs text-gray-600">Governance & Equity Analysis</div>
+                    <div className="text-xs text-gray-600">First in Kenya</div>
                   </div>
                   <div className="ml-auto">
                     <div className="text-lg font-bold text-blue-600">2022</div>
-                    <div className="text-xs text-gray-600">CMA Endorsed</div>
+                    <div className="text-xs text-gray-600">Endorsed</div>
                   </div>
                 </div>
               </div>
@@ -123,17 +136,17 @@ export default function GovernanceFisheriesPage() {
             {/* BMU Capacity Building */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="mb-4">
-                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">BMU Capacity & Operations</h3>
+                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">BMU capacity & operations</h3>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                20 years of support to build coastal community capacity and functionality of conservation CBOs and BMUs. Provisioning of patrol boats, uniforms, scout training, and securing grants for operations.
+                Support to build the capacity of conservation CBOs and BMUs — patrol boats, uniforms, scout training and grants for operations.
               </p>
               <div className="space-y-2">
                 <div className="bg-green-50 rounded-lg p-3">
-                  <div className="text-sm text-gray-700">Patrol Boats & Training</div>
+                  <div className="text-sm text-gray-700">Patrol Boats & Scout Training</div>
                 </div>
                 <div className="bg-teal-50 rounded-lg p-3">
-                  <div className="text-sm text-gray-700">IUCN/EU BIOPAMA Awards</div>
+                  <div className="text-sm text-gray-700">Operational Grants</div>
                 </div>
               </div>
             </div>
@@ -144,22 +157,22 @@ export default function GovernanceFisheriesPage() {
             <div className="flex items-start justify-between gap-6">
               <div className="flex-1">
                 <div className="bg-white/20 rounded-lg px-3 py-1 text-white font-bold text-sm inline-block mb-3">Evidence-Based Policy</div>
-                <h3 className="text-2xl font-poppins font-bold mb-3">Fisheries Data & Monitoring</h3>
+                <h3 className="text-2xl font-poppins font-bold mb-3">Fisheries data & monitoring</h3>
                 <p className="text-white/90 leading-relaxed mb-4">
-                  Development of Catch Assessment Surveys (CAS), Frame Surveys (FS), State of Fishery 2021 report, and Monitoring, Control and Surveillance (MCS) plans that inform both community management and national marine policy.
+                  Catch Assessment Surveys, Frame Surveys, the State of Fishery 2021 report and MCS plans that inform both community management and national policy, in partnership with WCS.
                 </p>
                 <div className="grid grid-cols-3 gap-3">
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                    <div className="text-xs text-white/70 uppercase mb-1">Impact</div>
-                    <div className="text-lg font-bold">400% Fish Biomass</div>
+                    <div className="text-xs text-white/70 uppercase mb-1">Partner</div>
+                    <div className="text-lg font-bold">WCS</div>
                   </div>
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                    <div className="text-xs text-white/70 uppercase mb-1">Data</div>
-                    <div className="text-lg font-bold">WCS Partnership</div>
+                    <div className="text-xs text-white/70 uppercase mb-1">Report</div>
+                    <div className="text-lg font-bold">State of Fishery 2021</div>
                   </div>
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                    <div className="text-xs text-white/70 uppercase mb-1">Toolkit</div>
-                    <div className="text-lg font-bold">6-Step Guide</div>
+                    <div className="text-xs text-white/70 uppercase mb-1">Tools</div>
+                    <div className="text-lg font-bold">CAS · FS · MCS</div>
                   </div>
                 </div>
               </div>

@@ -25,7 +25,7 @@ const AWARDS = [
     title: 'UNDP Equator Prize 2017',
     sub: 'United Nations Development Programme',
     body:
-      'Awarded the prestigious UNDP Equator Prize for exemplary community-based approaches to conservation and sustainable development - placing Oceans Alive on the world stage of environmental leadership.',
+      'Kuruwitu CBO wins the prestigious UNDP Equator Prize for exemplary community-based approaches to conservation and sustainable development - placing the community-led model on the world stage of environmental leadership.',
     highlight: 'One of the world\'s most recognised prizes for grassroots environmental action.',
     large: true,
   },
@@ -36,7 +36,7 @@ const AWARDS = [
     title: 'IUCN Blue Champions Award 2022',
     sub: 'International Union for Conservation of Nature',
     body:
-      'Kuruwitu CBO wins the 2022 IUCN Blue Champions Award, recognizing outstanding ocean conservation leadership and two decades of proven community-driven marine protection delivering 400% fish biomass increase and 30% coral recovery.',
+      'Oceans Alive Foundation wins the 2022 IUCN Blue Champions Award, recognizing outstanding ocean conservation leadership and two decades of proven community-driven marine protection delivering 400% fish biomass increase and 30% coral recovery.',
     highlight: 'Global recognition for champions protecting our ocean for future generations.',
     large: true,
   },
@@ -82,12 +82,12 @@ export default function RecognitionPage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section className="relative bg-[#040f1a] overflow-hidden py-24 md:py-36">
+      <section className="relative bg-gradient-to-br from-gray-50 via-white to-amber-50/30 overflow-hidden py-24 md:py-36">
         {/* Radial glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#FBB308]/5 blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#FBB308]/10 blur-[120px] pointer-events-none" />
         {/* Dot grid */}
         <div
-          className="absolute inset-0 opacity-[0.08] pointer-events-none"
+          className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
             backgroundImage: 'radial-gradient(circle, rgba(251,179,8,0.5) 1px, transparent 1px)',
             backgroundSize: '28px 28px',
@@ -95,15 +95,15 @@ export default function RecognitionPage() {
         />
 
         <div className="relative max-w-6xl mx-auto px-6">
-          <p className="text-[#FBB308]/70 text-xs font-bold uppercase tracking-[0.25em] mb-6 flex items-center gap-3">
-            <span className="w-8 h-px bg-[#FBB308]/30" />
+          <p className="text-[#FBB308] text-xs font-bold uppercase tracking-[0.25em] mb-6 flex items-center gap-3">
+            <span className="w-8 h-px bg-[#FBB308]/60" />
             Global Recognition
           </p>
-          <h1 className="font-poppins font-bold text-white text-5xl md:text-7xl leading-[0.95] mb-8 max-w-3xl">
+          <h1 className="font-poppins font-bold text-ocean-midnight text-5xl md:text-7xl leading-[0.95] mb-8 max-w-3xl">
             Recognised<br />
             <span className="text-[#FBB308]">By the World.</span>
           </h1>
-          <p className="text-white/50 text-xl max-w-xl leading-relaxed">
+          <p className="text-gray-700 text-xl max-w-xl leading-relaxed">
             Every award, prize, and royal visit reflects the work of the fishing communities
             of Kilifi County - not just our organisation.
           </p>
@@ -111,16 +111,16 @@ export default function RecognitionPage() {
       </section>
 
       {/* ── All Awards - 3x2 Grid ──────────────────────────────────── */}
-      <section className="bg-[#040f1a] py-10 pb-20">
+      <section className="bg-gradient-to-b from-white to-gray-50 py-10 pb-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {AWARDS.map((award) => (
               <div
                 key={award.title}
-                className="relative group overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] p-7 hover:bg-white/[0.05] hover:border-white/[0.12] transition-all duration-300"
+                className="relative group overflow-hidden rounded-2xl border border-gray-200 bg-white p-7 hover:shadow-xl hover:border-ocean-turquoise/30 transition-all duration-300"
               >
                 {/* Year watermark */}
-                <div className="absolute top-4 right-5 text-4xl font-poppins font-bold text-white/[0.06] leading-none select-none pointer-events-none">
+                <div className="absolute top-4 right-5 text-4xl font-poppins font-bold text-gray-100 leading-none select-none pointer-events-none">
                   {award.year}
                 </div>
 
@@ -128,11 +128,11 @@ export default function RecognitionPage() {
                   <span className={`inline-block text-[9px] font-bold uppercase tracking-[0.15em] px-2.5 py-1 rounded-full mb-5 ${award.tagColor}`}>
                     {award.tag}
                   </span>
-                  <h3 className="text-base font-poppins font-bold text-white mb-1.5 leading-snug">
+                  <h3 className="text-base font-poppins font-bold text-ocean-midnight mb-1.5 leading-snug">
                     {award.title}
                   </h3>
-                  <p className="text-[10px] text-white/25 uppercase tracking-wider mb-4">{award.sub}</p>
-                  <p className="text-white/45 text-sm leading-relaxed mb-4">{award.body}</p>
+                  <p className="text-[10px] text-gray-400 uppercase tracking-wider mb-4">{award.sub}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{award.body}</p>
 
                   {award.highlight && (
                     <div className="border-t border-white/[0.07] pt-4 mt-4">
@@ -150,11 +150,11 @@ export default function RecognitionPage() {
       <section className="bg-ocean-midnight py-16 border-y border-white/[0.06]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-3xl md:text-4xl font-poppins font-bold text-white leading-snug">
-            &ldquo;These awards don&apos;t belong to Oceans Alive.<br />
-            <span className="text-ocean-turquoise">They belong to the communities of Kilifi.</span>&rdquo;
+            &ldquo;These recognitions celebrate the dedication of Kilifi's coastal communities.<br />
+            <span className="text-ocean-turquoise">Their commitment to ocean stewardship is what makes this work possible.</span>&rdquo;
           </p>
           <p className="mt-6 text-white/35 text-sm uppercase tracking-widest">
-            - Desmond Bowden, Founder
+            - Des Bowden, Co-Founder & CEO
           </p>
         </div>
       </section>

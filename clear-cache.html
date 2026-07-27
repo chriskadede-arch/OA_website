@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cache Cleared</title>
+    <style>
+        body {
+            font-family: system-ui;
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 40px;
+            text-align: center;
+            background: #f0f9ff;
+        }
+        h1 { color: #2EBFD1; }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #2EBFD1;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 20px;
+        }
+        .btn:hover { background: #022F4E; }
+    </style>
+</head>
+<body>
+    <h1>✅ Cache Cleared!</h1>
+    <p>All cached files have been removed.</p>
+    <p>Click below to see the updated website:</p>
+    <a href="index.html" class="btn">Open Homepage</a>
+    <a href="programs/she/index.html" class="btn">Open SHE Page</a>
+
+    <script>
+        // Force clear all caches
+        if ('caches' in window) {
+            caches.keys().then(names => {
+                names.forEach(name => caches.delete(name));
+            });
+        }
+
+        // Clear service workers
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(registrations => {
+                registrations.forEach(reg => reg.unregister());
+            });
+        }
+
+        console.log('✅ All caches cleared!');
+    </script>
+</body>
+</html>

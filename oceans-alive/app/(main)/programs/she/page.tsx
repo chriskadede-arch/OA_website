@@ -24,31 +24,27 @@ export default function SHEProgramPage() {
             Sustainable Households & Enterprises
           </p>
           <p className="text-lg text-white/80 max-w-3xl mb-8 leading-relaxed">
-            Conservation is strongest when communities have secure livelihoods and opportunities for the future. The Social Health Environment program supports women, youth and vulnerable households to strengthen incomes, improve food security and build resilience while reducing pressure on marine resources.
+            Conservation is strongest when communities have secure livelihoods. This programme supports women, youth and vulnerable households to strengthen incomes, improve food security and build resilience while reducing pressure on marine resources.
           </p>
 
-          {/* Impact Boxes - Updated from OAT Impact 2025 */}
+          {/* Impact Boxes */}
           <div className="mt-12 pt-8 border-t border-white/20">
             <div className="flex flex-wrap justify-center gap-2 mb-6">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-4 py-3 min-w-[130px]">
-                <div className="text-2xl font-poppins font-bold text-white">135+</div>
-                <div className="text-[9px] text-white/50 uppercase">Households Reached</div>
+                <div className="text-2xl font-poppins font-bold text-white">23</div>
+                <div className="text-[9px] text-white/50 uppercase">Women in Trash4Cash (Mama Karanga)</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-4 py-3 min-w-[130px]">
-                <div className="text-2xl font-poppins font-bold text-white">19</div>
-                <div className="text-[9px] text-white/50 uppercase">Trash4Cash HH</div>
+                <div className="text-2xl font-poppins font-bold text-white">2</div>
+                <div className="text-[9px] text-white/50 uppercase">Women's Groups (Savings & Loan)</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-4 py-3 min-w-[130px]">
-                <div className="text-2xl font-poppins font-bold text-white">135</div>
-                <div className="text-[9px] text-white/50 uppercase">Kitchen Gardens</div>
+                <div className="text-2xl font-poppins font-bold text-white">600+</div>
+                <div className="text-[9px] text-white/50 uppercase">Households with Climate-Smart Permaculture</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-4 py-3 min-w-[130px]">
-                <div className="text-2xl font-poppins font-bold text-white">500+</div>
-                <div className="text-[9px] text-white/50 uppercase">HH LIFT Network</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md px-4 py-3 min-w-[130px]">
-                <div className="text-2xl font-poppins font-bold text-white">300+</div>
-                <div className="text-[9px] text-white/50 uppercase">HH from CBO</div>
+                <div className="text-2xl font-poppins font-bold text-white">735+</div>
+                <div className="text-[9px] text-white/50 uppercase">Women Engaged Across Programmes</div>
               </div>
             </div>
             <div className="flex justify-center items-center gap-3">
@@ -153,13 +149,13 @@ export default function SHEProgramPage() {
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-8">
             <div className="bg-gradient-to-r from-pink-600 to-purple-600 p-6">
               <div className="text-white">
-                <h3 className="text-2xl font-poppins font-bold">Mama Karanga - Trash4Cash</h3>
-                <p className="text-white/90 text-sm">Turning Plastic into Economic Opportunity</p>
+                <h3 className="text-2xl font-poppins font-bold">Mama Karanga – Trash4Cash</h3>
+                <p className="text-white/90 text-sm">Ongoing Pilot</p>
               </div>
             </div>
             <div className="p-6">
               <p className="text-gray-700 leading-relaxed mb-4">
-                Plastic waste is transformed into economic opportunity through a community-led recycling programme led by Mama Karanga, in partnership with Eco-world, that creates income while reducing marine pollution and beach waste.
+                Plastic waste is turned into income through a community-led recycling programme led by Mama Karanga, in partnership with Eco-world, reducing marine pollution and beach waste. Monthly beach clean-ups.
               </p>
               <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl p-5">
                 <div className="flex items-center justify-between">
@@ -181,24 +177,25 @@ export default function SHEProgramPage() {
             {/* Climate-Smart Permaculture */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="mb-4">
-                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Climate-Smart Food Systems</h3>
+                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Climate-smart food systems</h3>
+                <div className="text-xs text-ocean-turquoise font-bold uppercase mt-1">Ongoing</div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Through backyard climate-smart permaculture, households improve nutrition with green leafy vegetables and resilient indigenous crops while supplementing income.
+                Backyard climate-smart permaculture improves nutrition with leafy vegetables and resilient indigenous crops while supplementing income. Demo farm; permaculture training and toolkit distribution.
               </p>
               <div className="bg-green-50 rounded-lg p-4">
-                <div className="text-2xl font-bold text-green-700 mb-1">Demo Farm</div>
-                <div className="text-sm text-gray-600">Permaculture training & toolkit distribution</div>
+                <div className="text-2xl font-bold text-green-700 mb-1">600+</div>
+                <div className="text-sm text-gray-600">Households (≈4,800 people)</div>
               </div>
             </div>
 
             {/* Women's Leadership */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="mb-4">
-                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Women's Leadership</h3>
+                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Women's leadership</h3>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                We support women to take active roles in conservation, fisheries governance and community decision-making through BMU participation and CBO leadership.
+                Supporting women to take active roles in conservation, fisheries governance and community decision-making through BMU participation and CBO leadership.
               </p>
               <div className="bg-amber-50 rounded-lg p-4">
                 <div className="text-lg font-bold text-amber-700">Community Based Organizations</div>
@@ -211,21 +208,11 @@ export default function SHEProgramPage() {
           <div className="bg-gradient-to-r from-pink-600 to-purple-700 rounded-2xl shadow-xl p-8 text-white">
             <div className="flex items-start justify-between gap-6">
               <div className="flex-1">
-                <div className="bg-white/20 rounded-lg px-3 py-1 text-white font-bold text-sm inline-block mb-3">Economic Independence</div>
-                <h3 className="text-2xl font-poppins font-bold mb-3">Diversified Income & Financial Literacy</h3>
+                <div className="bg-white/20 rounded-lg px-3 py-1 text-white font-bold text-sm inline-block mb-3">Financial independence</div>
+                <h3 className="text-2xl font-poppins font-bold mb-3">Building Financial Resilience</h3>
                 <p className="text-white/90 leading-relaxed">
-                  Training helps participants build practical skills in budgeting, business management and long-term financial planning. For every 1 fisher, 20 other livelihoods benefit in the value chain, creating resilient coastal economies.
+                  Training in budgeting, business management and financial planning.
                 </p>
-              </div>
-              <div className="flex gap-4">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center min-w-[120px]">
-                  <div className="text-3xl font-bold text-white">300+</div>
-                  <div className="text-xs text-white/70 uppercase mt-1">HH from CBO</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center min-w-[120px]">
-                  <div className="text-3xl font-bold text-white">500+</div>
-                  <div className="text-xs text-white/70 uppercase mt-1">HH from KBMU</div>
-                </div>
               </div>
             </div>
           </div>

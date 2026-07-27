@@ -111,12 +111,7 @@ const CATEGORY_CONFIG = {
     heroImage: '/images/oceanculturelife.jpg',
     heroImageAlt: 'Community life and conservation impact along the Kilifi coast',
     accentColor: 'ocean-turquoise' as const,
-    stats: [
-      { number: '25,000+', label: 'Corals Planted' },
-      { number: '400%', label: 'Fish Recovery' },
-      { number: '150 km²', label: 'Co-Managed Ocean' },
-      { number: '120', label: 'Women Empowered' },
-    ],
+    stats: [],
   },
   'community-news': {
     value: 'Community News',

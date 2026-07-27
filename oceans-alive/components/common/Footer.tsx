@@ -77,16 +77,14 @@ export default function Footer() {
           <div>
             {/* Logo */}
             <Link href="/" className="group inline-block mb-6">
-              <div className="overflow-hidden rounded-2xl bg-white p-3 ring-1 ring-ocean-turquoise/30 shadow-[0_0_40px_rgba(46,191,209,0.18),0_6px_24px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_55px_rgba(46,191,209,0.30)] transition-shadow duration-500">
-                <Image
-                  src="/logo.png"
-                  alt="Oceans Alive Foundation"
-                  width={960}
-                  height={540}
-                  className="h-14 w-auto object-contain block"
-                  priority
-                />
-              </div>
+              <Image
+                src="/Oceans-Alive-Logo-WHITE.png"
+                alt="Oceans Alive Foundation"
+                width={960}
+                height={540}
+                className="h-44 w-auto object-contain block group-hover:opacity-80 transition-opacity duration-300"
+                priority
+              />
             </Link>
             <p className="text-sm text-white/60 leading-relaxed mb-8">
               Working with coastal communities to restore marine ecosystems, strengthen livelihoods, and create lasting positive change along Kenya's coast.

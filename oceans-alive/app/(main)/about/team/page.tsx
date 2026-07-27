@@ -266,7 +266,7 @@ export default function TeamPage() {
       {/* ══════════════════════════════════════════════════════════
           CTA - Dark split
       ══════════════════════════════════════════════════════════ */}
-      <section className="border-t border-white/[0.05] py-24 bg-ocean-midnight">
+      <section className="border-t border-white/[0.05] py-24 bg-gradient-to-br from-ocean-midnight to-ocean-turquoise/30">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>

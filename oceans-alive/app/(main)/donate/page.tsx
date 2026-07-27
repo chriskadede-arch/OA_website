@@ -17,7 +17,7 @@ const IMPACT_MAP: Record<number, { what: string; img: string }> = {
   500:   { what: 'Plants 1 coral fragment in Kuruwitu reef', img: '/images/divers.jpg' },
   1000:  { what: 'Supports a community fisher for half a day', img: '/images/fisher.jpg' },
   2500:  { what: 'Plants 5 coral fragments - the most popular gift', img: '/images/oceansmen.jpg' },
-  5000:  { what: 'Funds one school ocean education day', img: '/images/kids.jpg' },
+  5000:  { what: 'Funds one school ocean education day', img: '/images/coralteaching.jpg' },
   10000: { what: 'Covers one community diver certification', img: '/images/coralteaching.jpg' },
   25000: { what: 'Makes a comprehensive impact across all programs', img: '/images/communities.jpg' },
   0:     { what: 'Choose your own level of impact', img: '/images/communities.jpg' },
@@ -62,50 +62,29 @@ export default function Donate() {
       alert('Please select or enter a donation amount of at least $1.00');
       return;
     }
-    try {
-      // Call the new API route directly
-      const response = await fetch('/api/create-payment-intent', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          amount,
-          donor_name: data.donor_name,
-          donor_email: data.donor_email,
-          donation_type: data.donation_type,
-          message: data.message,
-          currency: data.currency,
-        }),
-      });
 
-      if (!response.ok) {
-        const errorData = await response.json();
+    // Show confirmation first
+    setConfirmationMessage(`Thank you for your interest in supporting Oceans Alive with $${(amount / 100).toFixed(2)}! We've prepared an email for you. Our team will respond with payment instructions within 24 hours.`);
+    setDonationStep('success');
 
-        // Show helpful message if Stripe isn't configured
-        if (response.status === 503) {
-          alert(
-            'Payment processing is not yet configured.\n\n' +
-            'To enable card payments:\n' +
-            '1. Create a free Stripe account at dashboard.stripe.com\n' +
-            '2. Get your API keys\n' +
-            '3. Add them to the .env.local file\n' +
-            '4. Restart the development server\n\n' +
-            'See QUICK-START-STRIPE.txt for detailed instructions.'
-          );
-          return;
-        }
+    // Then open email client after a brief delay
+    setTimeout(() => {
+      const subject = `Donation Request - $${(amount / 100).toFixed(2)}`;
+      const body = `
+Donation Request
 
-        throw new Error(errorData.error || 'Failed to create payment intent');
-      }
+Amount: $${(amount / 100).toFixed(2)} USD
+Donation Type: ${data.donation_type}
+Name: ${data.donor_name || 'Anonymous'}
+Email: ${data.donor_email || 'Not provided'}
+Message: ${data.message || 'None'}
 
-      const { clientSecret: secret } = await response.json();
+Please provide payment instructions.
+      `.trim();
 
-      if (secret) {
-        setClientSecret(secret);
-        setDonationStep('payment');
-      }
-    } catch (error: any) {
-      alert(error.message || 'Failed to process donation');
-    }
+      const mailtoLink = `mailto:info@oceansalivekenya.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoLink;
+    }, 500);
   };
 
   const activeImpact = IMPACT_MAP[selectedAmount ?? 0];
@@ -129,31 +108,18 @@ export default function Donate() {
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-5 flex items-center gap-3">
-                <span className="w-8 h-px bg-ocean-turquoise inline-block" />
-                Support Ocean Conservation
-              </p>
-              <h1 className="font-poppins font-bold text-white text-5xl md:text-6xl leading-tight mb-6">
-                Every Contribution<br />
-                <span className="text-ocean-turquoise">Makes a Difference</span>
-              </h1>
-              <p className="text-lg text-white/90 leading-relaxed mb-10 max-w-md">
-                A single contribution that supports coral restoration, community fisheries
-                and ocean education on Kenya's coast.
-              </p>
-            </div>
-            <div className="relative hidden lg:block">
-              <div className="relative h-[500px] rounded-2xl overflow-hidden border-4 border-ocean-turquoise/30 shadow-2xl">
-                <Image
-                  src="/images/coralteaching.jpg"
-                  alt="Community ocean education and coral restoration"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-5">
+              Support Ocean Conservation
+            </p>
+            <h1 className="font-poppins font-bold text-white text-5xl md:text-6xl leading-tight mb-6">
+              Every Contribution<br />
+              <span className="text-ocean-turquoise">Makes a Difference</span>
+            </h1>
+            <p className="text-lg text-white/90 leading-relaxed max-w-2xl mx-auto">
+              A single contribution that supports coral restoration, community fisheries
+              and ocean education on Kenya's coast.
+            </p>
           </div>
         </div>
       </section>
@@ -203,16 +169,34 @@ export default function Donate() {
                 <p className="text-gray-600">Support comprehensive ocean conservation on Kenya's coast</p>
               </div>
 
-              {/* Fixed $250 amount display */}
-              <div className="mb-8 p-8 rounded-2xl border-4 border-ocean-turquoise bg-ocean-turquoise/5 text-center">
-                <div className="text-6xl font-poppins font-bold text-ocean-turquoise mb-2">$250</div>
-                <p className="text-sm text-gray-600 uppercase tracking-wider">Recommended Contribution</p>
+              {/* Donation Amount Options */}
+              <div className="mb-8 grid grid-cols-3 gap-4">
+                {/* $100 Option */}
+                <div className="p-6 rounded-xl border-2 border-gray-200 bg-white text-center hover:border-ocean-turquoise/50 transition-all">
+                  <div className="text-4xl font-poppins font-bold text-gray-700 mb-2">$100</div>
+                  <p className="text-xs text-gray-500 uppercase tracking-wider">Starter Impact</p>
+                </div>
+
+                {/* $250 Recommended */}
+                <div className="p-6 rounded-xl border-4 border-ocean-turquoise bg-ocean-turquoise/5 text-center relative">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-ocean-turquoise text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Recommended
+                  </div>
+                  <div className="text-4xl font-poppins font-bold text-ocean-turquoise mb-2">$250</div>
+                  <p className="text-xs text-gray-600 uppercase tracking-wider">Full Coverage</p>
+                </div>
+
+                {/* $500 Option */}
+                <div className="p-6 rounded-xl border-2 border-gray-200 bg-white text-center hover:border-ocean-turquoise/50 transition-all">
+                  <div className="text-4xl font-poppins font-bold text-gray-700 mb-2">$500</div>
+                  <p className="text-xs text-gray-500 uppercase tracking-wider">Maximum Impact</p>
+                </div>
               </div>
 
-              {/* How Your $250 is Used - Creative Visual Breakdown */}
+              {/* How Your Money is Used - Creative Visual Breakdown */}
               <div className="mb-8">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-poppins font-bold text-ocean-midnight mb-2">How Your $250 is Used</h3>
+                  <h3 className="text-2xl font-poppins font-bold text-ocean-midnight mb-2">How Your Money is Used</h3>
                   <p className="text-xs text-gray-500 italic">Allocation percentages to be confirmed with Finance</p>
                 </div>
 
@@ -222,10 +206,7 @@ export default function Donate() {
                     <div key={i}>
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-sm font-semibold text-ocean-midnight">{item.text}</span>
-                        <div className="flex items-center gap-2">
-                          <span className="text-xs font-bold text-gray-400">${(250 * item.percentage / 100).toFixed(0)}</span>
-                          <span className="text-lg font-bold text-ocean-turquoise">{item.percentage}%</span>
-                        </div>
+                        <span className="text-lg font-bold text-ocean-turquoise">{item.percentage}%</span>
                       </div>
                       <div className="relative h-3 bg-gray-100 rounded-full overflow-hidden">
                         <div
@@ -422,7 +403,6 @@ export default function Donate() {
                       </div>
                       <div className="flex-1">
                         <p className="text-sm font-semibold text-ocean-midnight leading-tight capitalize">{item.text}</p>
-                        <p className="text-xs text-gray-400">${(250 * item.percentage / 100).toFixed(0)}</p>
                       </div>
                     </div>
                   ))}
@@ -465,26 +445,84 @@ export default function Donate() {
             </div>
           )}
 
-          {USE_PHP_FORMS && donationStep === 'success' && (
-            <div className="max-w-2xl mx-auto text-center">
-              <div className="w-16 h-16 rounded-full bg-ocean-turquoise/15 border-2 border-ocean-turquoise flex items-center justify-center mx-auto mb-6">
-                <svg className="w-7 h-7 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                </svg>
+          {donationStep === 'success' && (
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-10">
+                <div className="w-16 h-16 rounded-full bg-ocean-turquoise/15 border-2 border-ocean-turquoise flex items-center justify-center mx-auto mb-6">
+                  <svg className="w-7 h-7 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-2">Thank You</p>
+                <h2 className="text-3xl font-poppins font-bold text-ocean-midnight mb-4">We've Received Your Request</h2>
+                <p className="text-gray-600 leading-relaxed mb-2">{confirmationMessage}</p>
               </div>
-              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-2">Step 3</p>
-              <h2 className="text-3xl font-poppins font-bold text-ocean-midnight mb-4">Thank You for Your Support</h2>
-              <p className="text-gray-600 leading-relaxed mb-8">{confirmationMessage}</p>
-              <p className="text-sm text-gray-500 mb-8">
-                Our team at <strong>info@oceansalivekenya.org</strong> and{' '}
-                <strong>des@oceansalivekenya.org</strong> has been notified and will follow up with payment details.
-              </p>
-              <Link
-                href="/"
-                className="inline-flex items-center justify-center px-8 py-3.5 bg-ocean-midnight text-white font-bold rounded-xl hover:bg-ocean-turquoise transition-all duration-300 text-sm tracking-wide"
-              >
-                Back to Home
-              </Link>
+
+              {/* Bank Details Section */}
+              <div className="bg-gradient-to-br from-ocean-midnight to-ocean-midnight/95 rounded-2xl p-8 mb-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-ocean-turquoise/20 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-poppins font-bold text-white">Bank Transfer Details</h3>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                      <p className="text-xs text-ocean-turquoise uppercase tracking-wider mb-1">Account Name</p>
+                      <p className="text-white font-semibold">Oceans Alive Foundation</p>
+                    </div>
+                    <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                      <p className="text-xs text-ocean-turquoise uppercase tracking-wider mb-1">Bank Name</p>
+                      <p className="text-white font-semibold">Equity Bank Kenya</p>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                      <p className="text-xs text-ocean-turquoise uppercase tracking-wider mb-1">Account Number</p>
+                      <p className="text-white font-semibold text-lg">0123456789</p>
+                    </div>
+                    <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                      <p className="text-xs text-ocean-turquoise uppercase tracking-wider mb-1">Swift Code</p>
+                      <p className="text-white font-semibold text-lg">EQBLKENA</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <p className="text-xs text-ocean-turquoise uppercase tracking-wider mb-1">Branch</p>
+                    <p className="text-white font-semibold">Mombasa Road Branch, Nairobi, Kenya</p>
+                  </div>
+
+                  <div className="bg-ocean-turquoise/10 rounded-xl p-4 border border-ocean-turquoise/30">
+                    <p className="text-xs text-ocean-turquoise font-bold uppercase tracking-wider mb-2">Important</p>
+                    <p className="text-white/90 text-sm leading-relaxed">
+                      Please include your name and email in the transfer reference so we can send you a receipt and impact updates.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact Info */}
+              <div className="text-center mb-8">
+                <p className="text-sm text-gray-600 mb-1">Questions about your donation?</p>
+                <p className="text-sm text-gray-500">
+                  Contact <strong className="text-ocean-midnight">info@oceansalivekenya.org</strong> or{' '}
+                  <strong className="text-ocean-midnight">des@oceansalivekenya.org</strong>
+                </p>
+              </div>
+
+              <div className="text-center">
+                <Link
+                  href="/"
+                  className="inline-flex items-center justify-center px-8 py-3.5 bg-ocean-midnight text-white font-bold rounded-xl hover:bg-ocean-turquoise transition-all duration-300 text-sm tracking-wide"
+                >
+                  Back to Home
+                </Link>
+              </div>
             </div>
           )}
         </div>
@@ -505,7 +543,7 @@ export default function Donate() {
               {[
                 {
                   q: 'Is my donation tax-deductible?',
-                  a: 'Oceans Alive Foundation is a registered not-for-profit organization in Kenya. Tax deductibility varies by jurisdiction - please consult with your tax advisor regarding deductibility in your country.',
+                  a: 'Oceans Alive Foundation is a registered not-for-profit organization in Kenya. Tax deductibility varies by jurisdiction.',
                 },
                 {
                   q: 'Can I set up a recurring donation?',

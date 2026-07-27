@@ -35,10 +35,10 @@ export default function KuruwitiPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 leading-relaxed mb-6">
-              Kuruwitu is where the model was born and where most of Oceans Alive's demonstration and learning activity still takes place. This is the Kuruwitu story on its own terms—told honestly about who did what, when, and why.
+              Kuruwitu is where the model was born and where most of Oceans Alive's demonstration and learning activity still takes place.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              More than a conservation success story, Kuruwitu is a <strong>living classroom</strong>. Within it, we run coral-restoration demonstrations, reef and intertidal learning, fisheries and co-management education, school visits, local and international student programmes, internships, and engagement with community practitioners.
+              Kuruwitu is a living classroom. Within it we run coral-restoration demonstrations, reef and intertidal learning, fisheries and co-management education, school visits, local and international student programs, internships and engagement with community practitioners. This work is undertaken in close collaboration with the Kuruwitu-CBO, the Kuruwitu BMU, local practitioners, schools and technical partners. Oceans Alive acts as a facilitator and program partner.
             </p>
           </div>
         </div>
@@ -202,17 +202,13 @@ export default function KuruwitiPage() {
                   <span className="text-cyan-600 mt-1">•</span>
                   <span>Provides technical support (coral restoration, monitoring)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-cyan-600 mt-1">•</span>
-                  <span>Does NOT own or control the site</span>
-                </li>
               </ul>
             </div>
           </div>
 
           <div className="bg-ocean-turquoise/5 border border-ocean-turquoise/20 rounded-xl p-6 text-center">
             <p className="text-gray-700 leading-relaxed">
-              <strong>Important:</strong> Oceans Alive acts as a facilitator and programme partner, not as the owner of the learning site. All work is undertaken in close collaboration with the KCW-CBO, Kuruwitu BMU, local practitioners, schools, and technical partners.
+              Oceans Alive acts as a facilitator and programme partner, not as the owner of the learning site. All work is undertaken in close collaboration with the KCW-CBO, Kuruwitu BMU, local practitioners, schools, and technical partners.
             </p>
           </div>
         </div>

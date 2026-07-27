@@ -134,7 +134,7 @@ export const TEAM_MEMBERS = [
   {
     name: 'Des Bowden',
     role: 'Director / CEO',
-    bio: 'Founded Oceans Alive in 2003 alongside Kuruwitu fishermen. Has led the organisation from a 30-hectare sanctuary to a globally recognised model of community-led marine conservation - and Kenya\'s first ocean co-management plan.',
+    bio: 'A founder of Oceans Alive (established 2016) and a long-standing participant in the Kuruwitu community conservation journey since its early years.',
     image: '/images/team/des-bowden.webp',
     initials: 'DB',
   },
@@ -195,10 +195,17 @@ export const TEAM_MEMBERS = [
     initials: 'KN',
   },
   {
+    name: 'Chris Adede',
+    role: 'Brand & Communication Manager',
+    bio: 'Tells the story of Oceans Alive\'s work to the world - from Project REEL Kilifi media partnerships to social media, press, and advocacy content reaching global conservation audiences.',
+    image: '/images/team/chris-adede.jpg',
+    initials: 'CA',
+  },
+  {
     name: 'Roseline Kibogo',
-    role: 'Fisheries Development Assistant',
-    bio: 'Supports fisheries development across Kilifi\'s co-managed marine areas, coordinating community data collection and monitoring fish biomass recovery.',
-    image: null,
+    role: 'Community Officer',
+    bio: 'Works directly with coastal communities to strengthen local engagement, facilitate participatory conservation planning, and ensure community voices guide programme delivery.',
+    image: '/images/team/roseline.jpeg',
     initials: 'RK',
   },
   {
@@ -216,25 +223,11 @@ export const TEAM_MEMBERS = [
     initials: 'CB',
   },
   {
-    name: 'Ledama Masidza',
-    role: 'Ambassador',
-    bio: 'Provides specialist consultancy on community development strategy, policy advocacy, and coastal governance frameworks across OAF\'s programme areas.',
-    image: null,
-    initials: 'LMa',
-  },
-  {
     name: 'Patrick Kyengo',
     role: 'Monitoring & Evaluation Officer',
     bio: 'Leads impact measurement across all programmes, designing data collection systems and delivering evidence that informs both programme improvement and donor reporting.',
     image: '/images/team/Patrick.jpeg',
     initials: 'PK',
-  },
-  {
-    name: 'Chris Adede',
-    role: 'Brand & Communication Manager',
-    bio: 'Tells the story of Oceans Alive\'s work to the world - from Project REEL Kilifi media partnerships to social media, press, and advocacy content reaching global conservation audiences.',
-    image: '/images/team/chris-adede.jpg',
-    initials: 'CA',
   },
   {
     name: 'Julius Kitela',
@@ -257,17 +250,43 @@ export const TEAM_MEMBERS = [
     image: '/images/team/Nancy1.jpeg',
     initials: 'NO',
   },
+  {
+    name: 'Shadrack',
+    role: 'Finance Manager',
+    bio: 'Manages financial operations, budgeting, and reporting, ensuring fiscal accountability and transparency across all Oceans Alive programmes and partnerships.',
+    image: '/images/team/shadrack.jpeg',
+    initials: 'SH',
+  },
+  {
+    name: 'Eunice',
+    role: 'GIS Officer',
+    bio: 'Provides geospatial mapping and analysis for marine conservation areas, supporting data-driven decision-making and spatial planning across Kilifi County\'s coastal zone.',
+    image: null,
+    initials: 'EU',
+  },
+  {
+    name: 'Joseph Muturi',
+    role: 'Expedition Lead',
+    bio: 'Coordinates field expeditions, marine surveys, and community engagement activities, ensuring safe and effective delivery of conservation programmes across coastal sites.',
+    image: null,
+    initials: 'JM',
+  },
+  {
+    name: 'Ledama Masidza',
+    role: 'Ambassador',
+    bio: 'Provides specialist consultancy on community development strategy, policy advocacy, and coastal governance frameworks across OAF\'s programme areas.',
+    image: '/images/team/ledama.jpeg',
+    initials: 'LMa',
+  },
 ];
-
 // Impact Stats - Updated June 2025 from Company Profile & Impact Report
 export const IMPACT_STATS = [
-  { label: 'Years of Community-Led Conservation', value: '20+' },
-  { label: '120 km² Under Kuruwitu Co-Management Plan', value: '12,000 ha' },
-  { label: 'Coral Colonies Out-Planted Since 2019', value: '15,000+' },
-  { label: 'Fish Biomass Increase (15 years WCS data)', value: '400%' },
-  { label: 'Fishing Communities Replicating Model', value: '30' },
+  { label: 'Reef Under Co-Management', value: '120 km²' },
+  { label: 'Corals Out-Planted (Since 2019)', value: '25,000+' },
+  { label: 'BMUs in Kilifi Network', value: '18' },
+  { label: 'Communities Replicating Model', value: '30' },
   { label: 'School Children Reached', value: '10,000+' },
-  { label: 'Women Engaged in Livelihood Programs', value: '735+' },
+  { label: 'Women in Livelihood Programs', value: '735+' },
 ];
 
 // Two-Track Timeline - Kuruwitu Community Journey + Oceans Alive Organisational Journey
@@ -635,6 +654,46 @@ export const PARTNERS = [
     logo: '/images/partners/defra.jpg',
   },
   {
+    name: 'Blue Ventures',
+    role: 'BMU Governance Partner',
+    logo: '/images/partners/blue-ventures.svg',
+  },
+  {
+    name: 'Wildlife Direct',
+    role: 'Conservation Support',
+    logo: '/images/partners/Wildlife Direct.png',
+  },
+  {
+    name: 'OCEAN Community',
+    role: 'Ocean Conservation Network',
+    logo: '/images/partners/ocean-community.png',
+  },
+  {
+    name: 'Mombasa County',
+    role: 'County Government Partner',
+    logo: '/images/partners/mombasa-county.jpg',
+  },
+  {
+    name: 'Downe House School',
+    role: 'Education Partner',
+    logo: '/images/partners/Downe House School.png',
+  },
+  {
+    name: 'The Habitats Trust',
+    role: 'Conservation Partner',
+    logo: '/images/partners/The Habitats Trust Kenya.png',
+  },
+  {
+    name: 'Ocean Sole',
+    role: 'Upcycling Partner',
+    logo: '/images/partners/Ocean Sole Kenya.png',
+  },
+  {
+    name: 'Platinum Credit',
+    role: 'Carbon Finance Partner',
+    logo: '/images/partners/Platinum Credit.png',
+  },
+  {
     name: 'Platinum Credit',
     role: 'Financial Partner',
     logo: '/images/partners/Platinum Credit.png',
@@ -876,27 +935,27 @@ export const STATIC_BLOG_STORIES = [
   },
 ];
 
-// The 4 Principles
+// The 4 Core Principles (not pillars)
 export const PRINCIPLES = [
   {
     number: '01',
     title: 'Community Ownership',
-    body: 'Every programme is co-designed with fishing communities, BMUs, and local leaders. Ownership drives the accountability that makes outcomes last.',
+    body: 'We believe true conservation is an exercise in local leadership. Our programs are co-designed with fishers, Beach Management Units (BMUs), and local leaders. By placing governance in the hands of those who live by the sea, we ensure the solutions we build together last for generations.',
   },
   {
     number: '02',
-    title: 'Integrated Impact',
-    body: 'Restoring a reef only works if the community has other income sources. Teaching children only works if their parents have secure livelihoods. Our programmes are deliberately interconnected.',
+    title: 'Integrated Resilience',
+    body: 'A reef cannot thrive if its community is trapped in economic vulnerability. We take an integrated approach, connecting ocean health to land-based prosperity. By pairing reef restoration with homestead gardening and circular economy projects, we ensure that a healthy ocean creates a healthy, stable community.',
   },
   {
     number: '03',
     title: 'Evidence-Led Action',
-    body: 'Research and monitoring underpin every programme. Data collected by community reef monitors informs national policy - closing the loop between science and governance.',
+    body: 'The tengefu is a living classroom where local wisdom is documented as key data. Our research, conducted by local reef monitors, underpins everything we do. This ensures our work is scientifically rigorous, locally relevant, and capable of informing national policy.',
   },
   {
     number: '04',
-    title: 'Gender at the Core',
-    body: "Women are agents of conservation, not beneficiaries. LIFT Network, Trash4Cash, and kitchen gardens are designed to expand women's economic independence alongside ocean stewardship.",
+    title: 'Inclusion at the Core',
+    body: 'Conservation succeeds when everyone has a seat at the table. Women and youth are central to our work, driving the initiatives that define our impact. Through Trash4Cash, permaculture and alternative income generation programs, we foster economic independence alongside stewardship to build a future that is inclusive and secure for all.',
   },
 ];
 

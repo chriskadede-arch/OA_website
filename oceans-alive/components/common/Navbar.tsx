@@ -69,9 +69,13 @@ const MEGA_NAV: MegaNavItem[] = [
     columns: [
       {
         title: 'About Us',
+        compact: true,
         items: [
+          { label: 'Overview', href: '/about', description: 'Complete overview of Oceans Alive Foundation' },
           { label: 'Our Story', href: '/about/story', description: '20+ years of community conservation' },
           { label: 'Mission & Vision', href: '/about/mission', description: 'Our purpose & values' },
+          { label: 'Recognition & Awards', href: '/about/recognition', description: 'UNDP Equator Prize · Royal Visit · IUCN 2025' },
+          { label: 'Kuruwitu Story', href: '/learn/kuruwitu', description: 'Kenya\'s first community-led marine conservation area' },
           { label: 'Our Team', href: '/about/team', description: 'People behind the work' },
           { label: 'Partners', href: '/about/partners', description: 'Our collaborators' },
         ],
@@ -94,7 +98,6 @@ const MEGA_NAV: MegaNavItem[] = [
       {
         title: 'Blog & Stories',
         items: [
-          { label: 'Kuruwitu Story', href: '/learn/kuruwitu', description: 'Kenya\'s first community-led marine conservation area' },
           { label: 'Impact Stories', href: '/blog/category/impact-stories', description: 'Real results from our fieldwork' },
           { label: 'Community News & Updates', href: '/blog/category/community-news', description: 'Updates from local communities and OAF announcements' },
         ],
@@ -218,7 +221,7 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
                 href="/programmes"
                 onClick={onClose}
                 className="group relative block rounded-2xl overflow-hidden"
-                style={{ minHeight: '260px', height: '100%' }}
+                style={{ minHeight: '200px', height: '100%' }}
               >
                 <Image
                   src="/images/divers.jpg"
@@ -455,12 +458,12 @@ function MobileNavItem({ item, onClose }: { item: MegaNavItem; onClose: () => vo
                       key={sub.href + sub.label}
                       href={sub.href}
                       onClick={onClose}
-                      className="flex items-center gap-2 py-2 px-2 rounded-lg hover:bg-gray-50 transition-colors"
+                      className="flex items-center gap-2 py-1 px-2 rounded-lg hover:bg-gray-50 transition-colors"
                     >
-                      <span className="w-6 h-6 rounded-md bg-ocean-turquoise/10 text-ocean-turquoise text-[9px] font-bold flex items-center justify-center shrink-0">
+                      <span className="w-5 h-5 rounded-md bg-ocean-turquoise/10 text-ocean-turquoise text-[8px] font-bold flex items-center justify-center shrink-0">
                         {String(i + 1).padStart(2, '0')}
                       </span>
-                      <span className="text-xs font-medium text-ocean-midnight leading-snug">{sub.label}</span>
+                      <span className="text-[11px] font-medium text-ocean-midnight leading-tight">{sub.label}</span>
                     </Link>
                   ))}
                 </div>

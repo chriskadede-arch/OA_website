@@ -33,13 +33,8 @@ export default function StoryPage() {
             <span className="text-ocean-turquoise">Story</span>
           </h1>
           <p className="text-white/60 text-xl max-w-xl leading-relaxed">
-            From 30 hectares of protected reef to a national model of community-led ocean governance.
-            A story that belongs to the fishermen who started it.
+            From 30 hectares of protected reef to a national model of community-led ocean governance. A story that begins with and still belongs to the fishers who started it.
           </p>
-          <div className="mt-10 flex items-center gap-3 text-xs text-white/30 uppercase tracking-widest">
-            <span className="w-5 h-px bg-white/20" />
-            Kuruwitu · Kilifi County · Kenya · Since 2003
-          </div>
         </div>
       </section>
 
@@ -54,9 +49,6 @@ export default function StoryPage() {
                 <span className="w-6 h-px bg-ocean-turquoise/50" />
                 The Beginning
               </p>
-              <h2 className="text-4xl md:text-5xl font-poppins font-bold text-ocean-midnight leading-tight mb-10">
-                From 30 Hectares<br />to a National Model
-              </h2>
 
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <p className="text-xl font-medium text-ocean-midnight">
@@ -144,13 +136,16 @@ export default function StoryPage() {
                 Reimagining Marine Conservation through community leadership on Kenya's Coast
               </h2>
               <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                In the late 90s, when coral bleaching devastated Kenya's reefs and fish stocks collapsed, Kuruwitu's fishing community took action - establishing Kenya's first community-driven marine protected area, a 30-hectare Tengefu.
+                In the late 1990s, coral bleaching devastated Kenya's reefs and fish stocks collapsed. In response, Kuruwitu's residents and fishing community united to build a partnership which formed the Kuruwitu Conservation and Welfare Association in 2003 (now the Kuruwitu Conservation and Welfare CBO). In 2006 Kuruwitu-CBO established one of Kenya's earliest community-driven Locally Managed Marine Areas; a 30-hectare no-take sanctuary governed under traditional law, known as a tengefu. The success at Kuruwitu has been founded on collective action and partnerships driven by the common good.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                During the first 15 years of management, unprecedented results were delivered: 400% fish biomass increase, 30% coral recovery, 17% seagrass restoration, and 735% household income improvement in the surrounding area. A working model was created.
+                Oceans Alive and the Kuruwitu-CBO work as distinct partners in a shared mission. The Kuruwitu-CBO manages the sanctuary and local community welfare, while Oceans Alive provides technical, scientific, and institutional support to help scale these locally led successes.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Over roughly 15 years of community management, the sanctuary delivered measurable recovery and recorded a 400% increase in fish biomass, 30% reef recovery and 17% seagrass regrowth (WCS monitoring data). A 135% improvement in catch in surrounding waters was recorded and noted as the spill-over effect, proving the importance of a working, community-owned model.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8">
-                In 2016, Oceans Alive Foundation was established to share this proven Community Conservation Area (CCA) experience, offering technical support to scale across 17 neighbouring Beach Management Units. Today, we support 12,000 hectares of co-managed ocean and 7,000+ households across Kilifi County.
+                In 2016, Oceans Alive was established as a separate organisation to help document and share the lessons of this community-led model. Working with the Kuruwitu BMU, the KCW-CBO, government agencies and technical partners, Oceans Alive has supported the development of the 120 km² Kuruwitu Co-Management Area and the growth of the Kilifi County BMU Network of 17 BMUs, as a facilitator and technical partner.
               </p>
 
               {/* Underwater Image - aligned with timeline */}
@@ -167,19 +162,34 @@ export default function StoryPage() {
             {/* Timeline */}
             <div className="space-y-0">
               {TIMELINE.map((item, i) => {
-                // Handle year ranges differently
-                const isRange = item.year.includes('-');
-                const displayYear = isRange ? '03-18' : item.year.slice(2);
+                // Handle year ranges differently - check for both dash and en-dash
+                const isRange = item.year.includes('–') || item.year.includes('-');
+
+                // For display in circle: extract years differently based on format
+                let displayYear;
+                if (item.year.includes('–')) {
+                  // Handle en-dash (2006–2018, 2023–present)
+                  const parts = item.year.split('–');
+                  displayYear = parts[0].slice(2) + '–' + (parts[1] === 'present' ? 'now' : parts[1].slice(2));
+                } else if (item.year.includes('-') && item.year.length > 4) {
+                  // Handle regular dash for ranges
+                  const parts = item.year.split('-');
+                  displayYear = parts[0].slice(2) + '-' + parts[1].slice(2);
+                } else {
+                  // Single year
+                  displayYear = item.year.slice(2);
+                }
 
                 return (
-                <div key={item.year} className="flex gap-5 pb-8 last:pb-0">
-                  <div className="flex flex-col items-center">
-                    <div className={`${isRange ? 'w-14' : 'w-10'} h-10 rounded-full bg-ocean-turquoise/10 border-2 border-ocean-turquoise flex items-center justify-center shrink-0`}>
-                      <span className="text-[10px] font-bold text-ocean-turquoise">{displayYear}</span>
+                <div key={item.year} className="flex gap-5 pb-5 last:pb-0">
+                  <div className="flex flex-col items-center gap-2">
+                    {/* Use wider pill shape for ranges, circle for single years */}
+                    <div className={`${isRange ? 'px-2.5 h-10 min-w-[56px] rounded-full' : 'w-10 h-10 rounded-full'} bg-ocean-turquoise/10 border-2 border-ocean-turquoise flex items-center justify-center shrink-0`}>
+                      <span className="text-[9px] font-bold text-ocean-turquoise whitespace-nowrap">{displayYear}</span>
                     </div>
-                    {i < TIMELINE.length - 1 && <div className="w-px flex-1 bg-ocean-turquoise/20 mt-2" />}
+                    {i < TIMELINE.length - 1 && <div className="w-px flex-1 bg-ocean-turquoise/20" />}
                   </div>
-                  <div className="pt-1 pb-6">
+                  <div className="pt-1 pb-3">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-xs font-bold text-ocean-turquoise uppercase tracking-wider">{item.year}</span>
                       {item.tag && (
