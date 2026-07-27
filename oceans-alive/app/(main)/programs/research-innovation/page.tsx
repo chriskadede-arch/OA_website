@@ -56,7 +56,12 @@ export default function ResearchInnovationPage() {
       <section className="bg-gradient-to-br from-cyan-900 to-blue-900 py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-8">
-            <div className="text-6xl mb-4">⚖️</div>
+            <div className="w-16 h-16 mx-auto mb-4 text-white">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
             <h2 className="text-4xl md:text-5xl font-poppins font-bold text-white mb-4">Governance Pillar</h2>
             <p className="text-white/70 text-sm uppercase tracking-widest">Strategic Plan 2020-25 | Pillar of Development</p>
           </div>
@@ -70,19 +75,37 @@ export default function ResearchInnovationPage() {
 
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                  <div className="text-4xl mb-3">🏖️</div>
+                  <div className="w-10 h-10 mb-3 text-cyan-300">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                  </div>
                   <h4 className="text-lg font-bold text-white mb-2">Beach Management Units</h4>
                   <p className="text-white/70 text-sm">18 BMUs across Kilifi Network coordinating community-based fisheries governance.</p>
                 </div>
 
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                  <div className="text-4xl mb-3">🤲</div>
+                  <div className="w-10 h-10 mb-3 text-blue-300">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                  </div>
                   <h4 className="text-lg font-bold text-white mb-2">Joint Co-Management</h4>
                   <p className="text-white/70 text-sm">120 km² under Kenya's first Co-Management Plan—community rights meet institutional support.</p>
                 </div>
 
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                  <div className="text-4xl mb-3">📜</div>
+                  <div className="w-10 h-10 mb-3 text-teal-300">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                      <polyline points="14 2 14 8 20 8"/>
+                      <line x1="16" y1="13" x2="8" y2="13"/>
+                      <line x1="16" y1="17" x2="8" y2="17"/>
+                    </svg>
+                  </div>
                   <h4 className="text-lg font-bold text-white mb-2">Policy Application</h4>
                   <p className="text-white/70 text-sm">Supporting communities in applying state and county regulations for resource ownership.</p>
                 </div>
@@ -97,17 +120,56 @@ export default function ResearchInnovationPage() {
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-12">What We Do</h2>
 
-          {/* The Evidence Story */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-8">
-            <div className="prose prose-lg max-w-none">
-              <h3 className="text-2xl font-poppins font-bold text-ocean-midnight mb-4">Community Passion Needs Professional Backbone</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">
+          {/* Direct Answer - What We Do */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-cyan-500 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 mb-4 text-cyan-600">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-poppins font-bold text-ocean-midnight mb-2">Scientific Monitoring</h3>
+              <p className="text-gray-600 text-sm">Quarterly ecosystem health surveys with WCS tracking coral, fish biomass, and seagrass across 15 years of data.</p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-blue-500 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 mb-4 text-blue-600">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-poppins font-bold text-ocean-midnight mb-2">BMU Network Coordination</h3>
+              <p className="text-gray-600 text-sm">Supporting 18 Beach Management Units managing 120 km² of co-managed waters across Kilifi County.</p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-green-500 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 mb-4 text-green-600">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="12" y1="1" x2="12" y2="23"/>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-poppins font-bold text-ocean-midnight mb-2">Sustainable Finance</h3>
+              <p className="text-gray-600 text-sm">Economic models, ecotourism concessions, and revenue strategies that keep conservation alive beyond donor cycles.</p>
+            </div>
+          </div>
+
+          {/* Why This Works - The Evidence Story */}
+          <div className="bg-gradient-to-br from-cyan-600 to-blue-700 rounded-2xl shadow-xl p-8 md:p-10 mb-8 text-white">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-1 h-12 bg-white rounded-full"></div>
+              <h3 className="text-2xl font-poppins font-bold">Community Passion Needs Professional Backbone</h3>
+            </div>
+            <div className="prose prose-lg prose-invert max-w-none">
+              <p className="text-white/90 leading-relaxed mb-4">
                 The Kuruwitu model works because it's backed by rigorous science, sustainable finance, and institutional support. Community-led doesn't mean community-alone. Oceans Alive provides the technical expertise, monitoring infrastructure, and evidence base that turns grassroots passion into policy-ready conservation.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <p className="text-white/90 leading-relaxed mb-4">
                 In partnership with Wildlife Conservation Society (WCS), we conduct quarterly monitoring surveys that track ecosystem health across coral cover, fish biomass, and seagrass recovery. This isn't data for journals—it's proof that the model works. When the Royal Family visited Kuruwitu in 2023, when IUCN awarded the Blue Champions recognition in 2022, when Kenya's government endorsed the first Co-Management Plan—they did it because the evidence was undeniable.
               </p>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-white/90 leading-relaxed">
                 This programme also generates the sustainable revenue models that keep conservation alive beyond donor cycles: economic assessments, business plans, aquatic ecotourism concessions with Vipingo Ridge and LEAP, grants from IUCN/EU BIOPAMA, and KCW-CBO revenue streams generating USD 10–20K annually. Conservation that doesn't pay for itself doesn't last.
               </p>
             </div>
@@ -126,17 +188,32 @@ export default function ResearchInnovationPage() {
                 In partnership with WCS, Oceans Alive conducts quarterly monitoring surveys that track the health of Kuruwitu's marine ecosystems. These aren't academic exercises—they're the proof that community-led conservation delivers measurable, long-term recovery. Fifteen years of data show a 400% increase in fish biomass, 30% reef recovery, 17% seagrass regrowth, and an 85% coral survival rate in restoration sites.
               </p>
               <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <h4 className="text-lg font-poppins font-bold text-ocean-midnight mb-3">🐟 Fish Biomass Monitoring</h4>
-                  <p className="text-gray-700 leading-relaxed">
-                    Catch Assessment Surveys (CAS) and Frame Surveys (FS) track fish abundance and diversity across the sanctuary and surrounding waters. The 400% biomass increase within the Tengefu LMMA and 135% improvement in surrounding catch prove that protected areas benefit fishers, not just fish.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 flex-shrink-0 text-blue-600">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm0 3l3 4h-2v4h-2v-4H9l3-4z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-poppins font-bold text-ocean-midnight mb-3">Fish Biomass Monitoring</h4>
+                    <p className="text-gray-700 leading-relaxed">
+                      Catch Assessment Surveys (CAS) and Frame Surveys (FS) track fish abundance and diversity across the sanctuary and surrounding waters. The 400% biomass increase within the Tengefu LMMA and 135% improvement in surrounding catch prove that protected areas benefit fishers, not just fish.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-lg font-poppins font-bold text-ocean-midnight mb-3">🪸 Coral & Ecosystem Health</h4>
-                  <p className="text-gray-700 leading-relaxed">
-                    Regular assessments measure coral cover, recruitment, and reef condition. An 85% survival rate in coral restoration sites demonstrates that community-led restoration isn't just symbolic—it's rebuilding reefs at scale, backed by science.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 flex-shrink-0 text-pink-600">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                      <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-poppins font-bold text-ocean-midnight mb-3">Coral & Ecosystem Health</h4>
+                    <p className="text-gray-700 leading-relaxed">
+                      Regular assessments measure coral cover, recruitment, and reef condition. An 85% survival rate in coral restoration sites demonstrates that community-led restoration isn't just symbolic—it's rebuilding reefs at scale, backed by science.
+                    </p>
+                  </div>
                 </div>
               </div>
               <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-xl p-5">

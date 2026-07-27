@@ -52,7 +52,13 @@ export default function OceanRecoveryPage() {
       <section className="bg-gradient-to-br from-ocean-midnight to-blue-900 py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-8">
-            <div className="text-6xl mb-4">🌊</div>
+            <div className="w-16 h-16 mx-auto mb-4 text-white">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                <path d="M12 2v20"/>
+                <circle cx="12" cy="14" r="6"/>
+              </svg>
+            </div>
             <h2 className="text-4xl md:text-5xl font-poppins font-bold text-white mb-4">Environment Pillar</h2>
             <p className="text-white/70 text-sm uppercase tracking-widest">Strategic Plan 2020-25 | Pillar of Development</p>
           </div>
@@ -66,19 +72,37 @@ export default function OceanRecoveryPage() {
 
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                  <div className="text-4xl mb-3">🪸</div>
+                  <div className="w-10 h-10 mb-3 text-blue-300">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                      <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                  </div>
                   <h4 className="text-lg font-bold text-white mb-2">Coral Garden Programme</h4>
                   <p className="text-white/70 text-sm">25,000+ corals restored across 39 hectares, transforming fishers into reef gardeners.</p>
                 </div>
 
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                  <div className="text-4xl mb-3">🏞️</div>
+                  <div className="w-10 h-10 mb-3 text-teal-300">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                  </div>
                   <h4 className="text-lg font-bold text-white mb-2">Catchment to Reef</h4>
                   <p className="text-white/70 text-sm">Integrated ecosystem management from land through to marine protected areas.</p>
                 </div>
 
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                  <div className="text-4xl mb-3">📋</div>
+                  <div className="w-10 h-10 mb-3 text-cyan-300">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                      <polyline points="14 2 14 8 20 8"/>
+                      <line x1="16" y1="13" x2="8" y2="13"/>
+                      <line x1="16" y1="17" x2="8" y2="17"/>
+                      <polyline points="10 9 9 9 8 9"/>
+                    </svg>
+                  </div>
                   <h4 className="text-lg font-bold text-white mb-2">Co-Management Plans</h4>
                   <p className="text-white/70 text-sm">120 km² under Kenya's first officially endorsed Co-Management Area Plan (CMAP).</p>
                 </div>
@@ -93,17 +117,57 @@ export default function OceanRecoveryPage() {
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-12">What We Do</h2>
 
-          {/* The Story of Recovery */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-8">
-            <div className="prose prose-lg max-w-none">
-              <h3 className="text-2xl font-poppins font-bold text-ocean-midnight mb-4">From Devastation to National Model</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">
+          {/* Direct Answer - What We Do */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-pink-500 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 mb-4 text-pink-600">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-poppins font-bold text-ocean-midnight mb-2">Coral Restoration</h3>
+              <p className="text-gray-600 text-sm">Community-led reef restoration through 32 nursery tables, 457 artificial reefs, and 25,000+ corals planted since 2019.</p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-blue-500 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 mb-4 text-blue-600">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M3 3h18v18H3V3z"/>
+                  <path d="M9 9h6v6H9V9z"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-poppins font-bold text-ocean-midnight mb-2">Marine Sanctuary Management</h3>
+              <p className="text-gray-600 text-sm">Supporting 39 hectares of protected reef (Tengefu 30ha + Madowani 9ha) and Kenya's first 120 km² Co-Management Area.</p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-green-500 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 mb-4 text-green-600">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                  <path d="M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-poppins font-bold text-ocean-midnight mb-2">Catchment to Reef Management</h3>
+              <p className="text-gray-600 text-sm">Integrated ecosystem approach from land to sea, including sea turtle conservation along 12 km of coastline.</p>
+            </div>
+          </div>
+
+          {/* Why This Works - The Story */}
+          <div className="bg-gradient-to-br from-ocean-midnight to-blue-900 rounded-2xl shadow-xl p-8 md:p-10 mb-8 text-white">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-1 h-12 bg-ocean-turquoise rounded-full"></div>
+              <h3 className="text-2xl font-poppins font-bold">From Devastation to National Model</h3>
+            </div>
+            <div className="prose prose-lg prose-invert max-w-none">
+              <p className="text-white/90 leading-relaxed mb-4">
                 In the late 1990s, coral bleaching devastated Kenya's reefs and fish stocks collapsed. Kuruwitu's fishers faced a choice: watch their livelihoods disappear, or act. In 2003, they formed the Kuruwitu Conservation and Welfare Association. In 2006, they established one of Kenya's earliest community-driven Locally Managed Marine Areas—a 30-hectare no-take sanctuary governed under traditional law, known as a <em>tengefu</em>.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <p className="text-white/90 leading-relaxed mb-4">
                 What happened next rewrote what Kenya thought was possible. Over roughly 15 years, the sanctuary delivered a 400% increase in fish biomass, 30% reef recovery, and 17% seagrass regrowth. A 135% improvement in catch in surrounding waters proved the spillover effect: when the reef recovers, fishers benefit. This wasn't theory—it was survival, measured by WCS monitoring data.
               </p>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-white/90 leading-relaxed">
                 In 2016, Oceans Alive was established to help document and scale this model. Working with the Kuruwitu BMU, government agencies, and technical partners, we supported the development of Kenya's first officially endorsed Co-Management Plan in 2022—covering 120 km² of ocean and 18 Beach Management Units across Kilifi County. The fishers who started this didn't just save their reef. They shaped national policy.
               </p>
             </div>
@@ -152,13 +216,21 @@ export default function OceanRecoveryPage() {
             </div>
           </div>
 
-          {/* Two Column Layout */}
+          {/* Two Column Layout with SVG Icons */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             {/* Coral Restoration */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="mb-4">
-                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">From Fishers to Reef Gardeners</h3>
-                <div className="text-xs text-pink-600 font-bold uppercase mt-1">Coral Restoration Programme</div>
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-10 h-10 flex-shrink-0 text-pink-600">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-poppins font-bold text-ocean-midnight">From Fishers to Reef Gardeners</h3>
+                  <div className="text-xs text-pink-600 font-bold uppercase mt-1">Coral Restoration Programme</div>
+                </div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Since 2019, Oceans Alive has partnered with Coral Guardian International and Coral Reef Care to build Kenya's most active community-led coral nursery at Kuruwitu. The same fishers whose livelihoods depend on the reef are now trained and employed as certified reef gardeners—planting, monitoring, and protecting the future they once took for granted.
@@ -182,9 +254,18 @@ export default function OceanRecoveryPage() {
 
             {/* Sea Turtle Conservation */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="mb-4">
-                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Protecting the Shoreline Guardians</h3>
-                <div className="text-xs text-green-600 font-bold uppercase mt-1">Sea Turtle Conservation</div>
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-10 h-10 flex-shrink-0 text-green-600">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <ellipse cx="12" cy="13" rx="9" ry="7"/>
+                    <circle cx="12" cy="6" r="3"/>
+                    <path d="M4 13c-1 2-1 4 0 6M20 13c1 2 1 4 0 6M7 10l-2-2M17 10l2-2M7 16l-2 2M17 16l2 2"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Protecting the Shoreline Guardians</h3>
+                  <div className="text-xs text-green-600 font-bold uppercase mt-1">Sea Turtle Conservation</div>
+                </div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Sea turtles return to the same beaches where they were born to lay their eggs. The Kuruwitu Turtle Group ensures they still have a safe place to come home to. Through marine patrols and nest monitoring along 12 km of coastline, the community protects both nesting mothers and hatchlings from poaching, predators, and habitat loss.

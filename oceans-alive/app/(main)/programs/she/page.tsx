@@ -59,7 +59,12 @@ export default function SHEProgramPage() {
       <section className="bg-gradient-to-br from-pink-900 to-purple-900 py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-8">
-            <div className="text-6xl mb-4">💰</div>
+            <div className="w-16 h-16 mx-auto mb-4 text-white">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
             <h2 className="text-4xl md:text-5xl font-poppins font-bold text-white mb-4">Economic Pillar</h2>
             <p className="text-white/70 text-sm uppercase tracking-widest">Strategic Plan 2020-25 | Pillar of Development</p>
           </div>
@@ -73,19 +78,38 @@ export default function SHEProgramPage() {
 
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                  <div className="text-4xl mb-3">♻️</div>
+                  <div className="w-10 h-10 mb-3 text-pink-300">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M23 6l-9.5 9.5-5-5L1 18"/>
+                      <polyline points="17 6 23 6 23 12"/>
+                    </svg>
+                  </div>
                   <h4 className="text-lg font-bold text-white mb-2">Diversified Income (DIGs)</h4>
                   <p className="text-white/70 text-sm">735+ women in Trash4Cash, permaculture, LIFT Network—economic options beyond fishing.</p>
                 </div>
 
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                  <div className="text-4xl mb-3">🔗</div>
+                  <div className="w-10 h-10 mb-3 text-purple-300">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <circle cx="18" cy="5" r="3"/>
+                      <circle cx="6" cy="12" r="3"/>
+                      <circle cx="18" cy="19" r="3"/>
+                      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                    </svg>
+                  </div>
                   <h4 className="text-lg font-bold text-white mb-2">Value Chain Support</h4>
                   <p className="text-white/70 text-sm">For every 1 fisher, 20 livelihoods benefit—supporting the entire coastal economy.</p>
                 </div>
 
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                  <div className="text-4xl mb-3">🌾</div>
+                  <div className="w-10 h-10 mb-3 text-green-300">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M12 2v20M2 12h20"/>
+                      <circle cx="12" cy="12" r="4"/>
+                      <path d="M12 2C8 6 8 10 12 12M12 2c4 4 4 8 0 10M12 22c-4-4-4-8 0-10M12 22c4-4 4-8 0-10"/>
+                    </svg>
+                  </div>
                   <h4 className="text-lg font-bold text-white mb-2">Safeguard Livelihoods</h4>
                   <p className="text-white/70 text-sm">600+ households with climate-smart food security, protecting traditional ways of life.</p>
                 </div>
@@ -162,18 +186,58 @@ export default function SHEProgramPage() {
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-12">What We Do</h2>
 
-          {/* The Philosophy Story */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-8">
-            <div className="prose prose-lg max-w-none">
-              <h3 className="text-2xl font-poppins font-bold text-ocean-midnight mb-4">When Families Eat from Their Gardens, Oceans Breathe Easier</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">
+          {/* Direct Answer - What We Do */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-pink-500 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 mb-4 text-pink-600">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-poppins font-bold text-ocean-midnight mb-2">Trash4Cash Recycling</h3>
+              <p className="text-gray-600 text-sm">120+ women collect, sort and sell plastic waste—turning 2+ tonnes of ocean pollution into monthly household income.</p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-green-500 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 mb-4 text-green-600">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 2v20M2 12h20"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <path d="M12 2C8 6 8 10 12 12M12 2c4 4 4 8 0 10M12 22c-4-4-4-8 0-10M12 22c4-4 4-8 0-10"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-poppins font-bold text-ocean-midnight mb-2">Climate-Smart Food Systems</h3>
+              <p className="text-gray-600 text-sm">600+ households with backyard permaculture gardens reducing fishing pressure while improving nutrition and income.</p>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-purple-500 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 mb-4 text-purple-600">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-poppins font-bold text-ocean-midnight mb-2">Women's Leadership (LIFT Network)</h3>
+              <p className="text-gray-600 text-sm">735+ women engaged in savings groups, BMU governance, and conservation leadership across Kilifi County.</p>
+            </div>
+          </div>
+
+          {/* Why This Works - The Philosophy */}
+          <div className="bg-gradient-to-br from-pink-600 to-purple-700 rounded-2xl shadow-xl p-8 md:p-10 mb-8 text-white">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-1 h-12 bg-white rounded-full"></div>
+              <h3 className="text-2xl font-poppins font-bold">When Families Eat from Their Gardens, Oceans Breathe Easier</h3>
+            </div>
+            <div className="prose prose-lg prose-invert max-w-none">
+              <p className="text-white/90 leading-relaxed mb-4">
                 Conservation is strongest when communities have secure livelihoods and economic independence. This isn't feel-good rhetoric—it's the foundational principle behind the Social, Health & Environment programme. When coastal women have diversified income options, when households grow their own food, when plastic waste becomes a paycheck instead of ocean pollution—that's when conservation moves from a moral argument to a livelihood strategy.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <p className="text-white/90 leading-relaxed mb-4">
                 For every 1 fisher on the water, 20 livelihoods benefit in the value chain. That's 20 families whose futures depend on a healthy ocean—not because they're convinced by campaigns, but because their income depends on it. This programme recognizes that economic sustainability and environmental sustainability aren't separate goals. They're the same fight.
               </p>
-              <p className="text-gray-700 leading-relaxed">
-                Over 735 women across Kilifi County are now engaged in Trash4Cash recycling, permaculture training, LIFT Network entrepreneurship, and women's savings groups. More than 600 households practice climate-smart permaculture. This isn't aid—it's agency. And when women lead economic empowerment, entire communities shift.
+              <p className="text-white/90 leading-relaxed">
+                This isn't aid—it's agency. And when women lead economic empowerment, entire communities shift toward conservation as a livelihood strategy, not a sacrifice.
               </p>
             </div>
           </div>
@@ -210,13 +274,22 @@ export default function SHEProgramPage() {
             </div>
           </div>
 
-          {/* Two Column Grid */}
+          {/* Two Column Grid with SVG Icons */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             {/* Climate-Smart Permaculture */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="mb-4">
-                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Kitchen Gardens & Food Security</h3>
-                <div className="text-xs text-green-600 font-bold uppercase mt-1">Climate-Smart Permaculture</div>
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-10 h-10 flex-shrink-0 text-green-600">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2v20M2 12h20"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2C8 6 8 10 12 12M12 2c4 4 4 8 0 10M12 22c-4-4-4-8 0-10M12 22c4-4 4-8 0-10"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Kitchen Gardens & Food Security</h3>
+                  <div className="text-xs text-green-600 font-bold uppercase mt-1">Climate-Smart Permaculture</div>
+                </div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
                 When coastal fishing families have backyard permaculture gardens growing leafy vegetables and resilient indigenous crops, they eat better—and fish less. This isn't just about nutrition. It's about reducing pressure on overexploited fish stocks by giving families an alternative source of food and income.
@@ -233,9 +306,18 @@ export default function SHEProgramPage() {
 
             {/* Women's Leadership */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="mb-4">
-                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Women's Leadership in Conservation</h3>
-                <div className="text-xs text-amber-600 font-bold uppercase mt-1">LIFT Network Platform</div>
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-10 h-10 flex-shrink-0 text-purple-600">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Women's Leadership in Conservation</h3>
+                  <div className="text-xs text-purple-600 font-bold uppercase mt-1">LIFT Network Platform</div>
+                </div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Coastal women are disproportionately affected by declining fish stocks and ocean degradation—and disproportionately excluded from the governance decisions that shape their futures. The LIFT Network (Livelihoods, Independence, Finance, Transformation) changes that.
@@ -243,8 +325,8 @@ export default function SHEProgramPage() {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Women now participate in BMU meetings, co-management planning sessions, and conservation monitoring. They're not beneficiaries of conservation—they're its architects. Through savings groups, entrepreneurship training, and leadership development, women are reshaping what coastal conservation looks like.
               </p>
-              <div className="bg-amber-50 rounded-lg p-4">
-                <div className="text-lg font-bold text-amber-700">735+ Women Engaged</div>
+              <div className="bg-purple-50 rounded-lg p-4">
+                <div className="text-lg font-bold text-purple-700">735+ Women Engaged</div>
                 <div className="text-sm text-gray-600 mt-1">Across Trash4Cash, permaculture, LIFT Network & savings groups</div>
               </div>
             </div>
