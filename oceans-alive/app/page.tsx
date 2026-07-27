@@ -177,7 +177,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Strategic Objective 1: Strengthen Coastal Environmental Education and Awareness */}
+            {/* Strategic Objective 1: Strengthen Coastal Environmental Education → SOCIAL PILLAR */}
             <Link
               href="/programs/learning-leadership"
               className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10"
@@ -185,7 +185,7 @@ export default function Home() {
             >
               <Image
                 src="/images/kids.jpg"
-                alt="Coastal Environmental Education"
+                alt="Social Development - Education"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
@@ -193,16 +193,16 @@ export default function Home() {
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
                   <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
-                    <span className="text-xs font-bold text-white uppercase tracking-wider">Education & Awareness</span>
+                    <span className="text-xs font-bold text-white uppercase tracking-wider">📚 Social Pillar</span>
                   </div>
                   <div className="text-3xl font-poppins font-black text-white/20">01</div>
                 </div>
                 <div>
                   <h3 className="text-xl md:text-2xl font-poppins font-bold text-white mb-2 leading-tight">
-                    Strengthen Coastal Environmental Education
+                    Strengthen Coastal Education
                   </h3>
                   <p className="text-sm text-white/85 mb-3 leading-relaxed max-w-lg">
-                    We turn Kuruwitu into a living classroom where ocean meets action. <strong>10,000+ learners</strong>—from primary students to international interns—gain hands-on experience in coral restoration, permaculture, and community-led conservation. Through <strong>Project REEL Kilifi</strong>, we equip local filmmakers to tell Kenya's ocean stories to the world.
+                    We turn Kuruwitu into a living classroom where ocean meets action. <strong>10,000+ learners</strong>—from primary students to international interns—gain hands-on experience in coral restoration, permaculture, and community-led conservation. Through <strong>Project REEL Kilifi</strong>, we equip local filmmakers to tell Kenya's ocean stories to the world. <em>Leaving no one behind through education and community harmony.</em>
                   </p>
                   <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
                     Explore programmes <span className="text-lg">→</span>
@@ -211,7 +211,7 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Strategic Objective 2: Promote Long-term Integrity of Coastal/Marine Ecosystems */}
+            {/* Strategic Objective 2: Promote Marine Ecosystem Integrity → ENVIRONMENT PILLAR */}
             <Link
               href="/programs/ocean-recovery"
               className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10"
@@ -219,7 +219,7 @@ export default function Home() {
             >
               <Image
                 src="/images/divers.jpg"
-                alt="Marine Ecosystem Integrity"
+                alt="Environmental Stewardship"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
@@ -227,7 +227,7 @@ export default function Home() {
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
                   <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
-                    <span className="text-xs font-bold text-white uppercase tracking-wider">Marine Ecosystems</span>
+                    <span className="text-xs font-bold text-white uppercase tracking-wider">🌊 Environment Pillar</span>
                   </div>
                   <div className="text-3xl font-poppins font-black text-white/20">02</div>
                 </div>
@@ -236,7 +236,7 @@ export default function Home() {
                     Promote Marine Ecosystem Integrity
                   </h3>
                   <p className="text-sm text-white/85 mb-3 leading-relaxed max-w-lg">
-                    Fishers become reef gardeners. Through <strong>120 km² of co-managed waters</strong> and <strong>18 BMUs in Kilifi Network</strong>, we've transformed extractors into stewards. The result? <strong>25,000+ corals planted</strong>, <strong>400% fish biomass increase</strong>, and communities protecting what they once depleted. Proof that people and reefs recover together.
+                    Fishers become reef gardeners. Through <strong>120 km² of co-managed waters</strong> and <strong>18 BMUs in Kilifi Network</strong>, we've transformed extractors into stewards. The result? <strong>25,000+ corals planted</strong>, <strong>400% fish biomass increase</strong>, and communities protecting what they once depleted. <em>Sustainable management from catchment to reef—proof that people and ecosystems recover together.</em>
                   </p>
                   <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
                     Explore programmes <span className="text-lg">→</span>
@@ -245,7 +245,7 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Strategic Objective 3: Promote Food Security and Diversification of Income */}
+            {/* Strategic Objective 3: Promote Food Security & Income → ECONOMIC PILLAR */}
             <Link
               href="/programs/she"
               className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10"
@@ -253,7 +253,7 @@ export default function Home() {
             >
               <Image
                 src="/images/trashforcash.jpg"
-                alt="Food Security and Livelihoods"
+                alt="Economic Sustainability"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
@@ -261,16 +261,16 @@ export default function Home() {
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
                   <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
-                    <span className="text-xs font-bold text-white uppercase tracking-wider">Food & Income</span>
+                    <span className="text-xs font-bold text-white uppercase tracking-wider">💰 Economic Pillar</span>
                   </div>
                   <div className="text-3xl font-poppins font-black text-white/20">03</div>
                 </div>
                 <div>
                   <h3 className="text-xl md:text-2xl font-poppins font-bold text-white mb-2 leading-tight">
-                    Promote Food Security & Income Diversification
+                    Promote Food Security & Income
                   </h3>
                   <p className="text-sm text-white/85 mb-3 leading-relaxed max-w-lg">
-                    When families eat from their gardens, oceans breathe easier. <strong>735+ women</strong> now lead livelihoods that don't depend on overfished stocks. Through <strong>Trash4Cash</strong>, mothers turn plastic into income (<strong>2+ tonnes monthly</strong>). <strong>600+ households</strong> grow food using climate-smart permaculture. The ocean isn't their only option anymore—it's their choice to protect.
+                    When families eat from their gardens, oceans breathe easier. <strong>735+ women</strong> now lead livelihoods that don't depend on overfished stocks. Through <strong>Trash4Cash</strong>, mothers turn plastic into income (<strong>2+ tonnes monthly</strong>). <strong>600+ households</strong> grow food using climate-smart permaculture. <em>Diversified income generating activities—the ocean isn't their only option anymore, it's their choice to protect.</em>
                   </p>
                   <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
                     Explore programmes <span className="text-lg">→</span>
@@ -279,7 +279,7 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Strategic Objective 4: Strengthen OA Institutional Capacity */}
+            {/* Strategic Objective 4: Strengthen Institutional Capacity → GOVERNANCE PILLAR */}
             <Link
               href="/programs/research-innovation"
               className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10"
@@ -287,7 +287,7 @@ export default function Home() {
             >
               <Image
                 src="/images/oceansmen.jpg"
-                alt="Institutional Capacity"
+                alt="Governance & Co-Management"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
@@ -295,7 +295,7 @@ export default function Home() {
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
                   <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
-                    <span className="text-xs font-bold text-white uppercase tracking-wider">Institutional Strength</span>
+                    <span className="text-xs font-bold text-white uppercase tracking-wider">⚖️ Governance Pillar</span>
                   </div>
                   <div className="text-3xl font-poppins font-black text-white/20">04</div>
                 </div>
@@ -304,7 +304,7 @@ export default function Home() {
                     Strengthen Institutional Capacity
                   </h3>
                   <p className="text-sm text-white/85 mb-3 leading-relaxed max-w-lg">
-                    Community passion needs professional backbone. We bridge grassroots wisdom with <strong>audit-ready science</strong>, coordinate funding across <strong>UK FCDO, UNDP, IUCN</strong>, and track every coral, every kilo of fish. Recognized by <strong>Royal Visit 2023</strong> and <strong>IUCN Blue Champions Award</strong>, we prove local models can scale globally—when data meets determination.
+                    Community passion needs professional backbone. We bridge grassroots wisdom with <strong>audit-ready science</strong>, coordinate <strong>18 BMUs across 120 km²</strong> of co-managed waters, and support communities in applying fisheries policies. Recognized by <strong>Royal Visit 2023</strong> and <strong>IUCN Blue Champions Award</strong>, we prove that <em>Joint and Co-Management Areas work—when community rights meet institutional support.</em>
                   </p>
                   <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
                     Explore programmes <span className="text-lg">→</span>
