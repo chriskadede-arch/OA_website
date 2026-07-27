@@ -194,7 +194,7 @@ export default function Home() {
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
                   <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
-                    <span className="text-xs font-bold text-white uppercase tracking-wider">Social Pillar</span>
+                    <span className="text-xs font-bold text-white uppercase tracking-wider">Social</span>
                   </div>
                   <div className="text-3xl font-poppins font-black text-white/20">01</div>
                 </div>
@@ -228,7 +228,7 @@ export default function Home() {
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
                   <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
-                    <span className="text-xs font-bold text-white uppercase tracking-wider">Environment Pillar</span>
+                    <span className="text-xs font-bold text-white uppercase tracking-wider">Environment</span>
                   </div>
                   <div className="text-3xl font-poppins font-black text-white/20">02</div>
                 </div>
@@ -262,7 +262,7 @@ export default function Home() {
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
                   <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
-                    <span className="text-xs font-bold text-white uppercase tracking-wider">Economic Pillar</span>
+                    <span className="text-xs font-bold text-white uppercase tracking-wider">Economic</span>
                   </div>
                   <div className="text-3xl font-poppins font-black text-white/20">03</div>
                 </div>
@@ -296,7 +296,7 @@ export default function Home() {
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
                   <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
-                    <span className="text-xs font-bold text-white uppercase tracking-wider">Governance Pillar</span>
+                    <span className="text-xs font-bold text-white uppercase tracking-wider">Governance</span>
                   </div>
                   <div className="text-3xl font-poppins font-black text-white/20">04</div>
                 </div>
