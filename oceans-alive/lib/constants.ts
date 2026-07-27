@@ -436,7 +436,7 @@ export const PROGRAMMES = [
     partners: 'Kenya Fisheries Service',
   },
   {
-    number: '07',
+    number: '01',
     category: 'Livelihoods',
     icon: '♻️',
     slug: 'trash4cash',
