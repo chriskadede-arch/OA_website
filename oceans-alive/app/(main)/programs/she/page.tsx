@@ -119,68 +119,6 @@ export default function SHEProgramPage() {
         </div>
       </section>
 
-      {/* Women at the Heart of Conservation */}
-      <section className="relative bg-gradient-to-br from-[#1a6b5a] to-ocean-seafoam py-16 md:py-20 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/trashforcash.jpg"
-            alt="Women in Kilifi's Trash4Cash programme"
-            fill
-            className="object-cover opacity-70"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a6b5a]/40 to-ocean-seafoam/30" />
-        </div>
-
-        <div className="relative max-w-6xl mx-auto px-6 z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-white text-xs font-bold uppercase tracking-widest mb-4 drop-shadow-lg">Women & Ocean</p>
-              <h2 className="text-4xl font-poppins font-bold text-white mb-6 drop-shadow-lg">
-                Women at the Heart of Conservation
-              </h2>
-              <p className="text-white leading-relaxed mb-4 drop-shadow-md">
-                Through Oceans Alive's Social, Health and Environment programme, women are helping shape the future of conservation across Kilifi County.
-              </p>
-              <p className="text-white leading-relaxed mb-4 drop-shadow-md">
-                From coral restoration and community leadership to small businesses and recycling initiatives, women are creating practical solutions that benefit both people and the environment.
-              </p>
-              <p className="text-white leading-relaxed mb-8 drop-shadow-md">
-                Today, more than 120 women collect, sort and sell over two tonnes of plastic each month, turning waste into income while helping protect the coast they call home.
-              </p>
-              <Link
-                href="/programmes/trash4cash"
-                className="inline-flex items-center gap-2 bg-white text-[#1a6b5a] font-bold px-6 py-3 rounded-xl hover:bg-ocean-midnight hover:text-white transition-all duration-200 shadow-xl"
-              >
-                Support Women's Programmes →
-              </Link>
-            </div>
-            <div className="relative w-full h-[600px] lg:h-[700px]">
-              {/* Overlapping Image 1 - Top Right */}
-              <div className="absolute top-12 right-6 md:right-12 w-64 md:w-80 lg:w-96 h-52 md:h-64 lg:h-72 rounded-2xl overflow-hidden shadow-2xl border-4 md:border-6 border-white transform rotate-6 hover:rotate-3 hover:scale-105 transition-all duration-300 z-10">
-                <Image
-                  src="/images/womenlearning.jpg"
-                  alt="Women learning and empowerment"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Overlapping Image 2 - Bottom Left */}
-              <div className="absolute bottom-12 left-6 md:left-12 w-72 md:w-88 lg:w-[420px] h-56 md:h-72 lg:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 md:border-6 border-white transform -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 z-20">
-                <Image
-                  src="/images/womenlearning2.jpg"
-                  alt="Women in community programs"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* What We Do */}
       <section className="bg-gradient-to-br from-pink-50 to-purple-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
@@ -345,10 +283,67 @@ export default function SHEProgramPage() {
             </div>
           </div>
 
-          <div className="mt-12 text-center">
-            <Link href="/programmes" className="inline-flex items-center gap-2 px-6 py-3 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-ocean-midnight transition-colors">
-              View All Programs
-            </Link>
+        </div>
+      </section>
+
+      {/* Women at the Heart of Conservation */}
+      <section className="relative bg-gradient-to-br from-[#1a6b5a] to-ocean-seafoam py-16 md:py-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/trashforcash.jpg"
+            alt="Women in Kilifi's Trash4Cash programme"
+            fill
+            className="object-cover opacity-70"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1a6b5a]/40 to-ocean-seafoam/30" />
+        </div>
+
+        <div className="relative max-w-6xl mx-auto px-6 z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-white text-xs font-bold uppercase tracking-widest mb-4 drop-shadow-lg">Women & Ocean</p>
+              <h2 className="text-4xl font-poppins font-bold text-white mb-6 drop-shadow-lg">
+                Women at the Heart of Conservation
+              </h2>
+              <p className="text-white leading-relaxed mb-4 drop-shadow-md">
+                Through Oceans Alive's Social, Health and Environment programme, women are helping shape the future of conservation across Kilifi County.
+              </p>
+              <p className="text-white leading-relaxed mb-4 drop-shadow-md">
+                From coral restoration and community leadership to small businesses and recycling initiatives, women are creating practical solutions that benefit both people and the environment.
+              </p>
+              <p className="text-white leading-relaxed mb-8 drop-shadow-md">
+                Today, more than 120 women collect, sort and sell over two tonnes of plastic each month, turning waste into income while helping protect the coast they call home.
+              </p>
+              <Link
+                href="/programmes/trash4cash"
+                className="inline-flex items-center gap-2 bg-white text-[#1a6b5a] font-bold px-6 py-3 rounded-xl hover:bg-ocean-midnight hover:text-white transition-all duration-200 shadow-xl"
+              >
+                Support Women's Programmes →
+              </Link>
+            </div>
+            <div className="relative w-full h-[600px] lg:h-[700px]">
+              {/* Overlapping Image 1 - Top Right */}
+              <div className="absolute top-12 right-6 md:right-12 w-64 md:w-80 lg:w-96 h-52 md:h-64 lg:h-72 rounded-2xl overflow-hidden shadow-2xl border-4 md:border-6 border-white transform rotate-6 hover:rotate-3 hover:scale-105 transition-all duration-300 z-10">
+                <Image
+                  src="/images/womenlearning.jpg"
+                  alt="Women learning and empowerment"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              {/* Overlapping Image 2 - Bottom Left */}
+              <div className="absolute bottom-12 left-6 md:left-12 w-72 md:w-88 lg:w-[420px] h-56 md:h-72 lg:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 md:border-6 border-white transform -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 z-20">
+                <Image
+                  src="/images/womenlearning2.jpg"
+                  alt="Women in community programs"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
