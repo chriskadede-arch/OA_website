@@ -42,7 +42,6 @@ export default function Programmes() {
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">Our Work</p>
             <h2 className="text-4xl md:text-5xl font-poppins font-bold text-ocean-midnight">
               Our Strategic Objectives
             </h2>

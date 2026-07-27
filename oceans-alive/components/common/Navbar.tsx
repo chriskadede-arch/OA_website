@@ -147,15 +147,15 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
   return (
     <div className="absolute top-full left-1/2 -translate-x-1/2 z-50 w-auto">
       <div className="bg-ocean-midnight border-t border-white/5 shadow-[0_24px_60px_-10px_rgba(0,0,0,0.6)] rounded-b-2xl">
-        <div className="px-6 py-9">
-          <div className="grid gap-6" style={{ gridTemplateColumns: '200px 280px' }}>
+        <div className="px-5 py-6">
+          <div className="grid gap-5" style={{ gridTemplateColumns: '180px 260px' }}>
 
             {/* Column 1: About Us + Programs stacked */}
-            <div className="space-y-8">
+            <div className="space-y-5">
               {/* About Us Section */}
               <div>
-                <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise mb-6 flex items-center gap-2">
-                  <span className="w-4 h-px bg-ocean-turquoise/40 inline-block" />
+                <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise mb-3 flex items-center gap-2">
+                  <span className="w-3 h-px bg-ocean-turquoise/40 inline-block" />
                   About Us
                 </p>
                 <div className="space-y-0.5">
@@ -164,14 +164,14 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
                       key={sub.href + sub.label}
                       href={sub.href}
                       onClick={onClose}
-                      className="group flex items-center py-2.5 px-2 rounded-xl hover:bg-white/5 transition-all duration-200"
+                      className="group flex items-center py-1.5 px-2 rounded-lg hover:bg-white/5 transition-all duration-200"
                     >
                       <span
-                        className="h-px bg-ocean-turquoise shrink-0 transition-all duration-300 mr-0 group-hover:mr-2.5"
+                        className="h-px bg-ocean-turquoise shrink-0 transition-all duration-300 mr-0 group-hover:mr-2"
                         style={{ width: 0 }}
-                        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.width = '12px'; }}
+                        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.width = '10px'; }}
                       />
-                      <span className="text-[13px] font-medium text-white/55 group-hover:text-white transition-colors duration-200 leading-tight">
+                      <span className="text-[12px] font-medium text-white/55 group-hover:text-white transition-colors duration-200 leading-tight">
                         {sub.label}
                       </span>
                     </Link>
@@ -180,10 +180,10 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
               </div>
 
               {/* Strategic Objectives Section */}
-              <div className="pt-6 border-t border-white/10">
-                <div className="flex items-center justify-between mb-6">
+              <div className="pt-4 border-t border-white/10">
+                <div className="flex items-center justify-between mb-3">
                   <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise flex items-center gap-2">
-                    <span className="w-4 h-px bg-ocean-turquoise/40 inline-block" />
+                    <span className="w-3 h-px bg-ocean-turquoise/40 inline-block" />
                     Strategic Objectives
                   </p>
                   <Link
@@ -191,7 +191,7 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
                     onClick={onClose}
                     className="text-[10px] text-white/30 hover:text-ocean-turquoise transition-colors font-medium"
                   >
-                    See all programmes →
+                    See all →
                   </Link>
                 </div>
                 <div className="space-y-0.5">
@@ -200,9 +200,9 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
                       key={prog.href}
                       href={prog.href}
                       onClick={onClose}
-                      className="group flex items-center gap-2.5 px-2 py-2 rounded-lg hover:bg-white/5 transition-all duration-150"
+                      className="group flex items-center gap-2 px-2 py-1.5 rounded-lg hover:bg-white/5 transition-all duration-150"
                     >
-                      <span className="w-6 h-6 rounded-md bg-white/5 text-ocean-turquoise text-[9px] font-bold flex items-center justify-center shrink-0 group-hover:bg-ocean-turquoise group-hover:text-ocean-midnight transition-all duration-200">
+                      <span className="w-5 h-5 rounded-md bg-white/5 text-ocean-turquoise text-[8px] font-bold flex items-center justify-center shrink-0 group-hover:bg-ocean-turquoise group-hover:text-ocean-midnight transition-all duration-200">
                         {String(i + 1).padStart(2, '0')}
                       </span>
                       <span className="text-[11px] font-medium text-white/45 group-hover:text-white/90 transition-colors leading-snug">
@@ -219,8 +219,8 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
               <Link
                 href="/programmes"
                 onClick={onClose}
-                className="group relative block rounded-2xl overflow-hidden"
-                style={{ minHeight: '200px', height: '100%' }}
+                className="group relative block rounded-xl overflow-hidden"
+                style={{ minHeight: '180px', height: '100%' }}
               >
                 <Image
                   src="/images/divers.jpg"
@@ -229,15 +229,15 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/65 to-ocean-midnight/15" />
-                <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                <div className="absolute inset-0 p-5 flex flex-col justify-between">
                   <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-white/35">
                     Coral Restoration · Kilifi
                   </div>
                   <div>
-                    <div className="text-[42px] font-poppins font-bold text-ocean-turquoise leading-none">25,000</div>
+                    <div className="text-[36px] font-poppins font-bold text-ocean-turquoise leading-none">25,000</div>
                     <div className="text-[10px] text-white/55 uppercase tracking-widest mt-1">Coral Colonies Planted</div>
-                    <div className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold text-white/55 group-hover:text-ocean-turquoise transition-colors duration-200">
-                      View All Programmes
+                    <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-white/55 group-hover:text-ocean-turquoise transition-colors duration-200">
+                      View All
                       <span className="group-hover:translate-x-0.5 transition-transform inline-block">→</span>
                     </div>
                   </div>
