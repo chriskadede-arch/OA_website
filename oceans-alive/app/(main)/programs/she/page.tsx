@@ -162,26 +162,19 @@ export default function SHEProgramPage() {
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-12">What We Do</h2>
 
-          {/* Impact Overview Bar */}
-          <div className="bg-white rounded-2xl shadow-xl p-6 mb-8">
-            <div className="flex flex-wrap justify-around gap-6 text-center">
-              <div>
-                <div className="text-3xl font-bold text-pink-600">654+</div>
-                <div className="text-sm text-gray-600">Total Households Reached</div>
-                <div className="text-xs text-gray-400 mt-1">Across All Initiatives</div>
-              </div>
-              <div className="border-l border-gray-200"></div>
-              <div>
-                <div className="text-3xl font-bold text-purple-600">135</div>
-                <div className="text-sm text-gray-600">Kitchen Gardens</div>
-                <div className="text-xs text-gray-400 mt-1">Climate-Smart Permaculture</div>
-              </div>
-              <div className="border-l border-gray-200"></div>
-              <div>
-                <div className="text-3xl font-bold text-green-600">19</div>
-                <div className="text-sm text-gray-600">Mama Karanga</div>
-                <div className="text-xs text-gray-400 mt-1">Trash4Cash Participants</div>
-              </div>
+          {/* The Philosophy Story */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-8">
+            <div className="prose prose-lg max-w-none">
+              <h3 className="text-2xl font-poppins font-bold text-ocean-midnight mb-4">When Families Eat from Their Gardens, Oceans Breathe Easier</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Conservation is strongest when communities have secure livelihoods and economic independence. This isn't feel-good rhetoric—it's the foundational principle behind the Social, Health & Environment programme. When coastal women have diversified income options, when households grow their own food, when plastic waste becomes a paycheck instead of ocean pollution—that's when conservation moves from a moral argument to a livelihood strategy.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                For every 1 fisher on the water, 20 livelihoods benefit in the value chain. That's 20 families whose futures depend on a healthy ocean—not because they're convinced by campaigns, but because their income depends on it. This programme recognizes that economic sustainability and environmental sustainability aren't separate goals. They're the same fight.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Over 735 women across Kilifi County are now engaged in Trash4Cash recycling, permaculture training, LIFT Network entrepreneurship, and women's savings groups. More than 600 households practice climate-smart permaculture. This isn't aid—it's agency. And when women lead economic empowerment, entire communities shift.
+              </p>
             </div>
           </div>
 
@@ -190,23 +183,28 @@ export default function SHEProgramPage() {
             <div className="bg-gradient-to-r from-pink-600 to-purple-600 p-6">
               <div className="text-white">
                 <h3 className="text-2xl font-poppins font-bold">Mama Karanga – Trash4Cash</h3>
-                <p className="text-white/90 text-sm">Ongoing Pilot</p>
+                <p className="text-white/90 text-sm">Turning Ocean Pollution into Household Income</p>
               </div>
             </div>
             <div className="p-6">
               <p className="text-gray-700 leading-relaxed mb-4">
-                Plastic waste is turned into income through a community-led recycling programme led by Mama Karanga, in partnership with Eco-world, reducing marine pollution and beach waste. Monthly beach clean-ups.
+                Eight million tonnes of plastic enter the world's oceans every year. On the Kilifi coast, the women of the Trash4Cash programme are fighting back—and getting paid for it. More than 120 women across four communities now collect, sort, and sell plastic waste to certified recyclers, collecting over two tonnes of plastic waste every month.
               </p>
-              <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl p-5">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-2xl font-bold text-pink-600">Monthly</div>
-                    <div className="text-sm text-gray-600">Beach clean-ups</div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-lg font-bold text-purple-600">Eco-world</div>
-                    <div className="text-sm text-gray-600">Partnership</div>
-                  </div>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                What would otherwise end up choking sea turtles and suffocating coral becomes household income. Trash4Cash is part of the LIFT Network—Oceans Alive's broader women's economic empowerment platform. By placing income generation and environmental protection in the same hands, we make conservation something women do for their own futures, not something done to their environment.
+              </p>
+              <div className="grid grid-cols-3 gap-3">
+                <div className="bg-pink-50 rounded-lg p-3 text-center">
+                  <div className="text-xl font-bold text-pink-600">120+</div>
+                  <div className="text-xs text-gray-600 uppercase">Women Participants</div>
+                </div>
+                <div className="bg-purple-50 rounded-lg p-3 text-center">
+                  <div className="text-xl font-bold text-purple-600">2+ Tonnes</div>
+                  <div className="text-xs text-gray-600 uppercase">Plastic/Month</div>
+                </div>
+                <div className="bg-green-50 rounded-lg p-3 text-center">
+                  <div className="text-xl font-bold text-green-600">4</div>
+                  <div className="text-xs text-gray-600 uppercase">Communities</div>
                 </div>
               </div>
             </div>
@@ -217,29 +215,37 @@ export default function SHEProgramPage() {
             {/* Climate-Smart Permaculture */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="mb-4">
-                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Climate-smart food systems</h3>
-                <div className="text-xs text-ocean-turquoise font-bold uppercase mt-1">Ongoing</div>
+                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Kitchen Gardens & Food Security</h3>
+                <div className="text-xs text-green-600 font-bold uppercase mt-1">Climate-Smart Permaculture</div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Backyard climate-smart permaculture improves nutrition with leafy vegetables and resilient indigenous crops while supplementing income. Demo farm; permaculture training and toolkit distribution.
+                When coastal fishing families have backyard permaculture gardens growing leafy vegetables and resilient indigenous crops, they eat better—and fish less. This isn't just about nutrition. It's about reducing pressure on overexploited fish stocks by giving families an alternative source of food and income.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                The programme is intentionally integrated with LIFT Network, Trash4Cash, and coral restoration—because a community that has food security is a community that can afford to let the reef recover.
               </p>
               <div className="bg-green-50 rounded-lg p-4">
                 <div className="text-2xl font-bold text-green-700 mb-1">600+</div>
-                <div className="text-sm text-gray-600">Households (≈4,800 people)</div>
+                <div className="text-sm text-gray-600">Households (≈4,800 people reached)</div>
+                <div className="text-xs text-gray-500 mt-2">Demo farm · Permaculture training · Toolkit distribution</div>
               </div>
             </div>
 
             {/* Women's Leadership */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="mb-4">
-                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Women's leadership</h3>
+                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Women's Leadership in Conservation</h3>
+                <div className="text-xs text-amber-600 font-bold uppercase mt-1">LIFT Network Platform</div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Supporting women to take active roles in conservation, fisheries governance and community decision-making through BMU participation and CBO leadership.
+                Coastal women are disproportionately affected by declining fish stocks and ocean degradation—and disproportionately excluded from the governance decisions that shape their futures. The LIFT Network (Livelihoods, Independence, Finance, Transformation) changes that.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Women now participate in BMU meetings, co-management planning sessions, and conservation monitoring. They're not beneficiaries of conservation—they're its architects. Through savings groups, entrepreneurship training, and leadership development, women are reshaping what coastal conservation looks like.
               </p>
               <div className="bg-amber-50 rounded-lg p-4">
-                <div className="text-lg font-bold text-amber-700">Community Based Organizations</div>
-                <div className="text-sm text-gray-600 mt-1">Women leading conservation and welfare initiatives</div>
+                <div className="text-lg font-bold text-amber-700">735+ Women Engaged</div>
+                <div className="text-sm text-gray-600 mt-1">Across Trash4Cash, permaculture, LIFT Network & savings groups</div>
               </div>
             </div>
           </div>

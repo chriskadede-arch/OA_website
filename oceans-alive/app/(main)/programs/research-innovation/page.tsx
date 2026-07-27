@@ -97,34 +97,19 @@ export default function ResearchInnovationPage() {
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-12">What We Do</h2>
 
-          {/* Research Impact Overview */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
-            <div className="text-center mb-6">
-              <div className="text-sm text-gray-500 uppercase tracking-wide mb-2">Evidence-Driven Conservation</div>
-              <div className="text-3xl font-bold text-cyan-700">Quarterly Monitoring Surveys</div>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-              <div className="bg-gradient-to-br from-cyan-100 to-blue-100 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-cyan-700">85%</div>
-                <div className="text-xs text-gray-600 uppercase">Coral Survival Rate</div>
-              </div>
-              <div className="bg-gradient-to-br from-green-100 to-teal-100 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-green-700">400%</div>
-                <div className="text-xs text-gray-600 uppercase">Fish Biomass Increase</div>
-                <div className="text-xs text-green-600 mt-1">WCS data, ~15 years</div>
-              </div>
-              <div className="bg-gradient-to-br from-pink-100 to-purple-100 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-pink-700">30%</div>
-                <div className="text-xs text-gray-600 uppercase">Reef Recovery</div>
-              </div>
-              <div className="bg-gradient-to-br from-emerald-100 to-green-100 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-emerald-700">17%</div>
-                <div className="text-xs text-gray-600 uppercase">Seagrass Regrowth</div>
-              </div>
-              <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-blue-700">Quarterly</div>
-                <div className="text-xs text-gray-600 uppercase">Monitoring Surveys</div>
-              </div>
+          {/* The Evidence Story */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-8">
+            <div className="prose prose-lg max-w-none">
+              <h3 className="text-2xl font-poppins font-bold text-ocean-midnight mb-4">Community Passion Needs Professional Backbone</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                The Kuruwitu model works because it's backed by rigorous science, sustainable finance, and institutional support. Community-led doesn't mean community-alone. Oceans Alive provides the technical expertise, monitoring infrastructure, and evidence base that turns grassroots passion into policy-ready conservation.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                In partnership with Wildlife Conservation Society (WCS), we conduct quarterly monitoring surveys that track ecosystem health across coral cover, fish biomass, and seagrass recovery. This isn't data for journals—it's proof that the model works. When the Royal Family visited Kuruwitu in 2023, when IUCN awarded the Blue Champions recognition in 2022, when Kenya's government endorsed the first Co-Management Plan—they did it because the evidence was undeniable.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                This programme also generates the sustainable revenue models that keep conservation alive beyond donor cycles: economic assessments, business plans, aquatic ecotourism concessions with Vipingo Ridge and LEAP, grants from IUCN/EU BIOPAMA, and KCW-CBO revenue streams generating USD 10–20K annually. Conservation that doesn't pay for itself doesn't last.
+              </p>
             </div>
           </div>
 
@@ -133,34 +118,31 @@ export default function ResearchInnovationPage() {
             <div className="bg-gradient-to-r from-cyan-600 to-blue-700 p-6">
               <div className="text-white">
                 <h3 className="text-2xl font-poppins font-bold">Scientific Monitoring & Assessment</h3>
-                <p className="text-white/90 text-sm">Partnership with Wildlife Conservation Society (WCS)</p>
+                <p className="text-white/90 text-sm">Partnership with Wildlife Conservation Society (WCS) | 15 Years of Data</p>
               </div>
             </div>
             <div className="p-6">
+              <p className="text-gray-700 leading-relaxed mb-6">
+                In partnership with WCS, Oceans Alive conducts quarterly monitoring surveys that track the health of Kuruwitu's marine ecosystems. These aren't academic exercises—they're the proof that community-led conservation delivers measurable, long-term recovery. Fifteen years of data show a 400% increase in fish biomass, 30% reef recovery, 17% seagrass regrowth, and an 85% coral survival rate in restoration sites.
+              </p>
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <h4 className="text-lg font-poppins font-bold text-ocean-midnight mb-3">Fish Biomass Monitoring</h4>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    Tracks changes in fish abundance and diversity to assess ecosystem health and conservation outcomes. 15 years of data documenting 400% increase in fish biomass within the Tengefu LMMA.
+                  <h4 className="text-lg font-poppins font-bold text-ocean-midnight mb-3">🐟 Fish Biomass Monitoring</h4>
+                  <p className="text-gray-700 leading-relaxed">
+                    Catch Assessment Surveys (CAS) and Frame Surveys (FS) track fish abundance and diversity across the sanctuary and surrounding waters. The 400% biomass increase within the Tengefu LMMA and 135% improvement in surrounding catch prove that protected areas benefit fishers, not just fish.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-poppins font-bold text-ocean-midnight mb-3">Coral Health Monitoring</h4>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    Regular assessments measure coral cover, recruitment and reef condition to guide restoration efforts. 85% survival rate demonstrates restoration effectiveness.
+                  <h4 className="text-lg font-poppins font-bold text-ocean-midnight mb-3">🪸 Coral & Ecosystem Health</h4>
+                  <p className="text-gray-700 leading-relaxed">
+                    Regular assessments measure coral cover, recruitment, and reef condition. An 85% survival rate in coral restoration sites demonstrates that community-led restoration isn't just symbolic—it's rebuilding reefs at scale, backed by science.
                   </p>
                 </div>
               </div>
               <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-xl p-5">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <div className="text-sm font-bold text-cyan-700 mb-1">Quarterly Monitoring Surveys</div>
-                    <div className="text-xs text-gray-600">Catch Assessment Survey (CAS), Frame Survey (FS), State of Fishery 2021</div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-blue-700">17%</div>
-                    <div className="text-xs text-gray-600">Seagrass Regrowth</div>
-                  </div>
+                <div className="text-sm font-bold text-cyan-700 mb-2">Evidence That Changed Policy</div>
+                <div className="text-xs text-gray-600 leading-relaxed">
+                  This monitoring data underpinned Kenya's first officially endorsed Co-Management Plan (2022), Kenya's first IUCN SAGE analysis, and the development of the 6-step co-management toolkit now being adopted across Kilifi County's 18 BMUs. Science didn't replace community wisdom—it amplified it.
                 </div>
               </div>
             </div>
@@ -171,40 +153,42 @@ export default function ResearchInnovationPage() {
             {/* Sustainable Finance */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="mb-4">
-                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Sustainable finance</h3>
+                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Sustainable Finance Models</h3>
+                <div className="text-xs text-green-600 font-bold uppercase mt-1">Beyond Donor Dependency</div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Economic assessments and business plans (KCW-CBO revenue of USD 10–20K/yr), aquatic ecotourism concessions with Vipingo Ridge and LEAP, and grants from IUCN/EU BIOPAMA and others.
+                Conservation that doesn't generate its own revenue doesn't survive. This programme develops the economic models that keep community-led conservation alive beyond project cycles: aquatic ecotourism concessions with Vipingo Ridge and LEAP, business plans for community-based organizations, and diversified funding from IUCN/EU BIOPAMA and other strategic partners.
               </p>
               <div className="space-y-2">
                 <div className="bg-green-50 rounded-lg p-3">
                   <div className="flex justify-between items-center">
-                    <div className="text-sm text-gray-700">KCW-CBO Revenue</div>
-                    <div className="text-lg font-bold text-green-600">$10-20K/yr</div>
+                    <div className="text-sm text-gray-700">KCW-CBO Annual Revenue</div>
+                    <div className="text-lg font-bold text-green-600">$10-20K</div>
                   </div>
                 </div>
-                <div className="bg-teal-50 rounded-lg p-3 text-sm text-gray-700">
-                  <div>• Vipingo Ridge & LEAP Concessions</div>
-                  <div>• IUCN/EU BIOPAMA Grants</div>
+                <div className="bg-teal-50 rounded-lg p-3 text-xs text-gray-700 space-y-1">
+                  <div>✓ Vipingo Ridge & LEAP Ecotourism Concessions</div>
+                  <div>✓ IUCN/EU BIOPAMA Strategic Grants</div>
+                  <div>✓ Economic assessments & business planning</div>
                 </div>
               </div>
             </div>
 
-            {/* Diving Centre */}
+            {/* BMU Network Governance */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="mb-4">
-                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Diving-centre feasibility</h3>
-                <div className="text-xs text-amber-600 font-bold uppercase mt-1">Planned - Feasibility Study</div>
+                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Kilifi BMU Network Coordination</h3>
+                <div className="text-xs text-blue-600 font-bold uppercase mt-1">18 BMUs | 120 km² Co-Managed</div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                A community-run diving centre is under feasibility study to create sustainable revenue and employment while supporting marine conservation. Not yet operational.
+                Oceans Alive coordinates the Kilifi County BMU Network—18 Beach Management Units managing 120 km² of co-managed waters. This isn't bureaucracy; it's how fisher voices reach county and national policy. We support BMUs in applying fisheries policies, developing co-management plans, and ensuring that community rights are recognized and protected.
               </p>
               <div className="bg-blue-50 rounded-lg p-4">
-                <div className="text-sm font-bold text-blue-700 mb-2">Revenue Model Development</div>
+                <div className="text-sm font-bold text-blue-700 mb-2">What BMUs Control</div>
                 <div className="text-xs text-gray-600 space-y-1">
-                  <div>• Economic assessment in progress</div>
-                  <div>• Business plan development</div>
-                  <div>• Community ownership structure</div>
+                  <div>• Joint and Co-Management Area plans (CMAP)</div>
+                  <div>• Community-based natural resource management</div>
+                  <div>• Fisheries co-management with government</div>
                 </div>
               </div>
             </div>

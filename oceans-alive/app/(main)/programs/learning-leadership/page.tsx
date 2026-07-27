@@ -97,33 +97,19 @@ export default function LearningLeadershipPage() {
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-12">What We Do</h2>
 
-          {/* Impact at a Glance */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
-            <div className="text-center mb-6">
-              <div className="text-sm text-gray-500 uppercase tracking-wide mb-2">Building Future Ambassadors</div>
-              <div className="text-4xl font-bold text-green-700">2,800+ Students & Advocates</div>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-gradient-to-br from-green-100 to-teal-100 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-green-700">2,500</div>
-                <div className="text-xs text-gray-600 uppercase">Primary Students</div>
-                <div className="text-xs text-green-600 mt-1">Youth for Oceans</div>
-              </div>
-              <div className="bg-gradient-to-br from-blue-100 to-cyan-100 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-blue-700">300</div>
-                <div className="text-xs text-gray-600 uppercase">International</div>
-                <div className="text-xs text-blue-600 mt-1">Y4O Program</div>
-              </div>
-              <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-purple-700">13</div>
-                <div className="text-xs text-gray-600 uppercase">Regional Students</div>
-                <div className="text-xs text-purple-600 mt-1">African Leadership Univ</div>
-              </div>
-              <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-amber-700">50</div>
-                <div className="text-xs text-gray-600 uppercase">Schools Reached</div>
-                <div className="text-xs text-amber-600 mt-1">Education Programs</div>
-              </div>
+          {/* The Living Classroom Story */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-8">
+            <div className="prose prose-lg max-w-none">
+              <h3 className="text-2xl font-poppins font-bold text-ocean-midnight mb-4">The Ocean as a Classroom</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Kuruwitu isn't just a marine sanctuary—it's a living classroom where conservation becomes real. Every year, students from across Kilifi County arrive to snorkel above coral gardens, identify reef species, and hear stories from community divers about what the reef looked like before, and what it looks like now. This is ocean literacy rooted in living evidence, not textbook theory.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Since 2016, Oceans Alive has walked alongside coastal communities to turn their vision for a healthy ocean into reality. We don't just teach—we build learning platforms where knowledge flows in every direction: from elders to youth, from fishers to scientists, from Kuruwitu to the world.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Education here is cross-cutting and intergenerational. When primary school children plant corals alongside certified community divers, when international students learn permaculture from Mama Karanga women, when African Leadership University students document fisher stories through Project REEL—that's when conservation becomes a movement, not a project.
+              </p>
             </div>
           </div>
 
@@ -132,25 +118,28 @@ export default function LearningLeadershipPage() {
             <div className="bg-gradient-to-r from-green-600 to-teal-600 p-6">
               <div className="text-white">
                 <h3 className="text-2xl font-poppins font-bold">Youth for Oceans (Y4O)</h3>
-                <p className="text-white/90 text-sm">Marine Education & Ocean Advocacy</p>
+                <p className="text-white/90 text-sm">Building Ocean Ambassadors from Kilifi to the World</p>
               </div>
             </div>
             <div className="p-6">
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Students visit Kuruwitu each year to learn about marine ecosystems, coral restoration, permaculture and sustainable resource management, becoming ambassadors for coastal fisheries conservation. 7 schools partner on coral management and restoration education.
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Over 10,000 school children have stepped into the ocean at Kuruwitu. Not as tourists, but as learners. They've planted corals with community divers, documented marine species, learned permaculture from LIFT Network women, and carried those lessons home.
               </p>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-green-50 rounded-xl p-5">
-                  <div className="mb-2">
-                    <div className="text-2xl font-bold text-green-700">7 Schools</div>
-                  </div>
-                  <div className="text-sm text-gray-600">Partnering with Y4O program for sustainable coral management and restoration education</div>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Seven schools now partner directly with the Y4O program for long-term coral management and restoration education. International students—300 from Europe and North America, 13 from African Leadership University—arrive to learn, then leave as ambassadors lobbying for sustainable coastal fisheries management globally. Fifteen filmmakers have been trained to tell these stories. Ten films have reached screens worldwide.
+              </p>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="bg-green-50 rounded-xl p-4 text-center">
+                  <div className="text-2xl font-bold text-green-700">10,000+</div>
+                  <div className="text-xs text-gray-600 uppercase mt-1">School Children Reached</div>
                 </div>
-                <div className="bg-teal-50 rounded-xl p-5">
-                  <div className="mb-2">
-                    <div className="text-2xl font-bold text-teal-700">Hands-on</div>
-                  </div>
-                  <div className="text-sm text-gray-600">Marine & terrestrial environment education through experiential learning</div>
+                <div className="bg-teal-50 rounded-xl p-4 text-center">
+                  <div className="text-2xl font-bold text-teal-700">50</div>
+                  <div className="text-xs text-gray-600 uppercase mt-1">Schools Across Kilifi</div>
+                </div>
+                <div className="bg-blue-50 rounded-xl p-4 text-center">
+                  <div className="text-2xl font-bold text-blue-700">40+</div>
+                  <div className="text-xs text-gray-600 uppercase mt-1">International Interns</div>
                 </div>
               </div>
             </div>
@@ -158,45 +147,40 @@ export default function LearningLeadershipPage() {
 
           {/* Two Column Layout */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">
-            {/* Global Ambassadors */}
+            {/* Project REEL */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="mb-4">
-                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Global Impact Advocates</h3>
+                <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Project REEL Kilifi</h3>
+                <div className="text-xs text-ocean-turquoise font-bold uppercase mt-1">Storytelling & Knowledge Exchange</div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                International students and filmmakers become ambassadors to lobby for sustainable coastal fisheries management globally.
+                Intergenerational knowledge doesn't live in reports—it lives in stories. Project REEL trains young filmmakers to document fisher voices, community wisdom, and the Kuruwitu journey. These aren't promotional videos; they're living archives of what works, what failed, and why it matters.
               </p>
-              <div className="space-y-3">
-                <div className="bg-blue-50 rounded-lg p-3 flex justify-between items-center">
-                  <div className="text-sm text-gray-700">International Students (Y4O)</div>
-                  <div className="text-lg font-bold text-blue-600">300</div>
-                </div>
-                <div className="bg-purple-50 rounded-lg p-3 flex justify-between items-center">
-                  <div className="text-sm text-gray-700">Filmmakers Trained</div>
-                  <div className="text-lg font-bold text-purple-600">15</div>
-                </div>
-                <div className="bg-cyan-50 rounded-lg p-3 flex justify-between items-center">
-                  <div className="text-sm text-gray-700">Global Films Produced</div>
-                  <div className="text-lg font-bold text-cyan-600">10</div>
+              <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-lg p-4">
+                <div className="text-sm font-bold text-green-700 mb-2">Capturing Community Wisdom</div>
+                <div className="space-y-1 text-xs text-gray-600">
+                  <div>• 15 filmmakers trained in documentary storytelling</div>
+                  <div>• 10 films produced and shared globally</div>
+                  <div>• Community-led narratives, not external PR</div>
                 </div>
               </div>
             </div>
 
-            {/* IUCN Global Platforms */}
+            {/* Fisher Folk Academy */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="mb-4">
                 <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Fisher Folk Academy</h3>
+                <div className="text-xs text-amber-600 font-bold uppercase mt-1">Global Recognition, Local Roots</div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                A growing centre for learning, leadership development and innovation within coastal communities, supported by global recognition.
+                What began at Kuruwitu is now recognized on world stages. The Fisher Folk Academy represents a model that centers community leadership, not external consultants. From IUCN conferences in Marseille, Monaco, and the Asia-Pacific region to the 2022 Blue Champions Award, the world is watching—and learning.
               </p>
-              <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-lg p-4">
-                <div className="text-sm font-bold text-green-700 mb-2">Global Presentations</div>
+              <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg p-4">
+                <div className="text-sm font-bold text-amber-700 mb-2">International Platforms</div>
                 <div className="space-y-1 text-xs text-gray-600">
-                  <div>• 2021 IUCN Marseille Conference</div>
-                  <div>• 2022 IUCN APAC Conference</div>
-                  <div>• 2022 IUCN Monaco Conference</div>
-                  <div>• 2022 Blue Champions Award</div>
+                  <div>• 2021-2022 IUCN Global Conferences (3 presentations)</div>
+                  <div>• 2022 IUCN Blue Champions Award</div>
+                  <div>• 2023 Royal Visit & National Recognition</div>
                 </div>
               </div>
             </div>
