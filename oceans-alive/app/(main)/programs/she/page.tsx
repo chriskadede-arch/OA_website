@@ -297,7 +297,7 @@ export default function SHEProgramPage() {
       </section>
 
       {/* Women at the Heart of Conservation */}
-      <section className="relative bg-gradient-to-br from-[#1a6b5a] to-ocean-seafoam py-16 md:py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-ocean-midnight to-[#0a4f7a] py-16 md:py-20 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -307,28 +307,25 @@ export default function SHEProgramPage() {
             className="object-cover opacity-70"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a6b5a]/40 to-ocean-seafoam/30" />
+          <div className="absolute inset-0 bg-gradient-to-br from-ocean-midnight/60 to-[#0a4f7a]/50" />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-6 z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-white text-xs font-bold uppercase tracking-widest mb-4 drop-shadow-lg">Women & Ocean</p>
-              <h2 className="text-4xl font-poppins font-bold text-white mb-6 drop-shadow-lg">
-                Women at the Heart of Conservation
+              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4 drop-shadow-lg">Women & Ocean</p>
+              <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-6 drop-shadow-lg">
+                Women Leading Conservation
               </h2>
-              <p className="text-white leading-relaxed mb-4 drop-shadow-md">
-                Through Oceans Alive's Social, Health and Environment programme, women are helping shape the future of conservation across Kilifi County.
+              <p className="text-white/90 leading-relaxed mb-4 drop-shadow-md">
+                Through the SHE programme, women shape conservation across Kilifi County. From coral restoration to recycling initiatives, they create solutions that benefit people and the environment.
               </p>
-              <p className="text-white leading-relaxed mb-4 drop-shadow-md">
-                From coral restoration and community leadership to small businesses and recycling initiatives, women are creating practical solutions that benefit both people and the environment.
-              </p>
-              <p className="text-white leading-relaxed mb-8 drop-shadow-md">
-                Today, more than 120 women collect, sort and sell over two tonnes of plastic each month, turning waste into income while helping protect the coast they call home.
+              <p className="text-white/90 leading-relaxed mb-8 drop-shadow-md">
+                <strong>120+ women</strong> collect and sell over <strong>2 tonnes of plastic monthly</strong>, turning waste into income while protecting the coast.
               </p>
               <Link
                 href="/programmes/trash4cash"
-                className="inline-flex items-center gap-2 bg-white text-[#1a6b5a] font-bold px-6 py-3 rounded-xl hover:bg-ocean-midnight hover:text-white transition-all duration-200 shadow-xl"
+                className="inline-flex items-center gap-2 bg-ocean-turquoise text-white font-bold px-6 py-3 rounded-xl hover:bg-white hover:text-ocean-midnight transition-all duration-200 shadow-xl"
               >
                 Support Women's Programmes →
               </Link>
