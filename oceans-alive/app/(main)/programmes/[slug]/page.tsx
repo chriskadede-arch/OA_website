@@ -205,7 +205,7 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
     longDescription: [
       "Eight million tonnes of plastic enter the world's oceans every year. On the Kilifi coast, the women of the Trash4Cash programme are fighting back - and getting paid for it.",
       "Trash4Cash brings together women's groups from coastal communities to collect, sort, and sell plastic waste to certified recyclers. What would otherwise end up in the ocean becomes household income. More than 80 women now participate across four communities, collecting over two tonnes of plastic waste every month.",
-      "The programme is part of the LIFT Network - Oceans Alive's broader women's economic empowerment and conservation leadership platform. By placing income generation and environmental protection in the same hands, Trash4Cash makes conservation something women do for their own futures, not something done to their environment.",
+      "By placing income generation and environmental protection in the same hands, Trash4Cash makes conservation something women do for their own futures, not something done to their environment.",
     ],
     highlights: [
       { label: 'Women Participants', value: '120' },
@@ -229,7 +229,7 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
       text: 'We are not just cleaning the beach. We are building our future.',
       author: 'Trash4Cash participant, Kilifi',
     },
-    relatedSlugs: ['lift-network', 'kitchen-gardens', 'community-health'],
+    relatedSlugs: ['kitchen-gardens', 'community-health', 'trash4cash'],
   },
 
   'turtle-protection': {
@@ -276,35 +276,6 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
     relatedSlugs: ['co-management', 'bmu-network', 'research-monitoring'],
   },
 
-  'lift-network': {
-    slug: 'lift-network',
-    heroImage: '/images/womenlearning.jpg',
-    heroImageAlt: 'Women in the LIFT Network - economic empowerment and conservation leadership',
-    longDescription: [
-      "The LIFT Network is Oceans Alive's platform for women's economic empowerment and conservation leadership on the Kilifi coast. LIFT stands for Livelihoods, Independence, Finance, and Transformation.",
-      "Coastal women are disproportionately affected by declining fish stocks and ocean degradation - and disproportionately excluded from the governance decisions that shape their futures. LIFT changes that by connecting women to income-generating opportunities (Trash4Cash, eco-tourism, kitchen gardens) while building their leadership within community conservation structures.",
-      "Through LIFT, women participate in BMU meetings, co-management planning sessions, and conservation monitoring. They are not beneficiaries of conservation - they are its architects.",
-    ],
-    highlights: [
-      { label: 'Women Members', value: '120' },
-      { label: 'Programmes Connected', value: 'Trash4Cash · Kitchen Gardens · Eco-Tourism' },
-      { label: 'County', value: 'Kilifi' },
-      { label: 'Focus', value: 'Economic agency + conservation leadership' },
-    ],
-    bodyImages: [
-      {
-        src: '/images/womenlearning2.jpg',
-        alt: 'Women learning and collaborating in the LIFT Network programme',
-        caption: 'LIFT Network training sessions - building conservation leaders from within communities',
-      },
-    ],
-    quote: {
-      text: "Women are agents of conservation, not beneficiaries. LIFT is designed to expand women's economic independence alongside ocean stewardship.",
-      author: 'Oceans Alive Foundation',
-    },
-    relatedSlugs: ['trash4cash', 'kitchen-gardens', 'community-health'],
-  },
-
   'kitchen-gardens': {
     slug: 'kitchen-gardens',
     heroImage: '/images/farmernaction.jpg',
@@ -312,13 +283,13 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
     longDescription: [
       "On Kenya's coast, food security and ocean health are the same problem. When fish stocks decline, fishing families turn to more intensive harvesting - accelerating the collapse. Kitchen gardens break this cycle by providing alternative food sources and income, reducing pressure on the reef.",
       "Oceans Alive's Kitchen Gardens & Food Security programme establishes climate-smart kitchen gardens for coastal fishing families across Kilifi County. Women who lead the gardens gain income from selling surplus produce, reducing their households' dependence on overexploited fish stocks.",
-      'The programme is intentionally integrated with LIFT Network, Trash4Cash, and the coral restoration work - because a community that has food security is a community that can afford to let the reef recover.',
+      'The programme is intentionally integrated with Trash4Cash and the coral restoration work - because a community that has food security is a community that can afford to let the reef recover.',
     ],
     highlights: [
       { label: 'Scope', value: 'Kilifi County' },
       { label: 'Beneficiaries', value: 'Coastal fishing families' },
       { label: 'Design', value: 'Climate-smart agriculture' },
-      { label: 'Linked Programmes', value: 'LIFT Network · Trash4Cash' },
+      { label: 'Linked Programmes', value: 'Trash4Cash · Kitchen Gardens' },
     ],
     bodyImages: [
       {
@@ -331,7 +302,7 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
       text: 'When the family has food from the garden, the father does not have to take every fish from the sea.',
       author: 'Kitchen garden participant, Kilifi',
     },
-    relatedSlugs: ['lift-network', 'trash4cash', 'community-health'],
+    relatedSlugs: ['trash4cash', 'community-health', 'kitchen-gardens'],
   },
 
   'capacity-building': {
@@ -366,13 +337,13 @@ const PROGRAMME_DETAILS: Record<string, ProgrammeDetail> = {
     longDescription: [
       "The health of Kilifi's coastal communities and the health of its ocean are inseparable. When fish stocks collapse, families go hungry. When plastic pollution rises, children get sick swimming in the sea. When livelihoods are insecure, mental health suffers.",
       "Oceans Alive's Community Health & Wellbeing programme takes a holistic approach - linking ocean conservation directly to the physical, economic, and social wellbeing of the 1,200+ community members at the heart of its work.",
-      "The programme includes nutrition support through kitchen gardens, economic resilience through Trash4Cash and LIFT Network, community health days linked to World Ocean Day celebrations, and partnerships with local health authorities on issues that intersect with environmental quality.",
+      "The programme includes nutrition support through kitchen gardens, economic resilience through Trash4Cash, community health days linked to World Ocean Day celebrations, and partnerships with local health authorities on issues that intersect with environmental quality.",
     ],
     highlights: [
       { label: 'Community Members', value: '1,200+' },
       { label: 'Approach', value: 'Holistic ocean-community link' },
       { label: 'County', value: 'Kilifi' },
-      { label: 'Linked Programmes', value: 'Kitchen Gardens · LIFT · Trash4Cash' },
+      { label: 'Linked Programmes', value: 'Kitchen Gardens · Trash4Cash' },
     ],
     quote: {
       text: "A healthy ocean is a healthy community. We do not separate them.",

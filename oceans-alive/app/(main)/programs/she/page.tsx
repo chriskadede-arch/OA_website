@@ -317,9 +317,15 @@ export default function SHEProgramPage() {
               <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-6 drop-shadow-lg">
                 Women Leading Conservation
               </h2>
-              <p className="text-white/90 leading-relaxed drop-shadow-md text-lg">
+              <p className="text-white/90 leading-relaxed mb-8 drop-shadow-md text-lg">
                 <strong>120+ women</strong> collect over <strong>2 tonnes of plastic monthly</strong>, turning waste into income while protecting Kenya's coast.
               </p>
+              <Link
+                href="/programmes/trash4cash"
+                className="inline-flex items-center gap-2 bg-ocean-turquoise text-white font-bold px-6 py-3 rounded-xl hover:bg-white hover:text-ocean-midnight transition-all duration-200 shadow-xl"
+              >
+                Support Women's Programmes →
+              </Link>
             </div>
             <div className="relative w-full h-[350px] lg:h-[400px]">
               {/* Overlapping Image 1 - Top Right */}
