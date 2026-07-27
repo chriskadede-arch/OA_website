@@ -55,6 +55,46 @@ export default function SHEProgramPage() {
         </div>
       </section>
 
+      {/* Economic Pillar Section */}
+      <section className="bg-gradient-to-br from-pink-900 to-purple-900 py-16 md:py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-8">
+            <div className="text-6xl mb-4">💰</div>
+            <h2 className="text-4xl md:text-5xl font-poppins font-bold text-white mb-4">Economic Pillar</h2>
+            <p className="text-white/70 text-sm uppercase tracking-widest">Strategic Plan 2020-25 | Pillar of Development</p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-12">
+            <h3 className="text-2xl font-poppins font-bold text-white mb-6">Economic Sustainability & Diversified Income</h3>
+            <div className="prose prose-lg prose-invert max-w-none">
+              <p className="text-white/90 leading-relaxed mb-6">
+                Supporting sustainability of income streams in the fishery and related value chains, <strong className="text-ocean-turquoise">safeguarding traditional livelihoods</strong> while offering <strong className="text-ocean-turquoise">diversified income generating activities (DIGs)</strong> and recognizing that <strong className="text-ocean-turquoise">for every 1 fisher, 20 other livelihoods benefit in the value chain</strong>.
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                  <div className="text-4xl mb-3">♻️</div>
+                  <h4 className="text-lg font-bold text-white mb-2">Diversified Income (DIGs)</h4>
+                  <p className="text-white/70 text-sm">735+ women in Trash4Cash, permaculture, LIFT Network—economic options beyond fishing.</p>
+                </div>
+
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                  <div className="text-4xl mb-3">🔗</div>
+                  <h4 className="text-lg font-bold text-white mb-2">Value Chain Support</h4>
+                  <p className="text-white/70 text-sm">For every 1 fisher, 20 livelihoods benefit—supporting the entire coastal economy.</p>
+                </div>
+
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                  <div className="text-4xl mb-3">🌾</div>
+                  <h4 className="text-lg font-bold text-white mb-2">Safeguard Livelihoods</h4>
+                  <p className="text-white/70 text-sm">600+ households with climate-smart food security, protecting traditional ways of life.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Women at the Heart of Conservation */}
       <section className="relative bg-gradient-to-br from-[#1a6b5a] to-ocean-seafoam py-16 md:py-20 overflow-hidden">
         {/* Background Image */}

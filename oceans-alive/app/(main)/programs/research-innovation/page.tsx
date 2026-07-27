@@ -52,6 +52,46 @@ export default function ResearchInnovationPage() {
         </div>
       </section>
 
+      {/* Governance Pillar Section */}
+      <section className="bg-gradient-to-br from-cyan-900 to-blue-900 py-16 md:py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-8">
+            <div className="text-6xl mb-4">⚖️</div>
+            <h2 className="text-4xl md:text-5xl font-poppins font-bold text-white mb-4">Governance Pillar</h2>
+            <p className="text-white/70 text-sm uppercase tracking-widest">Strategic Plan 2020-25 | Pillar of Development</p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-12">
+            <h3 className="text-2xl font-poppins font-bold text-white mb-6">Governance & Co-Management</h3>
+            <div className="prose prose-lg prose-invert max-w-none">
+              <p className="text-white/90 leading-relaxed mb-6">
+                Supporting fisheries communities of Kilifi County in application of <strong className="text-ocean-turquoise">state and county policies, rules and regulations</strong> governing aquatic resource ownership. This is achieved by promoting the <strong className="text-ocean-turquoise">Joint and Co-Management Areas</strong> that allow fishers rights to <strong className="text-ocean-turquoise">community based natural resource management</strong>, targeting fisheries co-management through core activities of <strong className="text-ocean-turquoise">Beach Management Units (BMU)</strong>.
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                  <div className="text-4xl mb-3">🏖️</div>
+                  <h4 className="text-lg font-bold text-white mb-2">Beach Management Units</h4>
+                  <p className="text-white/70 text-sm">18 BMUs across Kilifi Network coordinating community-based fisheries governance.</p>
+                </div>
+
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                  <div className="text-4xl mb-3">🤲</div>
+                  <h4 className="text-lg font-bold text-white mb-2">Joint Co-Management</h4>
+                  <p className="text-white/70 text-sm">120 km² under Kenya's first Co-Management Plan—community rights meet institutional support.</p>
+                </div>
+
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                  <div className="text-4xl mb-3">📜</div>
+                  <h4 className="text-lg font-bold text-white mb-2">Policy Application</h4>
+                  <p className="text-white/70 text-sm">Supporting communities in applying state and county regulations for resource ownership.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What We Do */}
       <section className="bg-gradient-to-br from-cyan-50 to-blue-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">

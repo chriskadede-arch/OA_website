@@ -52,6 +52,46 @@ export default function LearningLeadershipPage() {
         </div>
       </section>
 
+      {/* Social Pillar Section */}
+      <section className="bg-gradient-to-br from-green-900 to-teal-900 py-16 md:py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-8">
+            <div className="text-6xl mb-4">📚</div>
+            <h2 className="text-4xl md:text-5xl font-poppins font-bold text-white mb-4">Social Pillar</h2>
+            <p className="text-white/70 text-sm uppercase tracking-widest">Strategic Plan 2020-25 | Pillar of Development</p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-12">
+            <h3 className="text-2xl font-poppins font-bold text-white mb-6">Social Development Through Education & Community Harmony</h3>
+            <div className="prose prose-lg prose-invert max-w-none">
+              <p className="text-white/90 leading-relaxed mb-6">
+                Ensuring that the results of our conservation actions contribute to <strong className="text-ocean-turquoise">doing no harm and leaving no one behind</strong> by bringing additional household benefits and social welfare through <strong className="text-ocean-turquoise">education</strong>, <strong className="text-ocean-turquoise">improved nutrition</strong>, and <strong className="text-ocean-turquoise">community harmony</strong>.
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                  <div className="text-4xl mb-3">🎓</div>
+                  <h4 className="text-lg font-bold text-white mb-2">Education for All</h4>
+                  <p className="text-white/70 text-sm">Ocean literacy programs reaching 10,000+ learners across all age groups and backgrounds.</p>
+                </div>
+
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                  <div className="text-4xl mb-3">🤝</div>
+                  <h4 className="text-lg font-bold text-white mb-2">Community Harmony</h4>
+                  <p className="text-white/70 text-sm">Intergenerational knowledge exchange and storytelling through Project REEL Kilifi.</p>
+                </div>
+
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                  <div className="text-4xl mb-3">🌱</div>
+                  <h4 className="text-lg font-bold text-white mb-2">Household Benefits</h4>
+                  <p className="text-white/70 text-sm">Improved nutrition through permaculture education and sustainable resource management.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What We Do */}
       <section className="bg-gradient-to-br from-green-50 to-teal-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">

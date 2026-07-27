@@ -48,6 +48,46 @@ export default function OceanRecoveryPage() {
         </div>
       </section>
 
+      {/* Environment Pillar Section */}
+      <section className="bg-gradient-to-br from-ocean-midnight to-blue-900 py-16 md:py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-8">
+            <div className="text-6xl mb-4">🌊</div>
+            <h2 className="text-4xl md:text-5xl font-poppins font-bold text-white mb-4">Environment Pillar</h2>
+            <p className="text-white/70 text-sm uppercase tracking-widest">Strategic Plan 2020-25 | Pillar of Development</p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-12">
+            <h3 className="text-2xl font-poppins font-bold text-white mb-6">Sustainable Environmental Management</h3>
+            <div className="prose prose-lg prose-invert max-w-none">
+              <p className="text-white/90 leading-relaxed mb-6">
+                Assisting coastal communities in <strong className="text-ocean-turquoise">sustainable management of the environment</strong> based on which their livelihoods depend, including <strong className="text-ocean-turquoise">restoration of the coral reef fishery through coral gardens</strong>, and <strong className="text-ocean-turquoise">management of catchment to reef</strong> through implementing <strong className="text-ocean-turquoise">Joint and Co-Management Area plans (CMAP)</strong>.
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                  <div className="text-4xl mb-3">🪸</div>
+                  <h4 className="text-lg font-bold text-white mb-2">Coral Garden Programme</h4>
+                  <p className="text-white/70 text-sm">25,000+ corals restored across 39 hectares, transforming fishers into reef gardeners.</p>
+                </div>
+
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                  <div className="text-4xl mb-3">🏞️</div>
+                  <h4 className="text-lg font-bold text-white mb-2">Catchment to Reef</h4>
+                  <p className="text-white/70 text-sm">Integrated ecosystem management from land through to marine protected areas.</p>
+                </div>
+
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                  <div className="text-4xl mb-3">📋</div>
+                  <h4 className="text-lg font-bold text-white mb-2">Co-Management Plans</h4>
+                  <p className="text-white/70 text-sm">120 km² under Kenya's first officially endorsed Co-Management Area Plan (CMAP).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What We Do */}
       <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
