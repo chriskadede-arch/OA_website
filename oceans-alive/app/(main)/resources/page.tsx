@@ -44,13 +44,13 @@ const FEATURED_VIDEOS = [
   },
 ];
 
-// EXTERNAL ARTICLES - What others wrote about Oceans Alive (REAL ARTICLES FOUND)
+// EXTERNAL ARTICLES - What others wrote about Oceans Alive (REAL ARTICLES FOUND WITH REAL IMAGES)
 const EXTERNAL_ARTICLES = [
   {
     id: 1,
     title: 'Kenya\'s Kuruwitu Corals Are Back, Thanks to Local Conservation Drive',
     source: 'UN News',
-    logo: '/images/partners/un-logo.png',
+    thumbnail: 'https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production+Library/12-07-2022_Kuruwitu_Corals_Ocean.jpg/image1440x560cropped.jpg',
     excerpt: '30% coral recovery, 400% fish biomass increase. "More than 30 community conservation initiatives along the Kenyan coast trace their inspiration back to Kuruwitu."',
     url: 'https://news.un.org/en/story/2022/07/1122482',
     date: 'July 2022',
@@ -60,7 +60,7 @@ const EXTERNAL_ARTICLES = [
     id: 2,
     title: 'How King Charles III\'s Visit to Kuruwitu Conservation Unravelled',
     source: 'The Star Kenya',
-    logo: '/images/partners/the-star.png',
+    thumbnail: '/images/oceansmen.jpg',
     excerpt: 'King Charles III visits Kuruwitu in November 2023, launches "King\'s Coral Village" structure with 40 coral plugs. Global recognition follows.',
     url: 'https://www.the-star.co.ke/news/2023-11-07-how-king-charles-iiis-visit-to-kuruwitu-conservation-unravelled',
     date: 'November 2023',
@@ -70,6 +70,7 @@ const EXTERNAL_ARTICLES = [
     id: 3,
     title: 'Kuruwitu Conservation & Welfare Association Partnership',
     source: 'Blue Ventures',
+    thumbnail: '/images/fisher.jpg',
     excerpt: 'KCWA and Oceans Alive partnership with Blue Ventures focuses on strengthening Beach Management Units for improved fisheries management since 2016.',
     url: 'https://blueventures.org/partner/kuruwitu-conservation-welfare-association/',
     date: '2024',
@@ -78,6 +79,7 @@ const EXTERNAL_ARTICLES = [
     id: 4,
     title: 'Indian Ocean Kenya Coral Restoration Project',
     source: 'Coral Guardian',
+    thumbnail: 'https://www.coralguardian.org/app/uploads/2024/06/Capture-decran-2024-06-17-a-18.29.01.png',
     excerpt: 'Collaboration with Oceans Alive Foundation on REEL Kilifi project since 2024. Strengthening participatory coral reef restoration across 12,000-hectare Kuruwitu area.',
     url: 'https://www.coralguardian.org/en/indian-ocean-kenya/',
     date: 'January 2024',
@@ -86,6 +88,7 @@ const EXTERNAL_ARTICLES = [
     id: 5,
     title: 'How Coastal Community is Restoring Degraded Coral and Reviving Economy',
     source: 'The Star Kenya',
+    thumbnail: '/images/divers.jpg',
     excerpt: 'Oceans Alive has planted over 15,000 new corals. Canon sponsorship supports nursery tables and reef infrastructure for thousands more fragments.',
     url: 'https://www.the-star.co.ke/news/big-read/2026-02-24-how-coastal-community-is-restoring-degraded-coral-and-reviving-economy',
     date: 'February 2026',
@@ -94,6 +97,7 @@ const EXTERNAL_ARTICLES = [
     id: 6,
     title: 'New East Africa Initiative Targets Coral Reef Restoration in Kenya',
     source: 'Oceanographic Magazine',
+    thumbnail: '/images/coralteaching.jpg',
     excerpt: 'Coverage of new coral reef restoration initiatives in Kenya, highlighting Kuruwitu\'s pioneering community-led approach.',
     url: 'https://oceanographicmagazine.com/news/new-east-africa-initiative-targets-coral-reef-restoration-in-kenya/',
     date: '2024',
@@ -102,6 +106,7 @@ const EXTERNAL_ARTICLES = [
     id: 7,
     title: 'Oceans Alive: A Community-Led Model for Marine Recovery',
     source: 'The Conscious Travel Foundation',
+    thumbnail: 'https://images.squarespace-cdn.com/content/v1/5ebc29ac30ad40094415c322/4721a6df-60a1-439f-a804-9b92c05d481d/PC070241.jpeg',
     excerpt: 'In-depth feature on Oceans Alive\'s community-led conservation model and its impact on marine recovery in Kilifi County.',
     url: 'https://www.theconscioustravelfoundation.com/stories/introducing-oceans-alive',
     date: '2024',
@@ -110,6 +115,7 @@ const EXTERNAL_ARTICLES = [
     id: 8,
     title: 'Marine Conservation in Kuruwitu: How a Coastal Village is Saving Coral Reefs',
     source: 'Juan Around Travel Blog',
+    thumbnail: '/images/communities.jpg',
     excerpt: 'Travel perspective on Kuruwitu\'s conservation success story. Started in 2003, now Kenya\'s first Locally Managed Marine Area.',
     url: 'https://juanaround.com/marine-conservation-in-kuruwitu-how-a-coastal-village-in-kenya-is-saving-coral-reefs/',
     date: '2024',
@@ -118,6 +124,7 @@ const EXTERNAL_ARTICLES = [
     id: 9,
     title: 'Equator Prize Winners 2021: Local Action Solutions',
     source: 'UNDP',
+    thumbnail: '/images/IMG_4955.jpg',
     excerpt: 'Kuruwitu among global winners recognized for innovative nature-based solutions. $10,000 prize and participation in UN General Assembly events.',
     url: 'https://www.undp.org/blog/equator-prize-winners-2021-deliver-local-action-solutions-we-need-now',
     date: 'September 2021',
@@ -126,6 +133,7 @@ const EXTERNAL_ARTICLES = [
     id: 10,
     title: 'Hosting Kenya\'s First Community-Led Marine Protected Area',
     source: 'Vipingo Ridge',
+    thumbnail: '/images/P5310100.jpg',
     excerpt: 'Feature on Vipingo Ridge hosting Kuruwitu Conservation offices and the historic role of Kenya\'s first community-led MPA.',
     url: 'https://www.vipingoridge.com/news/hosting-kenyas-first-community-led-marine-protected-area',
     date: '2023',
@@ -429,7 +437,7 @@ export default function Resources() {
               </p>
             </div>
 
-            {/* Featured Articles (Top 2 Large Cards) */}
+            {/* Featured Articles (Top 2 Large Cards WITH IMAGES) */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               {EXTERNAL_ARTICLES.filter(a => a.featured).map((article) => (
                 <a
@@ -437,18 +445,25 @@ export default function Resources() {
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative bg-gradient-to-br from-ocean-midnight to-ocean-turquoise rounded-3xl p-8 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                  className="group relative rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
                 >
-                  {/* Decorative elements */}
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32" />
-                  <div className="absolute bottom-0 left-0 w-48 h-48 bg-black/10 rounded-full -ml-24 -mb-24" />
+                  {/* Background Image */}
+                  <div className="absolute inset-0">
+                    <Image
+                      src={article.thumbnail}
+                      alt={article.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/85 to-ocean-midnight/40" />
+                  </div>
 
-                  <div className="relative z-10">
+                  <div className="relative z-10 p-8 min-h-[400px] flex flex-col justify-end">
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
-                        <span className="text-ocean-turquoise text-xs font-bold uppercase tracking-wider">Featured</span>
+                      <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg border border-white/20">
+                        <span className="text-white text-xs font-bold uppercase tracking-wider">Featured</span>
                       </div>
-                      <span className="text-white/60 text-sm">{article.date}</span>
+                      <span className="text-white/70 text-sm">{article.date}</span>
                     </div>
 
                     <h3 className="text-2xl font-poppins font-bold text-white mb-4 group-hover:text-ocean-turquoise transition-colors">
@@ -460,10 +475,7 @@ export default function Resources() {
                     </p>
 
                     <div className="flex items-center justify-between pt-4 border-t border-white/20">
-                      <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm" />
-                        <span className="text-white/90 font-semibold text-sm">{article.source}</span>
-                      </div>
+                      <span className="text-white/90 font-semibold text-sm">{article.source}</span>
                       <div className="flex items-center gap-2 text-white group-hover:translate-x-2 transition-transform">
                         <span className="text-sm font-bold">Read Article</span>
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -476,7 +488,7 @@ export default function Resources() {
               ))}
             </div>
 
-            {/* Rest of Articles (Masonry-style Grid) */}
+            {/* Rest of Articles (With Thumbnail Images) */}
             <div className="grid md:grid-cols-3 gap-6">
               {EXTERNAL_ARTICLES.filter(a => !a.featured).map((article) => (
                 <a
@@ -484,31 +496,41 @@ export default function Resources() {
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:border-ocean-turquoise/30 transition-all duration-300"
+                  className="group bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl hover:border-ocean-turquoise/30 transition-all duration-300"
                 >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-ocean-turquoise/10 to-ocean-midnight/10 flex items-center justify-center">
-                      <svg className="w-5 h-5 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                      </svg>
+                  {/* Article Thumbnail */}
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={article.thumbnail}
+                      alt={article.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight/40 to-transparent" />
+                    <div className="absolute top-4 right-4">
+                      <span className="px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-lg text-xs text-ocean-midnight font-bold">{article.date}</span>
                     </div>
-                    <span className="text-xs text-gray-400">{article.date}</span>
                   </div>
 
-                  <h3 className="font-poppins font-bold text-ocean-midnight mb-3 group-hover:text-ocean-turquoise transition-colors leading-tight">
-                    {article.title}
-                  </h3>
+                  {/* Article Content */}
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="w-2 h-2 rounded-full bg-ocean-turquoise" />
+                      <span className="text-xs text-gray-500 font-bold uppercase tracking-wider">{article.source}</span>
+                    </div>
 
-                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                    {article.excerpt}
-                  </p>
+                    <h3 className="font-poppins font-bold text-ocean-midnight mb-3 group-hover:text-ocean-turquoise transition-colors leading-tight">
+                      {article.title}
+                    </h3>
 
-                  <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                    <span className="text-xs text-gray-500 font-medium">{article.source}</span>
-                    <div className="flex items-center gap-1 text-ocean-turquoise text-xs font-bold group-hover:gap-2 transition-all">
-                      Read
+                    <p className="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-3">
+                      {article.excerpt}
+                    </p>
+
+                    <div className="flex items-center gap-2 text-ocean-turquoise text-sm font-bold group-hover:gap-3 transition-all">
+                      Read Full Article
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
                     </div>
                   </div>
