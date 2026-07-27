@@ -154,21 +154,21 @@ export default function OceanRecoveryPage() {
             </div>
           </div>
 
-          {/* Why This Works - The Story */}
+          {/* Why This Works - The Partnership Model */}
           <div className="bg-gradient-to-br from-ocean-midnight to-blue-900 rounded-2xl shadow-xl p-8 md:p-10 mb-8 text-white">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-12 bg-ocean-turquoise rounded-full"></div>
-              <h3 className="text-2xl font-poppins font-bold">From Devastation to National Model</h3>
+              <h3 className="text-2xl font-poppins font-bold">How Coral Restoration Actually Works</h3>
             </div>
             <div className="prose prose-lg prose-invert max-w-none">
               <p className="text-white/90 leading-relaxed mb-4">
-                In the late 1990s, coral bleaching devastated Kenya's reefs and fish stocks collapsed. Kuruwitu's fishers faced a choice: watch their livelihoods disappear, or act. In 2003, they formed the Kuruwitu Conservation and Welfare Association. In 2006, they established one of Kenya's earliest community-driven Locally Managed Marine Areas—a 30-hectare no-take sanctuary governed under traditional law, known as a <em>tengefu</em>.
+                Since 2019, Oceans Alive has partnered with Coral Guardian International and Coral Reef Care to build Kenya's most active community-led coral nursery. But this isn't scientists doing the work—it's fishers. The same men and women who once extracted from the reef are now trained and employed as certified reef gardeners, maintaining 32 underwater nursery tables where coral fragments grow before being transplanted to 457 artificial reef structures.
               </p>
               <p className="text-white/90 leading-relaxed mb-4">
-                What happened next rewrote what Kenya thought was possible. Over roughly 15 years, the sanctuary delivered a 400% increase in fish biomass, 30% reef recovery, and 17% seagrass regrowth. A 135% improvement in catch in surrounding waters proved the spillover effect: when the reef recovers, fishers benefit. This wasn't theory—it was survival, measured by WCS monitoring data.
+                The process is meticulous: coral fragments are carefully attached to nursery tables, monitored for growth, and once mature, transplanted onto degraded reef areas. The 85% survival rate proves the method works—but the real transformation is human, not ecological. Fishers who once saw coral as backdrop now understand it as the foundation of their livelihoods. They track growth rates, identify diseases, and protect restoration sites from damage.
               </p>
               <p className="text-white/90 leading-relaxed">
-                In 2016, Oceans Alive was established to help document and scale this model. Working with the Kuruwitu BMU, government agencies, and technical partners, we supported the development of Kenya's first officially endorsed Co-Management Plan in 2022—covering 120 km² of ocean and 18 Beach Management Units across Kilifi County. The fishers who started this didn't just save their reef. They shaped national policy.
+                This partnership model—international expertise meeting local stewardship—creates lasting change. Coral Guardian provides technical training and monitoring protocols. Coral Reef Care supplies materials and scientific guidance. Oceans Alive coordinates the community side. And the fishers? They own it. When external partners eventually leave, the reef gardeners remain. That's how 25,000+ corals across 39 hectares doesn't become a one-time project—it becomes a way of life.
               </p>
             </div>
           </div>
