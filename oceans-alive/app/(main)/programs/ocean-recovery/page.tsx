@@ -304,8 +304,8 @@ export default function OceanRecoveryPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <Link href="/programmes" className="inline-flex items-center gap-2 px-6 py-3 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-ocean-midnight transition-colors">
-              View All Programs
+            <Link href="/programs/she" className="inline-flex items-center gap-2 px-6 py-3 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-ocean-midnight transition-colors">
+              Next: Promote Food Security & Income →
             </Link>
           </div>
         </div>
