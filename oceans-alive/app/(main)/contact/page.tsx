@@ -10,41 +10,11 @@ import { apiClient } from '@/lib/api-client';
 import { CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants';
 
 const INQUIRY_OPTIONS = [
-  {
-    value: 'General Inquiry',
-    label: 'General',
-    desc: 'Questions & info',
-    icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
-    gradient: 'from-blue-500 to-cyan-500',
-  },
-  {
-    value: 'Partnership',
-    label: 'Partnership',
-    desc: 'NGOs, research, business',
-    icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>,
-    gradient: 'from-purple-500 to-pink-500',
-  },
-  {
-    value: 'Volunteer',
-    label: 'Volunteer',
-    desc: 'Give time & skills',
-    icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>,
-    gradient: 'from-red-500 to-orange-500',
-  },
-  {
-    value: 'Donation',
-    label: 'Donate',
-    desc: 'Support our work',
-    icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
-    gradient: 'from-green-500 to-teal-500',
-  },
-  {
-    value: 'Other',
-    label: 'Other',
-    desc: 'Anything else',
-    icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" /></svg>,
-    gradient: 'from-gray-500 to-slate-600',
-  },
+  { value: 'General Inquiry', label: 'General', desc: 'Questions & info', icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>, gradient: 'from-blue-500 to-cyan-500' },
+  { value: 'Partnership', label: 'Partnership', desc: 'NGOs, research, business', icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>, gradient: 'from-purple-500 to-pink-500' },
+  { value: 'Volunteer', label: 'Volunteer', desc: 'Give time & skills', icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>, gradient: 'from-red-500 to-orange-500' },
+  { value: 'Donation', label: 'Donate', desc: 'Support our work', icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>, gradient: 'from-green-500 to-teal-500' },
+  { value: 'Other', label: 'Other', desc: 'Anything else', icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" /></svg>, gradient: 'from-gray-500 to-slate-600' },
 ];
 
 export default function Contact() {
@@ -93,7 +63,7 @@ export default function Contact() {
 
   return (
     <>
-      {/* ── IMMERSIVE HERO WITH MAP & ANIMATION ─────────────────── */}
+      {/* ── NEW HERO (Keep This Design) ─────────────────── */}
       <section className="relative bg-ocean-midnight overflow-hidden">
         {/* Animated ocean waves background */}
         <div className="absolute inset-0 opacity-5">
@@ -117,115 +87,63 @@ export default function Contact() {
           </svg>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 md:py-40">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left: Text Content */}
-            <div>
-              <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full mb-8">
-                <svg className="w-4 h-4 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest">Kilifi County, Kenya</span>
-              </div>
-
-              <h1 className="font-poppins font-bold text-white text-6xl md:text-7xl lg:text-8xl leading-tight mb-8">
-                Let's Make
-                <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-ocean-turquoise via-green-400 to-ocean-seafoam">
-                  Waves Together
-                </span>
-              </h1>
-
-              <p className="text-xl md:text-2xl text-white/70 leading-relaxed mb-12">
-                Whether you want to partner, volunteer, donate, or just learn more - we're here to connect with you from the shores of Kuruwitu.
-              </p>
-
-              {/* Quick Contact Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <a
-                  href={`mailto:${CONTACT_EMAIL}`}
-                  className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 hover:bg-white/10 hover:border-ocean-turquoise/40 transition-all duration-300"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-ocean-turquoise to-blue-600 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-xs font-bold uppercase tracking-wider text-ocean-turquoise mb-1">Email Us</div>
-                      <div className="text-sm text-white/80 group-hover:text-white transition-colors truncate">{CONTACT_EMAIL}</div>
-                    </div>
-                  </div>
-                </a>
-
-                <a
-                  href={`tel:${CONTACT_PHONE}`}
-                  className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 hover:bg-white/10 hover:border-ocean-turquoise/40 transition-all duration-300"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-xs font-bold uppercase tracking-wider text-ocean-turquoise mb-1">Call Us</div>
-                      <div className="text-sm text-white/80 group-hover:text-white transition-colors">{CONTACT_PHONE}</div>
-                    </div>
-                  </div>
-                </a>
-              </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 md:py-32">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full mb-8">
+              <svg className="w-4 h-4 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest">Kilifi County, Kenya</span>
             </div>
 
-            {/* Right: Interactive Map Card */}
-            <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10">
-                <div className="aspect-square relative">
-                  <Image
-                    src="/images/communities.jpg"
-                    alt="Kuruwitu Conservation Area"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/40 to-transparent" />
+            <h1 className="font-poppins font-bold text-white text-6xl md:text-7xl lg:text-8xl leading-tight mb-8">
+              Let's Make
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-ocean-turquoise via-green-400 to-ocean-seafoam">
+                Waves Together
+              </span>
+            </h1>
 
-                  {/* Location Pin Animation */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <div className="relative">
-                      <div className="absolute inset-0 w-20 h-20 bg-ocean-turquoise/30 rounded-full animate-ping" />
-                      <div className="relative w-16 h-16 bg-gradient-to-br from-ocean-turquoise to-green-500 rounded-full flex items-center justify-center shadow-xl border-4 border-white">
-                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                      </div>
-                    </div>
+            <p className="text-xl md:text-2xl text-white/70 leading-relaxed mb-12">
+              Whether you want to partner, volunteer, donate, or just learn more - we're here to connect with you from the shores of Kuruwitu.
+            </p>
+
+            {/* Quick Contact Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 hover:bg-white/10 hover:border-ocean-turquoise/40 transition-all duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-ocean-turquoise to-blue-600 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
                   </div>
-
-                  {/* Info Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4">
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                        <span className="text-white font-bold text-sm">We're Here</span>
-                      </div>
-                      <p className="text-white/80 text-xs leading-relaxed">
-                        Kuruwitu Conservation & Welfare Association
-                        <br />
-                        Kilifi County, Kenya Coast
-                      </p>
-                    </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-xs font-bold uppercase tracking-wider text-ocean-turquoise mb-1">Email Us</div>
+                    <div className="text-sm text-white/80 group-hover:text-white transition-colors truncate">{CONTACT_EMAIL}</div>
                   </div>
                 </div>
-              </div>
+              </a>
 
-              {/* Floating stat card */}
-              <div className="absolute -bottom-8 -right-8 bg-gradient-to-br from-ocean-turquoise to-ocean-midnight rounded-2xl p-6 shadow-2xl border-4 border-white max-w-xs">
-                <div className="text-4xl font-poppins font-bold text-white mb-1">48hrs</div>
-                <div className="text-white/70 text-sm">Average response time from our team in Kilifi</div>
-              </div>
+              <a
+                href={`tel:${CONTACT_PHONE}`}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 hover:bg-white/10 hover:border-ocean-turquoise/40 transition-all duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-xs font-bold uppercase tracking-wider text-ocean-turquoise mb-1">Call Us</div>
+                    <div className="text-sm text-white/80 group-hover:text-white transition-colors">{CONTACT_PHONE}</div>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
