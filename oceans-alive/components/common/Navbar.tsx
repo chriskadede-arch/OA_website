@@ -540,23 +540,11 @@ export default function Navbar() {
     setActiveMenu(null);
   }, []);
 
-  // Close dropdown on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      if (activeMenu) {
-        setActiveMenu(null);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [activeMenu]);
-
   const activeItem = MEGA_NAV.find((n) => n.label === activeMenu);
 
   return (
     <>
-      <div className="sticky top-0 z-50">
+      <div className="fixed top-0 left-0 right-0 z-50">
         <nav className="bg-white/95 backdrop-blur-lg border-b border-ocean-midnight/5 shadow-sm relative">
             {/* Combined Top Bar and Main Nav */}
             <div className="relative">
