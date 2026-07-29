@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -539,6 +539,18 @@ export default function Navbar() {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setActiveMenu(null);
   }, []);
+
+  // Close dropdown on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (activeMenu) {
+        setActiveMenu(null);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [activeMenu]);
 
   const activeItem = MEGA_NAV.find((n) => n.label === activeMenu);
 
