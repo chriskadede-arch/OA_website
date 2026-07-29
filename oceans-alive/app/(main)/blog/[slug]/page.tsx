@@ -383,8 +383,8 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   const story = STATIC_BLOG_STORIES.find((s) => s.slug === params.slug);
   if (!story) notFound();
 
-  // Block access to Community News and Impact Stories
-  const isDisabled = story.category === 'Community News' || story.category === 'Impact Stories';
+  // Block access to Community News, Impact Stories, Latest Updates, and Education
+  const isDisabled = story.category === 'Community News' || story.category === 'Impact Stories' || story.category === 'Latest Updates' || story.category === 'Education';
   if (isDisabled) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center px-6">
