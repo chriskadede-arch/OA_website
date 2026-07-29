@@ -117,7 +117,7 @@ export default function Blog() {
           {!loading && dbConnected && posts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {posts.map((post) => {
-                const isDisabled = post.category === 'Community News' || post.category === 'Impact Stories' || post.category === 'Latest Updates' || post.category === 'Education';
+                const isDisabled = post.category === 'Community News' || post.category === 'Impact Stories' || post.category === 'Latest Updates' || post.category === 'Education' || post.category === 'Recognition';
 
                 if (isDisabled) {
                   return (
@@ -172,7 +172,7 @@ export default function Blog() {
             <>
               {/* Featured story with photo */}
               {featured && (() => {
-                const isDisabled = featured.category === 'Community News' || featured.category === 'Impact Stories' || featured.category === 'Latest Updates' || featured.category === 'Education';
+                const isDisabled = featured.category === 'Community News' || featured.category === 'Impact Stories' || featured.category === 'Latest Updates' || featured.category === 'Education' || featured.category === 'Recognition';
 
                 if (isDisabled) {
                   return (
@@ -230,7 +230,7 @@ export default function Blog() {
               {/* Story grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {STATIC_BLOG_STORIES.filter((s) => !s.featured).map((story) => {
-                  const isDisabled = story.category === 'Community News' || story.category === 'Impact Stories' || story.category === 'Latest Updates' || story.category === 'Education';
+                  const isDisabled = story.category === 'Community News' || story.category === 'Impact Stories' || story.category === 'Latest Updates' || story.category === 'Education' || story.category === 'Recognition';
 
                   if (isDisabled) {
                     return (
