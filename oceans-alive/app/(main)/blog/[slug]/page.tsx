@@ -383,6 +383,42 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   const story = STATIC_BLOG_STORIES.find((s) => s.slug === params.slug);
   if (!story) notFound();
 
+  // Block access to Community News and Impact Stories
+  const isDisabled = story.category === 'Community News' || story.category === 'Impact Stories';
+  if (isDisabled) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center px-6">
+        <div className="max-w-2xl text-center">
+          <div className="mb-8">
+            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gray-200 flex items-center justify-center">
+              <svg className="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h1 className="text-3xl font-poppins font-bold text-gray-800 mb-4">Content Being Updated</h1>
+            <p className="text-lg text-gray-600 mb-2">This story is currently being reviewed and updated with the latest information.</p>
+            <p className="text-sm text-gray-500 mb-8">Please check back soon for the complete story.</p>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-200 rounded-full text-sm text-gray-600">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+              </svg>
+              <span className="font-semibold">{story.category}</span>
+            </div>
+          </div>
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-ocean-midnight text-white font-bold rounded-xl hover:bg-ocean-turquoise transition-all duration-200"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Back to All Stories
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   const content = BLOG_CONTENT[params.slug];
   const related = content?.relatedSlugs
     ? STATIC_BLOG_STORIES.filter((s) => content.relatedSlugs.includes(s.slug))
