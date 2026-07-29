@@ -117,7 +117,7 @@ export default function Blog() {
           {!loading && dbConnected && posts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {posts.map((post) => {
-                const isDisabled = post.category === 'Community News' || post.category === 'Impact Stories' || post.category === 'Latest Updates' || post.category === 'Education' || post.category === 'Recognition';
+                const isDisabled = post.category === 'Community News' || post.category === 'Impact Stories' || post.category === 'Latest Updates' || post.category === 'Education' || post.category === 'Recognition' || post.category === 'Governance' || post.category === 'Fisheries' || post.category === 'Women & Ocean' || post.category === 'Coral Restoration';
 
                 if (isDisabled) {
                   return (
@@ -172,7 +172,7 @@ export default function Blog() {
             <>
               {/* Featured story with photo */}
               {featured && (() => {
-                const isDisabled = featured.category === 'Community News' || featured.category === 'Impact Stories' || featured.category === 'Latest Updates' || featured.category === 'Education' || featured.category === 'Recognition';
+                const isDisabled = featured.category === 'Community News' || featured.category === 'Impact Stories' || featured.category === 'Latest Updates' || featured.category === 'Education' || featured.category === 'Recognition' || featured.category === 'Governance' || featured.category === 'Fisheries' || featured.category === 'Women & Ocean' || featured.category === 'Coral Restoration';
 
                 if (isDisabled) {
                   return (
@@ -230,7 +230,7 @@ export default function Blog() {
               {/* Story grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {STATIC_BLOG_STORIES.filter((s) => !s.featured).map((story) => {
-                  const isDisabled = story.category === 'Community News' || story.category === 'Impact Stories' || story.category === 'Latest Updates' || story.category === 'Education' || story.category === 'Recognition';
+                  const isDisabled = story.category === 'Community News' || story.category === 'Impact Stories' || story.category === 'Latest Updates' || story.category === 'Education' || story.category === 'Recognition' || story.category === 'Governance' || story.category === 'Fisheries' || story.category === 'Women & Ocean' || story.category === 'Coral Restoration';
 
                   if (isDisabled) {
                     return (
