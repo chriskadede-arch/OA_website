@@ -116,76 +116,143 @@ export default function Blog() {
           {/* Live DB posts */}
           {!loading && dbConnected && posts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {posts.map((post) => (
-                <div key={post.id} className="group rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  {post.featured_image_url && (
-                    <div className="h-48 overflow-hidden">
-                      <img src={post.featured_image_url} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              {posts.map((post) => {
+                const isDisabled = post.category === 'Community News' || post.category === 'Impact Stories';
+
+                return (
+                  <div key={post.id} className={`group rounded-2xl border border-gray-100 overflow-hidden transition-all duration-300 ${isDisabled ? 'opacity-60 cursor-not-allowed' : 'hover:shadow-xl hover:-translate-y-1'}`}>
+                    {post.featured_image_url && (
+                      <div className="h-48 overflow-hidden">
+                        <img src={post.featured_image_url} alt={post.title} className={`w-full h-full object-cover ${isDisabled ? '' : 'group-hover:scale-105'} transition-transform duration-500`} />
+                      </div>
+                    )}
+                    <div className="p-6">
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-[10px] font-bold text-ocean-turquoise uppercase tracking-widest">{post.category}</span>
+                        <span className="text-xs text-gray-400">{new Date(post.published_at).toLocaleDateString()}</span>
+                      </div>
+                      <h3 className={`text-lg font-poppins font-bold text-ocean-midnight mb-2 line-clamp-2 ${isDisabled ? '' : 'group-hover:text-ocean-turquoise'} transition-colors`}>{post.title}</h3>
+                      <p className="text-gray-500 text-sm mb-4 line-clamp-3">{post.excerpt}</p>
+                      {isDisabled ? (
+                        <span className="text-xs font-bold text-gray-400">
+                          Coming Soon
+                        </span>
+                      ) : (
+                        <Link href={`/blog/${post.slug}`} className="text-xs font-bold text-ocean-turquoise hover:text-ocean-midnight transition-colors">
+                          Read Story →
+                        </Link>
+                      )}
                     </div>
-                  )}
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-[10px] font-bold text-ocean-turquoise uppercase tracking-widest">{post.category}</span>
-                      <span className="text-xs text-gray-400">{new Date(post.published_at).toLocaleDateString()}</span>
-                    </div>
-                    <h3 className="text-lg font-poppins font-bold text-ocean-midnight mb-2 line-clamp-2 group-hover:text-ocean-turquoise transition-colors">{post.title}</h3>
-                    <p className="text-gray-500 text-sm mb-4 line-clamp-3">{post.excerpt}</p>
-                    <Link href={`/blog/${post.slug}`} className="text-xs font-bold text-ocean-turquoise hover:text-ocean-midnight transition-colors">
-                      Read Story →
-                    </Link>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           ) : (
             <>
               {/* Featured story with photo */}
-              {featured && (
-                <Link href={`/blog/${featured.slug}`} className="group block mb-10 relative rounded-2xl overflow-hidden hover:shadow-2xl transition-shadow duration-500" style={{ minHeight: '320px' }}>
-                  <Image src="/images/oceansmen.jpg" alt="Featured story" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-ocean-midnight/95 via-ocean-midnight/75 to-ocean-midnight/30" />
-                  <div className="relative z-10 p-8 md:p-12 max-w-2xl" style={{ minHeight: '320px' }}>
-                    <div className="flex flex-wrap items-center gap-3 mb-4">
-                      <span className="text-[10px] font-bold uppercase tracking-widest bg-ocean-turquoise text-white px-3 py-1 rounded-full">Featured Story</span>
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-white/50">{featured.category}</span>
+              {featured && (() => {
+                const isDisabled = featured.category === 'Community News' || featured.category === 'Impact Stories';
+
+                if (isDisabled) {
+                  return (
+                    <div className="block mb-10 relative rounded-2xl overflow-hidden opacity-60 cursor-not-allowed" style={{ minHeight: '320px' }}>
+                      <Image src="/images/oceansmen.jpg" alt="Featured story" fill className="object-cover" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-ocean-midnight/95 via-ocean-midnight/75 to-ocean-midnight/30" />
+                      <div className="relative z-10 p-8 md:p-12 max-w-2xl" style={{ minHeight: '320px' }}>
+                        <div className="flex flex-wrap items-center gap-3 mb-4">
+                          <span className="text-[10px] font-bold uppercase tracking-widest bg-ocean-turquoise text-white px-3 py-1 rounded-full">Featured Story</span>
+                          <span className="text-[10px] font-bold uppercase tracking-widest text-white/50">{featured.category}</span>
+                        </div>
+                        <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-4 leading-tight">{featured.title}</h2>
+                        <p className="text-white/75 leading-relaxed mb-6 text-sm md:text-base">{featured.excerpt}</p>
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {featured.stats.map((s) => (
+                            <span key={s} className="text-[10px] bg-white/10 text-white/70 px-3 py-1 rounded-full font-semibold">{s}</span>
+                          ))}
+                        </div>
+                        <div className="flex items-center gap-3 text-white/50 font-bold text-sm">
+                          Coming Soon
+                        </div>
+                      </div>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-4 leading-tight group-hover:text-ocean-turquoise transition-colors">{featured.title}</h2>
-                    <p className="text-white/75 leading-relaxed mb-6 text-sm md:text-base">{featured.excerpt}</p>
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {featured.stats.map((s) => (
-                        <span key={s} className="text-[10px] bg-white/10 text-white/70 px-3 py-1 rounded-full font-semibold">{s}</span>
-                      ))}
+                  );
+                }
+
+                return (
+                  <Link href={`/blog/${featured.slug}`} className="group block mb-10 relative rounded-2xl overflow-hidden hover:shadow-2xl transition-shadow duration-500" style={{ minHeight: '320px' }}>
+                    <Image src="/images/oceansmen.jpg" alt="Featured story" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-ocean-midnight/95 via-ocean-midnight/75 to-ocean-midnight/30" />
+                    <div className="relative z-10 p-8 md:p-12 max-w-2xl" style={{ minHeight: '320px' }}>
+                      <div className="flex flex-wrap items-center gap-3 mb-4">
+                        <span className="text-[10px] font-bold uppercase tracking-widest bg-ocean-turquoise text-white px-3 py-1 rounded-full">Featured Story</span>
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-white/50">{featured.category}</span>
+                      </div>
+                      <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-4 leading-tight group-hover:text-ocean-turquoise transition-colors">{featured.title}</h2>
+                      <p className="text-white/75 leading-relaxed mb-6 text-sm md:text-base">{featured.excerpt}</p>
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {featured.stats.map((s) => (
+                          <span key={s} className="text-[10px] bg-white/10 text-white/70 px-3 py-1 rounded-full font-semibold">{s}</span>
+                        ))}
+                      </div>
+                      <div className="flex items-center gap-3 text-ocean-turquoise font-bold text-sm group-hover:translate-x-1 transition-transform">
+                        Read Story →
+                      </div>
                     </div>
-                    <div className="flex items-center gap-3 text-ocean-turquoise font-bold text-sm group-hover:translate-x-1 transition-transform">
-                      Read Story →
-                    </div>
-                  </div>
-                </Link>
-              )}
+                  </Link>
+                );
+              })()}
 
               {/* Story grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {STATIC_BLOG_STORIES.filter((s) => !s.featured).map((story) => (
-                  <Link key={story.id} href={`/blog/${story.slug}`} className="group rounded-2xl border border-gray-100 p-6 hover:shadow-lg hover:border-ocean-turquoise/20 transition-all duration-200 flex flex-col">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-[10px] font-bold text-ocean-turquoise uppercase tracking-widest">
-                        {story.category}
-                      </span>
-                      <span className="text-[10px] text-gray-400">{story.readTime}</span>
-                    </div>
-                    <h3 className="font-poppins font-bold text-ocean-midnight text-base mb-2 leading-snug group-hover:text-ocean-turquoise transition-colors">{story.title}</h3>
-                    <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3 flex-1">{story.excerpt}</p>
-                    <div className="flex flex-wrap gap-1.5 mb-4">
-                      {story.stats.map((s) => (
-                        <span key={s} className="text-[10px] bg-ocean-turquoise/10 text-ocean-turquoise px-2 py-0.5 rounded-full font-semibold">{s}</span>
-                      ))}
-                    </div>
-                    <div className="flex items-center justify-between text-xs border-t border-gray-50 pt-3">
-                      <span className="text-gray-400">{story.date}</span>
-                      <span className="text-ocean-turquoise font-bold group-hover:translate-x-0.5 transition-transform inline-block">Read →</span>
-                    </div>
-                  </Link>
-                ))}
+                {STATIC_BLOG_STORIES.filter((s) => !s.featured).map((story) => {
+                  const isDisabled = story.category === 'Community News' || story.category === 'Impact Stories';
+
+                  if (isDisabled) {
+                    return (
+                      <div key={story.id} className="rounded-2xl border border-gray-100 p-6 flex flex-col opacity-60 cursor-not-allowed">
+                        <div className="flex items-center justify-between mb-4">
+                          <span className="text-[10px] font-bold text-ocean-turquoise uppercase tracking-widest">
+                            {story.category}
+                          </span>
+                          <span className="text-[10px] text-gray-400">{story.readTime}</span>
+                        </div>
+                        <h3 className="font-poppins font-bold text-ocean-midnight text-base mb-2 leading-snug">{story.title}</h3>
+                        <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3 flex-1">{story.excerpt}</p>
+                        <div className="flex flex-wrap gap-1.5 mb-4">
+                          {story.stats.map((s) => (
+                            <span key={s} className="text-[10px] bg-ocean-turquoise/10 text-ocean-turquoise px-2 py-0.5 rounded-full font-semibold">{s}</span>
+                          ))}
+                        </div>
+                        <div className="flex items-center justify-between text-xs border-t border-gray-50 pt-3">
+                          <span className="text-gray-400">{story.date}</span>
+                          <span className="text-gray-400 font-bold">Coming Soon</span>
+                        </div>
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <Link key={story.id} href={`/blog/${story.slug}`} className="group rounded-2xl border border-gray-100 p-6 hover:shadow-lg hover:border-ocean-turquoise/20 transition-all duration-200 flex flex-col">
+                      <div className="flex items-center justify-between mb-4">
+                        <span className="text-[10px] font-bold text-ocean-turquoise uppercase tracking-widest">
+                          {story.category}
+                        </span>
+                        <span className="text-[10px] text-gray-400">{story.readTime}</span>
+                      </div>
+                      <h3 className="font-poppins font-bold text-ocean-midnight text-base mb-2 leading-snug group-hover:text-ocean-turquoise transition-colors">{story.title}</h3>
+                      <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3 flex-1">{story.excerpt}</p>
+                      <div className="flex flex-wrap gap-1.5 mb-4">
+                        {story.stats.map((s) => (
+                          <span key={s} className="text-[10px] bg-ocean-turquoise/10 text-ocean-turquoise px-2 py-0.5 rounded-full font-semibold">{s}</span>
+                        ))}
+                      </div>
+                      <div className="flex items-center justify-between text-xs border-t border-gray-50 pt-3">
+                        <span className="text-gray-400">{story.date}</span>
+                        <span className="text-ocean-turquoise font-bold group-hover:translate-x-0.5 transition-transform inline-block">Read →</span>
+                      </div>
+                    </Link>
+                  );
+                })}
               </div>
             </>
           )}
