@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { IMPACT_STATS } from '@/lib/constants';
+import AboutNav from '@/components/common/AboutNav';
 
 export const metadata = {
   title: 'About Oceans Alive Foundation',
@@ -71,6 +72,7 @@ const QUICK_STATS = IMPACT_STATS.slice(0, 4);
 export default function AboutHub() {
   return (
     <>
+      <AboutNav />
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section className="relative bg-ocean-midnight overflow-hidden py-24 md:py-36">
         {/* Dot grid texture */}

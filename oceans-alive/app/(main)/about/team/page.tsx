@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import AboutNav from '@/components/common/AboutNav';
 import Link from 'next/link';
 import { TEAM_MEMBERS } from '@/lib/constants';
 
@@ -22,12 +23,14 @@ const GRADIENTS = [
 
 export default function TeamPage() {
   return (
-    <div className="bg-white min-h-screen">
+    <>
+      <AboutNav />
+      <div className="bg-white min-h-screen">
 
-      {/* ══════════════════════════════════════════════════════════
-          HERO - Clean gradient background
-      ══════════════════════════════════════════════════════════ */}
-      <section className="relative min-h-[90vh] flex items-end overflow-hidden">
+        {/* ══════════════════════════════════════════════════════════
+            HERO - Clean gradient background
+        ══════════════════════════════════════════════════════════ */}
+        <section className="relative min-h-[90vh] flex items-end overflow-hidden">
 
         {/* Clean gradient background */}
         <div className="absolute inset-0">
@@ -72,12 +75,12 @@ export default function TeamPage() {
           <span className="text-[9px] text-gray-400 uppercase tracking-widest">Scroll</span>
           <div className="w-px h-8 bg-gradient-to-b from-gray-300 to-transparent" />
         </div>
-      </section>
+        </section>
 
-      {/* ══════════════════════════════════════════════════════════
+        {/* ══════════════════════════════════════════════════════════
           TEAM GRID - Apple-inspired editorial grid
-      ══════════════════════════════════════════════════════════ */}
-      <section className="relative bg-white py-24 overflow-hidden">
+        ══════════════════════════════════════════════════════════ */}
+        <section className="relative bg-white py-24 overflow-hidden">
 
         {/* Subtle radial glow at the very top - like an iPhone wallpaper bloom */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] rounded-full opacity-30 pointer-events-none"
@@ -214,12 +217,12 @@ export default function TeamPage() {
           </div>
 
         </div>
-      </section>
+        </section>
 
-      {/* ══════════════════════════════════════════════════════════
+        {/* ══════════════════════════════════════════════════════════
           COMMUNITY - Full-bleed with photo wash
-      ══════════════════════════════════════════════════════════ */}
-      <section className="relative mt-2 overflow-hidden py-28 md:py-40 bg-ocean-midnight">
+        ══════════════════════════════════════════════════════════ */}
+        <section className="relative mt-2 overflow-hidden py-28 md:py-40 bg-ocean-midnight">
         <div className="absolute inset-0">
           <Image src="/images/BMUS.jpg" alt="Community" fill className="object-cover opacity-15 grayscale" />
           <div className="absolute inset-0 bg-gradient-to-r from-ocean-midnight via-ocean-midnight/90 to-ocean-midnight/60" />
@@ -261,12 +264,12 @@ export default function TeamPage() {
             </div>
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* ══════════════════════════════════════════════════════════
+        {/* ══════════════════════════════════════════════════════════
           CTA - Dark split
-      ══════════════════════════════════════════════════════════ */}
-      <section className="border-t border-white/[0.05] py-24 bg-gradient-to-br from-ocean-midnight to-ocean-turquoise/30">
+        ══════════════════════════════════════════════════════════ */}
+        <section className="border-t border-white/[0.05] py-24 bg-gradient-to-br from-ocean-midnight to-ocean-turquoise/30">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
@@ -298,8 +301,9 @@ export default function TeamPage() {
             </div>
           </div>
         </div>
-      </section>
+        </section>
 
-    </div>
+      </div>
+    </>
   );
 }

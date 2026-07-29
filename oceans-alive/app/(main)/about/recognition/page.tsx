@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import AboutNav from '@/components/common/AboutNav';
 
 export const metadata = {
   title: 'Recognition & Awards - Oceans Alive Foundation',
@@ -81,6 +82,7 @@ export default function RecognitionPage() {
 
   return (
     <>
+      <AboutNav />
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section className="relative bg-gradient-to-br from-gray-50 via-white to-amber-50/30 overflow-hidden py-24 md:py-36">
         {/* Radial glow */}

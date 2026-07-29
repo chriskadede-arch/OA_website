@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { PRINCIPLES } from '@/lib/constants';
 import SDGRow from '@/components/common/SDGRow';
 import { PRIMARY_SDGS } from '@/lib/sdg-mapping';
+import AboutNav from '@/components/common/AboutNav';
 
 export const metadata = {
   title: 'Mission & Vision - Oceans Alive Foundation',
@@ -47,6 +48,7 @@ const PRINCIPLE_COLORS = [
 export default function MissionPage() {
   return (
     <>
+      <AboutNav />
       {/* ── Mission Quote Hero ────────────────────────────────────── */}
       <section className="relative bg-white overflow-hidden py-24 md:py-36">
         {/* Giant decorative quote mark */}

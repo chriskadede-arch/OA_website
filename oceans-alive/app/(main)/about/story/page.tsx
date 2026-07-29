@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { TIMELINE, IMPACT_STATS } from '@/lib/constants';
+import AboutNav from '@/components/common/AboutNav';
 
 export const metadata = {
   title: 'Our Story - Oceans Alive Foundation',
@@ -11,6 +12,7 @@ export const metadata = {
 export default function StoryPage() {
   return (
     <>
+      <AboutNav />
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section className="relative bg-ocean-midnight overflow-hidden">
         <div className="absolute inset-0">

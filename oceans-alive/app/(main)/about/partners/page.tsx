@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import PartnerLogo from '@/components/common/PartnerLogo';
+import AboutNav from '@/components/common/AboutNav';
 import PartnerCarousel from '@/components/common/PartnerCarousel';
 
 export const metadata = {
@@ -91,6 +92,7 @@ export default function PartnersPage() {
 
   return (
     <>
+      <AboutNav />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-50 via-white to-ocean-turquoise/10 overflow-hidden">
         <div className="absolute inset-0">
