@@ -112,15 +112,6 @@ const EXTERNAL_ARTICLES = [
     date: '2024',
   },
   {
-    id: 8,
-    title: 'Marine Conservation in Kuruwitu: How a Coastal Village is Saving Coral Reefs',
-    source: 'Juan Around Travel Blog',
-    thumbnail: '/images/communities.jpg',
-    excerpt: 'Travel perspective on Kuruwitu\'s conservation success story. Started in 2003, now Kenya\'s first Locally Managed Marine Area.',
-    url: 'https://juanaround.com/marine-conservation-in-kuruwitu-how-a-coastal-village-in-kenya-is-saving-coral-reefs/',
-    date: '2024',
-  },
-  {
     id: 9,
     title: 'Equator Prize Winners 2021: Local Action Solutions',
     source: 'UNDP',
