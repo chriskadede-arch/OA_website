@@ -65,26 +65,10 @@ export default function Contact() {
     <>
       {/* ── NEW HERO (Keep This Design) ─────────────────── */}
       <section className="relative bg-ocean-midnight overflow-hidden">
-        {/* Animated ocean waves background */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-ocean-turquoise rounded-full blur-3xl animate-pulse" />
-            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-green-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-          </div>
-        </div>
-
-        {/* Decorative coral pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="coral-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-                <circle cx="50" cy="50" r="2" fill="currentColor" className="text-ocean-turquoise" />
-                <circle cx="25" cy="75" r="1.5" fill="currentColor" className="text-ocean-turquoise" />
-                <circle cx="75" cy="25" r="1.5" fill="currentColor" className="text-ocean-turquoise" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#coral-pattern)" />
-          </svg>
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image src="/images/fisher.jpg" alt="" fill className="object-cover" priority />
+          <div className="absolute inset-0 bg-gradient-to-br from-ocean-midnight/90 to-ocean-turquoise/80" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 md:py-32">
@@ -395,78 +379,6 @@ export default function Contact() {
                 </div>
               </div>
             </aside>
-          </div>
-        </div>
-      </section>
-
-      {/* ── VISIT US & SOCIAL SECTION ─────────────────────────────── */}
-      <section className="relative bg-gradient-to-br from-ocean-midnight to-ocean-turquoise py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <Image src="/images/fisher.jpg" alt="" fill className="object-cover" />
-        </div>
-
-        <div className="relative z-10 max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Visit Us */}
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-white/20 flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-poppins font-bold text-white mb-3">Visit Us</h3>
-              <p className="text-white/80 text-sm mb-2">Kuruwitu Conservation Area</p>
-              <p className="text-white/60 text-xs">Kilifi County, Kenya Coast</p>
-            </div>
-
-            {/* Response Time */}
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-white/20 flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-poppins font-bold text-white mb-3">Response Time</h3>
-              <p className="text-white/80 text-sm mb-2">Within 48 hours</p>
-              <p className="text-white/60 text-xs">Monday to Friday, 9AM - 5PM EAT</p>
-            </div>
-
-            {/* Follow Us */}
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-white/20 flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-poppins font-bold text-white mb-4">Follow Our Work</h3>
-              <div className="flex items-center justify-center gap-3">
-                <a
-                  href="https://facebook.com/oceansalive"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-xl bg-white/20 hover:bg-white hover:text-ocean-turquoise flex items-center justify-center transition-all duration-300 text-white hover:scale-110"
-                  aria-label="Facebook"
-                >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-                  </svg>
-                </a>
-                <a
-                  href="https://instagram.com/oceans_alive_kenya"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-xl bg-white/20 hover:bg-white hover:text-ocean-turquoise flex items-center justify-center transition-all duration-300 text-white hover:scale-110"
-                  aria-label="Instagram"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                    <circle cx="12" cy="12" r="4" />
-                    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
-                  </svg>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </section>
