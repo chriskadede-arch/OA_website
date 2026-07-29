@@ -571,6 +571,41 @@ Please provide payment instructions.
           </div>
         </div>
       </section>
+
+      {/* ── Partner Logos ──────────────────────────────────────────── */}
+      <section className="bg-white py-12 border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6">
+          <p className="text-center text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">
+            Our Conservation Partners
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+            <Link
+              href="/partnerships/coral-guardian"
+              className="group relative grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+            >
+              <Image
+                src="/images/partners/coral-guardian.png"
+                alt="Coral Guardian"
+                width={180}
+                height={60}
+                className="h-12 w-auto object-contain group-hover:scale-105 transition-transform"
+              />
+            </Link>
+            <Link
+              href="/partnerships/blue-ventures"
+              className="group relative grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+            >
+              <Image
+                src="/images/partners/blue-ventures-logo.png"
+                alt="Blue Ventures"
+                width={180}
+                height={60}
+                className="h-12 w-auto object-contain group-hover:scale-105 transition-transform"
+              />
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
