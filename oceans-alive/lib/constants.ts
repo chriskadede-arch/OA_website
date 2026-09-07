@@ -184,7 +184,7 @@ export const TEAM_MEMBERS = [
     name: 'Alice Mwakulilah',
     role: 'Project Manager',
     bio: 'Coordinates international partnerships, donor relationships, and programme stakeholder engagement across Kilifi County, keeping OAF\'s projects on track and on mission.',
-    image: null,
+    image: '/images/team/alice-mwakulilah.jpg',
     initials: 'AM',
   },
   {
@@ -258,17 +258,17 @@ export const TEAM_MEMBERS = [
     initials: 'SH',
   },
   {
-    name: 'Eunice',
+    name: 'Eunice Mose',
     role: 'GIS Officer',
     bio: 'Provides geospatial mapping and analysis for marine conservation areas, supporting data-driven decision-making and spatial planning across Kilifi County\'s coastal zone.',
     image: null,
-    initials: 'EU',
+    initials: 'EM',
   },
   {
     name: 'Joseph Muturi',
     role: 'Expedition Lead',
     bio: 'Coordinates field expeditions, marine surveys, and community engagement activities, ensuring safe and effective delivery of conservation programmes across coastal sites.',
-    image: null,
+    image: '/images/team/joseph-muturi.jpg',
     initials: 'JM',
   },
   {
