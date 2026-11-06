@@ -120,7 +120,33 @@
     "eyebrow": "The Context",
     "heading": "Addressing Interrelated",
     "label": "Pressures",
-    "text": "The project responds to a set of interrelated pressures on the JCMA's fisheries: destructive and illegal fishing practices, declining fish stocks, habitat degradation, weak enforcement, limited institutional capacity within co-management bodies, and the growing economic vulnerability of coastal communities whose livelihoods depend on increasingly stressed resources."
+    "text": "The project responds to a set of interrelated pressures on the JCMA's fisheries: destructive and illegal fishing practices, declining fish stocks, habitat degradation, weak enforcement, limited institutional capacity within co-management bodies, and the growing economic vulnerability of coastal communities whose livelihoods depend on increasingly stressed resources.",
+    "cards": [
+      {
+        "title": "Destructive Fishing",
+        "desc": "Illegal and destructive fishing practices degrading marine habitats"
+      },
+      {
+        "title": "Declining Fish Stocks",
+        "desc": "Overfishing and environmental pressures reducing fish populations"
+      },
+      {
+        "title": "Habitat Degradation",
+        "desc": "Coral reefs, seagrass beds, and mangroves under increasing stress"
+      },
+      {
+        "title": "Weak Enforcement",
+        "desc": "Limited capacity to enforce fisheries regulations and management measures"
+      },
+      {
+        "title": "Institutional Gaps",
+        "desc": "Co-management bodies lack capacity and resources for effective governance"
+      },
+      {
+        "title": "Economic Vulnerability",
+        "desc": "Coastal communities increasingly dependent on stressed fisheries resources"
+      }
+    ]
   },
   "ourApproach": {
     "eyebrow": "Evidence-Based Solutions",
@@ -192,7 +218,33 @@
     "eyebrow": "Building for the Future",
     "heading": "Expected Outcomes:",
     "label": "Beyond the Project",
-    "text": "\"These activities are designed to establish functional, accountable and self-sustaining systems for fisheries co-management that endure beyond the project period.\""
+    "text": "\"These activities are designed to establish functional, accountable and self-sustaining systems for fisheries co-management that endure beyond the project period.\"",
+    "cards": [
+      {
+        "title": "Stronger Co-Management System",
+        "desc": "Better-coordinated co-management supported by capable BMUs"
+      },
+      {
+        "title": "Reliable Fisheries Information",
+        "desc": "Continuous monitoring and data collection systems"
+      },
+      {
+        "title": "Improved Compliance",
+        "desc": "Strengthened enforcement and adherence to fisheries regulations"
+      },
+      {
+        "title": "Greater Community Financial Resilience",
+        "desc": "VSLAs and alternative income sources for fishing households"
+      },
+      {
+        "title": "Stronger Partnerships",
+        "desc": "Multi-stakeholder collaboration for sustainable fisheries management"
+      },
+      {
+        "title": "Self-Sustaining Systems",
+        "desc": "Functional, accountable systems that endure beyond the project period"
+      }
+    ]
   },
   "callToAction": {
     "heading": "Support Community-Led",

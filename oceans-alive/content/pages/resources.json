@@ -122,7 +122,25 @@
     "eyebrow": "Knowledge Hub",
     "title": "Explore Our",
     "label": "Conservation Library",
-    "text": "Dive into toolkits, videos, and stories from 20+ years of community-led ocean conservation. Learn from our journey, download proven methodologies, and see the impact in action."
+    "text": "Dive into toolkits, videos, and stories from 20+ years of community-led ocean conservation. Learn from our journey, download proven methodologies, and see the impact in action.",
+    "cards": [
+      {
+        "label": "Toolkits & Guides",
+        "value": "25+"
+      },
+      {
+        "label": "Impact Videos",
+        "value": "15+"
+      },
+      {
+        "label": "Press & Articles",
+        "value": "30+"
+      },
+      {
+        "label": "Case Studies",
+        "value": "10+"
+      }
+    ]
   },
   "videosTab": {
     "heading": "See Conservation in Action",
@@ -163,5 +181,21 @@
     "linkText": "Get in Touch",
     "link2": "/blog",
     "linkText2": "Read Our Stories"
+  },
+  "tabBar": {
+    "cards": [
+      {
+        "id": "downloads",
+        "label": "Toolkits & Downloads"
+      },
+      {
+        "id": "videos",
+        "label": "Videos & Films"
+      },
+      {
+        "id": "articles",
+        "label": "What Others Say"
+      }
+    ]
   }
 }

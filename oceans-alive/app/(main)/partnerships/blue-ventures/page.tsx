@@ -260,62 +260,41 @@ export default function BlueVenturesPage() {
 
           {/* Challenge Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Destructive Fishing',
-                desc: 'Illegal and destructive fishing practices degrading marine habitats',
-                icon: (
+            {PAGE.theChallenge.cards.map((text, i) => ({
+               ...text,
+               ...[
+               { icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                   </svg>
-                ),
-              },
-              {
-                title: 'Declining Fish Stocks',
-                desc: 'Overfishing and environmental pressures reducing fish populations',
-                icon: (
+                ) },
+               { icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
                   </svg>
-                ),
-              },
-              {
-                title: 'Habitat Degradation',
-                desc: 'Coral reefs, seagrass beds, and mangroves under increasing stress',
-                icon: (
+                ) },
+               { icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
                   </svg>
-                ),
-              },
-              {
-                title: 'Weak Enforcement',
-                desc: 'Limited capacity to enforce fisheries regulations and management measures',
-                icon: (
+                ) },
+               { icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
-                ),
-              },
-              {
-                title: 'Institutional Gaps',
-                desc: 'Co-management bodies lack capacity and resources for effective governance',
-                icon: (
+                ) },
+               { icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
-                ),
-              },
-              {
-                title: 'Economic Vulnerability',
-                desc: 'Coastal communities increasingly dependent on stressed fisheries resources',
-                icon: (
+                ) },
+               { icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
-                ),
-              },
-            ].map((challenge, idx) => (
+                ) },
+               ][i],
+             })).map((challenge, idx) => (
               <div
                 key={idx}
                 className="group relative overflow-hidden rounded-2xl p-6 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
@@ -500,62 +479,41 @@ export default function BlueVenturesPage() {
           {/* Outcomes Card */}
           <div className="bg-white/5 backdrop-blur-md rounded-3xl p-6 sm:p-10 md:p-12 border border-white/20 shadow-2xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[
-                {
-                  title: 'Stronger Co-Management System',
-                  desc: 'Better-coordinated co-management supported by capable BMUs',
-                  icon: (
+              {PAGE.expectedOutcomes.cards.map((text, i) => ({
+                 ...text,
+                 ...[
+                 { icon: (
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
-                  ),
-                },
-                {
-                  title: 'Reliable Fisheries Information',
-                  desc: 'Continuous monitoring and data collection systems',
-                  icon: (
+                  ) },
+                 { icon: (
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
-                  ),
-                },
-                {
-                  title: 'Improved Compliance',
-                  desc: 'Strengthened enforcement and adherence to fisheries regulations',
-                  icon: (
+                  ) },
+                 { icon: (
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                  ),
-                },
-                {
-                  title: 'Greater Community Financial Resilience',
-                  desc: 'VSLAs and alternative income sources for fishing households',
-                  icon: (
+                  ) },
+                 { icon: (
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                  ),
-                },
-                {
-                  title: 'Stronger Partnerships',
-                  desc: 'Multi-stakeholder collaboration for sustainable fisheries management',
-                  icon: (
+                  ) },
+                 { icon: (
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
-                  ),
-                },
-                {
-                  title: 'Self-Sustaining Systems',
-                  desc: 'Functional, accountable systems that endure beyond the project period',
-                  icon: (
+                  ) },
+                 { icon: (
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
-                  ),
-                },
-              ].map((outcome, idx) => (
+                  ) },
+                 ][i],
+               })).map((outcome, idx) => (
                 <div key={idx} className="flex items-start gap-4">
                   <div className="w-14 h-14 rounded-xl bg-cyan-400/20 flex items-center justify-center shrink-0 text-cyan-300">
                     {outcome.icon}

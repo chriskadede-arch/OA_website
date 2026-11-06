@@ -56,7 +56,45 @@
   "livingClassroom": {
     "eyebrow": "Learning in Action",
     "heading": "Kuruwitu as a Living Classroom",
-    "text": "From local school visits to international student programmes, Kuruwitu hosts hands-on learning experiences in marine conservation and community-led stewardship."
+    "text": "From local school visits to international student programmes, Kuruwitu hosts hands-on learning experiences in marine conservation and community-led stewardship.",
+    "cards": [
+      {
+        "title": "Coral Restoration Demonstrations",
+        "description": "Practical training in coral gardening techniques and reef rehabilitation"
+      },
+      {
+        "title": "Reef & Intertidal Learning",
+        "description": "Guided snorkeling, tide pool exploration, and marine ecology education"
+      },
+      {
+        "title": "Fisheries Education",
+        "description": "Understanding sustainable fishing practices and marine resource management"
+      },
+      {
+        "title": "Co-Management Training",
+        "description": "Learning how communities and government can govern fisheries together"
+      },
+      {
+        "title": "School Visits",
+        "description": "Coastal schools connect with their ocean through field trips and activities"
+      },
+      {
+        "title": "Student Programmes",
+        "description": "Local and international students conduct research and build capacity"
+      },
+      {
+        "title": "Internships",
+        "description": "Graduate and undergraduate placements in conservation fieldwork"
+      },
+      {
+        "title": "Practitioner Exchange",
+        "description": "Community practitioners from other sites learn the Kuruwitu approach"
+      },
+      {
+        "title": "Monitoring & Data",
+        "description": "Training in ecological monitoring, data collection, and citizen science"
+      }
+    ]
   },
   "legalContext": {
     "eyebrow": "Governance Framework",

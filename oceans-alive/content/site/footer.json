@@ -57,5 +57,33 @@
     "linkText2": "Privacy Policy",
     "link3": "#",
     "linkText3": "Terms of Service"
+  },
+  "intro": {
+    "cards": [
+      {
+        "name": "Facebook",
+        "href": "https://facebook.com/oceansalive"
+      },
+      {
+        "name": "Instagram",
+        "href": "https://instagram.com/oceans_alive_kenya"
+      },
+      {
+        "name": "TikTok",
+        "href": "https://tiktok.com/@oceans_alive_kenya"
+      },
+      {
+        "name": "LinkedIn",
+        "href": "https://linkedin.com/company/oceans-alive"
+      },
+      {
+        "name": "Twitter",
+        "href": "https://twitter.com/oceans_alive_kenya"
+      },
+      {
+        "name": "YouTube",
+        "href": "https://youtube.com/@oceansalive"
+      }
+    ]
   }
 }

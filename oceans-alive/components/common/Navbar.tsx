@@ -79,24 +79,7 @@ const MEGA_NAV: MegaNavItem[] = [
   {
     label: 'Who We Are',
     layout: 'editorial',
-    columns: [
-      {
-        title: 'About Us',
-        items: [
-          { label: 'Our Team', href: '/about/team', description: 'Meet the people behind our conservation work' },
-          { label: 'Mission & Vision', href: '/about/mission', description: 'Our purpose and values driving ocean conservation' },
-          { label: 'Get Involved', href: '/get-involved', description: 'Join our mission to protect the ocean' },
-        ],
-      },
-      {
-        title: 'Learn More',
-        items: [
-          { label: 'Impact Stories', href: '/blog/category/impact-stories', description: 'Real results from our fieldwork' },
-          { label: 'Photo Gallery', href: '/gallery', description: 'Coral restoration, community life, wildlife & ocean landscapes' },
-          { label: 'Kuruwitu Story', href: '/learn/kuruwitu', description: 'Kenya\'s first community-led marine conservation area' },
-        ],
-      },
-    ],
+    columns: PAGE.whoWeAreMenu.columns,
   },
   {
     label: 'Get Involved',
