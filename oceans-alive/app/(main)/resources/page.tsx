@@ -490,7 +490,7 @@ export default function Resources() {
                 </div>
                 <h3 className="text-2xl font-poppins font-bold text-gray-400 mb-3">{PAGE.toolkitsAndDownloadsTab.subheading}</h3>
                 <p className="text-gray-500 text-lg mb-8 max-w-md mx-auto">
-                  {searchQuery ? `No results for "${searchQuery}"` : 'Check back soon or contact us to request specific materials.'}
+                  {searchQuery ? `No results for "${searchQuery}"` : PAGE.emptyState.noResourcesText}
                 </p>
                 <Link
                   href={PAGE.toolkitsAndDownloadsTab.link}

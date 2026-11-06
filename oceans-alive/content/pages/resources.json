@@ -197,5 +197,8 @@
         "label": "What Others Say"
       }
     ]
+  },
+  "emptyState": {
+    "noResourcesText": "Check back soon or contact us to request specific materials."
   }
 }

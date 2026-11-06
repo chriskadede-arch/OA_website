@@ -1,8 +1,9 @@
+# Old preview copy of the site on GitHub Pages. The real website is GoDaddy
+# (see deploy-godaddy.yml), so this no longer runs on every save; it can still
+# be started by hand from GitHub → Actions → "Deploy to GitHub Pages" → Run workflow.
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:

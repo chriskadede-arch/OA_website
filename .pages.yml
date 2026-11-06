@@ -1594,6 +1594,9 @@ content:
               - name: linkText
                 label: Link text
                 type: string
+              - name: defaultImpactText
+                label: Default impact text
+                type: string
           - name: fAQ
             label: F aq
             type: object
@@ -2092,6 +2095,13 @@ content:
                   - name: label
                     label: Label
                     type: string
+          - name: emptyState
+            label: Empty state
+            type: object
+            fields:
+              - name: noResourcesText
+                label: No resources text
+                type: string
       - name: page-kuruwitu-story
         label: Kuruwitu Story
         type: file

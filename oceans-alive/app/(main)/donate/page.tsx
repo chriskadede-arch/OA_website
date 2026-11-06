@@ -388,7 +388,7 @@ Please provide payment instructions.
                   <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/60 to-transparent" />
                   <div className="absolute inset-0 p-6 flex flex-col justify-end">
                     <p className="text-[9px] font-bold uppercase tracking-widest text-ocean-turquoise mb-2">{PAGE.donationSteps.eyebrow9}{dollarAmount}{PAGE.donationSteps.eyebrow10}</p>
-                    <p className="text-white font-semibold text-sm leading-snug">{activeImpact?.what ?? 'Make a real difference.'}</p>
+                    <p className="text-white font-semibold text-sm leading-snug">{activeImpact?.what ?? PAGE.donationSteps.defaultImpactText}</p>
                   </div>
                 </div>
 
