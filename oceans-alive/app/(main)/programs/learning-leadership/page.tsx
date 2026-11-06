@@ -1,3 +1,13 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Strategic Objective 1 › Strengthen Coastal Education (Social)
+ * URL:  /programs/learning-leadership
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Social Pillar
+ *   3. What We Do
+ */
 import Link from 'next/link';
 import Image from 'next/image';
 import SDGRow from '@/components/common/SDGRow';
@@ -10,14 +20,16 @@ export const metadata = {
 export default function LearningLeadershipPage() {
   return (
     <>
-      {/* Hero Section */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-gradient-to-br from-green-600 to-teal-600 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/kids.jpg" alt="Learning & Leadership" fill className="object-cover opacity-20" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-32">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-36 pb-24 md:pt-40 md:pb-32">
           <div className="text-6xl font-poppins font-bold text-white/20 mb-4">01</div>
           <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Strengthen Coastal Education</h1>
           <p className="text-xl text-white/90 max-w-3xl mb-8 leading-relaxed">
@@ -52,7 +64,9 @@ export default function LearningLeadershipPage() {
         </div>
       </section>
 
-      {/* Social Pillar Section */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Social Pillar
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-green-900 to-teal-900 py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-8">
@@ -117,7 +131,9 @@ export default function LearningLeadershipPage() {
         </div>
       </section>
 
-      {/* What We Do */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · What We Do
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-green-50 to-teal-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-12">What We Do</h2>
@@ -160,7 +176,7 @@ export default function LearningLeadershipPage() {
           </div>
 
           {/* Why This Works - The Living Classroom Story */}
-          <div className="bg-gradient-to-br from-green-600 to-teal-600 rounded-2xl shadow-xl p-8 md:p-10 mb-8 text-white">
+          <div className="bg-gradient-to-br from-green-600 to-teal-600 rounded-2xl shadow-xl p-6 sm:p-8 md:p-10 mb-8 text-white">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-12 bg-white rounded-full"></div>
               <h3 className="text-2xl font-poppins font-bold">The Ocean as a Classroom</h3>
@@ -213,7 +229,7 @@ export default function LearningLeadershipPage() {
           {/* Two Column Layout */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             {/* Project REEL */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-xl transition-shadow">
               <div className="mb-4">
                 <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Project REEL Kilifi</h3>
                 <div className="text-xs text-ocean-turquoise font-bold uppercase mt-1">Storytelling & Knowledge Exchange</div>
@@ -232,7 +248,7 @@ export default function LearningLeadershipPage() {
             </div>
 
             {/* Fisher Folk Academy */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-xl transition-shadow">
               <div className="mb-4">
                 <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Fisher Folk Academy</h3>
                 <div className="text-xs text-amber-600 font-bold uppercase mt-1">Global Recognition, Local Roots</div>
@@ -252,7 +268,7 @@ export default function LearningLeadershipPage() {
           </div>
 
           {/* Full Width - Citizen Science */}
-          <div className="bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl shadow-xl p-8 text-white">
+          <div className="bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl shadow-xl p-6 sm:p-8 text-white">
             <div className="flex items-start justify-between gap-6">
               <div className="flex-1">
                 <div className="bg-white/20 rounded-lg px-3 py-1 text-white font-bold text-sm inline-block mb-3">Knowledge Building</div>

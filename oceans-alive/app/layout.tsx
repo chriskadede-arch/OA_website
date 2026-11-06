@@ -1,3 +1,10 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * SITE-WIDE LAYOUT (wraps every page)
+ * ══════════════════════════════════════════════════════════════════
+ * Fonts, default <head> title/description, and the order Navbar → page → Footer.
+ * Google Analytics is switched on by NEXT_PUBLIC_GA_MEASUREMENT_ID.
+ */
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import './globals.css';

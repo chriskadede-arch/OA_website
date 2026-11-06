@@ -1,3 +1,12 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Programmes › Strategic Objectives overview
+ * URL:  /programmes
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Strategic Objectives cards (4)
+ */
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -9,8 +18,10 @@ export const metadata = {
 export default function Programmes() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-ocean-midnight py-24 md:py-32">
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
+      <section className="bg-ocean-midnight pt-36 pb-24 md:pt-40 md:pb-32">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-5 flex items-center gap-3">
             <span className="w-8 h-px bg-ocean-turquoise inline-block" />
@@ -38,7 +49,9 @@ export default function Programmes() {
         </div>
       </section>
 
-      {/* 4 Strategic Objectives Creative Bento Box Layout */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Strategic Objectives cards (4)
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -48,11 +61,11 @@ export default function Programmes() {
           </div>
 
           {/* Creative Bento-Box Layout Same as Homepage */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
             {/* Objective 1: Strengthen Coastal Education TALL LEFT */}
             <Link
               href="/programs/learning-leadership"
-              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10 md:col-span-5 md:row-span-2"
+              className="group relative rounded-2xl overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10 lg:col-span-5 lg:row-span-2"
               style={{ minHeight: '540px' }}
             >
               <Image
@@ -62,8 +75,8 @@ export default function Programmes() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-green-900 via-green-900/85 to-green-900/35" />
-              <div className="absolute inset-0 p-6 flex flex-col justify-between">
-                <div className="flex items-start justify-between">
+              <div className="relative flex-1 p-6 flex flex-col justify-between gap-6">
+                <div className="flex items-start justify-between gap-3">
                   <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
                     <span className="text-xs font-bold text-white uppercase tracking-wider">Social</span>
                   </div>
@@ -86,7 +99,7 @@ export default function Programmes() {
             {/* Objective 2: Promote Marine Ecosystem Integrity TOP RIGHT WIDE */}
             <Link
               href="/programs/ocean-recovery"
-              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10 md:col-span-7"
+              className="group relative rounded-2xl overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10 lg:col-span-7"
               style={{ minHeight: '260px' }}
             >
               <Image
@@ -96,8 +109,8 @@ export default function Programmes() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/85 to-ocean-midnight/35" />
-              <div className="absolute inset-0 p-6 flex flex-col justify-between">
-                <div className="flex items-start justify-between">
+              <div className="relative flex-1 p-6 flex flex-col justify-between gap-6">
+                <div className="flex items-start justify-between gap-3">
                   <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
                     <span className="text-xs font-bold text-white uppercase tracking-wider">Environment</span>
                   </div>
@@ -120,7 +133,7 @@ export default function Programmes() {
             {/* Objective 3: Promote Food Security & Income BOTTOM RIGHT SMALL */}
             <Link
               href="/programs/she"
-              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10 md:col-span-4"
+              className="group relative rounded-2xl overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10 lg:col-span-4"
               style={{ minHeight: '260px' }}
             >
               <Image
@@ -130,8 +143,8 @@ export default function Programmes() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-pink-900 via-pink-900/85 to-pink-900/35" />
-              <div className="absolute inset-0 p-6 flex flex-col justify-between">
-                <div className="flex items-start justify-between">
+              <div className="relative flex-1 p-6 flex flex-col justify-between gap-6">
+                <div className="flex items-start justify-between gap-3">
                   <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
                     <span className="text-xs font-bold text-white uppercase tracking-wider">Economic</span>
                   </div>
@@ -154,7 +167,7 @@ export default function Programmes() {
             {/* Objective 4: Strengthen Institutional Capacity BOTTOM RIGHT MEDIUM */}
             <Link
               href="/programs/research-innovation"
-              className="group relative rounded-2xl overflow-hidden block hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10 md:col-span-3"
+              className="group relative rounded-2xl overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300 border border-ocean-midnight/10 lg:col-span-3"
               style={{ minHeight: '260px' }}
             >
               <Image
@@ -164,8 +177,8 @@ export default function Programmes() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-cyan-900 via-cyan-900/85 to-cyan-900/35" />
-              <div className="absolute inset-0 p-6 flex flex-col justify-between">
-                <div className="flex items-start justify-between">
+              <div className="relative flex-1 p-6 flex flex-col justify-between gap-6">
+                <div className="flex items-start justify-between gap-3">
                   <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg">
                     <span className="text-xs font-bold text-white uppercase tracking-wider">Governance</span>
                   </div>

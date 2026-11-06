@@ -1,8 +1,24 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: About › Mission & Vision
+ * URL:  /about/mission
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Mission Quote Hero
+ *   2. Vision strip
+ *   3. Values
+ *   4. Principles
+ *   5. Next Chapter (call to action)
+ *
+ * Where the text/data lives:
+ *   • PRINCIPLES  →  lib/constants.ts
+ *   • PRIMARY_SDGS  →  lib/sdg-mapping.ts
+ *   • VALUES  →  top of this file
+ */
 import Link from 'next/link';
 import { PRINCIPLES } from '@/lib/constants';
 import SDGRow from '@/components/common/SDGRow';
 import { PRIMARY_SDGS } from '@/lib/sdg-mapping';
-import AboutNav from '@/components/common/AboutNav';
 
 export const metadata = {
   title: 'Mission & Vision - Oceans Alive Foundation',
@@ -48,9 +64,10 @@ const PRINCIPLE_COLORS = [
 export default function MissionPage() {
   return (
     <>
-      <AboutNav />
-      {/* ── Mission Quote Hero ────────────────────────────────────── */}
-      <section className="relative bg-white overflow-hidden py-24 md:py-36">
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Mission Quote Hero
+          ══════════════════════════════════════════════════════════════════ */}
+      <section className="relative bg-white overflow-hidden pt-36 pb-24 md:pt-48 md:pb-36">
         {/* Giant decorative quote mark */}
         <div className="absolute top-0 left-0 pointer-events-none select-none">
           <span className="text-[30vw] font-poppins font-bold text-ocean-midnight/[0.03] leading-none">&ldquo;</span>
@@ -104,7 +121,7 @@ export default function MissionPage() {
                 </div>
 
                 {/* What Actually Works */}
-                <div className="relative overflow-hidden bg-gradient-to-br from-ocean-midnight to-ocean-midnight/90 rounded-2xl p-10 md:p-12">
+                <div className="relative overflow-hidden bg-gradient-to-br from-ocean-midnight to-ocean-midnight/90 rounded-2xl p-6 sm:p-10 md:p-12">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(46,191,209,0.15),transparent_50%)]"></div>
                   <div className="absolute bottom-0 right-0 w-96 h-96 bg-ocean-turquoise/5 rounded-full blur-3xl"></div>
 
@@ -126,7 +143,9 @@ export default function MissionPage() {
         </div>
       </section>
 
-      {/* ── Vision Strip ─────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Vision strip
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
@@ -157,7 +176,9 @@ export default function MissionPage() {
         </div>
       </section>
 
-      {/* ── Values ───────────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · Values
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gray-50 py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-14">
@@ -199,7 +220,9 @@ export default function MissionPage() {
         </div>
       </section>
 
-      {/* ── Principles ───────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 4 · Principles
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14">
@@ -217,7 +240,7 @@ export default function MissionPage() {
             {PRINCIPLES.map((p, i) => (
               <div
                 key={p.number}
-                className={`relative group overflow-hidden rounded-3xl bg-gradient-to-br ${PRINCIPLE_COLORS[i]} p-10 min-h-[220px] flex flex-col justify-between hover:shadow-2xl hover:-translate-y-1 transition-all duration-300`}
+                className={`relative group overflow-hidden rounded-3xl bg-gradient-to-br ${PRINCIPLE_COLORS[i]} p-6 sm:p-10 min-h-[220px] flex flex-col justify-between hover:shadow-2xl hover:-translate-y-1 transition-all duration-300`}
               >
                 {/* Ghost number bg */}
                 <div className="absolute -bottom-4 -right-4 text-[120px] font-poppins font-bold text-white/[0.05] leading-none select-none pointer-events-none">
@@ -239,7 +262,9 @@ export default function MissionPage() {
         </div>
       </section>
 
-      {/* ── Next Chapter CTA ─────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 5 · Next Chapter (call to action)
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gray-50 py-14 border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
           <p className="text-gray-500 text-sm">

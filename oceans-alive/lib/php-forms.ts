@@ -1,3 +1,8 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * FORM SENDING ON GODADDY (posts forms to the PHP scripts in /api)
+ * ══════════════════════════════════════════════════════════════════
+ */
 const USE_PHP_FORMS = process.env.NEXT_PUBLIC_USE_PHP_FORMS === '1';
 
 async function postPhpForm<T>(endpoint: string, payload: Record<string, unknown>): Promise<T> {

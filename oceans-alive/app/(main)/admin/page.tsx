@@ -1,3 +1,9 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Admin dashboard (internal)
+ * URL:  /admin
+ * ══════════════════════════════════════════════════════════════════
+ */
 'use client';
 
 import { useEffect, useState } from 'react';

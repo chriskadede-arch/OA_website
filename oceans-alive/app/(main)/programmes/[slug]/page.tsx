@@ -1,3 +1,21 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Single programme page (template used by every programme)
+ * URL:  /programmes/[slug]
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Long Description
+ *   3. Body Images
+ *   4. Quote
+ *   5. Related Programmes
+ *   6. Call to action
+ *
+ * Where the text/data lives:
+ *   • PROGRAMMES  →  lib/constants.ts
+ *   • PROGRAMME_SDGS  →  lib/sdg-mapping.ts
+ *   • PROGRAMME_DETAILS  →  top of this file
+ */
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
@@ -402,7 +420,9 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
 
   return (
     <>
-      {/* ── Hero ─────────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className={`relative bg-gradient-to-br ${prog.color} overflow-hidden`}>
         {detail?.heroImage && (
           <div className="absolute inset-0">
@@ -418,7 +438,7 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
         {/* Dark overlay for text contrast */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-32">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-36 pb-24 md:pt-40 md:pb-32">
           <Link
             href="/programmes"
             className="inline-flex items-center gap-2 text-white/70 hover:text-white text-sm font-semibold mb-8 transition-colors"
@@ -433,9 +453,9 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
               {prog.category}
             </span>
           </div>
-          <div className="flex items-start gap-6 mb-6">
+          <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-6 mb-6">
             <span className="text-5xl font-poppins font-bold text-white/20 leading-none">{prog.number}</span>
-            <div>
+            <div className="min-w-0">
               <h1 className="font-poppins font-bold text-white text-4xl md:text-6xl leading-tight mb-3">
                 {prog.title}
               </h1>
@@ -482,7 +502,9 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
         </div>
       </section>
 
-      {/* ── Long Description ─────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Long Description
+          ══════════════════════════════════════════════════════════════════ */}
       {detail?.longDescription && (
         <section className="bg-white py-16 md:py-20">
           <div className="max-w-6xl mx-auto px-6">
@@ -517,7 +539,9 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
         </section>
       )}
 
-      {/* ── Body Images ──────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · Body Images
+          ══════════════════════════════════════════════════════════════════ */}
       {detail?.bodyImages && detail.bodyImages.length > 0 && (
         <section className="bg-gray-50 py-12">
           <div className="max-w-6xl mx-auto px-6">
@@ -540,7 +564,9 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
         </section>
       )}
 
-      {/* ── Quote ────────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 4 · Quote
+          ══════════════════════════════════════════════════════════════════ */}
       {detail?.quote && (
         <section className="bg-ocean-midnight py-16">
           <div className="max-w-4xl mx-auto px-6 text-center">
@@ -554,7 +580,9 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
         </section>
       )}
 
-      {/* ── Related Programmes ───────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 5 · Related Programmes
+          ══════════════════════════════════════════════════════════════════ */}
       {related.length > 0 && (
         <section className="bg-white py-16">
           <div className="max-w-6xl mx-auto px-6">
@@ -585,7 +613,9 @@ export default function ProgrammePage({ params }: { params: { slug: string } }) 
         </section>
       )}
 
-      {/* ── CTA ──────────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 6 · Call to action
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-turquoise py-14">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">

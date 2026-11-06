@@ -1,3 +1,9 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * SITEMAP (sitemap.xml for search engines)
+ * ══════════════════════════════════════════════════════════════════
+ * Lists every page URL. Add a line here when you create a new page.
+ */
 import { MetadataRoute } from 'next';
 import { supabase } from '@/lib/supabase';
 import { PROGRAMMES, SITE_URL, STATIC_BLOG_STORIES } from '@/lib/constants';

@@ -1,3 +1,8 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * CONTENT › Which UN SDGs each programme supports
+ * ══════════════════════════════════════════════════════════════════
+ */
 // SDG (Sustainable Development Goals) Mapping for Oceans Alive Foundation
 
 export interface SDGIcon {

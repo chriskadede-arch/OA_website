@@ -1,3 +1,16 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Impact Stories (blog index)
+ * URL:  /blog
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Category filters + story list
+ *   3. Call to action strip
+ *
+ * Where the text/data lives:
+ *   • BLOG_CATEGORIES, STATIC_BLOG_STORIES  →  lib/constants.ts
+ */
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -46,8 +59,10 @@ export default function Blog() {
 
   return (
     <>
-      {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="relative bg-ocean-midnight py-24 md:py-32 overflow-hidden">
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
+      <section className="relative bg-ocean-midnight pt-36 pb-24 md:pt-40 md:pb-32 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/oceanculturelife.jpg" alt="" fill className="object-cover opacity-15" />
         </div>
@@ -91,6 +106,9 @@ export default function Blog() {
         </div>
       </section>
 
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Category filters + story list
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
 
@@ -288,7 +306,9 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* ── CTA Strip ─────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · Call to action strip
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-14">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">

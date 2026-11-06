@@ -46,3 +46,36 @@ Thumbs.db
 # Temporary files
 *.tmp
 temp/
+
+# Secrets (keys must never be committed)
+.env.production
+
+# Old copies of the compiled site that ended up in the source folder.
+# The real build output is godaddy-upload/ (ignored above).
+/_next/
+/404/
+/404.html
+/index.html
+/index.txt
+/about/
+/admin/
+/api/
+/blog/
+/contact/
+/donate/
+/gallery/
+/get-involved/
+/images/
+/learn/
+/partnerships/
+/programmes/
+/programs/
+/projects/
+/resources/index.html
+/resources/index.txt
+/robots.txt
+/sitemap.xml
+/.htaccess
+/Oceans-Alive-Logo-WHITE.png
+/UPLOAD-INSTRUCTIONS.txt
+/build.log

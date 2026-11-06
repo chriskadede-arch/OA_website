@@ -1,3 +1,18 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Partnership › Blue Ventures (KAMAMKUKI fisheries monitoring)
+ * URL:  /partnerships/blue-ventures
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. The KAMAMKUKI Project
+ *   3. Project Phases
+ *   4. The Challenge
+ *   5. Our Approach
+ *   6. Expected Outcomes
+ *   7. Call to action
+ *   8. Navigation Footer
+ */
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,7 +25,9 @@ export const metadata = {
 export default function BlueVenturesPage() {
   return (
     <>
-      {/* ── Hero with Glass Overlay ─────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0066cc] via-[#0052a3] to-[#003d7a]">
@@ -25,27 +42,13 @@ export default function BlueVenturesPage() {
         <div className="absolute bottom-20 left-[10%] w-96 h-96 bg-blue-300/10 rounded-full blur-3xl" style={{ animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-36 pb-24 lg:pt-40 lg:pb-20">
           <div className="text-center max-w-4xl mx-auto">
             {/* Partnership Badge */}
             <div className="inline-flex items-center px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8">
               <span className="text-white/90 text-xs font-bold uppercase tracking-[0.25em]">
-                Funded by Blue Ventures Conservation
+                In Partnership with Blue Ventures Conservation
               </span>
-            </div>
-
-            {/* Blue Ventures Logo */}
-            <div className="mb-8 flex justify-center">
-              <div className="relative w-64 h-32 bg-white rounded-2xl border border-white/20 flex items-center justify-center p-6">
-                <Image
-                  src="/images/partners/blue-ventures.png"
-                  alt="Blue Ventures"
-                  width={256}
-                  height={128}
-                  className="object-contain w-full h-full"
-                  priority
-                />
-              </div>
             </div>
 
             <h1 className="font-poppins font-bold text-white text-5xl md:text-7xl leading-[0.95] mb-8">
@@ -79,15 +82,25 @@ export default function BlueVenturesPage() {
           </div>
         </div>
 
+        {/* Partner badge, floating right */}
+        <div className="hidden lg:flex absolute right-10 xl:right-20 top-1/2 -translate-y-1/2 flex-col items-center gap-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">Partner</span>
+          <div className="relative w-36 h-20 bg-white rounded-xl p-3">
+            <Image src="/images/partners/blue-ventures.png" alt="Blue Ventures" fill className="object-contain p-2" />
+          </div>
+        </div>
+
         {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="hidden lg:block absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
             <div className="w-1.5 h-1.5 bg-cyan-300 rounded-full" />
           </div>
         </div>
       </section>
 
-      {/* ── The KAMAMKUKI Project ─────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · The KAMAMKUKI Project
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -159,7 +172,9 @@ export default function BlueVenturesPage() {
         </div>
       </section>
 
-      {/* ── Project Phases ─────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · Project Phases
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-20 md:py-28 relative overflow-hidden">
         {/* Decorative Background */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0066cc]/5 rounded-full blur-3xl" />
@@ -185,18 +200,18 @@ export default function BlueVenturesPage() {
             <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-200">
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
                 {/* Icon Column */}
-                <div className="lg:col-span-1 bg-gradient-to-br from-[#0066cc] to-blue-700 flex items-center justify-center p-12">
+                <div className="lg:col-span-1 bg-gradient-to-br from-[#0066cc] to-blue-700 flex items-center justify-center p-6 sm:p-12">
                   <div className="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center">
                     <span className="text-white text-3xl font-bold">1</span>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="lg:col-span-4 p-10">
+                <div className="lg:col-span-4 p-6 sm:p-10">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-3">
-                        <h3 className="font-poppins font-bold text-ocean-midnight text-3xl">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-3">
+                        <h3 className="font-poppins font-bold text-ocean-midnight text-2xl sm:text-3xl">
                           Phase 1: Foundation
                         </h3>
                         <span className="text-sm text-gray-500 font-medium px-3 py-1 bg-gray-100 rounded-full">
@@ -259,18 +274,18 @@ export default function BlueVenturesPage() {
             <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-200">
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
                 {/* Icon Column */}
-                <div className="lg:col-span-1 bg-gradient-to-br from-cyan-500 to-teal-600 flex items-center justify-center p-12">
+                <div className="lg:col-span-1 bg-gradient-to-br from-cyan-500 to-teal-600 flex items-center justify-center p-6 sm:p-12">
                   <div className="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center">
                     <span className="text-white text-3xl font-bold">2</span>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="lg:col-span-4 p-10">
+                <div className="lg:col-span-4 p-6 sm:p-10">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-3">
-                        <h3 className="font-poppins font-bold text-ocean-midnight text-3xl">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-3">
+                        <h3 className="font-poppins font-bold text-ocean-midnight text-2xl sm:text-3xl">
                           Phase 2: Strengthening
                         </h3>
                         <span className="text-sm text-gray-500 font-medium px-3 py-1 bg-gray-100 rounded-full">
@@ -338,7 +353,9 @@ export default function BlueVenturesPage() {
         </div>
       </section>
 
-      {/* ── The Challenge ─────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 4 · The Challenge
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-20 md:py-28 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -443,7 +460,9 @@ export default function BlueVenturesPage() {
         </div>
       </section>
 
-      {/* ── Our Approach ─────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 5 · Our Approach
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -463,7 +482,7 @@ export default function BlueVenturesPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Governance & Institutional Development */}
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-10 border border-blue-200 shadow-lg">
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-6 sm:p-10 border border-blue-200 shadow-lg">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#0066cc] to-blue-700 flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -509,7 +528,7 @@ export default function BlueVenturesPage() {
             </div>
 
             {/* Fisheries & Ecological Monitoring */}
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-10 border border-emerald-200 shadow-lg">
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-6 sm:p-10 border border-emerald-200 shadow-lg">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -555,7 +574,7 @@ export default function BlueVenturesPage() {
             </div>
 
             {/* Community Financial Resilience */}
-            <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-3xl p-10 border border-purple-200 shadow-lg">
+            <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-3xl p-6 sm:p-10 border border-purple-200 shadow-lg">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -601,7 +620,7 @@ export default function BlueVenturesPage() {
             </div>
 
             {/* Peer Learning & Exchange */}
-            <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-10 border border-orange-200 shadow-lg">
+            <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-6 sm:p-10 border border-orange-200 shadow-lg">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -649,7 +668,9 @@ export default function BlueVenturesPage() {
         </div>
       </section>
 
-      {/* ── Expected Outcomes ─────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 6 · Expected Outcomes
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-[#0066cc] via-[#0052a3] to-[#003d7a] py-20 md:py-28 relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute inset-0 opacity-5">
@@ -670,7 +691,7 @@ export default function BlueVenturesPage() {
           </div>
 
           {/* Outcomes Card */}
-          <div className="bg-white/5 backdrop-blur-md rounded-3xl p-10 md:p-12 border border-white/20 shadow-2xl">
+          <div className="bg-white/5 backdrop-blur-md rounded-3xl p-6 sm:p-10 md:p-12 border border-white/20 shadow-2xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 {
@@ -753,7 +774,9 @@ export default function BlueVenturesPage() {
         </div>
       </section>
 
-      {/* ── CTA Section ─────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 7 · Call to action
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-20 border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -794,7 +817,9 @@ export default function BlueVenturesPage() {
         </div>
       </section>
 
-      {/* ── Navigation Footer ─────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 8 · Navigation Footer
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-12 border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
           <Link

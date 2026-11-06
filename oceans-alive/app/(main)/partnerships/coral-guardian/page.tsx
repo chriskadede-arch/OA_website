@@ -1,3 +1,18 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Partnership › Coral Guardian (REEL Kilifi)
+ * URL:  /partnerships/coral-guardian
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. The REEL Kilifi Project
+ *   3. Restoration Techniques
+ *   4. Community Involvement
+ *   5. Monitoring & Evaluation (Side-by-Side)
+ *   6. Looking Ahead
+ *   7. Call to action
+ *   8. Navigation Footer
+ */
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,7 +25,9 @@ export const metadata = {
 export default function CoralGuardianPage() {
   return (
     <>
-      {/* ── Hero with Glass Overlay ─────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 bg-gradient-to-br from-ocean-midnight via-[#0a3560] to-[#1a4d6b]">
@@ -25,26 +42,13 @@ export default function CoralGuardianPage() {
         <div className="absolute bottom-20 left-[10%] w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl" style={{ animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-36 pb-24 lg:pt-40 lg:pb-20">
           <div className="text-center max-w-4xl mx-auto">
             {/* Partnership Badge */}
             <div className="inline-flex items-center px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8">
               <span className="text-white/90 text-xs font-bold uppercase tracking-[0.25em]">
                 In Partnership with the Local Nonprofit
               </span>
-            </div>
-
-            {/* Coral Guardian Logo */}
-            <div className="mb-8 flex justify-center">
-              <div className="relative w-64 h-32 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 flex items-center justify-center p-6">
-                <Image
-                  src="/images/partners/coral-guardian.png"
-                  alt="Coral Guardian"
-                  fill
-                  className="object-contain p-4"
-                  priority
-                />
-              </div>
             </div>
 
             <h1 className="font-poppins font-bold text-white text-5xl md:text-7xl leading-[0.95] mb-8">
@@ -76,15 +80,25 @@ export default function CoralGuardianPage() {
           </div>
         </div>
 
+        {/* Partner badge, floating right */}
+        <div className="hidden lg:flex absolute right-10 xl:right-20 top-1/2 -translate-y-1/2 flex-col items-center gap-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">Partner</span>
+          <div className="relative w-36 h-20 bg-white rounded-xl p-3">
+            <Image src="/images/partners/coral-guardian.png" alt="Coral Guardian" fill className="object-contain p-2" />
+          </div>
+        </div>
+
         {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="hidden lg:block absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
             <div className="w-1.5 h-1.5 bg-ocean-turquoise rounded-full" />
           </div>
         </div>
       </section>
 
-      {/* ── The REEL Kilifi Project ─────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · The REEL Kilifi Project
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -156,7 +170,9 @@ export default function CoralGuardianPage() {
         </div>
       </section>
 
-      {/* ── Restoration Techniques ─────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · Restoration Techniques
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-20 md:py-28 relative overflow-hidden">
         {/* Decorative Background */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-ocean-turquoise/5 rounded-full blur-3xl" />
@@ -181,7 +197,7 @@ export default function CoralGuardianPage() {
             <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-200">
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
                 {/* Icon Column */}
-                <div className="lg:col-span-1 bg-gradient-to-br from-ocean-turquoise to-cyan-500 flex items-center justify-center p-12">
+                <div className="lg:col-span-1 bg-gradient-to-br from-ocean-turquoise to-cyan-500 flex items-center justify-center p-6 sm:p-12">
                   <div className="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
@@ -190,7 +206,7 @@ export default function CoralGuardianPage() {
                 </div>
 
                 {/* Content */}
-                <div className="lg:col-span-4 p-10">
+                <div className="lg:col-span-4 p-6 sm:p-10">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="flex-1">
                       <h3 className="font-poppins font-bold text-ocean-midnight text-3xl mb-3">
@@ -286,7 +302,9 @@ export default function CoralGuardianPage() {
         </div>
       </section>
 
-      {/* ── Community Involvement ─────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 4 · Community Involvement
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-20 md:py-28 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -397,7 +415,9 @@ export default function CoralGuardianPage() {
         </div>
       </section>
 
-      {/* ── Monitoring & Evaluation (Side-by-Side) ─────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 5 · Monitoring & Evaluation (Side-by-Side)
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -415,7 +435,7 @@ export default function CoralGuardianPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Biological Monitoring */}
-            <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-3xl p-10 border border-cyan-200 shadow-lg">
+            <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-3xl p-6 sm:p-10 border border-cyan-200 shadow-lg">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -462,7 +482,7 @@ export default function CoralGuardianPage() {
             </div>
 
             {/* Social Monitoring */}
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-10 border border-emerald-200 shadow-lg">
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-6 sm:p-10 border border-emerald-200 shadow-lg">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -510,7 +530,9 @@ export default function CoralGuardianPage() {
         </div>
       </section>
 
-      {/* ── Looking Ahead ─────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 6 · Looking Ahead
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-ocean-midnight via-[#0a3560] to-[#1a4d6b] py-20 md:py-28 relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute inset-0 opacity-5">
@@ -531,7 +553,7 @@ export default function CoralGuardianPage() {
           </div>
 
           {/* Vision Card */}
-          <div className="bg-white/5 backdrop-blur-md rounded-3xl p-10 md:p-12 border border-white/20 shadow-2xl mb-8">
+          <div className="bg-white/5 backdrop-blur-md rounded-3xl p-6 sm:p-10 md:p-12 border border-white/20 shadow-2xl mb-8">
             <div className="flex items-start gap-6 mb-8">
               <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-ocean-turquoise to-cyan-500 flex items-center justify-center shrink-0">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -590,7 +612,9 @@ export default function CoralGuardianPage() {
         </div>
       </section>
 
-      {/* ── CTA Section ─────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 7 · Call to action
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-20 border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -631,7 +655,9 @@ export default function CoralGuardianPage() {
         </div>
       </section>
 
-      {/* ── Navigation Footer ─────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 8 · Navigation Footer
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-12 border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
           <Link

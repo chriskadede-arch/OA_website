@@ -1,3 +1,14 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Donate › Thank-you page
+ * URL:  /donate/success
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. What Happens Next
+ *   3. Impact Stats
+ *   4. Call to action
+ */
 'use client';
 
 import { useEffect, useState, Suspense } from 'react';
@@ -73,7 +84,9 @@ function DonationSuccessContent() {
 
   return (
     <>
-      {/* Success Hero */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-ocean-midnight py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
@@ -111,7 +124,9 @@ function DonationSuccessContent() {
         </div>
       </section>
 
-      {/* What Happens Next */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · What Happens Next
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-poppins font-bold text-ocean-midnight text-center mb-12">
@@ -152,7 +167,9 @@ function DonationSuccessContent() {
         </div>
       </section>
 
-      {/* Impact Stats */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · Impact Stats
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-6">
           <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest text-center mb-8">
@@ -179,7 +196,9 @@ function DonationSuccessContent() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 4 · Call to action
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-2xl font-poppins font-bold text-ocean-midnight mb-4">

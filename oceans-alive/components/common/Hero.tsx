@@ -1,3 +1,8 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * REUSABLE HERO BANNER (not currently used on any page)
+ * ══════════════════════════════════════════════════════════════════
+ */
 import Link from 'next/link';
 
 interface HeroProps {

@@ -1,10 +1,26 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Learn › Kuruwitu Living Classroom
+ * URL:  /learn/kuruwitu
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Introduction
+ *   3. The Origin Story
+ *   4. Partnership Structure
+ *   5. Living Classroom
+ *   6. Legal Context
+ *   7. Call to Action
+ */
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function KuruwitiPage() {
   return (
     <>
-      {/* Hero Section */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-ocean-midnight overflow-hidden min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <Image
@@ -16,7 +32,7 @@ export default function KuruwitiPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-ocean-midnight/80 via-ocean-midnight/70 to-ocean-midnight"></div>
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-36 pb-20 md:pt-40">
           <div className="max-w-3xl">
             <p className="text-ocean-turquoise text-sm font-bold uppercase tracking-widest mb-4">Where the Model Was Born</p>
             <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white leading-tight mb-6">
@@ -30,7 +46,9 @@ export default function KuruwitiPage() {
         </div>
       </section>
 
-      {/* Introduction */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Introduction
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
@@ -44,7 +62,9 @@ export default function KuruwitiPage() {
         </div>
       </section>
 
-      {/* The Origin Story */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · The Origin Story
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -73,8 +93,8 @@ export default function KuruwitiPage() {
                   <div className="flex-shrink-0 w-16 h-16 bg-ocean-turquoise/10 rounded-full flex items-center justify-center">
                     <span className="text-ocean-turquoise font-bold text-lg">2003</span>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-ocean-midnight mb-1">CCA Established</h4>
+                  <div className="min-w-0">
+                    <h4 className="font-bold text-ocean-midnight mb-1 break-words">CCA Established</h4>
                     <p className="text-sm text-gray-600">Community creates Kenya's first voluntary no-take zone</p>
                   </div>
                 </div>
@@ -82,8 +102,8 @@ export default function KuruwitiPage() {
                   <div className="flex-shrink-0 w-16 h-16 bg-ocean-turquoise/10 rounded-full flex items-center justify-center">
                     <span className="text-ocean-turquoise font-bold text-lg">2018</span>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-ocean-midnight mb-1">Fish Biomass +400%</h4>
+                  <div className="min-w-0">
+                    <h4 className="font-bold text-ocean-midnight mb-1 break-words">Fish Biomass +400%</h4>
                     <p className="text-sm text-gray-600">15 years of data proves the community's approach works</p>
                   </div>
                 </div>
@@ -91,8 +111,8 @@ export default function KuruwitiPage() {
                   <div className="flex-shrink-0 w-16 h-16 bg-ocean-turquoise/10 rounded-full flex items-center justify-center">
                     <span className="text-ocean-turquoise font-bold text-lg">2022</span>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-ocean-midnight mb-1">Co-Management Plan</h4>
+                  <div className="min-w-0">
+                    <h4 className="font-bold text-ocean-midnight mb-1 break-words">Co-Management Plan</h4>
                     <p className="text-sm text-gray-600">Kenya's first legal Co-Management Agreement</p>
                   </div>
                 </div>
@@ -102,7 +122,9 @@ export default function KuruwitiPage() {
         </div>
       </section>
 
-      {/* Partnership Structure */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 4 · Partnership Structure
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -214,7 +236,9 @@ export default function KuruwitiPage() {
         </div>
       </section>
 
-      {/* Living Classroom */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 5 · Living Classroom
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-b from-ocean-midnight to-ocean-midnight/95 py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -329,7 +353,9 @@ export default function KuruwitiPage() {
         </div>
       </section>
 
-      {/* Legal Context */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 6 · Legal Context
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -410,7 +436,9 @@ export default function KuruwitiPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 7 · Call to Action
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-4">

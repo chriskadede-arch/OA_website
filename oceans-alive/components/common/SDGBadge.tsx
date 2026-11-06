@@ -1,3 +1,8 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * UN SDG BADGE (one Sustainable Development Goal icon)
+ * ══════════════════════════════════════════════════════════════════
+ */
 'use client';
 
 import Image from 'next/image';
@@ -76,7 +81,7 @@ export default function SDGBadge({
       </div>
 
       {showTooltip && (
-        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10 shadow-xl">
+        <div className="hidden lg:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10 shadow-xl">
           <div className="font-bold">{sdg.name}</div>
           <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-gray-900"></div>
         </div>

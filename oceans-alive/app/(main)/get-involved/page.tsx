@@ -1,11 +1,22 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Get Involved
+ * URL:  /get-involved
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Newsletter signup + ways to get involved
+ */
 import Link from 'next/link';
 import NewsletterForm from '@/components/common/NewsletterForm';
 
 export default function GetInvolvedPage() {
   return (
     <>
-      {/* Header */}
-      <section className="bg-ocean-midnight py-20">
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
+      <section className="bg-ocean-midnight pt-36 pb-20 md:pt-40">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-poppins font-bold text-white mb-4">
             Get Involved
@@ -16,7 +27,9 @@ export default function GetInvolvedPage() {
         </div>
       </section>
 
-      {/* Main Content Section */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Newsletter signup + ways to get involved
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 from-10% via-ocean-midnight/20 via-40% via-ocean-midnight/60 via-70% to-ocean-midnight py-16">
 
         {/* Dot grid texture */}

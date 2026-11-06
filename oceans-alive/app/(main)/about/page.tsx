@@ -1,7 +1,21 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: About › Overview
+ * URL:  /about
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Chapter Cards
+ *   3. Quick Stats
+ *   4. Get Involved (call to action)
+ *
+ * Where the text/data lives:
+ *   • IMPACT_STATS  →  lib/constants.ts
+ *   • CHAPTERS  →  top of this file
+ */
 import Link from 'next/link';
 import Image from 'next/image';
 import { IMPACT_STATS } from '@/lib/constants';
-import AboutNav from '@/components/common/AboutNav';
 
 export const metadata = {
   title: 'About Oceans Alive Foundation',
@@ -72,9 +86,10 @@ const QUICK_STATS = IMPACT_STATS.slice(0, 4);
 export default function AboutHub() {
   return (
     <>
-      <AboutNav />
-      {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section className="relative bg-ocean-midnight overflow-hidden py-24 md:py-36">
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
+      <section className="relative bg-ocean-midnight overflow-hidden pt-36 pb-24 md:pt-48 md:pb-36">
         {/* Dot grid texture */}
         <div
           className="absolute inset-0 opacity-[0.12] pointer-events-none"
@@ -108,7 +123,9 @@ export default function AboutHub() {
         </div>
       </section>
 
-      {/* ── Chapter Cards ────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Chapter Cards
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gray-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-10 flex items-center gap-3">
@@ -169,23 +186,27 @@ export default function AboutHub() {
         </div>
       </section>
 
-      {/* ── Quick Stats ──────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · Quick Stats
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-14">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-0 divide-x divide-white/10">
             {QUICK_STATS.map((s, i) => (
-              <div key={i} className="text-center px-6 py-4">
-                <div className="text-3xl md:text-4xl font-poppins font-bold text-ocean-turquoise mb-1">
+              <div key={i} className="text-center px-3 sm:px-4 lg:px-6 py-4">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-poppins font-bold text-ocean-turquoise mb-1 whitespace-nowrap">
                   {s.value}
                 </div>
-                <p className="text-xs text-white/40 uppercase tracking-wider">{s.label}</p>
+                <p className="text-[11px] sm:text-xs text-white/40 uppercase tracking-wide sm:tracking-wider">{s.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Get Involved CTA ─────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 4 · Get Involved (call to action)
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>

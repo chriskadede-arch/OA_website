@@ -1,3 +1,10 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * API › Stripe payment intent (card donations)
+ * ══════════════════════════════════════════════════════════════════
+ * Needs a Node.js server, so it cannot run on GoDaddy's static hosting.
+ * On GoDaddy, donation details are emailed by the PHP script api/donate.php.
+ */
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 

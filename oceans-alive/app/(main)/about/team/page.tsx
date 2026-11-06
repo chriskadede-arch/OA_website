@@ -1,5 +1,18 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: About › Our Team
+ * URL:  /about/team
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero — "The People Behind the Ocean"
+ *   2. Team grid (one tile per person)
+ *   3. Community stewards band
+ *   4. Join the team — call to action
+ *
+ * Where the text/data lives:
+ *   • TEAM_MEMBERS  →  lib/constants.ts
+ */
 import Image from 'next/image';
-import AboutNav from '@/components/common/AboutNav';
 import Link from 'next/link';
 import { TEAM_MEMBERS } from '@/lib/constants';
 
@@ -24,12 +37,14 @@ const GRADIENTS = [
 export default function TeamPage() {
   return (
     <>
-      <AboutNav />
       <div className="bg-white min-h-screen">
 
         {/* ══════════════════════════════════════════════════════════
             HERO - Clean gradient background
         ══════════════════════════════════════════════════════════ */}
+        {/* ══════════════════════════════════════════════════════════════════
+            SECTION 1 · Hero — "The People Behind the Ocean"
+            ══════════════════════════════════════════════════════════════════ */}
         <section className="relative min-h-[90vh] flex items-end overflow-hidden">
 
         {/* Clean gradient background */}
@@ -38,7 +53,7 @@ export default function TeamPage() {
         </div>
 
         {/* Foreground text */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 pb-20 pt-36 w-full">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pb-20 pt-36 md:pt-48 w-full">
 
           {/* Giant stacked headline */}
           <div className="mb-10 overflow-hidden">
@@ -80,6 +95,9 @@ export default function TeamPage() {
         {/* ══════════════════════════════════════════════════════════
           TEAM GRID - Apple-inspired editorial grid
         ══════════════════════════════════════════════════════════ */}
+        {/* ══════════════════════════════════════════════════════════════════
+            SECTION 2 · Team grid (one tile per person)
+            ══════════════════════════════════════════════════════════════════ */}
         <section className="relative bg-white py-24 overflow-hidden">
 
         {/* Subtle radial glow at the very top - like an iPhone wallpaper bloom */}
@@ -112,15 +130,15 @@ export default function TeamPage() {
           </div>
 
           {/* ── Uniform square grid ── */}
-          <div className="grid grid-cols-3 lg:grid-cols-6 gap-3">
-            {TEAM_MEMBERS.map((member, i) => {
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-3">
+            {TEAM_MEMBERS.filter((member) => !member.hidden).map((member, i) => {
               const gFrom = GRADIENTS[i % GRADIENTS.length][0];
               const gTo   = GRADIENTS[i % GRADIENTS.length][1];
 
               return (
                 <div
                   key={member.name}
-                  className="group relative overflow-hidden rounded-[2.5rem] bg-gray-100 col-span-1 aspect-square
+                  className="group relative overflow-hidden rounded-3xl sm:rounded-[2.5rem] bg-gray-100 col-span-1 aspect-square
                     border border-gray-200 hover:border-ocean-turquoise/30
                     transition-all duration-500 ease-out cursor-default shadow-sm hover:shadow-lg"
                 >
@@ -167,11 +185,11 @@ export default function TeamPage() {
                   </div>
 
                   {/* Bottom text block */}
-                  <div className="absolute bottom-0 left-0 right-0 p-3 z-10">
-                    <h3 className="font-poppins font-bold text-white leading-tight text-[0.82rem]">
+                  <div className="absolute bottom-0 left-0 right-0 px-4 pb-4 pt-3 z-10">
+                    <h3 className="font-poppins font-bold text-white leading-tight text-sm sm:text-[0.82rem] break-words">
                       {member.name}
                     </h3>
-                    <p className="text-white/40 mt-0.5 uppercase tracking-widest text-[0.55rem]">
+                    <p className="text-white/60 mt-0.5 uppercase tracking-wider leading-snug text-[0.6rem] sm:text-[0.55rem] line-clamp-3">
                       {member.role}
                     </p>
                     {/* Bio - slides in on hover */}
@@ -194,7 +212,7 @@ export default function TeamPage() {
             {/* ── Join card ── */}
             <Link
               href="/contact?type=Volunteer"
-              className="group relative col-span-1 aspect-square rounded-[2.5rem] overflow-hidden bg-gray-50
+              className="group relative col-span-1 aspect-square rounded-3xl sm:rounded-[2.5rem] overflow-hidden bg-gray-50
                 border border-dashed border-gray-300 hover:border-ocean-turquoise
                 flex items-center justify-center transition-all duration-500 shadow-sm hover:shadow-lg"
             >
@@ -222,6 +240,9 @@ export default function TeamPage() {
         {/* ══════════════════════════════════════════════════════════
           COMMUNITY - Full-bleed with photo wash
         ══════════════════════════════════════════════════════════ */}
+        {/* ══════════════════════════════════════════════════════════════════
+            SECTION 3 · Community stewards band
+            ══════════════════════════════════════════════════════════════════ */}
         <section className="relative mt-2 overflow-hidden py-28 md:py-40 bg-ocean-midnight">
         <div className="absolute inset-0">
           <Image src="/images/BMUS.jpg" alt="Community" fill className="object-cover opacity-15 grayscale" />
@@ -269,6 +290,9 @@ export default function TeamPage() {
         {/* ══════════════════════════════════════════════════════════
           CTA - Dark split
         ══════════════════════════════════════════════════════════ */}
+        {/* ══════════════════════════════════════════════════════════════════
+            SECTION 4 · Join the team — call to action
+            ══════════════════════════════════════════════════════════════════ */}
         <section className="border-t border-white/[0.05] py-24 bg-gradient-to-br from-ocean-midnight to-ocean-turquoise/30">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">

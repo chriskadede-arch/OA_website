@@ -1,3 +1,11 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * FOOTER (shown on every page)
+ * ══════════════════════════════════════════════════════════════════
+ * Social media links → SOCIAL list below.  Contact email → lib/constants.ts (CONTACT_EMAIL).
+ * Programme links → lib/our-work.ts (the same 4 programmes as the "Our Work" menu).
+ * Search this file for "SECTION <n>".
+ */
 'use client';
 
 import Link from 'next/link';
@@ -6,6 +14,7 @@ import { CONTACT_EMAIL, CONTACT_ADDRESS, SITE_NAME } from '@/lib/constants';
 import { PRIMARY_SDGS } from '@/lib/sdg-mapping';
 import NewsletterForm from './NewsletterForm';
 import SDGRow from './SDGRow';
+import { OUR_WORK_PROGRAMS } from '@/lib/our-work';
 
 const SOCIAL = [
   {
@@ -73,16 +82,18 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
 
-          {/* Brand */}
+          {/* ══════════════════════════════════════════════════════════════════
+              SECTION 1 · Brand column (logo, tagline, social icons)
+              ══════════════════════════════════════════════════════════════════ */}
           <div>
             {/* Logo */}
-            <Link href="/" className="group inline-block mb-6">
+            <Link href="/" className="group inline-block max-w-full mb-6">
               <Image
                 src="/Oceans-Alive-Logo-WHITE.png"
                 alt="Oceans Alive Foundation"
                 width={960}
                 height={540}
-                className="h-44 w-auto object-contain block group-hover:opacity-80 transition-opacity duration-300"
+                className="h-44 w-auto max-w-full object-contain block group-hover:opacity-80 transition-opacity duration-300"
                 priority
               />
             </Link>
@@ -106,7 +117,9 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Navigate */}
+          {/* ══════════════════════════════════════════════════════════════════
+              SECTION 2 · "Navigate" links
+              ══════════════════════════════════════════════════════════════════ */}
           <div>
             <h4 className="font-poppins font-bold mb-4 text-ocean-turquoise text-sm uppercase tracking-wider">Navigate</h4>
             <ul className="space-y-2 text-sm text-white/70">
@@ -128,20 +141,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Programmes */}
+          {/* ══════════════════════════════════════════════════════════════════
+              SECTION 3 · "Programmes" links (same list as the "Our Work" menu)
+              ══════════════════════════════════════════════════════════════════ */}
           <div>
             <h4 className="font-poppins font-bold mb-4 text-ocean-turquoise text-sm uppercase tracking-wider">Programmes</h4>
             <ul className="space-y-2 text-sm text-white/70">
-              {[
-                { label: 'Coral Restoration', href: '/programmes' },
-                { label: 'Co-Management', href: '/programmes' },
-                { label: 'Ocean Education', href: '/programmes' },
-                { label: 'Trash4Cash', href: '/programmes' },
-                { label: 'BMU Network', href: '/programmes' },
-                { label: 'Turtle Protection', href: '/programmes' },
-                { label: 'LIFT Network', href: '/programmes' },
-                { label: 'Research & Monitoring', href: '/programmes' },
-              ].map((l) => (
+              {/* Same 4 programmes as the "Our Work" menu - edit them in lib/our-work.ts */}
+              {OUR_WORK_PROGRAMS.map((p) => ({ label: p.title, href: `/programs/${p.slug}` })).map((l) => (
                 <li key={l.label}>
                   <Link href={l.href} className="hover:text-ocean-turquoise transition-colors">
                     {l.label}
@@ -151,7 +158,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* ══════════════════════════════════════════════════════════════════
+              SECTION 4 · "Contact" column
+              ══════════════════════════════════════════════════════════════════ */}
           <div>
             <h4 className="font-poppins font-bold mb-4 text-ocean-turquoise text-sm uppercase tracking-wider">Contact</h4>
             <ul className="space-y-3 text-sm text-white/70">
@@ -175,7 +184,9 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
+        {/* ══════════════════════════════════════════════════════════════════
+            SECTION 5 · Bottom bar (copyright, credit, legal links)
+            ══════════════════════════════════════════════════════════════════ */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-col items-center md:items-start gap-2">
             <p className="text-xs text-white/40">

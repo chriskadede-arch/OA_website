@@ -1,3 +1,22 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Single blog story (template used by every story)
+ * URL:  /blog/[slug]
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Impact box
+ *   3. Related stories
+ *   4. Back link + call to action
+ *   5. Minimal layout (stories without full text) · Hero
+ *   6. Minimal layout · Story text + tags
+ *   7. Minimal layout · Related stories
+ *   8. Minimal layout · Back link
+ *
+ * Where the text/data lives:
+ *   • STATIC_BLOG_STORIES  →  lib/constants.ts
+ *   • BLOG_CONTENT  →  top of this file
+ */
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -431,7 +450,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      {/* ── Hero ───────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-ocean-midnight overflow-hidden" style={{ minHeight: '520px' }}>
         <Image
           src={content.heroImage}
@@ -530,7 +551,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         </div>
       </article>
 
-      {/* ── Impact box ─────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Impact box
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-12">
         <div className="max-w-3xl mx-auto px-6">
           <div className="flex flex-wrap items-center gap-3 mb-4">
@@ -546,7 +569,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
-      {/* ── Related stories ────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · Related stories
+          ══════════════════════════════════════════════════════════════════ */}
       {related.length > 0 && (
         <section className="bg-white py-16 md:py-20">
           <div className="max-w-6xl mx-auto px-6">
@@ -582,7 +607,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         </section>
       )}
 
-      {/* ── Back + CTA ─────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 4 · Back link + call to action
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gray-50 py-12 border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <Link href="/blog" className="text-sm font-bold text-ocean-midnight hover:text-ocean-turquoise transition-colors flex items-center gap-2">
@@ -619,6 +646,9 @@ function MinimalPost({
 }) {
   return (
     <>
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 5 · Minimal layout (stories without full text) · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-24 md:py-32">
         <div className="max-w-4xl mx-auto px-6">
           <div className="mb-4 flex items-center gap-3">
@@ -632,6 +662,9 @@ function MinimalPost({
         </div>
       </section>
 
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 6 · Minimal layout · Story text + tags
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-16">
         <div className="max-w-3xl mx-auto px-6">
           <div className="flex flex-wrap gap-2 mb-8">
@@ -643,6 +676,9 @@ function MinimalPost({
         </div>
       </section>
 
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 7 · Minimal layout · Related stories
+          ══════════════════════════════════════════════════════════════════ */}
       {related.length > 0 && (
         <section className="bg-white py-12 border-t border-gray-100">
           <div className="max-w-6xl mx-auto px-6">
@@ -660,6 +696,9 @@ function MinimalPost({
         </section>
       )}
 
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 8 · Minimal layout · Back link
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gray-50 py-10 border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           <Link href="/blog" className="text-sm font-bold text-ocean-midnight hover:text-ocean-turquoise transition-colors">← Back to stories</Link>

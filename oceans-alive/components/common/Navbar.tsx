@@ -1,10 +1,27 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * HEADER / MAIN MENU (shown on every page)
+ * ══════════════════════════════════════════════════════════════════
+ * PART 1 · Types                   - shape of the menu data (no need to edit)
+ * PART 2 · Get Involved cards      - Donate / Partner / Contact cards in the menu
+ * PART 3 · MENU LINKS (MEGA_NAV)   - ← edit menu items and dropdown links here
+ * PART 4 · Desktop dropdown panels - one function per dropdown style
+ * PART 5 · Mobile menu item        - the accordion rows in the phone menu
+ * PART 6 · The header itself       - top bar, logo, desktop menu, search, phone menu
+ * Search this file for "PART <n>" or "SECTION <n>".
+ * Programme/project links in the dropdowns come from lib/our-work.ts and lib/projects-data.ts.
+ */
 'use client';
 
 import { useState, useRef, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { PROJECTS } from '@/lib/projects-data';
+import { OUR_WORK_PROGRAMS, CROSS_CUTTING_THEMES } from '@/lib/our-work';
 
-// ─── Types ────────────────────────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════════════
+// PART 1 · Types (shape of the menu data - no need to edit)
+// ══════════════════════════════════════════════════════════════════
 
 interface NavSubItem {
   label: string;
@@ -23,10 +40,12 @@ interface MegaNavItem {
   label: string;
   href?: string;
   columns?: NavColumn[];
-  layout?: 'dark-immersive' | 'action-cards' | 'editorial';
+  layout?: 'dark-immersive' | 'action-cards' | 'editorial' | 'get-involved-custom';
 }
 
-// ─── Action cards constant (desktop + mobile) ─────────────────────────────────
+// ══════════════════════════════════════════════════════════════════
+// PART 2 · Get Involved action cards (Donate / Partner / Contact)
+// ══════════════════════════════════════════════════════════════════
 
 const INVOLVE_CARDS = [
   {
@@ -49,17 +68,21 @@ const INVOLVE_CARDS = [
     statLabel: 'Partners & Volunteers',
     badge: 'Join Us',
   },
+  {
+    eyebrow: 'Get In Touch',
+    title: 'Contact Us',
+    description: 'Questions, partnerships, media inquiries, or general information about our work.',
+    href: '/contact',
+    gradient: 'from-[#1e40af] to-[#0c2454]',
+    stat: '24h',
+    statLabel: 'Response Time',
+    badge: 'Available',
+  },
 ];
 
-// ─── Nav Data ─────────────────────────────────────────────────────────────────
-
-// 4 Strategic Objectives for Navigation
-const STRATEGIC_OBJECTIVES = [
-  { title: 'Strengthen Coastal Education', description: 'Ocean literacy & environmental awareness', href: '/programs/learning-leadership' },
-  { title: 'Promote Marine Ecosystem Integrity', description: 'Coral restoration & fisheries co-management', href: '/programs/ocean-recovery' },
-  { title: 'Promote Food Security & Income', description: 'Women\'s empowerment & climate-smart livelihoods', href: '/programs/she' },
-  { title: 'Strengthen Institutional Capacity', description: 'Research, monitoring & strategic partnerships', href: '/programs/research-innovation' },
-];
+// ══════════════════════════════════════════════════════════════════
+// PART 3 · MENU LINKS - edit the main menu and its dropdowns here
+// ══════════════════════════════════════════════════════════════════
 
 const MEGA_NAV: MegaNavItem[] = [
   {
@@ -67,185 +90,211 @@ const MEGA_NAV: MegaNavItem[] = [
     layout: 'dark-immersive',
     columns: [
       {
-        title: 'About Us',
+        title: 'Programs',
         compact: true,
-        items: [
-          { label: 'Overview', href: '/about', description: 'Complete overview of Oceans Alive Foundation' },
-          { label: 'Our Story', href: '/about/story', description: '20+ years of community conservation' },
-          { label: 'Mission & Vision', href: '/about/mission', description: 'Our purpose & values' },
-          { label: 'Recognition & Awards', href: '/about/recognition', description: 'UNDP Equator Prize · Royal Visit · IUCN 2025' },
-          { label: 'Kuruwitu Story', href: '/learn/kuruwitu', description: 'Kenya\'s first community-led marine conservation area' },
-          { label: 'Our Team', href: '/about/team', description: 'People behind the work' },
-          { label: 'Partners', href: '/about/partners', description: 'Our collaborators' },
-        ],
-      },
-      {
-        title: 'Strategic Objectives',
-        compact: true,
-        items: STRATEGIC_OBJECTIVES.map((p) => ({
+        items: OUR_WORK_PROGRAMS.map((p) => ({
           label: p.title,
-          href: p.href,
-          description: p.description,
+          href: `/programs/${p.slug}`,
+          description: p.navBlurb,
         })),
       },
     ],
   },
   {
-    label: 'Learn',
+    label: 'Our Story',
+    href: '/about/story',
+  },
+  {
+    label: 'Who We Are',
     layout: 'editorial',
     columns: [
       {
-        title: 'Blog & Stories',
+        title: 'About Us',
         items: [
-          { label: 'Impact Stories', href: '/blog/category/impact-stories', description: 'Real results from our fieldwork' },
-          { label: 'Community News & Updates', href: '/blog/category/community-news', description: 'Updates from local communities and OAF announcements' },
+          { label: 'Our Team', href: '/about/team', description: 'Meet the people behind our conservation work' },
+          { label: 'Mission & Vision', href: '/about/mission', description: 'Our purpose and values driving ocean conservation' },
+          { label: 'Get Involved', href: '/get-involved', description: 'Join our mission to protect the ocean' },
         ],
       },
       {
-        title: 'Resources',
+        title: 'Learn More',
         items: [
-          { label: 'Conservation Resources', href: '/resources', description: 'Toolkits, IEC materials, reports & case studies' },
+          { label: 'Impact Stories', href: '/blog/category/impact-stories', description: 'Real results from our fieldwork' },
           { label: 'Photo Gallery', href: '/gallery', description: 'Coral restoration, community life, wildlife & ocean landscapes' },
+          { label: 'Kuruwitu Story', href: '/learn/kuruwitu', description: 'Kenya\'s first community-led marine conservation area' },
         ],
       },
     ],
   },
   {
     label: 'Get Involved',
-    layout: 'action-cards',
-    columns: [
-      {
-        title: 'Support Us',
-        items: [
-          { label: 'Make a Donation', href: '/donate', description: 'Directly fund conservation projects', badge: 'Popular' },
-          { label: 'Monthly Giving', href: '/donate', description: 'Sustain our work with recurring support' },
-          { label: 'In-Kind Support', href: '/contact?type=Other', description: 'Donate equipment or expertise' },
-        ],
-      },
-      {
-        title: 'Engage',
-        items: [
-          { label: 'Partner & Volunteer', href: '/contact?type=Partnership', description: 'Collaborate as a partner, volunteer, corporate sponsor, researcher or institution', badge: 'Join Us' },
-          { label: 'Internships', href: '/contact?type=Other', description: 'Join us as a student or graduate' },
-          { label: 'Community Events', href: '/blog/category/updates', description: 'Workshops, cleanups & field days' },
-        ],
-      },
-    ],
-  },
-  {
-    label: 'Contact',
-    href: '/contact',
+    layout: 'get-involved-custom',
   },
 ];
 
 // ─── Dark Immersive Dropdown (Our Work) ───────────────────────────────────────
 
+// ══════════════════════════════════════════════════════════════════
+// PART 4 · Desktop dropdown panels (one function per style)
+// ══════════════════════════════════════════════════════════════════
+
 function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClose: () => void }) {
-  const aboutCol = item.columns?.[0];
-  const programmesCol = item.columns?.[1];
+  const programsCol = item.columns?.[0];
 
   return (
-    <div className="absolute top-full left-1/2 -translate-x-1/2 z-50 w-auto">
-      <div className="bg-ocean-midnight border-t border-white/5 shadow-[0_24px_60px_-10px_rgba(0,0,0,0.6)] rounded-b-2xl">
-        <div className="px-5 py-6">
-          <div className="grid gap-5" style={{ gridTemplateColumns: '180px 260px' }}>
+    <div className="absolute top-full left-0 right-0 z-50">
+      <div className="bg-ocean-midnight border-t border-white/5 shadow-[0_24px_60px_-10px_rgba(0,0,0,0.6)]">
+        <div className="max-w-6xl mx-auto px-6 py-6">
+          <div className="grid grid-cols-1 md:grid-cols-[340px_1fr] gap-8">
 
-            {/* Column 1: About Us + Programs stacked */}
-            <div className="space-y-5">
-              {/* About Us Section */}
-              <div>
-                <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise mb-3 flex items-center gap-2">
-                  <span className="w-3 h-px bg-ocean-turquoise/40 inline-block" />
-                  About Us
-                </p>
-                <div className="space-y-0.5">
-                  {aboutCol?.items.map((sub) => (
-                    <Link
-                      key={sub.href + sub.label}
-                      href={sub.href}
-                      onClick={onClose}
-                      className="group flex items-center py-1.5 px-2 rounded-lg hover:bg-white/5 transition-all duration-200"
-                    >
-                      <span
-                        className="h-px bg-ocean-turquoise shrink-0 transition-all duration-300 mr-0 group-hover:mr-2"
-                        style={{ width: 0 }}
-                        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.width = '10px'; }}
-                      />
-                      <span className="text-[12px] font-medium text-white/55 group-hover:text-white transition-colors duration-200 leading-tight">
-                        {sub.label}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Strategic Objectives Section */}
-              <div className="pt-4 border-t border-white/10">
-                <div className="flex items-center justify-between mb-3">
-                  <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise flex items-center gap-2">
-                    <span className="w-3 h-px bg-ocean-turquoise/40 inline-block" />
-                    Strategic Objectives
+            {/* Column 1: Our Work — rewritten intro + Explore All Projects CTA */}
+            <div className="relative rounded-2xl overflow-hidden" style={{ minHeight: '280px' }}>
+              <Image
+                src="/images/divers.jpg"
+                alt="Community-led coral restoration at Kuruwitu"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/90 to-ocean-midnight/50" />
+              <div className="relative z-10 h-full p-5 flex flex-col justify-between">
+                <div>
+                  <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise mb-2 flex items-center gap-2">
+                    <span className="w-3 h-px bg-ocean-turquoise/50 inline-block" />
+                    Our Work
                   </p>
-                  <Link
-                    href="/programmes"
-                    onClick={onClose}
-                    className="text-[10px] text-white/30 hover:text-ocean-turquoise transition-colors font-medium"
-                  >
-                    See all →
-                  </Link>
+                  <h3 className="text-xl font-poppins font-bold text-white leading-tight mb-2">
+                    Collaborative Management in Action
+                  </h3>
+                  <p className="text-[13px] text-white/70 leading-relaxed">
+                    Discover the global projects we&apos;re involved in, the focus of our conservation efforts, and the expert teams that inspire our strategies for change.
+                  </p>
                 </div>
-                <div className="space-y-0.5">
-                  {programmesCol?.items.map((prog, i) => (
-                    <Link
-                      key={prog.href}
-                      href={prog.href}
-                      onClick={onClose}
-                      className="group flex items-center gap-2 px-2 py-1.5 rounded-lg hover:bg-white/5 transition-all duration-150"
-                    >
-                      <span className="w-5 h-5 rounded-md bg-white/5 text-ocean-turquoise text-[8px] font-bold flex items-center justify-center shrink-0 group-hover:bg-ocean-turquoise group-hover:text-ocean-midnight transition-all duration-200">
-                        {String(i + 1).padStart(2, '0')}
-                      </span>
-                      <span className="text-[11px] font-medium text-white/45 group-hover:text-white/90 transition-colors leading-snug">
-                        {prog.label}
-                      </span>
-                    </Link>
-                  ))}
+                <div>
+                  <div className="flex items-center gap-6 mb-3">
+                    <div>
+                      <div className="text-2xl font-poppins font-bold text-ocean-turquoise leading-none">
+                        {String(OUR_WORK_PROGRAMS.length).padStart(2, '0')}
+                      </div>
+                      <div className="text-[10px] text-white/50 uppercase tracking-widest mt-1">Programmes</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-poppins font-bold text-ocean-turquoise leading-none">{PROJECTS.length}+</div>
+                      <div className="text-[10px] text-white/50 uppercase tracking-widest mt-1">Active Projects</div>
+                    </div>
+                  </div>
+                  <Link
+                    href="/#projects"
+                    onClick={onClose}
+                    className="group/btn inline-flex items-center gap-2 px-5 py-2.5 bg-ocean-turquoise text-ocean-midnight rounded-lg font-bold text-sm hover:bg-white transition-all duration-200"
+                  >
+                    Explore All Projects
+                    <span className="group-hover/btn:translate-x-0.5 transition-transform inline-block">→</span>
+                  </Link>
                 </div>
               </div>
             </div>
 
-            {/* Column 2: Photo + Impact */}
+            {/* Column 2: Programs */}
             <div>
-              <Link
-                href="/programmes"
-                onClick={onClose}
-                className="group relative block rounded-xl overflow-hidden"
-                style={{ minHeight: '180px', height: '100%' }}
-              >
-                <Image
-                  src="/images/divers.jpg"
-                  alt="Coral restoration divers at Kuruwitu"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/65 to-ocean-midnight/15" />
-                <div className="absolute inset-0 p-5 flex flex-col justify-between">
-                  <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-white/35">
-                    Coral Restoration · Kilifi
-                  </div>
-                  <div>
-                    <div className="text-[36px] font-poppins font-bold text-ocean-turquoise leading-none">25,000</div>
-                    <div className="text-[10px] text-white/55 uppercase tracking-widest mt-1">Coral Colonies Planted</div>
-                    <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-white/55 group-hover:text-ocean-turquoise transition-colors duration-200">
-                      View All
-                      <span className="group-hover:translate-x-0.5 transition-transform inline-block">→</span>
+              <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise mb-2 flex items-center gap-2">
+                <span className="w-3 h-px bg-ocean-turquoise/40 inline-block" />
+                Programs
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                {programsCol?.items.map((prog, i) => (
+                  <Link
+                    key={prog.href}
+                    href={prog.href}
+                    onClick={onClose}
+                    className="group relative p-3 rounded-xl border border-white/10 hover:border-ocean-turquoise/40 hover:bg-white/5 transition-all duration-200"
+                  >
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="w-7 h-7 rounded-lg bg-white/5 text-ocean-turquoise text-xs font-bold flex items-center justify-center shrink-0 group-hover:bg-ocean-turquoise group-hover:text-ocean-midnight transition-all duration-200">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-ocean-turquoise/40 group-hover:text-ocean-turquoise group-hover:translate-x-1 transition-all">→</span>
                     </div>
-                  </div>
-                </div>
-              </Link>
+                    <div className="text-sm font-bold text-white group-hover:text-ocean-turquoise transition-colors leading-tight mb-1">
+                      {prog.label}
+                    </div>
+                    <p className="text-[11px] text-white/45 leading-snug line-clamp-1">{prog.description}</p>
+                  </Link>
+                ))}
+              </div>
+
+              {/* Cross-cutting themes */}
+              <div className="mt-3 pt-3 border-t border-white/10 flex flex-wrap items-center gap-x-3 gap-y-1.5">
+                <span className="text-[9px] text-white/30 uppercase tracking-widest shrink-0">Cross-cutting:</span>
+                <span className="text-[11px] text-white/40 leading-snug">
+                  {CROSS_CUTTING_THEMES.join(' · ')}
+                </span>
+              </div>
             </div>
 
           </div>
+
+          {/* Recognition & Partners band */}
+          <div className="mt-5 pt-4 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Recognition & Awards */}
+            <div>
+              <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise mb-2 flex items-center gap-2">
+                <span className="w-3 h-px bg-ocean-turquoise/40 inline-block" />
+                Recognition & Awards
+              </p>
+              <div className="flex flex-wrap items-center gap-1.5 mb-2">
+                {[
+                  { label: 'UNDP Equator Prize', year: '2017' },
+                  { label: 'Royal Visit', year: '2023' },
+                  { label: 'IUCN Congress', year: '2025' },
+                ].map((a) => (
+                  <span
+                    key={a.label}
+                    className="inline-flex items-center gap-1.5 text-[11px] text-white/70 bg-white/5 border border-white/10 rounded-full px-2.5 py-1"
+                  >
+                    <svg className="w-3 h-3 text-ocean-turquoise shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    {a.label} <span className="text-white/40">· {a.year}</span>
+                  </span>
+                ))}
+              </div>
+              <Link
+                href="/about/recognition"
+                onClick={onClose}
+                className="group/link text-[11px] font-bold text-ocean-turquoise hover:text-white transition-colors inline-flex items-center gap-1"
+              >
+                See all recognition
+                <span className="group-hover/link:translate-x-0.5 transition-transform inline-block">→</span>
+              </Link>
+            </div>
+
+            {/* Partners */}
+            <div>
+              <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise mb-2 flex items-center gap-2">
+                <span className="w-3 h-px bg-ocean-turquoise/40 inline-block" />
+                Trusted By Our Partners
+              </p>
+              <div className="flex flex-wrap items-center gap-1.5 mb-2">
+                {['Coral Guardian', 'Blue Ventures', 'IUCN', 'UNDP', 'Kenya Wildlife Service', 'Kilifi County'].map((name) => (
+                  <span
+                    key={name}
+                    className="text-[11px] text-white/60 bg-white/5 border border-white/10 rounded-full px-2.5 py-1"
+                  >
+                    {name}
+                  </span>
+                ))}
+              </div>
+              <Link
+                href="/about/partners"
+                onClick={onClose}
+                className="group/link text-[11px] font-bold text-ocean-turquoise hover:text-white transition-colors inline-flex items-center gap-1"
+              >
+                Meet our partners
+                <span className="group-hover/link:translate-x-0.5 transition-transform inline-block">→</span>
+              </Link>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -259,7 +308,7 @@ function ActionCardsMegaDropdown({ onClose }: { onClose: () => void }) {
     <div className="absolute top-full left-0 right-0 z-50">
       <div className="bg-ocean-midnight border-t border-white/5 shadow-[0_24px_60px_-10px_rgba(0,0,0,0.6)]">
         <div className="max-w-6xl mx-auto px-6 py-9">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-3 gap-4">
             {INVOLVE_CARDS.map((card, i) => (
               <Link
                 key={card.title}
@@ -284,6 +333,15 @@ function ActionCardsMegaDropdown({ onClose }: { onClose: () => void }) {
                   <div className="absolute top-7 left-6 w-10 h-10 bg-white/[0.07] rotate-45 rounded-lg pointer-events-none" />
                   <div className="absolute bottom-10 right-7 w-7 h-7 bg-white/[0.09] rotate-45 rounded pointer-events-none" />
                   <div className="absolute top-1/2 right-12 w-5 h-5 border border-white/[0.12] rotate-45 rounded pointer-events-none" />
+                </>)}
+
+                {/* ── Card 2 (Contact Us): message envelope pattern ── */}
+                {i === 2 && (<>
+                  <div className="absolute -top-8 -right-8 w-32 h-32 rounded-lg border-2 border-white/[0.08] pointer-events-none" />
+                  <div className="absolute -bottom-12 -left-12 w-40 h-40 rounded-2xl bg-white/[0.05] pointer-events-none" />
+                  <div className="absolute top-6 right-8 w-12 h-12 rounded border border-white/[0.10] pointer-events-none" />
+                  <div className="absolute bottom-8 left-8 w-8 h-8 rounded-lg bg-white/[0.08] pointer-events-none" />
+                  <div className="absolute top-1/2 left-1/3 w-6 h-6 rounded border border-white/[0.12] pointer-events-none" />
                 </>)}
 
                 <div className="relative">
@@ -328,6 +386,91 @@ function ActionCardsMegaDropdown({ onClose }: { onClose: () => void }) {
                 <span className="inline-block group-hover/link:translate-x-0.5 transition-transform">→</span>
               </Link>
             ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── Get Involved Custom Dropdown ─────────────────────────────────────────────
+
+function GetInvolvedMegaDropdown({ onClose }: { onClose: () => void }) {
+  return (
+    <div className="absolute top-full left-0 right-0 z-50">
+      <div className="bg-ocean-midnight border-t border-white/5 shadow-[0_24px_60px_-10px_rgba(0,0,0,0.6)]">
+        <div className="max-w-6xl mx-auto px-6 py-10">
+          <div className="grid gap-8" style={{ gridTemplateColumns: '1fr 280px 380px' }}>
+
+            {/* Left: Description */}
+            <div className="flex flex-col justify-center">
+              <h3 className="text-2xl font-poppins font-bold text-white mb-4">Get involved</h3>
+              <p className="text-white/70 leading-relaxed">
+                Want to join a campaign, raise funds or make a donation? Find out how you can play your part in our mission to protect the world's oceans.
+              </p>
+            </div>
+
+            {/* Middle: Menu Items */}
+            <div className="flex flex-col justify-center">
+              <Link
+                href="/donate"
+                onClick={onClose}
+                className="text-white/90 hover:text-ocean-turquoise font-medium text-lg py-2 transition-colors"
+              >
+                Donate
+              </Link>
+              <div className="h-px bg-white/20 my-3" />
+              <Link
+                href="/contact"
+                onClick={onClose}
+                className="text-white/90 hover:text-ocean-turquoise font-medium text-lg py-2 transition-colors"
+              >
+                Contact
+              </Link>
+              <Link
+                href="/contact?type=Partnership"
+                onClick={onClose}
+                className="text-white/90 hover:text-ocean-turquoise font-medium text-lg py-2 transition-colors"
+              >
+                Partner and volunteer
+              </Link>
+            </div>
+
+            {/* Right: Featured Campaign Card */}
+            <Link
+              href="/blog/category/updates"
+              onClick={onClose}
+              className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-teal-600 to-teal-800 p-6 text-white hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="relative z-10">
+                <div className="inline-block px-3 py-1 bg-teal-500 text-white text-xs font-bold uppercase tracking-wider rounded-full mb-3">
+                  ONGOING CAMPAIGN
+                </div>
+                <div className="flex items-center gap-2 text-sm mb-4">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                  </svg>
+                  INDIAN OCEAN
+                </div>
+                <h4 className="text-3xl font-poppins font-bold mb-2">
+                  Save the<br />Sanctuary
+                </h4>
+                <p className="text-xl font-light mb-6">2025</p>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white text-teal-800 rounded-full font-semibold text-sm">
+                  TAKE ACTION
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+              {/* Background decorative element */}
+              <div className="absolute top-1/2 right-0 -translate-y-1/2 opacity-20">
+                <svg className="w-32 h-32" viewBox="0 0 100 100" fill="currentColor">
+                  <path d="M50 10 L90 90 L10 90 Z" />
+                </svg>
+              </div>
+            </Link>
+
           </div>
         </div>
       </div>
@@ -409,13 +552,17 @@ function EditorialMegaDropdown({ item, onClose }: { item: MegaNavItem; onClose: 
 
 // ─── Mobile Nav Item ──────────────────────────────────────────────────────────
 
+// ══════════════════════════════════════════════════════════════════
+// PART 5 · Mobile menu item (accordion row)
+// ══════════════════════════════════════════════════════════════════
+
 function MobileNavItem({ item, onClose }: { item: MegaNavItem; onClose: () => void }) {
   const [open, setOpen] = useState(false);
 
-  if (!item.columns) {
+  if (!item.columns && item.href) {
     return (
       <Link
-        href={item.href!}
+        href={item.href}
         onClick={onClose}
         className="flex items-center justify-between py-3.5 text-sm font-semibold text-ocean-midnight border-b border-gray-100"
       >
@@ -423,6 +570,11 @@ function MobileNavItem({ item, onClose }: { item: MegaNavItem; onClose: () => vo
         <span className="text-ocean-turquoise/50 text-xs">→</span>
       </Link>
     );
+  }
+
+  // If no columns and no href, skip rendering
+  if (!item.columns) {
+    return null;
   }
 
   return (
@@ -444,6 +596,21 @@ function MobileNavItem({ item, onClose }: { item: MegaNavItem; onClose: () => vo
 
       {open && (
         <div className="pb-5 space-y-5">
+          {item.layout === 'dark-immersive' && (
+            <div className="bg-ocean-midnight rounded-2xl p-5">
+              <p className="text-[9px] font-bold uppercase tracking-widest text-ocean-turquoise mb-2">Our Work</p>
+              <p className="text-xs text-white/60 leading-relaxed mb-4">
+                Discover the global projects we&apos;re involved in, the focus of our conservation efforts, and the expert teams that inspire our strategies for change.
+              </p>
+              <Link
+                href="/#projects"
+                onClick={onClose}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-ocean-turquoise text-ocean-midnight rounded-lg font-bold text-xs"
+              >
+                Explore All Projects <span>→</span>
+              </Link>
+            </div>
+          )}
           {item.columns.map((col) => (
             <div key={col.title}>
               <p className="text-[9px] font-bold uppercase tracking-widest text-ocean-turquoise mb-2.5 flex items-center gap-2">
@@ -491,6 +658,31 @@ function MobileNavItem({ item, onClose }: { item: MegaNavItem; onClose: () => vo
             </div>
           ))}
 
+          {item.layout === 'dark-immersive' && (
+            <div className="flex items-center gap-4 pt-1">
+              <Link
+                href="/about/recognition"
+                onClick={onClose}
+                className="flex-1 flex items-center gap-2 py-2 px-3 rounded-lg bg-gray-50 text-xs font-semibold text-ocean-midnight"
+              >
+                <svg className="w-3.5 h-3.5 text-ocean-turquoise shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                Recognition
+              </Link>
+              <Link
+                href="/about/partners"
+                onClick={onClose}
+                className="flex-1 flex items-center gap-2 py-2 px-3 rounded-lg bg-gray-50 text-xs font-semibold text-ocean-midnight"
+              >
+                <svg className="w-3.5 h-3.5 text-ocean-turquoise shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                Partners
+              </Link>
+            </div>
+          )}
+
           {/* Compact action cards for Get Involved */}
           {item.layout === 'action-cards' && (
             <div className="grid grid-cols-3 gap-2">
@@ -514,6 +706,10 @@ function MobileNavItem({ item, onClose }: { item: MegaNavItem; onClose: () => vo
 }
 
 // ─── Main Navbar ───────────────────────────────────────────────────────────────
+
+// ══════════════════════════════════════════════════════════════════
+// PART 6 · The header itself
+// ══════════════════════════════════════════════════════════════════
 
 export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -548,16 +744,18 @@ export default function Navbar() {
         <nav className="bg-white/95 backdrop-blur-lg border-b border-ocean-midnight/5 shadow-sm relative">
             {/* Combined Top Bar and Main Nav */}
             <div className="relative">
-              {/* Top Bar: Phone Number, Search, Donate */}
+              {/* ══════════════════════════════════════════════════════════════════
+                  SECTION 1 · Top bar (phone, email, search, Donate button)
+                  ══════════════════════════════════════════════════════════════════ */}
               <div className="bg-ocean-midnight border-b border-white/10">
-                <div className="max-w-6xl mx-auto px-6 flex items-center justify-end h-12 gap-6">
-                  <a href="tel:+254732807935" className="flex items-center gap-2 text-xs text-white/70 hover:text-ocean-turquoise transition-colors">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-end h-12 gap-4 sm:gap-6">
+                  <a href="tel:+254732807935" className="hidden xl:flex items-center gap-2 text-xs text-white/70 hover:text-ocean-turquoise transition-colors">
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                     +254 732 807 935
                   </a>
-                  <a href="mailto:info@oceansalivekenya.org" className="flex items-center gap-2 text-xs text-white/70 hover:text-ocean-turquoise transition-colors">
+                  <a href="mailto:info@oceansalivekenya.org" className="hidden lg:flex items-center gap-2 text-xs text-white/70 hover:text-ocean-turquoise transition-colors">
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
@@ -586,8 +784,40 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* Logo overlapping top bar and main nav - Using full height of both sections */}
-              <div className="absolute left-0 top-0 z-20 bg-ocean-midnight flex items-center justify-center px-8 md:px-12" style={{ width: '520px', height: '100%' }}>
+              {/* ══════════════════════════════════════════════════════════════════
+                  SECTION 2 · Phone/tablet header (logo + menu button) - below 1024px
+                  ══════════════════════════════════════════════════════════════════ */}
+              <div className="flex lg:hidden items-center justify-between h-16 px-4 bg-ocean-midnight">
+                <Link href="/" onClick={closeAll} className="flex items-center shrink-0">
+                  <Image
+                    src="/Oceans-Alive-Logo-WHITE.png"
+                    alt="Oceans Alive Foundation"
+                    width={960}
+                    height={540}
+                    className="w-[120px] h-14 object-cover"
+                    priority
+                  />
+                </Link>
+                <button
+                  onClick={() => { setMobileOpen(!mobileOpen); closeAll(); }}
+                  className="p-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                  aria-label="Toggle menu"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d={mobileOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              {/* ══════════════════════════════════════════════════════════════════
+                  SECTION 3 · Desktop logo panel (diagonal edge) - 1024px and up
+                  ══════════════════════════════════════════════════════════════════ */}
+              <div className="hidden lg:flex absolute left-0 top-0 z-20 bg-ocean-midnight items-center justify-center px-8 md:px-12" style={{ width: '520px', height: '100%' }}>
                 <Link href="/" onClick={closeAll} className="flex items-center shrink-0">
                   <Image
                     src="/Oceans-Alive-Logo-WHITE.png"
@@ -617,28 +847,35 @@ export default function Navbar() {
                 />
               </div>
 
-              <div className="relative max-w-6xl mx-auto flex items-stretch h-20 md:h-22 overflow-hidden">
+              <div className="hidden lg:flex relative max-w-6xl mx-auto items-stretch h-20 md:h-22 overflow-hidden">
                 {/* Left Section: Spacer for logo */}
                 <div style={{ width: '520px' }} />
 
                 {/* Right Section: Menu Area with White Background */}
                 <div className="flex-1 bg-white flex items-center justify-between px-6">
-                {/* Desktop Menu */}
-                <div className="hidden md:flex items-center gap-1 ml-12">
+                {/* ══════════════════════════════════════════════════════════════════
+                    SECTION 4 · Desktop menu items
+                    ══════════════════════════════════════════════════════════════════ */}
+                <div className="hidden lg:flex items-center gap-1 ml-12">
                   {MEGA_NAV.map((item) => {
                     const isActive = activeMenu === item.label;
 
-                    if (!item.columns) {
+                    if (!item.columns && item.href) {
                       return (
                         <Link
                           key={item.label}
-                          href={item.href!}
+                          href={item.href}
                           onClick={closeAll}
                           className="px-4 py-2 text-base font-bold text-gray-700 hover:text-ocean-midnight hover:bg-ocean-midnight/5 rounded-lg transition-colors"
                         >
                           {item.label}
                         </Link>
                       );
+                    }
+
+                    // Skip items without columns and without href
+                    if (!item.columns) {
+                      return null;
                     }
 
                     return (
@@ -667,29 +904,13 @@ export default function Navbar() {
                   })}
                 </div>
 
-                {/* Right Actions */}
-                <div className="flex items-center gap-3">
-                  {/* Mobile Toggle */}
-                  <button
-                    onClick={() => { setMobileOpen(!mobileOpen); closeAll(); }}
-                    className="md:hidden p-2 text-ocean-midnight hover:bg-gray-100 rounded-lg transition-colors"
-                    aria-label="Toggle menu"
-                  >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d={mobileOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
-                      />
-                    </svg>
-                  </button>
-                </div>
               </div>
             </div>
           </div>
 
-          {/* Search Bar (slides down when open) */}
+          {/* ══════════════════════════════════════════════════════════════════
+              SECTION 5 · Search bar (slides down)
+              ══════════════════════════════════════════════════════════════════ */}
           {searchOpen && (
             <div className="bg-ocean-midnight/5 border-t border-ocean-midnight/10">
               <div className="max-w-6xl mx-auto px-6 py-3">
@@ -708,16 +929,20 @@ export default function Navbar() {
             </div>
           )}
 
-            {/* Desktop Mega Dropdown */}
-            {activeItem?.columns && (
+            {/* ══════════════════════════════════════════════════════════════════
+                SECTION 6 · Desktop dropdown panel
+                ══════════════════════════════════════════════════════════════════ */}
+            {activeItem && (
               <div onMouseEnter={cancelClose} onMouseLeave={scheduleClose} className="relative">
                 {activeItem.layout === 'dark-immersive' ? (
                   <DarkImmersiveMegaDropdown item={activeItem} onClose={closeAll} />
+                ) : activeItem.layout === 'get-involved-custom' ? (
+                  <GetInvolvedMegaDropdown onClose={closeAll} />
                 ) : activeItem.layout === 'action-cards' ? (
                   <ActionCardsMegaDropdown onClose={closeAll} />
-                ) : (
+                ) : activeItem.columns ? (
                   <EditorialMegaDropdown item={activeItem} onClose={closeAll} />
-                )}
+                ) : null}
               </div>
             )}
           </nav>
@@ -732,9 +957,11 @@ export default function Navbar() {
         />
       )}
 
-      {/* Mobile Menu */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 7 · Phone/tablet menu (opens from the menu button)
+          ══════════════════════════════════════════════════════════════════ */}
       {mobileOpen && (
-        <div className="md:hidden fixed inset-x-0 top-20 z-50 bg-white border-t border-ocean-midnight/10 shadow-xl max-h-[80vh] overflow-y-auto">
+        <div className="lg:hidden fixed inset-x-0 top-[112px] z-50 bg-white border-t border-ocean-midnight/10 shadow-xl max-h-[calc(100dvh-112px)] overflow-y-auto overscroll-contain">
           <div className="max-w-6xl mx-auto px-6 py-4 space-y-0">
             {MEGA_NAV.map((item) => (
               <MobileNavItem
@@ -751,6 +978,10 @@ export default function Navbar() {
               >
                 Donate Now
               </Link>
+              <div className="flex flex-col items-center gap-2 pt-4 pb-2 text-sm text-ocean-midnight/70">
+                <a href="tel:+254732807935" className="hover:text-ocean-turquoise">+254 732 807 935</a>
+                <a href="mailto:info@oceansalivekenya.org" className="hover:text-ocean-turquoise break-all">info@oceansalivekenya.org</a>
+              </div>
             </div>
           </div>
         </div>

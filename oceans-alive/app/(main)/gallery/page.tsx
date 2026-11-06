@@ -1,3 +1,17 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Gallery
+ * URL:  /gallery
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Photo grid + lightbox
+ *
+ * Where the text/data lives:
+ *   • GALLERY_CATEGORIES  →  lib/constants.ts
+ *   • LOCAL_PREVIEWS  →  top of this file
+ *   • STATIC_GALLERY  →  top of this file
+ */
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -85,8 +99,10 @@ export default function Gallery() {
 
   return (
     <>
-      {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="bg-ocean-midnight py-20 md:py-24">
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
+      <section className="bg-ocean-midnight pt-36 pb-20 md:pt-40 md:pb-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 items-center mb-12">
             <div>
@@ -116,6 +132,9 @@ export default function Gallery() {
         </div>
       </section>
 
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Photo grid + lightbox
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
 

@@ -1,3 +1,13 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Strategic Objective 4 › Institutional Capacity (Governance)
+ * URL:  /programs/research-innovation
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Governance Pillar
+ *   3. What We Do
+ */
 import Link from 'next/link';
 import Image from 'next/image';
 import SDGRow from '@/components/common/SDGRow';
@@ -10,14 +20,16 @@ export const metadata = {
 export default function ResearchInnovationPage() {
   return (
     <>
-      {/* Hero Section */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-gradient-to-br from-cyan-600 to-blue-700 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/oceansmen.jpg" alt="Research & Innovation" fill className="object-cover opacity-20" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-32">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-36 pb-24 md:pt-40 md:pb-32">
           <div className="text-6xl font-poppins font-bold text-white/20 mb-4">04</div>
           <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Strengthen Institutional Capacity</h1>
           <p className="text-xl text-white/90 max-w-3xl mb-8 leading-relaxed">
@@ -52,7 +64,9 @@ export default function ResearchInnovationPage() {
         </div>
       </section>
 
-      {/* Governance Pillar Section */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Governance Pillar
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-cyan-900 to-blue-900 py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-8">
@@ -115,7 +129,9 @@ export default function ResearchInnovationPage() {
         </div>
       </section>
 
-      {/* What We Do */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · What We Do
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-cyan-50 to-blue-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-12">What We Do</h2>
@@ -157,7 +173,7 @@ export default function ResearchInnovationPage() {
           </div>
 
           {/* Why This Works - The Evidence Story */}
-          <div className="bg-gradient-to-br from-cyan-600 to-blue-700 rounded-2xl shadow-xl p-8 md:p-10 mb-8 text-white">
+          <div className="bg-gradient-to-br from-cyan-600 to-blue-700 rounded-2xl shadow-xl p-6 sm:p-8 md:p-10 mb-8 text-white">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-12 bg-white rounded-full"></div>
               <h3 className="text-2xl font-poppins font-bold">Community Passion Needs Professional Backbone</h3>
@@ -228,7 +244,7 @@ export default function ResearchInnovationPage() {
           {/* Two Column Layout */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             {/* Sustainable Finance */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-xl transition-shadow">
               <div className="mb-4">
                 <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Sustainable Finance Models</h3>
                 <div className="text-xs text-green-600 font-bold uppercase mt-1">Beyond Donor Dependency</div>
@@ -252,7 +268,7 @@ export default function ResearchInnovationPage() {
             </div>
 
             {/* BMU Network Governance */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-xl transition-shadow">
               <div className="mb-4">
                 <h3 className="text-xl font-poppins font-bold text-ocean-midnight">Kilifi BMU Network Coordination</h3>
                 <div className="text-xs text-blue-600 font-bold uppercase mt-1">18 BMUs | 120 km² Co-Managed</div>
@@ -272,7 +288,7 @@ export default function ResearchInnovationPage() {
           </div>
 
           {/* Full Width - Scientific Monitoring */}
-          <div className="bg-gradient-to-r from-cyan-600 to-blue-700 rounded-2xl shadow-xl p-8 text-white">
+          <div className="bg-gradient-to-r from-cyan-600 to-blue-700 rounded-2xl shadow-xl p-6 sm:p-8 text-white">
             <div className="flex items-start justify-between gap-6">
               <div className="flex-1">
                 <div className="bg-white/20 rounded-lg px-3 py-1 text-white font-bold text-sm inline-block mb-3">Evidence-Based Conservation</div>
@@ -280,7 +296,7 @@ export default function ResearchInnovationPage() {
                 <p className="text-white/90 leading-relaxed mb-4">
                   In partnership with WCS, quarterly monitoring surveys track ecosystem health and conservation impact through Catch Assessment Surveys, Frame Surveys, and the State of Fishery 2021 report.
                 </p>
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
                     <div className="text-xs text-white/70 uppercase mb-1">Partner</div>
                     <div className="text-lg font-bold">WCS</div>

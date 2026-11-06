@@ -1,3 +1,8 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * API HELPERS (talks to the database when one is connected)
+ * ══════════════════════════════════════════════════════════════════
+ */
 import axios, { AxiosInstance } from 'axios';
 import {
   submitContactForm,

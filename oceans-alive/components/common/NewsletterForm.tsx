@@ -1,3 +1,9 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * NEWSLETTER SIGN-UP FORM
+ * ══════════════════════════════════════════════════════════════════
+ * Used on /get-involved. On GoDaddy it sends to the PHP scripts in /api.
+ */
 'use client';
 
 import { useState } from 'react';

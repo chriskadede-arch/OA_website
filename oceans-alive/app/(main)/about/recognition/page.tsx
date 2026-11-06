@@ -1,5 +1,18 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: About › Recognition & Awards
+ * URL:  /about/recognition
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. All Awards — 3x2 Grid
+ *   3. Quote Strip
+ *   4. Next Chapter (call to action)
+ *
+ * Where the text/data lives:
+ *   • AWARDS  →  top of this file
+ */
 import Link from 'next/link';
-import AboutNav from '@/components/common/AboutNav';
 
 export const metadata = {
   title: 'Recognition & Awards - Oceans Alive Foundation',
@@ -37,7 +50,7 @@ const AWARDS = [
     title: 'IUCN Blue Champions Award 2022',
     sub: 'International Union for Conservation of Nature',
     body:
-      'Oceans Alive Foundation wins the 2022 IUCN Blue Champions Award, recognizing outstanding ocean conservation leadership and two decades of proven community-driven marine protection delivering 400% fish biomass increase and 30% coral recovery.',
+      'Kuruwitu CBO wins the 2022 IUCN Blue Champions Award, recognizing outstanding ocean conservation leadership and two decades of proven community-driven marine protection delivering 400% fish biomass increase and 30% coral recovery.',
     highlight: 'Global recognition for champions protecting our ocean for future generations.',
     large: true,
   },
@@ -82,9 +95,10 @@ export default function RecognitionPage() {
 
   return (
     <>
-      <AboutNav />
-      {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section className="relative bg-gradient-to-br from-gray-50 via-white to-amber-50/30 overflow-hidden py-24 md:py-36">
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
+      <section className="relative bg-gradient-to-br from-gray-50 via-white to-amber-50/30 overflow-hidden pt-36 pb-24 md:pt-48 md:pb-36">
         {/* Radial glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#FBB308]/10 blur-[120px] pointer-events-none" />
         {/* Dot grid */}
@@ -112,7 +126,9 @@ export default function RecognitionPage() {
         </div>
       </section>
 
-      {/* ── All Awards - 3x2 Grid ──────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · All Awards — 3x2 Grid
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-b from-white to-gray-50 py-10 pb-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -148,7 +164,9 @@ export default function RecognitionPage() {
         </div>
       </section>
 
-      {/* ── Quote Strip ──────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · Quote Strip
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-16 border-y border-white/[0.06]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-3xl md:text-4xl font-poppins font-bold text-white leading-snug">
@@ -161,7 +179,9 @@ export default function RecognitionPage() {
         </div>
       </section>
 
-      {/* ── Next Chapter CTA ─────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 4 · Next Chapter (call to action)
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-14">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
           <p className="text-white/40 text-sm">

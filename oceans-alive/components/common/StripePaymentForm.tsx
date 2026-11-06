@@ -1,3 +1,8 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * STRIPE CARD PAYMENT FORM (Donate page, payment step)
+ * ══════════════════════════════════════════════════════════════════
+ */
 'use client';
 
 import { useState } from 'react';

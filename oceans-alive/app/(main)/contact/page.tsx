@@ -1,3 +1,16 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Contact
+ * URL:  /contact
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Contact form + info card
+ *
+ * Where the text/data lives:
+ *   • CONTACT_EMAIL, CONTACT_PHONE  →  lib/constants.ts
+ *   • INQUIRY_OPTIONS  →  top of this file
+ */
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -63,7 +76,9 @@ export default function Contact() {
 
   return (
     <>
-      {/* ── NEW HERO (Keep This Design) ─────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-ocean-midnight overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
@@ -71,7 +86,7 @@ export default function Contact() {
           <div className="absolute inset-0 bg-gradient-to-br from-ocean-midnight/90 to-ocean-turquoise/80" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 md:py-32">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-36 pb-24 md:pt-40 md:pb-32">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full mb-8">
               <svg className="w-4 h-4 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,7 +157,9 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* ── FORM SECTION ──────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Contact form + info card
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
@@ -299,7 +316,7 @@ export default function Contact() {
             {/* Sidebar - 2/5 width */}
             <aside className="lg:col-span-2 space-y-6">
               {/* Contact Info Card */}
-              <div className="bg-gradient-to-br from-ocean-midnight to-ocean-turquoise rounded-2xl p-8 text-white">
+              <div className="bg-gradient-to-br from-ocean-midnight to-ocean-turquoise rounded-2xl p-6 sm:p-8 text-white">
                 <h3 className="text-xl font-poppins font-bold mb-6">Get In Touch</h3>
 
                 <div className="space-y-6">
@@ -309,9 +326,9 @@ export default function Contact() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-white/60 text-xs uppercase tracking-widest mb-1">Email</p>
-                      <a href={`mailto:${CONTACT_EMAIL}`} className="text-sm hover:text-ocean-seafoam transition-colors">
+                      <a href={`mailto:${CONTACT_EMAIL}`} className="text-sm hover:text-ocean-seafoam transition-colors break-all">
                         {CONTACT_EMAIL}
                       </a>
                     </div>
@@ -323,7 +340,7 @@ export default function Contact() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-white/60 text-xs uppercase tracking-widest mb-1">Phone</p>
                       <a href={`tel:${CONTACT_PHONE}`} className="text-sm hover:text-ocean-seafoam transition-colors">
                         {CONTACT_PHONE}
@@ -338,7 +355,7 @@ export default function Contact() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-white/60 text-xs uppercase tracking-widest mb-1">Location</p>
                       <p className="text-sm">Vipingo, Kilifi County, Kenya</p>
                     </div>

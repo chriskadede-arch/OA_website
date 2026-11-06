@@ -1,7 +1,20 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: About › Our Story
+ * URL:  /about/story
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Origin Story
+ *   3. Story content & timeline
+ *   4. Next Chapter (call to action)
+ *
+ * Where the text/data lives:
+ *   • TIMELINE, IMPACT_STATS  →  lib/constants.ts
+ */
 import Image from 'next/image';
 import Link from 'next/link';
 import { TIMELINE, IMPACT_STATS } from '@/lib/constants';
-import AboutNav from '@/components/common/AboutNav';
 
 export const metadata = {
   title: 'Our Story - Oceans Alive Foundation',
@@ -12,8 +25,9 @@ export const metadata = {
 export default function StoryPage() {
   return (
     <>
-      <AboutNav />
-      {/* ── Hero ─────────────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-ocean-midnight overflow-hidden">
         <div className="absolute inset-0">
           <Image
@@ -25,7 +39,7 @@ export default function StoryPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-ocean-midnight via-ocean-midnight/85 to-ocean-midnight/40" />
         </div>
-        <div className="relative max-w-6xl mx-auto px-6 py-28 md:py-40">
+        <div className="relative max-w-6xl mx-auto px-6 pt-40 pb-28 md:pt-52 md:pb-40">
           <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-6 flex items-center gap-3">
             <span className="w-8 h-px bg-ocean-turquoise/50" />
             Our Story
@@ -40,7 +54,9 @@ export default function StoryPage() {
         </div>
       </section>
 
-      {/* ── Origin Story ─────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Origin Story
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -117,7 +133,9 @@ export default function StoryPage() {
         </div>
       </section>
 
-      {/* Story Content & Timeline from Homepage */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · Story content & timeline
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           {/* Underwater Image 1 */}
@@ -212,7 +230,9 @@ export default function StoryPage() {
       </section>
 
 
-      {/* ── Next Chapter CTA ─────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 4 · Next Chapter (call to action)
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-14">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
           <p className="text-gray-500 text-sm">

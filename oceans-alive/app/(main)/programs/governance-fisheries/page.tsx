@@ -1,3 +1,12 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Our Work › Governance & Sustainable Fisheries
+ * URL:  /programs/governance-fisheries
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. What We Do
+ */
 import Link from 'next/link';
 import Image from 'next/image';
 import SDGRow from '@/components/common/SDGRow';
@@ -10,14 +19,16 @@ export const metadata = {
 export default function GovernanceFisheriesPage() {
   return (
     <>
-      {/* Hero Section */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-gradient-to-br from-amber-600 to-orange-700 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/kamakukijcma.jpg" alt="Governance & Fisheries" fill className="object-cover opacity-20" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-32">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-36 pb-24 md:pt-40 md:pb-32">
           <div className="text-6xl font-poppins font-bold text-white/20 mb-4">04</div>
           <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Governance & Sustainable Fisheries</h1>
           <p className="text-xl text-white/90 max-w-3xl mb-8 leading-relaxed">
@@ -52,13 +63,15 @@ export default function GovernanceFisheriesPage() {
         </div>
       </section>
 
-      {/* What We Do */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · What We Do
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-amber-50 to-orange-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-12">What We Do</h2>
 
           {/* Policy Milestones Banner */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
+          <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 mb-8">
             <div className="text-center mb-6">
               <div className="text-sm text-gray-500 uppercase tracking-wide mb-2">Milestones in Kenyan Co-Management</div>
               <div className="text-3xl font-bold text-amber-700">First in Kenya</div>
@@ -88,21 +101,21 @@ export default function GovernanceFisheriesPage() {
               <p className="text-gray-700 leading-relaxed mb-6">
                 17 BMUs · 265,000 ha · 7,000 fishers/households benefiting · 6-step toolkit · State of Fishery 2021 report · IUCN/EU BIOPAMA support.
               </p>
-              <div className="grid md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="bg-gradient-to-br from-amber-600 to-orange-700 rounded-xl p-5 text-center text-white">
-                  <div className="text-4xl font-bold mb-1">17</div>
+                  <div className="text-3xl lg:text-4xl font-bold mb-1">17</div>
                   <div className="text-xs uppercase opacity-90">BMUs</div>
                 </div>
                 <div className="bg-gradient-to-br from-green-600 to-teal-600 rounded-xl p-5 text-center text-white">
-                  <div className="text-4xl font-bold mb-1">265,000</div>
+                  <div className="text-3xl lg:text-4xl font-bold mb-1">265,000</div>
                   <div className="text-xs uppercase opacity-90">Hectares</div>
                 </div>
                 <div className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl p-5 text-center text-white">
-                  <div className="text-4xl font-bold mb-1">7,000</div>
+                  <div className="text-3xl lg:text-4xl font-bold mb-1">7,000</div>
                   <div className="text-xs uppercase opacity-90">Fishers/Households</div>
                 </div>
                 <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl p-5 text-center text-white">
-                  <div className="text-4xl font-bold mb-1">6-Step</div>
+                  <div className="text-3xl lg:text-4xl font-bold mb-1">6-Step</div>
                   <div className="text-xs uppercase opacity-90">Toolkit</div>
                 </div>
               </div>
@@ -112,7 +125,7 @@ export default function GovernanceFisheriesPage() {
           {/* Two Column Layout */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             {/* First CMA */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-xl transition-shadow">
               <div className="mb-4">
                 <h3 className="text-xl font-poppins font-bold text-ocean-midnight">First Co-Management Area</h3>
               </div>
@@ -134,7 +147,7 @@ export default function GovernanceFisheriesPage() {
             </div>
 
             {/* BMU Capacity Building */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-xl transition-shadow">
               <div className="mb-4">
                 <h3 className="text-xl font-poppins font-bold text-ocean-midnight">BMU capacity & operations</h3>
               </div>
@@ -153,7 +166,7 @@ export default function GovernanceFisheriesPage() {
           </div>
 
           {/* Full Width - Data & Monitoring */}
-          <div className="bg-gradient-to-r from-ocean-midnight to-blue-900 rounded-2xl shadow-xl p-8 text-white">
+          <div className="bg-gradient-to-r from-ocean-midnight to-blue-900 rounded-2xl shadow-xl p-6 sm:p-8 text-white">
             <div className="flex items-start justify-between gap-6">
               <div className="flex-1">
                 <div className="bg-white/20 rounded-lg px-3 py-1 text-white font-bold text-sm inline-block mb-3">Evidence-Based Policy</div>
@@ -161,7 +174,7 @@ export default function GovernanceFisheriesPage() {
                 <p className="text-white/90 leading-relaxed mb-4">
                   Catch Assessment Surveys, Frame Surveys, the State of Fishery 2021 report and MCS plans that inform both community management and national policy, in partnership with WCS.
                 </p>
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
                     <div className="text-xs text-white/70 uppercase mb-1">Partner</div>
                     <div className="text-lg font-bold">WCS</div>

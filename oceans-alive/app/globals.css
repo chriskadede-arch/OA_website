@@ -1,3 +1,10 @@
+/* ══════════════════════════════════════════════════════════════════
+   GLOBAL STYLES (apply to every page)
+   ══════════════════════════════════════════════════════════════════
+   Contents: fonts import · base typography · reusable component classes ·
+   scrollbar · "Small-screen safety net" (phone/tablet fixes, at the bottom).
+   Most styling is done with Tailwind classes directly in each page file.
+*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -276,4 +283,33 @@ html {
 
 button, a, [role="button"] {
   transition: all 0.3s ease;
+}
+
+/* ── Small-screen safety net ────────────────────────────────────────────
+   Keeps content inside the viewport on phones (320–639px) and stops any
+   stray wide element from making the whole page scroll sideways. */
+body {
+  overflow-x: hidden; /* body only, so position: sticky keeps working */
+}
+@supports (overflow: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 639px) {
+  /* Scale display headings with the screen instead of fixed desktop sizes */
+  .text-4xl { font-size: clamp(1.75rem, 8.5vw, 2.25rem); }
+  .text-5xl { font-size: clamp(2rem, 10.5vw, 3rem); }
+  .text-6xl { font-size: clamp(2.25rem, 12vw, 3.75rem); }
+  .text-7xl { font-size: clamp(2.5rem, 13vw, 4.5rem); }
+  .text-8xl { font-size: clamp(2.75rem, 14vw, 6rem); }
 }

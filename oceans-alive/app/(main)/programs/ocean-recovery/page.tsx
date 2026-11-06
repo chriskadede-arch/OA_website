@@ -1,3 +1,13 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Strategic Objective 2 › Marine Ecosystem Integrity (Environment)
+ * URL:  /programs/ocean-recovery
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Environment Pillar
+ *   3. What We Do
+ */
 import Link from 'next/link';
 import Image from 'next/image';
 import SDGRow from '@/components/common/SDGRow';
@@ -10,14 +20,16 @@ export const metadata = {
 export default function OceanRecoveryPage() {
   return (
     <>
-      {/* Hero Section */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-gradient-to-br from-ocean-midnight to-blue-900 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/divers.jpg" alt="Ocean Recovery" fill className="object-cover opacity-20" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-32">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-36 pb-24 md:pt-40 md:pb-32">
           <div className="text-6xl font-poppins font-bold text-white/20 mb-4">02</div>
           <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Promote Marine Ecosystem Integrity</h1>
           <p className="text-xl text-white/90 max-w-3xl mb-8 leading-relaxed">
@@ -48,7 +60,9 @@ export default function OceanRecoveryPage() {
         </div>
       </section>
 
-      {/* Environment Pillar Section */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Environment Pillar
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-ocean-midnight to-blue-900 py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-8">
@@ -112,7 +126,9 @@ export default function OceanRecoveryPage() {
         </div>
       </section>
 
-      {/* What We Do */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · What We Do
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-12">What We Do</h2>
@@ -155,7 +171,7 @@ export default function OceanRecoveryPage() {
           </div>
 
           {/* Why This Works - The Partnership Model */}
-          <div className="bg-gradient-to-br from-ocean-midnight to-blue-900 rounded-2xl shadow-xl p-8 md:p-10 mb-8 text-white">
+          <div className="bg-gradient-to-br from-ocean-midnight to-blue-900 rounded-2xl shadow-xl p-6 sm:p-8 md:p-10 mb-8 text-white">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-12 bg-ocean-turquoise rounded-full"></div>
               <h3 className="text-2xl font-poppins font-bold">How Coral Restoration Actually Works</h3>
@@ -174,7 +190,7 @@ export default function OceanRecoveryPage() {
           </div>
 
           {/* Featured Project - Tengefu LMMA */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border-l-8 border-ocean-turquoise">
+          <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 mb-8 border-l-8 border-ocean-turquoise">
             <div className="flex items-start gap-3 mb-4">
               <div className="bg-ocean-turquoise/10 rounded-lg px-3 py-1 text-ocean-turquoise font-bold text-sm">20 Year Journey</div>
               <div className="bg-amber-100 rounded-lg px-3 py-1 text-amber-700 font-bold text-sm">Kenya's First LMMA</div>
@@ -219,7 +235,7 @@ export default function OceanRecoveryPage() {
           {/* Two Column Layout with SVG Icons */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             {/* Coral Restoration */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-xl transition-shadow">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-10 h-10 flex-shrink-0 text-pink-600">
                   <svg viewBox="0 0 24 24" fill="currentColor">
@@ -235,7 +251,7 @@ export default function OceanRecoveryPage() {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Since 2019, Oceans Alive has partnered with Coral Guardian International and Coral Reef Care to build Kenya's most active community-led coral nursery at Kuruwitu. The same fishers whose livelihoods depend on the reef are now trained and employed as certified reef gardeners - planting, monitoring, and protecting the future they once took for granted.
               </p>
-              <div className="grid grid-cols-3 gap-3 mb-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3 gap-3 mb-3">
                 <div className="bg-pink-50 rounded-lg p-3 text-center">
                   <div className="text-xl font-bold text-pink-600">25,000+</div>
                   <div className="text-xs text-gray-600">Corals Planted</div>
@@ -253,7 +269,7 @@ export default function OceanRecoveryPage() {
             </div>
 
             {/* Sea Turtle Conservation */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-xl transition-shadow">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-10 h-10 flex-shrink-0 text-green-600">
                   <svg viewBox="0 0 24 24" fill="currentColor">
@@ -286,8 +302,8 @@ export default function OceanRecoveryPage() {
           </div>
 
           {/* Full Width - Co-Management */}
-          <div className="bg-gradient-to-r from-ocean-midnight to-blue-900 rounded-2xl shadow-xl p-8 text-white">
-            <div className="flex items-start justify-between mb-4">
+          <div className="bg-gradient-to-r from-ocean-midnight to-blue-900 rounded-2xl shadow-xl p-6 sm:p-8 text-white">
+            <div className="flex flex-col sm:flex-row items-start justify-between gap-6 mb-4">
               <div>
                 <div className="bg-white/20 rounded-lg px-3 py-1 text-white font-bold text-sm inline-block mb-3">Historic Milestone</div>
                 <h3 className="text-2xl font-poppins font-bold mb-3">Kuruwitu Co-Management Area</h3>
@@ -295,7 +311,7 @@ export default function OceanRecoveryPage() {
                   Covering 12,000 hectares of ocean under Kenya's first officially endorsed Co-Management Plan (2022). Development of first 6-step toolkit and IUCN SAGE analysis, placing communities at the centre of marine governance.
                 </p>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center min-w-[140px]">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center min-w-[140px] shrink-0 self-stretch sm:self-auto">
                 <div className="text-4xl font-bold text-white">12,000</div>
                 <div className="text-xs text-white/70 uppercase mt-1">Hectares</div>
                 <div className="text-xs text-white/50 mt-2">Co-Managed</div>

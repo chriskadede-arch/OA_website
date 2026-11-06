@@ -1,3 +1,19 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Donate
+ * URL:  /donate
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Donation steps (amount → details → payment)
+ *   3. FAQ
+ *   4. Partner Logos
+ *
+ * Where the text/data lives:
+ *   • DONATION_AMOUNTS, IMPACT_STATS  →  lib/constants.ts
+ *   • IMPACT_MAP  →  top of this file
+ *   • ALLOCATION_BREAKDOWN  →  top of this file
+ */
 'use client';
 
 import { useState } from 'react';
@@ -92,8 +108,10 @@ Please provide payment instructions.
 
   return (
     <>
-      {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="relative bg-ocean-midnight py-24 md:py-28 overflow-hidden">
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
+      <section className="relative bg-ocean-midnight pt-36 pb-24 md:pt-40 md:pb-28 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -125,7 +143,7 @@ Please provide payment instructions.
       </section>
 
       {/* ── Step Progress ─────────────────────────────────── */}
-      <div className="bg-white border-b border-gray-100 sticky top-20 z-30">
+      <div className="bg-white border-b border-gray-100 sticky top-[112px] lg:top-[128px] z-30">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center gap-3 max-w-lg">
             {STEPS.map((step, i) => (
@@ -157,6 +175,9 @@ Please provide payment instructions.
         </div>
       </div>
 
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Donation steps (amount → details → payment)
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
 
@@ -170,7 +191,7 @@ Please provide payment instructions.
               </div>
 
               {/* Donation Amount Options */}
-              <div className="mb-8 grid grid-cols-3 gap-4">
+              <div className="mb-8 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4">
                 {/* $100 Option */}
                 <div className="p-6 rounded-xl border-2 border-gray-200 bg-white text-center hover:border-ocean-turquoise/50 transition-all">
                   <div className="text-4xl font-poppins font-bold text-gray-700 mb-2">$100</div>
@@ -528,7 +549,9 @@ Please provide payment instructions.
         </div>
       </section>
 
-      {/* ── FAQ ──────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · FAQ
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -572,7 +595,9 @@ Please provide payment instructions.
         </div>
       </section>
 
-      {/* ── Partner Logos ──────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 4 · Partner Logos
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-12 border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-center text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">

@@ -1,4 +1,15 @@
-// Brand Colors
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * MAIN CONTENT FILE - most site text and numbers live here
+ * ══════════════════════════════════════════════════════════════════
+ * Search for "DATA:" to jump between groups:
+ *   DATA: Site details · Contact info · Social links · Team · Impact stats
+ *   DATA: Timeline · Programmes · Partners · Blog stories · Core principles
+ *   DATA: Categories (blog / resources / gallery) · Donation amounts · Settings
+ */
+// ══════════════════════════════════════════════════════════════════
+// DATA: Brand colours
+// ══════════════════════════════════════════════════════════════════
 export const BRAND_COLORS = {
   primary: '#022F4E', // Midnight Zone Blue
   secondary: '#2EBFD1', // Tropical Turquoise
@@ -7,7 +18,9 @@ export const BRAND_COLORS = {
   tertiary: '#E6D7BA', // Sandy Shores
 };
 
-// Site Metadata
+// ══════════════════════════════════════════════════════════════════
+// DATA: Site details (name, description, web address, social handles)
+// ══════════════════════════════════════════════════════════════════
 export const SITE_NAME = 'Oceans Alive Foundation';
 export const SITE_DESCRIPTION =
   "Creating, catalyzing, and scaling pragmatic, community-led solutions for ocean conservation across Kenya and the Western Indian Ocean. Working alongside coastal communities to strengthen fisheries management, protect marine ecosystems, and pioneer inclusive models of ocean stewardship.";
@@ -16,7 +29,9 @@ export const SITE_TWITTER = '@oceans_alive_kenya';
 export const SITE_INSTAGRAM = '@oceans_alive_kenya';
 export const SITE_FACEBOOK = 'oceansalive';
 
-// Navigation
+// ══════════════════════════════════════════════════════════════════
+// DATA: Old navigation list (not used - the menu is in components/common/Navbar.tsx)
+// ══════════════════════════════════════════════════════════════════
 export const NAV_ITEMS = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
@@ -27,7 +42,9 @@ export const NAV_ITEMS = [
   { label: 'Contact', href: '/contact' },
 ];
 
-// Blog Categories
+// ══════════════════════════════════════════════════════════════════
+// DATA: Blog categories  → used on /blog
+// ══════════════════════════════════════════════════════════════════
 export const BLOG_CATEGORIES = [
   'Coral Restoration',
   'Women & Ocean',
@@ -40,7 +57,9 @@ export const BLOG_CATEGORIES = [
   'Latest Updates',
 ];
 
-// Resource Categories
+// ══════════════════════════════════════════════════════════════════
+// DATA: Resource categories  → used on /resources
+// ══════════════════════════════════════════════════════════════════
 export const RESOURCE_CATEGORIES = [
   'Toolkits',
   'Case Studies',
@@ -48,7 +67,9 @@ export const RESOURCE_CATEGORIES = [
   'Reports',
 ];
 
-// Gallery Categories
+// ══════════════════════════════════════════════════════════════════
+// DATA: Gallery categories  → used on /gallery
+// ══════════════════════════════════════════════════════════════════
 export const GALLERY_CATEGORIES = [
   'Coral Restoration',
   'Community',
@@ -57,7 +78,9 @@ export const GALLERY_CATEGORIES = [
   'Ocean Landscapes',
 ];
 
-// Donation Amounts (in cents)
+// ══════════════════════════════════════════════════════════════════
+// DATA: Donation amounts (in cents)  → used on /donate
+// ══════════════════════════════════════════════════════════════════
 export const DONATION_AMOUNTS = [
   { label: '$5', value: 500 },
   { label: '$10', value: 1000 },
@@ -68,12 +91,16 @@ export const DONATION_AMOUNTS = [
   { label: 'Custom', value: 0 },
 ];
 
-// Pagination
+// ══════════════════════════════════════════════════════════════════
+// DATA: Settings - items per page
+// ══════════════════════════════════════════════════════════════════
 export const POSTS_PER_PAGE = 12;
 export const RESOURCES_PER_PAGE = 20;
 export const GALLERY_ITEMS_PER_PAGE = 24;
 
-// Contact Form Types
+// ══════════════════════════════════════════════════════════════════
+// DATA: Contact form enquiry types
+// ══════════════════════════════════════════════════════════════════
 export const CONTACT_INQUIRY_TYPES = [
   'General Inquiry',
   'Partnership',
@@ -82,7 +109,9 @@ export const CONTACT_INQUIRY_TYPES = [
   'Other',
 ];
 
-// Social Links
+// ══════════════════════════════════════════════════════════════════
+// DATA: Social links (the footer icons use SOCIAL in Footer.tsx)
+// ══════════════════════════════════════════════════════════════════
 export const SOCIAL_LINKS = [
   {
     name: 'Facebook',
@@ -116,14 +145,29 @@ export const SOCIAL_LINKS = [
   },
 ];
 
-// Contact Info
+// ══════════════════════════════════════════════════════════════════
+// DATA: Contact info  → used on /contact and in the footer
+// ══════════════════════════════════════════════════════════════════
 export const CONTACT_EMAIL = 'info@oceansalivekenya.org';
 export const CONTACT_EMAIL_SECONDARY = 'des@oceansalivekenya.org';
 export const CONTACT_PHONE = '+254 732 807 935';
 export const CONTACT_ADDRESS = 'Vipingo, Kilifi County, Kenya';
 
-// Team
-export const TEAM_MEMBERS = [
+// ══════════════════════════════════════════════════════════════════
+// DATA: Team  → used on /about/team
+// ══════════════════════════════════════════════════════════════════
+// Shown on /about/team in this order. To take someone off the page without
+// deleting their details, set `hidden: true`; delete that line to show them again.
+export type TeamMember = {
+  name: string;
+  role: string;
+  bio: string;
+  image: string | null; // file in public/images/team/, or null for an initials tile
+  initials: string;
+  hidden?: boolean;
+};
+
+export const TEAM_MEMBERS: TeamMember[] = [
   {
     name: 'Ali Kaka',
     role: 'Chairman of the Board',
@@ -175,9 +219,9 @@ export const TEAM_MEMBERS = [
   },
   {
     name: 'Sarah Sidi',
-    role: 'Admin & Human Resource Manager',
+    role: 'Admin & HR Officer',
     bio: 'Manages team welfare, recruitment, and organisational development - ensuring Oceans Alive attracts and retains the talent needed to deliver its community conservation mission.',
-    image: null,
+    image: '/images/team/sarah-sidi.jpg',
     initials: 'SS',
   },
   {
@@ -252,10 +296,17 @@ export const TEAM_MEMBERS = [
   },
   {
     name: 'Shadrack',
-    role: 'Finance Manager',
+    role: 'Finance Officer',
     bio: 'Manages financial operations, budgeting, and reporting, ensuring fiscal accountability and transparency across all Oceans Alive programmes and partnerships.',
     image: '/images/team/shadrack.jpeg',
     initials: 'SH',
+  },
+  {
+    name: 'Rabeca Juma',
+    role: 'Office Housekeeper & Cook',
+    bio: 'Keeps the Oceans Alive office running smoothly - looking after the workspace and preparing meals for the team, visiting partners and community guests.',
+    image: '/images/team/rabeca-juma.jpg',
+    initials: 'RJ',
   },
   {
     name: 'Eunice Mose',
@@ -263,6 +314,7 @@ export const TEAM_MEMBERS = [
     bio: 'Provides geospatial mapping and analysis for marine conservation areas, supporting data-driven decision-making and spatial planning across Kilifi County\'s coastal zone.',
     image: null,
     initials: 'EM',
+    hidden: true, // TODO: add photo to public/images/team/, set `image`, then remove this line
   },
   {
     name: 'Joseph Muturi',
@@ -279,7 +331,9 @@ export const TEAM_MEMBERS = [
     initials: 'LMa',
   },
 ];
-// Impact Stats - Updated June 2025 from Company Profile & Impact Report
+// ══════════════════════════════════════════════════════════════════
+// DATA: Impact stats  → home page, /about, /about/story, /donate
+// ══════════════════════════════════════════════════════════════════
 export const IMPACT_STATS = [
   { label: 'Reef Under Co-Management', value: '120 km²' },
   { label: 'Corals Out-Planted (Since 2019)', value: '25,000+' },
@@ -289,7 +343,9 @@ export const IMPACT_STATS = [
   { label: 'Women in Livelihood Programs', value: '735+' },
 ];
 
-// Two-Track Timeline - Kuruwitu Community Journey + Oceans Alive Organisational Journey
+// ══════════════════════════════════════════════════════════════════
+// DATA: Timeline (Kuruwitu journey + Oceans Alive journey)  → home, /about/story
+// ══════════════════════════════════════════════════════════════════
 export const TIMELINE = [
   // THE KURUWITU COMMUNITY JOURNEY
   {
@@ -355,7 +411,9 @@ export const TIMELINE = [
   },
 ];
 
-// Programmes - all 14
+// ══════════════════════════════════════════════════════════════════
+// DATA: Programmes (all 14)  → /programmes/<slug> pages
+// ══════════════════════════════════════════════════════════════════
 export const PROGRAMMES = [
   {
     number: '01',
@@ -541,7 +599,9 @@ export const PROGRAMMES = [
   },
 ];
 
-// Partners
+// ══════════════════════════════════════════════════════════════════
+// DATA: Partners  → partner logo carousel
+// ══════════════════════════════════════════════════════════════════
 export const PARTNERS = [
   {
     name: 'Coral Guardian',
@@ -730,7 +790,9 @@ export const PARTNERS = [
   },
 ];
 
-// Static blog stories (shown when database is not connected)
+// ══════════════════════════════════════════════════════════════════
+// DATA: Blog stories  → /blog, /blog/<story>, category pages
+// ══════════════════════════════════════════════════════════════════
 export const STATIC_BLOG_STORIES = [
   {
     id: 'coral-restoration-journey',
@@ -935,7 +997,9 @@ export const STATIC_BLOG_STORIES = [
   },
 ];
 
-// The 4 Core Principles (not pillars)
+// ══════════════════════════════════════════════════════════════════
+// DATA: Core principles  → /about/mission
+// ══════════════════════════════════════════════════════════════════
 export const PRINCIPLES = [
   {
     number: '01',
@@ -959,7 +1023,9 @@ export const PRINCIPLES = [
   },
 ];
 
-// Feature Flags
+// ══════════════════════════════════════════════════════════════════
+// DATA: Settings - feature switches
+// ══════════════════════════════════════════════════════════════════
 export const FEATURES = {
   DONATE_ENABLED: true,
   NEWSLETTER_ENABLED: true,

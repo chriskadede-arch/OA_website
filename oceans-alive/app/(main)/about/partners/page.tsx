@@ -1,7 +1,21 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: About › Our Partners
+ * URL:  /about/partners
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Priority Partners — Featured Stories
+ *   3. All Partners — Organized by Category
+ *   4. Become a Partner (call to action)
+ *
+ * Where the text/data lives:
+ *   • PARTNERS  →  top of this file
+ *   • PRIORITY_PARTNERS  →  top of this file
+ */
 import Link from 'next/link';
 import Image from 'next/image';
 import PartnerLogo from '@/components/common/PartnerLogo';
-import AboutNav from '@/components/common/AboutNav';
 import PartnerCarousel from '@/components/common/PartnerCarousel';
 
 export const metadata = {
@@ -18,6 +32,8 @@ type Partner = {
   logoPath?: string;
   domain?: string;
   current?: boolean;
+  showName?: boolean;
+  large?: boolean;
 };
 
 const PARTNERS: Partner[] = [
@@ -37,19 +53,21 @@ const PARTNERS: Partner[] = [
   { name: 'County Government of Mombasa', role: 'Fisheries governance collaboration', category: 'government', logoPath: '/images/partners/mombasa-county.jpg', current: true },
 
   // Funding Partners & Donors
-  { name: 'Blue Ventures Conservation', role: 'Strengthens BMU governance, fisheries monitoring, financial inclusion & peer learning', outcome: 'Strengthened BMU governance and monitoring systems', category: 'funding', logoPath: '/images/partners/blue-ventures.png', current: true },
+  { name: 'Blue Ventures Conservation', role: 'Strengthens BMU governance, fisheries monitoring, financial inclusion & peer learning', outcome: 'Strengthened BMU governance and monitoring systems', category: 'funding', logoPath: '/images/partners/blue-ventures.png', current: true, showName: true },
   { name: 'Oceans 5', role: 'Ocean conservation funder', category: 'funding', logoPath: '/images/partners/oceans5.jpg', current: true },
   { name: 'Coral Guardian', role: 'Coral restoration partner', category: 'funding', logoPath: '/images/partners/Coral-Guardian-Logo-White (1).png', current: true },
   { name: 'BIOPAMA / IUCN', role: 'Biodiversity & protected area funding', category: 'funding', current: true },
   { name: 'DEFRA', role: 'UK Government environment funding', category: 'funding', logoPath: '/images/partners/defra.jpg', current: true },
-  { name: 'OCEAN Community', role: 'Ocean conservation network', category: 'funding', logoPath: '/images/partners/ocean-community.png', current: true },
+  { name: 'OCEAN Community', role: 'Ocean conservation network', category: 'funding', logoPath: '/images/partners/ocean-community.png', current: true, showName: true, large: true },
   { name: 'Canon', role: 'Media & documentation partner', category: 'funding', logoPath: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/Canon_logo.svg', current: true },
   { name: 'Saruni Basecamp Foundation', role: 'Community support', category: 'funding', logoPath: '/images/partners/saruni.png', current: true },
   { name: 'Conscious Travel', role: 'Sustainable tourism partner', category: 'funding', logoPath: '/images/partners/conscious-travel.png', current: true },
-  { name: 'Seas4Life', role: 'Ocean advocacy', category: 'funding', logoPath: '/images/partners/seas4life.png', current: true },
+  { name: 'Seas4Life', role: 'Ocean advocacy', category: 'funding', logoPath: '/images/partners/seas4life.png', current: true, showName: true },
   { name: 'Ocean Eyes', role: 'Marine conservation', category: 'funding', logoPath: '/images/partners/ocean-eyes.jpg', current: true },
   { name: 'Vipingo Ridge', role: 'Local supporter', category: 'funding', logoPath: '/images/partners/vipingo-ridge.png', current: true },
   { name: 'The Leap', role: 'Community supporter', category: 'funding', logoPath: '/images/partners/the-leap.svg', current: true },
+  { name: 'Coral Reef Care', role: 'Shark & ray conservation funder', category: 'funding', logoPath: '/images/partners/coral-reef-care.jpg', current: true, showName: true },
+  { name: 'Pelorus Foundation', role: "Women's livelihoods & Trash4Cash funder", category: 'funding', logoPath: '/images/partners/pelorus-foundation.jpg', current: true },
 
   // Technical, Research & Learning Partners
   { name: 'KMFRI', role: 'Kenya Marine and Fisheries Research Institute', category: 'technical', current: true },
@@ -92,15 +110,16 @@ export default function PartnersPage() {
 
   return (
     <>
-      <AboutNav />
-      {/* Hero Section */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-gradient-to-br from-gray-50 via-white to-ocean-turquoise/10 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/kamakukujcma.jpg" alt="Community Partnership" fill className="object-cover opacity-10" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white/90" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 md:py-28">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-36 pb-20 md:pt-40 md:pb-28">
           <div className="max-w-3xl">
             <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.3em] mb-5">Partnerships & Collaborations</p>
             <h1 className="text-5xl md:text-6xl font-poppins font-bold text-ocean-midnight mb-6 leading-tight">
@@ -116,7 +135,9 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      {/* Priority Partners - Featured Stories */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Priority Partners — Featured Stories
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-b from-gray-50 to-white py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-12">
@@ -167,7 +188,9 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      {/* All Partners - Organized by Category */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · All Partners — Organized by Category
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6 space-y-12">
 
@@ -239,9 +262,21 @@ export default function PartnersPage() {
 
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
                 {fundingPartners.map((partner) => (
-                  <div key={partner.name} className={`rounded-xl p-4 border hover:shadow-lg transition-all h-28 flex items-center justify-center ${partner.name === 'Coral Guardian' ? 'bg-gradient-to-br from-blue-900 to-blue-800 border-blue-700' : 'bg-white border-gray-200'}`}>
+                  <div
+                    key={partner.name}
+                    className={`rounded-xl p-4 border hover:shadow-lg transition-all flex items-center justify-center ${
+                      partner.large ? 'h-40 col-span-2' : 'h-28'
+                    } ${partner.name === 'Coral Guardian' ? 'bg-gradient-to-br from-blue-900 to-blue-800 border-blue-700' : 'bg-white border-gray-200'}`}
+                  >
                     {partner.logoPath ? (
-                      <PartnerLogo name={partner.name} logoPath={partner.logoPath} size="md" className="w-full h-full" />
+                      partner.showName ? (
+                        <div className="w-full h-full flex flex-col items-center justify-center gap-1.5 px-2">
+                          <PartnerLogo name={partner.name} logoPath={partner.logoPath} size={partner.large ? 'xl' : 'md'} className="flex-1" />
+                          <p className="text-[11px] font-bold text-ocean-midnight text-center leading-tight">{partner.name}</p>
+                        </div>
+                      ) : (
+                        <PartnerLogo name={partner.name} logoPath={partner.logoPath} size="md" className="w-full h-full" />
+                      )
                     ) : (
                       <div className="text-center">
                         <p className="text-xs font-bold text-ocean-midnight">{partner.name}</p>
@@ -280,7 +315,9 @@ export default function PartnersPage() {
       {/* Partner Logo Carousel */}
       <PartnerCarousel />
 
-      {/* Become a Partner CTA */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 4 · Become a Partner (call to action)
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-ocean-midnight to-ocean-turquoise/30 py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-ocean-turquoise/20 mb-6">

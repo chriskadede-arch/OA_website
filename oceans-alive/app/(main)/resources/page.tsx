@@ -1,3 +1,21 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Resources (toolkits, videos, press)
+ * URL:  /resources
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Tab bar (Toolkits / Videos / What Others Say)
+ *   3. Videos tab
+ *   4. What Others Say tab (press articles)
+ *   5. Toolkits & Downloads tab
+ *   6. Contact strip
+ *
+ * Where the text/data lives:
+ *   • RESOURCE_CATEGORIES  →  lib/constants.ts
+ *   • FEATURED_VIDEOS  →  top of this file
+ *   • EXTERNAL_ARTICLES  →  top of this file
+ */
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -163,7 +181,9 @@ export default function Resources() {
 
   return (
     <>
-      {/* ── IMMERSIVE HERO WITH ANIMATED GRADIENT ─────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-ocean-midnight overflow-hidden">
         {/* Animated gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-ocean-midnight via-[#0a4f7a] to-[#1a6b5a] opacity-90" />
@@ -235,10 +255,12 @@ export default function Resources() {
         </div>
       </section>
 
-      {/* ── CREATIVE TAB NAVIGATION ─────────────────────────────── */}
-      <section className="bg-white pt-12 sticky top-0 z-40 border-b border-gray-100 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-center gap-3">
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Tab bar (Toolkits / Videos / What Others Say)
+          ══════════════════════════════════════════════════════════════════ */}
+      <section className="bg-white pt-6 md:pt-8 sticky top-[112px] lg:top-[128px] z-40 border-b border-gray-100 shadow-sm">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6">
+          <div className="grid grid-cols-3 gap-2 sm:flex sm:items-center sm:justify-center sm:gap-3">
             {[
               {
                 id: 'downloads',
@@ -262,15 +284,15 @@ export default function Resources() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
-                className={`group relative px-6 py-4 rounded-t-2xl font-bold text-sm transition-all duration-300 ${
+                className={`group relative min-w-0 px-2 py-3 sm:px-6 sm:py-4 rounded-t-2xl font-bold text-xs sm:text-sm transition-all duration-300 ${
                   activeTab === tab.id
                     ? 'bg-gradient-to-br from-ocean-midnight to-ocean-turquoise text-white shadow-lg scale-105'
                     : 'bg-gray-50 text-gray-500 hover:bg-gray-100 hover:text-ocean-midnight'
                 }`}
               >
-                <div className="flex items-center gap-3">
+                <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3">
                   <div className={activeTab === tab.id ? 'text-white' : 'text-ocean-turquoise'}>{tab.icon}</div>
-                  <div className="text-left">
+                  <div className="text-center sm:text-left leading-tight">
                     <div>{tab.label}</div>
                     <div className={`text-xs font-normal ${activeTab === tab.id ? 'text-white/70' : 'text-gray-400'}`}>
                       {tab.count} {tab.count === 1 ? 'item' : 'items'}
@@ -286,7 +308,9 @@ export default function Resources() {
         </div>
       </section>
 
-      {/* ── VIDEOS SECTION ─────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · Videos tab
+          ══════════════════════════════════════════════════════════════════ */}
       {activeTab === 'videos' && (
         <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-6">
@@ -396,7 +420,7 @@ export default function Resources() {
             </div>
 
             {/* Call to Action */}
-            <div className="mt-16 text-center bg-gradient-to-br from-ocean-midnight to-ocean-turquoise rounded-3xl p-12">
+            <div className="mt-16 text-center bg-gradient-to-br from-ocean-midnight to-ocean-turquoise rounded-3xl p-6 sm:p-12">
               <h3 className="text-3xl font-poppins font-bold text-white mb-4">Want to Feature Our Work?</h3>
               <p className="text-white/80 mb-6 max-w-2xl mx-auto">
                 Media professionals, filmmakers, and researchers: we welcome collaboration. Contact us for high-resolution footage and interviews.
@@ -415,7 +439,9 @@ export default function Resources() {
         </section>
       )}
 
-      {/* ── EXTERNAL ARTICLES SECTION ─────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 4 · What Others Say tab (press articles)
+          ══════════════════════════════════════════════════════════════════ */}
       {activeTab === 'articles' && (
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-6">
@@ -556,7 +582,9 @@ export default function Resources() {
         </section>
       )}
 
-      {/* ── DOWNLOADS SECTION (Original with Enhanced Design) ────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 5 · Toolkits & Downloads tab
+          ══════════════════════════════════════════════════════════════════ */}
       {activeTab === 'downloads' && (
         <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-6">
@@ -713,7 +741,9 @@ export default function Resources() {
         </section>
       )}
 
-      {/* ── CONTACT STRIP (Enhanced) ─────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 6 · Contact strip
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-ocean-midnight py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-ocean-turquoise rounded-full blur-3xl" />

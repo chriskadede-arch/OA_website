@@ -1,3 +1,9 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PARTNER LOGO CAROUSEL
+ * ══════════════════════════════════════════════════════════════════
+ * Partners come from lib/constants.ts → PARTNERS.
+ */
 'use client';
 
 import { PARTNERS } from '@/lib/constants';

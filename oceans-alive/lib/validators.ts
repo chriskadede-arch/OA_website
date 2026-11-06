@@ -1,3 +1,8 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * FORM RULES (what counts as a valid contact / donation form)
+ * ══════════════════════════════════════════════════════════════════
+ */
 import { z } from 'zod';
 
 // Newsletter Signup Validation

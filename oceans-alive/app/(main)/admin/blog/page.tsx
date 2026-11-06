@@ -1,3 +1,9 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Admin › Blog editor (internal)
+ * URL:  /admin/blog
+ * ══════════════════════════════════════════════════════════════════
+ */
 'use client';
 
 import { useEffect, useState } from 'react';

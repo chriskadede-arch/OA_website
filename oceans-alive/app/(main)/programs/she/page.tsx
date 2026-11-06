@@ -1,3 +1,15 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Strategic Objective 3 › Food Security & Income (Economic)
+ * URL:  /programs/she
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Economic Pillar
+ *   3. What We Do
+ *   4. Next Strategic Objective Link
+ *   5. Women at the Heart of Conservation
+ */
 import Link from 'next/link';
 import Image from 'next/image';
 import SDGRow from '@/components/common/SDGRow';
@@ -10,14 +22,16 @@ export const metadata = {
 export default function SHEProgramPage() {
   return (
     <>
-      {/* Hero Section */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-gradient-to-br from-pink-600 to-purple-700 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/trashforcash.jpg" alt="Social Health Environment Program" fill className="object-cover opacity-20" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-32">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-36 pb-24 md:pt-40 md:pb-32">
           <div className="text-6xl font-poppins font-bold text-white/20 mb-4">03</div>
           <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white mb-6">Promote Food Security & Income</h1>
           <p className="text-xl text-white/90 max-w-3xl mb-4 leading-relaxed">
@@ -55,7 +69,9 @@ export default function SHEProgramPage() {
         </div>
       </section>
 
-      {/* Economic Pillar Section */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Economic Pillar
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-pink-900 to-purple-900 py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-8">
@@ -119,7 +135,9 @@ export default function SHEProgramPage() {
         </div>
       </section>
 
-      {/* What We Do */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · What We Do
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-pink-50 to-purple-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-12">What We Do</h2>
@@ -162,7 +180,7 @@ export default function SHEProgramPage() {
           </div>
 
           {/* Why This Works - The Philosophy */}
-          <div className="bg-gradient-to-br from-pink-600 to-purple-700 rounded-2xl shadow-xl p-8 md:p-10 mb-8 text-white">
+          <div className="bg-gradient-to-br from-pink-600 to-purple-700 rounded-2xl shadow-xl p-6 sm:p-8 md:p-10 mb-8 text-white">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-12 bg-white rounded-full"></div>
               <h3 className="text-2xl font-poppins font-bold">When Families Eat from Their Gardens, Oceans Breathe Easier</h3>
@@ -195,7 +213,7 @@ export default function SHEProgramPage() {
               <p className="text-gray-700 leading-relaxed mb-4">
                 What would otherwise end up choking sea turtles and suffocating coral becomes household income. Trash4Cash is part of the LIFT Network - Oceans Alive's broader women's economic empowerment platform. By placing income generation and environmental protection in the same hands, we make conservation something women do for their own futures, not something done to their environment.
               </p>
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div className="bg-pink-50 rounded-lg p-3 text-center">
                   <div className="text-xl font-bold text-pink-600">120+</div>
                   <div className="text-xs text-gray-600 uppercase">Women Participants</div>
@@ -215,7 +233,7 @@ export default function SHEProgramPage() {
           {/* Two Column Grid with SVG Icons */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             {/* Climate-Smart Permaculture */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-xl transition-shadow">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-10 h-10 flex-shrink-0 text-green-600">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -243,7 +261,7 @@ export default function SHEProgramPage() {
             </div>
 
             {/* Women's Leadership */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-xl transition-shadow">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-10 h-10 flex-shrink-0 text-purple-600">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -271,7 +289,7 @@ export default function SHEProgramPage() {
           </div>
 
           {/* Full Width - Economic Impact */}
-          <div className="bg-gradient-to-r from-pink-600 to-purple-700 rounded-2xl shadow-xl p-8 text-white">
+          <div className="bg-gradient-to-r from-pink-600 to-purple-700 rounded-2xl shadow-xl p-6 sm:p-8 text-white">
             <div className="flex items-start justify-between gap-6">
               <div className="flex-1">
                 <div className="bg-white/20 rounded-lg px-3 py-1 text-white font-bold text-sm inline-block mb-3">Financial independence</div>
@@ -286,7 +304,9 @@ export default function SHEProgramPage() {
         </div>
       </section>
 
-      {/* Next Strategic Objective Link */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 4 · Next Strategic Objective Link
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-pink-50 to-purple-50 py-12">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <Link href="/programs/research-innovation" className="inline-flex items-center gap-3 px-6 py-3 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-ocean-midnight transition-colors">
@@ -296,7 +316,9 @@ export default function SHEProgramPage() {
         </div>
       </section>
 
-      {/* Women at the Heart of Conservation */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 5 · Women at the Heart of Conservation
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-gradient-to-br from-ocean-midnight to-[#0a4f7a] py-12 md:py-14 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">

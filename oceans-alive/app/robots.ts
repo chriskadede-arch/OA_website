@@ -1,3 +1,8 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * ROBOTS.TXT (tells search engines what they may crawl)
+ * ══════════════════════════════════════════════════════════════════
+ */
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {

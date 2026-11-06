@@ -1,3 +1,19 @@
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * PAGE: Blog category page (template used by every category)
+ * URL:  /blog/category/[slug]
+ * ══════════════════════════════════════════════════════════════════
+ * Sections, top to bottom (search this file for "SECTION <n>"):
+ *   1. Hero
+ *   2. Stories
+ *   3. Other Categories
+ *
+ * Where the text/data lives:
+ *   • STATIC_BLOG_STORIES  →  lib/constants.ts
+ *   • CATEGORY_CONFIG  →  top of this file
+ *   • STORY_IMAGES  →  top of this file
+ *   • OTHER_CATEGORIES  →  top of this file
+ */
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -245,7 +261,9 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      {/* ── Hero ──────────────────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 1 · Hero
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-ocean-midnight overflow-hidden">
         <Image
           src={config.heroImage}
@@ -256,7 +274,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ocean-midnight/20 via-ocean-midnight/50 to-ocean-midnight" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-24 pb-0">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-36 md:pt-40 pb-0">
           {/* Back */}
           <Link
             href="/blog"
@@ -282,7 +300,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
           {/* Headline */}
           <h1
             className="font-poppins font-bold text-white leading-none mb-6"
-            style={{ fontSize: 'clamp(3.5rem, 8vw, 5.5rem)', whiteSpace: 'pre-line' }}
+            style={{ fontSize: 'clamp(2.25rem, 8vw + 0.5rem, 5.5rem)', whiteSpace: 'pre-line' }}
           >
             {config.headline}
           </h1>
@@ -295,11 +313,11 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
               {config.stats.map((stat) => (
-                <div key={stat.label} className="py-7 px-6 first:pl-0">
+                <div key={stat.label} className="py-7 px-3 sm:px-6 first:pl-0">
                   <div className={`text-2xl md:text-3xl font-poppins font-bold mb-1 ${accentText}`}>
                     {stat.number}
                   </div>
-                  <div className="text-white/40 text-[10px] uppercase tracking-widest font-semibold">
+                  <div className="text-white/40 text-[10px] uppercase tracking-wide sm:tracking-widest font-semibold break-words">
                     {stat.label}
                   </div>
                 </div>
@@ -309,7 +327,9 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
-      {/* ── Stories ───────────────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2 · Stories
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           {stories.length === 0 ? (
@@ -488,7 +508,9 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
-      {/* ── Other Categories ──────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · Other Categories
+          ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-16 border-t border-white/5">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center justify-between mb-8">
