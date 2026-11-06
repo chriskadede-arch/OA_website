@@ -1,0 +1,166 @@
+{
+  "members": [
+    {
+      "name": "Ali Kaka",
+      "role": "Chairman of the Board",
+      "bio": "Provides strategic leadership and governance oversight for Oceans Alive Foundation, bringing decades of experience in conservation leadership and East African coastal governance.",
+      "image": "/images/team/ali-kaka.avif",
+      "initials": "AK"
+    },
+    {
+      "name": "Des Bowden",
+      "role": "Director / CEO",
+      "bio": "A founder of Oceans Alive (established 2016) and a long-standing participant in the Kuruwitu community conservation journey since its early years.",
+      "image": "/images/team/des-bowden.webp",
+      "initials": "DB"
+    },
+    {
+      "name": "Tilda Bowden",
+      "role": "Director / Education Development",
+      "bio": "Leads ocean education initiatives - connecting schools, youth groups, and community members to marine conservation through the living classroom at Kuruwitu.",
+      "image": "/images/team/tilda-bowden.avif",
+      "initials": "TB"
+    },
+    {
+      "name": "Remmy Safari",
+      "role": "Programme Manager",
+      "bio": "Drives the BMU network and fisheries co-management programmes, supporting Beach Management Units and building governance structures that protect Kenya's coastal fisheries long-term.",
+      "image": "/images/team/remmy-safari.avif",
+      "initials": "RS"
+    },
+    {
+      "name": "Dickson Juma",
+      "role": "Community Liaison Officer",
+      "bio": "Works directly with coastal communities to strengthen engagement, build trust, and ensure conservation programmes reflect local knowledge and priorities.",
+      "image": "/images/team/dickson-juma.jpeg",
+      "initials": "DJ"
+    },
+    {
+      "name": "John Dominic",
+      "role": "Technical Advisor",
+      "bio": "Provides specialist technical guidance on marine ecology, conservation methodology, and programme design - ensuring every OAF intervention is grounded in best practice.",
+      "image": "/images/team/john-dominic.avif",
+      "initials": "JD"
+    },
+    {
+      "name": "Lionel D Murage",
+      "role": "Technical advisor",
+      "bio": "Coordinates Oceans Alive's programme portfolio, managing delivery timelines, stakeholder relationships, and field operations across Kilifi County.",
+      "image": "/images/team/lionel-murage.avif",
+      "initials": "LM"
+    },
+    {
+      "name": "Sarah Sidi",
+      "role": "Admin & HR Officer",
+      "bio": "Manages team welfare, recruitment, and organisational development - ensuring Oceans Alive attracts and retains the talent needed to deliver its community conservation mission.",
+      "image": "/images/team/sarah-sidi.jpg",
+      "initials": "SS"
+    },
+    {
+      "name": "Alice Mwakulilah",
+      "role": "Project Manager",
+      "bio": "Coordinates international partnerships, donor relationships, and programme stakeholder engagement across Kilifi County, keeping OAF's projects on track and on mission.",
+      "image": "/images/team/alice-mwakulilah.jpg",
+      "initials": "AM"
+    },
+    {
+      "name": "Katana Ngala",
+      "role": "Coral Restoration Technician",
+      "bio": "Leads hands-on coral nursery operations at Kuruwitu, training community reef gardeners and overseeing the planting and monitoring of 25,000+ coral colonies.",
+      "image": "/images/team/katana-ngala.avif",
+      "initials": "KN"
+    },
+    {
+      "name": "Chris Adede",
+      "role": "Brand & Communication Manager",
+      "bio": "Tells the story of Oceans Alive's work to the world - from Project REEL Kilifi media partnerships to social media, press, and advocacy content reaching global conservation audiences.",
+      "image": "/images/team/chris-adede.jpg",
+      "initials": "CA"
+    },
+    {
+      "name": "Roseline Kibogo",
+      "role": "Community Officer",
+      "bio": "Works directly with coastal communities to strengthen local engagement, facilitate participatory conservation planning, and ensure community voices guide programme delivery.",
+      "image": "/images/team/roseline.jpeg",
+      "initials": "RK"
+    },
+    {
+      "name": "Teddy Katono",
+      "role": "Permaculture Extension Assistant",
+      "bio": "Works with coastal families to establish climate-smart kitchen gardens, reducing dependence on overfished stocks and strengthening household food security.",
+      "image": "/images/team/teddy-katono.avif",
+      "initials": "TK"
+    },
+    {
+      "name": "Cameron Bowden",
+      "role": "Coral Outreach Officer",
+      "bio": "Connects the coral restoration programme to wider audiences - engaging communities, schools, tourists, and media partners in the reef recovery work at Kuruwitu.",
+      "image": "/images/team/cameron.png",
+      "initials": "CB"
+    },
+    {
+      "name": "Patrick Kyengo",
+      "role": "Monitoring & Evaluation Officer",
+      "bio": "Leads impact measurement across all programmes, designing data collection systems and delivering evidence that informs both programme improvement and donor reporting.",
+      "image": "/images/team/Patrick.jpeg",
+      "initials": "PK"
+    },
+    {
+      "name": "Julius Kitela",
+      "role": "Education Officer",
+      "bio": "Delivers ocean education programmes to schools and youth groups across Kilifi County, connecting the next generation to marine conservation.",
+      "image": "/images/team/Julius.jpeg",
+      "initials": "JK"
+    },
+    {
+      "name": "Joel Nyanje",
+      "role": "Assistant Education Officer",
+      "bio": "Supports education programme delivery, helping coordinate school visits, field trips, and youth activities that bring marine conservation to life.",
+      "image": "/images/team/Joel.jpeg",
+      "initials": "JN"
+    },
+    {
+      "name": "Nancy Ogega",
+      "role": "Coral Scientific Outreach Officer",
+      "bio": "Leads scientific research and marine ecology studies, translating field data into actionable conservation strategies and strengthening the evidence base that guides Oceans Alive's work across Kenya's coastline.",
+      "image": "/images/team/Nancy1.jpeg",
+      "initials": "NO"
+    },
+    {
+      "name": "Shadrack",
+      "role": "Finance Officer",
+      "bio": "Manages financial operations, budgeting, and reporting, ensuring fiscal accountability and transparency across all Oceans Alive programmes and partnerships.",
+      "image": "/images/team/shadrack.jpeg",
+      "initials": "SH"
+    },
+    {
+      "name": "Rabeca Juma",
+      "role": "Office Housekeeper & Cook",
+      "bio": "Keeps the Oceans Alive office running smoothly - looking after the workspace and preparing meals for the team, visiting partners and community guests.",
+      "image": "/images/team/rabeca-juma.jpg",
+      "initials": "RJ"
+    },
+    {
+      "name": "Eunice Mose",
+      "role": "GIS Officer",
+      "bio": "Provides geospatial mapping and analysis for marine conservation areas, supporting data-driven decision-making and spatial planning across Kilifi County's coastal zone.",
+      "image": null,
+      "initials": "EM",
+      "hidden": true
+    },
+    {
+      "name": "Joseph Muturi",
+      "role": "Expedition Lead",
+      "bio": "Coordinates field expeditions, marine surveys, and community engagement activities, ensuring safe and effective delivery of conservation programmes across coastal sites.",
+      "image": "/images/team/joseph-muturi.jpg",
+      "initials": "JM"
+    },
+    {
+      "name": "Ledama Masidza",
+      "role": "Ambassador",
+      "bio": "Provides specialist consultancy on community development strategy, policy advocacy, and coastal governance frameworks across OAF's programme areas.",
+      "image": "/images/team/ledama.jpeg",
+      "initials": "LMa"
+    }
+  ]
+}

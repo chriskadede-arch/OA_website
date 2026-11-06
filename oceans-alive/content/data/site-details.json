@@ -1,0 +1,63 @@
+{
+  "siteName": "Oceans Alive Foundation",
+  "siteDescription": "Creating, catalyzing, and scaling pragmatic, community-led solutions for ocean conservation across Kenya and the Western Indian Ocean. Working alongside coastal communities to strengthen fisheries management, protect marine ecosystems, and pioneer inclusive models of ocean stewardship.",
+  "contactEmail": "info@oceansalivekenya.org",
+  "contactEmailSecondary": "des@oceansalivekenya.org",
+  "contactPhone": "+254 732 807 935",
+  "contactAddress": "Vipingo, Kilifi County, Kenya",
+  "twitterHandle": "@oceans_alive_kenya",
+  "instagramHandle": "@oceans_alive_kenya",
+  "facebookPage": "oceansalive",
+  "socialLinks": [
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/oceansalive",
+      "icon": "facebook"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/oceans_alive_kenya",
+      "icon": "instagram"
+    },
+    {
+      "name": "TikTok",
+      "url": "https://tiktok.com/@oceans_alive_kenya",
+      "icon": "tiktok"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/company/oceans-alive",
+      "icon": "linkedin"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/oceans_alive_kenya",
+      "icon": "twitter"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://youtube.com/@oceansalive",
+      "icon": "youtube"
+    }
+  ],
+  "contactFormEnquiryTypes": [
+    "General Inquiry",
+    "Partnership",
+    "Donation",
+    "Volunteer",
+    "Other"
+  ],
+  "resourceCategories": [
+    "Toolkits",
+    "Case Studies",
+    "IEC Materials",
+    "Reports"
+  ],
+  "galleryCategories": [
+    "Coral Restoration",
+    "Community",
+    "Education",
+    "Wildlife",
+    "Ocean Landscapes"
+  ]
+}

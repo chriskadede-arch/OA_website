@@ -1,0 +1,287 @@
+{
+  "CROSS_CUTTING_THEMES": [
+    "Science & Research",
+    "Climate Resilience",
+    "Women & Youth",
+    "Governance",
+    "Sustainable Finance",
+    "Partnerships & Policy"
+  ],
+  "COLLABORATIVE_MANAGEMENT": {
+    "eyebrow": "The Approach Behind Everything We Do",
+    "heading": "Collaborative Management in Action",
+    "paragraphs": [
+      "We believe healthy oceans can only be achieved when communities are at the heart of conservation. Collaborative management brings together local communities, government, scientists, businesses and conservation partners to share responsibility for protecting and sustainably managing marine resources. It is the foundation of everything we do.",
+      "Successful collaborative management requires more than protecting reefs or regulating fishing. It requires healthy ecosystems, sustainable fisheries, strong local governance, empowered communities, education and leadership, opportunities for women and youth, science and research, effective partnerships and, critically, sustainable financing. Our four programmes bring these elements together to create resilient coastal communities that can protect their marine environment, improve livelihoods and build a thriving blue economy."
+    ]
+  },
+  "OUR_WORK_PROGRAMS": [
+    {
+      "slug": "healthy-oceans",
+      "number": "01",
+      "title": "Healthy Oceans",
+      "navBlurb": "Restoring reefs, protecting biodiversity and recovering marine habitats.",
+      "tagline": "The foundation of thriving coastal communities.",
+      "color": "from-ocean-midnight to-ocean-turquoise",
+      "heroImage": "/images/coral-reef.jpg",
+      "heroImageAlt": "Restored coral reef teeming with fish at Kuruwitu, Kenya",
+      "bodyImage": {
+        "src": "/images/divers.jpg",
+        "alt": "Community divers restoring coral at Kuruwitu",
+        "caption": "Trained community divers - local fishers turned reef guardians"
+      },
+      "intro": [
+        "Healthy oceans are the foundation of thriving coastal communities. Oceans Alive works with communities, government, researchers and conservation partners to restore, protect and sustainably manage marine ecosystems along Kenya's coast.",
+        "We combine science, traditional knowledge and community stewardship to restore coral reefs, protect biodiversity, recover degraded habitats and strengthen the resilience of the ecosystems that coastal life depends on."
+      ],
+      "workIncludes": [
+        "Active and passive coral restoration",
+        "Coral reef monitoring & artificial reefs",
+        "Turtle protection & nesting beach patrols",
+        "Locally Managed & Co-Managed Marine Areas",
+        "Seagrass and mangrove conservation",
+        "Biodiversity protection & marine spatial planning",
+        "Monitoring, control and surveillance (MCS)",
+        "Community-led scientific data collection"
+      ],
+      "projects": [
+        {
+          "title": "Kuruwitu Marine Sanctuary",
+          "description": "Kenya's first community-led marine conservation area - our living tengefu.",
+          "href": "/learn/kuruwitu"
+        },
+        {
+          "title": "Active Coral Restoration",
+          "description": "25,000+ coral colonies hand-planted since 2019, an 85% survival rate.",
+          "href": "/programmes/coral-restoration"
+        },
+        {
+          "title": "Turtle Protection",
+          "description": "270 km of coastline monitored year-round by community rangers.",
+          "href": "/programmes/turtle-protection"
+        },
+        {
+          "title": "Co-Managed Marine Areas",
+          "description": "Kenya's first ocean co-management plan, placing 120 km² under community stewardship.",
+          "href": "/programmes/co-management"
+        },
+        {
+          "title": "Marine Governance & Policy",
+          "description": "Turning two decades of reef data into national marine policy.",
+          "href": "/programmes/marine-governance"
+        },
+        {
+          "title": "Shark & Ray Conservation",
+          "description": "Elasmobranch protection and permaculture across four Beach Management Units.",
+          "href": "/projects/elasmobranch-awareness"
+        },
+        {
+          "title": "REEL Kilifi: Coral Guardian Partnership",
+          "description": "Community-built coral nurseries, fisherman training and youth education across 12,000 hectares at Kuruwitu.",
+          "href": "/projects/coral-guardian"
+        }
+      ],
+      "callout": "Kuruwitu began as 30 hectares of protected reef in 2003. Today the model protects over 120 km² of ocean - proof that when ecosystems recover, everything downstream recovers with them.",
+      "quote": {
+        "text": "The reef is not just recovering - it is growing. We see fish we have not seen in twenty years.",
+        "author": "Community diver, Kuruwitu"
+      }
+    },
+    {
+      "slug": "sustainable-fisheries-blue-economy",
+      "number": "02",
+      "title": "Sustainable Fisheries & Blue Economy",
+      "navBlurb": "Building fisheries that are environmentally sound, viable and locally governed.",
+      "tagline": "Healthy seas. Sustainable livelihoods. Sustainable finance.",
+      "color": "from-[#0a4f7a] to-ocean-turquoise",
+      "heroImage": "/images/kamakukijcma.jpg",
+      "heroImageAlt": "Fisheries monitoring at the Kamakuki Joint Co-Managed Area, Kenya",
+      "bodyImage": {
+        "src": "/images/BMUmeeting.jpg",
+        "alt": "Beach Management Unit meeting on the Kilifi coast",
+        "caption": "Regular BMU coordination meetings keep fishers at the centre of decision-making"
+      },
+      "intro": [
+        "Healthy seas. Sustainable livelihoods. Sustainable finance. Oceans Alive works with fishing communities, Beach Management Units, government, the private sector and conservation partners to build fisheries that are environmentally sustainable, economically viable and locally governed.",
+        "We strengthen community fisheries management, improve governance and data, support Co-Managed and Joint Co-Managed Marine Areas, and help communities develop alternative and complementary sources of income - while developing sustainable finance models that fund marine management beyond traditional donor cycles."
+      ],
+      "workIncludes": [
+        "Community fisheries management",
+        "BMU capacity building and networks",
+        "Co-Managed & Joint Co-Managed Marine Areas",
+        "Fisheries data collection and monitoring",
+        "Gear replacement & sustainable fishing practices",
+        "Compliance and enforcement",
+        "Sustainable aquaculture & ecotourism",
+        "Conservation enterprises & private-sector partnerships",
+        "Sustainable finance: CSR, concessions & payment for ecosystem services"
+      ],
+      "projects": [
+        {
+          "title": "Kuruwitu Co-Managed Area",
+          "description": "A pioneering model of community-government collaborative marine management.",
+          "href": "/programmes/co-management"
+        },
+        {
+          "title": "Kamakuki JCMA",
+          "description": "Five BMUs across two counties, united into one evidence-led fisheries system.",
+          "href": "/projects/fisheries-monitoring"
+        },
+        {
+          "title": "Kilifi County BMU Network",
+          "description": "Strengthening fisheries governance for 18 Beach Management Units.",
+          "href": "/programmes/bmu-network"
+        },
+        {
+          "title": "Ocean5 Fisheries Advocacy",
+          "description": "A campaign arming BMUs with evidence and coalitions against illegal trawling.",
+          "href": "/projects/ocean5-advocacy"
+        },
+        {
+          "title": "Conscious Reef Tourism",
+          "description": "Turning a 400% fish biomass recovery into a certified ecotourism enterprise.",
+          "href": "/projects/conscious-coral-tourism"
+        },
+        {
+          "title": "Kuruwitu Sustainable Finance Model",
+          "description": "A long-term financing mechanism for marine management beyond donor funding."
+        }
+      ],
+      "callout": "This isn't simply fisheries conservation - it's building a system where marine conservation can become economically self-sustaining, funded by the blue economy it protects.",
+      "quote": {
+        "text": "When fishers govern their own waters, the ocean responds.",
+        "author": "Kilifi BMU Network"
+      }
+    },
+    {
+      "slug": "resilient-communities-livelihoods",
+      "number": "03",
+      "title": "Resilient Communities and Livelihoods",
+      "navBlurb": "Empowering women, households and local leadership to manage resources sustainably.",
+      "tagline": "Strong communities are the engine of lasting conservation.",
+      "color": "from-[#c47900] to-ocean-sunshine",
+      "heroImage": "/images/trashforcash.jpg",
+      "heroImageAlt": "Women from the Trash4Cash programme on Kenya's Kilifi coast",
+      "bodyImage": {
+        "src": "/images/farmers.jpg",
+        "alt": "Women with fresh produce from a coastal kitchen garden",
+        "caption": "Kitchen garden produce - nutrition, income, and reduced pressure on the reef"
+      },
+      "intro": [
+        "Strong, resilient communities are essential to successful collaborative management. Oceans Alive works alongside coastal communities to strengthen local leadership, improve livelihoods, empower women and vulnerable households, and build the capacity needed to manage natural resources sustainably.",
+        "Through our SHE Programme and community development initiatives, we support women and households to build sustainable enterprises, improve food security and diversify incomes - reducing pressure on vulnerable marine resources while strengthening governance, leadership and climate resilience."
+      ],
+      "workIncludes": [
+        "Women's enterprises & the SHE Programme",
+        "Trash4Cash waste-to-income initiatives",
+        "Kitchen gardens & food security",
+        "Village Conservation Committees & local governance",
+        "Socio-economic surveys and community mapping",
+        "Climate resilience & adaptation planning",
+        "Social safeguarding & participatory planning"
+      ],
+      "projects": [
+        {
+          "title": "SHE Programme",
+          "description": "Empowering women and households through sustainable livelihoods.",
+          "href": "/programs/she"
+        },
+        {
+          "title": "Trash4Cash",
+          "description": "120 women turning plastic waste into household income across 4 communities.",
+          "href": "/programmes/trash4cash"
+        },
+        {
+          "title": "Kitchen Gardens & Food Security",
+          "description": "Climate-smart gardens reducing pressure on overexploited fish stocks.",
+          "href": "/programmes/kitchen-gardens"
+        },
+        {
+          "title": "LIFT Network",
+          "description": "Women's financial independence and eco-entrepreneurship across the coast.",
+          "href": "/programmes/lift-network"
+        },
+        {
+          "title": "Fisherfolk Academy",
+          "description": "Training fishing community leaders, women and youth in governance and finance.",
+          "href": "/projects/fisherfolk-academy"
+        },
+        {
+          "title": "Community Governance & Capacity",
+          "description": "Training and institutions that make community-led management last.",
+          "href": "/programmes/capacity-building"
+        }
+      ],
+      "callout": "By combining livelihoods, empowerment, governance and conservation, communities become active partners in protecting their marine environment - not bystanders to it.",
+      "quote": {
+        "text": "We are not just cleaning the beach. We are building our future.",
+        "author": "Trash4Cash participant, Kilifi"
+      }
+    },
+    {
+      "slug": "education-research-youth",
+      "number": "04",
+      "title": "Education, Research & Youth",
+      "navBlurb": "Growing the next generation of ocean stewards through learning and science.",
+      "tagline": "Conservation that is taught is conservation that lasts.",
+      "color": "from-[#1a6b5a] to-ocean-seafoam",
+      "heroImage": "/images/kids.jpg",
+      "heroImageAlt": "Schoolchildren learning about marine conservation at Kuruwitu",
+      "bodyImage": {
+        "src": "/images/interns.jpg",
+        "alt": "Conservation interns from Kenya and abroad working with Oceans Alive",
+        "caption": "International and Kenyan interns gaining hands-on conservation experience"
+      },
+      "intro": [
+        "Education is at the heart of lasting conservation. Oceans Alive creates practical, hands-on learning experiences that connect people with marine ecosystems and build the knowledge, skills and leadership needed to become effective ocean stewards.",
+        "Through our Living Classroom, schools, universities, internships and youth programmes, we connect learning with real-world conservation - while our research and scientific monitoring ensures that local experience and evidence inform every decision we make."
+      ],
+      "workIncludes": [
+        "The Living Classroom at Kuruwitu",
+        "Schools programmes & hands-on ocean literacy",
+        "Gap year, university & internship placements",
+        "Fisherfolk Academy leadership training",
+        "Youth leadership development",
+        "Scientific research & ecological monitoring",
+        "Peer-to-peer learning, toolkits & replication"
+      ],
+      "projects": [
+        {
+          "title": "The Living Classroom",
+          "description": "2,500+ students a year learning conservation from the reef itself.",
+          "href": "/learn/kuruwitu"
+        },
+        {
+          "title": "REEL School Outreach",
+          "description": "Five original films and a 50-school coral reef education drive.",
+          "href": "/projects/reel-outreach"
+        },
+        {
+          "title": "Ocean Eyes School Programme",
+          "description": "Six years, eighteen schools, one Marine Base for hands-on learning.",
+          "href": "/projects/ocean-eyes"
+        },
+        {
+          "title": "Fisherfolk Academy",
+          "description": "A fellowship turning two decades of field evidence into leadership training.",
+          "href": "/projects/fisherfolk-academy"
+        },
+        {
+          "title": "Research & Monitoring Programme",
+          "description": "The ecological evidence base behind every programme and policy.",
+          "href": "/programmes/research-monitoring"
+        },
+        {
+          "title": "Ocean Education & Internships",
+          "description": "Interns and students from Kenya and abroad training alongside our team.",
+          "href": "/programmes/ocean-education"
+        }
+      ],
+      "callout": "Every diver, teacher and researcher we train today is a reef guardian for the next twenty years. Conservation that isn't passed on doesn't last.",
+      "quote": {
+        "text": "When a child grows up protecting the ocean, it is protected for a generation. When they teach their children, it is protected forever.",
+        "author": "Ocean Education Programme"
+      }
+    }
+  ]
+}
