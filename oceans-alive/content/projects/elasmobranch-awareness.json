@@ -1,0 +1,64 @@
+{
+  "seo": {
+    "title": "Elasmobranch Awareness & Permaculture | Oceans Alive Foundation",
+    "description": "A three phase shark and ray conservation project across four Beach Management Units, growing into permaculture and water security for Timboni village."
+  },
+  "FUNDER": {
+    "name": "Coral Reef Care",
+    "logo": "/images/partners/coral-reef-care.jpg"
+  },
+  "hero": {
+    "image": "/images/fisher.jpg",
+    "imageAlt": "Elasmobranch Awareness & Permaculture Project",
+    "eyebrow": "Ongoing Since 2024",
+    "title": "Elasmobranch Awareness & Permaculture",
+    "text": "A three year, part time partnership with Coral Reef Care, teaching coastal communities and schools why sharks and rays matter, then turning that trust into food and water security.",
+    "text2": "4",
+    "eyebrow2": "BMUs",
+    "text3": "3",
+    "eyebrow3": "Phases",
+    "text4": "2024",
+    "eyebrow4": "Started",
+    "eyebrow5": "Partner"
+  },
+  "didYouKnowCallout": {
+    "label": "Why this project exists: ",
+    "text": "As apex predators, sharks accumulate toxins, including heavy metals and pesticides, in their tissue over a lifetime. Eating shark meat carries that risk forward. Awareness sessions explain this alongside the ecological case for leaving elasmobranchs in the water."
+  },
+  "overview": {
+    "eyebrow": "Project Overview",
+    "heading": "From the KAMAMKUKI JCMA to the Kitchen Garden",
+    "text": "Since 2024, Oceans Alive Foundation has partnered with Coral Reef Care to raise awareness of elasmobranch conservation within the KAMAMKUKI Joint Co-Management Area, working directly with fishers from four Beach Management Units: Marina, Kidongo, Kanamai and Kuruwitu.",
+    "text2": "Sessions combine PowerPoint presentations, educational films, handouts and posters to build understanding of elasmobranch ecology, their importance to a healthy reef, the threats they face from overfishing, and the sustainable fishing practices and gear choices that reduce shark and ray bycatch.",
+    "text3": "Key partners: the Ministry of Education, the Teachers Service Commission, the Directorate of Fisheries for Mombasa and Kilifi County, the four BMUs, participating schools, and the Timboni Community Group.",
+    "image": "/images/BMUmeeting.jpg",
+    "imageAlt": "BMU awareness session"
+  },
+  "threePhaseRoadmap": {
+    "eyebrow": "The Roadmap",
+    "heading": "Three Phases, One Growing Community",
+    "eyebrow2": "Phase 1",
+    "subheading": "Schools and First Contact",
+    "item": "2 schools reached, 100 learners",
+    "item2": "108 walk in learners at Bahari Hai Education Centre",
+    "item3": "3 BMU groups mobilized, 66 fishers reached",
+    "eyebrow3": "Phase 2",
+    "subheading2": "Expanding to Four BMUs",
+    "item4": "Outreach expanded to all 4 BMUs, 120 members reached",
+    "item5": "Discussions on gear threats and sustainable fishing",
+    "item6": "2026 continuation targets 80 fishers in Kanamai and Kuruwitu, chosen for high recent elasmobranch activity",
+    "eyebrow4": "Phase 3",
+    "subheading3": "Permaculture and Water Security",
+    "item7": "Climate smart backyard kitchen gardening for 40 households in Timboni village",
+    "item8": "Two concrete water storage tanks planned for rainwater harvesting",
+    "item9": "Strengthens household resilience through the dry season"
+  },
+  "callToAction": {
+    "heading": "Help Protect Sharks and Rays",
+    "text": "Your support carries this work from awareness into food and water security for the families who share the reef with these animals.",
+    "link": "/donate",
+    "linkText": "Support This Project",
+    "link2": "/#projects",
+    "linkText2": "View All Projects"
+  }
+}

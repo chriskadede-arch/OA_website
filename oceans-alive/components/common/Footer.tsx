@@ -5,6 +5,7 @@
  * Social media links → SOCIAL list below.  Contact email → lib/constants.ts (CONTACT_EMAIL).
  * Programme links → lib/our-work.ts (the same 4 programmes as the "Our Work" menu).
  * Search this file for "SECTION <n>".
+ * Page text, images and links (editable in Pages CMS)  →  content/site/footer.json
  */
 'use client';
 
@@ -15,6 +16,8 @@ import { PRIMARY_SDGS } from '@/lib/sdg-mapping';
 import NewsletterForm from './NewsletterForm';
 import SDGRow from './SDGRow';
 import { OUR_WORK_PROGRAMS } from '@/lib/our-work';
+
+import PAGE from '@/content/site/footer.json';
 
 const SOCIAL = [
   {
@@ -87,19 +90,17 @@ export default function Footer() {
               ══════════════════════════════════════════════════════════════════ */}
           <div>
             {/* Logo */}
-            <Link href="/" className="group inline-block max-w-full mb-6">
+            <Link href={PAGE.brandColumn.link} className="group inline-block max-w-full mb-6">
               <Image
-                src="/Oceans-Alive-Logo-WHITE.png"
-                alt="Oceans Alive Foundation"
+                src={PAGE.brandColumn.image}
+                alt={PAGE.brandColumn.imageAlt}
                 width={960}
                 height={540}
                 className="h-44 w-auto max-w-full object-contain block group-hover:opacity-80 transition-opacity duration-300"
                 priority
               />
             </Link>
-            <p className="text-sm text-white/60 leading-relaxed mb-8">
-              Working with coastal communities to restore marine ecosystems, strengthen livelihoods, and create lasting positive change along Kenya's coast.
-            </p>
+            <p className="text-sm text-white/60 leading-relaxed mb-8">{PAGE.brandColumn.text}</p>
 
             <div className="flex gap-3">
               {SOCIAL.map((s) => (
@@ -121,7 +122,7 @@ export default function Footer() {
               SECTION 2 · "Navigate" links
               ══════════════════════════════════════════════════════════════════ */}
           <div>
-            <h4 className="font-poppins font-bold mb-4 text-ocean-turquoise text-sm uppercase tracking-wider">Navigate</h4>
+            <h4 className="font-poppins font-bold mb-4 text-ocean-turquoise text-sm uppercase tracking-wider">{PAGE.navigateLinks.smallHeading}</h4>
             <ul className="space-y-2 text-sm text-white/70">
               {[
                 { label: 'Our Story', href: '/about/story' },
@@ -145,7 +146,7 @@ export default function Footer() {
               SECTION 3 · "Programmes" links (same list as the "Our Work" menu)
               ══════════════════════════════════════════════════════════════════ */}
           <div>
-            <h4 className="font-poppins font-bold mb-4 text-ocean-turquoise text-sm uppercase tracking-wider">Programmes</h4>
+            <h4 className="font-poppins font-bold mb-4 text-ocean-turquoise text-sm uppercase tracking-wider">{PAGE.programmesLinks.smallHeading}</h4>
             <ul className="space-y-2 text-sm text-white/70">
               {/* Same 4 programmes as the "Our Work" menu - edit them in lib/our-work.ts */}
               {OUR_WORK_PROGRAMS.map((p) => ({ label: p.title, href: `/programs/${p.slug}` })).map((l) => (
@@ -162,7 +163,7 @@ export default function Footer() {
               SECTION 4 · "Contact" column
               ══════════════════════════════════════════════════════════════════ */}
           <div>
-            <h4 className="font-poppins font-bold mb-4 text-ocean-turquoise text-sm uppercase tracking-wider">Contact</h4>
+            <h4 className="font-poppins font-bold mb-4 text-ocean-turquoise text-sm uppercase tracking-wider">{PAGE.contactColumn.smallHeading}</h4>
             <ul className="space-y-3 text-sm text-white/70">
               <li>
                 <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-ocean-turquoise transition-colors">
@@ -171,14 +172,10 @@ export default function Footer() {
               </li>
               <li className="text-white/60">{CONTACT_ADDRESS}</li>
               <li className="pt-2 border-t border-white/10">
-                <Link href="/contact?type=Partnership" className="hover:text-ocean-turquoise transition-colors">
-                  Press &amp; Media
-                </Link>
+                <Link href={PAGE.contactColumn.link} className="hover:text-ocean-turquoise transition-colors">{PAGE.contactColumn.linkText}</Link>
               </li>
               <li>
-                <Link href="/contact?type=Partnership" className="hover:text-ocean-turquoise transition-colors">
-                  Partnerships
-                </Link>
+                <Link href={PAGE.contactColumn.link2} className="hover:text-ocean-turquoise transition-colors">{PAGE.contactColumn.linkText2}</Link>
               </li>
             </ul>
           </div>
@@ -190,23 +187,19 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-col items-center md:items-start gap-2">
             <p className="text-xs text-white/40">
-              © {currentYear} Oceans Alive. Registered as Oceans Alive Trust, Kenya. Community-led conservation at Kuruwitu since 2003; Oceans Alive since 2016.
-            </p>
-            <p className="text-xs text-white/30">
-              Website built by{' '}
+              © {currentYear}{PAGE.bottomBar.text}</p>
+            <p className="text-xs text-white/30">{PAGE.bottomBar.text2}{' '}
               <a
-                href="https://www.linkedin.com/in/chrisadede/"
+                href={PAGE.bottomBar.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-ocean-turquoise hover:text-white transition-colors font-semibold"
-              >
-                Ades Media
-              </a>
+              >{PAGE.bottomBar.linkText}</a>
             </p>
           </div>
           <div className="flex gap-5 text-xs text-white/40">
-            <Link href="#" className="hover:text-ocean-turquoise transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-ocean-turquoise transition-colors">Terms of Service</Link>
+            <Link href={PAGE.bottomBar.link2} className="hover:text-ocean-turquoise transition-colors">{PAGE.bottomBar.linkText2}</Link>
+            <Link href={PAGE.bottomBar.link3} className="hover:text-ocean-turquoise transition-colors">{PAGE.bottomBar.linkText3}</Link>
           </div>
         </div>
       </div>

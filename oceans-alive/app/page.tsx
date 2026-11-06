@@ -12,6 +12,7 @@
  *   • IMPACT_STATS, TIMELINE  →  lib/constants.ts
  *   • PRIMARY_SDGS  →  lib/sdg-mapping.ts
  *   • PROJECTS  →  lib/projects-data.ts
+ * Page text, images and links (editable in Pages CMS)  →  content/pages/home.json
  */
 import Link from 'next/link';
 import Image from 'next/image';
@@ -21,6 +22,8 @@ import { IMPACT_STATS, TIMELINE } from '@/lib/constants';
 import { PRIMARY_SDGS } from '@/lib/sdg-mapping';
 import { PROJECTS } from '@/lib/projects-data';
 import ProjectsCarousel from '@/components/common/ProjectsCarousel';
+
+import PAGE from '@/content/pages/home.json';
 
 export default function Home() {
   // basePath is handled by Next.js config for Image components
@@ -41,7 +44,7 @@ export default function Home() {
             <div className="absolute inset-0 w-full h-full" style={{ transform: 'translateX(-35%)' }}>
               <img
                 src={`${basePath}/images/P5310100.jpg`}
-                alt="Ocean conservation work"
+                alt={PAGE.hero.imageAlt}
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{
                   objectPosition: 'center center',
@@ -63,7 +66,7 @@ export default function Home() {
           <div className="absolute inset-0 overflow-hidden" style={{ clipPath: 'polygon(38% 0, 72% 0, 62% 100%, 28% 100%)' }}>
             <img
               src={`${basePath}/images/divers.jpg`}
-              alt="Divers and ocean conservation"
+              alt={PAGE.hero.imageAlt2}
               className="absolute inset-0 w-full h-full object-cover"
               style={{
                 minWidth: '100%',
@@ -81,7 +84,7 @@ export default function Home() {
           <div className="absolute inset-0 overflow-hidden" style={{ clipPath: 'polygon(72% 0, 100% 0, 100% 100%, 62% 100%)' }}>
             <img
               src={`${basePath}/images/IMG_4955.jpg`}
-              alt="Ocean conservation in Kenya"
+              alt={PAGE.hero.imageAlt3}
               className="absolute inset-0 w-full h-full object-cover"
               style={{
                 minWidth: '140%',
@@ -103,29 +106,19 @@ export default function Home() {
         {/* Content overlay - centered over all images */}
         <div className="relative z-20 flex items-center justify-center w-full min-h-[90vh] px-6 pt-36 pb-20 md:pt-40">
           <div className="max-w-5xl text-center">
-            <h1 className="font-poppins font-light text-ocean-turquoise text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight mb-6 tracking-[0.15em] uppercase">
-              Oceans Alive
-            </h1>
-            <h2 className="font-poppins font-bold text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-6">
-              Healthy Oceans, Healthy Communities
-            </h2>
-            <p className="text-base md:text-lg text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto">
-              Oceans Alive works with coastal communities, Beach Management Units, government agencies and conservation partners to strengthen fisheries co-management, restore marine ecosystems and build resilient coastal livelihoods in Kenya. Drawing on more than two decades of learning from Kuruwitu, we connect local knowledge, practical conservation, science and policy to support locally led marine stewardship.
-            </p>
+            <h1 className="font-poppins font-light text-ocean-turquoise text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight mb-6 tracking-[0.15em] uppercase">{PAGE.hero.title}</h1>
+            <h2 className="font-poppins font-bold text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-6">{PAGE.hero.heading}</h2>
+            <p className="text-base md:text-lg text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto">{PAGE.hero.text}</p>
 
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/about/story"
+                href={PAGE.hero.link}
                 className="px-7 py-3.5 bg-ocean-midnight text-white font-bold rounded-xl hover:bg-white hover:text-ocean-turquoise transition-all duration-200 shadow-lg"
-              >
-                Learn Our Story
-              </Link>
+              >{PAGE.hero.linkText}</Link>
               <Link
-                href="/donate"
+                href={PAGE.hero.link2}
                 className="px-7 py-3.5 border border-white/30 text-white font-semibold rounded-xl hover:border-ocean-turquoise hover:text-ocean-turquoise transition-all duration-200"
-              >
-                Support Our Work
-              </Link>
+              >{PAGE.hero.linkText2}</Link>
             </div>
 
           </div>
@@ -141,18 +134,14 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-14">
             <div>
-              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">Our Story</p>
-              <h2 className="text-4xl md:text-5xl font-poppins font-bold text-white leading-tight mb-6">
-                Two Decades of Impact
-              </h2>
+              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.impactStats.eyebrow}</p>
+              <h2 className="text-4xl md:text-5xl font-poppins font-bold text-white leading-tight mb-6">{PAGE.impactStats.heading}</h2>
               <p className="text-white/60 text-lg leading-relaxed">
-                <span className="text-white font-bold">20+ years of community-led conservation</span> at Kuruwitu: Oceans Alive was founded in <span className="text-white font-bold">2016</span> to scale and support the community-led approach started by the <span className="text-white font-bold">Kuruwitu-CBO in 2003</span>
+                <span className="text-white font-bold">{PAGE.impactStats.label}</span>{PAGE.impactStats.text}<span className="text-white font-bold">{PAGE.impactStats.label2}</span>{PAGE.impactStats.text2}<span className="text-white font-bold">{PAGE.impactStats.label3}</span>
               </p>
             </div>
             <div className="lg:pt-3">
-              <p className="text-white/60 text-lg leading-relaxed">
-                We work through community institutions and formal co-management structures, in collaboration with government, technical partners and donors. Oceans Alive's role is to facilitate, strengthen capacity, provide technical advice, monitor, mobilise funding, support learning and document lessons  -  so that coastal communities remain the primary stewards of their marine resources.
-              </p>
+              <p className="text-white/60 text-lg leading-relaxed">{PAGE.impactStats.text3}</p>
             </div>
           </div>
 
@@ -170,7 +159,7 @@ export default function Home() {
           <div className="mt-10 pt-8 border-t border-white/10 space-y-6">
             {/* Recognition */}
             <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
-              <span className="text-[9px] text-white/25 uppercase tracking-widest">Recognised by</span>
+              <span className="text-[9px] text-white/25 uppercase tracking-widest">{PAGE.impactStats.eyebrow2}</span>
               {['IUCN Blue Champions Award 2022', 'HM King Charles III Visit 2023', 'IUCN World Congress 2025'].map((a) => (
                 <span key={a} className="text-xs text-white/40 font-semibold">{a}</span>
               ))}
@@ -186,10 +175,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6">
           {/* Section Header */}
           <div className="mb-10">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-2">Our Work</p>
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white leading-tight">
-              All Projects
-            </h2>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-2">{PAGE.ourProjectsCarousel.eyebrow}</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white leading-tight">{PAGE.ourProjectsCarousel.heading}</h2>
           </div>
         </div>
 

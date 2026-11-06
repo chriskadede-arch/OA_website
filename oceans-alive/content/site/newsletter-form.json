@@ -1,0 +1,9 @@
+{
+  "intro": {
+    "placeholder": "Your email address",
+    "label": "Email Address",
+    "placeholder2": "your@email.com",
+    "label2": "Full Name (Optional)",
+    "placeholder3": "Your name"
+  }
+}

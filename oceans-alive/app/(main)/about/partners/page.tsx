@@ -12,17 +12,15 @@
  * Where the text/data lives:
  *   • PARTNERS  →  top of this file
  *   • PRIORITY_PARTNERS  →  top of this file
+ * Page text, images and links (editable in Pages CMS)  →  content/pages/about-partners.json
  */
 import Link from 'next/link';
 import Image from 'next/image';
 import PartnerLogo from '@/components/common/PartnerLogo';
 import PartnerCarousel from '@/components/common/PartnerCarousel';
+import PAGE from '@/content/pages/about-partners.json';
 
-export const metadata = {
-  title: 'Partners & Collaborations - Oceans Alive Foundation',
-  description:
-    'Partnership, philanthropy and community collaboration - the network of organizations making marine conservation possible in Kilifi County.',
-};
+export const metadata = PAGE.seo;
 
 type Partner = {
   name: string;
@@ -36,71 +34,9 @@ type Partner = {
   large?: boolean;
 };
 
-const PARTNERS: Partner[] = [
-  // Community & Resource-User Institutions (Priority First)
-  { name: 'Kuruwitu Conservation & Welfare CBO', role: 'Central community partner in closure, coral restoration and marine education', outcome: 'Continuing management role in the marine protected area', category: 'community', current: true },
-  { name: 'Kuruwitu BMU', role: 'Community fisheries governance', category: 'community', current: true },
-  { name: 'Kanamai BMU', role: 'KAMAMKUKI JCMA partner', category: 'community', current: true },
-  { name: 'Mtwapa BMU', role: 'KAMAMKUKI JCMA partner', category: 'community', current: true },
-  { name: 'Marina BMU', role: 'KAMAMKUKI JCMA partner', category: 'community', current: true },
-  { name: 'Kidongo BMU', role: 'KAMAMKUKI JCMA partner', category: 'community', current: true },
-  { name: 'Kilifi County BMU Network', role: 'County-level learning, coordination & advocacy', category: 'community', current: true },
-  { name: 'KAMAMKUKI Joint BMU Committee', role: 'The five BMUs managing the Joint Community Management Area', outcome: 'Community-led management of Kenya\'s first JCMA', category: 'community', current: true },
+const PARTNERS: Partner[] = PAGE.PARTNERS as unknown as Partner[];
 
-  // Government & Statutory Partners
-  { name: 'Kenya Fisheries Service', role: 'National statutory framework partner', outcome: 'Endorsement and rollout of Kenya\'s first CMA and county BMU network', category: 'government', logoPath: '/images/partners/kenya-fisheries.png', current: true },
-  { name: 'County Government of Kilifi', role: 'Co-management and KAMAMKUKI JCMA collaboration', category: 'government', logoPath: '/images/partners/kilifi-county.jpg', current: true },
-  { name: 'County Government of Mombasa', role: 'Fisheries governance collaboration', category: 'government', logoPath: '/images/partners/mombasa-county.jpg', current: true },
-
-  // Funding Partners & Donors
-  { name: 'Blue Ventures Conservation', role: 'Strengthens BMU governance, fisheries monitoring, financial inclusion & peer learning', outcome: 'Strengthened BMU governance and monitoring systems', category: 'funding', logoPath: '/images/partners/blue-ventures.png', current: true, showName: true },
-  { name: 'Oceans 5', role: 'Ocean conservation funder', category: 'funding', logoPath: '/images/partners/oceans5.jpg', current: true },
-  { name: 'Coral Guardian', role: 'Coral restoration partner', category: 'funding', logoPath: '/images/partners/Coral-Guardian-Logo-White (1).png', current: true },
-  { name: 'BIOPAMA / IUCN', role: 'Biodiversity & protected area funding', category: 'funding', current: true },
-  { name: 'DEFRA', role: 'UK Government environment funding', category: 'funding', logoPath: '/images/partners/defra.jpg', current: true },
-  { name: 'OCEAN Community', role: 'Ocean conservation network', category: 'funding', logoPath: '/images/partners/ocean-community.png', current: true, showName: true, large: true },
-  { name: 'Canon', role: 'Media & documentation partner', category: 'funding', logoPath: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/Canon_logo.svg', current: true },
-  { name: 'Saruni Basecamp Foundation', role: 'Community support', category: 'funding', logoPath: '/images/partners/saruni.png', current: true },
-  { name: 'Conscious Travel', role: 'Sustainable tourism partner', category: 'funding', logoPath: '/images/partners/conscious-travel.png', current: true },
-  { name: 'Seas4Life', role: 'Ocean advocacy', category: 'funding', logoPath: '/images/partners/seas4life.png', current: true, showName: true },
-  { name: 'Ocean Eyes', role: 'Marine conservation', category: 'funding', logoPath: '/images/partners/ocean-eyes.jpg', current: true },
-  { name: 'Vipingo Ridge', role: 'Local supporter', category: 'funding', logoPath: '/images/partners/vipingo-ridge.png', current: true },
-  { name: 'The Leap', role: 'Community supporter', category: 'funding', logoPath: '/images/partners/the-leap.svg', current: true },
-  { name: 'Coral Reef Care', role: 'Shark & ray conservation funder', category: 'funding', logoPath: '/images/partners/coral-reef-care.jpg', current: true, showName: true },
-  { name: 'Pelorus Foundation', role: "Women's livelihoods & Trash4Cash funder", category: 'funding', logoPath: '/images/partners/pelorus-foundation.jpg', current: true },
-
-  // Technical, Research & Learning Partners
-  { name: 'KMFRI', role: 'Kenya Marine and Fisheries Research Institute', category: 'technical', current: true },
-  { name: 'WCS', role: 'Monitoring & communications partner', category: 'technical', current: true },
-];
-
-const PRIORITY_PARTNERS = [
-  {
-    name: 'Blue Ventures Conservation',
-    relationship: 'Strengthens BMU governance, fisheries monitoring, financial inclusion and peer learning in the KAMAMKUKI JCMA',
-    outcome: 'Strengthened BMU governance and monitoring systems',
-    logoPath: '/images/partners/blue-ventures.png',
-    link: '/partnerships/blue-ventures'
-  },
-  {
-    name: 'Kenya Fisheries Service',
-    relationship: 'National statutory framework for co-management planning, compliance, monitoring and capacity building',
-    outcome: 'Endorsement and rollout of Kenya\'s first CMA and county BMU network',
-    logoPath: '/images/partners/kenya-fisheries.png'
-  },
-  {
-    name: 'KAMAMKUKI BMUs',
-    relationship: 'The five community fisheries institutions that manage the Joint Community Management Area',
-    outcome: 'Community-led fisheries management and sustainable coastal development',
-    logoPath: null
-  },
-  {
-    name: 'Kuruwitu Conservation & Welfare CBO',
-    relationship: 'Central community partner in closure, coral restoration and marine education with deep history and continuing management role',
-    outcome: 'Protected marine area with thriving coral and fish populations',
-    logoPath: null
-  }
-];
+const PRIORITY_PARTNERS = PAGE.PRIORITY_PARTNERS;
 
 export default function PartnersPage() {
   const communityPartners = PARTNERS.filter(p => p.category === 'community' && p.current);
@@ -115,22 +51,17 @@ export default function PartnersPage() {
           ══════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-gradient-to-br from-gray-50 via-white to-ocean-turquoise/10 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/kamakukujcma.jpg" alt="Community Partnership" fill className="object-cover opacity-10" />
+          <Image src={PAGE.hero.image} alt={PAGE.hero.imageAlt} fill className="object-cover opacity-10" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white/90" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 pt-36 pb-20 md:pt-40 md:pb-28">
           <div className="max-w-3xl">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.3em] mb-5">Partnerships & Collaborations</p>
-            <h1 className="text-5xl md:text-6xl font-poppins font-bold text-ocean-midnight mb-6 leading-tight">
-              Together, Making<br />
-              <span className="text-ocean-turquoise">Conservation Possible</span>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.3em] mb-5">{PAGE.hero.eyebrow}</p>
+            <h1 className="text-5xl md:text-6xl font-poppins font-bold text-ocean-midnight mb-6 leading-tight">{PAGE.hero.title}<br />
+              <span className="text-ocean-turquoise">{PAGE.hero.label}</span>
             </h1>
-            <p className="text-xl text-gray-700 leading-relaxed">
-              Oceans Alive's work relies on partnership, philanthropy and community collaboration.
-              The results and impact presented across this website have been achieved together with
-              the institutions and people below, each of whom contributes to making this work possible.
-            </p>
+            <p className="text-xl text-gray-700 leading-relaxed">{PAGE.hero.text}</p>
           </div>
         </div>
       </section>
@@ -141,8 +72,8 @@ export default function PartnersPage() {
       <section className="bg-gradient-to-b from-gray-50 to-white py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-12">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-3">Priority Partnerships</p>
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight">Deep Relationships, Real Outcomes</h2>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-3">{PAGE.priorityPartnersFeaturedStories.eyebrow}</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight">{PAGE.priorityPartnersFeaturedStories.heading}</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -163,12 +94,12 @@ export default function PartnersPage() {
 
                   <div className="space-y-4">
                     <div>
-                      <p className="text-xs text-ocean-turquoise font-bold uppercase tracking-wider mb-1">Relationship</p>
+                      <p className="text-xs text-ocean-turquoise font-bold uppercase tracking-wider mb-1">{PAGE.priorityPartnersFeaturedStories.eyebrow2}</p>
                       <p className="text-sm text-gray-700 leading-relaxed">{partner.relationship}</p>
                     </div>
 
                     <div className="pt-4 border-t border-gray-100">
-                      <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Outcome</p>
+                      <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">{PAGE.priorityPartnersFeaturedStories.eyebrow3}</p>
                       <p className="text-sm text-ocean-midnight font-semibold leading-relaxed">{partner.outcome}</p>
                     </div>
                   </div>
@@ -177,8 +108,7 @@ export default function PartnersPage() {
                     <Link
                       href={partner.link}
                       className="inline-flex items-center gap-2 text-ocean-turquoise font-bold text-sm mt-4 group-hover:gap-3 transition-all"
-                    >
-                      Read the full story <span>→</span>
+                    >{PAGE.priorityPartnersFeaturedStories.linkText}<span>→</span>
                     </Link>
                   )}
                 </div>
@@ -199,11 +129,9 @@ export default function PartnersPage() {
             <div className="absolute -left-3 top-0 bottom-0 w-1 bg-gradient-to-b from-[#1a6b5a] to-[#6ee7b7] rounded-full" />
             <div className="pl-8">
               <div className="mb-6">
-                <p className="text-xs text-[#1a6b5a] font-bold uppercase tracking-widest mb-2">Community-Led Action</p>
-                <h2 className="text-2xl md:text-3xl font-poppins font-bold text-ocean-midnight mb-2">
-                  Community & Resource-User Institutions
-                </h2>
-                <p className="text-gray-600 text-sm italic">Community-led action is central to Oceans Alive's identity</p>
+                <p className="text-xs text-[#1a6b5a] font-bold uppercase tracking-widest mb-2">{PAGE.allPartnersOrganizedByCategory.eyebrow}</p>
+                <h2 className="text-2xl md:text-3xl font-poppins font-bold text-ocean-midnight mb-2">{PAGE.allPartnersOrganizedByCategory.heading}</h2>
+                <p className="text-gray-600 text-sm italic">{PAGE.allPartnersOrganizedByCategory.text}</p>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -222,10 +150,8 @@ export default function PartnersPage() {
             <div className="absolute -left-3 top-0 bottom-0 w-1 bg-gradient-to-b from-amber-700 to-amber-400 rounded-full" />
             <div className="pl-8">
               <div className="mb-6">
-                <p className="text-xs text-amber-700 font-bold uppercase tracking-widest mb-2">Statutory Framework</p>
-                <h2 className="text-2xl md:text-3xl font-poppins font-bold text-ocean-midnight">
-                  Government & Statutory Partners
-                </h2>
+                <p className="text-xs text-amber-700 font-bold uppercase tracking-widest mb-2">{PAGE.allPartnersOrganizedByCategory.eyebrow2}</p>
+                <h2 className="text-2xl md:text-3xl font-poppins font-bold text-ocean-midnight">{PAGE.allPartnersOrganizedByCategory.heading2}</h2>
               </div>
 
               <div className="grid md:grid-cols-3 gap-4">
@@ -251,13 +177,9 @@ export default function PartnersPage() {
             <div className="absolute -left-3 top-0 bottom-0 w-1 bg-gradient-to-b from-ocean-midnight to-ocean-turquoise rounded-full" />
             <div className="pl-8">
               <div className="mb-6">
-                <p className="text-xs text-ocean-turquoise font-bold uppercase tracking-widest mb-2">Funding & Support</p>
-                <h2 className="text-2xl md:text-3xl font-poppins font-bold text-ocean-midnight mb-2">
-                  Funding Partners & Donors
-                </h2>
-                <p className="text-gray-600 text-sm">
-                  Oceans Alive depends on grant funding and donor support to do this work, and we acknowledge that support openly.
-                </p>
+                <p className="text-xs text-ocean-turquoise font-bold uppercase tracking-widest mb-2">{PAGE.allPartnersOrganizedByCategory.eyebrow3}</p>
+                <h2 className="text-2xl md:text-3xl font-poppins font-bold text-ocean-midnight mb-2">{PAGE.allPartnersOrganizedByCategory.heading3}</h2>
+                <p className="text-gray-600 text-sm">{PAGE.allPartnersOrganizedByCategory.text2}</p>
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
@@ -293,10 +215,8 @@ export default function PartnersPage() {
             <div className="absolute -left-3 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-700 to-cyan-400 rounded-full" />
             <div className="pl-8">
               <div className="mb-6">
-                <p className="text-xs text-cyan-700 font-bold uppercase tracking-widest mb-2">Research & Learning</p>
-                <h2 className="text-2xl md:text-3xl font-poppins font-bold text-ocean-midnight">
-                  Technical, Research & Learning Partners
-                </h2>
+                <p className="text-xs text-cyan-700 font-bold uppercase tracking-widest mb-2">{PAGE.allPartnersOrganizedByCategory.eyebrow4}</p>
+                <h2 className="text-2xl md:text-3xl font-poppins font-bold text-ocean-midnight">{PAGE.allPartnersOrganizedByCategory.heading4}</h2>
               </div>
 
               <div className="grid md:grid-cols-3 gap-4">
@@ -326,27 +246,18 @@ export default function PartnersPage() {
             </svg>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-4">
-            Work With Us
-          </h2>
-          <p className="text-white/70 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-            We collaborate with NGOs, research institutions, governments, media organizations, and responsible
-            businesses who share our commitment to community-led conservation.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-4">{PAGE.becomeAPartner.heading}</h2>
+          <p className="text-white/70 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">{PAGE.becomeAPartner.text}</p>
 
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/contact?type=Partnership"
+              href={PAGE.becomeAPartner.link}
               className="px-8 py-4 bg-ocean-turquoise text-ocean-midnight font-bold rounded-xl hover:bg-white transition-all duration-200 shadow-xl"
-            >
-              Start a Conversation →
-            </Link>
+            >{PAGE.becomeAPartner.linkText}</Link>
             <Link
-              href="/donate"
+              href={PAGE.becomeAPartner.link2}
               className="px-8 py-4 bg-white/10 border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/20 transition-all duration-200"
-            >
-              Support Our Work
-            </Link>
+            >{PAGE.becomeAPartner.linkText2}</Link>
           </div>
         </div>
       </section>

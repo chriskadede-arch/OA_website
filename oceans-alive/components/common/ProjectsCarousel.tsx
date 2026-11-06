@@ -3,6 +3,7 @@
  * "ALL PROJECTS" CAROUSEL (home page + programme pages)
  * ══════════════════════════════════════════════════════════════════
  * Swipeable cards with left/right arrows. Card text comes from lib/projects-data.ts.
+ * Page text, images and links (editable in Pages CMS)  →  content/site/projects-carousel.json
  */
 'use client';
 
@@ -10,6 +11,8 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Project } from '@/lib/projects-data';
+
+import PAGE from '@/content/site/projects-carousel.json';
 
 export default function ProjectsCarousel({ projects, dark = false }: { projects: Project[]; dark?: boolean }) {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -56,7 +59,7 @@ export default function ProjectsCarousel({ projects, dark = false }: { projects:
       {/* Arrow controls */}
       <button
         onClick={() => scrollByCard(-1)}
-        aria-label="Scroll left"
+        aria-label={PAGE.intro.accessibleLabel}
         disabled={atStart}
         className="flex absolute left-1 sm:left-2 top-1/2 md:top-[45%] -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/95 shadow-xl border border-gray-200 items-center justify-center text-ocean-midnight hover:bg-ocean-turquoise hover:text-white hover:border-ocean-turquoise transition-all disabled:opacity-0 disabled:pointer-events-none"
       >
@@ -66,7 +69,7 @@ export default function ProjectsCarousel({ projects, dark = false }: { projects:
       </button>
       <button
         onClick={() => scrollByCard(1)}
-        aria-label="Scroll right"
+        aria-label={PAGE.intro.accessibleLabel2}
         disabled={atEnd}
         className="flex absolute right-1 sm:right-2 top-1/2 md:top-[45%] -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/95 shadow-xl border border-gray-200 items-center justify-center text-ocean-midnight hover:bg-ocean-turquoise hover:text-white hover:border-ocean-turquoise transition-all disabled:opacity-0 disabled:pointer-events-none"
       >
@@ -128,8 +131,7 @@ export default function ProjectsCarousel({ projects, dark = false }: { projects:
                   ))}
                 </div>
 
-                <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">
-                  Explore Project <span className="text-lg">→</span>
+                <span className="text-sm font-bold text-ocean-turquoise group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">{PAGE.intro.label}<span className="text-lg">→</span>
                 </span>
               </div>
             </div>

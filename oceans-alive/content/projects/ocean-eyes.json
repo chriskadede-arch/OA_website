@@ -1,0 +1,76 @@
+{
+  "seo": {
+    "title": "Ocean Eyes Coral Restoration School Program | Oceans Alive Foundation",
+    "description": "Six years, eighteen schools, one Marine Base: a schools programme pairing classroom lessons with hands on conservation and a student led environmental project."
+  },
+  "PIPELINE": [
+    {
+      "title": "Classroom Lesson",
+      "body": "Learners are introduced to marine conservation, biodiversity and climate smart backyard kitchen gardening at their own school."
+    },
+    {
+      "title": "Marine Base Practical",
+      "body": "The class travels to the Marine Base to connect classroom theory to real, hands on conservation work."
+    },
+    {
+      "title": "Needs Assessment",
+      "body": "Oceans Alive and Ocean Eyes assess each school for environmental challenges and opportunities specific to that community."
+    },
+    {
+      "title": "Student Led Project",
+      "body": "Learners design and run their own school based environmental project, moving from awareness into action."
+    }
+  ],
+  "FUNDER": {
+    "name": "Ocean Eyes",
+    "logo": "/images/partners/ocean-eyes.jpg"
+  },
+  "hero": {
+    "image": "/images/kids.jpg",
+    "imageAlt": "Ocean Eyes Coral Restoration School Program",
+    "eyebrow": "3 Months Every Year, For 6 Years",
+    "title": "Ocean Eyes Coral Restoration School Program",
+    "text": "A six year partnership with Ocean Eyes, delivering marine conservation and climate smart backyard kitchen gardening education to school learners along the Kenyan coast.",
+    "eyebrow2": "With the Ministry of Education, community based organisations, and school patrons",
+    "text2": "360",
+    "eyebrow3": "Learners",
+    "text3": "18",
+    "eyebrow4": "Schools",
+    "text4": "6",
+    "eyebrow5": "Years Running",
+    "eyebrow6": "Partner"
+  },
+  "theMath": {
+    "text": "3",
+    "eyebrow": "Schools a Year",
+    "text2": "20",
+    "eyebrow2": "Learners a School",
+    "text3": "6",
+    "eyebrow3": "Years",
+    "text4": "360",
+    "eyebrow4": "Learners, 18 Schools"
+  },
+  "pipeline": {
+    "eyebrow": "How It Works",
+    "heading": "From Classroom to Community Action"
+  },
+  "impactStats": {
+    "eyebrow": "Six Years On",
+    "heading": "A Consistent Platform for School Led Conservation",
+    "text": "Every school leaves with its own environmental project, addressing the specific challenges its own students identified.",
+    "text2": "360",
+    "eyebrow2": "Learners Reached",
+    "text3": "18",
+    "eyebrow3": "Schools",
+    "text4": "6",
+    "eyebrow4": "Years of Partnership"
+  },
+  "callToAction": {
+    "heading": "Help Us Reach the Next School",
+    "text": "Your support helps extend marine conservation education, and its practical follow through, to more schools along the coast.",
+    "link": "/donate",
+    "linkText": "Support This Project",
+    "link2": "/#projects",
+    "linkText2": "View All Projects"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "seo": {
+    "title": "Pelorus SHE Trash4Cash Initiative | Oceans Alive Foundation",
+    "description": "A women's clean up movement that started with 19 fishmongers at Kuruwitu and rippled to a 35 strong group in Kanamai, guarding a prime turtle nesting beach."
+  },
+  "FUNDER": {
+    "name": "Pelorus Foundation",
+    "logo": "/images/partners/pelorus-foundation.jpg"
+  },
+  "hero": {
+    "image": "/images/trashforcash.jpg",
+    "imageAlt": "Pelorus SHE Trash4Cash Initiative",
+    "eyebrow": "Running Since 2022",
+    "title": "Pelorus SHE Trash4Cash Initiative",
+    "text": "Bolstering our Social, Health and Environment initiative: turning beach clean ups into a livelihood and a biodiversity win for the Mama Karanga fishmongers of Kanamai BMU.",
+    "eyebrow2": "With the KAMAMKUKI Joint Co-Management Area and Kanamai Beach Management Unit",
+    "text2": "100",
+    "eyebrow3": "Women Recycling",
+    "text3": "600",
+    "eyebrow4": "In Permaculture",
+    "text4": "35",
+    "eyebrow5": "Kanamai Women",
+    "eyebrow6": "Partner"
+  },
+  "sHEExplainer": {
+    "text": "Social",
+    "text2": "Women's groups and peer networks",
+    "text3": "Health",
+    "text4": "Cleaner beaches, safer communities",
+    "text5": "Environment",
+    "text6": "Plastic removed, habitats protected",
+    "text7": "S.H.E. stands for Social, Health, and Environment, the three strands Oceans Alive has woven together for female fishmongers it calls the guardians of the ocean."
+  },
+  "rippleEffect": {
+    "eyebrow": "The Ripple Effect",
+    "heading": "How 19 Women Became a Coastwide Movement",
+    "eyebrow2": "The Pilot",
+    "text": "19 Women",
+    "text2": "With Pelorus Foundation support, 19 women fishmongers formed the Kuruwitu Women Group, piloting a trash for cash approach to beach clean ups.",
+    "eyebrow3": "The Proof",
+    "text3": "100 & 600",
+    "text4": "The idea grew: 100 women now sell collected plastic to a recycling company, and 600 are involved in climate smart permaculture.",
+    "eyebrow4": "The Replication",
+    "text5": "35 in Kanamai",
+    "text6": "Experienced Kuruwitu women became peer trainers for the new Soft Coral Kanamai Self Help Group, passing on everything they had learned."
+  },
+  "whatPeerTrainingCovers": {
+    "image": "/images/trashforcash2.jpg",
+    "imageAlt": "Women's trash-for-cash group",
+    "eyebrow": "Peer to Peer Training",
+    "heading": "What the Kuruwitu Women Pass On",
+    "item": "Institutional capacity building and group formalization",
+    "item2": "Village Savings and Loan Association operations",
+    "item3": "Benefit sharing standard operating procedures",
+    "item4": "Plastic processing, recycling, and agreements with recycling companies",
+    "text": "Oceans Alive backs every group with training manuals, leaflets and guidebooks, so the model keeps travelling long after the trainers go home."
+  },
+  "turtleNestingHighlight": {
+    "text": "The Kanamai clean ups protect more than income: they guard a beach that is one of the area's prime sea turtle nesting sites, tying every bag of plastic removed to a nest with a better chance of surviving."
+  },
+  "callToAction": {
+    "heading": "Help Empower More Women Fishmongers",
+    "text": "Your support helps carry trash for cash livelihoods and beach clean ups to the next BMU along the coast.",
+    "link": "/donate",
+    "linkText": "Support This Project",
+    "link2": "/#projects",
+    "linkText2": "View All Projects"
+  }
+}

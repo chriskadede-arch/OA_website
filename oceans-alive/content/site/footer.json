@@ -1,0 +1,31 @@
+{
+  "brandColumn": {
+    "link": "/",
+    "image": "/Oceans-Alive-Logo-WHITE.png",
+    "imageAlt": "Oceans Alive Foundation",
+    "text": "Working with coastal communities to restore marine ecosystems, strengthen livelihoods, and create lasting positive change along Kenya's coast."
+  },
+  "navigateLinks": {
+    "smallHeading": "Navigate"
+  },
+  "programmesLinks": {
+    "smallHeading": "Programmes"
+  },
+  "contactColumn": {
+    "smallHeading": "Contact",
+    "link": "/contact?type=Partnership",
+    "linkText": "Press & Media",
+    "link2": "/contact?type=Partnership",
+    "linkText2": "Partnerships"
+  },
+  "bottomBar": {
+    "text": " Oceans Alive. Registered as Oceans Alive Trust, Kenya. Community-led conservation at Kuruwitu since 2003; Oceans Alive since 2016.",
+    "text2": "Website built by",
+    "link": "https://www.linkedin.com/in/chrisadede/",
+    "linkText": "Ades Media",
+    "link2": "#",
+    "linkText2": "Privacy Policy",
+    "link3": "#",
+    "linkText3": "Terms of Service"
+  }
+}

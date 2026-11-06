@@ -13,33 +13,19 @@
  *
  * Where the text/data lives:
  *   • PARTNERS  →  top of this file
+ * Page text, images and links (editable in Pages CMS)  →  content/projects/ocean-community-grant.json
  */
 import Link from 'next/link';
 import Image from 'next/image';
+import PAGE from '@/content/projects/ocean-community-grant.json';
 
-export const metadata = {
-  title: 'Ocean Community Grant: OCG2/1012 | Oceans Alive Foundation',
-  description: 'Enhancing livelihoods through locally developed approaches to reduce illegal fishing practices across five coastal communities in Kenya.',
-};
+export const metadata = PAGE.seo;
 
-const PARTNERS = [
-  { name: 'UK International Development', logo: '/images/partners/uk-international-development.png', box: 'w-44 h-16' },
-  { name: 'Ocean Community Empowerment and Nature (OCEAN) Grantee', logo: '/images/partners/ocean-grantee-symbol.png', box: 'w-28 h-28', zoom: true },
-];
+const PARTNERS = PAGE.PARTNERS;
 
-const APPROACH = [
-  'Locally developed action to reduce illegal fishing gear and practices.',
-  'Peer learning that strengthens skills and community ownership.',
-  'More inclusive, diversified livelihood opportunities.',
-  'A model with potential for local, national, and regional replication.',
-];
+const APPROACH = PAGE.APPROACH;
 
-const REACH = [
-  { value: '25', label: 'Peer trainers, with 40% women' },
-  { value: '200', label: 'Community members to receive peer training' },
-  { value: '50', label: 'People taking part in livelihood training' },
-  { value: '80% / 20%', label: 'Youth and people living with disabilities among livelihood trainees' },
-];
+const REACH = PAGE.REACH;
 
 export default function OceanCommunityGrantPage() {
   return (
@@ -50,8 +36,8 @@ export default function OceanCommunityGrantPage() {
       <section className="relative bg-ocean-midnight overflow-hidden min-h-[60vh]">
         <div className="absolute inset-0">
           <Image
-            src="/images/kamakukijcma.jpg"
-            alt="Coastal community in the KAMAMKUKI Joint Co-Management Area"
+            src={PAGE.hero.image}
+            alt={PAGE.hero.imageAlt}
             fill
             className="object-cover"
             priority
@@ -63,33 +49,30 @@ export default function OceanCommunityGrantPage() {
           <div className="max-w-3xl lg:max-w-2xl xl:max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white/20">
               <span className="w-2 h-2 bg-ocean-turquoise rounded-full animate-pulse" />
-              <span className="text-xs font-bold text-white uppercase tracking-wider">Ocean Community Grant · OCG2/1012</span>
+              <span className="text-xs font-bold text-white uppercase tracking-wider">{PAGE.hero.eyebrow}</span>
             </div>
-            <h1 className="font-poppins font-bold text-5xl md:text-6xl text-white mb-6 leading-tight">
-              A Fairer Catch.<br />
-              <span className="text-ocean-turquoise">A Stronger Coast.</span>
+            <h1 className="font-poppins font-bold text-5xl md:text-6xl text-white mb-6 leading-tight">{PAGE.hero.title}<br />
+              <span className="text-ocean-turquoise">{PAGE.hero.label}</span>
             </h1>
-            <p className="text-xl text-white/90 leading-relaxed mb-8">
-              Enhancing livelihoods through locally developed approaches to reduce illegal fishing practices. Across five Beach Management Units in the KAMAMKUKI Joint Co-Management Area, communities are shaping solutions that protect the sea and create more inclusive ways to earn a living.
-            </p>
+            <p className="text-xl text-white/90 leading-relaxed mb-8">{PAGE.hero.text}</p>
             <div className="flex flex-wrap gap-8">
               <div>
-                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">695</div>
-                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">IPLC Beneficiaries</div>
+                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">{PAGE.hero.text2}</div>
+                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">{PAGE.hero.eyebrow2}</div>
               </div>
               <div>
-                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">31%</div>
-                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">Women</div>
+                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">{PAGE.hero.text3}</div>
+                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">{PAGE.hero.eyebrow3}</div>
               </div>
               <div>
-                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">4,164</div>
-                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">People Reached</div>
+                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">{PAGE.hero.text4}</div>
+                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">{PAGE.hero.eyebrow4}</div>
               </div>
             </div>
 
             {/* Partner logos, inline on smaller screens */}
             <div className="lg:hidden mt-10 inline-flex flex-wrap items-center gap-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-4">
-              <span className="w-full text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">Funded by</span>
+              <span className="w-full text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">{PAGE.hero.eyebrow5}</span>
               {PARTNERS.map((p) => (
                 <div key={p.name} className="relative w-32 h-16 bg-white rounded-xl overflow-hidden">
                   <Image src={p.logo} alt={p.name} fill className={`object-contain p-2 ${p.zoom ? 'scale-[1.35]' : ''}`} />
@@ -101,7 +84,7 @@ export default function OceanCommunityGrantPage() {
 
         {/* Partner badge, floating right */}
         <div className="hidden lg:flex absolute right-10 xl:right-20 top-1/2 -translate-y-1/2 flex-col items-center gap-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">Funded by</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">{PAGE.hero.eyebrow6}</span>
           {PARTNERS.map((p) => (
             <div key={p.name} className={`relative ${p.box} bg-white rounded-xl overflow-hidden`}>
               <Image src={p.logo} alt={p.name} fill className={`object-contain p-2 ${p.zoom ? 'scale-[1.35]' : ''}`} />
@@ -117,21 +100,19 @@ export default function OceanCommunityGrantPage() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-2xl p-6 border border-violet-100">
-              <p className="text-xs font-bold text-violet-700 uppercase tracking-widest mb-2">Where</p>
-              <p className="font-poppins font-bold text-ocean-midnight">KAMAMKUKI Joint Co-Management Area</p>
+              <p className="text-xs font-bold text-violet-700 uppercase tracking-widest mb-2">{PAGE.impactBand.eyebrow}</p>
+              <p className="font-poppins font-bold text-ocean-midnight">{PAGE.impactBand.text}</p>
             </div>
             <div className="bg-white rounded-2xl p-6 border border-violet-100">
-              <p className="text-xs font-bold text-violet-700 uppercase tracking-widest mb-2">Who</p>
-              <p className="font-poppins font-bold text-ocean-midnight">Five Beach Management Units</p>
+              <p className="text-xs font-bold text-violet-700 uppercase tracking-widest mb-2">{PAGE.impactBand.eyebrow2}</p>
+              <p className="font-poppins font-bold text-ocean-midnight">{PAGE.impactBand.text2}</p>
             </div>
             <div className="bg-white rounded-2xl p-6 border border-violet-100">
-              <p className="text-xs font-bold text-violet-700 uppercase tracking-widest mb-2">Habitat</p>
-              <p className="font-poppins font-bold text-ocean-midnight">25 km² of nearshore waters</p>
+              <p className="text-xs font-bold text-violet-700 uppercase tracking-widest mb-2">{PAGE.impactBand.eyebrow3}</p>
+              <p className="font-poppins font-bold text-ocean-midnight">{PAGE.impactBand.text3}</p>
             </div>
           </div>
-          <p className="text-center text-gray-600 leading-relaxed mt-6 max-w-2xl mx-auto">
-            When communities thrive, the ocean has room to recover.
-          </p>
+          <p className="text-center text-gray-600 leading-relaxed mt-6 max-w-2xl mx-auto">{PAGE.impactBand.text4}</p>
         </div>
       </section>
 
@@ -142,16 +123,10 @@ export default function OceanCommunityGrantPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">The Challenge</p>
-              <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight mb-6 leading-tight">
-                Healthy Waters. Secure Livelihoods.
-              </h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Illegal fishing is putting pressure on fish stocks, marine habitats, and the families who depend on the sea. Gear exchange efforts can fall short when communities do not shape and own the solutions. In KAMAMKUKI, five fishing communities are working together to co-manage 25 km² of nearshore habitat, where dragnetting remains a challenge.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-8">
-                This project puts local leadership at the centre: reducing harmful gear and practices while building skills and opening up diversified income opportunities for fishers, women, youth, and people with disabilities.
-              </p>
+              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.theChallenge.eyebrow}</p>
+              <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight mb-6 leading-tight">{PAGE.theChallenge.heading}</h2>
+              <p className="text-gray-700 leading-relaxed mb-4">{PAGE.theChallenge.text}</p>
+              <p className="text-gray-700 leading-relaxed mb-8">{PAGE.theChallenge.text2}</p>
               <ol className="space-y-3">
                 {APPROACH.map((item, i) => (
                   <li key={item} className="flex gap-4 items-start">
@@ -163,8 +138,8 @@ export default function OceanCommunityGrantPage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden" style={{ minHeight: '480px' }}>
               <Image
-                src="/images/fisher.jpg"
-                alt="A fisher on the Kenyan coast carrying his nets"
+                src={PAGE.theChallenge.image}
+                alt={PAGE.theChallenge.imageAlt}
                 fill
                 className="object-cover"
               />
@@ -179,10 +154,8 @@ export default function OceanCommunityGrantPage() {
       <section className="bg-gray-50 py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">Designed to Include</p>
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight">
-              Opportunity Should Reach Everyone
-            </h2>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.designedToInclude.eyebrow}</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight">{PAGE.designedToInclude.heading}</h2>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
@@ -197,15 +170,13 @@ export default function OceanCommunityGrantPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-12">
             <div className="relative rounded-2xl overflow-hidden" style={{ minHeight: '320px' }}>
               <Image
-                src="/images/womenlearning2.jpg"
-                alt="Community members at a training session"
+                src={PAGE.designedToInclude.image}
+                alt={PAGE.designedToInclude.imageAlt}
                 fill
                 className="object-cover"
               />
             </div>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              Half of the 200 community members to be trained are women. The project&apos;s 695 direct IPLC beneficiaries and their households, an estimated 4,164 people, are projected to benefit from healthier ecosystems and stronger fisheries.
-            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">{PAGE.designedToInclude.text}</p>
           </div>
         </div>
       </section>
@@ -215,13 +186,9 @@ export default function OceanCommunityGrantPage() {
           ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">The Bigger Picture</p>
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight mb-6 leading-tight">
-            A Better Future for People and the Sea
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            By supporting community-owned solutions, the initiative aims to restore habitats, improve fish stocks, strengthen incomes, and inspire approaches that can travel beyond the coast.
-          </p>
+          <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.theBiggerPicture.eyebrow}</p>
+          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight mb-6 leading-tight">{PAGE.theBiggerPicture.heading}</h2>
+          <p className="text-gray-700 leading-relaxed">{PAGE.theBiggerPicture.text}</p>
         </div>
       </section>
 
@@ -230,25 +197,17 @@ export default function OceanCommunityGrantPage() {
           ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-ocean-midnight to-ocean-turquoise/30 py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-6">
-            Support Community-Led Change
-          </h2>
-          <p className="text-lg text-white/80 mb-8 leading-relaxed">
-            Your support helps fishing communities replace harmful practices with livelihoods that last.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-6">{PAGE.callToAction.heading}</h2>
+          <p className="text-lg text-white/80 mb-8 leading-relaxed">{PAGE.callToAction.text}</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              href="/donate"
+              href={PAGE.callToAction.link}
               className="px-8 py-4 bg-ocean-turquoise text-white rounded-xl font-bold hover:bg-white hover:text-ocean-turquoise transition-all shadow-lg"
-            >
-              Support This Project
-            </Link>
+            >{PAGE.callToAction.linkText}</Link>
             <Link
-              href="/#projects"
+              href={PAGE.callToAction.link2}
               className="px-8 py-4 border-2 border-white text-white rounded-xl font-bold hover:bg-white hover:text-ocean-midnight transition-all"
-            >
-              View All Projects
-            </Link>
+            >{PAGE.callToAction.linkText2}</Link>
           </div>
         </div>
       </section>

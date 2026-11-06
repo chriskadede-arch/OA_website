@@ -1,0 +1,106 @@
+{
+  "seo": {
+    "title": "Ocean 5 Advocacy | Oceans Alive Foundation",
+    "description": "A 24 month, $250,000 campaign arming the Kilifi County Beach Management Unit Network with the evidence, media training and coalitions to push back against illegal trawlers."
+  },
+  "FUNDER": {
+    "name": "Oceans5",
+    "logo": "/images/partners/oceans5.jpg"
+  },
+  "ACTIVITIES": [
+    {
+      "months": "Months 1 to 6",
+      "title": "Capacity Building Workshops",
+      "body": "Train 200 BMU leaders, half of them women or youth, in policy brief writing, digital monitoring tools such as vessel tracking apps, and the legal frameworks for IUU enforcement, delivered in partnership with COMRED.",
+      "output": "4 workshops held, 80% of participants showing measured skill improvement"
+    },
+    {
+      "months": "Months 3 to 9",
+      "title": "Governance Strengthening",
+      "body": "Improve Network bylaws, run participatory mapping of IUU hotspots, and mentor leaders toward more inclusive decision making.",
+      "output": "Approved bylaws, all 18 BMUs mapped for advocacy priorities"
+    },
+    {
+      "months": "Months 7 to 18",
+      "title": "Advocacy Campaigns",
+      "body": "Launch targeted campaigns, including a \"Ban Trawlers Now\" petition to the Kenya Fisheries Service, backed by media training and coalition building with the Kenya Marine and Fisheries Research Institute.",
+      "output": "2 campaigns, 5,000 signatures, coverage across 10+ media outlets"
+    },
+    {
+      "months": "Months 10 to 24",
+      "title": "Monitoring and Coalition Support",
+      "body": "Provide low cost tools such as GPS buoys for IUU reporting, and build links with regional monitoring bodies including the Indian Ocean Tuna Commission.",
+      "output": "50 incident reports submitted, 3 new partnerships formed"
+    },
+    {
+      "months": "Ongoing",
+      "title": "Evaluation and Scaling",
+      "body": "Run mid term and end line evaluations with community feedback loops to keep the model adaptive.",
+      "output": "Annual reports, and a model ready to scale to other counties"
+    }
+  ],
+  "hero": {
+    "image": "/images/BMUmeeting.jpg",
+    "imageAlt": "Ocean 5 Advocacy",
+    "eyebrow": "Q1 2026 to Q4 2027",
+    "title": "Ocean 5 Advocacy",
+    "text": "Empowering Coastal Voices: building advocacy capacity for the Kilifi County Beach Management Unit Network to confront illegal fishing and trawler encroachment.",
+    "text2": "18",
+    "eyebrow2": "BMUs",
+    "text3": "5,000+",
+    "eyebrow3": "Fisherfolk",
+    "eyebrow4": "Partner"
+  },
+  "problemStatement": {
+    "eyebrow": "The Problem",
+    "heading": "Kilifi's Fishers Are Losing Ground to Trawlers They Cannot Fight Alone",
+    "text": "Small scale artisanal fishers make up 90% of the fishing sector along Kilifi's 270 km stretch of Kenya's coastline, and it is their nearshore waters that industrial trawlers are encroaching on.",
+    "text2": "30%+",
+    "text3": "Decline in key species like prawns and reef fish over the last decade, threatening food security for 20,000+ fishing households.",
+    "text4": "$100M+",
+    "text5": "Estimated annual regional losses from illegal, unreported and unregulated fishing and weak enforcement.",
+    "text6": "80%",
+    "text7": "Share of income Kilifi's small scale fishers draw from nearshore resources now under threat from foreign trawlers.",
+    "text8": "The KCBMU Network gained formal recognition only recently, under the 2024 Beach Management Unit Regulations, and still lacks the skills in evidence-based advocacy, media engagement and coalition-building it needs to influence policy. Left unaddressed, this threatens the newly approved KAMAMKUKI, TAMKIBO and MALINDI-MAGARINI Joint Co-Management Plan (2024 to 2028) and risks locking coastal communities into deeper poverty."
+  },
+  "objectives": {
+    "eyebrow": "Objectives",
+    "heading": "Building a Network That Can Lobby and Win"
+  },
+  "activitiesTimeline": {
+    "eyebrow": "Activities",
+    "heading": "A 24 Month Campaign, Five Moving Parts",
+    "text": "Expected output: "
+  },
+  "outcomes": {
+    "eyebrow": "Expected Outcomes",
+    "heading": "What Success Looks Like",
+    "eyebrow2": "Short Term, 12 Months",
+    "text": "70% of BMUs show improved advocacy skills, and at least one policy brief on trawler bans reaches a county assembly.",
+    "eyebrow3": "Medium Term, 24 Months",
+    "text2": "Reported IUU incidents fall by 25% as monitoring improves, and the Network becomes a recognised voice in national fisheries dialogues.",
+    "eyebrow4": "Long Term",
+    "text3": "A 15% income increase for fishers, supporting Oceans5's goal of curbing overfishing across the Western Indian Ocean, including biodiversity hotspots like the North Kenya Banks, and aligning with SDG 14."
+  },
+  "risksAndSustainability": {
+    "eyebrow": "Staying Honest About the Risks",
+    "heading": "Risks, Sustainability and How Progress Gets Tracked",
+    "subheading": "Risks and Mitigation",
+    "text": "Political resistance to trawler bans is met with evidence based advocacy. Low participation is addressed through incentives and sensitization forums, run by the BMUs themselves with backing from the Network and County Fisheries.",
+    "subheading2": "Sustainability",
+    "text2": "Skills are embedded directly in Network operations rather than held by outside trainers, and Oceans Alive will pursue follow on funding to carry the work beyond this grant.",
+    "subheading3": "Monitoring and Learning",
+    "text3": "Trained advocates, policy submissions, IUU reports and income are tracked through BMU logs, surveys and digital dashboards, with biannual progress reports to Oceans5 and quarterly steering committee meetings."
+  },
+  "conclusion": {
+    "text": "\"This initiative will transform the KCBMU Network from a reactive monitoring body into a proactive force for ocean justice.\""
+  },
+  "callToAction": {
+    "heading": "Help Amplify Coastal Voices",
+    "text": "Your support helps fisherfolk communities advocate for stronger protection against illegal fishing and trawler threats.",
+    "link": "/donate",
+    "linkText": "Support This Project",
+    "link2": "/#projects",
+    "linkText2": "View All Projects"
+  }
+}

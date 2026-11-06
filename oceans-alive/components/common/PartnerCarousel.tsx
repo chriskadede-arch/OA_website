@@ -3,19 +3,20 @@
  * PARTNER LOGO CAROUSEL
  * ══════════════════════════════════════════════════════════════════
  * Partners come from lib/constants.ts → PARTNERS.
+ * Page text, images and links (editable in Pages CMS)  →  content/site/partner-carousel.json
  */
 'use client';
 
 import { PARTNERS } from '@/lib/constants';
 import Image from 'next/image';
 
+import PAGE from '@/content/site/partner-carousel.json';
+
 export default function PartnerCarousel() {
   return (
     <div className="relative overflow-hidden bg-white py-12">
       <div className="max-w-6xl mx-auto px-6 mb-6">
-        <h3 className="text-center text-sm font-bold uppercase tracking-widest text-gray-400">
-          Trusted By Leading Organizations
-        </h3>
+        <h3 className="text-center text-sm font-bold uppercase tracking-widest text-gray-400">{PAGE.intro.subheading}</h3>
       </div>
 
       {/* Infinite scrolling carousel */}

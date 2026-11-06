@@ -1,0 +1,85 @@
+{
+  "seo": {
+    "title": "Recognition & Awards - Oceans Alive Foundation",
+    "description": "UNDP Equator Prize, King Charles III Royal Visit, IUCN World Conservation Congress 2025 - global recognition for community-led marine conservation."
+  },
+  "AWARDS": [
+    {
+      "year": "2023",
+      "tag": "Royal Visit",
+      "tagColor": "bg-[#FBB308]/15 text-[#FBB308] border border-[#FBB308]/30",
+      "title": "His Majesty King Charles III",
+      "sub": "Kuruwitu Marine Sanctuary · Kilifi, Kenya",
+      "body": "His Majesty King Charles III personally visited the Kuruwitu project, launched a coral restoration block bearing his royal cypher into the waters, and endorsed the community-led conservation model to a global audience of millions.",
+      "highlight": "Royal endorsement carried the work of Kilifi's fishermen to every corner of the world.",
+      "large": true
+    },
+    {
+      "year": "2017",
+      "tag": "UNDP Equator Prize",
+      "tagColor": "bg-ocean-turquoise/15 text-ocean-turquoise border border-ocean-turquoise/30",
+      "title": "UNDP Equator Prize 2017",
+      "sub": "United Nations Development Programme",
+      "body": "Kuruwitu CBO wins the prestigious UNDP Equator Prize for exemplary community-based approaches to conservation and sustainable development - placing the community-led model on the world stage of environmental leadership.",
+      "highlight": "One of the world's most recognised prizes for grassroots environmental action.",
+      "large": true
+    },
+    {
+      "year": "2022",
+      "tag": "Blue Champions",
+      "tagColor": "bg-sky-400/15 text-sky-400 border border-sky-400/30",
+      "title": "IUCN Blue Champions Award 2022",
+      "sub": "International Union for Conservation of Nature",
+      "body": "Kuruwitu CBO wins the 2022 IUCN Blue Champions Award, recognizing outstanding ocean conservation leadership and two decades of proven community-driven marine protection delivering 400% fish biomass increase and 30% coral recovery.",
+      "highlight": "Global recognition for champions protecting our ocean for future generations.",
+      "large": true
+    },
+    {
+      "year": "2021",
+      "tag": "UN Food Systems",
+      "tagColor": "bg-[#6ee7b7]/15 text-[#6ee7b7] border border-[#6ee7b7]/30",
+      "title": "United Nations Food Systems Game Changer",
+      "sub": "UN Food Systems Summit",
+      "body": "Recognized as a Food System Game Changer for innovative community-led approaches linking ocean health, fisheries management, and food security in coastal communities.",
+      "highlight": "Transforming how communities manage ocean resources for sustainable livelihoods.",
+      "large": false
+    },
+    {
+      "year": "2024",
+      "tag": "WEF Innovator",
+      "tagColor": "bg-purple-400/15 text-purple-400 border border-purple-400/30",
+      "title": "World Economic Forum - Uplink Top Innovator",
+      "sub": "World Economic Forum",
+      "body": "Selected as a top innovator by the World Economic Forum's UpLink platform for scalable ocean conservation solutions.",
+      "highlight": "Global recognition for innovation in marine conservation.",
+      "large": false
+    },
+    {
+      "year": "2025",
+      "tag": "IUCN Congress",
+      "tagColor": "bg-[#6ee7b7]/15 text-[#6ee7b7] border border-[#6ee7b7]/30",
+      "title": "IUCN World Conservation Congress",
+      "sub": "International Union for Conservation of Nature",
+      "body": "Presented the Kuruwitu community co-management model as a globally scalable blueprint for marine governance at the world's largest conservation forum.",
+      "highlight": "From 30 hectares to a global template - Kuruwitu on the world stage.",
+      "large": false
+    }
+  ],
+  "hero": {
+    "eyebrow": "Global Recognition",
+    "title": "Recognised",
+    "label": "By the World.",
+    "text": "Every award, prize, and royal visit reflects the work of the fishing communities of Kilifi County - not just our organisation."
+  },
+  "quoteStrip": {
+    "text": "“These recognitions celebrate the dedication of Kilifi's coastal communities.",
+    "label": "Their commitment to ocean stewardship is what makes this work possible.",
+    "eyebrow": "- Des Bowden, Co-Founder & CEO"
+  },
+  "nextChapter": {
+    "label": "Continue reading:",
+    "text": " Meet the organisations partnering with us to protect Kenya's ocean.",
+    "link": "/about/partners",
+    "linkText": "Our Partners "
+  }
+}

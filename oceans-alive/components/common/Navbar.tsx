@@ -10,6 +10,7 @@
  * PART 6 · The header itself       - top bar, logo, desktop menu, search, phone menu
  * Search this file for "PART <n>" or "SECTION <n>".
  * Programme/project links in the dropdowns come from lib/our-work.ts and lib/projects-data.ts.
+ * Page text, images and links (editable in Pages CMS)  →  content/site/menu.json
  */
 'use client';
 
@@ -18,6 +19,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { PROJECTS } from '@/lib/projects-data';
 import { OUR_WORK_PROGRAMS, CROSS_CUTTING_THEMES } from '@/lib/our-work';
+
+import PAGE from '@/content/site/menu.json';
 
 // ══════════════════════════════════════════════════════════════════
 // PART 1 · Types (shape of the menu data - no need to edit)
@@ -47,38 +50,7 @@ interface MegaNavItem {
 // PART 2 · Get Involved action cards (Donate / Partner / Contact)
 // ══════════════════════════════════════════════════════════════════
 
-const INVOLVE_CARDS = [
-  {
-    eyebrow: 'Fund Conservation',
-    title: 'Donate',
-    description: '$250 covers comprehensive ocean restoration - coral planting, community support, and education.',
-    href: '/donate',
-    gradient: 'from-ocean-turquoise to-[#0a4f7a]',
-    stat: '$250',
-    statLabel: 'Comprehensive Package',
-    badge: 'Most Impactful',
-  },
-  {
-    eyebrow: 'Collaborate · Volunteer · Partner',
-    title: 'Partner & Volunteer',
-    description: 'Work with us as an NGO, government, business partner, researcher, or volunteer in Kilifi.',
-    href: '/contact?type=Partnership',
-    gradient: 'from-[#1a6b5a] to-[#0e4a3c]',
-    stat: '40+',
-    statLabel: 'Partners & Volunteers',
-    badge: 'Join Us',
-  },
-  {
-    eyebrow: 'Get In Touch',
-    title: 'Contact Us',
-    description: 'Questions, partnerships, media inquiries, or general information about our work.',
-    href: '/contact',
-    gradient: 'from-[#1e40af] to-[#0c2454]',
-    stat: '24h',
-    statLabel: 'Response Time',
-    badge: 'Available',
-  },
-];
+const INVOLVE_CARDS = PAGE.INVOLVE_CARDS;
 
 // ══════════════════════════════════════════════════════════════════
 // PART 3 · MENU LINKS - edit the main menu and its dropdowns here
@@ -150,8 +122,8 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
             {/* Column 1: Our Work — rewritten intro + Explore All Projects CTA */}
             <div className="relative rounded-2xl overflow-hidden" style={{ minHeight: '280px' }}>
               <Image
-                src="/images/divers.jpg"
-                alt="Community-led coral restoration at Kuruwitu"
+                src={PAGE.darkImmersiveMegaDropdown.image}
+                alt={PAGE.darkImmersiveMegaDropdown.imageAlt}
                 fill
                 className="object-cover"
               />
@@ -159,15 +131,9 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
               <div className="relative z-10 h-full p-5 flex flex-col justify-between">
                 <div>
                   <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise mb-2 flex items-center gap-2">
-                    <span className="w-3 h-px bg-ocean-turquoise/50 inline-block" />
-                    Our Work
-                  </p>
-                  <h3 className="text-xl font-poppins font-bold text-white leading-tight mb-2">
-                    Collaborative Management in Action
-                  </h3>
-                  <p className="text-[13px] text-white/70 leading-relaxed">
-                    Discover the global projects we&apos;re involved in, the focus of our conservation efforts, and the expert teams that inspire our strategies for change.
-                  </p>
+                    <span className="w-3 h-px bg-ocean-turquoise/50 inline-block" />{PAGE.darkImmersiveMegaDropdown.eyebrow}</p>
+                  <h3 className="text-xl font-poppins font-bold text-white leading-tight mb-2">{PAGE.darkImmersiveMegaDropdown.subheading}</h3>
+                  <p className="text-[13px] text-white/70 leading-relaxed">{PAGE.darkImmersiveMegaDropdown.text}</p>
                 </div>
                 <div>
                   <div className="flex items-center gap-6 mb-3">
@@ -175,20 +141,18 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
                       <div className="text-2xl font-poppins font-bold text-ocean-turquoise leading-none">
                         {String(OUR_WORK_PROGRAMS.length).padStart(2, '0')}
                       </div>
-                      <div className="text-[10px] text-white/50 uppercase tracking-widest mt-1">Programmes</div>
+                      <div className="text-[10px] text-white/50 uppercase tracking-widest mt-1">{PAGE.darkImmersiveMegaDropdown.eyebrow2}</div>
                     </div>
                     <div>
                       <div className="text-2xl font-poppins font-bold text-ocean-turquoise leading-none">{PROJECTS.length}+</div>
-                      <div className="text-[10px] text-white/50 uppercase tracking-widest mt-1">Active Projects</div>
+                      <div className="text-[10px] text-white/50 uppercase tracking-widest mt-1">{PAGE.darkImmersiveMegaDropdown.eyebrow3}</div>
                     </div>
                   </div>
                   <Link
-                    href="/#projects"
+                    href={PAGE.darkImmersiveMegaDropdown.link}
                     onClick={onClose}
                     className="group/btn inline-flex items-center gap-2 px-5 py-2.5 bg-ocean-turquoise text-ocean-midnight rounded-lg font-bold text-sm hover:bg-white transition-all duration-200"
-                  >
-                    Explore All Projects
-                    <span className="group-hover/btn:translate-x-0.5 transition-transform inline-block">→</span>
+                  >{PAGE.darkImmersiveMegaDropdown.linkText}<span className="group-hover/btn:translate-x-0.5 transition-transform inline-block">→</span>
                   </Link>
                 </div>
               </div>
@@ -197,9 +161,7 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
             {/* Column 2: Programs */}
             <div>
               <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise mb-2 flex items-center gap-2">
-                <span className="w-3 h-px bg-ocean-turquoise/40 inline-block" />
-                Programs
-              </p>
+                <span className="w-3 h-px bg-ocean-turquoise/40 inline-block" />{PAGE.darkImmersiveMegaDropdown.eyebrow4}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {programsCol?.items.map((prog, i) => (
                   <Link
@@ -224,7 +186,7 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
 
               {/* Cross-cutting themes */}
               <div className="mt-3 pt-3 border-t border-white/10 flex flex-wrap items-center gap-x-3 gap-y-1.5">
-                <span className="text-[9px] text-white/30 uppercase tracking-widest shrink-0">Cross-cutting:</span>
+                <span className="text-[9px] text-white/30 uppercase tracking-widest shrink-0">{PAGE.darkImmersiveMegaDropdown.eyebrow5}</span>
                 <span className="text-[11px] text-white/40 leading-snug">
                   {CROSS_CUTTING_THEMES.join(' · ')}
                 </span>
@@ -238,9 +200,7 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
             {/* Recognition & Awards */}
             <div>
               <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise mb-2 flex items-center gap-2">
-                <span className="w-3 h-px bg-ocean-turquoise/40 inline-block" />
-                Recognition & Awards
-              </p>
+                <span className="w-3 h-px bg-ocean-turquoise/40 inline-block" />{PAGE.darkImmersiveMegaDropdown.eyebrow6}</p>
               <div className="flex flex-wrap items-center gap-1.5 mb-2">
                 {[
                   { label: 'UNDP Equator Prize', year: '2017' },
@@ -259,21 +219,17 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
                 ))}
               </div>
               <Link
-                href="/about/recognition"
+                href={PAGE.darkImmersiveMegaDropdown.link2}
                 onClick={onClose}
                 className="group/link text-[11px] font-bold text-ocean-turquoise hover:text-white transition-colors inline-flex items-center gap-1"
-              >
-                See all recognition
-                <span className="group-hover/link:translate-x-0.5 transition-transform inline-block">→</span>
+              >{PAGE.darkImmersiveMegaDropdown.linkText2}<span className="group-hover/link:translate-x-0.5 transition-transform inline-block">→</span>
               </Link>
             </div>
 
             {/* Partners */}
             <div>
               <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise mb-2 flex items-center gap-2">
-                <span className="w-3 h-px bg-ocean-turquoise/40 inline-block" />
-                Trusted By Our Partners
-              </p>
+                <span className="w-3 h-px bg-ocean-turquoise/40 inline-block" />{PAGE.darkImmersiveMegaDropdown.eyebrow7}</p>
               <div className="flex flex-wrap items-center gap-1.5 mb-2">
                 {['Coral Guardian', 'Blue Ventures', 'IUCN', 'UNDP', 'Kenya Wildlife Service', 'Kilifi County'].map((name) => (
                   <span
@@ -285,12 +241,10 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
                 ))}
               </div>
               <Link
-                href="/about/partners"
+                href={PAGE.darkImmersiveMegaDropdown.link3}
                 onClick={onClose}
                 className="group/link text-[11px] font-bold text-ocean-turquoise hover:text-white transition-colors inline-flex items-center gap-1"
-              >
-                Meet our partners
-                <span className="group-hover/link:translate-x-0.5 transition-transform inline-block">→</span>
+              >{PAGE.darkImmersiveMegaDropdown.linkText3}<span className="group-hover/link:translate-x-0.5 transition-transform inline-block">→</span>
               </Link>
             </div>
           </div>
@@ -359,8 +313,7 @@ function ActionCardsMegaDropdown({ onClose }: { onClose: () => void }) {
                   </div>
                   <h4 className="text-xl font-poppins font-bold mb-2">{card.title}</h4>
                   <p className="text-sm opacity-65 leading-relaxed mb-6">{card.description}</p>
-                  <div className="text-xs font-bold opacity-75 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1.5">
-                    Get Started <span>→</span>
+                  <div className="text-xs font-bold opacity-75 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1.5">{PAGE.actionCardsMegaDropdown.text}<span>→</span>
                   </div>
                 </div>
               </Link>
@@ -369,7 +322,7 @@ function ActionCardsMegaDropdown({ onClose }: { onClose: () => void }) {
 
           {/* Secondary links */}
           <div className="mt-4 flex items-center gap-6 pt-4 border-t border-white/10">
-            <span className="text-[9px] text-white/25 uppercase tracking-widest shrink-0">More ways:</span>
+            <span className="text-[9px] text-white/25 uppercase tracking-widest shrink-0">{PAGE.actionCardsMegaDropdown.eyebrow}</span>
             {[
               { label: 'Monthly Giving', href: '/donate' },
               { label: 'In-Kind Donations', href: '/contact?type=Other' },
@@ -404,61 +357,45 @@ function GetInvolvedMegaDropdown({ onClose }: { onClose: () => void }) {
 
             {/* Left: Description */}
             <div className="flex flex-col justify-center">
-              <h3 className="text-2xl font-poppins font-bold text-white mb-4">Get involved</h3>
-              <p className="text-white/70 leading-relaxed">
-                Want to join a campaign, raise funds or make a donation? Find out how you can play your part in our mission to protect the world's oceans.
-              </p>
+              <h3 className="text-2xl font-poppins font-bold text-white mb-4">{PAGE.getInvolvedMegaDropdown.subheading}</h3>
+              <p className="text-white/70 leading-relaxed">{PAGE.getInvolvedMegaDropdown.text}</p>
             </div>
 
             {/* Middle: Menu Items */}
             <div className="flex flex-col justify-center">
               <Link
-                href="/donate"
+                href={PAGE.getInvolvedMegaDropdown.link}
                 onClick={onClose}
                 className="text-white/90 hover:text-ocean-turquoise font-medium text-lg py-2 transition-colors"
-              >
-                Donate
-              </Link>
+              >{PAGE.getInvolvedMegaDropdown.linkText}</Link>
               <div className="h-px bg-white/20 my-3" />
               <Link
-                href="/contact"
+                href={PAGE.getInvolvedMegaDropdown.link2}
                 onClick={onClose}
                 className="text-white/90 hover:text-ocean-turquoise font-medium text-lg py-2 transition-colors"
-              >
-                Contact
-              </Link>
+              >{PAGE.getInvolvedMegaDropdown.linkText2}</Link>
               <Link
-                href="/contact?type=Partnership"
+                href={PAGE.getInvolvedMegaDropdown.link3}
                 onClick={onClose}
                 className="text-white/90 hover:text-ocean-turquoise font-medium text-lg py-2 transition-colors"
-              >
-                Partner and volunteer
-              </Link>
+              >{PAGE.getInvolvedMegaDropdown.linkText3}</Link>
             </div>
 
             {/* Right: Featured Campaign Card */}
             <Link
-              href="/blog/category/updates"
+              href={PAGE.getInvolvedMegaDropdown.link4}
               onClick={onClose}
               className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-teal-600 to-teal-800 p-6 text-white hover:shadow-2xl transition-all duration-300"
             >
               <div className="relative z-10">
-                <div className="inline-block px-3 py-1 bg-teal-500 text-white text-xs font-bold uppercase tracking-wider rounded-full mb-3">
-                  ONGOING CAMPAIGN
-                </div>
+                <div className="inline-block px-3 py-1 bg-teal-500 text-white text-xs font-bold uppercase tracking-wider rounded-full mb-3">{PAGE.getInvolvedMegaDropdown.eyebrow}</div>
                 <div className="flex items-center gap-2 text-sm mb-4">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                  </svg>
-                  INDIAN OCEAN
-                </div>
-                <h4 className="text-3xl font-poppins font-bold mb-2">
-                  Save the<br />Sanctuary
-                </h4>
-                <p className="text-xl font-light mb-6">2025</p>
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white text-teal-800 rounded-full font-semibold text-sm">
-                  TAKE ACTION
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  </svg>{PAGE.getInvolvedMegaDropdown.text2}</div>
+                <h4 className="text-3xl font-poppins font-bold mb-2">{PAGE.getInvolvedMegaDropdown.smallHeading}<br />{PAGE.getInvolvedMegaDropdown.smallHeading2}</h4>
+                <p className="text-xl font-light mb-6">{PAGE.getInvolvedMegaDropdown.text3}</p>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white text-teal-800 rounded-full font-semibold text-sm">{PAGE.getInvolvedMegaDropdown.text4}<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
@@ -489,29 +426,23 @@ function EditorialMegaDropdown({ item, onClose }: { item: MegaNavItem; onClose: 
 
             {/* Featured photo card */}
             <Link
-              href="/blog/category/impact-stories"
+              href={PAGE.editorialMegaDropdown.link}
               onClick={onClose}
               className="group relative rounded-2xl overflow-hidden block"
               style={{ minHeight: '240px' }}
             >
               <Image
-                src="/images/coralteaching.jpg"
-                alt="Ocean education at Kuruwitu"
+                src={PAGE.editorialMegaDropdown.image}
+                alt={PAGE.editorialMegaDropdown.imageAlt}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/55 to-transparent" />
               <div className="absolute inset-0 p-5 flex flex-col justify-end">
-                <p className="text-[9px] font-bold uppercase tracking-widest text-ocean-turquoise mb-2">From the Field</p>
-                <h4 className="text-sm font-poppins font-bold text-white leading-snug mb-1.5">
-                  Stories from Kenya's Coast
-                </h4>
-                <p className="text-[11px] text-white/55 leading-snug mb-3">
-                  Conservation through community voices.
-                </p>
-                <span className="text-xs font-bold text-ocean-turquoise group-hover:underline">
-                  Read Stories →
-                </span>
+                <p className="text-[9px] font-bold uppercase tracking-widest text-ocean-turquoise mb-2">{PAGE.editorialMegaDropdown.eyebrow}</p>
+                <h4 className="text-sm font-poppins font-bold text-white leading-snug mb-1.5">{PAGE.editorialMegaDropdown.smallHeading}</h4>
+                <p className="text-[11px] text-white/55 leading-snug mb-3">{PAGE.editorialMegaDropdown.text}</p>
+                <span className="text-xs font-bold text-ocean-turquoise group-hover:underline">{PAGE.editorialMegaDropdown.label}</span>
               </div>
             </Link>
 
@@ -598,16 +529,13 @@ function MobileNavItem({ item, onClose }: { item: MegaNavItem; onClose: () => vo
         <div className="pb-5 space-y-5">
           {item.layout === 'dark-immersive' && (
             <div className="bg-ocean-midnight rounded-2xl p-5">
-              <p className="text-[9px] font-bold uppercase tracking-widest text-ocean-turquoise mb-2">Our Work</p>
-              <p className="text-xs text-white/60 leading-relaxed mb-4">
-                Discover the global projects we&apos;re involved in, the focus of our conservation efforts, and the expert teams that inspire our strategies for change.
-              </p>
+              <p className="text-[9px] font-bold uppercase tracking-widest text-ocean-turquoise mb-2">{PAGE.mobileNavItem.eyebrow}</p>
+              <p className="text-xs text-white/60 leading-relaxed mb-4">{PAGE.mobileNavItem.text}</p>
               <Link
-                href="/#projects"
+                href={PAGE.mobileNavItem.link}
                 onClick={onClose}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-ocean-turquoise text-ocean-midnight rounded-lg font-bold text-xs"
-              >
-                Explore All Projects <span>→</span>
+              >{PAGE.mobileNavItem.linkText}<span>→</span>
               </Link>
             </div>
           )}
@@ -661,25 +589,21 @@ function MobileNavItem({ item, onClose }: { item: MegaNavItem; onClose: () => vo
           {item.layout === 'dark-immersive' && (
             <div className="flex items-center gap-4 pt-1">
               <Link
-                href="/about/recognition"
+                href={PAGE.mobileNavItem.link2}
                 onClick={onClose}
                 className="flex-1 flex items-center gap-2 py-2 px-3 rounded-lg bg-gray-50 text-xs font-semibold text-ocean-midnight"
               >
                 <svg className="w-3.5 h-3.5 text-ocean-turquoise shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                Recognition
-              </Link>
+                </svg>{PAGE.mobileNavItem.linkText2}</Link>
               <Link
-                href="/about/partners"
+                href={PAGE.mobileNavItem.link3}
                 onClick={onClose}
                 className="flex-1 flex items-center gap-2 py-2 px-3 rounded-lg bg-gray-50 text-xs font-semibold text-ocean-midnight"
               >
                 <svg className="w-3.5 h-3.5 text-ocean-turquoise shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-                Partners
-              </Link>
+                </svg>{PAGE.mobileNavItem.linkText3}</Link>
             </div>
           )}
 
@@ -749,38 +673,30 @@ export default function Navbar() {
                   ══════════════════════════════════════════════════════════════════ */}
               <div className="bg-ocean-midnight border-b border-white/10">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-end h-12 gap-4 sm:gap-6">
-                  <a href="tel:+254732807935" className="hidden xl:flex items-center gap-2 text-xs text-white/70 hover:text-ocean-turquoise transition-colors">
+                  <a href={PAGE.topBar.link} className="hidden xl:flex items-center gap-2 text-xs text-white/70 hover:text-ocean-turquoise transition-colors">
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    +254 732 807 935
-                  </a>
-                  <a href="mailto:info@oceansalivekenya.org" className="hidden lg:flex items-center gap-2 text-xs text-white/70 hover:text-ocean-turquoise transition-colors">
+                    </svg>{PAGE.topBar.linkText}</a>
+                  <a href={PAGE.topBar.link2} className="hidden lg:flex items-center gap-2 text-xs text-white/70 hover:text-ocean-turquoise transition-colors">
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    info@oceansalivekenya.org
-                  </a>
+                    </svg>{PAGE.topBar.linkText2}</a>
                   <button
                     onClick={() => setSearchOpen(!searchOpen)}
                     className="flex items-center gap-1.5 text-xs text-white/70 hover:text-ocean-turquoise transition-colors"
-                    aria-label="Search"
+                    aria-label={PAGE.topBar.accessibleLabel}
                   >
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                    Search
-                  </button>
+                    </svg>{PAGE.topBar.buttonText}</button>
                   <Link
-                    href="/donate?amount=25000"
+                    href={PAGE.topBar.link3}
                     onClick={closeAll}
                     className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-ocean-turquoise to-blue-500 text-white rounded-md font-semibold text-xs transition-all duration-300 hover:shadow-md hover:-translate-y-0.5"
                   >
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                    Donate
-                  </Link>
+                    </svg>{PAGE.topBar.linkText3}</Link>
                 </div>
               </div>
 
@@ -788,10 +704,10 @@ export default function Navbar() {
                   SECTION 2 · Phone/tablet header (logo + menu button) - below 1024px
                   ══════════════════════════════════════════════════════════════════ */}
               <div className="flex lg:hidden items-center justify-between h-16 px-4 bg-ocean-midnight">
-                <Link href="/" onClick={closeAll} className="flex items-center shrink-0">
+                <Link href={PAGE.phoneTabletHeaderBelow1024px.link} onClick={closeAll} className="flex items-center shrink-0">
                   <Image
-                    src="/Oceans-Alive-Logo-WHITE.png"
-                    alt="Oceans Alive Foundation"
+                    src={PAGE.phoneTabletHeaderBelow1024px.image}
+                    alt={PAGE.phoneTabletHeaderBelow1024px.imageAlt}
                     width={960}
                     height={540}
                     className="w-[120px] h-14 object-cover"
@@ -801,7 +717,7 @@ export default function Navbar() {
                 <button
                   onClick={() => { setMobileOpen(!mobileOpen); closeAll(); }}
                   className="p-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
-                  aria-label="Toggle menu"
+                  aria-label={PAGE.phoneTabletHeaderBelow1024px.accessibleLabel}
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -818,10 +734,10 @@ export default function Navbar() {
                   SECTION 3 · Desktop logo panel (diagonal edge) - 1024px and up
                   ══════════════════════════════════════════════════════════════════ */}
               <div className="hidden lg:flex absolute left-0 top-0 z-20 bg-ocean-midnight items-center justify-center px-8 md:px-12" style={{ width: '520px', height: '100%' }}>
-                <Link href="/" onClick={closeAll} className="flex items-center shrink-0">
+                <Link href={PAGE.desktopLogoPanel1024pxAndUp.link} onClick={closeAll} className="flex items-center shrink-0">
                   <Image
-                    src="/Oceans-Alive-Logo-WHITE.png"
-                    alt="Oceans Alive Foundation"
+                    src={PAGE.desktopLogoPanel1024pxAndUp.image}
+                    alt={PAGE.desktopLogoPanel1024pxAndUp.imageAlt}
                     width={960}
                     height={540}
                     className={`w-auto object-contain transition-all duration-300 ${mobileOpen ? 'h-40 md:h-48' : 'h-36 md:h-44'}`}
@@ -917,7 +833,7 @@ export default function Navbar() {
                 <div className="relative">
                   <input
                     type="text"
-                    placeholder="Search for programs, stories, or resources..."
+                    placeholder={PAGE.searchBar.placeholder}
                     className="w-full px-4 py-2.5 pr-10 rounded-lg border border-ocean-midnight/20 focus:border-ocean-turquoise focus:ring-2 focus:ring-ocean-turquoise/20 outline-none transition-all"
                     autoFocus
                   />
@@ -972,15 +888,13 @@ export default function Navbar() {
             ))}
             <div className="pt-4">
               <Link
-                href="/donate"
+                href={PAGE.phoneTabletMenu.link}
                 onClick={() => setMobileOpen(false)}
                 className="flex items-center justify-center w-full py-3 bg-gradient-to-r from-ocean-turquoise to-blue-500 text-white rounded-xl font-bold text-sm shadow-md"
-              >
-                Donate Now
-              </Link>
+              >{PAGE.phoneTabletMenu.linkText}</Link>
               <div className="flex flex-col items-center gap-2 pt-4 pb-2 text-sm text-ocean-midnight/70">
-                <a href="tel:+254732807935" className="hover:text-ocean-turquoise">+254 732 807 935</a>
-                <a href="mailto:info@oceansalivekenya.org" className="hover:text-ocean-turquoise break-all">info@oceansalivekenya.org</a>
+                <a href={PAGE.phoneTabletMenu.link2} className="hover:text-ocean-turquoise">{PAGE.phoneTabletMenu.linkText2}</a>
+                <a href={PAGE.phoneTabletMenu.link3} className="hover:text-ocean-turquoise break-all">{PAGE.phoneTabletMenu.linkText3}</a>
               </div>
             </div>
           </div>

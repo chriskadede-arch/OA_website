@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "title": "Get Involved",
+    "text": "Join us in protecting Kenya's marine ecosystems and empowering coastal communities"
+  },
+  "newsletterSignupWaysToGetInvolved": {
+    "eyebrow": "Stay Connected",
+    "label": "Join the Mission.",
+    "label2": "Protect the Sea.",
+    "text": "Quarterly updates from the field - conservation progress, stories from Kilifi's coast, and real ways to support the work.",
+    "text2": "Quarterly · No spam · Unsubscribe anytime",
+    "subheading": "Ready to Make an Impact?",
+    "text3": "Choose how you'd like to get involved",
+    "link": "/donate",
+    "linkText": "Donate to the Cause",
+    "link2": "/contact?type=Volunteer",
+    "linkText2": "Volunteer With Us",
+    "link3": "/contact?type=Partnership",
+    "linkText3": "Partner With Us"
+  }
+}

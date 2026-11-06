@@ -16,49 +16,18 @@
  * Where the text/data lives:
  *   • FUNDER  →  top of this file
  *   • ACTIVITIES  →  top of this file
+ * Page text, images and links (editable in Pages CMS)  →  content/projects/ocean5-advocacy.json
  */
 import Link from 'next/link';
 import Image from 'next/image';
 
-export const metadata = {
-  title: 'Ocean 5 Advocacy | Oceans Alive Foundation',
-  description: 'A 24 month, $250,000 campaign arming the Kilifi County Beach Management Unit Network with the evidence, media training and coalitions to push back against illegal trawlers.',
-};
+import PAGE from '@/content/projects/ocean5-advocacy.json';
 
-const FUNDER = { name: 'Oceans5', logo: '/images/partners/oceans5.jpg' };
+export const metadata = PAGE.seo;
 
-const ACTIVITIES = [
-  {
-    months: 'Months 1 to 6',
-    title: 'Capacity Building Workshops',
-    body: 'Train 200 BMU leaders, half of them women or youth, in policy brief writing, digital monitoring tools such as vessel tracking apps, and the legal frameworks for IUU enforcement, delivered in partnership with COMRED.',
-    output: '4 workshops held, 80% of participants showing measured skill improvement',
-  },
-  {
-    months: 'Months 3 to 9',
-    title: 'Governance Strengthening',
-    body: 'Improve Network bylaws, run participatory mapping of IUU hotspots, and mentor leaders toward more inclusive decision making.',
-    output: 'Approved bylaws, all 18 BMUs mapped for advocacy priorities',
-  },
-  {
-    months: 'Months 7 to 18',
-    title: 'Advocacy Campaigns',
-    body: 'Launch targeted campaigns, including a "Ban Trawlers Now" petition to the Kenya Fisheries Service, backed by media training and coalition building with the Kenya Marine and Fisheries Research Institute.',
-    output: '2 campaigns, 5,000 signatures, coverage across 10+ media outlets',
-  },
-  {
-    months: 'Months 10 to 24',
-    title: 'Monitoring and Coalition Support',
-    body: 'Provide low cost tools such as GPS buoys for IUU reporting, and build links with regional monitoring bodies including the Indian Ocean Tuna Commission.',
-    output: '50 incident reports submitted, 3 new partnerships formed',
-  },
-  {
-    months: 'Ongoing',
-    title: 'Evaluation and Scaling',
-    body: 'Run mid term and end line evaluations with community feedback loops to keep the model adaptive.',
-    output: 'Annual reports, and a model ready to scale to other counties',
-  },
-];
+const FUNDER = PAGE.FUNDER;
+
+const ACTIVITIES = PAGE.ACTIVITIES;
 
 export default function Ocean5AdvocacyPage() {
   return (
@@ -69,8 +38,8 @@ export default function Ocean5AdvocacyPage() {
       <section className="relative bg-ocean-midnight overflow-hidden min-h-[60vh]">
         <div className="absolute inset-0">
           <Image
-            src="/images/BMUmeeting.jpg"
-            alt="Ocean 5 Advocacy"
+            src={PAGE.hero.image}
+            alt={PAGE.hero.imageAlt}
             fill
             className="object-cover"
           />
@@ -81,22 +50,18 @@ export default function Ocean5AdvocacyPage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white/20">
               <span className="w-2 h-2 bg-ocean-turquoise rounded-full animate-pulse" />
-              <span className="text-xs font-bold text-white uppercase tracking-wider">Q1 2026 to Q4 2027</span>
+              <span className="text-xs font-bold text-white uppercase tracking-wider">{PAGE.hero.eyebrow}</span>
             </div>
-            <h1 className="font-poppins font-bold text-5xl md:text-6xl text-white mb-6 leading-tight">
-              Ocean 5 Advocacy
-            </h1>
-            <p className="text-xl text-white/90 leading-relaxed mb-8">
-              Empowering Coastal Voices: building advocacy capacity for the Kilifi County Beach Management Unit Network to confront illegal fishing and trawler encroachment.
-            </p>
+            <h1 className="font-poppins font-bold text-5xl md:text-6xl text-white mb-6 leading-tight">{PAGE.hero.title}</h1>
+            <p className="text-xl text-white/90 leading-relaxed mb-8">{PAGE.hero.text}</p>
             <div className="flex flex-wrap gap-8">
               <div>
-                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">18</div>
-                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">BMUs</div>
+                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">{PAGE.hero.text2}</div>
+                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">{PAGE.hero.eyebrow2}</div>
               </div>
               <div>
-                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">5,000+</div>
-                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">Fisherfolk</div>
+                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">{PAGE.hero.text3}</div>
+                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">{PAGE.hero.eyebrow3}</div>
               </div>
             </div>
           </div>
@@ -104,7 +69,7 @@ export default function Ocean5AdvocacyPage() {
 
         {/* Funder badge, floating right */}
         <div className="hidden lg:flex absolute right-10 xl:right-20 top-1/2 -translate-y-1/2 flex-col items-center gap-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">Partner</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">{PAGE.hero.eyebrow4}</span>
           <div className="relative w-36 h-20 bg-white rounded-xl p-3">
             <Image src={FUNDER.logo} alt={FUNDER.name} fill className="object-contain p-2" />
           </div>
@@ -117,31 +82,25 @@ export default function Ocean5AdvocacyPage() {
       <section className="bg-white py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">The Problem</p>
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight mb-4">
-              Kilifi's Fishers Are Losing Ground to Trawlers They Cannot Fight Alone
-            </h2>
-            <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto">
-              Small scale artisanal fishers make up 90% of the fishing sector along Kilifi's 270 km stretch of Kenya's coastline, and it is their nearshore waters that industrial trawlers are encroaching on.
-            </p>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.problemStatement.eyebrow}</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight mb-4">{PAGE.problemStatement.heading}</h2>
+            <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto">{PAGE.problemStatement.text}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             <div className="bg-rose-50 rounded-2xl p-6 border border-rose-100">
-              <div className="text-3xl font-poppins font-bold text-rose-800 mb-2">30%+</div>
-              <p className="text-sm text-gray-600 leading-relaxed">Decline in key species like prawns and reef fish over the last decade, threatening food security for 20,000+ fishing households.</p>
+              <div className="text-3xl font-poppins font-bold text-rose-800 mb-2">{PAGE.problemStatement.text2}</div>
+              <p className="text-sm text-gray-600 leading-relaxed">{PAGE.problemStatement.text3}</p>
             </div>
             <div className="bg-rose-50 rounded-2xl p-6 border border-rose-100">
-              <div className="text-3xl font-poppins font-bold text-rose-800 mb-2">$100M+</div>
-              <p className="text-sm text-gray-600 leading-relaxed">Estimated annual regional losses from illegal, unreported and unregulated fishing and weak enforcement.</p>
+              <div className="text-3xl font-poppins font-bold text-rose-800 mb-2">{PAGE.problemStatement.text4}</div>
+              <p className="text-sm text-gray-600 leading-relaxed">{PAGE.problemStatement.text5}</p>
             </div>
             <div className="bg-rose-50 rounded-2xl p-6 border border-rose-100">
-              <div className="text-3xl font-poppins font-bold text-rose-800 mb-2">80%</div>
-              <p className="text-sm text-gray-600 leading-relaxed">Share of income Kilifi's small scale fishers draw from nearshore resources now under threat from foreign trawlers.</p>
+              <div className="text-3xl font-poppins font-bold text-rose-800 mb-2">{PAGE.problemStatement.text6}</div>
+              <p className="text-sm text-gray-600 leading-relaxed">{PAGE.problemStatement.text7}</p>
             </div>
           </div>
-          <p className="text-gray-700 leading-relaxed max-w-3xl mx-auto text-center">
-            The KCBMU Network gained formal recognition only recently, under the 2024 Beach Management Unit Regulations, and still lacks the skills in evidence-based advocacy, media engagement and coalition-building it needs to influence policy. Left unaddressed, this threatens the newly approved KAMAMKUKI, TAMKIBO and MALINDI-MAGARINI Joint Co-Management Plan (2024 to 2028) and risks locking coastal communities into deeper poverty.
-          </p>
+          <p className="text-gray-700 leading-relaxed max-w-3xl mx-auto text-center">{PAGE.problemStatement.text8}</p>
         </div>
       </section>
 
@@ -151,10 +110,8 @@ export default function Ocean5AdvocacyPage() {
       <section className="bg-gray-50 py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">Objectives</p>
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight">
-              Building a Network That Can Lobby and Win
-            </h2>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.objectives.eyebrow}</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight">{PAGE.objectives.heading}</h2>
           </div>
           <div className="space-y-4">
             {[
@@ -178,10 +135,8 @@ export default function Ocean5AdvocacyPage() {
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-14">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">Activities</p>
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight">
-              A 24 Month Campaign, Five Moving Parts
-            </h2>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.activitiesTimeline.eyebrow}</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight">{PAGE.activitiesTimeline.heading}</h2>
           </div>
           <div className="space-y-0">
             {ACTIVITIES.map((item, i) => (
@@ -195,7 +150,7 @@ export default function Ocean5AdvocacyPage() {
                 <div className="pt-1 pb-2 min-w-0">
                   <h3 className="font-poppins font-bold text-lg sm:text-xl text-ocean-midnight mb-2 break-words">{item.title}</h3>
                   <p className="text-gray-600 leading-relaxed mb-3">{item.body}</p>
-                  <p className="text-sm font-semibold text-rose-800">Expected output: {item.output}</p>
+                  <p className="text-sm font-semibold text-rose-800">{PAGE.activitiesTimeline.text}{item.output}</p>
                 </div>
               </div>
             ))}
@@ -209,23 +164,21 @@ export default function Ocean5AdvocacyPage() {
       <section className="bg-ocean-midnight py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">Expected Outcomes</p>
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white leading-tight">
-              What Success Looks Like
-            </h2>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.outcomes.eyebrow}</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white leading-tight">{PAGE.outcomes.heading}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-              <p className="text-xs font-bold text-ocean-turquoise uppercase tracking-widest mb-3">Short Term, 12 Months</p>
-              <p className="text-sm text-white/80 leading-relaxed">70% of BMUs show improved advocacy skills, and at least one policy brief on trawler bans reaches a county assembly.</p>
+              <p className="text-xs font-bold text-ocean-turquoise uppercase tracking-widest mb-3">{PAGE.outcomes.eyebrow2}</p>
+              <p className="text-sm text-white/80 leading-relaxed">{PAGE.outcomes.text}</p>
             </div>
             <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-              <p className="text-xs font-bold text-ocean-turquoise uppercase tracking-widest mb-3">Medium Term, 24 Months</p>
-              <p className="text-sm text-white/80 leading-relaxed">Reported IUU incidents fall by 25% as monitoring improves, and the Network becomes a recognised voice in national fisheries dialogues.</p>
+              <p className="text-xs font-bold text-ocean-turquoise uppercase tracking-widest mb-3">{PAGE.outcomes.eyebrow3}</p>
+              <p className="text-sm text-white/80 leading-relaxed">{PAGE.outcomes.text2}</p>
             </div>
             <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-              <p className="text-xs font-bold text-ocean-turquoise uppercase tracking-widest mb-3">Long Term</p>
-              <p className="text-sm text-white/80 leading-relaxed">A 15% income increase for fishers, supporting Oceans5's goal of curbing overfishing across the Western Indian Ocean, including biodiversity hotspots like the North Kenya Banks, and aligning with SDG 14.</p>
+              <p className="text-xs font-bold text-ocean-turquoise uppercase tracking-widest mb-3">{PAGE.outcomes.eyebrow4}</p>
+              <p className="text-sm text-white/80 leading-relaxed">{PAGE.outcomes.text3}</p>
             </div>
           </div>
         </div>
@@ -237,23 +190,21 @@ export default function Ocean5AdvocacyPage() {
       <section className="bg-gray-50 py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">Staying Honest About the Risks</p>
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight">
-              Risks, Sustainability and How Progress Gets Tracked
-            </h2>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.risksAndSustainability.eyebrow}</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight">{PAGE.risksAndSustainability.heading}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="font-poppins font-bold text-ocean-midnight mb-3">Risks and Mitigation</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Political resistance to trawler bans is met with evidence based advocacy. Low participation is addressed through incentives and sensitization forums, run by the BMUs themselves with backing from the Network and County Fisheries.</p>
+              <h3 className="font-poppins font-bold text-ocean-midnight mb-3">{PAGE.risksAndSustainability.subheading}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">{PAGE.risksAndSustainability.text}</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="font-poppins font-bold text-ocean-midnight mb-3">Sustainability</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Skills are embedded directly in Network operations rather than held by outside trainers, and Oceans Alive will pursue follow on funding to carry the work beyond this grant.</p>
+              <h3 className="font-poppins font-bold text-ocean-midnight mb-3">{PAGE.risksAndSustainability.subheading2}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">{PAGE.risksAndSustainability.text2}</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="font-poppins font-bold text-ocean-midnight mb-3">Monitoring and Learning</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Trained advocates, policy submissions, IUU reports and income are tracked through BMU logs, surveys and digital dashboards, with biannual progress reports to Oceans5 and quarterly steering committee meetings.</p>
+              <h3 className="font-poppins font-bold text-ocean-midnight mb-3">{PAGE.risksAndSustainability.subheading3}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">{PAGE.risksAndSustainability.text3}</p>
             </div>
           </div>
         </div>
@@ -264,9 +215,7 @@ export default function Ocean5AdvocacyPage() {
           ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-xl font-poppins font-medium text-ocean-midnight leading-relaxed">
-            "This initiative will transform the KCBMU Network from a reactive monitoring body into a proactive force for ocean justice."
-          </p>
+          <p className="text-xl font-poppins font-medium text-ocean-midnight leading-relaxed">{PAGE.conclusion.text}</p>
         </div>
       </section>
 
@@ -275,25 +224,17 @@ export default function Ocean5AdvocacyPage() {
           ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-ocean-midnight to-ocean-turquoise/30 py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-6">
-            Help Amplify Coastal Voices
-          </h2>
-          <p className="text-lg text-white/80 mb-8 leading-relaxed">
-            Your support helps fisherfolk communities advocate for stronger protection against illegal fishing and trawler threats.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-6">{PAGE.callToAction.heading}</h2>
+          <p className="text-lg text-white/80 mb-8 leading-relaxed">{PAGE.callToAction.text}</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              href="/donate"
+              href={PAGE.callToAction.link}
               className="px-8 py-4 bg-ocean-turquoise text-white rounded-xl font-bold hover:bg-white hover:text-ocean-turquoise transition-all shadow-lg"
-            >
-              Support This Project
-            </Link>
+            >{PAGE.callToAction.linkText}</Link>
             <Link
-              href="/#projects"
+              href={PAGE.callToAction.link2}
               className="px-8 py-4 border-2 border-white text-white rounded-xl font-bold hover:bg-white hover:text-ocean-midnight transition-all"
-            >
-              View All Projects
-            </Link>
+            >{PAGE.callToAction.linkText2}</Link>
           </div>
         </div>
       </section>

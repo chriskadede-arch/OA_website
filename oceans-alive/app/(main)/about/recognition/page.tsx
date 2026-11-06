@@ -11,83 +11,14 @@
  *
  * Where the text/data lives:
  *   • AWARDS  →  top of this file
+ * Page text, images and links (editable in Pages CMS)  →  content/pages/about-recognition.json
  */
 import Link from 'next/link';
+import PAGE from '@/content/pages/about-recognition.json';
 
-export const metadata = {
-  title: 'Recognition & Awards - Oceans Alive Foundation',
-  description:
-    'UNDP Equator Prize, King Charles III Royal Visit, IUCN World Conservation Congress 2025 - global recognition for community-led marine conservation.',
-};
+export const metadata = PAGE.seo;
 
-const AWARDS = [
-  {
-    year: '2023',
-    tag: 'Royal Visit',
-    tagColor: 'bg-[#FBB308]/15 text-[#FBB308] border border-[#FBB308]/30',
-    title: 'His Majesty King Charles III',
-    sub: 'Kuruwitu Marine Sanctuary · Kilifi, Kenya',
-    body:
-      'His Majesty King Charles III personally visited the Kuruwitu project, launched a coral restoration block bearing his royal cypher into the waters, and endorsed the community-led conservation model to a global audience of millions.',
-    highlight: 'Royal endorsement carried the work of Kilifi\'s fishermen to every corner of the world.',
-    large: true,
-  },
-  {
-    year: '2017',
-    tag: 'UNDP Equator Prize',
-    tagColor: 'bg-ocean-turquoise/15 text-ocean-turquoise border border-ocean-turquoise/30',
-    title: 'UNDP Equator Prize 2017',
-    sub: 'United Nations Development Programme',
-    body:
-      'Kuruwitu CBO wins the prestigious UNDP Equator Prize for exemplary community-based approaches to conservation and sustainable development - placing the community-led model on the world stage of environmental leadership.',
-    highlight: 'One of the world\'s most recognised prizes for grassroots environmental action.',
-    large: true,
-  },
-  {
-    year: '2022',
-    tag: 'Blue Champions',
-    tagColor: 'bg-sky-400/15 text-sky-400 border border-sky-400/30',
-    title: 'IUCN Blue Champions Award 2022',
-    sub: 'International Union for Conservation of Nature',
-    body:
-      'Kuruwitu CBO wins the 2022 IUCN Blue Champions Award, recognizing outstanding ocean conservation leadership and two decades of proven community-driven marine protection delivering 400% fish biomass increase and 30% coral recovery.',
-    highlight: 'Global recognition for champions protecting our ocean for future generations.',
-    large: true,
-  },
-  {
-    year: '2021',
-    tag: 'UN Food Systems',
-    tagColor: 'bg-[#6ee7b7]/15 text-[#6ee7b7] border border-[#6ee7b7]/30',
-    title: 'United Nations Food Systems Game Changer',
-    sub: 'UN Food Systems Summit',
-    body:
-      'Recognized as a Food System Game Changer for innovative community-led approaches linking ocean health, fisheries management, and food security in coastal communities.',
-    highlight: 'Transforming how communities manage ocean resources for sustainable livelihoods.',
-    large: false,
-  },
-  {
-    year: '2024',
-    tag: 'WEF Innovator',
-    tagColor: 'bg-purple-400/15 text-purple-400 border border-purple-400/30',
-    title: 'World Economic Forum - Uplink Top Innovator',
-    sub: 'World Economic Forum',
-    body:
-      'Selected as a top innovator by the World Economic Forum\'s UpLink platform for scalable ocean conservation solutions.',
-    highlight: 'Global recognition for innovation in marine conservation.',
-    large: false,
-  },
-  {
-    year: '2025',
-    tag: 'IUCN Congress',
-    tagColor: 'bg-[#6ee7b7]/15 text-[#6ee7b7] border border-[#6ee7b7]/30',
-    title: 'IUCN World Conservation Congress',
-    sub: 'International Union for Conservation of Nature',
-    body:
-      "Presented the Kuruwitu community co-management model as a globally scalable blueprint for marine governance at the world's largest conservation forum.",
-    highlight: 'From 30 hectares to a global template - Kuruwitu on the world stage.',
-    large: false,
-  },
-];
+const AWARDS = PAGE.AWARDS;
 
 export default function RecognitionPage() {
   const large = AWARDS.filter((a) => a.large);
@@ -112,17 +43,11 @@ export default function RecognitionPage() {
 
         <div className="relative max-w-6xl mx-auto px-6">
           <p className="text-[#FBB308] text-xs font-bold uppercase tracking-[0.25em] mb-6 flex items-center gap-3">
-            <span className="w-8 h-px bg-[#FBB308]/60" />
-            Global Recognition
-          </p>
-          <h1 className="font-poppins font-bold text-ocean-midnight text-5xl md:text-7xl leading-[0.95] mb-8 max-w-3xl">
-            Recognised<br />
-            <span className="text-[#FBB308]">By the World.</span>
+            <span className="w-8 h-px bg-[#FBB308]/60" />{PAGE.hero.eyebrow}</p>
+          <h1 className="font-poppins font-bold text-ocean-midnight text-5xl md:text-7xl leading-[0.95] mb-8 max-w-3xl">{PAGE.hero.title}<br />
+            <span className="text-[#FBB308]">{PAGE.hero.label}</span>
           </h1>
-          <p className="text-gray-700 text-xl max-w-xl leading-relaxed">
-            Every award, prize, and royal visit reflects the work of the fishing communities
-            of Kilifi County - not just our organisation.
-          </p>
+          <p className="text-gray-700 text-xl max-w-xl leading-relaxed">{PAGE.hero.text}</p>
         </div>
       </section>
 
@@ -169,13 +94,10 @@ export default function RecognitionPage() {
           ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-16 border-y border-white/[0.06]">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-3xl md:text-4xl font-poppins font-bold text-white leading-snug">
-            &ldquo;These recognitions celebrate the dedication of Kilifi's coastal communities.<br />
-            <span className="text-ocean-turquoise">Their commitment to ocean stewardship is what makes this work possible.</span>&rdquo;
+          <p className="text-3xl md:text-4xl font-poppins font-bold text-white leading-snug">{PAGE.quoteStrip.text}<br />
+            <span className="text-ocean-turquoise">{PAGE.quoteStrip.label}</span>&rdquo;
           </p>
-          <p className="mt-6 text-white/35 text-sm uppercase tracking-widest">
-            - Des Bowden, Co-Founder & CEO
-          </p>
+          <p className="mt-6 text-white/35 text-sm uppercase tracking-widest">{PAGE.quoteStrip.eyebrow}</p>
         </div>
       </section>
 
@@ -185,13 +107,11 @@ export default function RecognitionPage() {
       <section className="bg-ocean-midnight py-14">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
           <p className="text-white/40 text-sm">
-            <span className="font-bold text-white/70">Continue reading:</span> Meet the organisations partnering with us to protect Kenya&apos;s ocean.
-          </p>
+            <span className="font-bold text-white/70">{PAGE.nextChapter.label}</span>{PAGE.nextChapter.text}</p>
           <Link
-            href="/about/partners"
+            href={PAGE.nextChapter.link}
             className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-ocean-turquoise text-ocean-midnight font-bold text-sm rounded-xl hover:bg-white transition-all duration-200"
-          >
-            Our Partners <span>→</span>
+          >{PAGE.nextChapter.linkText}<span>→</span>
           </Link>
         </div>
       </section>

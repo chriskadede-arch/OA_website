@@ -1,0 +1,96 @@
+{
+  "seo": {
+    "title": "Conscious Coral Reef Restoration Tourism | Oceans Alive Foundation",
+    "description": "Turning a 30 hectare sanctuary's ecological recovery into a certified, income generating reef tourism enterprise at Kuruwitu, Kenya's first community marine sanctuary."
+  },
+  "EXPERIENCE": [
+    {
+      "title": "Coral Education",
+      "body": "Restoration tours explaining how the sanctuary recovered and why it matters."
+    },
+    {
+      "title": "Nursery Work",
+      "body": "Hands on time in the coral nursery, learning how fragments are grown and cared for."
+    },
+    {
+      "title": "Reef Out-Planting",
+      "body": "Artificial reef out-planting sessions where visitors help transplant juvenile coral."
+    },
+    {
+      "title": "Plant Your Own Coral",
+      "body": "A signature moment: every visitor gets to plant a coral of their own on the reef."
+    }
+  ],
+  "PROGRESS": [
+    "Entrance and reception area cleaned, with new wall paintings of local marine life",
+    "Collaboration MOU between Oceans Alive and KCW-CBO revised",
+    "Marketing consultant engaged to design a communication strategy",
+    "Tourist sunbeds and mattresses procured",
+    "Rangers' and guides' uniforms made",
+    "Snorkels, masks and reef shoes procured for tourists"
+  ],
+  "FUNDER": {
+    "name": "The Conscious Travel Foundation",
+    "logo": "/images/partners/conscious-travel.png"
+  },
+  "hero": {
+    "image": "/images/divers.jpg",
+    "imageAlt": "Conscious Coral Reef Restoration Tourism",
+    "eyebrow": "March 2026 to March 2029",
+    "title": "Conscious Coral Reef Restoration Tourism",
+    "text": "Nineteen years of community conservation at Kuruwitu, Kenya's first community marine sanctuary, becoming a certified, income generating coral restoration tourism enterprise.",
+    "text2": "30 ha",
+    "eyebrow2": "Sanctuary",
+    "text3": "19",
+    "eyebrow3": "Years of Community Care",
+    "text4": "3",
+    "eyebrow4": "Year Programme",
+    "eyebrow5": "Partner"
+  },
+  "ecologicalRecoveryDashboard": {
+    "eyebrow": "Why Kuruwitu",
+    "heading": "Nineteen Years of Ecological Recovery, By the Numbers",
+    "text": "400%",
+    "eyebrow2": "Rise in Fish Biomass",
+    "text2": "17%",
+    "eyebrow3": "Seagrass Recovery",
+    "text3": "30%+",
+    "eyebrow4": "Coral Cover Improvement",
+    "text4": "135%",
+    "eyebrow5": "Fish Catch Spillover",
+    "text5": "Kuruwitu is managed by the Kuruwitu Conservation and Welfare CBO and the Kuruwitu Beach Management Unit under traditional law, and now co-managed under Kenya's Fisheries Regulations. The CBO has run its eco tourism venture for over 10 years, becoming a popular destination and a living classroom for other fishing communities. But climate driven coral bleaching, illegal fishing and unregulated tourism now threaten those gains, which is exactly what this programme is built to hold the line against."
+  },
+  "thePlan": {
+    "eyebrow": "The Plan",
+    "heading": "Three Moves to a Certified Destination",
+    "text": "1",
+    "subheading": "Business Plan and Strategy",
+    "text2": "Develop a professional business plan and tourism strategy built around the sanctuary's proven ecological recovery.",
+    "text3": "2",
+    "subheading2": "Facilities and Certification",
+    "text4": "Upgrade facilities and safety compliance, and certify staff to national tourism board standards.",
+    "text5": "3",
+    "subheading3": "KATO Marketing Packages",
+    "text6": "Formalize Aquatic Safari packages with the Kenya Association of Tour Operators, who have already expressed interest."
+  },
+  "visitorExperience": {
+    "eyebrow": "The Visitor Experience",
+    "heading": "A Beach to Reef Package, Built Around Participation",
+    "text": "Tourists, schools and corporate groups pay to take part in an aquatic safari, not just watch one. The result funds reef restoration, monitoring and community livelihoods while widening every visitor's understanding of what protecting a coral reef actually takes."
+  },
+  "progressChecklist": {
+    "eyebrow": "Progress to Date",
+    "heading": "Already Underway"
+  },
+  "lookingAhead": {
+    "text": "Beyond Kuruwitu, the model is designed to travel: a grassroots led, tourism linked, income generating blueprint that other coastal communities across Kenya can adapt for their own reefs."
+  },
+  "callToAction": {
+    "heading": "Help Safeguard Kuruwitu's Reefs",
+    "text": "Your support helps finance reef restoration, monitoring and community livelihoods through regenerative tourism.",
+    "link": "/donate",
+    "linkText": "Support This Project",
+    "link2": "/#projects",
+    "linkText2": "View All Projects"
+  }
+}

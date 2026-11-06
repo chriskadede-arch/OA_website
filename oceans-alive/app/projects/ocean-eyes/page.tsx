@@ -13,23 +13,18 @@
  * Where the text/data lives:
  *   • PIPELINE  →  top of this file
  *   • FUNDER  →  top of this file
+ * Page text, images and links (editable in Pages CMS)  →  content/projects/ocean-eyes.json
  */
 import Link from 'next/link';
 import Image from 'next/image';
 
-export const metadata = {
-  title: 'Ocean Eyes Coral Restoration School Program | Oceans Alive Foundation',
-  description: 'Six years, eighteen schools, one Marine Base: a schools programme pairing classroom lessons with hands on conservation and a student led environmental project.',
-};
+import PAGE from '@/content/projects/ocean-eyes.json';
 
-const PIPELINE = [
-  { title: 'Classroom Lesson', body: 'Learners are introduced to marine conservation, biodiversity and climate smart backyard kitchen gardening at their own school.' },
-  { title: 'Marine Base Practical', body: 'The class travels to the Marine Base to connect classroom theory to real, hands on conservation work.' },
-  { title: 'Needs Assessment', body: 'Oceans Alive and Ocean Eyes assess each school for environmental challenges and opportunities specific to that community.' },
-  { title: 'Student Led Project', body: 'Learners design and run their own school based environmental project, moving from awareness into action.' },
-];
+export const metadata = PAGE.seo;
 
-const FUNDER = { name: 'Ocean Eyes', logo: '/images/partners/ocean-eyes.jpg' };
+const PIPELINE = PAGE.PIPELINE;
+
+const FUNDER = PAGE.FUNDER;
 
 export default function OceanEyesPage() {
   return (
@@ -40,8 +35,8 @@ export default function OceanEyesPage() {
       <section className="relative bg-ocean-midnight overflow-hidden min-h-[60vh]">
         <div className="absolute inset-0">
           <Image
-            src="/images/kids.jpg"
-            alt="Ocean Eyes Coral Restoration School Program"
+            src={PAGE.hero.image}
+            alt={PAGE.hero.imageAlt}
             fill
             className="object-cover"
           />
@@ -52,29 +47,23 @@ export default function OceanEyesPage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white/20">
               <span className="w-2 h-2 bg-ocean-turquoise rounded-full animate-pulse" />
-              <span className="text-xs font-bold text-white uppercase tracking-wider">3 Months Every Year, For 6 Years</span>
+              <span className="text-xs font-bold text-white uppercase tracking-wider">{PAGE.hero.eyebrow}</span>
             </div>
-            <h1 className="font-poppins font-bold text-5xl md:text-6xl text-white mb-6 leading-tight">
-              Ocean Eyes Coral Restoration School Program
-            </h1>
-            <p className="text-xl text-white/90 leading-relaxed mb-3">
-              A six year partnership with Ocean Eyes, delivering marine conservation and climate smart backyard kitchen gardening education to school learners along the Kenyan coast.
-            </p>
-            <p className="text-sm text-white/60 uppercase tracking-widest mb-8">
-              With the Ministry of Education, community based organisations, and school patrons
-            </p>
+            <h1 className="font-poppins font-bold text-5xl md:text-6xl text-white mb-6 leading-tight">{PAGE.hero.title}</h1>
+            <p className="text-xl text-white/90 leading-relaxed mb-3">{PAGE.hero.text}</p>
+            <p className="text-sm text-white/60 uppercase tracking-widest mb-8">{PAGE.hero.eyebrow2}</p>
             <div className="flex flex-wrap gap-8">
               <div>
-                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">360</div>
-                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">Learners</div>
+                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">{PAGE.hero.text2}</div>
+                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">{PAGE.hero.eyebrow3}</div>
               </div>
               <div>
-                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">18</div>
-                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">Schools</div>
+                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">{PAGE.hero.text3}</div>
+                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">{PAGE.hero.eyebrow4}</div>
               </div>
               <div>
-                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">6</div>
-                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">Years Running</div>
+                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">{PAGE.hero.text4}</div>
+                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">{PAGE.hero.eyebrow5}</div>
               </div>
             </div>
           </div>
@@ -82,7 +71,7 @@ export default function OceanEyesPage() {
 
         {/* Funder badge, floating right */}
         <div className="hidden lg:flex absolute right-10 xl:right-20 top-1/2 -translate-y-1/2 flex-col items-center gap-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">Partner</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">{PAGE.hero.eyebrow6}</span>
           <div className="relative w-36 h-20 bg-white rounded-xl p-3">
             <Image src={FUNDER.logo} alt={FUNDER.name} fill className="object-contain p-2" />
           </div>
@@ -96,23 +85,23 @@ export default function OceanEyesPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex flex-wrap items-center justify-center gap-4 text-center">
             <div className="bg-white rounded-2xl px-6 py-5 shadow-sm">
-              <div className="text-3xl font-poppins font-bold text-amber-800">3</div>
-              <div className="text-xs text-gray-500 uppercase tracking-widest">Schools a Year</div>
+              <div className="text-3xl font-poppins font-bold text-amber-800">{PAGE.theMath.text}</div>
+              <div className="text-xs text-gray-500 uppercase tracking-widest">{PAGE.theMath.eyebrow}</div>
             </div>
             <span className="text-2xl text-amber-800/40 font-bold">×</span>
             <div className="bg-white rounded-2xl px-6 py-5 shadow-sm">
-              <div className="text-3xl font-poppins font-bold text-amber-800">20</div>
-              <div className="text-xs text-gray-500 uppercase tracking-widest">Learners a School</div>
+              <div className="text-3xl font-poppins font-bold text-amber-800">{PAGE.theMath.text2}</div>
+              <div className="text-xs text-gray-500 uppercase tracking-widest">{PAGE.theMath.eyebrow2}</div>
             </div>
             <span className="text-2xl text-amber-800/40 font-bold">×</span>
             <div className="bg-white rounded-2xl px-6 py-5 shadow-sm">
-              <div className="text-3xl font-poppins font-bold text-amber-800">6</div>
-              <div className="text-xs text-gray-500 uppercase tracking-widest">Years</div>
+              <div className="text-3xl font-poppins font-bold text-amber-800">{PAGE.theMath.text3}</div>
+              <div className="text-xs text-gray-500 uppercase tracking-widest">{PAGE.theMath.eyebrow3}</div>
             </div>
             <span className="text-2xl text-amber-800/40 font-bold">=</span>
             <div className="bg-amber-800 rounded-2xl px-6 py-5 shadow-sm">
-              <div className="text-3xl font-poppins font-bold text-white">360</div>
-              <div className="text-xs text-amber-100 uppercase tracking-widest">Learners, 18 Schools</div>
+              <div className="text-3xl font-poppins font-bold text-white">{PAGE.theMath.text4}</div>
+              <div className="text-xs text-amber-100 uppercase tracking-widest">{PAGE.theMath.eyebrow4}</div>
             </div>
           </div>
         </div>
@@ -124,10 +113,8 @@ export default function OceanEyesPage() {
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">How It Works</p>
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight">
-              From Classroom to Community Action
-            </h2>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.pipeline.eyebrow}</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight">{PAGE.pipeline.heading}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {PIPELINE.map((step, i) => (
@@ -152,27 +139,23 @@ export default function OceanEyesPage() {
       <section className="bg-ocean-midnight py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">Six Years On</p>
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white leading-tight mb-4">
-              A Consistent Platform for School Led Conservation
-            </h2>
-            <p className="text-white/60 text-lg max-w-2xl mx-auto">
-              Every school leaves with its own environmental project, addressing the specific challenges its own students identified.
-            </p>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.impactStats.eyebrow}</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white leading-tight mb-4">{PAGE.impactStats.heading}</h2>
+            <p className="text-white/60 text-lg max-w-2xl mx-auto">{PAGE.impactStats.text}</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-poppins font-bold text-ocean-turquoise mb-2">360</div>
-              <p className="text-sm text-white/60 uppercase tracking-widest">Learners Reached</p>
+              <div className="text-4xl md:text-5xl font-poppins font-bold text-ocean-turquoise mb-2">{PAGE.impactStats.text2}</div>
+              <p className="text-sm text-white/60 uppercase tracking-widest">{PAGE.impactStats.eyebrow2}</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-poppins font-bold text-ocean-turquoise mb-2">18</div>
-              <p className="text-sm text-white/60 uppercase tracking-widest">Schools</p>
+              <div className="text-4xl md:text-5xl font-poppins font-bold text-ocean-turquoise mb-2">{PAGE.impactStats.text3}</div>
+              <p className="text-sm text-white/60 uppercase tracking-widest">{PAGE.impactStats.eyebrow3}</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-poppins font-bold text-ocean-turquoise mb-2">6</div>
-              <p className="text-sm text-white/60 uppercase tracking-widest">Years of Partnership</p>
+              <div className="text-4xl md:text-5xl font-poppins font-bold text-ocean-turquoise mb-2">{PAGE.impactStats.text4}</div>
+              <p className="text-sm text-white/60 uppercase tracking-widest">{PAGE.impactStats.eyebrow4}</p>
             </div>
           </div>
         </div>
@@ -183,25 +166,17 @@ export default function OceanEyesPage() {
           ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gradient-to-br from-ocean-midnight to-ocean-turquoise/30 py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-6">
-            Help Us Reach the Next School
-          </h2>
-          <p className="text-lg text-white/80 mb-8 leading-relaxed">
-            Your support helps extend marine conservation education, and its practical follow through, to more schools along the coast.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-6">{PAGE.callToAction.heading}</h2>
+          <p className="text-lg text-white/80 mb-8 leading-relaxed">{PAGE.callToAction.text}</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              href="/donate"
+              href={PAGE.callToAction.link}
               className="px-8 py-4 bg-ocean-turquoise text-white rounded-xl font-bold hover:bg-white hover:text-ocean-turquoise transition-all shadow-lg"
-            >
-              Support This Project
-            </Link>
+            >{PAGE.callToAction.linkText}</Link>
             <Link
-              href="/#projects"
+              href={PAGE.callToAction.link2}
               className="px-8 py-4 border-2 border-white text-white rounded-xl font-bold hover:bg-white hover:text-ocean-midnight transition-all"
-            >
-              View All Projects
-            </Link>
+            >{PAGE.callToAction.linkText2}</Link>
           </div>
         </div>
       </section>

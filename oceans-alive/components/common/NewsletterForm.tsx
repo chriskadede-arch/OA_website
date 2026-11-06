@@ -3,6 +3,7 @@
  * NEWSLETTER SIGN-UP FORM
  * ══════════════════════════════════════════════════════════════════
  * Used on /get-involved. On GoDaddy it sends to the PHP scripts in /api.
+ * Page text, images and links (editable in Pages CMS)  →  content/site/newsletter-form.json
  */
 'use client';
 
@@ -11,6 +12,8 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { newsLetterSchema, NewsletterFormData } from '@/lib/validators';
 import { apiClient } from '@/lib/api-client';
+
+import PAGE from '@/content/site/newsletter-form.json';
 
 interface NewsletterFormProps {
   variant?: 'default' | 'footer';
@@ -55,7 +58,7 @@ export default function NewsletterForm({ variant = 'default' }: NewsletterFormPr
           <input
             {...register('email')}
             type="email"
-            placeholder="Your email address"
+            placeholder={PAGE.intro.placeholder}
             className="flex-1 px-4 py-3 rounded-lg text-ocean-midnight bg-white focus:outline-none focus:ring-2 focus:ring-ocean-midnight min-w-0"
             disabled={isSubmitting}
           />
@@ -79,11 +82,11 @@ export default function NewsletterForm({ variant = 'default' }: NewsletterFormPr
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto">
       <div className="mb-4">
-        <label className="form-label">Email Address</label>
+        <label className="form-label">{PAGE.intro.label}</label>
         <input
           {...register('email')}
           type="email"
-          placeholder="your@email.com"
+          placeholder={PAGE.intro.placeholder2}
           className="form-input"
           disabled={isSubmitting}
         />
@@ -93,11 +96,11 @@ export default function NewsletterForm({ variant = 'default' }: NewsletterFormPr
       </div>
 
       <div className="mb-4">
-        <label className="form-label">Full Name (Optional)</label>
+        <label className="form-label">{PAGE.intro.label2}</label>
         <input
           {...register('name')}
           type="text"
-          placeholder="Your name"
+          placeholder={PAGE.intro.placeholder3}
           className="form-input"
           disabled={isSubmitting}
         />

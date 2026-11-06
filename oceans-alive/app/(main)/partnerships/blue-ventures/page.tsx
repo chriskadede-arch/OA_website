@@ -12,15 +12,14 @@
  *   6. Expected Outcomes
  *   7. Call to action
  *   8. Navigation Footer
+ * Page text, images and links (editable in Pages CMS)  →  content/projects/blue-ventures.json
  */
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Blue Ventures Partnership - Oceans Alive Foundation',
-  description:
-    'In partnership with Blue Ventures Conservation, we strengthen fisheries monitoring and co-management capacity within the KAMAMKUKI Joint Co-Management Area across Kilifi and Mombasa Counties.',
-};
+import PAGE from '@/content/projects/blue-ventures.json';
+
+export const metadata = PAGE.seo;
 
 export default function BlueVenturesPage() {
   return (
@@ -46,22 +45,14 @@ export default function BlueVenturesPage() {
           <div className="text-center max-w-4xl mx-auto">
             {/* Partnership Badge */}
             <div className="inline-flex items-center px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8">
-              <span className="text-white/90 text-xs font-bold uppercase tracking-[0.25em]">
-                In Partnership with Blue Ventures Conservation
-              </span>
+              <span className="text-white/90 text-xs font-bold uppercase tracking-[0.25em]">{PAGE.hero.eyebrow}</span>
             </div>
 
-            <h1 className="font-poppins font-bold text-white text-5xl md:text-7xl leading-[0.95] mb-8">
-              Strengthening Fisheries<br />
-              <span className="text-cyan-300">Monitoring Capacity</span>
+            <h1 className="font-poppins font-bold text-white text-5xl md:text-7xl leading-[0.95] mb-8">{PAGE.hero.title}<br />
+              <span className="text-cyan-300">{PAGE.hero.label}</span>
             </h1>
 
-            <p className="text-white/70 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto mb-12">
-              A two-phase project to strengthen the fisheries monitoring and co-management capacity
-              of five Beach Management Units within the KAMAMKUKI Joint Co-Management Area,
-              promoting the use of reliable fisheries and ecological information to support informed,
-              adaptive management of shared coastal resources.
-            </p>
+            <p className="text-white/70 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto mb-12">{PAGE.hero.text}</p>
 
             {/* Glass Cards Row */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
@@ -84,9 +75,9 @@ export default function BlueVenturesPage() {
 
         {/* Partner badge, floating right */}
         <div className="hidden lg:flex absolute right-10 xl:right-20 top-1/2 -translate-y-1/2 flex-col items-center gap-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">Partner</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">{PAGE.hero.eyebrow2}</span>
           <div className="relative w-36 h-20 bg-white rounded-xl p-3">
-            <Image src="/images/partners/blue-ventures.png" alt="Blue Ventures" fill className="object-contain p-2" />
+            <Image src={PAGE.hero.image} alt={PAGE.hero.imageAlt} fill className="object-contain p-2" />
           </div>
         </div>
 
@@ -106,28 +97,14 @@ export default function BlueVenturesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-[#0066cc] text-xs font-bold uppercase tracking-[0.25em] mb-6 flex items-center gap-3">
-                <span className="w-8 h-px bg-[#0066cc]/50" />
-                Our Joint Mission
-              </p>
-              <h2 className="font-poppins font-bold text-ocean-midnight text-4xl md:text-5xl leading-[0.95] mb-6">
-                The KAMAMKUKI<br />
-                <span className="text-[#0066cc]">Co-Management Area</span>
+                <span className="w-8 h-px bg-[#0066cc]/50" />{PAGE.theKamamkukiProject.eyebrow}</p>
+              <h2 className="font-poppins font-bold text-ocean-midnight text-4xl md:text-5xl leading-[0.95] mb-6">{PAGE.theKamamkukiProject.heading}<br />
+                <span className="text-[#0066cc]">{PAGE.theKamamkukiProject.label}</span>
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
-                <p className="text-lg">
-                  The <strong className="text-ocean-midnight">KAMAMKUKI JCMA</strong> spans approximately 304 km² of coastal
-                  and marine waters within Kenya's territorial sea. It brings together the Kuruwitu, Kanamai and Mtwapa BMUs
-                  in Kilifi County and the Marina and Kidongo BMUs in Mombasa County.
-                </p>
-                <p>
-                  These institutions work alongside the Kenya Fisheries Service (KeFS) and the respective county governments
-                  to manage shared fisheries resources under the framework established by the Fisheries Management and
-                  Development Act No. 35 of 2016.
-                </p>
-                <p className="text-sm italic text-gray-500 border-l-4 border-[#0066cc] pl-4 py-2 bg-gray-50 rounded-r-lg">
-                  "The project's approach is centred on building the capacity of BMUs and allied co-management institutions
-                  to implement fisheries regulations and management measures effectively and accountably."
-                </p>
+                <p className="text-lg">{PAGE.theKamamkukiProject.text}<strong className="text-ocean-midnight">{PAGE.theKamamkukiProject.boldText}</strong>{PAGE.theKamamkukiProject.text2}</p>
+                <p>{PAGE.theKamamkukiProject.text3}</p>
+                <p className="text-sm italic text-gray-500 border-l-4 border-[#0066cc] pl-4 py-2 bg-gray-50 rounded-r-lg">{PAGE.theKamamkukiProject.text4}</p>
               </div>
             </div>
 
@@ -182,17 +159,11 @@ export default function BlueVenturesPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-[#0066cc] text-xs font-bold uppercase tracking-[0.25em] mb-4">
-              Two-Phase Implementation
-            </p>
-            <h2 className="font-poppins font-bold text-ocean-midnight text-4xl md:text-5xl mb-6">
-              Building Capacity<br />
-              <span className="text-[#0066cc]">Step by Step</span>
+            <p className="text-[#0066cc] text-xs font-bold uppercase tracking-[0.25em] mb-4">{PAGE.projectPhases.eyebrow}</p>
+            <h2 className="font-poppins font-bold text-ocean-midnight text-4xl md:text-5xl mb-6">{PAGE.projectPhases.heading}<br />
+              <span className="text-[#0066cc]">{PAGE.projectPhases.label}</span>
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              The project responds to a set of interrelated pressures on the JCMA's fisheries and
-              unfolds in two strategic phases from October 2024 to November 2026.
-            </p>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">{PAGE.projectPhases.text}</p>
           </div>
 
           {/* Phase 1 */}
@@ -202,7 +173,7 @@ export default function BlueVenturesPage() {
                 {/* Icon Column */}
                 <div className="lg:col-span-1 bg-gradient-to-br from-[#0066cc] to-blue-700 flex items-center justify-center p-6 sm:p-12">
                   <div className="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center">
-                    <span className="text-white text-3xl font-bold">1</span>
+                    <span className="text-white text-3xl font-bold">{PAGE.projectPhases.label2}</span>
                   </div>
                 </div>
 
@@ -211,18 +182,10 @@ export default function BlueVenturesPage() {
                   <div className="flex items-start gap-4 mb-6">
                     <div className="flex-1">
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-3">
-                        <h3 className="font-poppins font-bold text-ocean-midnight text-2xl sm:text-3xl">
-                          Phase 1: Foundation
-                        </h3>
-                        <span className="text-sm text-gray-500 font-medium px-3 py-1 bg-gray-100 rounded-full">
-                          Oct 2024 – Sep 2025
-                        </span>
+                        <h3 className="font-poppins font-bold text-ocean-midnight text-2xl sm:text-3xl">{PAGE.projectPhases.subheading}</h3>
+                        <span className="text-sm text-gray-500 font-medium px-3 py-1 bg-gray-100 rounded-full">{PAGE.projectPhases.label3}</span>
                       </div>
-                      <p className="text-gray-600 text-lg leading-relaxed">
-                        Phase 1 focused on diagnosing and addressing governance and institutional capacity gaps
-                        across the five BMUs and establishing a fisheries catch-monitoring system at ten landing
-                        sites within the JCMA.
-                      </p>
+                      <p className="text-gray-600 text-lg leading-relaxed">{PAGE.projectPhases.text2}</p>
                     </div>
                   </div>
 
@@ -276,7 +239,7 @@ export default function BlueVenturesPage() {
                 {/* Icon Column */}
                 <div className="lg:col-span-1 bg-gradient-to-br from-cyan-500 to-teal-600 flex items-center justify-center p-6 sm:p-12">
                   <div className="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center">
-                    <span className="text-white text-3xl font-bold">2</span>
+                    <span className="text-white text-3xl font-bold">{PAGE.projectPhases.label4}</span>
                   </div>
                 </div>
 
@@ -285,20 +248,10 @@ export default function BlueVenturesPage() {
                   <div className="flex items-start gap-4 mb-6">
                     <div className="flex-1">
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-3">
-                        <h3 className="font-poppins font-bold text-ocean-midnight text-2xl sm:text-3xl">
-                          Phase 2: Strengthening
-                        </h3>
-                        <span className="text-sm text-gray-500 font-medium px-3 py-1 bg-gray-100 rounded-full">
-                          Dec 2025 – Nov 2026
-                        </span>
+                        <h3 className="font-poppins font-bold text-ocean-midnight text-2xl sm:text-3xl">{PAGE.projectPhases.subheading2}</h3>
+                        <span className="text-sm text-gray-500 font-medium px-3 py-1 bg-gray-100 rounded-full">{PAGE.projectPhases.label5}</span>
                       </div>
-                      <p className="text-gray-600 text-lg leading-relaxed">
-                        Phase 2 builds on those foundations across four priority areas: strengthening BMU governance
-                        and compliance through a structured mentorship programme; promoting peer learning, knowledge
-                        exchange and collaboration among BMUs; improving the financial resilience of fisheries-dependent
-                        communities through Village Savings and Loan Associations (VSLAs); and deepening fisheries and
-                        ecological monitoring to support evidence-based management decisions.
-                      </p>
+                      <p className="text-gray-600 text-lg leading-relaxed">{PAGE.projectPhases.text3}</p>
                     </div>
                   </div>
 
@@ -365,20 +318,11 @@ export default function BlueVenturesPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-cyan-300 text-xs font-bold uppercase tracking-[0.25em] mb-4">
-              The Context
-            </p>
-            <h2 className="font-poppins font-bold text-white text-4xl md:text-5xl mb-6">
-              Addressing Interrelated<br />
-              <span className="text-cyan-300">Pressures</span>
+            <p className="text-cyan-300 text-xs font-bold uppercase tracking-[0.25em] mb-4">{PAGE.theChallenge.eyebrow}</p>
+            <h2 className="font-poppins font-bold text-white text-4xl md:text-5xl mb-6">{PAGE.theChallenge.heading}<br />
+              <span className="text-cyan-300">{PAGE.theChallenge.label}</span>
             </h2>
-            <p className="text-white/70 text-lg max-w-3xl mx-auto">
-              The project responds to a set of interrelated pressures on the JCMA's fisheries:
-              destructive and illegal fishing practices, declining fish stocks, habitat degradation,
-              weak enforcement, limited institutional capacity within co-management bodies, and the
-              growing economic vulnerability of coastal communities whose livelihoods depend on
-              increasingly stressed resources.
-            </p>
+            <p className="text-white/70 text-lg max-w-3xl mx-auto">{PAGE.theChallenge.text}</p>
           </div>
 
           {/* Challenge Cards */}
@@ -466,18 +410,11 @@ export default function BlueVenturesPage() {
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-[#0066cc] text-xs font-bold uppercase tracking-[0.25em] mb-4">
-              Evidence-Based Solutions
-            </p>
-            <h2 className="font-poppins font-bold text-ocean-midnight text-4xl md:text-5xl mb-6">
-              A Community-Centred<br />
-              <span className="text-[#0066cc]">Approach</span>
+            <p className="text-[#0066cc] text-xs font-bold uppercase tracking-[0.25em] mb-4">{PAGE.ourApproach.eyebrow}</p>
+            <h2 className="font-poppins font-bold text-ocean-midnight text-4xl md:text-5xl mb-6">{PAGE.ourApproach.heading}<br />
+              <span className="text-[#0066cc]">{PAGE.ourApproach.label}</span>
             </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Interventions span governance and institutional development, fisheries catch and ecological
-              monitoring, compliance strengthening, financial resilience for fisheries-dependent households,
-              and community food security.
-            </p>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">{PAGE.ourApproach.text}</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -489,9 +426,7 @@ export default function BlueVenturesPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h3 className="font-poppins font-bold text-ocean-midnight text-2xl">
-                  Governance & Compliance
-                </h3>
+                <h3 className="font-poppins font-bold text-ocean-midnight text-2xl">{PAGE.ourApproach.subheading}</h3>
               </div>
 
               <div className="space-y-4">
@@ -535,9 +470,7 @@ export default function BlueVenturesPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <h3 className="font-poppins font-bold text-ocean-midnight text-2xl">
-                  Fisheries Monitoring
-                </h3>
+                <h3 className="font-poppins font-bold text-ocean-midnight text-2xl">{PAGE.ourApproach.subheading2}</h3>
               </div>
 
               <div className="space-y-4">
@@ -581,9 +514,7 @@ export default function BlueVenturesPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="font-poppins font-bold text-ocean-midnight text-2xl">
-                  Financial Resilience
-                </h3>
+                <h3 className="font-poppins font-bold text-ocean-midnight text-2xl">{PAGE.ourApproach.subheading3}</h3>
               </div>
 
               <div className="space-y-4">
@@ -627,9 +558,7 @@ export default function BlueVenturesPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                   </svg>
                 </div>
-                <h3 className="font-poppins font-bold text-ocean-midnight text-2xl">
-                  Peer Learning
-                </h3>
+                <h3 className="font-poppins font-bold text-ocean-midnight text-2xl">{PAGE.ourApproach.subheading4}</h3>
               </div>
 
               <div className="space-y-4">
@@ -681,12 +610,9 @@ export default function BlueVenturesPage() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-cyan-300 text-xs font-bold uppercase tracking-[0.25em] mb-4">
-              Building for the Future
-            </p>
-            <h2 className="font-poppins font-bold text-white text-4xl md:text-5xl mb-6">
-              Expected Outcomes:<br />
-              <span className="text-cyan-300">Beyond the Project</span>
+            <p className="text-cyan-300 text-xs font-bold uppercase tracking-[0.25em] mb-4">{PAGE.expectedOutcomes.eyebrow}</p>
+            <h2 className="font-poppins font-bold text-white text-4xl md:text-5xl mb-6">{PAGE.expectedOutcomes.heading}<br />
+              <span className="text-cyan-300">{PAGE.expectedOutcomes.label}</span>
             </h2>
           </div>
 
@@ -765,10 +691,7 @@ export default function BlueVenturesPage() {
 
             {/* Vision Statement */}
             <div className="mt-10 pt-8 border-t border-white/10">
-              <p className="text-white/60 text-sm italic text-center max-w-3xl mx-auto">
-                "These activities are designed to establish functional, accountable and self-sustaining systems
-                for fisheries co-management that endure beyond the project period."
-              </p>
+              <p className="text-white/60 text-sm italic text-center max-w-3xl mx-auto">{PAGE.expectedOutcomes.text}</p>
             </div>
           </div>
         </div>
@@ -781,20 +704,14 @@ export default function BlueVenturesPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-poppins font-bold text-ocean-midnight text-3xl md:text-4xl mb-5 leading-tight">
-                Support Community-Led<br />
-                <span className="text-[#0066cc]">Fisheries Management</span>
+              <h2 className="font-poppins font-bold text-ocean-midnight text-3xl md:text-4xl mb-5 leading-tight">{PAGE.callToAction.heading}<br />
+                <span className="text-[#0066cc]">{PAGE.callToAction.label}</span>
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                Your contribution directly supports fisheries catch monitoring, governance strengthening,
-                community financial resilience through VSLAs, and peer learning networks across the
-                KAMAMKUKI Joint Co-Management Area  -  building capacity for sustainable fisheries management.
-              </p>
+              <p className="text-gray-600 leading-relaxed mb-8">{PAGE.callToAction.text}</p>
               <Link
-                href="/donate"
+                href={PAGE.callToAction.link}
                 className="inline-flex items-center gap-2 px-7 py-4 bg-[#0066cc] text-white font-bold rounded-xl hover:bg-ocean-midnight transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                Support the Project <span>→</span>
+              >{PAGE.callToAction.linkText}<span>→</span>
               </Link>
             </div>
 
@@ -823,19 +740,16 @@ export default function BlueVenturesPage() {
       <section className="bg-ocean-midnight py-12 border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
           <Link
-            href="/about/partners"
+            href={PAGE.navigationFooter.link}
             className="text-white/60 hover:text-white text-sm transition-colors flex items-center gap-2"
           >
-            <span>←</span> Back to All Partners
-          </Link>
+            <span>←</span>{PAGE.navigationFooter.linkText}</Link>
           <p className="text-white/40 text-sm text-center">
-            <span className="font-bold text-white/70">Continue exploring:</span> Discover our other programs
-          </p>
+            <span className="font-bold text-white/70">{PAGE.navigationFooter.label}</span>{PAGE.navigationFooter.text}</p>
           <Link
-            href="/programmes"
+            href={PAGE.navigationFooter.link2}
             className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-[#0066cc] text-white font-bold text-sm rounded-xl hover:bg-cyan-400 transition-all duration-200"
-          >
-            View All Programmes <span>→</span>
+          >{PAGE.navigationFooter.linkText2}<span>→</span>
           </Link>
         </div>
       </section>

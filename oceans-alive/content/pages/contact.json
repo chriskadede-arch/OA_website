@@ -1,0 +1,69 @@
+{
+  "INQUIRY_OPTIONS": [
+    {
+      "value": "General Inquiry",
+      "label": "General",
+      "desc": "Questions & info"
+    },
+    {
+      "value": "Partnership",
+      "label": "Partnership",
+      "desc": "NGOs, research, business"
+    },
+    {
+      "value": "Volunteer",
+      "label": "Volunteer",
+      "desc": "Give time & skills"
+    },
+    {
+      "value": "Donation",
+      "label": "Donate",
+      "desc": "Support our work"
+    },
+    {
+      "value": "Other",
+      "label": "Other",
+      "desc": "Anything else"
+    }
+  ],
+  "hero": {
+    "image": "/images/fisher.jpg",
+    "eyebrow": "Kilifi County, Kenya",
+    "title": "Let's Make",
+    "label": "Waves Together",
+    "text": "Whether you want to partner, volunteer, donate, or just learn more - we're here to connect with you from the shores of Kuruwitu.",
+    "eyebrow2": "Email Us",
+    "eyebrow3": "Call Us"
+  },
+  "contactFormInfoCard": {
+    "image": "/images/oceanday.jpg",
+    "subheading": "Message Received",
+    "text": "Thank you for reaching out.",
+    "text2": "We'll get back to you within 48 hours from Kilifi.",
+    "eyebrow": "Get in touch",
+    "heading": "Send Us a Message",
+    "eyebrow2": "What is this about?",
+    "label": "Full Name ",
+    "placeholder": "Your name",
+    "label2": "Email Address ",
+    "placeholder2": "your@email.com",
+    "label3": "Subject",
+    "placeholder3": "What is this about?",
+    "label4": "Message ",
+    "placeholder4": "Tell us how we can help...",
+    "label5": "Sending...",
+    "subheading2": "Get In Touch",
+    "eyebrow3": "Email",
+    "eyebrow4": "Phone",
+    "eyebrow5": "Location",
+    "text3": "Vipingo, Kilifi County, Kenya",
+    "subheading3": "Office Hours",
+    "label6": "Monday - Friday",
+    "label7": "9:00 AM - 5:00 PM",
+    "label8": "Saturday - Sunday",
+    "label9": "Closed",
+    "text4": "East Africa Time (EAT) • UTC+3",
+    "text5": "48 Hour Response",
+    "text6": "Average reply time"
+  }
+}

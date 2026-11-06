@@ -1,0 +1,81 @@
+{
+  "seo": {
+    "title": "Coral Guardian Partnership - Oceans Alive Foundation",
+    "description": "In partnership with the local nonprofit Coral Guardian, we collaborate on the REEL Kilifi project - Restoring Reef Ecosystems for Enhanced Livelihoods in Kenya."
+  },
+  "hero": {
+    "eyebrow": "In Partnership with the Local Nonprofit",
+    "title": "Restoring Reefs,",
+    "label": "Rebuilding Lives",
+    "text": "Together with Coral Guardian, we're pioneering community-led coral restoration in the Kuruwitu Marine Protected Area - where conservation meets livelihoods.",
+    "eyebrow2": "Partner",
+    "image": "/images/partners/coral-guardian.png",
+    "imageAlt": "Coral Guardian"
+  },
+  "theReelKilifiProject": {
+    "eyebrow": "Our Joint Mission",
+    "heading": "The REEL Kilifi",
+    "label": "Project",
+    "boldText": "Restoring Reef Ecosystems for Enhanced Livelihoods",
+    "text": " is more than a coral restoration project - it's a transformative initiative in Kenya's Indian Ocean waters.",
+    "text2": "The project unfolds in the 12,000-hectare Kuruwitu coastal co-management area in Kilifi County. This pioneering zone benefits from shared coastal and marine resource management between the government and the local fishing community, making it a beacon of effective collaborative conservation in Kenya.",
+    "text3": "\"A pioneer in effective collaborative conservation in Kenya - where communities and government protect the ocean together.\""
+  },
+  "restorationTechniques": {
+    "eyebrow": "Science Meets Community",
+    "heading": "Our Restoration",
+    "label": "Techniques",
+    "text": "Methods adapted and replicable by local communities, ensuring sustainable impact.",
+    "subheading": "Coral Restoration",
+    "text2": "We use methods that are adapted and replicable by local communities. On-site coral nurseries house fragments of opportunity corals collected in the area.",
+    "smallHeading": "Community Training",
+    "text3": "Fishermen trained in coral biology and restoration methods over several months",
+    "smallHeading2": "Protected Zone",
+    "text4": "Restoration within the Tengefu law protected area, ensuring sustainability",
+    "boldText": "Innovation in Action:",
+    "text5": " We're testing new methods to find the most appropriate and financially sustainable approaches for this unique environment."
+  },
+  "communityInvolvement": {
+    "eyebrow": "Community at the Core",
+    "heading": "Involving Local",
+    "label": "Communities",
+    "text": "The community plays a central role in the adoption and implementation of the project - from training to teaching to shared ownership.",
+    "subheading": "Our Goal",
+    "text2": "To develop a sense of ownership in the local community by fostering peer-to-peer learning in the context of community citizen science, and by sharing the results of the project with the immediate and wider community."
+  },
+  "monitoringAndEvaluation": {
+    "eyebrow": "Evidence-Based Impact",
+    "heading": "Monitoring &",
+    "label": "Evaluation",
+    "text": "We track both ecological and social outcomes to ensure lasting, meaningful impact.",
+    "subheading": "Biological Monitoring",
+    "subheading2": "Social Monitoring"
+  },
+  "lookingAhead": {
+    "eyebrow": "The Future",
+    "heading": "Looking Ahead:",
+    "label": "Project Evolution",
+    "subheading": "From Local Success to Regional Model",
+    "text": "The overall aim of this collaboration is to strengthen and extend the participatory coral reef restoration models implemented in the Kuruwitu Tengefu Community Protection Area in Kenya, in order to support local communities.",
+    "smallHeading": "Living Classroom",
+    "text2": "The Kuruwitu area will serve as a living classroom for training new communities, sharing experiences and best practices across the region.",
+    "smallHeading2": "Adapted Approach",
+    "text3": "Following a restoration approach adapted to the socio-economic context of local traditional fishing communities - scalable and sustainable.",
+    "text4": "\"This partnership represents more than coral restoration - it's about empowering communities to become the guardians of their own marine heritage, creating a model that can be replicated across Kenya's coast and beyond.\""
+  },
+  "callToAction": {
+    "heading": "Support Community-Led",
+    "label": "Coral Restoration",
+    "text": "Your contribution directly funds training, equipment, and long-term monitoring for the REEL Kilifi project - empowering local communities to restore their reefs and secure their livelihoods.",
+    "link": "/donate",
+    "linkText": "Donate to the Project "
+  },
+  "navigationFooter": {
+    "link": "/about/partners",
+    "linkText": " Back to All Partners",
+    "label": "Continue exploring:",
+    "text": " Discover our other programs",
+    "link2": "/programmes",
+    "linkText2": "View All Programmes "
+  }
+}

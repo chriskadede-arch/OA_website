@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "title": "Our Team - Oceans Alive Foundation",
+    "description": "Meet the Oceans Alive Foundation team - 18 specialists and community stewards protecting Kenya's coast."
+  },
+  "GRADIENTS": [
+    [
+      "#022F4E",
+      "#0a4f7a"
+    ],
+    [
+      "#1a6b5a",
+      "#0e4a3c"
+    ],
+    [
+      "#0a4f7a",
+      "#0e6b8a"
+    ],
+    [
+      "#6b3a00",
+      "#9a5500"
+    ],
+    [
+      "#3d1a6b",
+      "#4f2a8a"
+    ],
+    [
+      "#1a4a5a",
+      "#022F4E"
+    ]
+  ],
+  "heroThePeopleBehindTheOcean": {
+    "eyebrow": "Oceans Alive Foundation",
+    "label": "The",
+    "label2": "People",
+    "label3": "Behind",
+    "label4": "the Ocean.",
+    "text": "18 specialists. Community stewards. One coastline. Since 2003.",
+    "eyebrow2": "Scroll"
+  },
+  "teamGrid": {
+    "text": "15",
+    "eyebrow": "The Team",
+    "heading": "The people",
+    "label": "behind the ocean.",
+    "text2": "19 specialists · Kilifi County, Kenya",
+    "link": "/contact?type=Volunteer",
+    "eyebrow2": "Join the team",
+    "text3": "We're always looking for talent"
+  },
+  "communityStewardsBand": {
+    "image": "/images/BMUS.jpg",
+    "imageAlt": "Community",
+    "eyebrow": " The Backbone",
+    "label": "7,000+",
+    "label2": "Community",
+    "label3": "Stewards",
+    "text": "Fishers, reef monitors, women leaders, BMU reps, and community rangers - the 7,000+ people who protect Kenya's coast because it is their home.",
+    "link": "/about/story",
+    "linkText": "Read our story "
+  },
+  "joinTheTeamCallToAction": {
+    "eyebrow": "Work With Us",
+    "label": "Join the team.",
+    "label2": "Protect the ocean.",
+    "text": "Marine biologists, educators, communicators, and field researchers - we welcome talent at Kuruwitu and across Kilifi County.",
+    "link": "/contact?type=Volunteer",
+    "linkText": "Volunteer / Intern",
+    "link2": "/contact?type=Other",
+    "linkText2": "Get in Touch"
+  }
+}

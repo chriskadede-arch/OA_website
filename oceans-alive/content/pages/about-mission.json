@@ -1,0 +1,76 @@
+{
+  "seo": {
+    "title": "Mission & Vision - Oceans Alive Foundation",
+    "description": "Our mission, guiding principles, and values - the philosophy that drives every programme from coral reef to national policy."
+  },
+  "VALUES": [
+    {
+      "title": "Community-Led",
+      "body": "The people closest to the ocean are best placed to care for it. We work alongside communities to develop solutions that reflect local knowledge, priorities and experience.",
+      "color": "from-ocean-midnight to-[#0a3560]"
+    },
+    {
+      "title": "Long-Term Thinking",
+      "body": "We focus on lasting outcomes rather than short-term projects, helping communities build the skills, partnerships and financial resilience needed to sustain change.",
+      "color": "from-[#1a6b5a] to-[#0e4a3c]"
+    },
+    {
+      "title": "Learning & Education",
+      "body": "Knowledge creates opportunity. We support learning at every level, from school programmes and community training to citizen science and leadership development.",
+      "color": "from-[#0a4f7a] to-[#0e6b8a]"
+    },
+    {
+      "title": "Conservation in Action",
+      "body": "We protect and restore marine ecosystems through practical, evidence-based conservation that benefits both nature and people.",
+      "color": "from-[#6b3a00] to-[#9a5500]"
+    },
+    {
+      "title": "Partnership",
+      "body": "Meaningful change happens when communities, government, researchers and responsible businesses work together toward shared goals.",
+      "color": "from-[#3d1a6b] to-[#4f2a8a]"
+    }
+  ],
+  "PRINCIPLE_COLORS": [
+    "from-ocean-midnight to-[#0a3560]",
+    "from-[#1a6b5a] to-[#0e4a3c]",
+    "from-[#6b3a00] to-[#9a5500]",
+    "from-[#0a4f7a] to-[#0e6b8a]"
+  ],
+  "missionQuoteHero": {
+    "eyebrow": "Our Purpose",
+    "label": "“We believe the ocean's future depends on the communities",
+    "label2": "whose livelihoods depend on it.",
+    "eyebrow2": "Des Bowden, Co-Founder & CEO, Oceans Alive | Co-Founder & Patron, Kuruwitu Conservation",
+    "subheading": "Our Mission",
+    "text": "To create, connect and catalyze co-management initiatives by providing support to BMU and Coastal Indigenous People and Local Communities (IPLC), sharing relevant knowledge and building capacity.",
+    "subheading2": "The Challenge We Are Addressing",
+    "text2": "For generations, Kenya's coastal people have relied on the ocean for food and work. Today, this way of life is under threat. Coral reefs are struggling because of climate change, pollution, and overfishing. When the reef suffers, families face hard times, with fewer fish to catch and less money to support their homes.",
+    "text3": "Due to population growth, more people are now fishing than ever before, and this has caused fish numbers to drop. To catch what they need, some fishers use nets that are ",
+    "label3": "illegal, unreported and unregulated (IUU)",
+    "text4": ". These methods destroy coral and seagrass and catch fish that are too small before they have reproduced, and because there is little help from local authorities to stop these harmful practices, the ocean continues to suffer.",
+    "smallHeading": "What Actually Works",
+    "text5": "Conservation thrives when communities are well-organised and work in strong, long-term partnerships. For over 10 years, Oceans Alive has walked alongside coastal communities to provide the technical, institutional, and financial support needed to turn their vision for a healthy ocean into a reality."
+  },
+  "visionStrip": {
+    "eyebrow": "Our Vision",
+    "text": "Marine conservation of Kenya's coastline and its coastal Indigenous People and Local Communities (IPLC) resource use in balance with nature to support well-being and sustainable livelihoods.",
+    "text2": "2003",
+    "eyebrow2": "twenty years",
+    "eyebrow3": "Aligned with United Nations Sustainable Development Goals"
+  },
+  "values": {
+    "eyebrow": "What We Stand For",
+    "heading": "Our Core Values"
+  },
+  "principles": {
+    "eyebrow": "How We Work",
+    "heading": "Four Core Principles",
+    "eyebrow2": "Principle "
+  },
+  "nextChapter": {
+    "label": "Continue reading:",
+    "text": " See the global recognition our community-led model has earned.",
+    "link": "/about/recognition",
+    "linkText": "Recognition & Awards "
+  }
+}

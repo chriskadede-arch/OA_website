@@ -11,9 +11,12 @@
  *   5. Living Classroom
  *   6. Legal Context
  *   7. Call to Action
+ * Page text, images and links (editable in Pages CMS)  →  content/pages/kuruwitu-story.json
  */
 import Link from 'next/link';
 import Image from 'next/image';
+
+import PAGE from '@/content/pages/kuruwitu-story.json';
 
 export default function KuruwitiPage() {
   return (
@@ -24,8 +27,8 @@ export default function KuruwitiPage() {
       <section className="relative bg-ocean-midnight overflow-hidden min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/kamakukijcma.jpg"
-            alt="Kuruwitu Community"
+            src={PAGE.hero.image}
+            alt={PAGE.hero.imageAlt}
             fill
             className="object-cover opacity-40"
           />
@@ -34,14 +37,11 @@ export default function KuruwitiPage() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 pt-36 pb-20 md:pt-40">
           <div className="max-w-3xl">
-            <p className="text-ocean-turquoise text-sm font-bold uppercase tracking-widest mb-4">Where the Model Was Born</p>
-            <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white leading-tight mb-6">
-              The Kuruwitu Partnership<br />
-              <span className="text-ocean-turquoise">& Living Classroom</span>
+            <p className="text-ocean-turquoise text-sm font-bold uppercase tracking-widest mb-4">{PAGE.hero.eyebrow}</p>
+            <h1 className="text-5xl md:text-6xl font-poppins font-bold text-white leading-tight mb-6">{PAGE.hero.title}<br />
+              <span className="text-ocean-turquoise">{PAGE.hero.label}</span>
             </h1>
-            <p className="text-xl text-white/80 leading-relaxed">
-              A 20-year journey of community-led marine conservation. The story of how Kuruwitu's fishers created Kenya's first Community Conservation Area and built a living laboratory for ocean stewardship.
-            </p>
+            <p className="text-xl text-white/80 leading-relaxed">{PAGE.hero.text}</p>
           </div>
         </div>
       </section>
@@ -52,12 +52,8 @@ export default function KuruwitiPage() {
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-gray-700 leading-relaxed mb-6">
-              Kuruwitu is where the model was born and where most of Oceans Alive's demonstration and learning activity still takes place.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Kuruwitu is a living classroom. Within it we run coral-restoration demonstrations, reef and intertidal learning, fisheries and co-management education, school visits, local and international student programs, internships and engagement with community practitioners. This work is undertaken in close collaboration with the Kuruwitu-CBO, the Kuruwitu BMU, local practitioners, schools and technical partners. Oceans Alive acts as a facilitator and program partner.
-            </p>
+            <p className="text-xl text-gray-700 leading-relaxed mb-6">{PAGE.introduction.text}</p>
+            <p className="text-lg text-gray-600 leading-relaxed">{PAGE.introduction.text2}</p>
           </div>
         </div>
       </section>
@@ -69,51 +65,43 @@ export default function KuruwitiPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">The Beginning</p>
-              <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-6 leading-tight">
-                The Origin & Leadership of Kuruwitu
-              </h2>
+              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.theOriginStory.eyebrow}</p>
+              <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-6 leading-tight">{PAGE.theOriginStory.heading}</h2>
               <div className="space-y-4 text-gray-700">
-                <p className="leading-relaxed">
-                  In the early 2000s, Kuruwitu's fishers saw their catch declining year after year. Instead of waiting for outside intervention, they took action themselves.
-                </p>
-                <p className="leading-relaxed">
-                  Led by local community leaders and fishermen, the <strong>Kuruwitu Conservation and Welfare Association (KCW-CBO)</strong> was formed. In 2003, they established Kenya's first Community Conservation Area (CCA) - a voluntary no-take zone managed entirely by the community.
-                </p>
-                <p className="leading-relaxed">
-                  This wasn't a project imposed from outside. It was born from local wisdom, driven by local leadership, and sustained by local commitment. The fishers of Kuruwitu decided their future - and created a model that would inspire conservation efforts across Kenya's coast.
-                </p>
+                <p className="leading-relaxed">{PAGE.theOriginStory.text}</p>
+                <p className="leading-relaxed">{PAGE.theOriginStory.text2}<strong>{PAGE.theOriginStory.boldText}</strong>{PAGE.theOriginStory.text3}</p>
+                <p className="leading-relaxed">{PAGE.theOriginStory.text4}</p>
               </div>
             </div>
 
             <div className="bg-ocean-midnight/5 border border-ocean-turquoise/20 rounded-2xl p-8">
-              <h3 className="text-2xl font-poppins font-bold text-ocean-midnight mb-6">Key Milestones</h3>
+              <h3 className="text-2xl font-poppins font-bold text-ocean-midnight mb-6">{PAGE.theOriginStory.subheading}</h3>
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-16 h-16 bg-ocean-turquoise/10 rounded-full flex items-center justify-center">
-                    <span className="text-ocean-turquoise font-bold text-lg">2003</span>
+                    <span className="text-ocean-turquoise font-bold text-lg">{PAGE.theOriginStory.label}</span>
                   </div>
                   <div className="min-w-0">
-                    <h4 className="font-bold text-ocean-midnight mb-1 break-words">CCA Established</h4>
-                    <p className="text-sm text-gray-600">Community creates Kenya's first voluntary no-take zone</p>
+                    <h4 className="font-bold text-ocean-midnight mb-1 break-words">{PAGE.theOriginStory.smallHeading}</h4>
+                    <p className="text-sm text-gray-600">{PAGE.theOriginStory.text5}</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-16 h-16 bg-ocean-turquoise/10 rounded-full flex items-center justify-center">
-                    <span className="text-ocean-turquoise font-bold text-lg">2018</span>
+                    <span className="text-ocean-turquoise font-bold text-lg">{PAGE.theOriginStory.label2}</span>
                   </div>
                   <div className="min-w-0">
-                    <h4 className="font-bold text-ocean-midnight mb-1 break-words">Fish Biomass +400%</h4>
-                    <p className="text-sm text-gray-600">15 years of data proves the community's approach works</p>
+                    <h4 className="font-bold text-ocean-midnight mb-1 break-words">{PAGE.theOriginStory.smallHeading2}</h4>
+                    <p className="text-sm text-gray-600">{PAGE.theOriginStory.text6}</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-16 h-16 bg-ocean-turquoise/10 rounded-full flex items-center justify-center">
-                    <span className="text-ocean-turquoise font-bold text-lg">2022</span>
+                    <span className="text-ocean-turquoise font-bold text-lg">{PAGE.theOriginStory.label3}</span>
                   </div>
                   <div className="min-w-0">
-                    <h4 className="font-bold text-ocean-midnight mb-1 break-words">Co-Management Plan</h4>
-                    <p className="text-sm text-gray-600">Kenya's first legal Co-Management Agreement</p>
+                    <h4 className="font-bold text-ocean-midnight mb-1 break-words">{PAGE.theOriginStory.smallHeading3}</h4>
+                    <p className="text-sm text-gray-600">{PAGE.theOriginStory.text7}</p>
                   </div>
                 </div>
               </div>
@@ -128,13 +116,9 @@ export default function KuruwitiPage() {
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">Who Does What</p>
-            <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-4">
-              The Partnership Structure
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Kuruwitu's success is built on clear roles, mutual respect, and collaborative action. Each partner brings distinct expertise and authority.
-            </p>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.partnershipStructure.eyebrow}</p>
+            <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-4">{PAGE.partnershipStructure.heading}</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">{PAGE.partnershipStructure.text}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
@@ -145,26 +129,24 @@ export default function KuruwitiPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-poppins font-bold text-blue-900 mb-3">
-                Kuruwitu Conservation & Welfare CBO
-              </h3>
-              <p className="text-sm text-blue-800 mb-4 font-semibold">Community Leadership & Ownership</p>
+              <h3 className="text-xl font-poppins font-bold text-blue-900 mb-3">{PAGE.partnershipStructure.subheading}</h3>
+              <p className="text-sm text-blue-800 mb-4 font-semibold">{PAGE.partnershipStructure.text2}</p>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600 mt-1">•</span>
-                  <span>Founded and led by Kuruwitu community members</span>
+                  <span>{PAGE.partnershipStructure.label}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600 mt-1">•</span>
-                  <span>Initiated the CCA and drives conservation action</span>
+                  <span>{PAGE.partnershipStructure.label2}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600 mt-1">•</span>
-                  <span>Manages community welfare and local initiatives</span>
+                  <span>{PAGE.partnershipStructure.label3}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600 mt-1">•</span>
-                  <span>Holds knowledge and decision-making authority</span>
+                  <span>{PAGE.partnershipStructure.label4}</span>
                 </li>
               </ul>
             </div>
@@ -176,26 +158,24 @@ export default function KuruwitiPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-poppins font-bold text-green-900 mb-3">
-                Kuruwitu Beach Management Unit
-              </h3>
-              <p className="text-sm text-green-800 mb-4 font-semibold">Fisheries Governance & Enforcement</p>
+              <h3 className="text-xl font-poppins font-bold text-green-900 mb-3">{PAGE.partnershipStructure.subheading2}</h3>
+              <p className="text-sm text-green-800 mb-4 font-semibold">{PAGE.partnershipStructure.text3}</p>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="text-green-600 mt-1">•</span>
-                  <span>Legally recognized fisheries governance body</span>
+                  <span>{PAGE.partnershipStructure.label5}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-600 mt-1">•</span>
-                  <span>Co-signatory to the Co-Management Plan</span>
+                  <span>{PAGE.partnershipStructure.label6}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-600 mt-1">•</span>
-                  <span>Enforces fishing regulations and closure zones</span>
+                  <span>{PAGE.partnershipStructure.label7}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-600 mt-1">•</span>
-                  <span>Liaises with Kenya Fisheries Service</span>
+                  <span>{PAGE.partnershipStructure.label8}</span>
                 </li>
               </ul>
             </div>
@@ -207,31 +187,27 @@ export default function KuruwitiPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
               </div>
-              <h3 className="text-xl font-poppins font-bold text-cyan-900 mb-3">
-                Oceans Alive Foundation
-              </h3>
-              <p className="text-sm text-cyan-800 mb-4 font-semibold">Facilitator & Technical Partner</p>
+              <h3 className="text-xl font-poppins font-bold text-cyan-900 mb-3">{PAGE.partnershipStructure.subheading3}</h3>
+              <p className="text-sm text-cyan-800 mb-4 font-semibold">{PAGE.partnershipStructure.text4}</p>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="text-cyan-600 mt-1">•</span>
-                  <span>Facilitates learning programmes and demonstrations</span>
+                  <span>{PAGE.partnershipStructure.label9}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-cyan-600 mt-1">•</span>
-                  <span>Documents results and shares lessons learned</span>
+                  <span>{PAGE.partnershipStructure.label10}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-cyan-600 mt-1">•</span>
-                  <span>Provides technical support (coral restoration, monitoring)</span>
+                  <span>{PAGE.partnershipStructure.label11}</span>
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="bg-ocean-turquoise/5 border border-ocean-turquoise/20 rounded-xl p-6 text-center">
-            <p className="text-gray-700 leading-relaxed">
-              Oceans Alive acts as a facilitator and programme partner, not as the owner of the learning site. All work is undertaken in close collaboration with the KCW-CBO, Kuruwitu BMU, local practitioners, schools, and technical partners.
-            </p>
+            <p className="text-gray-700 leading-relaxed">{PAGE.partnershipStructure.text5}</p>
           </div>
         </div>
       </section>
@@ -242,13 +218,9 @@ export default function KuruwitiPage() {
       <section className="bg-gradient-to-b from-ocean-midnight to-ocean-midnight/95 py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">Learning in Action</p>
-            <h2 className="text-4xl font-poppins font-bold text-white mb-4">
-              Kuruwitu as a Living Classroom
-            </h2>
-            <p className="text-lg text-white/70 max-w-3xl mx-auto">
-              From local school visits to international student programmes, Kuruwitu hosts hands-on learning experiences in marine conservation and community-led stewardship.
-            </p>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.livingClassroom.eyebrow}</p>
+            <h2 className="text-4xl font-poppins font-bold text-white mb-4">{PAGE.livingClassroom.heading}</h2>
+            <p className="text-lg text-white/70 max-w-3xl mx-auto">{PAGE.livingClassroom.text}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -360,76 +332,64 @@ export default function KuruwitiPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">Governance Framework</p>
-              <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-6 leading-tight">
-                Legal & Management Context
-              </h2>
+              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.legalContext.eyebrow}</p>
+              <h2 className="text-4xl font-poppins font-bold text-ocean-midnight mb-6 leading-tight">{PAGE.legalContext.heading}</h2>
               <div className="space-y-4 text-gray-700">
-                <p className="leading-relaxed">
-                  The Kuruwitu closure began as a voluntary community initiative. Over two decades, it evolved into a legally recognized governance model.
-                </p>
-                <p className="leading-relaxed">
-                  In 2022, the <strong>Kuruwitu Co-Management Area</strong> became Kenya's first legal Co-Management Plan under the Fisheries Management and Development Act (2016). This milestone placed 12,000 hectares of ocean under formal community stewardship.
-                </p>
-                <p className="leading-relaxed">
-                  The Co-Management Plan is a binding agreement between:
-                </p>
+                <p className="leading-relaxed">{PAGE.legalContext.text}</p>
+                <p className="leading-relaxed">{PAGE.legalContext.text2}<strong>{PAGE.legalContext.boldText}</strong>{PAGE.legalContext.text3}</p>
+                <p className="leading-relaxed">{PAGE.legalContext.text4}</p>
                 <ul className="space-y-2 ml-6">
                   <li className="flex items-start gap-2">
                     <span className="text-ocean-turquoise mt-1.5">→</span>
-                    <span>The Kuruwitu BMU (community governance)</span>
+                    <span>{PAGE.legalContext.label}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-ocean-turquoise mt-1.5">→</span>
-                    <span>Kenya Fisheries Service (state authority)</span>
+                    <span>{PAGE.legalContext.label2}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-ocean-turquoise mt-1.5">→</span>
-                    <span>Kenya Wildlife Service (protected area management)</span>
+                    <span>{PAGE.legalContext.label3}</span>
                   </li>
                 </ul>
-                <p className="leading-relaxed">
-                  This framework gives the community legal standing to enforce rules, participate in decision-making, and co-manage marine resources alongside government.
-                </p>
+                <p className="leading-relaxed">{PAGE.legalContext.text5}</p>
               </div>
             </div>
 
             <div className="space-y-6">
               <div className="bg-white border border-gray-200 rounded-xl p-6">
-                <h3 className="text-xl font-poppins font-bold text-ocean-midnight mb-4">What the Co-Management Plan Covers</h3>
+                <h3 className="text-xl font-poppins font-bold text-ocean-midnight mb-4">{PAGE.legalContext.subheading}</h3>
                 <ul className="space-y-3 text-sm text-gray-700">
                   <li className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 bg-ocean-turquoise/10 rounded-full flex items-center justify-center text-ocean-turquoise text-xs font-bold">1</span>
-                    <span>Boundaries and zoning of the Co-Management Area</span>
+                    <span className="flex-shrink-0 w-6 h-6 bg-ocean-turquoise/10 rounded-full flex items-center justify-center text-ocean-turquoise text-xs font-bold">{PAGE.legalContext.label4}</span>
+                    <span>{PAGE.legalContext.label5}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 bg-ocean-turquoise/10 rounded-full flex items-center justify-center text-ocean-turquoise text-xs font-bold">2</span>
-                    <span>Rules for the no-take closure and fishing zones</span>
+                    <span className="flex-shrink-0 w-6 h-6 bg-ocean-turquoise/10 rounded-full flex items-center justify-center text-ocean-turquoise text-xs font-bold">{PAGE.legalContext.label6}</span>
+                    <span>{PAGE.legalContext.label7}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 bg-ocean-turquoise/10 rounded-full flex items-center justify-center text-ocean-turquoise text-xs font-bold">3</span>
-                    <span>Enforcement mechanisms and penalties</span>
+                    <span className="flex-shrink-0 w-6 h-6 bg-ocean-turquoise/10 rounded-full flex items-center justify-center text-ocean-turquoise text-xs font-bold">{PAGE.legalContext.label8}</span>
+                    <span>{PAGE.legalContext.label9}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 bg-ocean-turquoise/10 rounded-full flex items-center justify-center text-ocean-turquoise text-xs font-bold">4</span>
-                    <span>Roles and responsibilities of each partner</span>
+                    <span className="flex-shrink-0 w-6 h-6 bg-ocean-turquoise/10 rounded-full flex items-center justify-center text-ocean-turquoise text-xs font-bold">{PAGE.legalContext.label10}</span>
+                    <span>{PAGE.legalContext.label11}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 bg-ocean-turquoise/10 rounded-full flex items-center justify-center text-ocean-turquoise text-xs font-bold">5</span>
-                    <span>Decision-making processes and dispute resolution</span>
+                    <span className="flex-shrink-0 w-6 h-6 bg-ocean-turquoise/10 rounded-full flex items-center justify-center text-ocean-turquoise text-xs font-bold">{PAGE.legalContext.label12}</span>
+                    <span>{PAGE.legalContext.label13}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 bg-ocean-turquoise/10 rounded-full flex items-center justify-center text-ocean-turquoise text-xs font-bold">6</span>
-                    <span>Monitoring, reporting, and adaptive management</span>
+                    <span className="flex-shrink-0 w-6 h-6 bg-ocean-turquoise/10 rounded-full flex items-center justify-center text-ocean-turquoise text-xs font-bold">{PAGE.legalContext.label14}</span>
+                    <span>{PAGE.legalContext.label15}</span>
                   </li>
                 </ul>
               </div>
 
               <div className="bg-ocean-turquoise/10 border border-ocean-turquoise/30 rounded-xl p-6">
-                <h4 className="font-bold text-ocean-midnight mb-2">A National Precedent</h4>
-                <p className="text-sm text-gray-700">
-                  Kuruwitu's Co-Management Plan is being used as a template for other coastal communities across Kenya seeking to formalize community-led marine governance.
-                </p>
+                <h4 className="font-bold text-ocean-midnight mb-2">{PAGE.legalContext.smallHeading}</h4>
+                <p className="text-sm text-gray-700">{PAGE.legalContext.text6}</p>
               </div>
             </div>
           </div>
@@ -441,25 +401,17 @@ export default function KuruwitiPage() {
           ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-4">
-            Visit the Living Classroom
-          </h2>
-          <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
-            Interested in learning programmes, research partnerships, or visiting Kuruwitu? Get in touch to explore opportunities.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-4">{PAGE.callToAction.heading}</h2>
+          <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">{PAGE.callToAction.text}</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              href="/contact?type=Partnership"
+              href={PAGE.callToAction.link}
               className="px-8 py-4 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-white hover:text-ocean-midnight transition-all duration-200"
-            >
-              Partner With Us
-            </Link>
+            >{PAGE.callToAction.linkText}</Link>
             <Link
-              href="/programmes"
+              href={PAGE.callToAction.link2}
               className="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-xl hover:border-ocean-turquoise hover:bg-ocean-turquoise/10 transition-all duration-200"
-            >
-              View All Programmes
-            </Link>
+            >{PAGE.callToAction.linkText2}</Link>
           </div>
         </div>
       </section>

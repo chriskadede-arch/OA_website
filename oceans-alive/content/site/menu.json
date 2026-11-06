@@ -1,0 +1,125 @@
+{
+  "INVOLVE_CARDS": [
+    {
+      "eyebrow": "Fund Conservation",
+      "title": "Donate",
+      "description": "$250 covers comprehensive ocean restoration - coral planting, community support, and education.",
+      "href": "/donate",
+      "gradient": "from-ocean-turquoise to-[#0a4f7a]",
+      "stat": "$250",
+      "statLabel": "Comprehensive Package",
+      "badge": "Most Impactful"
+    },
+    {
+      "eyebrow": "Collaborate · Volunteer · Partner",
+      "title": "Partner & Volunteer",
+      "description": "Work with us as an NGO, government, business partner, researcher, or volunteer in Kilifi.",
+      "href": "/contact?type=Partnership",
+      "gradient": "from-[#1a6b5a] to-[#0e4a3c]",
+      "stat": "40+",
+      "statLabel": "Partners & Volunteers",
+      "badge": "Join Us"
+    },
+    {
+      "eyebrow": "Get In Touch",
+      "title": "Contact Us",
+      "description": "Questions, partnerships, media inquiries, or general information about our work.",
+      "href": "/contact",
+      "gradient": "from-[#1e40af] to-[#0c2454]",
+      "stat": "24h",
+      "statLabel": "Response Time",
+      "badge": "Available"
+    }
+  ],
+  "darkImmersiveMegaDropdown": {
+    "image": "/images/divers.jpg",
+    "imageAlt": "Community-led coral restoration at Kuruwitu",
+    "eyebrow": "Our Work",
+    "subheading": "Collaborative Management in Action",
+    "text": "Discover the global projects we're involved in, the focus of our conservation efforts, and the expert teams that inspire our strategies for change.",
+    "eyebrow2": "Programmes",
+    "eyebrow3": "Active Projects",
+    "link": "/#projects",
+    "linkText": "Explore All Projects",
+    "eyebrow4": "Programs",
+    "eyebrow5": "Cross-cutting:",
+    "eyebrow6": "Recognition & Awards",
+    "link2": "/about/recognition",
+    "linkText2": "See all recognition",
+    "eyebrow7": "Trusted By Our Partners",
+    "link3": "/about/partners",
+    "linkText3": "Meet our partners"
+  },
+  "actionCardsMegaDropdown": {
+    "text": "Get Started ",
+    "eyebrow": "More ways:"
+  },
+  "getInvolvedMegaDropdown": {
+    "subheading": "Get involved",
+    "text": "Want to join a campaign, raise funds or make a donation? Find out how you can play your part in our mission to protect the world's oceans.",
+    "link": "/donate",
+    "linkText": "Donate",
+    "link2": "/contact",
+    "linkText2": "Contact",
+    "link3": "/contact?type=Partnership",
+    "linkText3": "Partner and volunteer",
+    "link4": "/blog/category/updates",
+    "eyebrow": "ONGOING CAMPAIGN",
+    "text2": "INDIAN OCEAN",
+    "smallHeading": "Save the",
+    "smallHeading2": "Sanctuary",
+    "text3": "2025",
+    "text4": "TAKE ACTION"
+  },
+  "editorialMegaDropdown": {
+    "link": "/blog/category/impact-stories",
+    "image": "/images/coralteaching.jpg",
+    "imageAlt": "Ocean education at Kuruwitu",
+    "eyebrow": "From the Field",
+    "smallHeading": "Stories from Kenya's Coast",
+    "text": "Conservation through community voices.",
+    "label": "Read Stories →"
+  },
+  "mobileNavItem": {
+    "eyebrow": "Our Work",
+    "text": "Discover the global projects we're involved in, the focus of our conservation efforts, and the expert teams that inspire our strategies for change.",
+    "link": "/#projects",
+    "linkText": "Explore All Projects ",
+    "link2": "/about/recognition",
+    "linkText2": "Recognition",
+    "link3": "/about/partners",
+    "linkText3": "Partners"
+  },
+  "topBar": {
+    "link": "tel:+254732807935",
+    "linkText": "+254 732 807 935",
+    "link2": "mailto:info@oceansalivekenya.org",
+    "linkText2": "info@oceansalivekenya.org",
+    "accessibleLabel": "Search",
+    "buttonText": "Search",
+    "link3": "/donate?amount=25000",
+    "linkText3": "Donate"
+  },
+  "phoneTabletHeaderBelow1024px": {
+    "link": "/",
+    "image": "/Oceans-Alive-Logo-WHITE.png",
+    "imageAlt": "Oceans Alive Foundation",
+    "accessibleLabel": "Toggle menu"
+  },
+  "desktopLogoPanel1024pxAndUp": {
+    "link": "/",
+    "image": "/Oceans-Alive-Logo-WHITE.png",
+    "imageAlt": "Oceans Alive Foundation"
+  },
+  "searchBar": {
+    "placeholder": "Search for programs, stories, or resources..."
+  },
+  "phoneTabletMenu": {
+    "link": "/donate",
+    "linkText": "Donate Now",
+    "link2": "tel:+254732807935",
+    "linkText2": "+254 732 807 935",
+    "link3": "mailto:info@oceansalivekenya.org",
+    "linkText3": "info@oceansalivekenya.org"
+  }
+}

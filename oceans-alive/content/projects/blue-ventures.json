@@ -1,0 +1,76 @@
+{
+  "seo": {
+    "title": "Blue Ventures Partnership - Oceans Alive Foundation",
+    "description": "In partnership with Blue Ventures Conservation, we strengthen fisheries monitoring and co-management capacity within the KAMAMKUKI Joint Co-Management Area across Kilifi and Mombasa Counties."
+  },
+  "hero": {
+    "eyebrow": "In Partnership with Blue Ventures Conservation",
+    "title": "Strengthening Fisheries",
+    "label": "Monitoring Capacity",
+    "text": "A two-phase project to strengthen the fisheries monitoring and co-management capacity of five Beach Management Units within the KAMAMKUKI Joint Co-Management Area, promoting the use of reliable fisheries and ecological information to support informed, adaptive management of shared coastal resources.",
+    "eyebrow2": "Partner",
+    "image": "/images/partners/blue-ventures.png",
+    "imageAlt": "Blue Ventures"
+  },
+  "theKamamkukiProject": {
+    "eyebrow": "Our Joint Mission",
+    "heading": "The KAMAMKUKI",
+    "label": "Co-Management Area",
+    "text": "The ",
+    "boldText": "KAMAMKUKI JCMA",
+    "text2": " spans approximately 304 km² of coastal and marine waters within Kenya's territorial sea. It brings together the Kuruwitu, Kanamai and Mtwapa BMUs in Kilifi County and the Marina and Kidongo BMUs in Mombasa County.",
+    "text3": "These institutions work alongside the Kenya Fisheries Service (KeFS) and the respective county governments to manage shared fisheries resources under the framework established by the Fisheries Management and Development Act No. 35 of 2016.",
+    "text4": "\"The project's approach is centred on building the capacity of BMUs and allied co-management institutions to implement fisheries regulations and management measures effectively and accountably.\""
+  },
+  "projectPhases": {
+    "eyebrow": "Two-Phase Implementation",
+    "heading": "Building Capacity",
+    "label": "Step by Step",
+    "text": "The project responds to a set of interrelated pressures on the JCMA's fisheries and unfolds in two strategic phases from October 2024 to November 2026.",
+    "label2": "1",
+    "subheading": "Phase 1: Foundation",
+    "label3": "Oct 2024 – Sep 2025",
+    "text2": "Phase 1 focused on diagnosing and addressing governance and institutional capacity gaps across the five BMUs and establishing a fisheries catch-monitoring system at ten landing sites within the JCMA.",
+    "label4": "2",
+    "subheading2": "Phase 2: Strengthening",
+    "label5": "Dec 2025 – Nov 2026",
+    "text3": "Phase 2 builds on those foundations across four priority areas: strengthening BMU governance and compliance through a structured mentorship programme; promoting peer learning, knowledge exchange and collaboration among BMUs; improving the financial resilience of fisheries-dependent communities through Village Savings and Loan Associations (VSLAs); and deepening fisheries and ecological monitoring to support evidence-based management decisions."
+  },
+  "theChallenge": {
+    "eyebrow": "The Context",
+    "heading": "Addressing Interrelated",
+    "label": "Pressures",
+    "text": "The project responds to a set of interrelated pressures on the JCMA's fisheries: destructive and illegal fishing practices, declining fish stocks, habitat degradation, weak enforcement, limited institutional capacity within co-management bodies, and the growing economic vulnerability of coastal communities whose livelihoods depend on increasingly stressed resources."
+  },
+  "ourApproach": {
+    "eyebrow": "Evidence-Based Solutions",
+    "heading": "A Community-Centred",
+    "label": "Approach",
+    "text": "Interventions span governance and institutional development, fisheries catch and ecological monitoring, compliance strengthening, financial resilience for fisheries-dependent households, and community food security.",
+    "subheading": "Governance & Compliance",
+    "subheading2": "Fisheries Monitoring",
+    "subheading3": "Financial Resilience",
+    "subheading4": "Peer Learning"
+  },
+  "expectedOutcomes": {
+    "eyebrow": "Building for the Future",
+    "heading": "Expected Outcomes:",
+    "label": "Beyond the Project",
+    "text": "\"These activities are designed to establish functional, accountable and self-sustaining systems for fisheries co-management that endure beyond the project period.\""
+  },
+  "callToAction": {
+    "heading": "Support Community-Led",
+    "label": "Fisheries Management",
+    "text": "Your contribution directly supports fisheries catch monitoring, governance strengthening, community financial resilience through VSLAs, and peer learning networks across the KAMAMKUKI Joint Co-Management Area  -  building capacity for sustainable fisheries management.",
+    "link": "/donate",
+    "linkText": "Support the Project "
+  },
+  "navigationFooter": {
+    "link": "/about/partners",
+    "linkText": " Back to All Partners",
+    "label": "Continue exploring:",
+    "text": " Discover our other programs",
+    "link2": "/programmes",
+    "linkText2": "View All Programmes "
+  }
+}

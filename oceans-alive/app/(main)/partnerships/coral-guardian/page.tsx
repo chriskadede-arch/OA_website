@@ -12,15 +12,14 @@
  *   6. Looking Ahead
  *   7. Call to action
  *   8. Navigation Footer
+ * Page text, images and links (editable in Pages CMS)  →  content/projects/coral-guardian.json
  */
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Coral Guardian Partnership - Oceans Alive Foundation',
-  description:
-    'In partnership with the local nonprofit Coral Guardian, we collaborate on the REEL Kilifi project - Restoring Reef Ecosystems for Enhanced Livelihoods in Kenya.',
-};
+import PAGE from '@/content/projects/coral-guardian.json';
+
+export const metadata = PAGE.seo;
 
 export default function CoralGuardianPage() {
   return (
@@ -46,20 +45,14 @@ export default function CoralGuardianPage() {
           <div className="text-center max-w-4xl mx-auto">
             {/* Partnership Badge */}
             <div className="inline-flex items-center px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8">
-              <span className="text-white/90 text-xs font-bold uppercase tracking-[0.25em]">
-                In Partnership with the Local Nonprofit
-              </span>
+              <span className="text-white/90 text-xs font-bold uppercase tracking-[0.25em]">{PAGE.hero.eyebrow}</span>
             </div>
 
-            <h1 className="font-poppins font-bold text-white text-5xl md:text-7xl leading-[0.95] mb-8">
-              Restoring Reefs,<br />
-              <span className="text-ocean-turquoise">Rebuilding Lives</span>
+            <h1 className="font-poppins font-bold text-white text-5xl md:text-7xl leading-[0.95] mb-8">{PAGE.hero.title}<br />
+              <span className="text-ocean-turquoise">{PAGE.hero.label}</span>
             </h1>
 
-            <p className="text-white/70 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto mb-12">
-              Together with Coral Guardian, we're pioneering community-led coral restoration
-              in the Kuruwitu Marine Protected Area - where conservation meets livelihoods.
-            </p>
+            <p className="text-white/70 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto mb-12">{PAGE.hero.text}</p>
 
             {/* Glass Cards Row */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
@@ -82,9 +75,9 @@ export default function CoralGuardianPage() {
 
         {/* Partner badge, floating right */}
         <div className="hidden lg:flex absolute right-10 xl:right-20 top-1/2 -translate-y-1/2 flex-col items-center gap-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">Partner</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">{PAGE.hero.eyebrow2}</span>
           <div className="relative w-36 h-20 bg-white rounded-xl p-3">
-            <Image src="/images/partners/coral-guardian.png" alt="Coral Guardian" fill className="object-contain p-2" />
+            <Image src={PAGE.hero.image} alt={PAGE.hero.imageAlt} fill className="object-contain p-2" />
           </div>
         </div>
 
@@ -104,28 +97,15 @@ export default function CoralGuardianPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-6 flex items-center gap-3">
-                <span className="w-8 h-px bg-ocean-turquoise/50" />
-                Our Joint Mission
-              </p>
-              <h2 className="font-poppins font-bold text-ocean-midnight text-4xl md:text-5xl leading-[0.95] mb-6">
-                The REEL Kilifi<br />
-                <span className="text-ocean-turquoise">Project</span>
+                <span className="w-8 h-px bg-ocean-turquoise/50" />{PAGE.theReelKilifiProject.eyebrow}</p>
+              <h2 className="font-poppins font-bold text-ocean-midnight text-4xl md:text-5xl leading-[0.95] mb-6">{PAGE.theReelKilifiProject.heading}<br />
+                <span className="text-ocean-turquoise">{PAGE.theReelKilifiProject.label}</span>
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p className="text-lg">
-                  <strong className="text-ocean-midnight">Restoring Reef Ecosystems for Enhanced Livelihoods</strong> is
-                  more than a coral restoration project - it's a transformative initiative in Kenya's Indian Ocean waters.
-                </p>
-                <p>
-                  The project unfolds in the 12,000-hectare Kuruwitu coastal co-management area in Kilifi County.
-                  This pioneering zone benefits from shared coastal and marine resource management between the
-                  government and the local fishing community, making it a beacon of effective collaborative
-                  conservation in Kenya.
-                </p>
-                <p className="text-sm italic text-gray-500 border-l-4 border-ocean-turquoise pl-4 py-2 bg-gray-50 rounded-r-lg">
-                  "A pioneer in effective collaborative conservation in Kenya - where communities and government
-                  protect the ocean together."
-                </p>
+                  <strong className="text-ocean-midnight">{PAGE.theReelKilifiProject.boldText}</strong>{PAGE.theReelKilifiProject.text}</p>
+                <p>{PAGE.theReelKilifiProject.text2}</p>
+                <p className="text-sm italic text-gray-500 border-l-4 border-ocean-turquoise pl-4 py-2 bg-gray-50 rounded-r-lg">{PAGE.theReelKilifiProject.text3}</p>
               </div>
             </div>
 
@@ -180,16 +160,11 @@ export default function CoralGuardianPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-4">
-              Science Meets Community
-            </p>
-            <h2 className="font-poppins font-bold text-ocean-midnight text-4xl md:text-5xl mb-6">
-              Our Restoration<br />
-              <span className="text-ocean-turquoise">Techniques</span>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-4">{PAGE.restorationTechniques.eyebrow}</p>
+            <h2 className="font-poppins font-bold text-ocean-midnight text-4xl md:text-5xl mb-6">{PAGE.restorationTechniques.heading}<br />
+              <span className="text-ocean-turquoise">{PAGE.restorationTechniques.label}</span>
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Methods adapted and replicable by local communities, ensuring sustainable impact.
-            </p>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">{PAGE.restorationTechniques.text}</p>
           </div>
 
           {/* Coral Restoration Section - Large Feature */}
@@ -209,13 +184,8 @@ export default function CoralGuardianPage() {
                 <div className="lg:col-span-4 p-6 sm:p-10">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="flex-1">
-                      <h3 className="font-poppins font-bold text-ocean-midnight text-3xl mb-3">
-                        Coral Restoration
-                      </h3>
-                      <p className="text-gray-600 text-lg leading-relaxed">
-                        We use methods that are adapted and replicable by local communities. On-site coral
-                        nurseries house fragments of opportunity corals collected in the area.
-                      </p>
+                      <h3 className="font-poppins font-bold text-ocean-midnight text-3xl mb-3">{PAGE.restorationTechniques.subheading}</h3>
+                      <p className="text-gray-600 text-lg leading-relaxed">{PAGE.restorationTechniques.text2}</p>
                     </div>
                   </div>
 
@@ -263,10 +233,8 @@ export default function CoralGuardianPage() {
                           </svg>
                         </div>
                         <div>
-                          <h4 className="font-bold text-emerald-900 text-sm mb-1">Community Training</h4>
-                          <p className="text-xs text-emerald-700 leading-relaxed">
-                            Fishermen trained in coral biology and restoration methods over several months
-                          </p>
+                          <h4 className="font-bold text-emerald-900 text-sm mb-1">{PAGE.restorationTechniques.smallHeading}</h4>
+                          <p className="text-xs text-emerald-700 leading-relaxed">{PAGE.restorationTechniques.text3}</p>
                         </div>
                       </div>
                     </div>
@@ -279,10 +247,8 @@ export default function CoralGuardianPage() {
                           </svg>
                         </div>
                         <div>
-                          <h4 className="font-bold text-blue-900 text-sm mb-1">Protected Zone</h4>
-                          <p className="text-xs text-blue-700 leading-relaxed">
-                            Restoration within the Tengefu law protected area, ensuring sustainability
-                          </p>
+                          <h4 className="font-bold text-blue-900 text-sm mb-1">{PAGE.restorationTechniques.smallHeading2}</h4>
+                          <p className="text-xs text-blue-700 leading-relaxed">{PAGE.restorationTechniques.text4}</p>
                         </div>
                       </div>
                     </div>
@@ -291,9 +257,7 @@ export default function CoralGuardianPage() {
                   {/* Innovation Note */}
                   <div className="mt-4 p-4 bg-gradient-to-r from-ocean-turquoise/5 to-transparent rounded-xl border-l-4 border-ocean-turquoise">
                     <p className="text-sm text-gray-600 italic">
-                      <strong className="text-ocean-midnight not-italic">Innovation in Action:</strong> We're testing
-                      new methods to find the most appropriate and financially sustainable approaches for this unique environment.
-                    </p>
+                      <strong className="text-ocean-midnight not-italic">{PAGE.restorationTechniques.boldText}</strong>{PAGE.restorationTechniques.text5}</p>
                   </div>
                 </div>
               </div>
@@ -314,17 +278,11 @@ export default function CoralGuardianPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-4">
-              Community at the Core
-            </p>
-            <h2 className="font-poppins font-bold text-white text-4xl md:text-5xl mb-6">
-              Involving Local<br />
-              <span className="text-ocean-turquoise">Communities</span>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-4">{PAGE.communityInvolvement.eyebrow}</p>
+            <h2 className="font-poppins font-bold text-white text-4xl md:text-5xl mb-6">{PAGE.communityInvolvement.heading}<br />
+              <span className="text-ocean-turquoise">{PAGE.communityInvolvement.label}</span>
             </h2>
-            <p className="text-white/70 text-lg max-w-3xl mx-auto">
-              The community plays a central role in the adoption and implementation of the project -
-              from training to teaching to shared ownership.
-            </p>
+            <p className="text-white/70 text-lg max-w-3xl mx-auto">{PAGE.communityInvolvement.text}</p>
           </div>
 
           {/* Three Pillars - Horizontal Glass Cards */}
@@ -402,12 +360,8 @@ export default function CoralGuardianPage() {
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <div>
-                  <h3 className="font-poppins font-bold text-white text-xl mb-3">Our Goal</h3>
-                  <p className="text-white/80 leading-relaxed">
-                    To develop a sense of ownership in the local community by fostering peer-to-peer learning
-                    in the context of community citizen science, and by sharing the results of the project
-                    with the immediate and wider community.
-                  </p>
+                  <h3 className="font-poppins font-bold text-white text-xl mb-3">{PAGE.communityInvolvement.subheading}</h3>
+                  <p className="text-white/80 leading-relaxed">{PAGE.communityInvolvement.text2}</p>
                 </div>
               </div>
             </div>
@@ -421,16 +375,11 @@ export default function CoralGuardianPage() {
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-4">
-              Evidence-Based Impact
-            </p>
-            <h2 className="font-poppins font-bold text-ocean-midnight text-4xl md:text-5xl mb-6">
-              Monitoring &<br />
-              <span className="text-ocean-turquoise">Evaluation</span>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-4">{PAGE.monitoringAndEvaluation.eyebrow}</p>
+            <h2 className="font-poppins font-bold text-ocean-midnight text-4xl md:text-5xl mb-6">{PAGE.monitoringAndEvaluation.heading}<br />
+              <span className="text-ocean-turquoise">{PAGE.monitoringAndEvaluation.label}</span>
             </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              We track both ecological and social outcomes to ensure lasting, meaningful impact.
-            </p>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">{PAGE.monitoringAndEvaluation.text}</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -443,9 +392,7 @@ export default function CoralGuardianPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                   </svg>
                 </div>
-                <h3 className="font-poppins font-bold text-ocean-midnight text-2xl">
-                  Biological Monitoring
-                </h3>
+                <h3 className="font-poppins font-bold text-ocean-midnight text-2xl">{PAGE.monitoringAndEvaluation.subheading}</h3>
               </div>
 
               <div className="space-y-4">
@@ -489,9 +436,7 @@ export default function CoralGuardianPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <h3 className="font-poppins font-bold text-ocean-midnight text-2xl">
-                  Social Monitoring
-                </h3>
+                <h3 className="font-poppins font-bold text-ocean-midnight text-2xl">{PAGE.monitoringAndEvaluation.subheading2}</h3>
               </div>
 
               <div className="space-y-4">
@@ -543,12 +488,9 @@ export default function CoralGuardianPage() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-4">
-              The Future
-            </p>
-            <h2 className="font-poppins font-bold text-white text-4xl md:text-5xl mb-6">
-              Looking Ahead:<br />
-              <span className="text-ocean-turquoise">Project Evolution</span>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-4">{PAGE.lookingAhead.eyebrow}</p>
+            <h2 className="font-poppins font-bold text-white text-4xl md:text-5xl mb-6">{PAGE.lookingAhead.heading}<br />
+              <span className="text-ocean-turquoise">{PAGE.lookingAhead.label}</span>
             </h2>
           </div>
 
@@ -561,14 +503,8 @@ export default function CoralGuardianPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-poppins font-bold text-white text-2xl md:text-3xl mb-4 leading-tight">
-                  From Local Success to Regional Model
-                </h3>
-                <p className="text-white/80 text-lg leading-relaxed">
-                  The overall aim of this collaboration is to strengthen and extend the participatory coral reef
-                  restoration models implemented in the Kuruwitu Tengefu Community Protection Area in Kenya, in
-                  order to support local communities.
-                </p>
+                <h3 className="font-poppins font-bold text-white text-2xl md:text-3xl mb-4 leading-tight">{PAGE.lookingAhead.subheading}</h3>
+                <p className="text-white/80 text-lg leading-relaxed">{PAGE.lookingAhead.text}</p>
               </div>
             </div>
 
@@ -577,37 +513,23 @@ export default function CoralGuardianPage() {
                 <h4 className="font-bold text-white text-lg mb-3 flex items-center gap-2">
                   <svg className="w-6 h-6 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
-                  Living Classroom
-                </h4>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  The Kuruwitu area will serve as a living classroom for training new communities,
-                  sharing experiences and best practices across the region.
-                </p>
+                  </svg>{PAGE.lookingAhead.smallHeading}</h4>
+                <p className="text-white/70 text-sm leading-relaxed">{PAGE.lookingAhead.text2}</p>
               </div>
 
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
                 <h4 className="font-bold text-white text-lg mb-3 flex items-center gap-2">
                   <svg className="w-6 h-6 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                  </svg>
-                  Adapted Approach
-                </h4>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  Following a restoration approach adapted to the socio-economic context of local
-                  traditional fishing communities - scalable and sustainable.
-                </p>
+                  </svg>{PAGE.lookingAhead.smallHeading2}</h4>
+                <p className="text-white/70 text-sm leading-relaxed">{PAGE.lookingAhead.text3}</p>
               </div>
             </div>
           </div>
 
           {/* Impact Statement */}
           <div className="text-center">
-            <p className="text-white/60 text-sm italic max-w-3xl mx-auto">
-              "This partnership represents more than coral restoration - it's about empowering communities
-              to become the guardians of their own marine heritage, creating a model that can be replicated
-              across Kenya's coast and beyond."
-            </p>
+            <p className="text-white/60 text-sm italic max-w-3xl mx-auto">{PAGE.lookingAhead.text4}</p>
           </div>
         </div>
       </section>
@@ -619,20 +541,14 @@ export default function CoralGuardianPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-poppins font-bold text-ocean-midnight text-3xl md:text-4xl mb-5 leading-tight">
-                Support Community-Led<br />
-                <span className="text-ocean-turquoise">Coral Restoration</span>
+              <h2 className="font-poppins font-bold text-ocean-midnight text-3xl md:text-4xl mb-5 leading-tight">{PAGE.callToAction.heading}<br />
+                <span className="text-ocean-turquoise">{PAGE.callToAction.label}</span>
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                Your contribution directly funds training, equipment, and long-term monitoring for the
-                REEL Kilifi project - empowering local communities to restore their reefs and secure
-                their livelihoods.
-              </p>
+              <p className="text-gray-600 leading-relaxed mb-8">{PAGE.callToAction.text}</p>
               <Link
-                href="/donate"
+                href={PAGE.callToAction.link}
                 className="inline-flex items-center gap-2 px-7 py-4 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-ocean-midnight transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                Donate to the Project <span>→</span>
+              >{PAGE.callToAction.linkText}<span>→</span>
               </Link>
             </div>
 
@@ -661,19 +577,16 @@ export default function CoralGuardianPage() {
       <section className="bg-ocean-midnight py-12 border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
           <Link
-            href="/about/partners"
+            href={PAGE.navigationFooter.link}
             className="text-white/60 hover:text-white text-sm transition-colors flex items-center gap-2"
           >
-            <span>←</span> Back to All Partners
-          </Link>
+            <span>←</span>{PAGE.navigationFooter.linkText}</Link>
           <p className="text-white/40 text-sm text-center">
-            <span className="font-bold text-white/70">Continue exploring:</span> Discover our other programs
-          </p>
+            <span className="font-bold text-white/70">{PAGE.navigationFooter.label}</span>{PAGE.navigationFooter.text}</p>
           <Link
-            href="/programmes"
+            href={PAGE.navigationFooter.link2}
             className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-ocean-turquoise text-ocean-midnight font-bold text-sm rounded-xl hover:bg-white transition-all duration-200"
-          >
-            View All Programmes <span>→</span>
+          >{PAGE.navigationFooter.linkText2}<span>→</span>
           </Link>
         </div>
       </section>

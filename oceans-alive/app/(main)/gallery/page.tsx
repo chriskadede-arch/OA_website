@@ -11,6 +11,7 @@
  *   • GALLERY_CATEGORIES  →  lib/constants.ts
  *   • LOCAL_PREVIEWS  →  top of this file
  *   • STATIC_GALLERY  →  top of this file
+ * Page text, images and links (editable in Pages CMS)  →  content/pages/gallery.json
  */
 'use client';
 
@@ -20,37 +21,12 @@ import { GALLERY_CATEGORIES } from '@/lib/constants';
 import { GalleryItem } from '@/lib/types';
 import { apiClient } from '@/lib/api-client';
 
-const LOCAL_PREVIEWS = [
-  { src: '/images/divers.jpg', alt: 'Coral restoration divers' },
-  { src: '/images/trashforcash.jpg', alt: 'Trash4Cash programme' },
-  { src: '/images/BMUmeeting.jpg', alt: 'Community BMU meeting' },
-  { src: '/images/oceanday.jpg', alt: 'World Ocean Day celebration' },
-];
+import PAGE from '@/content/pages/gallery.json';
+
+const LOCAL_PREVIEWS = PAGE.LOCAL_PREVIEWS;
 
 // All gallery photos from Display Photos and images folders
-const STATIC_GALLERY: GalleryItem[] = [
-  { id: '1', title: 'Coral Restoration Divers', description: 'Divers working on coral restoration at Kuruwitu', category: 'Coral Restoration', type: 'photo', image_url: '/images/divers.jpg', created_at: '', display_order: 1, is_published: true,  },
-  { id: '2', title: 'Trash4Cash Women', description: 'Women collecting plastic waste', category: 'Community Life', type: 'photo', image_url: '/images/trashforcash.jpg', created_at: '', display_order: 2, is_published: true,  },
-  { id: '3', title: 'Trash4Cash Collection', description: 'Plastic waste collection programme', category: 'Community Life', type: 'photo', image_url: '/images/trashforcash2.jpg', created_at: '', display_order: 3, is_published: true,  },
-  { id: '4', title: 'Trash4Cash Sorting', description: 'Sorting collected plastic waste', category: 'Community Life', type: 'photo', image_url: '/images/trashforcash3.jpg', created_at: '', display_order: 4, is_published: true,  },
-  { id: '5', title: 'BMU Meeting', description: 'Beach Management Unit community meeting', category: 'Community Life', type: 'photo', image_url: '/images/BMUmeeting.jpg', created_at: '', display_order: 5, is_published: true,  },
-  { id: '6', title: 'BMU Network', description: 'Kilifi BMU network gathering', category: 'Community Life', type: 'photo', image_url: '/images/BMUS.jpg', created_at: '', display_order: 6, is_published: true,  },
-  { id: '7', title: 'World Ocean Day', description: 'World Ocean Day celebration', category: 'Community Life', type: 'photo', image_url: '/images/oceanday.jpg', created_at: '', display_order: 7, is_published: true,  },
-  { id: '8', title: 'Fisher at Work', description: 'Local fisher in action', category: 'Community Life', type: 'photo', image_url: '/images/fisher.jpg', created_at: '', display_order: 8, is_published: true,  },
-  { id: '9', title: 'Farming in Action', description: 'Community farming activities', category: 'Community Life', type: 'photo', image_url: '/images/farmernaction.jpg', created_at: '', display_order: 9, is_published: true,  },
-  { id: '10', title: 'Women Learning', description: 'Women education programme', category: 'Community Life', type: 'photo', image_url: '/images/womenlearning.jpg', created_at: '', display_order: 10, is_published: true,  },
-  { id: '11', title: 'Women Education', description: 'Women learning session', category: 'Community Life', type: 'photo', image_url: '/images/womenlearning2.jpg', created_at: '', display_order: 11, is_published: true,  },
-  { id: '12', title: 'Youth Education', description: 'Children learning about ocean conservation', category: 'Community Life', type: 'photo', image_url: '/images/kids.jpg', created_at: '', display_order: 12, is_published: true,  },
-  { id: '13', title: 'Learning Programme', description: 'Ocean education programme', category: 'Community Life', type: 'photo', image_url: '/images/learning.jpg', created_at: '', display_order: 13, is_published: true,  },
-  { id: '14', title: 'Coral Teaching', description: 'Teaching about coral restoration', category: 'Coral Restoration', type: 'photo', image_url: '/images/coralteaching.jpg', created_at: '', display_order: 14, is_published: true,  },
-  { id: '15', title: 'Interns Program', description: 'Interns working on conservation', category: 'Community Life', type: 'photo', image_url: '/images/interns.jpg', created_at: '', display_order: 15, is_published: true,  },
-  { id: '16', title: 'Capacity Assessment', description: 'Community capacity building', category: 'Community Life', type: 'photo', image_url: '/images/Capacityassess.jpg', created_at: '', display_order: 16, is_published: true,  },
-  { id: '17', title: 'Coastal Communities', description: 'Coastal community members', category: 'Community Life', type: 'photo', image_url: '/images/communities.jpg', created_at: '', display_order: 17, is_published: true,  },
-  { id: '18', title: 'Ocean Culture Life', description: 'Ocean culture and community', category: 'Ocean Landscapes', type: 'photo', image_url: '/images/oceanculturelife.jpg', created_at: '', display_order: 18, is_published: true,  },
-  { id: '19', title: 'Ocean Men', description: 'Local fishermen', category: 'Community Life', type: 'photo', image_url: '/images/oceansmen.jpg', created_at: '', display_order: 19, is_published: true,  },
-  { id: '20', title: 'Farmers Group', description: 'Community farmers', category: 'Community Life', type: 'photo', image_url: '/images/farmers.jpg', created_at: '', display_order: 20, is_published: true,  },
-  { id: '21', title: 'Kamakuji CMA', description: 'Kamakuji Conservation Area', category: 'Ocean Landscapes', type: 'photo', image_url: '/images/kamakukijcma.jpg', created_at: '', display_order: 21, is_published: true,  },
-];
+const STATIC_GALLERY: GalleryItem[] = PAGE.STATIC_GALLERY as unknown as GalleryItem[];
 
 export default function Gallery() {
   const [items, setItems] = useState<GalleryItem[]>([]);
@@ -107,16 +83,11 @@ export default function Gallery() {
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 items-center mb-12">
             <div>
               <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-5 flex items-center gap-3">
-                <span className="w-8 h-px bg-ocean-turquoise inline-block" />
-                Kilifi County, Kenya
-              </p>
-              <h1 className="font-poppins font-bold text-white text-5xl md:text-6xl leading-tight mb-4">
-                Visual Stories<br />
-                <span className="text-ocean-turquoise">of Our Work</span>
+                <span className="w-8 h-px bg-ocean-turquoise inline-block" />{PAGE.hero.eyebrow}</p>
+              <h1 className="font-poppins font-bold text-white text-5xl md:text-6xl leading-tight mb-4">{PAGE.hero.title}<br />
+                <span className="text-ocean-turquoise">{PAGE.hero.label}</span>
               </h1>
-              <p className="text-white/65 text-lg max-w-xl leading-relaxed">
-                Explore conservation projects, community life, and the beauty of Kenya's marine ecosystems.
-              </p>
+              <p className="text-white/65 text-lg max-w-xl leading-relaxed">{PAGE.hero.text}</p>
             </div>
           </div>
 
@@ -142,7 +113,7 @@ export default function Gallery() {
           <div className="flex flex-wrap items-center gap-6 mb-10 pb-8 border-b border-gray-100">
             {/* Type */}
             <div className="flex items-center gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mr-1">Type</span>
+              <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mr-1">{PAGE.photoGridLightbox.eyebrow}</span>
               {[
                 { label: 'All', value: null as null },
                 { label: 'Photos', value: 'photo' as const },
@@ -166,7 +137,7 @@ export default function Gallery() {
 
             {/* Category */}
             <div className="flex flex-wrap items-center gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mr-1">Category</span>
+              <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mr-1">{PAGE.photoGridLightbox.eyebrow2}</span>
               <button
                 onClick={() => setSelectedCategory(null)}
                 className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all border ${
@@ -174,9 +145,7 @@ export default function Gallery() {
                     ? 'bg-ocean-turquoise border-ocean-turquoise text-white'
                     : 'border-gray-200 text-gray-600 hover:border-ocean-turquoise/40'
                 }`}
-              >
-                All
-              </button>
+              >{PAGE.photoGridLightbox.buttonText}</button>
               {GALLERY_CATEGORIES.map((cat) => (
                 <button
                   key={cat}
@@ -203,10 +172,10 @@ export default function Gallery() {
           ) : items.length === 0 ? (
             <div className="text-center py-24">
               <div className="relative w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 opacity-30">
-                <Image src="/images/divers.jpg" alt="" fill className="object-cover" />
+                <Image src={PAGE.photoGridLightbox.image} alt="" fill className="object-cover" />
               </div>
-              <h3 className="text-xl font-poppins font-bold text-gray-400 mb-2">No items found</h3>
-              <p className="text-gray-400 text-sm">Try a different filter or check back soon.</p>
+              <h3 className="text-xl font-poppins font-bold text-gray-400 mb-2">{PAGE.photoGridLightbox.subheading}</h3>
+              <p className="text-gray-400 text-sm">{PAGE.photoGridLightbox.text}</p>
             </div>
           ) : (
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -240,9 +209,7 @@ export default function Gallery() {
                   </div>
 
                   {item.type === 'video' && (
-                    <div className="absolute top-3 right-3 bg-white/15 text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">
-                      Video
-                    </div>
+                    <div className="absolute top-3 right-3 bg-white/15 text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">{PAGE.photoGridLightbox.eyebrow3}</div>
                   )}
                 </div>
               ))}

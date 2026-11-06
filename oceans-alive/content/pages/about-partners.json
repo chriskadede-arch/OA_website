@@ -1,0 +1,264 @@
+{
+  "seo": {
+    "title": "Partners & Collaborations - Oceans Alive Foundation",
+    "description": "Partnership, philanthropy and community collaboration - the network of organizations making marine conservation possible in Kilifi County."
+  },
+  "PARTNERS": [
+    {
+      "name": "Kuruwitu Conservation & Welfare CBO",
+      "role": "Central community partner in closure, coral restoration and marine education",
+      "outcome": "Continuing management role in the marine protected area",
+      "category": "community",
+      "current": true
+    },
+    {
+      "name": "Kuruwitu BMU",
+      "role": "Community fisheries governance",
+      "category": "community",
+      "current": true
+    },
+    {
+      "name": "Kanamai BMU",
+      "role": "KAMAMKUKI JCMA partner",
+      "category": "community",
+      "current": true
+    },
+    {
+      "name": "Mtwapa BMU",
+      "role": "KAMAMKUKI JCMA partner",
+      "category": "community",
+      "current": true
+    },
+    {
+      "name": "Marina BMU",
+      "role": "KAMAMKUKI JCMA partner",
+      "category": "community",
+      "current": true
+    },
+    {
+      "name": "Kidongo BMU",
+      "role": "KAMAMKUKI JCMA partner",
+      "category": "community",
+      "current": true
+    },
+    {
+      "name": "Kilifi County BMU Network",
+      "role": "County-level learning, coordination & advocacy",
+      "category": "community",
+      "current": true
+    },
+    {
+      "name": "KAMAMKUKI Joint BMU Committee",
+      "role": "The five BMUs managing the Joint Community Management Area",
+      "outcome": "Community-led management of Kenya's first JCMA",
+      "category": "community",
+      "current": true
+    },
+    {
+      "name": "Kenya Fisheries Service",
+      "role": "National statutory framework partner",
+      "outcome": "Endorsement and rollout of Kenya's first CMA and county BMU network",
+      "category": "government",
+      "logoPath": "/images/partners/kenya-fisheries.png",
+      "current": true
+    },
+    {
+      "name": "County Government of Kilifi",
+      "role": "Co-management and KAMAMKUKI JCMA collaboration",
+      "category": "government",
+      "logoPath": "/images/partners/kilifi-county.jpg",
+      "current": true
+    },
+    {
+      "name": "County Government of Mombasa",
+      "role": "Fisheries governance collaboration",
+      "category": "government",
+      "logoPath": "/images/partners/mombasa-county.jpg",
+      "current": true
+    },
+    {
+      "name": "Blue Ventures Conservation",
+      "role": "Strengthens BMU governance, fisheries monitoring, financial inclusion & peer learning",
+      "outcome": "Strengthened BMU governance and monitoring systems",
+      "category": "funding",
+      "logoPath": "/images/partners/blue-ventures.png",
+      "current": true,
+      "showName": true
+    },
+    {
+      "name": "Oceans 5",
+      "role": "Ocean conservation funder",
+      "category": "funding",
+      "logoPath": "/images/partners/oceans5.jpg",
+      "current": true
+    },
+    {
+      "name": "Coral Guardian",
+      "role": "Coral restoration partner",
+      "category": "funding",
+      "logoPath": "/images/partners/Coral-Guardian-Logo-White (1).png",
+      "current": true
+    },
+    {
+      "name": "BIOPAMA / IUCN",
+      "role": "Biodiversity & protected area funding",
+      "category": "funding",
+      "current": true
+    },
+    {
+      "name": "DEFRA",
+      "role": "UK Government environment funding",
+      "category": "funding",
+      "logoPath": "/images/partners/defra.jpg",
+      "current": true
+    },
+    {
+      "name": "OCEAN Community",
+      "role": "Ocean conservation network",
+      "category": "funding",
+      "logoPath": "/images/partners/ocean-community.png",
+      "current": true,
+      "showName": true,
+      "large": true
+    },
+    {
+      "name": "Canon",
+      "role": "Media & documentation partner",
+      "category": "funding",
+      "logoPath": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Canon_logo.svg",
+      "current": true
+    },
+    {
+      "name": "Saruni Basecamp Foundation",
+      "role": "Community support",
+      "category": "funding",
+      "logoPath": "/images/partners/saruni.png",
+      "current": true
+    },
+    {
+      "name": "Conscious Travel",
+      "role": "Sustainable tourism partner",
+      "category": "funding",
+      "logoPath": "/images/partners/conscious-travel.png",
+      "current": true
+    },
+    {
+      "name": "Seas4Life",
+      "role": "Ocean advocacy",
+      "category": "funding",
+      "logoPath": "/images/partners/seas4life.png",
+      "current": true,
+      "showName": true
+    },
+    {
+      "name": "Ocean Eyes",
+      "role": "Marine conservation",
+      "category": "funding",
+      "logoPath": "/images/partners/ocean-eyes.jpg",
+      "current": true
+    },
+    {
+      "name": "Vipingo Ridge",
+      "role": "Local supporter",
+      "category": "funding",
+      "logoPath": "/images/partners/vipingo-ridge.png",
+      "current": true
+    },
+    {
+      "name": "The Leap",
+      "role": "Community supporter",
+      "category": "funding",
+      "logoPath": "/images/partners/the-leap.svg",
+      "current": true
+    },
+    {
+      "name": "Coral Reef Care",
+      "role": "Shark & ray conservation funder",
+      "category": "funding",
+      "logoPath": "/images/partners/coral-reef-care.jpg",
+      "current": true,
+      "showName": true
+    },
+    {
+      "name": "Pelorus Foundation",
+      "role": "Women's livelihoods & Trash4Cash funder",
+      "category": "funding",
+      "logoPath": "/images/partners/pelorus-foundation.jpg",
+      "current": true
+    },
+    {
+      "name": "KMFRI",
+      "role": "Kenya Marine and Fisheries Research Institute",
+      "category": "technical",
+      "current": true
+    },
+    {
+      "name": "WCS",
+      "role": "Monitoring & communications partner",
+      "category": "technical",
+      "current": true
+    }
+  ],
+  "PRIORITY_PARTNERS": [
+    {
+      "name": "Blue Ventures Conservation",
+      "relationship": "Strengthens BMU governance, fisheries monitoring, financial inclusion and peer learning in the KAMAMKUKI JCMA",
+      "outcome": "Strengthened BMU governance and monitoring systems",
+      "logoPath": "/images/partners/blue-ventures.png",
+      "link": "/partnerships/blue-ventures"
+    },
+    {
+      "name": "Kenya Fisheries Service",
+      "relationship": "National statutory framework for co-management planning, compliance, monitoring and capacity building",
+      "outcome": "Endorsement and rollout of Kenya's first CMA and county BMU network",
+      "logoPath": "/images/partners/kenya-fisheries.png"
+    },
+    {
+      "name": "KAMAMKUKI BMUs",
+      "relationship": "The five community fisheries institutions that manage the Joint Community Management Area",
+      "outcome": "Community-led fisheries management and sustainable coastal development",
+      "logoPath": null
+    },
+    {
+      "name": "Kuruwitu Conservation & Welfare CBO",
+      "relationship": "Central community partner in closure, coral restoration and marine education with deep history and continuing management role",
+      "outcome": "Protected marine area with thriving coral and fish populations",
+      "logoPath": null
+    }
+  ],
+  "hero": {
+    "image": "/images/kamakukujcma.jpg",
+    "imageAlt": "Community Partnership",
+    "eyebrow": "Partnerships & Collaborations",
+    "title": "Together, Making",
+    "label": "Conservation Possible",
+    "text": "Oceans Alive's work relies on partnership, philanthropy and community collaboration. The results and impact presented across this website have been achieved together with the institutions and people below, each of whom contributes to making this work possible."
+  },
+  "priorityPartnersFeaturedStories": {
+    "eyebrow": "Priority Partnerships",
+    "heading": "Deep Relationships, Real Outcomes",
+    "eyebrow2": "Relationship",
+    "eyebrow3": "Outcome",
+    "linkText": "Read the full story "
+  },
+  "allPartnersOrganizedByCategory": {
+    "eyebrow": "Community-Led Action",
+    "heading": "Community & Resource-User Institutions",
+    "text": "Community-led action is central to Oceans Alive's identity",
+    "eyebrow2": "Statutory Framework",
+    "heading2": "Government & Statutory Partners",
+    "eyebrow3": "Funding & Support",
+    "heading3": "Funding Partners & Donors",
+    "text2": "Oceans Alive depends on grant funding and donor support to do this work, and we acknowledge that support openly.",
+    "eyebrow4": "Research & Learning",
+    "heading4": "Technical, Research & Learning Partners"
+  },
+  "becomeAPartner": {
+    "heading": "Work With Us",
+    "text": "We collaborate with NGOs, research institutions, governments, media organizations, and responsible businesses who share our commitment to community-led conservation.",
+    "link": "/contact?type=Partnership",
+    "linkText": "Start a Conversation →",
+    "link2": "/donate",
+    "linkText2": "Support Our Work"
+  }
+}

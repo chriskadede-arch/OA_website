@@ -1,0 +1,152 @@
+{
+  "IMPACT_MAP": {
+    "0": {
+      "what": "Choose your own level of impact",
+      "img": "/images/communities.jpg"
+    },
+    "500": {
+      "what": "Plants 1 coral fragment in Kuruwitu reef",
+      "img": "/images/divers.jpg"
+    },
+    "1000": {
+      "what": "Supports a community fisher for half a day",
+      "img": "/images/fisher.jpg"
+    },
+    "2500": {
+      "what": "Plants 5 coral fragments - the most popular gift",
+      "img": "/images/oceansmen.jpg"
+    },
+    "5000": {
+      "what": "Funds one school ocean education day",
+      "img": "/images/coralteaching.jpg"
+    },
+    "10000": {
+      "what": "Covers one community diver certification",
+      "img": "/images/coralteaching.jpg"
+    },
+    "25000": {
+      "what": "Makes a comprehensive impact across all programs",
+      "img": "/images/communities.jpg"
+    }
+  },
+  "ALLOCATION_BREAKDOWN": [
+    {
+      "text": "Coral restoration & reef monitoring",
+      "percentage": 40,
+      "color": "bg-ocean-turquoise"
+    },
+    {
+      "text": "Community fisheries & BMU support",
+      "percentage": 25,
+      "color": "bg-blue-600"
+    },
+    {
+      "text": "Ocean education & youth programmes",
+      "percentage": 20,
+      "color": "bg-amber-500"
+    },
+    {
+      "text": "Women's livelihoods & food security",
+      "percentage": 15,
+      "color": "bg-purple-600"
+    }
+  ],
+  "hero": {
+    "image": "/images/divers.jpg",
+    "imageAlt": "Ocean conservation in action",
+    "eyebrow": "Support Ocean Conservation",
+    "title": "Every Contribution",
+    "label": "Makes a Difference",
+    "text": "A single contribution that supports coral restoration, community fisheries and ocean education on Kenya's coast."
+  },
+  "donationSteps": {
+    "eyebrow": "Step 1",
+    "heading": "Choose Your Donation Amount",
+    "text": "Support comprehensive ocean conservation on Kenya's coast",
+    "text2": "$100",
+    "eyebrow2": "Starter Impact",
+    "eyebrow3": "Recommended",
+    "text3": "$250",
+    "eyebrow4": "Full Coverage",
+    "text4": "$500",
+    "eyebrow5": "Maximum Impact",
+    "subheading": "How Your Money is Used",
+    "text5": "Allocation percentages to be confirmed with Finance",
+    "eyebrow6": "Your Total Impact",
+    "text6": "$250",
+    "text7": "Supporting",
+    "text8": "4 Key Programs",
+    "label": "Or enter custom amount (USD)",
+    "placeholder": "0.00",
+    "subheading2": "Your Trust Matters",
+    "text9": "💳 Secure Processing",
+    "text10": "Stripe-powered. All major cards, Apple Pay, Google Pay. USD, EUR, GBP, KES accepted.",
+    "text11": "📄 Tax Status",
+    "text12": "Registered Kenya not-for-profit. Tax deductibility varies by jurisdiction.",
+    "text13": "🔒 Data Security",
+    "text14": "SSL encrypted. PCI compliant. Your information never shared with third parties.",
+    "text15": "📊 Accountability",
+    "text16": "Quarterly impact reports. Annual financials available on request.",
+    "buttonText": "Proceed with Donation →",
+    "eyebrow7": "Step 2",
+    "heading2": "Your Information",
+    "text17": "All fields are optional - donate anonymously if you prefer.",
+    "eyebrow8": "Donating",
+    "label2": "Full Name",
+    "placeholder2": "Your name (optional)",
+    "label3": "Email",
+    "placeholder3": "your@email.com (optional)",
+    "label4": "Donation Type",
+    "option": "One-Time Donation",
+    "option2": "Monthly Donation",
+    "label5": "Message ",
+    "label6": "(optional)",
+    "placeholder4": "Tell us why you're supporting Oceans Alive...",
+    "buttonText2": "Back",
+    "imageAlt": "Your impact",
+    "eyebrow9": "Your $",
+    "eyebrow10": " will",
+    "subheading3": "Where Your Money Goes",
+    "eyebrow11": "Step 3",
+    "heading3": "Complete Your Donation",
+    "text18": "Enter your card details below. All payments are securely processed by Stripe.",
+    "boldText": "Secure Payment:",
+    "text19": " Your payment information is encrypted and never stored on our servers. We use Stripe, a PCI-compliant payment processor trusted by millions of businesses worldwide.",
+    "eyebrow12": "Thank You",
+    "heading4": "We've Received Your Request",
+    "subheading4": "Bank Transfer Details",
+    "eyebrow13": "Account Name",
+    "text20": "Oceans Alive Foundation",
+    "eyebrow14": "Bank Name",
+    "text21": "Equity Bank Kenya",
+    "eyebrow15": "Account Number",
+    "text22": "0123456789",
+    "eyebrow16": "Swift Code",
+    "text23": "EQBLKENA",
+    "eyebrow17": "Branch",
+    "text24": "Mombasa Road Branch, Nairobi, Kenya",
+    "eyebrow18": "Important",
+    "text25": "Please include your name and email in the transfer reference so we can send you a receipt and impact updates.",
+    "text26": "Questions about your donation?",
+    "text27": "Contact ",
+    "boldText2": "info@oceansalivekenya.org",
+    "text28": " or",
+    "boldText3": "des@oceansalivekenya.org",
+    "link": "/",
+    "linkText": "Back to Home"
+  },
+  "fAQ": {
+    "eyebrow": "Questions",
+    "heading": "Common Questions",
+    "text": "Your generosity deserves clarity. Here are answers to what donors ask most."
+  },
+  "partnerLogos": {
+    "eyebrow": "Our Conservation Partners",
+    "link": "/partnerships/coral-guardian",
+    "image": "/images/partners/coral-guardian.png",
+    "imageAlt": "Coral Guardian",
+    "link2": "/partnerships/blue-ventures",
+    "image2": "/images/partners/blue-ventures-logo.png",
+    "imageAlt2": "Blue Ventures"
+  }
+}

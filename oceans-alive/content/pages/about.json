@@ -1,0 +1,83 @@
+{
+  "seo": {
+    "title": "About Oceans Alive Foundation",
+    "description": "Twenty years of community-led marine conservation on the Kenyan coast. Our story, mission, team, partners, and recognition."
+  },
+  "CHAPTERS": [
+    {
+      "num": "01",
+      "title": "Our Story",
+      "subtitle": "From 30 hectares to a national blueprint",
+      "body": "How a handful of Kuruwitu fishermen and a founder with a vision created Kenya's first marine sanctuary - and two decades later, a globally recognised conservation model.",
+      "href": "/about/story",
+      "gradient": "from-ocean-midnight to-[#0a3560]",
+      "accent": "ocean-turquoise",
+      "image": "/images/BMUS.jpg",
+      "wide": true
+    },
+    {
+      "num": "02",
+      "title": "Mission & Vision",
+      "subtitle": "Purpose-driven, community-led",
+      "body": "Our core mission, four guiding principles, and the values that drive every programme from reef to policy table.",
+      "href": "/about/mission",
+      "gradient": "from-[#0a4f7a] to-[#0e6b8a]",
+      "accent": "ocean-turquoise",
+      "image": null,
+      "wide": false
+    },
+    {
+      "num": "03",
+      "title": "Recognition",
+      "subtitle": "Global impact, local roots",
+      "body": "UNDP Equator Prize · King Charles III · IUCN World Congress 2025. Every award reflects the communities who earned it.",
+      "href": "/about/recognition",
+      "gradient": "from-[#6b3a00] to-[#9a5500]",
+      "accent": "[#FBB308]",
+      "image": null,
+      "wide": false
+    },
+    {
+      "num": "04",
+      "title": "Our Partners",
+      "subtitle": "Stronger together for the ocean",
+      "body": "Coral Guardian, Canon CENA, UK FCDO, UNDP, IUCN - a global network of organisations aligned around one shared mission.",
+      "href": "/about/partners",
+      "gradient": "from-[#1a6b5a] to-[#0e4a3c]",
+      "accent": "[#6ee7b7]",
+      "image": null,
+      "wide": false
+    },
+    {
+      "num": "05",
+      "title": "Our Team",
+      "subtitle": "The people behind the work",
+      "body": "From reef monitors to policy advocates - meet the core team and 7,000+ community stewards driving daily change in Kilifi County.",
+      "href": "/about/team",
+      "gradient": "from-[#022F4E] to-[#1a4f5a]",
+      "accent": "ocean-turquoise",
+      "image": "/images/communities.jpg",
+      "wide": false
+    }
+  ],
+  "hero": {
+    "label": "ABOUT",
+    "eyebrow": "Kilifi County, Kenya · Est. 2017",
+    "label2": "About",
+    "label3": "Oceans Alive",
+    "text": "Oceans Alive is a marine conservation organisation working along Kenya's coast to restore ocean ecosystems, strengthen local livelihoods and support community-led stewardship of marine resources.",
+    "text2": "For more than three decades, members of our team have worked alongside fishing communities, Beach Management Units, women's groups and local institutions to develop practical solutions that benefit both people and the environment."
+  },
+  "chapterCards": {
+    "eyebrow": "Explore Our Chapters",
+    "label": "Read chapter "
+  },
+  "getInvolved": {
+    "heading": "Ready to make a difference?",
+    "text": "Donate, partner with us, or volunteer in the field at Kuruwitu.",
+    "link": "/donate",
+    "linkText": "Donate Now",
+    "link2": "/contact?type=Partnership",
+    "linkText2": "Partner With Us"
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "FILE_TYPE_COLORS": {
+    "pdf": "bg-red-50 text-red-600 border-red-100",
+    "doc": "bg-blue-50 text-blue-600 border-blue-100",
+    "image": "bg-purple-50 text-purple-600 border-purple-100"
+  },
+  "FEATURED_VIDEOS": [
+    {
+      "id": 1,
+      "title": "Kuruwitu Conservation Story",
+      "description": "How a small fishing village became a global model for community-led ocean conservation.",
+      "thumbnail": "/images/divers.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=example1",
+      "duration": "12:45",
+      "category": "Impact Story"
+    },
+    {
+      "id": 2,
+      "title": "Coral Restoration in Action",
+      "description": "Watch fishers transform into reef gardeners, planting 25,000+ corals across 39 hectares.",
+      "thumbnail": "/images/coralteaching.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=example2",
+      "duration": "8:20",
+      "category": "Field Work"
+    },
+    {
+      "id": 3,
+      "title": "Women Leading Change",
+      "description": "735+ women building climate-smart livelihoods through Trash4Cash and permaculture.",
+      "thumbnail": "/images/trashforcash.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=example3",
+      "duration": "10:15",
+      "category": "Community"
+    }
+  ],
+  "EXTERNAL_ARTICLES": [
+    {
+      "id": 1,
+      "title": "Kenya's Kuruwitu Corals Are Back, Thanks to Local Conservation Drive",
+      "source": "UN News",
+      "thumbnail": "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production+Library/12-07-2022_Kuruwitu_Corals_Ocean.jpg/image1440x560cropped.jpg",
+      "excerpt": "30% coral recovery, 400% fish biomass increase. \"More than 30 community conservation initiatives along the Kenyan coast trace their inspiration back to Kuruwitu.\"",
+      "url": "https://news.un.org/en/story/2022/07/1122482",
+      "date": "July 2022",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "How King Charles III's Visit to Kuruwitu Conservation Unravelled",
+      "source": "The Star Kenya",
+      "thumbnail": "/images/oceansmen.jpg",
+      "excerpt": "King Charles III visits Kuruwitu in November 2023, launches \"King's Coral Village\" structure with 40 coral plugs. Global recognition follows.",
+      "url": "https://www.the-star.co.ke/news/2023-11-07-how-king-charles-iiis-visit-to-kuruwitu-conservation-unravelled",
+      "date": "November 2023",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Kuruwitu Conservation & Welfare Association Partnership",
+      "source": "Blue Ventures",
+      "thumbnail": "/images/fisher.jpg",
+      "excerpt": "KCWA and Oceans Alive partnership with Blue Ventures focuses on strengthening Beach Management Units for improved fisheries management since 2016.",
+      "url": "https://blueventures.org/partner/kuruwitu-conservation-welfare-association/",
+      "date": "2024"
+    },
+    {
+      "id": 4,
+      "title": "Indian Ocean Kenya Coral Restoration Project",
+      "source": "Coral Guardian",
+      "thumbnail": "https://www.coralguardian.org/app/uploads/2024/06/Capture-decran-2024-06-17-a-18.29.01.png",
+      "excerpt": "Collaboration with Oceans Alive Foundation on REEL Kilifi project since 2024. Strengthening participatory coral reef restoration across 12,000-hectare Kuruwitu area.",
+      "url": "https://www.coralguardian.org/en/indian-ocean-kenya/",
+      "date": "January 2024"
+    },
+    {
+      "id": 5,
+      "title": "How Coastal Community is Restoring Degraded Coral and Reviving Economy",
+      "source": "The Star Kenya",
+      "thumbnail": "/images/divers.jpg",
+      "excerpt": "Oceans Alive has planted over 15,000 new corals. Canon sponsorship supports nursery tables and reef infrastructure for thousands more fragments.",
+      "url": "https://www.the-star.co.ke/news/big-read/2026-02-24-how-coastal-community-is-restoring-degraded-coral-and-reviving-economy",
+      "date": "February 2026"
+    },
+    {
+      "id": 6,
+      "title": "New East Africa Initiative Targets Coral Reef Restoration in Kenya",
+      "source": "Oceanographic Magazine",
+      "thumbnail": "/images/coralteaching.jpg",
+      "excerpt": "Coverage of new coral reef restoration initiatives in Kenya, highlighting Kuruwitu's pioneering community-led approach.",
+      "url": "https://oceanographicmagazine.com/news/new-east-africa-initiative-targets-coral-reef-restoration-in-kenya/",
+      "date": "2024"
+    },
+    {
+      "id": 7,
+      "title": "Oceans Alive: A Community-Led Model for Marine Recovery",
+      "source": "The Conscious Travel Foundation",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5ebc29ac30ad40094415c322/4721a6df-60a1-439f-a804-9b92c05d481d/PC070241.jpeg",
+      "excerpt": "In-depth feature on Oceans Alive's community-led conservation model and its impact on marine recovery in Kilifi County.",
+      "url": "https://www.theconscioustravelfoundation.com/stories/introducing-oceans-alive",
+      "date": "2024"
+    },
+    {
+      "id": 9,
+      "title": "Equator Prize Winners 2021: Local Action Solutions",
+      "source": "UNDP",
+      "thumbnail": "/images/IMG_4955.jpg",
+      "excerpt": "Kuruwitu among global winners recognized for innovative nature-based solutions. $10,000 prize and participation in UN General Assembly events.",
+      "url": "https://www.undp.org/blog/equator-prize-winners-2021-deliver-local-action-solutions-we-need-now",
+      "date": "September 2021"
+    },
+    {
+      "id": 10,
+      "title": "Hosting Kenya's First Community-Led Marine Protected Area",
+      "source": "Vipingo Ridge",
+      "thumbnail": "/images/P5310100.jpg",
+      "excerpt": "Feature on Vipingo Ridge hosting Kuruwitu Conservation offices and the historic role of Kenya's first community-led MPA.",
+      "url": "https://www.vipingoridge.com/news/hosting-kenyas-first-community-led-marine-protected-area",
+      "date": "2023"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Knowledge Hub",
+    "title": "Explore Our",
+    "label": "Conservation Library",
+    "text": "Dive into toolkits, videos, and stories from 20+ years of community-led ocean conservation. Learn from our journey, download proven methodologies, and see the impact in action."
+  },
+  "videosTab": {
+    "heading": "See Conservation in Action",
+    "text": "Watch the transformation from coral bleaching to thriving reefs, fishers to guardians, and villages to global models.",
+    "eyebrow": "Featured",
+    "subheading": "Want to Feature Our Work?",
+    "text2": "Media professionals, filmmakers, and researchers: we welcome collaboration. Contact us for high-resolution footage and interviews.",
+    "link": "/contact?type=Partnership",
+    "linkText": "Partner With Us"
+  },
+  "whatOthersSayTab": {
+    "heading": "What Others Say About Us",
+    "text": "Recognition from UNDP, IUCN, and conservation leaders worldwide. Our community-led model is making waves.",
+    "eyebrow": "Featured",
+    "label": "Read Article",
+    "text2": "Read Full Article",
+    "subheading": "Press & Media Inquiries",
+    "text3": "Writing about community conservation? We'd love to support your story.",
+    "link": "/contact?type=Other",
+    "linkText": "Contact Media Team"
+  },
+  "toolkitsAndDownloadsTab": {
+    "heading": "Proven Methodologies",
+    "text": "Download toolkits, case studies, and educational materials used across 20+ years of conservation success.",
+    "placeholder": "Search toolkits, case studies, reports...",
+    "buttonText": "All Resources",
+    "image": "/images/divers.jpg",
+    "subheading": "No resources found",
+    "link": "/contact",
+    "linkText": "Request Materials",
+    "linkText2": "Download"
+  },
+  "contactStrip": {
+    "eyebrow": "Need Help?",
+    "heading": "Can't Find What You Need?",
+    "text": "Request specific resources, submit materials to share with the conservation community, or ask about our methodologies. We're here to help.",
+    "link": "/contact",
+    "linkText": "Get in Touch",
+    "link2": "/blog",
+    "linkText2": "Read Our Stories"
+  }
+}

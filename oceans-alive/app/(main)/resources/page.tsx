@@ -15,6 +15,7 @@
  *   • RESOURCE_CATEGORIES  →  lib/constants.ts
  *   • FEATURED_VIDEOS  →  top of this file
  *   • EXTERNAL_ARTICLES  →  top of this file
+ * Page text, images and links (editable in Pages CMS)  →  content/pages/resources.json
  */
 'use client';
 
@@ -25,129 +26,15 @@ import { RESOURCE_CATEGORIES } from '@/lib/constants';
 import { Resource } from '@/lib/types';
 import { apiClient } from '@/lib/api-client';
 
-const FILE_TYPE_COLORS: Record<string, string> = {
-  pdf: 'bg-red-50 text-red-600 border-red-100',
-  doc: 'bg-blue-50 text-blue-600 border-blue-100',
-  image: 'bg-purple-50 text-purple-600 border-purple-100',
-};
+import PAGE from '@/content/pages/resources.json';
+
+const FILE_TYPE_COLORS: Record<string, string> = PAGE.FILE_TYPE_COLORS as unknown as Record<string, string>;
 
 // FEATURED VIDEOS - Add your YouTube/Vimeo links here
-const FEATURED_VIDEOS = [
-  {
-    id: 1,
-    title: 'Kuruwitu Conservation Story',
-    description: 'How a small fishing village became a global model for community-led ocean conservation.',
-    thumbnail: '/images/divers.jpg',
-    videoUrl: 'https://www.youtube.com/watch?v=example1',
-    duration: '12:45',
-    category: 'Impact Story',
-  },
-  {
-    id: 2,
-    title: 'Coral Restoration in Action',
-    description: 'Watch fishers transform into reef gardeners, planting 25,000+ corals across 39 hectares.',
-    thumbnail: '/images/coralteaching.jpg',
-    videoUrl: 'https://www.youtube.com/watch?v=example2',
-    duration: '8:20',
-    category: 'Field Work',
-  },
-  {
-    id: 3,
-    title: 'Women Leading Change',
-    description: '735+ women building climate-smart livelihoods through Trash4Cash and permaculture.',
-    thumbnail: '/images/trashforcash.jpg',
-    videoUrl: 'https://www.youtube.com/watch?v=example3',
-    duration: '10:15',
-    category: 'Community',
-  },
-];
+const FEATURED_VIDEOS = PAGE.FEATURED_VIDEOS;
 
 // EXTERNAL ARTICLES - What others wrote about Oceans Alive (REAL ARTICLES FOUND WITH REAL IMAGES)
-const EXTERNAL_ARTICLES = [
-  {
-    id: 1,
-    title: 'Kenya\'s Kuruwitu Corals Are Back, Thanks to Local Conservation Drive',
-    source: 'UN News',
-    thumbnail: 'https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production+Library/12-07-2022_Kuruwitu_Corals_Ocean.jpg/image1440x560cropped.jpg',
-    excerpt: '30% coral recovery, 400% fish biomass increase. "More than 30 community conservation initiatives along the Kenyan coast trace their inspiration back to Kuruwitu."',
-    url: 'https://news.un.org/en/story/2022/07/1122482',
-    date: 'July 2022',
-    featured: true,
-  },
-  {
-    id: 2,
-    title: 'How King Charles III\'s Visit to Kuruwitu Conservation Unravelled',
-    source: 'The Star Kenya',
-    thumbnail: '/images/oceansmen.jpg',
-    excerpt: 'King Charles III visits Kuruwitu in November 2023, launches "King\'s Coral Village" structure with 40 coral plugs. Global recognition follows.',
-    url: 'https://www.the-star.co.ke/news/2023-11-07-how-king-charles-iiis-visit-to-kuruwitu-conservation-unravelled',
-    date: 'November 2023',
-    featured: true,
-  },
-  {
-    id: 3,
-    title: 'Kuruwitu Conservation & Welfare Association Partnership',
-    source: 'Blue Ventures',
-    thumbnail: '/images/fisher.jpg',
-    excerpt: 'KCWA and Oceans Alive partnership with Blue Ventures focuses on strengthening Beach Management Units for improved fisheries management since 2016.',
-    url: 'https://blueventures.org/partner/kuruwitu-conservation-welfare-association/',
-    date: '2024',
-  },
-  {
-    id: 4,
-    title: 'Indian Ocean Kenya Coral Restoration Project',
-    source: 'Coral Guardian',
-    thumbnail: 'https://www.coralguardian.org/app/uploads/2024/06/Capture-decran-2024-06-17-a-18.29.01.png',
-    excerpt: 'Collaboration with Oceans Alive Foundation on REEL Kilifi project since 2024. Strengthening participatory coral reef restoration across 12,000-hectare Kuruwitu area.',
-    url: 'https://www.coralguardian.org/en/indian-ocean-kenya/',
-    date: 'January 2024',
-  },
-  {
-    id: 5,
-    title: 'How Coastal Community is Restoring Degraded Coral and Reviving Economy',
-    source: 'The Star Kenya',
-    thumbnail: '/images/divers.jpg',
-    excerpt: 'Oceans Alive has planted over 15,000 new corals. Canon sponsorship supports nursery tables and reef infrastructure for thousands more fragments.',
-    url: 'https://www.the-star.co.ke/news/big-read/2026-02-24-how-coastal-community-is-restoring-degraded-coral-and-reviving-economy',
-    date: 'February 2026',
-  },
-  {
-    id: 6,
-    title: 'New East Africa Initiative Targets Coral Reef Restoration in Kenya',
-    source: 'Oceanographic Magazine',
-    thumbnail: '/images/coralteaching.jpg',
-    excerpt: 'Coverage of new coral reef restoration initiatives in Kenya, highlighting Kuruwitu\'s pioneering community-led approach.',
-    url: 'https://oceanographicmagazine.com/news/new-east-africa-initiative-targets-coral-reef-restoration-in-kenya/',
-    date: '2024',
-  },
-  {
-    id: 7,
-    title: 'Oceans Alive: A Community-Led Model for Marine Recovery',
-    source: 'The Conscious Travel Foundation',
-    thumbnail: 'https://images.squarespace-cdn.com/content/v1/5ebc29ac30ad40094415c322/4721a6df-60a1-439f-a804-9b92c05d481d/PC070241.jpeg',
-    excerpt: 'In-depth feature on Oceans Alive\'s community-led conservation model and its impact on marine recovery in Kilifi County.',
-    url: 'https://www.theconscioustravelfoundation.com/stories/introducing-oceans-alive',
-    date: '2024',
-  },
-  {
-    id: 9,
-    title: 'Equator Prize Winners 2021: Local Action Solutions',
-    source: 'UNDP',
-    thumbnail: '/images/IMG_4955.jpg',
-    excerpt: 'Kuruwitu among global winners recognized for innovative nature-based solutions. $10,000 prize and participation in UN General Assembly events.',
-    url: 'https://www.undp.org/blog/equator-prize-winners-2021-deliver-local-action-solutions-we-need-now',
-    date: 'September 2021',
-  },
-  {
-    id: 10,
-    title: 'Hosting Kenya\'s First Community-Led Marine Protected Area',
-    source: 'Vipingo Ridge',
-    thumbnail: '/images/P5310100.jpg',
-    excerpt: 'Feature on Vipingo Ridge hosting Kuruwitu Conservation offices and the historic role of Kenya\'s first community-led MPA.',
-    url: 'https://www.vipingoridge.com/news/hosting-kenyas-first-community-led-marine-protected-area',
-    date: '2023',
-  },
-];
+const EXTERNAL_ARTICLES = PAGE.EXTERNAL_ARTICLES;
 
 export default function Resources() {
   const [resources, setResources] = useState<Resource[]>([]);
@@ -196,20 +83,14 @@ export default function Resources() {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full mb-8">
               <span className="w-2 h-2 bg-ocean-turquoise rounded-full animate-pulse" />
-              <span className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest">Knowledge Hub</span>
+              <span className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest">{PAGE.hero.eyebrow}</span>
             </div>
 
-            <h1 className="font-poppins font-bold text-white text-6xl md:text-7xl lg:text-8xl leading-tight mb-8">
-              Explore Our
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-ocean-turquoise via-green-400 to-ocean-seafoam">
-                Conservation Library
-              </span>
+            <h1 className="font-poppins font-bold text-white text-6xl md:text-7xl lg:text-8xl leading-tight mb-8">{PAGE.hero.title}<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-ocean-turquoise via-green-400 to-ocean-seafoam">{PAGE.hero.label}</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/70 leading-relaxed mb-12 max-w-3xl mx-auto">
-              Dive into toolkits, videos, and stories from 20+ years of community-led ocean conservation. Learn from our journey, download proven methodologies, and see the impact in action.
-            </p>
+            <p className="text-xl md:text-2xl text-white/70 leading-relaxed mb-12 max-w-3xl mx-auto">{PAGE.hero.text}</p>
 
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
@@ -315,12 +196,8 @@ export default function Resources() {
         <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-poppins font-bold text-ocean-midnight mb-4">
-                See Conservation in Action
-              </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Watch the transformation from coral bleaching to thriving reefs, fishers to guardians, and villages to global models.
-              </p>
+              <h2 className="text-5xl font-poppins font-bold text-ocean-midnight mb-4">{PAGE.videosTab.heading}</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">{PAGE.videosTab.text}</p>
             </div>
 
             {/* Featured Video (Large) */}
@@ -350,9 +227,7 @@ export default function Resources() {
                   </div>
 
                   {/* Category badge */}
-                  <div className="absolute top-6 left-6 px-3 py-1.5 bg-ocean-turquoise/90 backdrop-blur-sm rounded-lg text-white text-xs font-bold uppercase tracking-wider">
-                    Featured
-                  </div>
+                  <div className="absolute top-6 left-6 px-3 py-1.5 bg-ocean-turquoise/90 backdrop-blur-sm rounded-lg text-white text-xs font-bold uppercase tracking-wider">{PAGE.videosTab.eyebrow}</div>
 
                   {/* Content overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-8">
@@ -421,16 +296,12 @@ export default function Resources() {
 
             {/* Call to Action */}
             <div className="mt-16 text-center bg-gradient-to-br from-ocean-midnight to-ocean-turquoise rounded-3xl p-6 sm:p-12">
-              <h3 className="text-3xl font-poppins font-bold text-white mb-4">Want to Feature Our Work?</h3>
-              <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-                Media professionals, filmmakers, and researchers: we welcome collaboration. Contact us for high-resolution footage and interviews.
-              </p>
+              <h3 className="text-3xl font-poppins font-bold text-white mb-4">{PAGE.videosTab.subheading}</h3>
+              <p className="text-white/80 mb-6 max-w-2xl mx-auto">{PAGE.videosTab.text2}</p>
               <Link
-                href="/contact?type=Partnership"
+                href={PAGE.videosTab.link}
                 className="inline-flex items-center gap-2 px-8 py-4 bg-white text-ocean-midnight font-bold rounded-xl hover:shadow-xl transition-all duration-300 hover:scale-105"
-              >
-                Partner With Us
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              >{PAGE.videosTab.linkText}<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </Link>
@@ -446,12 +317,8 @@ export default function Resources() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-poppins font-bold text-ocean-midnight mb-4">
-                What Others Say About Us
-              </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Recognition from UNDP, IUCN, and conservation leaders worldwide. Our community-led model is making waves.
-              </p>
+              <h2 className="text-5xl font-poppins font-bold text-ocean-midnight mb-4">{PAGE.whatOthersSayTab.heading}</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">{PAGE.whatOthersSayTab.text}</p>
             </div>
 
             {/* Featured Articles (Top 2 Large Cards WITH IMAGES) */}
@@ -478,7 +345,7 @@ export default function Resources() {
                   <div className="relative z-10 p-8 min-h-[400px] flex flex-col justify-end">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg border border-white/20">
-                        <span className="text-white text-xs font-bold uppercase tracking-wider">Featured</span>
+                        <span className="text-white text-xs font-bold uppercase tracking-wider">{PAGE.whatOthersSayTab.eyebrow}</span>
                       </div>
                       <span className="text-white/70 text-sm">{article.date}</span>
                     </div>
@@ -494,7 +361,7 @@ export default function Resources() {
                     <div className="flex items-center justify-between pt-4 border-t border-white/20">
                       <span className="text-white/90 font-semibold text-sm">{article.source}</span>
                       <div className="flex items-center gap-2 text-white group-hover:translate-x-2 transition-transform">
-                        <span className="text-sm font-bold">Read Article</span>
+                        <span className="text-sm font-bold">{PAGE.whatOthersSayTab.label}</span>
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
@@ -544,9 +411,7 @@ export default function Resources() {
                       {article.excerpt}
                     </p>
 
-                    <div className="flex items-center gap-2 text-ocean-turquoise text-sm font-bold group-hover:gap-3 transition-all">
-                      Read Full Article
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="flex items-center gap-2 text-ocean-turquoise text-sm font-bold group-hover:gap-3 transition-all">{PAGE.whatOthersSayTab.text2}<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
                     </div>
@@ -562,17 +427,13 @@ export default function Resources() {
                   <svg className="w-8 h-8 text-ocean-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                   </svg>
-                  <h3 className="text-2xl font-poppins font-bold text-ocean-midnight">Press & Media Inquiries</h3>
+                  <h3 className="text-2xl font-poppins font-bold text-ocean-midnight">{PAGE.whatOthersSayTab.subheading}</h3>
                 </div>
-                <p className="text-gray-600 mb-4">
-                  Writing about community conservation? We'd love to support your story.
-                </p>
+                <p className="text-gray-600 mb-4">{PAGE.whatOthersSayTab.text3}</p>
                 <Link
-                  href="/contact?type=Other"
+                  href={PAGE.whatOthersSayTab.link}
                   className="inline-flex items-center gap-2 text-ocean-turquoise font-bold hover:text-ocean-midnight transition-colors"
-                >
-                  Contact Media Team
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                >{PAGE.whatOthersSayTab.linkText}<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </Link>
@@ -589,12 +450,8 @@ export default function Resources() {
         <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-12">
-              <h2 className="text-5xl font-poppins font-bold text-ocean-midnight mb-4">
-                Proven Methodologies
-              </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-                Download toolkits, case studies, and educational materials used across 20+ years of conservation success.
-              </p>
+              <h2 className="text-5xl font-poppins font-bold text-ocean-midnight mb-4">{PAGE.toolkitsAndDownloadsTab.heading}</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">{PAGE.toolkitsAndDownloadsTab.text}</p>
             </div>
 
             {/* Search + Filters */}
@@ -605,7 +462,7 @@ export default function Resources() {
                 </svg>
                 <input
                   type="text"
-                  placeholder="Search toolkits, case studies, reports..."
+                  placeholder={PAGE.toolkitsAndDownloadsTab.placeholder}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-14 pr-5 py-4 rounded-xl border-2 border-gray-200 text-ocean-midnight placeholder:text-gray-400 focus:outline-none focus:border-ocean-turquoise transition-colors text-lg"
@@ -620,9 +477,7 @@ export default function Resources() {
                       ? 'bg-ocean-midnight border-ocean-midnight text-white shadow-lg scale-105'
                       : 'border-gray-200 text-gray-600 hover:border-ocean-midnight/40 hover:scale-105'
                   }`}
-                >
-                  All Resources
-                </button>
+                >{PAGE.toolkitsAndDownloadsTab.buttonText}</button>
                 {RESOURCE_CATEGORIES.map((cat) => (
                   <button
                     key={cat}
@@ -656,18 +511,16 @@ export default function Resources() {
             ) : filtered.length === 0 ? (
               <div className="text-center py-24 bg-white rounded-3xl border-2 border-dashed border-gray-200">
                 <div className="relative w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 opacity-20">
-                  <Image src="/images/divers.jpg" alt="" fill className="object-cover" />
+                  <Image src={PAGE.toolkitsAndDownloadsTab.image} alt="" fill className="object-cover" />
                 </div>
-                <h3 className="text-2xl font-poppins font-bold text-gray-400 mb-3">No resources found</h3>
+                <h3 className="text-2xl font-poppins font-bold text-gray-400 mb-3">{PAGE.toolkitsAndDownloadsTab.subheading}</h3>
                 <p className="text-gray-500 text-lg mb-8 max-w-md mx-auto">
                   {searchQuery ? `No results for "${searchQuery}"` : 'Check back soon or contact us to request specific materials.'}
                 </p>
                 <Link
-                  href="/contact"
+                  href={PAGE.toolkitsAndDownloadsTab.link}
                   className="inline-flex items-center gap-2 px-6 py-3 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-ocean-midnight transition-all duration-300 hover:scale-105"
-                >
-                  Request Materials
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                >{PAGE.toolkitsAndDownloadsTab.linkText}<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </Link>
@@ -725,9 +578,7 @@ export default function Resources() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-ocean-turquoise to-ocean-midnight text-white font-bold rounded-xl hover:shadow-lg transition-all duration-300 text-sm group-hover:scale-105"
-                        >
-                          Download
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        >{PAGE.toolkitsAndDownloadsTab.linkText2}<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                           </svg>
                         </a>
@@ -755,31 +606,23 @@ export default function Resources() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6">
                 <span className="w-2 h-2 bg-ocean-turquoise rounded-full animate-pulse" />
-                <span className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest">Need Help?</span>
+                <span className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest">{PAGE.contactStrip.eyebrow}</span>
               </div>
-              <h2 className="text-4xl font-poppins font-bold text-white mb-4">
-                Can't Find What You Need?
-              </h2>
-              <p className="text-white/70 text-lg leading-relaxed">
-                Request specific resources, submit materials to share with the conservation community, or ask about our methodologies. We're here to help.
-              </p>
+              <h2 className="text-4xl font-poppins font-bold text-white mb-4">{PAGE.contactStrip.heading}</h2>
+              <p className="text-white/70 text-lg leading-relaxed">{PAGE.contactStrip.text}</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 lg:justify-end">
               <Link
-                href="/contact"
+                href={PAGE.contactStrip.link}
                 className="group px-8 py-4 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-white hover:text-ocean-midnight transition-all duration-300 text-center shadow-lg hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2"
-              >
-                Get in Touch
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              >{PAGE.contactStrip.linkText}<svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </Link>
               <Link
-                href="/blog"
+                href={PAGE.contactStrip.link2}
                 className="px-8 py-4 border-2 border-white/30 text-white font-bold rounded-xl hover:border-ocean-turquoise hover:bg-ocean-turquoise/10 transition-all duration-300 text-center hover:scale-105"
-              >
-                Read Our Stories
-              </Link>
+              >{PAGE.contactStrip.linkText2}</Link>
             </div>
           </div>
         </div>

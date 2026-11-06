@@ -1,0 +1,62 @@
+{
+  "seo": {
+    "title": "Fishing Community Empowerment Academy | Oceans Alive Foundation",
+    "description": "Kuruwitu's two decade conservation record turned into a fellowship, training fishing community leaders, women and youth to drive sustainable fisheries management."
+  },
+  "SKILLS": [
+    "Leadership",
+    "Fisheries Management",
+    "Governance",
+    "Financial Management",
+    "Monitoring",
+    "Communication",
+    "Behaviour Change",
+    "Sustainable Livelihoods"
+  ],
+  "hero": {
+    "image": "/images/womenlearning.jpg",
+    "imageAlt": "Fishing Community Empowerment Academy",
+    "eyebrow": "Training Fellowship",
+    "title": "Fishing Community Empowerment Academy",
+    "text": "Transforming fisheries management through community leadership."
+  },
+  "pullQuoteIntro": {
+    "text": "\"Healthy fisheries depend on strong, empowered communities, not short term, externally driven projects.\"",
+    "text2": "The Academy places communities at the centre of decision making, equipping them with the knowledge, practical skills and long term support to manage their own marine resources and build resilient coastal livelihoods."
+  },
+  "skillsGrid": {
+    "eyebrow": "Our Approach",
+    "heading": "Eight Skills, Taught Through Experience",
+    "text": "Community leaders, women, youth and other underrepresented groups train through experiential learning, practical field work and long term mentoring, then return home to share what they have learned."
+  },
+  "livingClassroom": {
+    "image": "/images/communities.jpg",
+    "imageAlt": "Kuruwitu Living Classroom",
+    "eyebrow": "The Living Classroom",
+    "heading": "Twenty Years of Proof, in One Place",
+    "text": "At the heart of the Academy is the Kuruwitu Co-Managed Area, Oceans Alive's internationally recognised Living Classroom, where participants learn directly from more than two decades of successful community-led marine conservation.",
+    "text2": "Here they see how healthy ecosystems, strong governance, sustainable fisheries, women's empowerment, scientific monitoring and sustainable finance work together, then take those lessons home as practical training materials and toolkits that can be adapted by fishing communities across Kenya, the Western Indian Ocean and beyond."
+  },
+  "participantToCustodianJourney": {
+    "eyebrow": "Our Vision",
+    "heading": "From Participant to Custodian",
+    "text": "1",
+    "subheading": "Participant",
+    "text2": "Joins a conservation project led by others, learning by watching and doing.",
+    "text3": "2",
+    "subheading2": "Leader",
+    "text4": "Takes on governance, monitoring and mentoring roles within their own BMU.",
+    "text5": "3",
+    "subheading3": "Custodian",
+    "text6": "Owns and sustains a self-reliant, financially independent Co-Managed Marine Area.",
+    "text7": "By investing in people, leadership and long term capacity, Oceans Alive is helping communities move from being participants in conservation projects to becoming the leaders, innovators and custodians of their own marine resources."
+  },
+  "callToAction": {
+    "heading": "Help Build the Next Generation of Ocean Leaders",
+    "text": "Your support trains community leaders who can strengthen fisheries governance and build self-reliant marine areas across the coast.",
+    "link": "/donate",
+    "linkText": "Support This Project",
+    "link2": "/#projects",
+    "linkText2": "View All Projects"
+  }
+}

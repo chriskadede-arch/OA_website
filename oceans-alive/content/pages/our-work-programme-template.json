@@ -1,0 +1,31 @@
+{
+  "hero": {
+    "link": "/#projects",
+    "linkText": "← Our Work",
+    "eyebrow": "Programme ",
+    "eyebrow2": " of 04"
+  },
+  "introWorkIncludes": {
+    "eyebrow": "Our Work Includes"
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "heading": " in Action",
+    "eyebrow2": "In Development",
+    "text": "Learn more →"
+  },
+  "otherProgrammes": {
+    "eyebrow": "Connected Work",
+    "heading": "Our Other Programmes",
+    "eyebrow2": "Programme ",
+    "text": "Learn more →"
+  },
+  "callToAction": {
+    "subheading": "Support This Programme",
+    "text": "Your donation directly funds conservation work on Kenya's coast.",
+    "link": "/donate",
+    "linkText": "Donate Now",
+    "link2": "/#projects",
+    "linkText2": "Explore All Projects"
+  }
+}

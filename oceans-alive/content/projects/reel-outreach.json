@@ -1,0 +1,86 @@
+{
+  "seo": {
+    "title": "REEL School Outreach Program | Oceans Alive Foundation",
+    "description": "An 18 month coral reef education journey across 50 schools: five original films, an art competition, and a reward trip to Kuruwitu for the learners who understood corals best."
+  },
+  "JOURNEY": [
+    {
+      "step": "01",
+      "title": "Building the Toolkit",
+      "body": "Coral posters and leaflets were designed for classrooms, and a pre-programme questionnaire was drawn up to measure what learners already knew about coral reefs before a single lesson began."
+    },
+    {
+      "step": "02",
+      "title": "Five Films, One Story",
+      "body": "A set of five original educational films walked learners through what coral actually is, why it matters, the threats it faces, what they personally can do to protect it, and how coral restoration works."
+    },
+    {
+      "step": "03",
+      "title": "Beyond the Screen",
+      "body": "Guided discussions, quizzes and hands on demonstrations turned each film into a full session, giving learners space to question, debate and practise what they had just seen."
+    },
+    {
+      "step": "04",
+      "title": "The Bahari Hai Walk Ins",
+      "body": "978 additional walk in learners visited the Bahari Hai Education Centre, where they were introduced to permaculture, trash for cash beach clean ups, and a real, living coral demonstration hub."
+    },
+    {
+      "step": "05",
+      "title": "Art as Evidence",
+      "body": "An end of programme art competition asked learners to express what they had learned about coral reefs and ocean conservation in their own creative work, turning comprehension into something visible."
+    },
+    {
+      "step": "06",
+      "title": "A Boat Ride to Kuruwitu",
+      "body": "The ten schools with the strongest results earned a trip to Kuruwitu marine sanctuary, where learners boarded a boat to see, for the first time, the coral reefs they had spent months learning to protect."
+    }
+  ],
+  "FUNDER": {
+    "name": "Coral Guardian",
+    "logo": "/images/partners/coral-guardian.png"
+  },
+  "hero": {
+    "image": "/images/coralteaching.jpg",
+    "imageAlt": "REEL School Outreach Program",
+    "eyebrow": "Feb 2025 to Jul 2026",
+    "title": "REEL School Outreach Program",
+    "text": "Restoring Ecosystems and Enhancing Livelihoods: an 18 month coral reef education programme delivered with Coral Guardian across 50 schools on the Kenyan coast.",
+    "eyebrow2": "With the Ministry of Education, the Teachers Service Commission, 50 head teachers and their school environmental clubs",
+    "text2": "2,501",
+    "eyebrow3": "Learners in Films",
+    "text3": "978",
+    "eyebrow4": "BHEC Walk Ins",
+    "text4": "98%",
+    "eyebrow5": "Knowledge Gain",
+    "eyebrow6": "Partner"
+  },
+  "targetVsReality": {
+    "eyebrow": "The Target",
+    "text": "50 schools, 2,500 learners",
+    "eyebrow2": "What Actually Happened",
+    "text2": "2,501 learners through 5 films, plus 978 walk ins at Bahari Hai"
+  },
+  "journeyTimeline": {
+    "eyebrow": "How the Programme Ran",
+    "heading": "From Coral Posters to a Boat Ride at Kuruwitu"
+  },
+  "results": {
+    "eyebrow": "What Changed",
+    "heading": "Understanding That Held, Twelve Months Later",
+    "text": "98%",
+    "text2": "Increase in knowledge gain measured immediately after the educational film sessions, comparing pre and post programme questionnaires.",
+    "text3": "65%",
+    "text4": "Knowledge retention recorded in a validation survey conducted a full 12 months later, attributed to the visual impact of the films.",
+    "text5": "10",
+    "text6": "Top performing schools rewarded with a boat trip to Kuruwitu marine sanctuary to see coral reefs firsthand.",
+    "text7": "Many learners committed to becoming ocean stewards: avoiding litter on beaches, refusing to step on corals, and teaching others what they had learned. Some now say they want to become marine scientists or divers."
+  },
+  "callToAction": {
+    "heading": "Help Us Reach the Next 50 Schools",
+    "text": "Your support funds the films, materials and field trips that turn coral science into something a child can see, touch and protect.",
+    "link": "/donate",
+    "linkText": "Support This Project",
+    "link2": "/#projects",
+    "linkText2": "View All Projects"
+  }
+}

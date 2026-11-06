@@ -1,0 +1,96 @@
+{
+  "seo": {
+    "title": "Ocean Community Grant: OCG2/1012 | Oceans Alive Foundation",
+    "description": "Enhancing livelihoods through locally developed approaches to reduce illegal fishing practices across five coastal communities in Kenya."
+  },
+  "PARTNERS": [
+    {
+      "name": "UK International Development",
+      "logo": "/images/partners/uk-international-development.png",
+      "box": "w-44 h-16"
+    },
+    {
+      "name": "Ocean Community Empowerment and Nature (OCEAN) Grantee",
+      "logo": "/images/partners/ocean-grantee-symbol.png",
+      "box": "w-28 h-28",
+      "zoom": true
+    }
+  ],
+  "APPROACH": [
+    "Locally developed action to reduce illegal fishing gear and practices.",
+    "Peer learning that strengthens skills and community ownership.",
+    "More inclusive, diversified livelihood opportunities.",
+    "A model with potential for local, national, and regional replication."
+  ],
+  "REACH": [
+    {
+      "value": "25",
+      "label": "Peer trainers, with 40% women"
+    },
+    {
+      "value": "200",
+      "label": "Community members to receive peer training"
+    },
+    {
+      "value": "50",
+      "label": "People taking part in livelihood training"
+    },
+    {
+      "value": "80% / 20%",
+      "label": "Youth and people living with disabilities among livelihood trainees"
+    }
+  ],
+  "hero": {
+    "image": "/images/kamakukijcma.jpg",
+    "imageAlt": "Coastal community in the KAMAMKUKI Joint Co-Management Area",
+    "eyebrow": "Ocean Community Grant · OCG2/1012",
+    "title": "A Fairer Catch.",
+    "label": "A Stronger Coast.",
+    "text": "Enhancing livelihoods through locally developed approaches to reduce illegal fishing practices. Across five Beach Management Units in the KAMAMKUKI Joint Co-Management Area, communities are shaping solutions that protect the sea and create more inclusive ways to earn a living.",
+    "text2": "695",
+    "eyebrow2": "IPLC Beneficiaries",
+    "text3": "31%",
+    "eyebrow3": "Women",
+    "text4": "4,164",
+    "eyebrow4": "People Reached",
+    "eyebrow5": "Funded by",
+    "eyebrow6": "Funded by"
+  },
+  "impactBand": {
+    "eyebrow": "Where",
+    "text": "KAMAMKUKI Joint Co-Management Area",
+    "eyebrow2": "Who",
+    "text2": "Five Beach Management Units",
+    "eyebrow3": "Habitat",
+    "text3": "25 km² of nearshore waters",
+    "text4": "When communities thrive, the ocean has room to recover."
+  },
+  "theChallenge": {
+    "eyebrow": "The Challenge",
+    "heading": "Healthy Waters. Secure Livelihoods.",
+    "text": "Illegal fishing is putting pressure on fish stocks, marine habitats, and the families who depend on the sea. Gear exchange efforts can fall short when communities do not shape and own the solutions. In KAMAMKUKI, five fishing communities are working together to co-manage 25 km² of nearshore habitat, where dragnetting remains a challenge.",
+    "text2": "This project puts local leadership at the centre: reducing harmful gear and practices while building skills and opening up diversified income opportunities for fishers, women, youth, and people with disabilities.",
+    "image": "/images/fisher.jpg",
+    "imageAlt": "A fisher on the Kenyan coast carrying his nets"
+  },
+  "designedToInclude": {
+    "eyebrow": "Designed to Include",
+    "heading": "Opportunity Should Reach Everyone",
+    "image": "/images/womenlearning2.jpg",
+    "imageAlt": "Community members at a training session",
+    "text": "Half of the 200 community members to be trained are women. The project's 695 direct IPLC beneficiaries and their households, an estimated 4,164 people, are projected to benefit from healthier ecosystems and stronger fisheries."
+  },
+  "theBiggerPicture": {
+    "eyebrow": "The Bigger Picture",
+    "heading": "A Better Future for People and the Sea",
+    "text": "By supporting community-owned solutions, the initiative aims to restore habitats, improve fish stocks, strengthen incomes, and inspire approaches that can travel beyond the coast."
+  },
+  "callToAction": {
+    "heading": "Support Community-Led Change",
+    "text": "Your support helps fishing communities replace harmful practices with livelihoods that last.",
+    "link": "/donate",
+    "linkText": "Support This Project",
+    "link2": "/#projects",
+    "linkText2": "View All Projects"
+  }
+}

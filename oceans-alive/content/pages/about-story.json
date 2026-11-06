@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "title": "Our Story - Oceans Alive Foundation",
+    "description": "From a 30-hectare community sanctuary in 2003 to a nationally recognised co-management model - the story of Oceans Alive Foundation."
+  },
+  "hero": {
+    "image": "/images/BMUS.jpg",
+    "imageAlt": "Kuruwitu community - Oceans Alive Foundation",
+    "eyebrow": "Our Story",
+    "title": "Our",
+    "label": "Story",
+    "text": "From 30 hectares of protected reef to a national model of community-led ocean governance. A story that begins with and still belongs to the fishers who started it."
+  },
+  "originStory": {
+    "eyebrow": "The Beginning",
+    "text": "What began as a small community conservation area in Kuruwitu has grown into one of Kenya's best-known examples of community-led marine stewardship.",
+    "text2": "From 30 hectares of protected reef, the model has expanded along the coast, demonstrating that when communities are given the tools and authority to manage their marine resources, conservation can strengthen livelihoods, restore ecosystems and shape policy.",
+    "text3": "Today, Oceans Alive continues to build on those foundations, working with communities, government and partners to create healthier oceans and more resilient coastal communities.",
+    "image": "/images/divers.jpg",
+    "imageAlt": "Coral restoration divers at Kuruwitu",
+    "eyebrow2": "Reef Restoration Divers · Since 2019",
+    "image2": "/images/oceanday.jpg",
+    "imageAlt2": "World Ocean Day celebration",
+    "eyebrow3": "World Ocean Day",
+    "image3": "/images/communities.jpg",
+    "imageAlt3": "Community members at Kuruwitu",
+    "eyebrow4": "Kuruwitu Community"
+  },
+  "storyContentAndTimeline": {
+    "image": "/images/coral-reef.jpg",
+    "imageAlt": "Coral reef with fish at Kuruwitu",
+    "eyebrow": "Our Journey",
+    "heading": "Reimagining Marine Conservation through community leadership on Kenya's Coast",
+    "text": "In the late 1990s, coral bleaching devastated Kenya's reefs and fish stocks collapsed. In response, Kuruwitu's residents and fishing community united to build a partnership which formed the Kuruwitu Conservation and Welfare Association in 2003 (now the Kuruwitu Conservation and Welfare CBO). In 2006 Kuruwitu-CBO established one of Kenya's earliest community-driven Locally Managed Marine Areas; a 30-hectare no-take sanctuary governed under traditional law, known as a tengefu. The success at Kuruwitu has been founded on collective action and partnerships driven by the common good.",
+    "text2": "Oceans Alive and the Kuruwitu-CBO work as distinct partners in a shared mission. The Kuruwitu-CBO manages the sanctuary and local community welfare, while Oceans Alive provides technical, scientific, and institutional support to help scale these locally led successes.",
+    "text3": "Over roughly 15 years of community management, the sanctuary delivered measurable recovery and recorded a 400% increase in fish biomass, 30% reef recovery and 17% seagrass regrowth (WCS monitoring data). A 135% improvement in catch in surrounding waters was recorded and noted as the spill-over effect, proving the importance of a working, community-owned model.",
+    "text4": "In 2016, Oceans Alive was established as a separate organisation to help document and share the lessons of this community-led model. Working with the Kuruwitu BMU, the KCW-CBO, government agencies and technical partners, Oceans Alive has supported the development of the 120 km² Kuruwitu Co-Management Area and the growth of the Kilifi County BMU Network of 17 BMUs, as a facilitator and technical partner.",
+    "image2": "/images/coralteaching.jpg",
+    "imageAlt2": "Coral restoration education and training"
+  },
+  "nextChapter": {
+    "label": "Continue reading:",
+    "text": " Learn about the mission and values that guide every programme.",
+    "link": "/about/mission",
+    "linkText": "Mission & Vision "
+  }
+}

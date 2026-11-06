@@ -6,9 +6,12 @@
  * Sections, top to bottom (search this file for "SECTION <n>"):
  *   1. Hero
  *   2. Newsletter signup + ways to get involved
+ * Page text, images and links (editable in Pages CMS)  →  content/pages/get-involved.json
  */
 import Link from 'next/link';
 import NewsletterForm from '@/components/common/NewsletterForm';
+
+import PAGE from '@/content/pages/get-involved.json';
 
 export default function GetInvolvedPage() {
   return (
@@ -18,12 +21,8 @@ export default function GetInvolvedPage() {
           ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight pt-36 pb-20 md:pt-40">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-poppins font-bold text-white mb-4">
-            Get Involved
-          </h1>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Join us in protecting Kenya's marine ecosystems and empowering coastal communities
-          </p>
+          <h1 className="text-4xl md:text-5xl font-poppins font-bold text-white mb-4">{PAGE.hero.title}</h1>
+          <p className="text-lg text-white/70 max-w-2xl mx-auto">{PAGE.hero.text}</p>
         </div>
       </section>
 
@@ -49,53 +48,41 @@ export default function GetInvolvedPage() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-ocean-turquoise opacity-75" />
                   <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-ocean-turquoise" />
                 </span>
-                <span className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em]">Stay Connected</span>
+                <span className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em]">{PAGE.newsletterSignupWaysToGetInvolved.eyebrow}</span>
               </div>
 
               <h2 className="font-poppins font-bold leading-tight mb-4">
-                <span className="block text-4xl md:text-5xl text-white">Join the Mission.</span>
-                <span className="block text-4xl md:text-5xl text-ocean-turquoise">Protect the Sea.</span>
+                <span className="block text-4xl md:text-5xl text-white">{PAGE.newsletterSignupWaysToGetInvolved.label}</span>
+                <span className="block text-4xl md:text-5xl text-ocean-turquoise">{PAGE.newsletterSignupWaysToGetInvolved.label2}</span>
               </h2>
 
-              <p className="text-white/55 leading-relaxed mb-6 max-w-md">
-                Quarterly updates from the field - conservation progress, stories from Kilifi's coast, and real ways to support the work.
-              </p>
+              <p className="text-white/55 leading-relaxed mb-6 max-w-md">{PAGE.newsletterSignupWaysToGetInvolved.text}</p>
 
               <div className="relative bg-white/[0.04] border border-white/[0.08] rounded-xl p-6">
                 <NewsletterForm variant="footer" />
-                <p className="text-xs text-white/20 text-center mt-4">
-                  Quarterly · No spam · Unsubscribe anytime
-                </p>
+                <p className="text-xs text-white/20 text-center mt-4">{PAGE.newsletterSignupWaysToGetInvolved.text2}</p>
               </div>
             </div>
 
             {/* Right - CTA Actions */}
             <div className="relative">
               <div className="bg-white/[0.06] border border-white/[0.10] rounded-2xl p-8">
-                <h3 className="text-3xl font-poppins font-bold text-white mb-3">
-                  Ready to Make an Impact?
-                </h3>
-                <p className="text-white/50 mb-6">Choose how you'd like to get involved</p>
+                <h3 className="text-3xl font-poppins font-bold text-white mb-3">{PAGE.newsletterSignupWaysToGetInvolved.subheading}</h3>
+                <p className="text-white/50 mb-6">{PAGE.newsletterSignupWaysToGetInvolved.text3}</p>
 
                 <div className="space-y-3">
                   <Link
-                    href="/donate"
+                    href={PAGE.newsletterSignupWaysToGetInvolved.link}
                     className="block w-full px-6 py-4 bg-ocean-turquoise text-white font-bold rounded-xl hover:bg-white hover:text-ocean-midnight transition-all duration-200 text-center"
-                  >
-                    Donate to the Cause
-                  </Link>
+                  >{PAGE.newsletterSignupWaysToGetInvolved.linkText}</Link>
                   <Link
-                    href="/contact?type=Volunteer"
+                    href={PAGE.newsletterSignupWaysToGetInvolved.link2}
                     className="block w-full px-6 py-4 border-2 border-white/20 text-white font-semibold rounded-xl hover:border-ocean-turquoise hover:bg-ocean-turquoise/10 transition-all duration-200 text-center"
-                  >
-                    Volunteer With Us
-                  </Link>
+                  >{PAGE.newsletterSignupWaysToGetInvolved.linkText2}</Link>
                   <Link
-                    href="/contact?type=Partnership"
+                    href={PAGE.newsletterSignupWaysToGetInvolved.link3}
                     className="block w-full px-6 py-4 border-2 border-white/20 text-white font-semibold rounded-xl hover:border-ocean-turquoise hover:bg-ocean-turquoise/10 transition-all duration-200 text-center"
-                  >
-                    Partner With Us
-                  </Link>
+                  >{PAGE.newsletterSignupWaysToGetInvolved.linkText3}</Link>
                 </div>
 
                 {/* Topic pills */}

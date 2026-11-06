@@ -12,74 +12,16 @@
  * Where the text/data lives:
  *   • IMPACT_STATS  →  lib/constants.ts
  *   • CHAPTERS  →  top of this file
+ * Page text, images and links (editable in Pages CMS)  →  content/pages/about.json
  */
 import Link from 'next/link';
 import Image from 'next/image';
 import { IMPACT_STATS } from '@/lib/constants';
+import PAGE from '@/content/pages/about.json';
 
-export const metadata = {
-  title: 'About Oceans Alive Foundation',
-  description:
-    'Twenty years of community-led marine conservation on the Kenyan coast. Our story, mission, team, partners, and recognition.',
-};
+export const metadata = PAGE.seo;
 
-const CHAPTERS = [
-  {
-    num: '01',
-    title: 'Our Story',
-    subtitle: 'From 30 hectares to a national blueprint',
-    body: 'How a handful of Kuruwitu fishermen and a founder with a vision created Kenya\'s first marine sanctuary - and two decades later, a globally recognised conservation model.',
-    href: '/about/story',
-    gradient: 'from-ocean-midnight to-[#0a3560]',
-    accent: 'ocean-turquoise',
-    image: '/images/BMUS.jpg',
-    wide: true,
-  },
-  {
-    num: '02',
-    title: 'Mission & Vision',
-    subtitle: 'Purpose-driven, community-led',
-    body: 'Our core mission, four guiding principles, and the values that drive every programme from reef to policy table.',
-    href: '/about/mission',
-    gradient: 'from-[#0a4f7a] to-[#0e6b8a]',
-    accent: 'ocean-turquoise',
-    image: null,
-    wide: false,
-  },
-  {
-    num: '03',
-    title: 'Recognition',
-    subtitle: 'Global impact, local roots',
-    body: 'UNDP Equator Prize · King Charles III · IUCN World Congress 2025. Every award reflects the communities who earned it.',
-    href: '/about/recognition',
-    gradient: 'from-[#6b3a00] to-[#9a5500]',
-    accent: '[#FBB308]',
-    image: null,
-    wide: false,
-  },
-  {
-    num: '04',
-    title: 'Our Partners',
-    subtitle: 'Stronger together for the ocean',
-    body: 'Coral Guardian, Canon CENA, UK FCDO, UNDP, IUCN - a global network of organisations aligned around one shared mission.',
-    href: '/about/partners',
-    gradient: 'from-[#1a6b5a] to-[#0e4a3c]',
-    accent: '[#6ee7b7]',
-    image: null,
-    wide: false,
-  },
-  {
-    num: '05',
-    title: 'Our Team',
-    subtitle: 'The people behind the work',
-    body: 'From reef monitors to policy advocates - meet the core team and 7,000+ community stewards driving daily change in Kilifi County.',
-    href: '/about/team',
-    gradient: 'from-[#022F4E] to-[#1a4f5a]',
-    accent: 'ocean-turquoise',
-    image: '/images/communities.jpg',
-    wide: false,
-  },
-];
+const CHAPTERS = PAGE.CHAPTERS;
 
 const QUICK_STATS = IMPACT_STATS.slice(0, 4);
 
@@ -100,26 +42,18 @@ export default function AboutHub() {
         />
         {/* Ghost "ABOUT" watermark */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
-          <span className="text-[18vw] font-poppins font-bold text-white/[0.03] leading-none tracking-tight whitespace-nowrap">
-            ABOUT
-          </span>
+          <span className="text-[18vw] font-poppins font-bold text-white/[0.03] leading-none tracking-tight whitespace-nowrap">{PAGE.hero.label}</span>
         </div>
 
         <div className="relative max-w-6xl mx-auto px-6">
           <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-6 flex items-center gap-3">
-            <span className="w-8 h-px bg-ocean-turquoise/50 inline-block" />
-            Kilifi County, Kenya · Est. 2017
-          </p>
+            <span className="w-8 h-px bg-ocean-turquoise/50 inline-block" />{PAGE.hero.eyebrow}</p>
           <h1 className="font-poppins font-bold text-white leading-[0.9] mb-8">
-            <span className="block text-6xl md:text-8xl">About</span>
-            <span className="block text-6xl md:text-8xl text-ocean-turquoise">Oceans Alive</span>
+            <span className="block text-6xl md:text-8xl">{PAGE.hero.label2}</span>
+            <span className="block text-6xl md:text-8xl text-ocean-turquoise">{PAGE.hero.label3}</span>
           </h1>
-          <p className="text-white/55 text-xl max-w-2xl leading-relaxed">
-            Oceans Alive is a marine conservation organisation working along Kenya's coast to restore ocean ecosystems, strengthen local livelihoods and support community-led stewardship of marine resources.
-          </p>
-          <p className="text-white/45 text-lg max-w-2xl leading-relaxed mt-4">
-            For more than three decades, members of our team have worked alongside fishing communities, Beach Management Units, women's groups and local institutions to develop practical solutions that benefit both people and the environment.
-          </p>
+          <p className="text-white/55 text-xl max-w-2xl leading-relaxed">{PAGE.hero.text}</p>
+          <p className="text-white/45 text-lg max-w-2xl leading-relaxed mt-4">{PAGE.hero.text2}</p>
         </div>
       </section>
 
@@ -129,9 +63,7 @@ export default function AboutHub() {
       <section className="bg-gray-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-[0.25em] mb-10 flex items-center gap-3">
-            <span className="w-6 h-px bg-ocean-turquoise/50 inline-block" />
-            Explore Our Chapters
-          </p>
+            <span className="w-6 h-px bg-ocean-turquoise/50 inline-block" />{PAGE.chapterCards.eyebrow}</p>
 
           {/* Grid: 3 cols on lg. Row 1: [card 1 × 2] [card 2]. Row 2: [card 3] [card 4] [card 5]. */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -176,8 +108,7 @@ export default function AboutHub() {
                   <p className="text-white/55 text-sm leading-relaxed mb-6 max-w-md">
                     {ch.body}
                   </p>
-                  <span className="inline-flex items-center gap-2 text-xs font-bold text-white/40 group-hover:text-white group-hover:gap-4 transition-all duration-300">
-                    Read chapter <span className="text-base">→</span>
+                  <span className="inline-flex items-center gap-2 text-xs font-bold text-white/40 group-hover:text-white group-hover:gap-4 transition-all duration-300">{PAGE.chapterCards.label}<span className="text-base">→</span>
                   </span>
                 </div>
               </Link>
@@ -210,26 +141,18 @@ export default function AboutHub() {
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <h2 className="text-3xl font-poppins font-bold text-ocean-midnight mb-2">
-              Ready to make a difference?
-            </h2>
-            <p className="text-gray-500">
-              Donate, partner with us, or volunteer in the field at Kuruwitu.
-            </p>
+            <h2 className="text-3xl font-poppins font-bold text-ocean-midnight mb-2">{PAGE.getInvolved.heading}</h2>
+            <p className="text-gray-500">{PAGE.getInvolved.text}</p>
           </div>
           <div className="flex gap-4 shrink-0">
             <Link
-              href="/donate"
+              href={PAGE.getInvolved.link}
               className="px-6 py-3 bg-ocean-turquoise text-ocean-midnight font-bold rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition-all text-sm"
-            >
-              Donate Now
-            </Link>
+            >{PAGE.getInvolved.linkText}</Link>
             <Link
-              href="/contact?type=Partnership"
+              href={PAGE.getInvolved.link2}
               className="px-6 py-3 border border-ocean-midnight text-ocean-midnight font-bold rounded-xl hover:bg-ocean-midnight hover:text-white transition-all text-sm"
-            >
-              Partner With Us
-            </Link>
+            >{PAGE.getInvolved.linkText2}</Link>
           </div>
         </div>
       </section>

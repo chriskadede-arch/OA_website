@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "imageAlt": "Ocean conservation work",
+    "imageAlt2": "Divers and ocean conservation",
+    "imageAlt3": "Ocean conservation in Kenya",
+    "title": "Oceans Alive",
+    "heading": "Healthy Oceans, Healthy Communities",
+    "text": "Oceans Alive works with coastal communities, Beach Management Units, government agencies and conservation partners to strengthen fisheries co-management, restore marine ecosystems and build resilient coastal livelihoods in Kenya. Drawing on more than two decades of learning from Kuruwitu, we connect local knowledge, practical conservation, science and policy to support locally led marine stewardship.",
+    "link": "/about/story",
+    "linkText": "Learn Our Story",
+    "link2": "/donate",
+    "linkText2": "Support Our Work"
+  },
+  "impactStats": {
+    "eyebrow": "Our Story",
+    "heading": "Two Decades of Impact",
+    "label": "20+ years of community-led conservation",
+    "text": " at Kuruwitu: Oceans Alive was founded in ",
+    "label2": "2016",
+    "text2": " to scale and support the community-led approach started by the ",
+    "label3": "Kuruwitu-CBO in 2003",
+    "text3": "We work through community institutions and formal co-management structures, in collaboration with government, technical partners and donors. Oceans Alive's role is to facilitate, strengthen capacity, provide technical advice, monitor, mobilise funding, support learning and document lessons  -  so that coastal communities remain the primary stewards of their marine resources.",
+    "eyebrow2": "Recognised by"
+  },
+  "ourProjectsCarousel": {
+    "eyebrow": "Our Work",
+    "heading": "All Projects"
+  }
+}
