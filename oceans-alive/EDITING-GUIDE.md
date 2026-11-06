@@ -2,6 +2,11 @@
 
 A map of where everything lives, so you can find and change any part of the site quickly.
 
+> **Text, photos and blog posts are now edited without code**, in the Pages CMS dashboard
+> (https://app.pagescms.org, or `/admin` on the live site). Every save is published to GoDaddy
+> automatically by `.github/workflows/deploy-godaddy.yml`. This guide is for **developers**
+> changing layout, design or adding new pages.
+
 ---
 
 ## 1. How to find things (three search words)
@@ -12,7 +17,8 @@ Every file has a labelled header at the top, and every part of a page has a bann
 |---|---|---|
 | `PAGE:` | The top of every page file, with its web address and a numbered list of its sections | `PAGE: About › Our Team` |
 | `SECTION` | The banner above each part of a page (hero, stats, call to action…) | `SECTION 2 · Team grid` |
-| `DATA:` | Each group of text/numbers in `lib/constants.ts` | `DATA: Team  → used on /about/team` |
+| `DATA:` | Each group of data re-exported by `lib/constants.ts` | `DATA: Team  → used on /about/team` |
+| `PAGE.` | Where a page shows a piece of editable text (the value lives in its JSON file) | `{PAGE.hero.title}` |
 
 In the Navbar file, search `PART` to jump between the menu links, the dropdowns and the header layout.
 
@@ -38,10 +44,17 @@ oceans-alive/
 │   ├── (main)/              ← Most pages (the "(main)" part is NOT in the web address)
 │   └── projects/            ← The individual project pages
 ├── components/common/       ← Pieces shared by many pages (Navbar, Footer, carousels…)
-├── lib/                     ← Text and numbers used across the site
-│   ├── constants.ts         ← MAIN CONTENT FILE: team, stats, contacts, blog stories…
-│   ├── projects-data.ts     ← Project cards (home carousel + menu)
-│   └── our-work.ts          ← "Our Work" programme areas
+├── content/                 ← ALL EDITABLE WORDS (edited in Pages CMS, or by hand)
+│   ├── blog/*.md            ← One file per blog post (Markdown)
+│   ├── blog-categories.json ← Blog category pages
+│   ├── pages/*.json         ← Text, images and links of each page (home.json, contact.json…)
+│   ├── projects/*.json      ← Text of each project page
+│   ├── data/*.json          ← Shared data: team, partners, timeline, impact stats, contacts,
+│   │                          project cards, Our Work programmes
+│   ├── site/*.json          ← Menu, footer, newsletter form
+│   └── old-pages/*.json     ← Older pages not linked from the menu
+├── lib/                     ← Code that loads the content (blog.ts, constants.ts, our-work.ts…)
+├── scripts/generate-cms-config.mjs ← Builds ../.pages.yml (the editing dashboard)
 ├── public/images/           ← All photos (team photos in public/images/team/)
 └── godaddy-upload/          ← Built website, created by the build command (don't edit)
 ```
@@ -85,39 +98,26 @@ oceans-alive/
 
 Folders named `[slug]` are **templates**: one file draws many pages, and each page's text comes from a list (named in that file's header).
 
+Each page file's header names its content file (`Page text, images and links (editable in Pages CMS) → content/pages/….json`). In the page code, `PAGE.section.key` reads from that file.
+
 ---
 
-## 4. Common edits
+## 4. Content files and the editing dashboard
 
-### Team members — `lib/constants.ts`, search `DATA: Team`
-- **Add a person:** copy an existing `{ … }` block, change the name, role and bio, and put it where they should appear (the page shows people in list order).
-- **Add or replace a photo:** put the image in `public/images/team/` (a square crop around 800×800 works best), then set `image: '/images/team/their-file.jpg'`. With `image: null`, the tile shows their initials instead.
-- **Hide someone without deleting them:** add `hidden: true,`. Delete that line to show them again.
-  - *Currently hidden:* **Eunice Mose** (waiting for a photo).
-- **Headcounts** ("18 specialists" etc.) are typed in `app/(main)/about/team/page.tsx`, so update them there.
-
-### Impact numbers (120 km², 25,000+ corals…) — `lib/constants.ts`, search `DATA: Impact stats`
-These appear on the home page, `/about`, `/about/story` and `/donate`. Some pages also have their own numbers typed directly in that page's hero section.
-
-### Phone, email, address — `lib/constants.ts`, search `DATA: Contact info`
-The top bar and the phone menu in `components/common/Navbar.tsx` (search `SECTION 1` and `SECTION 7`) also have the phone and email typed in.
-
-### Main menu and dropdowns — `components/common/Navbar.tsx`, search `PART 3`
-
-### Footer links and social icons — `components/common/Footer.tsx`
-Social links are in the `SOCIAL` list at the top; each column has a `SECTION` banner. The **Programmes** column automatically shows the same four programmes as the "Our Work" menu; to change them, edit `lib/our-work.ts` and both update together.
-
-### "All Projects" carousel cards — `lib/projects-data.ts`
-Each project's full page is in `app/projects/<name>/page.tsx`.
-
-### Blog stories — `lib/constants.ts`, search `DATA: Blog stories`
-
-### Photos in general
-All images live in `public/images/`. A file at `public/images/kids.jpg` is used in code as `/images/kids.jpg`.
+- **Changing words or photos:** edit the JSON/Markdown in `content/` (or use the dashboard). Don't type text into the `.tsx` files any more; put it in the page's JSON and reference it as `PAGE.section.key`.
+- **Blog posts:** `content/blog/<web-address>.md`. Front matter fields: `title`, `status` (`Published` / `Coming soon` / `Draft`), `category` (must match a name in `content/blog-categories.json`), `date` (YYYY-MM-DD, newest first), `highlight`, `excerpt`, `image`, `imageAlt`, `readTime` (optional, auto-calculated), `stats`. The body is Markdown; `lib/blog.ts` loads posts and `components/common/PostBody.tsx` styles them.
+- **Team members:** `content/data/team.json`. `hidden: true` hides someone (currently **Eunice Mose**, waiting for a photo). Photos go in `public/images/team/`.
+- **Adding a new page or a new content file:** create `content/<folder>/<name>.json`, import it in the page (`import PAGE from '@/content/…json'`), add a line for it in `scripts/generate-cms-config.mjs`, then run `npm run cms:config` to update `../.pages.yml`. The script refuses to run if any content file is missing from the dashboard.
+- **New blog category:** add it to `content/blog-categories.json`, then run `npm run cms:config` so it appears in the category drop-down.
+- **Colours and styling classes** stored in the JSON files (e.g. project `gradient`) are hidden from editors; `tailwind.config.js` scans `content/**/*.json` so those classes still work.
 
 ---
 
 ## 5. Build and upload
+
+**Normally nothing to do:** every push to `main` (including every Save in the dashboard) runs `.github/workflows/deploy-godaddy.yml`, which builds the site and uploads the changed files to GoDaddy (needs the `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD` secrets in GitHub). Progress: GitHub → repo → **Actions**.
+
+Manual build and upload (fallback):
 
 1. Open a terminal in this `oceans-alive` folder.
 2. Run `npm run build:godaddy`.
