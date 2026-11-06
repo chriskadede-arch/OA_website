@@ -202,11 +202,7 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
               <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise mb-2 flex items-center gap-2">
                 <span className="w-3 h-px bg-ocean-turquoise/40 inline-block" />{PAGE.darkImmersiveMegaDropdown.eyebrow6}</p>
               <div className="flex flex-wrap items-center gap-1.5 mb-2">
-                {[
-                  { label: 'UNDP Equator Prize', year: '2017' },
-                  { label: 'Royal Visit', year: '2023' },
-                  { label: 'IUCN Congress', year: '2025' },
-                ].map((a) => (
+                {PAGE.darkImmersiveMegaDropdown.list.map((a) => (
                   <span
                     key={a.label}
                     className="inline-flex items-center gap-1.5 text-[11px] text-white/70 bg-white/5 border border-white/10 rounded-full px-2.5 py-1"
@@ -231,7 +227,7 @@ function DarkImmersiveMegaDropdown({ item, onClose }: { item: MegaNavItem; onClo
               <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ocean-turquoise mb-2 flex items-center gap-2">
                 <span className="w-3 h-px bg-ocean-turquoise/40 inline-block" />{PAGE.darkImmersiveMegaDropdown.eyebrow7}</p>
               <div className="flex flex-wrap items-center gap-1.5 mb-2">
-                {['Coral Guardian', 'Blue Ventures', 'IUCN', 'UNDP', 'Kenya Wildlife Service', 'Kilifi County'].map((name) => (
+                {PAGE.darkImmersiveMegaDropdown.list2.map((name) => (
                   <span
                     key={name}
                     className="text-[11px] text-white/60 bg-white/5 border border-white/10 rounded-full px-2.5 py-1"
@@ -323,12 +319,7 @@ function ActionCardsMegaDropdown({ onClose }: { onClose: () => void }) {
           {/* Secondary links */}
           <div className="mt-4 flex items-center gap-6 pt-4 border-t border-white/10">
             <span className="text-[9px] text-white/25 uppercase tracking-widest shrink-0">{PAGE.actionCardsMegaDropdown.eyebrow}</span>
-            {[
-              { label: 'Monthly Giving', href: '/donate' },
-              { label: 'In-Kind Donations', href: '/contact?type=Other' },
-              { label: 'Community Events', href: '/blog/category/updates' },
-              { label: 'Internships', href: '/contact?type=Other' },
-            ].map((l) => (
+            {PAGE.actionCardsMegaDropdown.list.map((l) => (
               <Link
                 key={l.label}
                 href={l.href}

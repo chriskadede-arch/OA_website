@@ -160,7 +160,7 @@ export default function Home() {
             {/* Recognition */}
             <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
               <span className="text-[9px] text-white/25 uppercase tracking-widest">{PAGE.impactStats.eyebrow2}</span>
-              {['IUCN Blue Champions Award 2022', 'HM King Charles III Visit 2023', 'IUCN World Congress 2025'].map((a) => (
+              {PAGE.impactStats.list.map((a) => (
                 <span key={a} className="text-xs text-white/40 font-semibold">{a}</span>
               ))}
             </div>

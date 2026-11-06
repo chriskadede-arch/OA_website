@@ -10,7 +10,21 @@
     "text": "A two-phase project to strengthen the fisheries monitoring and co-management capacity of five Beach Management Units within the KAMAMKUKI Joint Co-Management Area, promoting the use of reliable fisheries and ecological information to support informed, adaptive management of shared coastal resources.",
     "eyebrow2": "Partner",
     "image": "/images/partners/blue-ventures.png",
-    "imageAlt": "Blue Ventures"
+    "imageAlt": "Blue Ventures",
+    "list": [
+      {
+        "label": "304 km² Ocean Area",
+        "value": "KAMAMKUKI JCMA"
+      },
+      {
+        "label": "5 Beach Management Units",
+        "value": "Kilifi & Mombasa"
+      },
+      {
+        "label": "October 2024 – November 2026",
+        "value": "Two-Phase Project"
+      }
+    ]
   },
   "theKamamkukiProject": {
     "eyebrow": "Our Joint Mission",
@@ -20,7 +34,29 @@
     "boldText": "KAMAMKUKI JCMA",
     "text2": " spans approximately 304 km² of coastal and marine waters within Kenya's territorial sea. It brings together the Kuruwitu, Kanamai and Mtwapa BMUs in Kilifi County and the Marina and Kidongo BMUs in Mombasa County.",
     "text3": "These institutions work alongside the Kenya Fisheries Service (KeFS) and the respective county governments to manage shared fisheries resources under the framework established by the Fisheries Management and Development Act No. 35 of 2016.",
-    "text4": "\"The project's approach is centred on building the capacity of BMUs and allied co-management institutions to implement fisheries regulations and management measures effectively and accountably.\""
+    "text4": "\"The project's approach is centred on building the capacity of BMUs and allied co-management institutions to implement fisheries regulations and management measures effectively and accountably.\"",
+    "list": [
+      {
+        "title": "Five BMUs",
+        "desc": "Kuruwitu, Kanamai, Mtwapa, Marina, Kidongo",
+        "color": "from-blue-500 to-cyan-600"
+      },
+      {
+        "title": "Two Counties",
+        "desc": "Kilifi & Mombasa working together",
+        "color": "from-cyan-500 to-teal-600"
+      },
+      {
+        "title": "10 Landing Sites",
+        "desc": "Fisheries catch monitoring stations",
+        "color": "from-emerald-500 to-green-600"
+      },
+      {
+        "title": "Evidence-Based",
+        "desc": "Data-driven adaptive management",
+        "color": "from-indigo-500 to-blue-600"
+      }
+    ]
   },
   "projectPhases": {
     "eyebrow": "Two-Phase Implementation",
@@ -34,7 +70,51 @@
     "label4": "2",
     "subheading2": "Phase 2: Strengthening",
     "label5": "Dec 2025 – Nov 2026",
-    "text3": "Phase 2 builds on those foundations across four priority areas: strengthening BMU governance and compliance through a structured mentorship programme; promoting peer learning, knowledge exchange and collaboration among BMUs; improving the financial resilience of fisheries-dependent communities through Village Savings and Loan Associations (VSLAs); and deepening fisheries and ecological monitoring to support evidence-based management decisions."
+    "text3": "Phase 2 builds on those foundations across four priority areas: strengthening BMU governance and compliance through a structured mentorship programme; promoting peer learning, knowledge exchange and collaboration among BMUs; improving the financial resilience of fisheries-dependent communities through Village Savings and Loan Associations (VSLAs); and deepening fisheries and ecological monitoring to support evidence-based management decisions.",
+    "list": [
+      {
+        "title": "Institutional Assessment",
+        "desc": "Governance and capacity diagnostics across all five BMUs"
+      },
+      {
+        "title": "Catch Monitoring",
+        "desc": "Ten landing sites equipped with fisheries data collection systems"
+      },
+      {
+        "title": "Baseline Data",
+        "desc": "Establishing fisheries and ecological baselines for adaptive management"
+      },
+      {
+        "title": "Capacity Gaps Identified",
+        "desc": "Strategic roadmap for Phase 2 strengthening"
+      }
+    ],
+    "list2": [
+      {
+        "title": "BMU Governance & Compliance",
+        "desc": "Structured mentorship programme for institutional strengthening",
+        "color": "from-blue-50 to-cyan-50",
+        "border": "border-blue-200"
+      },
+      {
+        "title": "Peer Learning & Exchange",
+        "desc": "Cross-BMU knowledge sharing and collaboration networks",
+        "color": "from-emerald-50 to-teal-50",
+        "border": "border-emerald-200"
+      },
+      {
+        "title": "Financial Resilience (VSLAs)",
+        "desc": "Village Savings & Loan Associations for fishing communities",
+        "color": "from-purple-50 to-indigo-50",
+        "border": "border-purple-200"
+      },
+      {
+        "title": "Fisheries & Ecological Monitoring",
+        "desc": "Deepening data collection for adaptive management decisions",
+        "color": "from-orange-50 to-amber-50",
+        "border": "border-orange-200"
+      }
+    ]
   },
   "theChallenge": {
     "eyebrow": "The Context",
@@ -50,7 +130,63 @@
     "subheading": "Governance & Compliance",
     "subheading2": "Fisheries Monitoring",
     "subheading3": "Financial Resilience",
-    "subheading4": "Peer Learning"
+    "subheading4": "Peer Learning",
+    "list": [
+      {
+        "title": "Structured Mentorship",
+        "desc": "BMU governance and compliance strengthening programme"
+      },
+      {
+        "title": "Compliance Assessments",
+        "desc": "Regular monitoring and enforcement capacity building"
+      },
+      {
+        "title": "Institutional Development",
+        "desc": "Addressing capacity gaps in co-management bodies"
+      }
+    ],
+    "list2": [
+      {
+        "title": "Fisheries Catch Monitoring",
+        "desc": "Ongoing data collection at ten landing sites within the JCMA"
+      },
+      {
+        "title": "Community Resource Surveys",
+        "desc": "Ecological monitoring and baseline assessments"
+      },
+      {
+        "title": "Data-Feedback Sessions",
+        "desc": "Stakeholder engagement to support adaptive management"
+      }
+    ],
+    "list3": [
+      {
+        "title": "Village Savings & Loans (VSLAs)",
+        "desc": "Improving financial resilience of fisheries-dependent communities"
+      },
+      {
+        "title": "Community Financial Resilience",
+        "desc": "Building economic buffers for vulnerable households"
+      },
+      {
+        "title": "Reducing Resource Pressure",
+        "desc": "Alternative income sources to decrease fisheries dependence"
+      }
+    ],
+    "list4": [
+      {
+        "title": "Exchange Visits",
+        "desc": "Promoting peer learning and knowledge exchange among BMUs"
+      },
+      {
+        "title": "Collaboration Networks",
+        "desc": "Building partnerships between five Beach Management Units"
+      },
+      {
+        "title": "Stakeholder Engagement",
+        "desc": "Technical partnerships and community participation"
+      }
+    ]
   },
   "expectedOutcomes": {
     "eyebrow": "Building for the Future",
@@ -63,7 +199,21 @@
     "label": "Fisheries Management",
     "text": "Your contribution directly supports fisheries catch monitoring, governance strengthening, community financial resilience through VSLAs, and peer learning networks across the KAMAMKUKI Joint Co-Management Area  -  building capacity for sustainable fisheries management.",
     "link": "/donate",
-    "linkText": "Support the Project "
+    "linkText": "Support the Project ",
+    "list": [
+      {
+        "label": "Fisheries Monitoring"
+      },
+      {
+        "label": "BMU Governance"
+      },
+      {
+        "label": "Community VSLAs"
+      },
+      {
+        "label": "Peer Learning"
+      }
+    ]
   },
   "navigationFooter": {
     "link": "/about/partners",

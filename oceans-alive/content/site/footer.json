@@ -6,7 +6,37 @@
     "text": "Working with coastal communities to restore marine ecosystems, strengthen livelihoods, and create lasting positive change along Kenya's coast."
   },
   "navigateLinks": {
-    "smallHeading": "Navigate"
+    "smallHeading": "Navigate",
+    "list": [
+      {
+        "label": "Our Story",
+        "href": "/about/story"
+      },
+      {
+        "label": "Mission & Vision",
+        "href": "/about/mission"
+      },
+      {
+        "label": "Recognition",
+        "href": "/about/recognition"
+      },
+      {
+        "label": "Our Partners",
+        "href": "/about/partners"
+      },
+      {
+        "label": "Our Team",
+        "href": "/about/team"
+      },
+      {
+        "label": "Programmes",
+        "href": "/programmes"
+      },
+      {
+        "label": "Get Involved",
+        "href": "/contact"
+      }
+    ]
   },
   "programmesLinks": {
     "smallHeading": "Programmes"

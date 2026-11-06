@@ -124,15 +124,7 @@ export default function Footer() {
           <div>
             <h4 className="font-poppins font-bold mb-4 text-ocean-turquoise text-sm uppercase tracking-wider">{PAGE.navigateLinks.smallHeading}</h4>
             <ul className="space-y-2 text-sm text-white/70">
-              {[
-                { label: 'Our Story', href: '/about/story' },
-                { label: 'Mission & Vision', href: '/about/mission' },
-                { label: 'Recognition', href: '/about/recognition' },
-                { label: 'Our Partners', href: '/about/partners' },
-                { label: 'Our Team', href: '/about/team' },
-                { label: 'Programmes', href: '/programmes' },
-                { label: 'Get Involved', href: '/contact' },
-              ].map((l) => (
+              {PAGE.navigateLinks.list.map((l) => (
                 <li key={l.label}>
                   <Link href={l.href} className="hover:text-ocean-turquoise transition-colors">
                     {l.label}

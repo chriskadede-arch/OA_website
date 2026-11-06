@@ -36,7 +36,17 @@
     "label3": "Behind",
     "label4": "the Ocean.",
     "text": "18 specialists. Community stewards. One coastline. Since 2003.",
-    "eyebrow2": "Scroll"
+    "eyebrow2": "Scroll",
+    "list": [
+      [
+        "18",
+        "Core team"
+      ],
+      [
+        "20+",
+        "Years"
+      ]
+    ]
   },
   "teamGrid": {
     "text": "15",
@@ -57,7 +67,29 @@
     "label3": "Stewards",
     "text": "Fishers, reef monitors, women leaders, BMU reps, and community rangers - the 7,000+ people who protect Kenya's coast because it is their home.",
     "link": "/about/story",
-    "linkText": "Read our story "
+    "linkText": "Read our story ",
+    "list": [
+      [
+        "40+",
+        "Reef Monitors",
+        "Certified community divers"
+      ],
+      [
+        "12",
+        "BMU Reps",
+        "Across Kilifi County"
+      ],
+      [
+        "120",
+        "Women Leaders",
+        "Trash4Cash & LIFT Network"
+      ],
+      [
+        "25+",
+        "Sea Rangers",
+        "Turtle & fishery patrol"
+      ]
+    ]
   },
   "joinTheTeamCallToAction": {
     "eyebrow": "Work With Us",
@@ -67,6 +99,14 @@
     "link": "/contact?type=Volunteer",
     "linkText": "Volunteer / Intern",
     "link2": "/contact?type=Other",
-    "linkText2": "Get in Touch"
+    "linkText2": "Get in Touch",
+    "list": [
+      "Marine Biologist",
+      "Community Educator",
+      "Communications",
+      "Field Researcher",
+      "Policy Analyst",
+      "Permaculture Specialist"
+    ]
   }
 }

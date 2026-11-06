@@ -114,12 +114,7 @@ export default function Ocean5AdvocacyPage() {
             <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight">{PAGE.objectives.heading}</h2>
           </div>
           <div className="space-y-4">
-            {[
-              'Enhance Network governance and leadership skills to foster unified advocacy.',
-              'Equip BMU members with tools for evidence gathering, policy analysis and public campaigning on IUU threats.',
-              'Facilitate strategic partnerships and media engagement to amplify calls for trawler regulation and enforcement.',
-              'Monitor and evaluate advocacy impacts to keep strategies adaptive and community driven.',
-            ].map((obj, i) => (
+            {PAGE.objectives.list.map((obj, i) => (
               <div key={i} className="flex items-start gap-4 bg-white rounded-xl p-5 border border-gray-100">
                 <div className="w-8 h-8 rounded-full bg-rose-900 text-white flex items-center justify-center shrink-0 text-sm font-bold">{i + 1}</div>
                 <p className="text-gray-700 leading-relaxed pt-1">{obj}</p>

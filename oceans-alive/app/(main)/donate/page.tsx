@@ -527,28 +527,7 @@ Please provide payment instructions.
               <p className="text-white/55 text-sm leading-relaxed">{PAGE.fAQ.text}</p>
             </div>
             <div className="lg:col-span-2 space-y-6">
-              {[
-                {
-                  q: 'Is my donation tax-deductible?',
-                  a: 'Oceans Alive Foundation is a registered not-for-profit organization in Kenya. Tax deductibility varies by jurisdiction.',
-                },
-                {
-                  q: 'Can I set up a recurring donation?',
-                  a: 'Yes - select Monthly Donation during checkout. You can cancel anytime with no obligation.',
-                },
-                {
-                  q: 'What payment methods and currencies do you accept?',
-                  a: 'We accept all major credit cards (Visa, Mastercard, Amex), debit cards, Apple Pay, and Google Pay through our secure Stripe payment system. Payments can be made in USD, EUR, GBP, and KES.',
-                },
-                {
-                  q: 'How will I know my donation made a difference?',
-                  a: 'Donors receive quarterly impact newsletters detailing program outcomes and field updates from Kilifi County. Annual financial reports are available upon request.',
-                },
-                {
-                  q: 'Are donations unrestricted or designated?',
-                  a: 'All donations are unrestricted unless you specify otherwise, allowing us to direct funds where they are needed most across all four program areas.',
-                },
-              ].map((faq) => (
+              {PAGE.faq.list.map((faq) => (
                 <div key={faq.q} className="border-b border-white/10 pb-6 last:border-b-0 last:pb-0">
                   <h3 className="font-poppins font-bold text-white mb-2">{faq.q}</h3>
                   <p className="text-white/55 text-sm leading-relaxed">{faq.a}</p>

@@ -63,7 +63,7 @@ export default function TeamPage() {
           <div className="flex flex-col md:flex-row items-start md:items-end gap-10 max-w-xl">
             <p className="text-gray-600 text-base leading-relaxed">{PAGE.heroThePeopleBehindTheOcean.text}</p>
             <div className="flex gap-8 shrink-0">
-              {[['18','Core team'],['20+','Years']].map(([v,l])=>(
+              {PAGE.heroThePeopleBehindTheOcean.list.map(([v,l])=>(
                 <div key={l}>
                   <div className="text-2xl font-poppins font-bold text-ocean-turquoise leading-none">{v}</div>
                   <div className="text-[9px] text-gray-400 uppercase tracking-widest mt-1">{l}</div>
@@ -242,12 +242,7 @@ export default function TeamPage() {
             </div>
 
             <div className="grid grid-cols-2 gap-3">
-              {[
-                ['40+','Reef Monitors','Certified community divers'],
-                ['12','BMU Reps','Across Kilifi County'],
-                ['120','Women Leaders','Trash4Cash & LIFT Network'],
-                ['25+','Sea Rangers','Turtle & fishery patrol'],
-              ].map(([count,role,desc])=>(
+              {PAGE.communityStewardsBand.list.map(([count,role,desc])=>(
                 <div key={role} className="group/c rounded-2xl border border-white/[0.05] bg-white/[0.02] hover:bg-white/[0.05] hover:border-ocean-turquoise/20 p-6 transition-all duration-300">
                   <div className="text-3xl font-poppins font-bold text-ocean-turquoise mb-1 group-hover/c:scale-105 transition-transform origin-left">{count}</div>
                   <div className="text-xs font-bold text-white/70 mb-1">{role}</div>
@@ -282,7 +277,7 @@ export default function TeamPage() {
             </div>
 
             <div className="grid grid-cols-2 gap-2">
-              {['Marine Biologist','Community Educator','Communications','Field Researcher','Policy Analyst','Permaculture Specialist'].map(role=>(
+              {PAGE.joinTheTeamCallToAction.list.map(role=>(
                 <div key={role} className="border border-white/[0.05] hover:border-ocean-turquoise/30 rounded-xl px-4 py-3 text-[11px] font-semibold text-white/30 hover:text-ocean-turquoise transition-all cursor-default">
                   + {role}
                 </div>

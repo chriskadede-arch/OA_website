@@ -29,12 +29,7 @@ export default function Programmes() {
           </h1>
           <p className="text-xl text-white/80 max-w-2xl leading-relaxed mb-10">{PAGE.hero.text}</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl">
-            {[
-              { value: '10,000+', label: 'Learners Reached' },
-              { value: '25,000+', label: 'Corals Planted' },
-              { value: '735+', label: 'Women Empowered' },
-              { value: '18', label: 'BMUs Coordinated' },
-            ].map((s) => (
+            {PAGE.hero.list.map((s) => (
               <div key={s.label}>
                 <div className="text-3xl font-poppins font-bold text-ocean-turquoise">{s.value}</div>
                 <div className="text-xs text-white/60 uppercase tracking-wider mt-1">{s.label}</div>

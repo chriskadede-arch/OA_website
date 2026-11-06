@@ -10,7 +10,21 @@
     "text": "Together with Coral Guardian, we're pioneering community-led coral restoration in the Kuruwitu Marine Protected Area - where conservation meets livelihoods.",
     "eyebrow2": "Partner",
     "image": "/images/partners/coral-guardian.png",
-    "imageAlt": "Coral Guardian"
+    "imageAlt": "Coral Guardian",
+    "list": [
+      {
+        "label": "Kuruwitu, Kilifi County",
+        "value": "Indian Ocean Coast"
+      },
+      {
+        "label": "12,000 Hectares",
+        "value": "Protected Area"
+      },
+      {
+        "label": "Since 2024",
+        "value": "Active Collaboration"
+      }
+    ]
   },
   "theReelKilifiProject": {
     "eyebrow": "Our Joint Mission",
@@ -19,7 +33,29 @@
     "boldText": "Restoring Reef Ecosystems for Enhanced Livelihoods",
     "text": " is more than a coral restoration project - it's a transformative initiative in Kenya's Indian Ocean waters.",
     "text2": "The project unfolds in the 12,000-hectare Kuruwitu coastal co-management area in Kilifi County. This pioneering zone benefits from shared coastal and marine resource management between the government and the local fishing community, making it a beacon of effective collaborative conservation in Kenya.",
-    "text3": "\"A pioneer in effective collaborative conservation in Kenya - where communities and government protect the ocean together.\""
+    "text3": "\"A pioneer in effective collaborative conservation in Kenya - where communities and government protect the ocean together.\"",
+    "list": [
+      {
+        "title": "Government + Community",
+        "desc": "Co-managed conservation area",
+        "color": "from-amber-500 to-orange-600"
+      },
+      {
+        "title": "Fishing Community",
+        "desc": "Local stewards & beneficiaries",
+        "color": "from-cyan-500 to-ocean-turquoise"
+      },
+      {
+        "title": "Coral Nurseries",
+        "desc": "Community-built & maintained",
+        "color": "from-emerald-500 to-teal-600"
+      },
+      {
+        "title": "Sustainable Fishing",
+        "desc": "Enhanced marine livelihoods",
+        "color": "from-blue-500 to-indigo-600"
+      }
+    ]
   },
   "restorationTechniques": {
     "eyebrow": "Science Meets Community",
@@ -33,7 +69,24 @@
     "smallHeading2": "Protected Zone",
     "text4": "Restoration within the Tengefu law protected area, ensuring sustainability",
     "boldText": "Innovation in Action:",
-    "text5": " We're testing new methods to find the most appropriate and financially sustainable approaches for this unique environment."
+    "text5": " We're testing new methods to find the most appropriate and financially sustainable approaches for this unique environment.",
+    "list": [
+      {
+        "step": "01",
+        "title": "Collection",
+        "desc": "Opportunity coral fragments collected from the area"
+      },
+      {
+        "step": "02",
+        "title": "Nurture",
+        "desc": "Community-maintained nurseries care for young corals"
+      },
+      {
+        "step": "03",
+        "title": "Transplant",
+        "desc": "Corals planted on locally-built artificial reefs"
+      }
+    ]
   },
   "communityInvolvement": {
     "eyebrow": "Community at the Core",
@@ -41,7 +94,42 @@
     "label": "Communities",
     "text": "The community plays a central role in the adoption and implementation of the project - from training to teaching to shared ownership.",
     "subheading": "Our Goal",
-    "text2": "To develop a sense of ownership in the local community by fostering peer-to-peer learning in the context of community citizen science, and by sharing the results of the project with the immediate and wider community."
+    "text2": "To develop a sense of ownership in the local community by fostering peer-to-peer learning in the context of community citizen science, and by sharing the results of the project with the immediate and wider community.",
+    "list": [
+      {
+        "title": "Fisherman Training",
+        "desc": "Local fishermen trained by the project team in coral restoration methods over several months",
+        "points": [
+          "Awareness of coral reef importance",
+          "Reinforcement of local reef management capacities",
+          "Hands-on restoration techniques"
+        ],
+        "color": "from-amber-500/20 via-orange-500/20 to-red-500/20",
+        "borderColor": "border-amber-400/30"
+      },
+      {
+        "title": "Youth Education",
+        "desc": "Developing tools to help teachers in local schools raise awareness among young people",
+        "points": [
+          "Educational materials for schools",
+          "Engaging curriculum on ocean conservation",
+          "Inspiring the next generation of reef guardians"
+        ],
+        "color": "from-cyan-500/20 via-ocean-turquoise/20 to-teal-500/20",
+        "borderColor": "border-cyan-400/30"
+      },
+      {
+        "title": "Community Ownership",
+        "desc": "Regular exchanges between team and community members to share results and engage in protection",
+        "points": [
+          "Peer-to-peer learning networks",
+          "Community citizen science",
+          "Shared project results and benefits"
+        ],
+        "color": "from-emerald-500/20 via-teal-500/20 to-green-500/20",
+        "borderColor": "border-emerald-400/30"
+      }
+    ]
   },
   "monitoringAndEvaluation": {
     "eyebrow": "Evidence-Based Impact",
@@ -49,7 +137,35 @@
     "label": "Evaluation",
     "text": "We track both ecological and social outcomes to ensure lasting, meaningful impact.",
     "subheading": "Biological Monitoring",
-    "subheading2": "Social Monitoring"
+    "subheading2": "Social Monitoring",
+    "list": [
+      {
+        "title": "Coral Health",
+        "desc": "Monitor survival, growth, and natural recruitment of coral larvae"
+      },
+      {
+        "title": "Water Quality",
+        "desc": "Regular temperature monitoring and coral bleaching observations"
+      },
+      {
+        "title": "Marine Life",
+        "desc": "Fish species diversity, biomass estimates, and invertebrate populations"
+      }
+    ],
+    "list2": [
+      {
+        "title": "Socio-Economic Data",
+        "desc": "Track benefits from the reef: fisheries and tourism evolution"
+      },
+      {
+        "title": "Community Perception",
+        "desc": "Regular surveys and interviews with the fishing community"
+      },
+      {
+        "title": "Outreach Impact",
+        "desc": "Monitor attendance at presentations to stakeholders and schools"
+      }
+    ]
   },
   "lookingAhead": {
     "eyebrow": "The Future",
@@ -68,7 +184,21 @@
     "label": "Coral Restoration",
     "text": "Your contribution directly funds training, equipment, and long-term monitoring for the REEL Kilifi project - empowering local communities to restore their reefs and secure their livelihoods.",
     "link": "/donate",
-    "linkText": "Donate to the Project "
+    "linkText": "Donate to the Project ",
+    "list": [
+      {
+        "label": "Coral Nurseries"
+      },
+      {
+        "label": "Fisherman Training"
+      },
+      {
+        "label": "Marine Monitoring"
+      },
+      {
+        "label": "Community Outreach"
+      }
+    ]
   },
   "navigationFooter": {
     "link": "/about/partners",

@@ -56,11 +56,7 @@ export default function BlueVenturesPage() {
 
             {/* Glass Cards Row */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
-              {[
-                { label: '304 km² Ocean Area', value: 'KAMAMKUKI JCMA' },
-                { label: '5 Beach Management Units', value: 'Kilifi & Mombasa' },
-                { label: 'October 2024 – November 2026', value: 'Two-Phase Project' },
-              ].map((stat, idx) => (
+              {PAGE.hero.list.map((stat, idx) => (
                 <div
                   key={idx}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-5 border border-white/10 hover:bg-white/10 transition-all duration-300"
@@ -112,28 +108,7 @@ export default function BlueVenturesPage() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-cyan-300/10 rounded-3xl blur-2xl" />
               <div className="relative grid grid-cols-2 gap-4">
-                {[
-                  {
-                    title: 'Five BMUs',
-                    desc: 'Kuruwitu, Kanamai, Mtwapa, Marina, Kidongo',
-                    color: 'from-blue-500 to-cyan-600',
-                  },
-                  {
-                    title: 'Two Counties',
-                    desc: 'Kilifi & Mombasa working together',
-                    color: 'from-cyan-500 to-teal-600',
-                  },
-                  {
-                    title: '10 Landing Sites',
-                    desc: 'Fisheries catch monitoring stations',
-                    color: 'from-emerald-500 to-green-600',
-                  },
-                  {
-                    title: 'Evidence-Based',
-                    desc: 'Data-driven adaptive management',
-                    color: 'from-indigo-500 to-blue-600',
-                  },
-                ].map((card, idx) => (
+                {PAGE.theKamamkukiProject.list.map((card, idx) => (
                   <div
                     key={idx}
                     className="group relative overflow-hidden rounded-2xl p-6 bg-white border border-gray-200 hover:shadow-xl transition-all duration-300"
@@ -191,24 +166,7 @@ export default function BlueVenturesPage() {
 
                   {/* Achievement Cards */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {[
-                      {
-                        title: 'Institutional Assessment',
-                        desc: 'Governance and capacity diagnostics across all five BMUs',
-                      },
-                      {
-                        title: 'Catch Monitoring',
-                        desc: 'Ten landing sites equipped with fisheries data collection systems',
-                      },
-                      {
-                        title: 'Baseline Data',
-                        desc: 'Establishing fisheries and ecological baselines for adaptive management',
-                      },
-                      {
-                        title: 'Capacity Gaps Identified',
-                        desc: 'Strategic roadmap for Phase 2 strengthening',
-                      },
-                    ].map((item, idx) => (
+                    {PAGE.projectPhases.list.map((item, idx) => (
                       <div
                         key={idx}
                         className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-5 border border-gray-200 hover:shadow-lg hover:border-[#0066cc]/30 transition-all duration-300 group"
@@ -257,32 +215,7 @@ export default function BlueVenturesPage() {
 
                   {/* Priority Areas */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {[
-                      {
-                        title: 'BMU Governance & Compliance',
-                        desc: 'Structured mentorship programme for institutional strengthening',
-                        color: 'from-blue-50 to-cyan-50',
-                        border: 'border-blue-200',
-                      },
-                      {
-                        title: 'Peer Learning & Exchange',
-                        desc: 'Cross-BMU knowledge sharing and collaboration networks',
-                        color: 'from-emerald-50 to-teal-50',
-                        border: 'border-emerald-200',
-                      },
-                      {
-                        title: 'Financial Resilience (VSLAs)',
-                        desc: 'Village Savings & Loan Associations for fishing communities',
-                        color: 'from-purple-50 to-indigo-50',
-                        border: 'border-purple-200',
-                      },
-                      {
-                        title: 'Fisheries & Ecological Monitoring',
-                        desc: 'Deepening data collection for adaptive management decisions',
-                        color: 'from-orange-50 to-amber-50',
-                        border: 'border-orange-200',
-                      },
-                    ].map((area, idx) => (
+                    {PAGE.projectPhases.list2.map((area, idx) => (
                       <div
                         key={idx}
                         className={`bg-gradient-to-br ${area.color} rounded-xl p-5 border ${area.border} hover:shadow-lg transition-all duration-300 group`}
@@ -430,20 +363,7 @@ export default function BlueVenturesPage() {
               </div>
 
               <div className="space-y-4">
-                {[
-                  {
-                    title: 'Structured Mentorship',
-                    desc: 'BMU governance and compliance strengthening programme',
-                  },
-                  {
-                    title: 'Compliance Assessments',
-                    desc: 'Regular monitoring and enforcement capacity building',
-                  },
-                  {
-                    title: 'Institutional Development',
-                    desc: 'Addressing capacity gaps in co-management bodies',
-                  },
-                ].map((item, idx) => (
+                {PAGE.ourApproach.list.map((item, idx) => (
                   <div
                     key={idx}
                     className="bg-white rounded-xl p-5 border border-blue-200 hover:shadow-md transition-all duration-300 group"
@@ -474,20 +394,7 @@ export default function BlueVenturesPage() {
               </div>
 
               <div className="space-y-4">
-                {[
-                  {
-                    title: 'Fisheries Catch Monitoring',
-                    desc: 'Ongoing data collection at ten landing sites within the JCMA',
-                  },
-                  {
-                    title: 'Community Resource Surveys',
-                    desc: 'Ecological monitoring and baseline assessments',
-                  },
-                  {
-                    title: 'Data-Feedback Sessions',
-                    desc: 'Stakeholder engagement to support adaptive management',
-                  },
-                ].map((item, idx) => (
+                {PAGE.ourApproach.list2.map((item, idx) => (
                   <div
                     key={idx}
                     className="bg-white rounded-xl p-5 border border-emerald-200 hover:shadow-md transition-all duration-300 group"
@@ -518,20 +425,7 @@ export default function BlueVenturesPage() {
               </div>
 
               <div className="space-y-4">
-                {[
-                  {
-                    title: 'Village Savings & Loans (VSLAs)',
-                    desc: 'Improving financial resilience of fisheries-dependent communities',
-                  },
-                  {
-                    title: 'Community Financial Resilience',
-                    desc: 'Building economic buffers for vulnerable households',
-                  },
-                  {
-                    title: 'Reducing Resource Pressure',
-                    desc: 'Alternative income sources to decrease fisheries dependence',
-                  },
-                ].map((item, idx) => (
+                {PAGE.ourApproach.list3.map((item, idx) => (
                   <div
                     key={idx}
                     className="bg-white rounded-xl p-5 border border-purple-200 hover:shadow-md transition-all duration-300 group"
@@ -562,20 +456,7 @@ export default function BlueVenturesPage() {
               </div>
 
               <div className="space-y-4">
-                {[
-                  {
-                    title: 'Exchange Visits',
-                    desc: 'Promoting peer learning and knowledge exchange among BMUs',
-                  },
-                  {
-                    title: 'Collaboration Networks',
-                    desc: 'Building partnerships between five Beach Management Units',
-                  },
-                  {
-                    title: 'Stakeholder Engagement',
-                    desc: 'Technical partnerships and community participation',
-                  },
-                ].map((item, idx) => (
+                {PAGE.ourApproach.list4.map((item, idx) => (
                   <div
                     key={idx}
                     className="bg-white rounded-xl p-5 border border-orange-200 hover:shadow-md transition-all duration-300 group"
@@ -716,12 +597,7 @@ export default function BlueVenturesPage() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              {[
-                { label: 'Fisheries Monitoring' },
-                { label: 'BMU Governance' },
-                { label: 'Community VSLAs' },
-                { label: 'Peer Learning' },
-              ].map((item, idx) => (
+              {PAGE.callToAction.list.map((item, idx) => (
                 <div
                   key={idx}
                   className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg hover:border-[#0066cc]/30 transition-all duration-300 group flex items-center justify-center min-h-[120px]"

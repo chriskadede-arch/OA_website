@@ -87,7 +87,7 @@ export default function GetInvolvedPage() {
 
                 {/* Topic pills */}
                 <div className="flex flex-wrap gap-2 mt-6 pt-6 border-t border-white/[0.08]">
-                  {['Field Reports', 'Impact Stories', 'Ways to Help'].map((t) => (
+                  {PAGE.newsletterSignupWaysToGetInvolved.list.map((t) => (
                     <span
                       key={t}
                       className="px-3 py-1.5 rounded-full border border-ocean-turquoise/20 text-ocean-turquoise/60 text-[10px] font-semibold uppercase tracking-wider"

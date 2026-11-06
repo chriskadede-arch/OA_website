@@ -56,11 +56,7 @@ export default function CoralGuardianPage() {
 
             {/* Glass Cards Row */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
-              {[
-                { label: 'Kuruwitu, Kilifi County', value: 'Indian Ocean Coast' },
-                { label: '12,000 Hectares', value: 'Protected Area' },
-                { label: 'Since 2024', value: 'Active Collaboration' },
-              ].map((stat, idx) => (
+              {PAGE.hero.list.map((stat, idx) => (
                 <div
                   key={idx}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-5 border border-white/10 hover:bg-white/10 transition-all duration-300"
@@ -113,28 +109,7 @@ export default function CoralGuardianPage() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-ocean-turquoise/10 to-cyan-300/10 rounded-3xl blur-2xl" />
               <div className="relative grid grid-cols-2 gap-4">
-                {[
-                  {
-                    title: 'Government + Community',
-                    desc: 'Co-managed conservation area',
-                    color: 'from-amber-500 to-orange-600',
-                  },
-                  {
-                    title: 'Fishing Community',
-                    desc: 'Local stewards & beneficiaries',
-                    color: 'from-cyan-500 to-ocean-turquoise',
-                  },
-                  {
-                    title: 'Coral Nurseries',
-                    desc: 'Community-built & maintained',
-                    color: 'from-emerald-500 to-teal-600',
-                  },
-                  {
-                    title: 'Sustainable Fishing',
-                    desc: 'Enhanced marine livelihoods',
-                    color: 'from-blue-500 to-indigo-600',
-                  },
-                ].map((card, idx) => (
+                {PAGE.theReelKilifiProject.list.map((card, idx) => (
                   <div
                     key={idx}
                     className="group relative overflow-hidden rounded-2xl p-6 bg-white border border-gray-200 hover:shadow-xl transition-all duration-300"
@@ -191,23 +166,7 @@ export default function CoralGuardianPage() {
 
                   {/* Process Cards */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {[
-                      {
-                        step: '01',
-                        title: 'Collection',
-                        desc: 'Opportunity coral fragments collected from the area',
-                      },
-                      {
-                        step: '02',
-                        title: 'Nurture',
-                        desc: 'Community-maintained nurseries care for young corals',
-                      },
-                      {
-                        step: '03',
-                        title: 'Transplant',
-                        desc: 'Corals planted on locally-built artificial reefs',
-                      },
-                    ].map((process, idx) => (
+                    {PAGE.restorationTechniques.list.map((process, idx) => (
                       <div
                         key={idx}
                         className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-5 border border-gray-200 hover:shadow-lg hover:border-ocean-turquoise/30 transition-all duration-300 group"
@@ -287,41 +246,7 @@ export default function CoralGuardianPage() {
 
           {/* Three Pillars - Horizontal Glass Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Fisherman Training',
-                desc: 'Local fishermen trained by the project team in coral restoration methods over several months',
-                points: [
-                  'Awareness of coral reef importance',
-                  'Reinforcement of local reef management capacities',
-                  'Hands-on restoration techniques',
-                ],
-                color: 'from-amber-500/20 via-orange-500/20 to-red-500/20',
-                borderColor: 'border-amber-400/30',
-              },
-              {
-                title: 'Youth Education',
-                desc: 'Developing tools to help teachers in local schools raise awareness among young people',
-                points: [
-                  'Educational materials for schools',
-                  'Engaging curriculum on ocean conservation',
-                  'Inspiring the next generation of reef guardians',
-                ],
-                color: 'from-cyan-500/20 via-ocean-turquoise/20 to-teal-500/20',
-                borderColor: 'border-cyan-400/30',
-              },
-              {
-                title: 'Community Ownership',
-                desc: 'Regular exchanges between team and community members to share results and engage in protection',
-                points: [
-                  'Peer-to-peer learning networks',
-                  'Community citizen science',
-                  'Shared project results and benefits',
-                ],
-                color: 'from-emerald-500/20 via-teal-500/20 to-green-500/20',
-                borderColor: 'border-emerald-400/30',
-              },
-            ].map((pillar, idx) => (
+            {PAGE.communityInvolvement.list.map((pillar, idx) => (
               <div
                 key={idx}
                 className={`group relative overflow-hidden rounded-2xl p-8 bg-white/5 backdrop-blur-sm border ${pillar.borderColor} hover:bg-white/10 transition-all duration-300`}
@@ -396,20 +321,7 @@ export default function CoralGuardianPage() {
               </div>
 
               <div className="space-y-4">
-                {[
-                  {
-                    title: 'Coral Health',
-                    desc: 'Monitor survival, growth, and natural recruitment of coral larvae',
-                  },
-                  {
-                    title: 'Water Quality',
-                    desc: 'Regular temperature monitoring and coral bleaching observations',
-                  },
-                  {
-                    title: 'Marine Life',
-                    desc: 'Fish species diversity, biomass estimates, and invertebrate populations',
-                  },
-                ].map((item, idx) => (
+                {PAGE.monitoringAndEvaluation.list.map((item, idx) => (
                   <div
                     key={idx}
                     className="bg-white rounded-xl p-5 border border-cyan-200 hover:shadow-md transition-all duration-300 group"
@@ -440,20 +352,7 @@ export default function CoralGuardianPage() {
               </div>
 
               <div className="space-y-4">
-                {[
-                  {
-                    title: 'Socio-Economic Data',
-                    desc: 'Track benefits from the reef: fisheries and tourism evolution',
-                  },
-                  {
-                    title: 'Community Perception',
-                    desc: 'Regular surveys and interviews with the fishing community',
-                  },
-                  {
-                    title: 'Outreach Impact',
-                    desc: 'Monitor attendance at presentations to stakeholders and schools',
-                  },
-                ].map((item, idx) => (
+                {PAGE.monitoringAndEvaluation.list2.map((item, idx) => (
                   <div
                     key={idx}
                     className="bg-white rounded-xl p-5 border border-emerald-200 hover:shadow-md transition-all duration-300 group"
@@ -553,12 +452,7 @@ export default function CoralGuardianPage() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              {[
-                { label: 'Coral Nurseries' },
-                { label: 'Fisherman Training' },
-                { label: 'Marine Monitoring' },
-                { label: 'Community Outreach' },
-              ].map((item, idx) => (
+              {PAGE.callToAction.list.map((item, idx) => (
                 <div
                   key={idx}
                   className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg hover:border-ocean-turquoise/30 transition-all duration-300 group flex items-center justify-center min-h-[120px]"

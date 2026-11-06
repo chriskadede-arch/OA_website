@@ -16,6 +16,11 @@
     "link2": "/contact?type=Volunteer",
     "linkText2": "Volunteer With Us",
     "link3": "/contact?type=Partnership",
-    "linkText3": "Partner With Us"
+    "linkText3": "Partner With Us",
+    "list": [
+      "Field Reports",
+      "Impact Stories",
+      "Ways to Help"
+    ]
   }
 }

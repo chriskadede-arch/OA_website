@@ -48,11 +48,51 @@
     "linkText2": "See all recognition",
     "eyebrow7": "Trusted By Our Partners",
     "link3": "/about/partners",
-    "linkText3": "Meet our partners"
+    "linkText3": "Meet our partners",
+    "list": [
+      {
+        "label": "UNDP Equator Prize",
+        "year": "2017"
+      },
+      {
+        "label": "Royal Visit",
+        "year": "2023"
+      },
+      {
+        "label": "IUCN Congress",
+        "year": "2025"
+      }
+    ],
+    "list2": [
+      "Coral Guardian",
+      "Blue Ventures",
+      "IUCN",
+      "UNDP",
+      "Kenya Wildlife Service",
+      "Kilifi County"
+    ]
   },
   "actionCardsMegaDropdown": {
     "text": "Get Started ",
-    "eyebrow": "More ways:"
+    "eyebrow": "More ways:",
+    "list": [
+      {
+        "label": "Monthly Giving",
+        "href": "/donate"
+      },
+      {
+        "label": "In-Kind Donations",
+        "href": "/contact?type=Other"
+      },
+      {
+        "label": "Community Events",
+        "href": "/blog/category/updates"
+      },
+      {
+        "label": "Internships",
+        "href": "/contact?type=Other"
+      }
+    ]
   },
   "getInvolvedMegaDropdown": {
     "subheading": "Get involved",

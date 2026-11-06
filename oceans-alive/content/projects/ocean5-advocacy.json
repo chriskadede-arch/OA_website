@@ -65,7 +65,13 @@
   },
   "objectives": {
     "eyebrow": "Objectives",
-    "heading": "Building a Network That Can Lobby and Win"
+    "heading": "Building a Network That Can Lobby and Win",
+    "list": [
+      "Enhance Network governance and leadership skills to foster unified advocacy.",
+      "Equip BMU members with tools for evidence gathering, policy analysis and public campaigning on IUU threats.",
+      "Facilitate strategic partnerships and media engagement to amplify calls for trawler regulation and enforcement.",
+      "Monitor and evaluate advocacy impacts to keep strategies adaptive and community driven."
+    ]
   },
   "activitiesTimeline": {
     "eyebrow": "Activities",
