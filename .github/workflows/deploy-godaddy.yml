@@ -1,0 +1,68 @@
+# Publishes the website to GoDaddy every time something is saved.
+#
+# Flow: an editor presses Save in Pages CMS → the change is committed to `main`
+# → this workflow builds the site (oceans-alive/) and uploads the result to
+# GoDaddy's public_html over FTPS. Only changed files are uploaded.
+#
+# One-time setup (GitHub → repo → Settings → Secrets and variables → Actions):
+#   FTP_SERVER      e.g. ftp.oceansalivekenya.org (GoDaddy → cPanel → FTP Accounts)
+#   FTP_USERNAME    the FTP account's username
+#   FTP_PASSWORD    the FTP account's password
+#   FTP_SERVER_DIR  optional, defaults to public_html/ (must end with /)
+#   FTP_PROTOCOL    optional, ftps (default) or ftp
+# Until FTP_SERVER is set the workflow still builds (so mistakes are caught) but skips the upload.
+
+name: Publish website to GoDaddy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'oceans-alive/**'
+      - '.github/workflows/deploy-godaddy.yml'
+  workflow_dispatch:
+
+# Saves made while a publish is running wait for it, then publish once with the latest content.
+concurrency:
+  group: publish-godaddy
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      HAS_FTP: ${{ secrets.FTP_SERVER != '' }}
+    steps:
+      - name: Get the website files
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: oceans-alive/package-lock.json
+
+      - name: Install
+        working-directory: oceans-alive
+        run: npm ci
+
+      - name: Build the website
+        working-directory: oceans-alive
+        run: npm run build:godaddy
+
+      - name: Upload to GoDaddy
+        if: env.HAS_FTP == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ secrets.FTP_PROTOCOL || 'ftps' }}
+          local-dir: oceans-alive/godaddy-upload/
+          server-dir: ${{ secrets.FTP_SERVER_DIR || 'public_html/' }}
+
+      - name: Upload skipped
+        if: env.HAS_FTP != 'true'
+        run: echo "::warning::Built OK, but nothing was uploaded because the FTP_SERVER secret is not set yet."
