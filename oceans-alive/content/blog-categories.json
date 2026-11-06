@@ -1,0 +1,257 @@
+{
+  "categories": [
+    {
+      "name": "Coral Restoration",
+      "slug": "coral-restoration",
+      "eyebrow": "Reef Gardening · Kilifi County",
+      "headline": "Coral\nRestoration",
+      "description": "Since 2019, community fishers have been trained as certified reef gardeners - growing coral fragments in underwater nurseries and transplanting them to bleached areas of Kilifi's reefs.",
+      "heroImage": "/images/divers.jpg",
+      "heroImageAlt": "Community divers at the Kuruwitu reef restoration site",
+      "accentColor": "Turquoise",
+      "stats": [
+        {
+          "number": "25,000+",
+          "label": "Colonies Planted"
+        },
+        {
+          "number": "85%",
+          "label": "Survival Rate"
+        },
+        {
+          "number": "400%",
+          "label": "Fish Biomass Increase"
+        },
+        {
+          "number": "40+",
+          "label": "Divers Trained"
+        }
+      ],
+      "cardDescription": "Reef restoration & gardening",
+      "cardImage": "/images/divers.jpg"
+    },
+    {
+      "name": "Women & Ocean",
+      "slug": "women-ocean",
+      "eyebrow": "Women Leaders · Livelihoods · Kilifi",
+      "headline": "Women\n& Ocean",
+      "description": "Women are at the heart of conservation at Oceans Alive - from the Trash4Cash plastic collection programme to the LIFT Network and mangrove restoration.",
+      "heroImage": "/images/trashforcash3.jpg",
+      "heroImageAlt": "Women in Trash4Cash collecting plastic on Kenya's coast",
+      "accentColor": "Seafoam green",
+      "stats": [
+        {
+          "number": "120",
+          "label": "Women in Trash4Cash"
+        },
+        {
+          "number": "2+ t",
+          "label": "Plastic Collected Monthly"
+        },
+        {
+          "number": "LIFT",
+          "label": "Women's Network"
+        },
+        {
+          "number": "2003",
+          "label": "Since"
+        }
+      ],
+      "cardDescription": "Women-led conservation",
+      "cardImage": "/images/trashforcash3.jpg"
+    },
+    {
+      "name": "Fisheries",
+      "slug": "fisheries",
+      "eyebrow": "Community Fisheries · BMU Governance",
+      "headline": "Fisheries\nGovernance",
+      "description": "Working with fisher communities to co-manage 150 km² of Kilifi's coastal waters - rebuilding fish stocks and ensuring fishing remains viable for generations to come.",
+      "heroImage": "/images/fisher.jpg",
+      "heroImageAlt": "Fisher at sea in Kilifi County",
+      "accentColor": "Turquoise",
+      "stats": [
+        {
+          "number": "150 km²",
+          "label": "Under Co-Management"
+        },
+        {
+          "number": "400%",
+          "label": "Fish Biomass Increase"
+        },
+        {
+          "number": "12",
+          "label": "BMU Representatives"
+        },
+        {
+          "number": "20+",
+          "label": "Years Active"
+        }
+      ],
+      "cardDescription": "BMU governance & fish stocks",
+      "cardImage": "/images/fisher.jpg"
+    },
+    {
+      "name": "Education",
+      "slug": "education",
+      "eyebrow": "Schools · Interns · Community Training",
+      "headline": "Ocean\nEducation",
+      "description": "Building a generation of marine conservationists - from primary school field days at Kuruwitu to international intern placements and community-wide training.",
+      "heroImage": "/images/kids.jpg",
+      "heroImageAlt": "Children learning about the ocean at Kuruwitu",
+      "accentColor": "Turquoise",
+      "stats": [
+        {
+          "number": "2,500+",
+          "label": "People Educated"
+        },
+        {
+          "number": "200+",
+          "label": "Volunteers Trained"
+        },
+        {
+          "number": "Kilifi",
+          "label": "County-Wide Reach"
+        },
+        {
+          "number": "Int'l",
+          "label": "Intern Placements"
+        }
+      ],
+      "cardDescription": "Learning & training",
+      "cardImage": "/images/kids.jpg"
+    },
+    {
+      "name": "Governance",
+      "slug": "governance",
+      "eyebrow": "Community Governance · Marine Policy",
+      "headline": "Community\nGovernance",
+      "description": "From local BMU structures to national marine policy - helping fisher communities own, govern, and defend their coastal resources through the LMMA and beyond.",
+      "heroImage": "/images/BMUmeeting.jpg",
+      "heroImageAlt": "BMU governance meeting in Kilifi County",
+      "accentColor": "Turquoise",
+      "stats": [
+        {
+          "number": "150 km²",
+          "label": "LMMA Plan Area"
+        },
+        {
+          "number": "12",
+          "label": "BMU Representatives"
+        },
+        {
+          "number": "4",
+          "label": "Partner Communities"
+        },
+        {
+          "number": "2003",
+          "label": "Since"
+        }
+      ],
+      "cardDescription": "Community governance",
+      "cardImage": "/images/BMUmeeting.jpg"
+    },
+    {
+      "name": "Recognition",
+      "slug": "recognition",
+      "eyebrow": "Awards · Partnerships · Global Networks",
+      "headline": "Recognition\n& Partners",
+      "description": "Oceans Alive's community conservation model has earned global recognition - from the IUCN World Congress to international partnerships with Coral Guardian and beyond.",
+      "heroImage": "/images/oceanday.jpg",
+      "heroImageAlt": "World Ocean Day celebrations in Kilifi",
+      "accentColor": "Turquoise",
+      "stats": [
+        {
+          "number": "2025",
+          "label": "IUCN World Congress"
+        },
+        {
+          "number": "40+",
+          "label": "Partner Organisations"
+        },
+        {
+          "number": "20+",
+          "label": "Years Active"
+        },
+        {
+          "number": "Global",
+          "label": "Conservation Network"
+        }
+      ],
+      "cardDescription": "Awards & partnerships",
+      "cardImage": "/images/oceanday.jpg"
+    },
+    {
+      "name": "Impact Stories",
+      "slug": "impact-stories",
+      "eyebrow": "Field Results · Real Change · Kilifi County",
+      "headline": "Impact\nStories",
+      "description": "These are not press releases - they are the real, measurable, human outcomes of 20+ years of community-led conservation on Kenya's coast. Stories of reefs rebuilt, livelihoods created, and governance won.",
+      "heroImage": "/images/oceanculturelife.jpg",
+      "heroImageAlt": "Community life and conservation impact along the Kilifi coast",
+      "accentColor": "Turquoise",
+      "stats": [],
+      "cardDescription": "Field results & real change",
+      "cardImage": "/images/oceanculturelife.jpg"
+    },
+    {
+      "name": "Community News",
+      "slug": "community-news",
+      "eyebrow": "Kilifi Communities · Local Voices · Coastal Kenya",
+      "headline": "Community\nNews",
+      "description": "From BMU governance decisions to women's group milestones and coastal events - the news that matters most to the 1,200+ people whose lives and livelihoods are intertwined with Kenya's ocean.",
+      "heroImage": "/images/communities.jpg",
+      "heroImageAlt": "Kilifi coastal community members at a conservation gathering",
+      "accentColor": "Seafoam green",
+      "stats": [
+        {
+          "number": "1,200+",
+          "label": "Community Members"
+        },
+        {
+          "number": "4",
+          "label": "Partner Communities"
+        },
+        {
+          "number": "12",
+          "label": "BMU Representatives"
+        },
+        {
+          "number": "270 km",
+          "label": "Coastline Covered"
+        }
+      ],
+      "cardDescription": "Local voices from the coast",
+      "cardImage": "/images/communities.jpg"
+    },
+    {
+      "name": "Latest Updates",
+      "slug": "updates",
+      "eyebrow": "OAF News · Events · Announcements",
+      "headline": "Latest\nUpdates",
+      "description": "The latest from Oceans Alive Foundation - programme updates, upcoming events, volunteer opportunities, partnership announcements, and everything happening across Kilifi's coastline.",
+      "heroImage": "/images/oceanday.jpg",
+      "heroImageAlt": "Oceans Alive Foundation team at World Ocean Day 2024",
+      "accentColor": "Turquoise",
+      "stats": [
+        {
+          "number": "2025",
+          "label": "IUCN Featured"
+        },
+        {
+          "number": "20+",
+          "label": "Years Active"
+        },
+        {
+          "number": "14",
+          "label": "Active Programmes"
+        },
+        {
+          "number": "40+",
+          "label": "Global Partners"
+        }
+      ],
+      "cardDescription": "News & announcements",
+      "cardImage": "/images/oceanday.jpg"
+    }
+  ]
+}
