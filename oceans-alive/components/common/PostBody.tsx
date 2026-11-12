@@ -52,10 +52,9 @@ const components: Components = {
     return (
       <span className="block my-10 -mx-6 md:-mx-12">
         {/* Whole photo at its own shape, so faces are never cropped off. */}
-        <span className="block rounded-2xl overflow-hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={src} alt={alt ?? ''} className="block w-full h-auto" loading="lazy" />
-        </span>
+        {/* Tall (portrait) photos are capped in height and centred. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={src} alt={alt ?? ''} className="block mx-auto max-w-full h-auto max-h-[640px] rounded-2xl" loading="lazy" />
         {title && <span className="block text-xs text-gray-400 mt-3 italic px-6 md:px-12">{title}</span>}
       </span>
     );
