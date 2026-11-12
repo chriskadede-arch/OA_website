@@ -6,16 +6,42 @@
  *   • paragraphs, headings, lists and links
  *   • a photo on its own line → wide rounded photo shown whole; its "title" becomes the caption
  *   • a quote → big pull quote; a last line starting with "—" becomes the attribution
+ *   • a YouTube link on its own line → an embedded video player
  */
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import type { Components } from 'react-markdown';
+
+/** The video id from any common YouTube link (youtu.be/…, watch?v=…, shorts/…, embed/…). */
+function youTubeId(href: string): string | null {
+  const m = /(?:youtu\.be\/|youtube\.com\/(?:watch\?(?:.*&)?v=|shorts\/|embed\/|live\/))([A-Za-z0-9_-]{11})/.exec(href);
+  return m ? m[1] : null;
+}
 
 const components: Components = {
   p({ node, children }) {
     // A paragraph that only holds a photo is rendered as a figure (no <p> around it).
     const only = node?.children?.length === 1 ? node.children[0] : null;
     if (only && only.type === 'element' && only.tagName === 'img') return <>{children}</>;
+    // A paragraph that only holds a YouTube link becomes a video player.
+    const href = only && only.type === 'element' && only.tagName === 'a' ? String(only.properties?.href ?? '') : '';
+    const videoId = href ? youTubeId(href) : null;
+    if (videoId) {
+      return (
+        <span className="block my-10 -mx-6 md:-mx-12">
+          <span className="block relative w-full rounded-2xl overflow-hidden bg-ocean-midnight" style={{ aspectRatio: '16 / 9' }}>
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+              title="YouTube video"
+              className="absolute inset-0 w-full h-full"
+              loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </span>
+        </span>
+      );
+    }
     const text = node?.children?.length === 1 && node.children[0].type === 'text' ? node.children[0].value : '';
     if (/^[—–-]\s/.test(text)) {
       return <cite className="block text-sm text-ocean-turquoise font-semibold not-italic">{children}</cite>;
