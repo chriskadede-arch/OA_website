@@ -19,6 +19,17 @@
   ],
   "STATIC_GALLERY": [
     {
+      "id": "42",
+      "title": "The Royal Visit",
+      "description": "His Majesty King Charles III meets the Kuruwitu coral team, November 2023",
+      "category": "Events",
+      "type": "photo",
+      "image_url": "/images/gallery/royal-visit-king-charles-at-kuruwitu.jpg",
+      "created_at": "",
+      "display_order": 1,
+      "is_published": true
+    },
+    {
       "id": "40",
       "title": "KCMAP Launch Stakeholders",
       "description": "Stakeholders gather at the launch of the Kuruwitu Co-Management Area Plan",
@@ -26,7 +37,7 @@
       "type": "photo",
       "image_url": "/images/gallery/kcmap-launch-stakeholders.jpg",
       "created_at": "",
-      "display_order": 1,
+      "display_order": 2,
       "is_published": true
     },
     {
@@ -37,7 +48,7 @@
       "type": "photo",
       "image_url": "/images/gallery/kcmap-launch-media-interview.jpg",
       "created_at": "",
-      "display_order": 2,
+      "display_order": 3,
       "is_published": true
     },
     {
@@ -48,7 +59,7 @@
       "type": "photo",
       "image_url": "/images/gallery/habitats-summit-2024-audience.jpg",
       "created_at": "",
-      "display_order": 3,
+      "display_order": 4,
       "is_published": true
     },
     {
@@ -59,7 +70,7 @@
       "type": "photo",
       "image_url": "/images/gallery/habitats-summit-2024-des-bowden.jpg",
       "created_at": "",
-      "display_order": 4,
+      "display_order": 5,
       "is_published": true
     },
     {
@@ -70,7 +81,7 @@
       "type": "photo",
       "image_url": "/images/gallery/mombasa-show-2024-crowd-at-stand.jpg",
       "created_at": "",
-      "display_order": 5,
+      "display_order": 6,
       "is_published": true
     },
     {
@@ -81,7 +92,7 @@
       "type": "photo",
       "image_url": "/images/gallery/mombasa-show-2024-visitors-at-stand.jpg",
       "created_at": "",
-      "display_order": 6,
+      "display_order": 7,
       "is_published": true
     },
     {
@@ -92,7 +103,7 @@
       "type": "photo",
       "image_url": "/images/gallery/project-reel-intern-cohort-group.jpg",
       "created_at": "",
-      "display_order": 7,
+      "display_order": 8,
       "is_published": true
     },
     {
@@ -103,7 +114,7 @@
       "type": "photo",
       "image_url": "/images/gallery/project-reel-interns-thumbs-up.jpg",
       "created_at": "",
-      "display_order": 8,
+      "display_order": 9,
       "is_published": true
     },
     {
@@ -114,7 +125,7 @@
       "type": "photo",
       "image_url": "/images/gallery/project-reel-young-interns.jpg",
       "created_at": "",
-      "display_order": 9,
+      "display_order": 10,
       "is_published": true
     },
     {
@@ -125,7 +136,7 @@
       "type": "photo",
       "image_url": "/images/gallery/mama-karanga-weaving-session.jpg",
       "created_at": "",
-      "display_order": 10,
+      "display_order": 11,
       "is_published": true
     },
     {
@@ -136,7 +147,7 @@
       "type": "photo",
       "image_url": "/images/gallery/trash4cash-tshirt.jpg",
       "created_at": "",
-      "display_order": 11,
+      "display_order": 12,
       "is_published": true
     },
     {
@@ -147,7 +158,7 @@
       "type": "photo",
       "image_url": "/images/gallery/project-reel-classroom-hands-up.jpg",
       "created_at": "",
-      "display_order": 12,
+      "display_order": 13,
       "is_published": true
     },
     {
@@ -158,7 +169,7 @@
       "type": "photo",
       "image_url": "/images/gallery/project-reel-pupil-writing.jpg",
       "created_at": "",
-      "display_order": 13,
+      "display_order": 14,
       "is_published": true
     },
     {
@@ -169,7 +180,7 @@
       "type": "photo",
       "image_url": "/images/gallery/project-reel-survey-conversation.jpg",
       "created_at": "",
-      "display_order": 14,
+      "display_order": 15,
       "is_published": true
     },
     {
@@ -180,7 +191,7 @@
       "type": "photo",
       "image_url": "/images/gallery/project-reel-coral-nursery.jpg",
       "created_at": "",
-      "display_order": 15,
+      "display_order": 16,
       "is_published": true
     },
     {
@@ -191,7 +202,7 @@
       "type": "photo",
       "image_url": "/images/gallery/project-reel-restored-coral-blocks.jpg",
       "created_at": "",
-      "display_order": 16,
+      "display_order": 17,
       "is_published": true
     },
     {
@@ -202,7 +213,7 @@
       "type": "photo",
       "image_url": "/images/gallery/project-reel-team-in-the-water.jpg",
       "created_at": "",
-      "display_order": 17,
+      "display_order": 18,
       "is_published": true
     },
     {
@@ -213,7 +224,7 @@
       "type": "photo",
       "image_url": "/images/gallery/project-reel-heading-out-by-boat.jpg",
       "created_at": "",
-      "display_order": 18,
+      "display_order": 19,
       "is_published": true
     },
     {
@@ -224,7 +235,7 @@
       "type": "photo",
       "image_url": "/images/gallery/project-reel-team-at-the-boat.jpg",
       "created_at": "",
-      "display_order": 19,
+      "display_order": 20,
       "is_published": true
     },
     {
@@ -235,7 +246,7 @@
       "type": "photo",
       "image_url": "/images/gallery/project-reel-team-meeting.jpg",
       "created_at": "",
-      "display_order": 20,
+      "display_order": 21,
       "is_published": true
     },
     {
@@ -246,7 +257,7 @@
       "type": "photo",
       "image_url": "/images/divers.jpg",
       "created_at": "",
-      "display_order": 21,
+      "display_order": 22,
       "is_published": true
     },
     {
@@ -257,7 +268,7 @@
       "type": "photo",
       "image_url": "/images/trashforcash.jpg",
       "created_at": "",
-      "display_order": 22,
+      "display_order": 23,
       "is_published": true
     },
     {
@@ -268,7 +279,7 @@
       "type": "photo",
       "image_url": "/images/trashforcash2.jpg",
       "created_at": "",
-      "display_order": 23,
+      "display_order": 24,
       "is_published": true
     },
     {
@@ -279,7 +290,7 @@
       "type": "photo",
       "image_url": "/images/trashforcash3.jpg",
       "created_at": "",
-      "display_order": 24,
+      "display_order": 25,
       "is_published": true
     },
     {
@@ -290,7 +301,7 @@
       "type": "photo",
       "image_url": "/images/BMUmeeting.jpg",
       "created_at": "",
-      "display_order": 25,
+      "display_order": 26,
       "is_published": true
     },
     {
@@ -301,7 +312,7 @@
       "type": "photo",
       "image_url": "/images/BMUS.jpg",
       "created_at": "",
-      "display_order": 26,
+      "display_order": 27,
       "is_published": true
     },
     {
@@ -312,7 +323,7 @@
       "type": "photo",
       "image_url": "/images/oceanday.jpg",
       "created_at": "",
-      "display_order": 27,
+      "display_order": 28,
       "is_published": true
     },
     {
@@ -323,7 +334,7 @@
       "type": "photo",
       "image_url": "/images/fisher.jpg",
       "created_at": "",
-      "display_order": 28,
+      "display_order": 29,
       "is_published": true
     },
     {
@@ -334,7 +345,7 @@
       "type": "photo",
       "image_url": "/images/farmernaction.jpg",
       "created_at": "",
-      "display_order": 29,
+      "display_order": 30,
       "is_published": true
     },
     {
@@ -345,7 +356,7 @@
       "type": "photo",
       "image_url": "/images/womenlearning.jpg",
       "created_at": "",
-      "display_order": 30,
+      "display_order": 31,
       "is_published": true
     },
     {
@@ -356,7 +367,7 @@
       "type": "photo",
       "image_url": "/images/womenlearning2.jpg",
       "created_at": "",
-      "display_order": 31,
+      "display_order": 32,
       "is_published": true
     },
     {
@@ -367,7 +378,7 @@
       "type": "photo",
       "image_url": "/images/kids.jpg",
       "created_at": "",
-      "display_order": 32,
+      "display_order": 33,
       "is_published": true
     },
     {
@@ -378,7 +389,7 @@
       "type": "photo",
       "image_url": "/images/learning.jpg",
       "created_at": "",
-      "display_order": 33,
+      "display_order": 34,
       "is_published": true
     },
     {
@@ -389,7 +400,7 @@
       "type": "photo",
       "image_url": "/images/coralteaching.jpg",
       "created_at": "",
-      "display_order": 34,
+      "display_order": 35,
       "is_published": true
     },
     {
@@ -400,7 +411,7 @@
       "type": "photo",
       "image_url": "/images/interns.jpg",
       "created_at": "",
-      "display_order": 35,
+      "display_order": 36,
       "is_published": true
     },
     {
@@ -411,7 +422,7 @@
       "type": "photo",
       "image_url": "/images/Capacityassess.jpg",
       "created_at": "",
-      "display_order": 36,
+      "display_order": 37,
       "is_published": true
     },
     {
@@ -422,7 +433,7 @@
       "type": "photo",
       "image_url": "/images/communities.jpg",
       "created_at": "",
-      "display_order": 37,
+      "display_order": 38,
       "is_published": true
     },
     {
@@ -433,7 +444,7 @@
       "type": "photo",
       "image_url": "/images/oceanculturelife.jpg",
       "created_at": "",
-      "display_order": 38,
+      "display_order": 39,
       "is_published": true
     },
     {
@@ -444,7 +455,7 @@
       "type": "photo",
       "image_url": "/images/oceansmen.jpg",
       "created_at": "",
-      "display_order": 39,
+      "display_order": 40,
       "is_published": true
     },
     {
@@ -455,7 +466,7 @@
       "type": "photo",
       "image_url": "/images/farmers.jpg",
       "created_at": "",
-      "display_order": 40,
+      "display_order": 41,
       "is_published": true
     },
     {
@@ -466,7 +477,7 @@
       "type": "photo",
       "image_url": "/images/kamakukijcma.jpg",
       "created_at": "",
-      "display_order": 41,
+      "display_order": 42,
       "is_published": true
     }
   ],
