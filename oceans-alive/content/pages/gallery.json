@@ -19,6 +19,72 @@
   ],
   "STATIC_GALLERY": [
     {
+      "id": "22",
+      "title": "Project REEL Coral Nursery",
+      "description": "A snorkeler checks a Project REEL coral nursery table at Kuruwitu",
+      "category": "Coral Restoration",
+      "type": "photo",
+      "image_url": "/images/gallery/project-reel-coral-nursery.jpg",
+      "created_at": "",
+      "display_order": 1,
+      "is_published": true
+    },
+    {
+      "id": "23",
+      "title": "Restored Coral Blocks",
+      "description": "Coral growing on restoration blocks at the Project REEL site",
+      "category": "Coral Restoration",
+      "type": "photo",
+      "image_url": "/images/gallery/project-reel-restored-coral-blocks.jpg",
+      "created_at": "",
+      "display_order": 2,
+      "is_published": true
+    },
+    {
+      "id": "24",
+      "title": "Project REEL Team in the Water",
+      "description": "Project REEL interns celebrate in the water at Kuruwitu",
+      "category": "Community Life",
+      "type": "photo",
+      "image_url": "/images/gallery/project-reel-team-in-the-water.jpg",
+      "created_at": "",
+      "display_order": 3,
+      "is_published": true
+    },
+    {
+      "id": "25",
+      "title": "Heading Out by Boat",
+      "description": "Project REEL interns prepare their snorkelling gear on the boat",
+      "category": "Community Life",
+      "type": "photo",
+      "image_url": "/images/gallery/project-reel-heading-out-by-boat.jpg",
+      "created_at": "",
+      "display_order": 4,
+      "is_published": true
+    },
+    {
+      "id": "26",
+      "title": "Project REEL Team at the Boat",
+      "description": "Project REEL interns and the new training cohort at the shoreline",
+      "category": "Community Life",
+      "type": "photo",
+      "image_url": "/images/gallery/project-reel-team-at-the-boat.jpg",
+      "created_at": "",
+      "display_order": 5,
+      "is_published": true
+    },
+    {
+      "id": "27",
+      "title": "Project REEL Team Meeting",
+      "description": "The Project REEL team meets at the project base",
+      "category": "Community Life",
+      "type": "photo",
+      "image_url": "/images/gallery/project-reel-team-meeting.jpg",
+      "created_at": "",
+      "display_order": 6,
+      "is_published": true
+    },
+    {
       "id": "1",
       "title": "Coral Restoration Divers",
       "description": "Divers working on coral restoration at Kuruwitu",
@@ -26,7 +92,7 @@
       "type": "photo",
       "image_url": "/images/divers.jpg",
       "created_at": "",
-      "display_order": 1,
+      "display_order": 7,
       "is_published": true
     },
     {
@@ -37,7 +103,7 @@
       "type": "photo",
       "image_url": "/images/trashforcash.jpg",
       "created_at": "",
-      "display_order": 2,
+      "display_order": 8,
       "is_published": true
     },
     {
@@ -48,7 +114,7 @@
       "type": "photo",
       "image_url": "/images/trashforcash2.jpg",
       "created_at": "",
-      "display_order": 3,
+      "display_order": 9,
       "is_published": true
     },
     {
@@ -59,7 +125,7 @@
       "type": "photo",
       "image_url": "/images/trashforcash3.jpg",
       "created_at": "",
-      "display_order": 4,
+      "display_order": 10,
       "is_published": true
     },
     {
@@ -70,7 +136,7 @@
       "type": "photo",
       "image_url": "/images/BMUmeeting.jpg",
       "created_at": "",
-      "display_order": 5,
+      "display_order": 11,
       "is_published": true
     },
     {
@@ -81,7 +147,7 @@
       "type": "photo",
       "image_url": "/images/BMUS.jpg",
       "created_at": "",
-      "display_order": 6,
+      "display_order": 12,
       "is_published": true
     },
     {
@@ -92,7 +158,7 @@
       "type": "photo",
       "image_url": "/images/oceanday.jpg",
       "created_at": "",
-      "display_order": 7,
+      "display_order": 13,
       "is_published": true
     },
     {
@@ -103,7 +169,7 @@
       "type": "photo",
       "image_url": "/images/fisher.jpg",
       "created_at": "",
-      "display_order": 8,
+      "display_order": 14,
       "is_published": true
     },
     {
@@ -114,7 +180,7 @@
       "type": "photo",
       "image_url": "/images/farmernaction.jpg",
       "created_at": "",
-      "display_order": 9,
+      "display_order": 15,
       "is_published": true
     },
     {
@@ -125,7 +191,7 @@
       "type": "photo",
       "image_url": "/images/womenlearning.jpg",
       "created_at": "",
-      "display_order": 10,
+      "display_order": 16,
       "is_published": true
     },
     {
@@ -136,7 +202,7 @@
       "type": "photo",
       "image_url": "/images/womenlearning2.jpg",
       "created_at": "",
-      "display_order": 11,
+      "display_order": 17,
       "is_published": true
     },
     {
@@ -147,7 +213,7 @@
       "type": "photo",
       "image_url": "/images/kids.jpg",
       "created_at": "",
-      "display_order": 12,
+      "display_order": 18,
       "is_published": true
     },
     {
@@ -158,7 +224,7 @@
       "type": "photo",
       "image_url": "/images/learning.jpg",
       "created_at": "",
-      "display_order": 13,
+      "display_order": 19,
       "is_published": true
     },
     {
@@ -169,7 +235,7 @@
       "type": "photo",
       "image_url": "/images/coralteaching.jpg",
       "created_at": "",
-      "display_order": 14,
+      "display_order": 20,
       "is_published": true
     },
     {
@@ -180,7 +246,7 @@
       "type": "photo",
       "image_url": "/images/interns.jpg",
       "created_at": "",
-      "display_order": 15,
+      "display_order": 21,
       "is_published": true
     },
     {
@@ -191,7 +257,7 @@
       "type": "photo",
       "image_url": "/images/Capacityassess.jpg",
       "created_at": "",
-      "display_order": 16,
+      "display_order": 22,
       "is_published": true
     },
     {
@@ -202,7 +268,7 @@
       "type": "photo",
       "image_url": "/images/communities.jpg",
       "created_at": "",
-      "display_order": 17,
+      "display_order": 23,
       "is_published": true
     },
     {
@@ -213,7 +279,7 @@
       "type": "photo",
       "image_url": "/images/oceanculturelife.jpg",
       "created_at": "",
-      "display_order": 18,
+      "display_order": 24,
       "is_published": true
     },
     {
@@ -224,7 +290,7 @@
       "type": "photo",
       "image_url": "/images/oceansmen.jpg",
       "created_at": "",
-      "display_order": 19,
+      "display_order": 25,
       "is_published": true
     },
     {
@@ -235,7 +301,7 @@
       "type": "photo",
       "image_url": "/images/farmers.jpg",
       "created_at": "",
-      "display_order": 20,
+      "display_order": 26,
       "is_published": true
     },
     {
@@ -246,7 +312,7 @@
       "type": "photo",
       "image_url": "/images/kamakukijcma.jpg",
       "created_at": "",
-      "display_order": 21,
+      "display_order": 27,
       "is_published": true
     }
   ],
