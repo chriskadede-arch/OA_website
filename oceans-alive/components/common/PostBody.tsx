@@ -4,7 +4,7 @@
  * ══════════════════════════════════════════════════════════════════
  * Editors write the article in Pages CMS. This decides how it looks:
  *   • paragraphs, headings, lists and links
- *   • a photo on its own line → wide rounded photo; its "title" becomes the caption
+ *   • a photo on its own line → wide rounded photo shown whole; its "title" becomes the caption
  *   • a quote → big pull quote; a last line starting with "—" becomes the attribution
  */
 import ReactMarkdown from 'react-markdown';
@@ -25,9 +25,10 @@ const components: Components = {
   img({ src, alt, title }) {
     return (
       <span className="block my-10 -mx-6 md:-mx-12">
-        <span className="block relative rounded-2xl overflow-hidden" style={{ height: '360px' }}>
+        {/* Whole photo at its own shape, so faces are never cropped off. */}
+        <span className="block rounded-2xl overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={src} alt={alt ?? ''} className="absolute inset-0 w-full h-full object-cover" />
+          <img src={src} alt={alt ?? ''} className="block w-full h-auto" loading="lazy" />
         </span>
         {title && <span className="block text-xs text-gray-400 mt-3 italic px-6 md:px-12">{title}</span>}
       </span>
