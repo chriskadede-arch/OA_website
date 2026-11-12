@@ -658,6 +658,18 @@ content:
               - name: large
                 label: Large
                 type: boolean
+              - name: image
+                label: Image
+                type: image
+              - name: imageAlt
+                label: Image description (alt text, for screen readers)
+                type: string
+              - name: link
+                label: Link (web address, e.g. /contact)
+                type: string
+              - name: linkText
+                label: Link text
+                type: string
           - name: hero
             label: Hero
             type: object

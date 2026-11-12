@@ -62,10 +62,17 @@ export default function RecognitionPage() {
                 key={award.title}
                 className="relative group overflow-hidden rounded-2xl border border-gray-200 bg-white p-7 hover:shadow-xl hover:border-ocean-turquoise/30 transition-all duration-300"
               >
+                {/* Optional photo (added in the editor) */}
+                {award.image && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={award.image} alt={award.imageAlt || award.title} className="block max-w-none w-[calc(100%+3.5rem)] -mx-7 -mt-7 mb-6 aspect-[2/1] object-cover" loading="lazy" />
+                )}
                 {/* Year watermark */}
-                <div className="absolute top-4 right-5 text-4xl font-poppins font-bold text-gray-100 leading-none select-none pointer-events-none">
-                  {award.year}
-                </div>
+                {!award.image && (
+                  <div className="absolute top-4 right-5 text-4xl font-poppins font-bold text-gray-100 leading-none select-none pointer-events-none">
+                    {award.year}
+                  </div>
+                )}
 
                 <div className="relative">
                   <span className={`inline-block text-[9px] font-bold uppercase tracking-[0.15em] px-2.5 py-1 rounded-full mb-5 ${award.tagColor}`}>
@@ -76,6 +83,12 @@ export default function RecognitionPage() {
                   </h3>
                   <p className="text-[10px] text-gray-400 uppercase tracking-wider mb-4">{award.sub}</p>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">{award.body}</p>
+
+                  {award.link && (
+                    <a href={award.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-bold text-ocean-turquoise hover:text-ocean-midnight transition-colors">
+                      {award.linkText || 'Read more'} →
+                    </a>
+                  )}
 
                   {award.highlight && (
                     <div className="border-t border-white/[0.07] pt-4 mt-4">

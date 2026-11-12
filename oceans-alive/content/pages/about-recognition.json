@@ -12,7 +12,11 @@
       "sub": "Kuruwitu Marine Sanctuary · Kilifi, Kenya",
       "body": "His Majesty King Charles III personally visited the Kuruwitu project, launched a coral restoration block bearing his royal cypher into the waters, and endorsed the community-led conservation model to a global audience of millions.",
       "highlight": "Royal endorsement carried the work of Kilifi's fishermen to every corner of the world.",
-      "large": true
+      "large": true,
+      "image": "",
+      "imageAlt": "",
+      "link": "",
+      "linkText": ""
     },
     {
       "year": "2017",
@@ -22,7 +26,11 @@
       "sub": "United Nations Development Programme",
       "body": "Kuruwitu CBO wins the prestigious UNDP Equator Prize for exemplary community-based approaches to conservation and sustainable development - placing the community-led model on the world stage of environmental leadership.",
       "highlight": "One of the world's most recognised prizes for grassroots environmental action.",
-      "large": true
+      "large": true,
+      "image": "",
+      "imageAlt": "",
+      "link": "",
+      "linkText": ""
     },
     {
       "year": "2022",
@@ -32,7 +40,25 @@
       "sub": "International Union for Conservation of Nature",
       "body": "Kuruwitu CBO wins the 2022 IUCN Blue Champions Award, recognizing outstanding ocean conservation leadership and two decades of proven community-driven marine protection delivering 400% fish biomass increase and 30% coral recovery.",
       "highlight": "Global recognition for champions protecting our ocean for future generations.",
-      "large": true
+      "large": true,
+      "image": "",
+      "imageAlt": "",
+      "link": "",
+      "linkText": ""
+    },
+    {
+      "year": "2022",
+      "tag": "UN Recognition",
+      "tagColor": "bg-ocean-turquoise/15 text-ocean-turquoise border border-ocean-turquoise/30",
+      "title": "The UN Appreciates Kuruwitu's Efforts on Coral Restoration",
+      "sub": "UN News · 17 July 2022",
+      "body": "UN News recognised the efforts of Kuruwitu's villagers to combat coral degradation, with Oceans Alive at the helm of the coral-based Locally Managed Marine Area (LMMA). Kenyans.co.ke published an article commending the work.",
+      "highlight": "",
+      "large": false,
+      "image": "/images/recognition/un-recognition-2022.jpg",
+      "imageAlt": "Delegates in a United Nations conference hall",
+      "link": "",
+      "linkText": "Read the full article"
     },
     {
       "year": "2021",
@@ -42,7 +68,11 @@
       "sub": "UN Food Systems Summit",
       "body": "Recognized as a Food System Game Changer for innovative community-led approaches linking ocean health, fisheries management, and food security in coastal communities.",
       "highlight": "Transforming how communities manage ocean resources for sustainable livelihoods.",
-      "large": false
+      "large": false,
+      "image": "",
+      "imageAlt": "",
+      "link": "",
+      "linkText": ""
     },
     {
       "year": "2024",
@@ -52,7 +82,11 @@
       "sub": "World Economic Forum",
       "body": "Selected as a top innovator by the World Economic Forum's UpLink platform for scalable ocean conservation solutions.",
       "highlight": "Global recognition for innovation in marine conservation.",
-      "large": false
+      "large": false,
+      "image": "",
+      "imageAlt": "",
+      "link": "",
+      "linkText": ""
     },
     {
       "year": "2025",
@@ -62,7 +96,11 @@
       "sub": "International Union for Conservation of Nature",
       "body": "Presented the Kuruwitu community co-management model as a globally scalable blueprint for marine governance at the world's largest conservation forum.",
       "highlight": "From 30 hectares to a global template - Kuruwitu on the world stage.",
-      "large": false
+      "large": false,
+      "image": "",
+      "imageAlt": "",
+      "link": "",
+      "linkText": ""
     }
   ],
   "hero": {
