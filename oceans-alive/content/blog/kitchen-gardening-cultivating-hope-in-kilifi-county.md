@@ -1,7 +1,7 @@
 ---
 title: 'Kitchen Gardening: Cultivating Hope in Kilifi County, One Sack at a Time'
 status: Published
-category: Impact Stories
+category: Women & Ocean
 date: '2026-11-12'
 highlight: None
 excerpt: >-

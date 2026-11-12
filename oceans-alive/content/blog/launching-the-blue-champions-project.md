@@ -1,7 +1,7 @@
 ---
 title: Launching the Blue Champions Project
 status: Published
-category: Recognition
+category: Governance
 date: '2021-07-01'
 highlight: None
 excerpt: >-
