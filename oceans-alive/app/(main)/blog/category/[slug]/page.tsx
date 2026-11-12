@@ -169,21 +169,21 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {others.map((cat) => (
               <Link
                 key={cat.slug}
                 href={`/blog/category/${cat.slug}`}
                 className="group relative rounded-2xl overflow-hidden block"
-                style={{ minHeight: '140px' }}
+                style={{ minHeight: '280px' }}
               >
-                <Image src={cat.cardImage} alt={cat.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-75" />
-                <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight/60 via-ocean-midnight/25 to-transparent" />
+                <Image src={cat.cardImage} alt={cat.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight/90 via-ocean-midnight/20 to-transparent" />
 
-                <div className="relative z-10 p-5 flex flex-col justify-end h-full" style={{ minHeight: '140px' }}>
-                  <p className="text-white/50 text-[10px] uppercase tracking-widest font-semibold mb-1">{cat.cardDescription}</p>
+                <div className="relative z-10 p-6 flex flex-col justify-end h-full" style={{ minHeight: '280px' }}>
+                  <p className="text-white/70 text-[11px] uppercase tracking-widest font-semibold mb-1.5">{cat.cardDescription}</p>
                   <div className="flex items-center justify-between">
-                    <h3 className="font-poppins font-bold text-white text-sm group-hover:text-ocean-turquoise transition-colors">{cat.name}</h3>
+                    <h3 className="font-poppins font-bold text-white text-lg group-hover:text-ocean-turquoise transition-colors">{cat.name}</h3>
                     <svg
                       className="w-4 h-4 text-white/30 group-hover:text-ocean-turquoise group-hover:translate-x-0.5 transition-all"
                       fill="none"
