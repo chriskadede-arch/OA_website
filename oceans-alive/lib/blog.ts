@@ -115,12 +115,16 @@ export function getCategoryByName(name: string): BlogCategory | undefined {
   return getCategories().find((c) => c.name === name);
 }
 
-/** Stories to suggest under an article: same category first, then the newest others. */
+/** Stories to suggest under an article: published ones first (same category, then
+ *  newest others), then "Coming soon" ones to fill the row. */
 export function getRelatedPosts(post: Post, count = 3): Post[] {
   const others = getAllPosts().filter((p) => p.slug !== post.slug);
-  const same = others.filter((p) => p.category === post.category);
-  const rest = others.filter((p) => p.category !== post.category);
-  return [...same, ...rest].slice(0, count);
+  const rank = (p: Post) => (p.isOpen ? 0 : 2) + (p.category === post.category ? 0 : 1);
+  return others
+    .map((p, i) => ({ p, i }))
+    .sort((a, b) => rank(a.p) - rank(b.p) || a.i - b.i)
+    .map(({ p }) => p)
+    .slice(0, count);
 }
 
 /** Tailwind classes for each category accent colour (kept here so Tailwind sees them). */
