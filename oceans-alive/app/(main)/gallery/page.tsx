@@ -195,14 +195,14 @@ export default function Gallery() {
                     {/* Caption, always visible */}
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ocean-midnight/90 via-ocean-midnight/50 to-transparent pt-10">
                       <div className="p-3 w-full">
-                        <p className="text-white text-xs font-semibold line-clamp-2 leading-tight">{item.title}</p>
+                        <p className="text-white text-[11px] font-semibold line-clamp-2 leading-tight">{item.title}</p>
                         <div className="flex items-center justify-between gap-2 mt-1">
-                          <p className="text-white/60 text-[10px] uppercase tracking-widest">{item.category}</p>
+                          <p className="text-white/60 text-[8px] uppercase tracking-widest">{item.category}</p>
                           {item.link && (
                             <Link
                               href={item.link}
                               onClick={(e) => e.stopPropagation()}
-                              className="text-ocean-turquoise text-[10px] font-bold whitespace-nowrap hover:text-white transition-colors"
+                              className="text-ocean-turquoise text-[8px] font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 hover:text-white transition-opacity"
                             >
                               {item.linkText || 'Learn more'} →
                             </Link>
