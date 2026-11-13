@@ -233,12 +233,12 @@ export default function Gallery() {
                     {quote && (
                       <Link
                         href={quote.link}
-                        className="group/q flex-1 rounded-xl bg-ocean-midnight px-5 py-3 flex flex-col justify-center hover:bg-[#03406b] transition-colors"
+                        className="group/q flex-1 rounded-xl bg-white px-5 py-3 flex flex-col justify-center"
                       >
-                        <p className="font-poppins font-bold text-white text-sm md:text-base leading-snug line-clamp-3">
+                        <p className="font-poppins font-bold text-ocean-midnight text-sm md:text-base leading-snug line-clamp-3">
                           <span className="text-ocean-turquoise">&ldquo;</span>{quote.text}<span className="text-ocean-turquoise">&rdquo;</span>
                         </p>
-                        <p className="text-ocean-turquoise text-[10px] font-bold uppercase tracking-widest mt-1.5 group-hover/q:text-white transition-colors">
+                        <p className="text-ocean-turquoise text-[10px] font-bold uppercase tracking-widest mt-1.5 group-hover/q:text-ocean-midnight transition-colors">
                           {quote.by} →
                         </p>
                       </Link>
