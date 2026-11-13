@@ -91,12 +91,13 @@ export default function Gallery() {
             </div>
           </div>
 
-          {/* Photo mosaic in hero */}
-          <div className="grid grid-cols-4 gap-2 rounded-2xl overflow-hidden" style={{ height: '240px' }}>
-            {LOCAL_PREVIEWS.map((p, i) => (
-              <div key={p.src} className={`relative overflow-hidden ${i === 0 ? 'col-span-2' : ''}`}>
-                <Image src={p.src} alt={p.alt} fill className="object-cover hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-ocean-midnight/30" />
+          {/* Photo mosaic in hero: one large photo plus four smaller ones, filling the
+              whole block with no gaps (2 columns on phones, 4 on larger screens). */}
+          <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[140px] md:auto-rows-[200px] gap-2 rounded-2xl overflow-hidden">
+            {LOCAL_PREVIEWS.slice(0, 5).map((p, i) => (
+              <div key={p.src} className={`relative overflow-hidden ${i === 0 ? 'col-span-2 row-span-2' : ''}`}>
+                <Image src={p.src} alt={p.alt} fill sizes={i === 0 ? '(min-width: 768px) 50vw, 100vw' : '(min-width: 768px) 25vw, 50vw'} className="object-cover hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-ocean-midnight/10" />
               </div>
             ))}
           </div>

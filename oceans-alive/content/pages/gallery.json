@@ -1,20 +1,24 @@
 {
   "LOCAL_PREVIEWS": [
     {
-      "src": "/images/divers.jpg",
-      "alt": "Coral restoration divers"
+      "src": "/images/blog/project-reel-cecm-visit/cover-women-interns-in-the-water.jpg",
+      "alt": "Project REEL women fisher interns in the water at Kuruwitu"
     },
     {
-      "src": "/images/trashforcash.jpg",
-      "alt": "Trash4Cash programme"
+      "src": "/images/blog/mama-karanga-handcart/cover-mama-karangas-new-handcart.jpg",
+      "alt": "The Mama Karangas celebrate their new handcart"
     },
     {
-      "src": "/images/BMUmeeting.jpg",
-      "alt": "Community BMU meeting"
+      "src": "/images/gallery/braeburn-coral-village-structures.jpg",
+      "alt": "Coral growing on reef structures at Kuruwitu"
     },
     {
-      "src": "/images/oceanday.jpg",
-      "alt": "World Ocean Day celebration"
+      "src": "/images/blog/royal-visit/cover-king-charles-waving-to-the-sea.jpg",
+      "alt": "His Majesty King Charles III at Kuruwitu"
+    },
+    {
+      "src": "/images/blog/project-reel-schools/cover-classroom-hands-up.jpg",
+      "alt": "Pupils at a Project REEL coral reef lesson"
     }
   ],
   "STATIC_GALLERY": [
