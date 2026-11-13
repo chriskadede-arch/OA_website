@@ -169,12 +169,12 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {others.map((cat) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-5">
+            {others.map((cat, i) => (
               <Link
                 key={cat.slug}
                 href={`/blog/category/${cat.slug}`}
-                className="group relative rounded-2xl overflow-hidden block"
+                className={`group relative rounded-2xl overflow-hidden block ${topicSpan(i, others.length)}`}
                 style={{ minHeight: '280px' }}
               >
                 <Image src={cat.cardImage} alt={cat.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -207,6 +207,17 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
       </section>
     </>
   );
+}
+
+/**
+ * "Other Topics" card widths, so the rows always come out full (no gap at the end).
+ * Desktop: rows of 3 (each card 2 of 6 columns); when the count doesn't divide by 3,
+ * one or two cards are made double width. Tablet: rows of 2; an odd last card spans both.
+ */
+function topicSpan(i: number, n: number): string {
+  const tablet = n % 2 === 1 && i === n - 1 ? 'sm:col-span-2' : '';
+  const wide = (n % 3 === 2 && i === 0) || (n % 3 === 1 && (i === 0 || i === 3));
+  return `${wide ? 'lg:col-span-4' : 'lg:col-span-2'} ${tablet}`;
 }
 
 type Accent = (typeof ACCENT_CLASSES)[keyof typeof ACCENT_CLASSES];
