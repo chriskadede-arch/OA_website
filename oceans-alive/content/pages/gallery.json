@@ -32,7 +32,9 @@
       "video_url": "https://youtu.be/CLVySI5917A",
       "created_at": "",
       "display_order": 1,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/hope-for-kuruwitus-coral-reefs",
+      "linkText": "Read the story"
     },
     {
       "id": "50",
@@ -43,7 +45,9 @@
       "image_url": "/images/blog/tengefu-revival/cover-fishermen-on-the-reef-flat.jpg",
       "created_at": "",
       "display_order": 2,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/revisiting-indigenous-food-fish-systems",
+      "linkText": "Read the story"
     },
     {
       "id": "51",
@@ -54,7 +58,9 @@
       "image_url": "/images/blog/tengefu-revival/kuruwitu-tengefu-scout.jpg",
       "created_at": "",
       "display_order": 3,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/revisiting-indigenous-food-fish-systems",
+      "linkText": "Read the story"
     },
     {
       "id": "45",
@@ -65,7 +71,9 @@
       "image_url": "/images/gallery/braeburn-coral-village-structures.jpg",
       "created_at": "",
       "display_order": 4,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/braeburn-school-sponsors-coral-restoration",
+      "linkText": "Read the story"
     },
     {
       "id": "46",
@@ -76,7 +84,9 @@
       "image_url": "/images/gallery/braeburn-reef-structures-with-fish.jpg",
       "created_at": "",
       "display_order": 5,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/braeburn-school-sponsors-coral-restoration",
+      "linkText": "Read the story"
     },
     {
       "id": "47",
@@ -87,7 +97,9 @@
       "image_url": "/images/gallery/braeburn-staghorn-coral.jpg",
       "created_at": "",
       "display_order": 6,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/braeburn-school-sponsors-coral-restoration",
+      "linkText": "Read the story"
     },
     {
       "id": "48",
@@ -98,7 +110,9 @@
       "image_url": "/images/gallery/braeburn-coral-close-up.jpg",
       "created_at": "",
       "display_order": 7,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/braeburn-school-sponsors-coral-restoration",
+      "linkText": "Read the story"
     },
     {
       "id": "43",
@@ -109,7 +123,9 @@
       "image_url": "/images/gallery/kuruwitu-patrol-boat-group.jpg",
       "created_at": "",
       "display_order": 8,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/kuruwitu-beach-patrol-boat",
+      "linkText": "Read the story"
     },
     {
       "id": "44",
@@ -120,7 +136,9 @@
       "image_url": "/images/gallery/kuruwitu-patrol-boat-meeting.jpg",
       "created_at": "",
       "display_order": 9,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/kuruwitu-beach-patrol-boat",
+      "linkText": "Read the story"
     },
     {
       "id": "42",
@@ -131,7 +149,9 @@
       "image_url": "/images/gallery/royal-visit-king-charles-at-kuruwitu.jpg",
       "created_at": "",
       "display_order": 10,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/the-royal-visit",
+      "linkText": "Read the story"
     },
     {
       "id": "40",
@@ -142,7 +162,9 @@
       "image_url": "/images/gallery/kcmap-launch-stakeholders.jpg",
       "created_at": "",
       "display_order": 11,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/community-collaboration-kuruwitu-co-management-area-plan",
+      "linkText": "Read the story"
     },
     {
       "id": "41",
@@ -153,7 +175,9 @@
       "image_url": "/images/gallery/kcmap-launch-media-interview.jpg",
       "created_at": "",
       "display_order": 12,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/community-collaboration-kuruwitu-co-management-area-plan",
+      "linkText": "Read the story"
     },
     {
       "id": "38",
@@ -164,7 +188,9 @@
       "image_url": "/images/gallery/habitats-summit-2024-audience.jpg",
       "created_at": "",
       "display_order": 13,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/oceans-alive-at-the-habitats-summit-2024",
+      "linkText": "Read the story"
     },
     {
       "id": "39",
@@ -175,7 +201,9 @@
       "image_url": "/images/gallery/habitats-summit-2024-des-bowden.jpg",
       "created_at": "",
       "display_order": 14,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/oceans-alive-at-the-habitats-summit-2024",
+      "linkText": "Read the story"
     },
     {
       "id": "36",
@@ -186,7 +214,9 @@
       "image_url": "/images/gallery/mombasa-show-2024-crowd-at-stand.jpg",
       "created_at": "",
       "display_order": 15,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/innovate-conserve-collaborate-mombasa-agricultural-show-2024",
+      "linkText": "Read the story"
     },
     {
       "id": "37",
@@ -197,7 +227,9 @@
       "image_url": "/images/gallery/mombasa-show-2024-visitors-at-stand.jpg",
       "created_at": "",
       "display_order": 16,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/innovate-conserve-collaborate-mombasa-agricultural-show-2024",
+      "linkText": "Read the story"
     },
     {
       "id": "33",
@@ -208,7 +240,9 @@
       "image_url": "/images/gallery/project-reel-intern-cohort-group.jpg",
       "created_at": "",
       "display_order": 17,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/growing-hope-one-coral-at-a-time",
+      "linkText": "Read the story"
     },
     {
       "id": "34",
@@ -219,7 +253,9 @@
       "image_url": "/images/gallery/project-reel-interns-thumbs-up.jpg",
       "created_at": "",
       "display_order": 18,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/growing-hope-one-coral-at-a-time",
+      "linkText": "Read the story"
     },
     {
       "id": "35",
@@ -230,7 +266,9 @@
       "image_url": "/images/gallery/project-reel-young-interns.jpg",
       "created_at": "",
       "display_order": 19,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/growing-hope-one-coral-at-a-time",
+      "linkText": "Read the story"
     },
     {
       "id": "31",
@@ -241,7 +279,9 @@
       "image_url": "/images/gallery/mama-karanga-weaving-session.jpg",
       "created_at": "",
       "display_order": 20,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/powering-up-the-mama-karanga-movement",
+      "linkText": "Read the story"
     },
     {
       "id": "32",
@@ -252,7 +292,9 @@
       "image_url": "/images/gallery/trash4cash-tshirt.jpg",
       "created_at": "",
       "display_order": 21,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/powering-up-the-mama-karanga-movement",
+      "linkText": "Read the story"
     },
     {
       "id": "29",
@@ -263,7 +305,9 @@
       "image_url": "/images/gallery/project-reel-classroom-hands-up.jpg",
       "created_at": "",
       "display_order": 22,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/transforming-young-minds-educating-kilifi-kids-to-protect-coral-reefs",
+      "linkText": "Read the story"
     },
     {
       "id": "30",
@@ -274,7 +318,9 @@
       "image_url": "/images/gallery/project-reel-pupil-writing.jpg",
       "created_at": "",
       "display_order": 23,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/transforming-young-minds-educating-kilifi-kids-to-protect-coral-reefs",
+      "linkText": "Read the story"
     },
     {
       "id": "28",
@@ -285,7 +331,9 @@
       "image_url": "/images/gallery/project-reel-survey-conversation.jpg",
       "created_at": "",
       "display_order": 24,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/listening-to-the-guardians-of-the-reef-project-reel-survey",
+      "linkText": "Read the story"
     },
     {
       "id": "22",
@@ -296,7 +344,9 @@
       "image_url": "/images/gallery/project-reel-coral-nursery.jpg",
       "created_at": "",
       "display_order": 25,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/kilifi-cecm-witnesses-community-transformation-project-reel",
+      "linkText": "Read the story"
     },
     {
       "id": "23",
@@ -307,7 +357,9 @@
       "image_url": "/images/gallery/project-reel-restored-coral-blocks.jpg",
       "created_at": "",
       "display_order": 26,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/kilifi-cecm-witnesses-community-transformation-project-reel",
+      "linkText": "Read the story"
     },
     {
       "id": "24",
@@ -318,7 +370,9 @@
       "image_url": "/images/gallery/project-reel-team-in-the-water.jpg",
       "created_at": "",
       "display_order": 27,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/kilifi-cecm-witnesses-community-transformation-project-reel",
+      "linkText": "Read the story"
     },
     {
       "id": "25",
@@ -329,7 +383,9 @@
       "image_url": "/images/gallery/project-reel-heading-out-by-boat.jpg",
       "created_at": "",
       "display_order": 28,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/kilifi-cecm-witnesses-community-transformation-project-reel",
+      "linkText": "Read the story"
     },
     {
       "id": "26",
@@ -340,7 +396,9 @@
       "image_url": "/images/gallery/project-reel-team-at-the-boat.jpg",
       "created_at": "",
       "display_order": 29,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/kilifi-cecm-witnesses-community-transformation-project-reel",
+      "linkText": "Read the story"
     },
     {
       "id": "27",
@@ -351,7 +409,9 @@
       "image_url": "/images/gallery/project-reel-team-meeting.jpg",
       "created_at": "",
       "display_order": 30,
-      "is_published": true
+      "is_published": true,
+      "link": "/blog/kilifi-cecm-witnesses-community-transformation-project-reel",
+      "linkText": "Read the story"
     },
     {
       "id": "1",
@@ -362,7 +422,9 @@
       "image_url": "/images/divers.jpg",
       "created_at": "",
       "display_order": 31,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/healthy-oceans",
+      "linkText": "Explore the programme"
     },
     {
       "id": "2",
@@ -373,7 +435,9 @@
       "image_url": "/images/trashforcash.jpg",
       "created_at": "",
       "display_order": 32,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/resilient-communities-livelihoods",
+      "linkText": "Explore the programme"
     },
     {
       "id": "3",
@@ -384,7 +448,9 @@
       "image_url": "/images/trashforcash2.jpg",
       "created_at": "",
       "display_order": 33,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/resilient-communities-livelihoods",
+      "linkText": "Explore the programme"
     },
     {
       "id": "4",
@@ -395,7 +461,9 @@
       "image_url": "/images/trashforcash3.jpg",
       "created_at": "",
       "display_order": 34,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/resilient-communities-livelihoods",
+      "linkText": "Explore the programme"
     },
     {
       "id": "5",
@@ -406,7 +474,9 @@
       "image_url": "/images/BMUmeeting.jpg",
       "created_at": "",
       "display_order": 35,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/sustainable-fisheries-blue-economy",
+      "linkText": "Explore the programme"
     },
     {
       "id": "6",
@@ -417,7 +487,9 @@
       "image_url": "/images/BMUS.jpg",
       "created_at": "",
       "display_order": 36,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/sustainable-fisheries-blue-economy",
+      "linkText": "Explore the programme"
     },
     {
       "id": "7",
@@ -428,7 +500,9 @@
       "image_url": "/images/oceanday.jpg",
       "created_at": "",
       "display_order": 37,
-      "is_published": true
+      "is_published": true,
+      "link": "/learn/kuruwitu",
+      "linkText": "Discover Kuruwitu"
     },
     {
       "id": "8",
@@ -439,7 +513,9 @@
       "image_url": "/images/fisher.jpg",
       "created_at": "",
       "display_order": 38,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/sustainable-fisheries-blue-economy",
+      "linkText": "Explore the programme"
     },
     {
       "id": "9",
@@ -450,7 +526,9 @@
       "image_url": "/images/farmernaction.jpg",
       "created_at": "",
       "display_order": 39,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/resilient-communities-livelihoods",
+      "linkText": "Explore the programme"
     },
     {
       "id": "10",
@@ -461,7 +539,9 @@
       "image_url": "/images/womenlearning.jpg",
       "created_at": "",
       "display_order": 40,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/resilient-communities-livelihoods",
+      "linkText": "Explore the programme"
     },
     {
       "id": "11",
@@ -472,7 +552,9 @@
       "image_url": "/images/womenlearning2.jpg",
       "created_at": "",
       "display_order": 41,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/resilient-communities-livelihoods",
+      "linkText": "Explore the programme"
     },
     {
       "id": "12",
@@ -483,7 +565,9 @@
       "image_url": "/images/kids.jpg",
       "created_at": "",
       "display_order": 42,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/education-research-youth",
+      "linkText": "Explore the programme"
     },
     {
       "id": "13",
@@ -494,7 +578,9 @@
       "image_url": "/images/learning.jpg",
       "created_at": "",
       "display_order": 43,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/education-research-youth",
+      "linkText": "Explore the programme"
     },
     {
       "id": "14",
@@ -505,7 +591,9 @@
       "image_url": "/images/coralteaching.jpg",
       "created_at": "",
       "display_order": 44,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/healthy-oceans",
+      "linkText": "Explore the programme"
     },
     {
       "id": "15",
@@ -516,7 +604,9 @@
       "image_url": "/images/interns.jpg",
       "created_at": "",
       "display_order": 45,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/education-research-youth",
+      "linkText": "Explore the programme"
     },
     {
       "id": "16",
@@ -527,7 +617,9 @@
       "image_url": "/images/Capacityassess.jpg",
       "created_at": "",
       "display_order": 46,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/education-research-youth",
+      "linkText": "Explore the programme"
     },
     {
       "id": "17",
@@ -538,7 +630,9 @@
       "image_url": "/images/communities.jpg",
       "created_at": "",
       "display_order": 47,
-      "is_published": true
+      "is_published": true,
+      "link": "/learn/kuruwitu",
+      "linkText": "Discover Kuruwitu"
     },
     {
       "id": "18",
@@ -549,7 +643,9 @@
       "image_url": "/images/oceanculturelife.jpg",
       "created_at": "",
       "display_order": 48,
-      "is_published": true
+      "is_published": true,
+      "link": "/learn/kuruwitu",
+      "linkText": "Discover Kuruwitu"
     },
     {
       "id": "19",
@@ -560,7 +656,9 @@
       "image_url": "/images/oceansmen.jpg",
       "created_at": "",
       "display_order": 49,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/healthy-oceans",
+      "linkText": "Explore the programme"
     },
     {
       "id": "20",
@@ -571,7 +669,9 @@
       "image_url": "/images/farmers.jpg",
       "created_at": "",
       "display_order": 50,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/resilient-communities-livelihoods",
+      "linkText": "Explore the programme"
     },
     {
       "id": "21",
@@ -582,7 +682,9 @@
       "image_url": "/images/kamakukijcma.jpg",
       "created_at": "",
       "display_order": 51,
-      "is_published": true
+      "is_published": true,
+      "link": "/programs/sustainable-fisheries-blue-economy",
+      "linkText": "Explore the programme"
     }
   ],
   "hero": {
@@ -599,5 +701,42 @@
     "subheading": "No items found",
     "text": "Try a different filter or check back soon.",
     "eyebrow3": "Video"
-  }
+  },
+  "QUOTES": [
+    {
+      "text": "When children fall in love with the ocean, they grow up to protect it.",
+      "by": "Transforming Young Minds",
+      "link": "/blog/transforming-young-minds-educating-kilifi-kids-to-protect-coral-reefs"
+    },
+    {
+      "text": "This project is a model for how conservation and livelihoods can thrive together.",
+      "by": "Dr. Patteson Chula, Kilifi County CECM",
+      "link": "/blog/kilifi-cecm-witnesses-community-transformation-project-reel"
+    },
+    {
+      "text": "When women lead, communities thrive and oceans heal.",
+      "by": "Powering Up the Mama Karanga Movement",
+      "link": "/blog/powering-up-the-mama-karanga-movement"
+    },
+    {
+      "text": "You cannot protect what you don't understand.",
+      "by": "Listening to the Guardians of the Reef",
+      "link": "/blog/listening-to-the-guardians-of-the-reef-project-reel-survey"
+    },
+    {
+      "text": "We're not just restoring reefs, we're growing hope, one coral at a time.",
+      "by": "Growing Hope, One Coral at a Time",
+      "link": "/blog/growing-hope-one-coral-at-a-time"
+    },
+    {
+      "text": "A model, a living classroom to positively impact and inspire people, locally, nationally, and across the world.",
+      "by": "Des Bowden, CEO, Oceans Alive",
+      "link": "/blog/the-royal-visit"
+    },
+    {
+      "text": "In an area where scarcity has been the norm, climate-smart kitchen gardens create unexpected corners of abundance.",
+      "by": "Kitchen Gardening",
+      "link": "/blog/kitchen-gardening-cultivating-hope-in-kilifi-county"
+    }
+  ]
 }

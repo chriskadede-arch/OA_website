@@ -1851,6 +1851,12 @@ content:
               - name: is_published
                 label: Is published
                 type: boolean
+              - name: link
+                label: Link (web address, e.g. /contact)
+                type: string
+              - name: linkText
+                label: Link text
+                type: string
           - name: hero
             label: Hero
             type: object
@@ -1891,6 +1897,23 @@ content:
                 type: string
               - name: eyebrow3
                 label: Small label above heading 3
+                type: string
+          - name: QUOTES
+            label: Quotes
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.text}'
+            fields:
+              - name: text
+                label: Text
+                type: text
+              - name: by
+                label: By
+                type: string
+              - name: link
+                label: Link (web address, e.g. /contact)
                 type: string
       - name: page-resources
         label: Resources

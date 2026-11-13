@@ -42,6 +42,8 @@ export interface GalleryItem {
   description?: string;
   image_url?: string;
   video_url?: string; // YouTube URL
+  link?: string; // page or blog story this photo belongs to
+  linkText?: string;
   type: 'photo' | 'video';
   category: string;
   display_order: number;

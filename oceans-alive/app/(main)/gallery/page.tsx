@@ -17,12 +17,16 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { GALLERY_CATEGORIES } from '@/lib/constants';
 import { GalleryItem } from '@/lib/types';
 
 import PAGE from '@/content/pages/gallery.json';
 
 const LOCAL_PREVIEWS = PAGE.LOCAL_PREVIEWS;
+
+// Short quotes from the blog stories, shown in the space under each big photo.
+const QUOTES = PAGE.QUOTES;
 
 // All gallery photos from Display Photos and images folders
 const STATIC_GALLERY: GalleryItem[] = PAGE.STATIC_GALLERY as unknown as GalleryItem[];
@@ -160,47 +164,88 @@ export default function Gallery() {
             </div>
           ) : (
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-              {items.map((item, i) => (
-                <div
-                  key={item.id}
-                  className={`relative overflow-hidden rounded-xl cursor-pointer group ${i % 7 === 0 ? 'col-span-2 row-span-2 h-64' : 'h-44'}`}
-                  onClick={() => setSelectedItem(item)}
-                >
-                  {item.type === 'photo' && item.image_url ? (
-                    <img
-                      src={item.image_url}
-                      alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  ) : item.type === 'video' ? (
-                    <div className="relative w-full h-full bg-gradient-to-br from-ocean-midnight to-[#0a4f7a] flex items-center justify-center">
-                      {(item.image_url || (item.video_url && extractYouTubeId(item.video_url))) && (
-                        <img
-                          src={item.image_url || `https://img.youtube.com/vi/${extractYouTubeId(item.video_url || '')}/hqdefault.jpg`}
-                          alt={item.title}
-                          className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
-                      )}
-                      <div className="relative w-14 h-14 rounded-full bg-ocean-midnight/60 flex items-center justify-center group-hover:bg-ocean-turquoise transition-colors">
-                        <svg className="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
+              {items.map((item, i) => {
+                const big = i % 7 === 0;
+                const quote = big && QUOTES.length ? QUOTES[Math.floor(i / 7) % QUOTES.length] : null;
+                const media = (
+                  <>
+                    {item.type === 'photo' && item.image_url ? (
+                      <img
+                        src={item.image_url}
+                        alt={item.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    ) : item.type === 'video' ? (
+                      <div className="relative w-full h-full bg-gradient-to-br from-ocean-midnight to-[#0a4f7a] flex items-center justify-center">
+                        {(item.image_url || (item.video_url && extractYouTubeId(item.video_url))) && (
+                          <img
+                            src={item.image_url || `https://img.youtube.com/vi/${extractYouTubeId(item.video_url || '')}/hqdefault.jpg`}
+                            alt={item.title}
+                            className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          />
+                        )}
+                        <div className="relative w-14 h-14 rounded-full bg-ocean-midnight/60 flex items-center justify-center group-hover:bg-ocean-turquoise transition-colors">
+                          <svg className="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </div>
+                    ) : null}
+
+                    {/* Caption, always visible */}
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ocean-midnight/90 via-ocean-midnight/50 to-transparent pt-10">
+                      <div className="p-3 w-full">
+                        <p className="text-white text-xs font-semibold line-clamp-2 leading-tight">{item.title}</p>
+                        <div className="flex items-center justify-between gap-2 mt-1">
+                          <p className="text-white/60 text-[10px] uppercase tracking-widest">{item.category}</p>
+                          {item.link && (
+                            <Link
+                              href={item.link}
+                              onClick={(e) => e.stopPropagation()}
+                              className="text-ocean-turquoise text-[10px] font-bold whitespace-nowrap hover:text-white transition-colors"
+                            >
+                              {item.linkText || 'Learn more'} →
+                            </Link>
+                          )}
+                        </div>
                       </div>
                     </div>
-                  ) : null}
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div className="p-3 w-full">
-                      <p className="text-white text-xs font-semibold line-clamp-2 leading-tight">{item.title}</p>
-                      <p className="text-white/55 text-[10px] mt-0.5 uppercase tracking-widest">{item.category}</p>
+                    {item.type === 'video' && (
+                      <div className="absolute top-3 right-3 bg-white/15 text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">{PAGE.photoGridLightbox.eyebrow3}</div>
+                    )}
+                  </>
+                );
+
+                if (!big) {
+                  return (
+                    <div key={item.id} className="relative overflow-hidden rounded-xl cursor-pointer group h-44" onClick={() => setSelectedItem(item)}>
+                      {media}
                     </div>
+                  );
+                }
+                // Big tile: same photo size as before (h-64); the space below it holds a quote.
+                return (
+                  <div key={item.id} className="col-span-2 row-span-2 flex flex-col gap-3">
+                    <div className="relative overflow-hidden rounded-xl cursor-pointer group h-64 shrink-0" onClick={() => setSelectedItem(item)}>
+                      {media}
+                    </div>
+                    {quote && (
+                      <Link
+                        href={quote.link}
+                        className="group/q flex-1 rounded-xl bg-ocean-midnight px-5 py-3 flex flex-col justify-center hover:bg-[#03406b] transition-colors"
+                      >
+                        <p className="font-poppins font-bold text-white text-sm md:text-base leading-snug line-clamp-3">
+                          <span className="text-ocean-turquoise">&ldquo;</span>{quote.text}<span className="text-ocean-turquoise">&rdquo;</span>
+                        </p>
+                        <p className="text-ocean-turquoise text-[10px] font-bold uppercase tracking-widest mt-1.5 group-hover/q:text-white transition-colors">
+                          {quote.by} →
+                        </p>
+                      </Link>
+                    )}
                   </div>
-
-                  {item.type === 'video' && (
-                    <div className="absolute top-3 right-3 bg-white/15 text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">{PAGE.photoGridLightbox.eyebrow3}</div>
-                  )}
-                </div>
-              ))}
+                );
+              })}
             </div>
           )}
         </div>
@@ -254,6 +299,14 @@ export default function Gallery() {
               <h2 className="text-2xl font-poppins font-bold text-ocean-midnight mb-2">{selectedItem.title}</h2>
               {selectedItem.description && (
                 <p className="text-gray-600 leading-relaxed">{selectedItem.description}</p>
+              )}
+              {selectedItem.link && (
+                <Link
+                  href={selectedItem.link}
+                  className="inline-flex items-center gap-2 mt-5 px-5 py-2.5 bg-ocean-turquoise text-white font-bold rounded-xl text-sm hover:bg-ocean-midnight transition-colors"
+                >
+                  {selectedItem.linkText || 'Learn more'} →
+                </Link>
               )}
             </div>
           </div>
