@@ -125,11 +125,20 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
             </div>
           ) : (
             <>
-              {/* ── Featured story ── */}
-              {featured && <FeaturedStory post={featured} accent={accent} />}
+              {/* ── Exactly two stories: featured (wide) and the other side by side ── */}
+              {featured && rest.length === 1 ? (
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                  <div className="lg:col-span-2">
+                    <FeaturedStory post={featured} accent={accent} inRow />
+                  </div>
+                  <StoryCard post={rest[0]} accent={accent} />
+                </div>
+              ) : (
+                featured && <FeaturedStory post={featured} accent={accent} />
+              )}
 
               {/* ── Story grid ── */}
-              {rest.length > 0 && (
+              {rest.length > 1 && (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {rest.map((story) => (
                     <StoryCard key={story.slug} post={story} accent={accent} />
@@ -222,7 +231,8 @@ function topicSpan(i: number, n: number): string {
 
 type Accent = (typeof ACCENT_CLASSES)[keyof typeof ACCENT_CLASSES];
 
-function FeaturedStory({ post, accent }: { post: Post; accent: Accent }) {
+function FeaturedStory({ post, accent, inRow = false }: { post: Post; accent: Accent; inRow?: boolean }) {
+  const space = inRow ? 'h-full' : 'mb-10';
   const inner = (
     <>
       <Image
@@ -271,7 +281,7 @@ function FeaturedStory({ post, accent }: { post: Post; accent: Accent }) {
 
   if (!post.isOpen) {
     return (
-      <div className="block mb-10 relative rounded-2xl overflow-hidden opacity-50 cursor-not-allowed" style={{ minHeight: '360px' }}>
+      <div className={`block ${space} relative rounded-2xl overflow-hidden opacity-50 cursor-not-allowed`} style={{ minHeight: '360px' }}>
         {inner}
       </div>
     );
@@ -279,7 +289,7 @@ function FeaturedStory({ post, accent }: { post: Post; accent: Accent }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group block mb-10 relative rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500"
+      className={`group block ${space} relative rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500`}
       style={{ minHeight: '360px' }}
     >
       {inner}
