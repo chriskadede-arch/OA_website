@@ -1622,31 +1622,6 @@ content:
               - name: text
                 label: Text
                 type: string
-          - name: partnerLogos
-            label: Partner logos
-            type: object
-            fields:
-              - name: eyebrow
-                label: Small label above heading
-                type: string
-              - name: link
-                label: Link (web address, e.g. /contact)
-                type: string
-              - name: image
-                label: Image
-                type: image
-              - name: imageAlt
-                label: Image description (alt text, for screen readers)
-                type: string
-              - name: link2
-                label: Link (web address, e.g. /contact) 2
-                type: string
-              - name: image2
-                label: Image 2
-                type: image
-              - name: imageAlt2
-                label: Image description (alt text, for screen readers) 2
-                type: string
           - name: faq
             label: Faq
             type: object
