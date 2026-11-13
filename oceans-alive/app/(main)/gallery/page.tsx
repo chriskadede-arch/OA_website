@@ -19,7 +19,6 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { GALLERY_CATEGORIES } from '@/lib/constants';
 import { GalleryItem } from '@/lib/types';
-import { apiClient } from '@/lib/api-client';
 
 import PAGE from '@/content/pages/gallery.json';
 
@@ -39,37 +38,18 @@ export default function Gallery() {
     fetchGallery();
   }, [selectedCategory, selectedType]);
 
-  const fetchGallery = async () => {
-    setLoading(true);
-    try {
-      const response = await apiClient.getGalleryItems(1, 24, selectedType || undefined);
-      let data = response.data || [];
-
-      // If API returns no data, use static gallery
-      if (data.length === 0) {
-        data = STATIC_GALLERY;
-      }
-
-      // Filter by type
-      if (selectedType) {
-        data = data.filter((item: GalleryItem) => item.type === selectedType);
-      }
-
-      // Filter by category
-      if (selectedCategory) {
-        data = data.filter((item: GalleryItem) => item.category === selectedCategory);
-      }
-
-      setItems(data);
-    } catch {
-      setItems(STATIC_GALLERY);
-    } finally {
-      setLoading(false);
-    }
+  // The photos and videos live in content/pages/gallery.json (edited in Pages CMS).
+  // The Type and Category buttons filter that list right here in the browser.
+  const fetchGallery = () => {
+    let data = STATIC_GALLERY.filter((item) => item.is_published !== false);
+    if (selectedType) data = data.filter((item) => item.type === selectedType);
+    if (selectedCategory) data = data.filter((item) => item.category === selectedCategory);
+    setItems(data);
+    setLoading(false);
   };
 
   const extractYouTubeId = (url: string) => {
-    const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+    const match = url.match(/(?:youtube\.com\/(?:watch\?(?:.*&)?v=|shorts\/|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
     return match ? match[1] : null;
   };
 
@@ -193,8 +173,15 @@ export default function Gallery() {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   ) : item.type === 'video' ? (
-                    <div className="w-full h-full bg-gradient-to-br from-ocean-midnight to-[#0a4f7a] flex items-center justify-center">
-                      <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-ocean-turquoise transition-colors">
+                    <div className="relative w-full h-full bg-gradient-to-br from-ocean-midnight to-[#0a4f7a] flex items-center justify-center">
+                      {(item.image_url || (item.video_url && extractYouTubeId(item.video_url))) && (
+                        <img
+                          src={item.image_url || `https://img.youtube.com/vi/${extractYouTubeId(item.video_url || '')}/hqdefault.jpg`}
+                          alt={item.title}
+                          className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      )}
+                      <div className="relative w-14 h-14 rounded-full bg-ocean-midnight/60 flex items-center justify-center group-hover:bg-ocean-turquoise transition-colors">
                         <svg className="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M8 5v14l11-7z" />
                         </svg>
@@ -236,7 +223,7 @@ export default function Gallery() {
                 <iframe
                   width="100%"
                   height="420"
-                  src={`https://www.youtube.com/embed/${extractYouTubeId(selectedItem.video_url)}`}
+                  src={`https://www.youtube-nocookie.com/embed/${extractYouTubeId(selectedItem.video_url)}`}
                   title={selectedItem.title}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

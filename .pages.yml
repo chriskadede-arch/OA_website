@@ -1829,7 +1829,7 @@ content:
                 type: string
               - name: description
                 label: Description
-                type: string
+                type: text
               - name: category
                 label: Category
                 type: string
@@ -1839,6 +1839,9 @@ content:
               - name: image_url
                 label: Image url
                 type: image
+              - name: video_url
+                label: Video url
+                type: string
               - name: created_at
                 label: Created at
                 type: string
