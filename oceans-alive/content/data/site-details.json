@@ -5,6 +5,12 @@
   "contactEmailSecondary": "des@oceansalivekenya.org",
   "contactPhone": "+254 732 807 935",
   "contactAddress": "Vipingo, Kilifi County, Kenya",
+  "contactFormRecipients": [
+    "info@oceansalivekenya.org",
+    "des@oceansalivekenya.org",
+    "chris.kadede@gmail.com",
+    "criss.adede@gmail.com"
+  ],
   "twitterHandle": "@Oceansalive_Ke",
   "instagramHandle": "@oceans_alive_kenya",
   "facebookPage": "OceansAliveKenya",

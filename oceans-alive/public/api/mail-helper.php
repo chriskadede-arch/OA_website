@@ -4,6 +4,8 @@ declare(strict_types=1);
 const OA_MAIL_RECIPIENTS = [
     'info@oceansalivekenya.org',
     'des@oceansalivekenya.org',
+    'chris.kadede@gmail.com',
+    'criss.adede@gmail.com',
 ];
 
 function oa_send_json(int $status, array $payload): void

@@ -5,11 +5,11 @@
  */
 import axios, { AxiosInstance } from 'axios';
 import {
-  submitContactForm,
   submitDonationForm,
   submitNewsletterForm,
   usesPhpForms,
 } from '@/lib/php-forms';
+import { sendContactEmail } from '@/lib/contact-email';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
@@ -90,12 +90,8 @@ class ApiClient {
 
   // Contact endpoints
   async submitContact(data: any) {
-    if (usesPhpForms()) {
-      return submitContactForm(data);
-    }
-
-    const response = await this.client.post('/contact', data);
-    return response.data;
+    // Emailed to every address in site-details.json → contactFormRecipients (see lib/contact-email.ts).
+    return sendContactEmail(data);
   }
 
   // File upload

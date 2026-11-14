@@ -4995,6 +4995,10 @@ content:
           - name: contactAddress
             label: Contact address
             type: string
+          - name: contactFormRecipients
+            label: Contact form recipients
+            type: string
+            list: true
           - name: twitterHandle
             label: Twitter handle
             type: string

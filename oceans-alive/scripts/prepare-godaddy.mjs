@@ -53,7 +53,7 @@ Important:
 - Upload the CONTENTS of this folder, not the folder itself
 - Do not skip hidden files — .htaccess is required for routing
 - Upload the api/ folder too — contact, donate, and newsletter forms use PHP mail
-- Form submissions are emailed to info@oceansalivekenya.org and des@oceansalivekenya.org
+- Donation and newsletter forms are emailed by api/*.php; the contact form is emailed via FormSubmit (see lib/contact-email.ts)
 
 To rebuild after changes, run from the oceans-alive folder:
   npm run build:godaddy
