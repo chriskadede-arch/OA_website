@@ -122,20 +122,24 @@
     },
     {
       "id": "ocean5-advocacy",
-      "title": "Ocean 5 Advocacy",
+      "title": "One Voice for Coastal Resilience",
       "slug": "ocean5-advocacy",
       "category": "Advocacy",
       "funder": "Oceans5",
-      "description": "A 24 month, $250,000 campaign arming the Kilifi County BMU Network with the evidence, media training and coalitions to push back against illegal trawlers.",
+      "description": "Uniting the Indian Ocean Water Body, Kilifi and Tana River BMU Networks into one community-led voice against IUU fishing and destructive trawling in the Malindi-Ungwana Bay.",
       "image": "/images/BMUmeeting.jpg",
       "stats": [
         {
-          "value": "18",
+          "value": "21",
           "label": "BMUs"
         },
         {
-          "value": "5,000+",
+          "value": "6,000+",
           "label": "Fisherfolk"
+        },
+        {
+          "value": "2",
+          "label": "Counties"
         }
       ],
       "gradient": "from-rose-900 via-rose-900/90 to-rose-900/60"

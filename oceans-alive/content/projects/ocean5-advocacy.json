@@ -1,109 +1,112 @@
 {
   "seo": {
-    "title": "Ocean 5 Advocacy | Oceans Alive Foundation",
-    "description": "A 24 month, $250,000 campaign arming the Kilifi County Beach Management Unit Network with the evidence, media training and coalitions to push back against illegal trawlers."
+    "title": "One Voice for Coastal Resilience | Oceans Alive Foundation",
+    "description": "Supporting the Indian Ocean, Kilifi and Tana River BMU Networks' advocacy movement to combat IUU fishing and promote sustainable fisheries management in the Malindi-Ungwana Bay."
   },
   "FUNDER": {
     "name": "Oceans5",
     "logo": "/images/partners/oceans5.jpg"
   },
-  "ACTIVITIES": [
-    {
-      "months": "Months 1 to 6",
-      "title": "Capacity Building Workshops",
-      "body": "Train 200 BMU leaders, half of them women or youth, in policy brief writing, digital monitoring tools such as vessel tracking apps, and the legal frameworks for IUU enforcement, delivered in partnership with COMRED.",
-      "output": "4 workshops held, 80% of participants showing measured skill improvement"
-    },
-    {
-      "months": "Months 3 to 9",
-      "title": "Governance Strengthening",
-      "body": "Improve Network bylaws, run participatory mapping of IUU hotspots, and mentor leaders toward more inclusive decision making.",
-      "output": "Approved bylaws, all 18 BMUs mapped for advocacy priorities"
-    },
-    {
-      "months": "Months 7 to 18",
-      "title": "Advocacy Campaigns",
-      "body": "Launch targeted campaigns, including a \"Ban Trawlers Now\" petition to the Kenya Fisheries Service, backed by media training and coalition building with the Kenya Marine and Fisheries Research Institute.",
-      "output": "2 campaigns, 5,000 signatures, coverage across 10+ media outlets"
-    },
-    {
-      "months": "Months 10 to 24",
-      "title": "Monitoring and Coalition Support",
-      "body": "Provide low cost tools such as GPS buoys for IUU reporting, and build links with regional monitoring bodies including the Indian Ocean Tuna Commission.",
-      "output": "50 incident reports submitted, 3 new partnerships formed"
-    },
-    {
-      "months": "Ongoing",
-      "title": "Evaluation and Scaling",
-      "body": "Run mid term and end line evaluations with community feedback loops to keep the model adaptive.",
-      "output": "Annual reports, and a model ready to scale to other counties"
-    }
-  ],
   "hero": {
     "image": "/images/BMUmeeting.jpg",
-    "imageAlt": "Ocean 5 Advocacy",
-    "eyebrow": "Q1 2026 to Q4 2027",
-    "title": "Ocean 5 Advocacy",
-    "text": "Empowering Coastal Voices: building advocacy capacity for the Kilifi County Beach Management Unit Network to confront illegal fishing and trawler encroachment.",
-    "text2": "18",
+    "imageAlt": "Beach Management Unit members meeting on the Kenyan coast",
+    "eyebrow": "June to August 2026",
+    "title": "One Voice for Coastal Resilience",
+    "text": "Supporting the Indian Ocean, Kilifi and Tana River BMU Networks advocacy movement to combat IUU fishing and promote sustainable fisheries management.",
+    "text2": "21",
     "eyebrow2": "BMUs",
-    "text3": "5,000+",
+    "text3": "6,000+",
     "eyebrow3": "Fisherfolk",
+    "text4": "2",
+    "eyebrow5": "Counties",
     "eyebrow4": "Partner"
   },
-  "problemStatement": {
-    "eyebrow": "The Problem",
-    "heading": "Kilifi's Fishers Are Losing Ground to Trawlers They Cannot Fight Alone",
-    "text": "Small scale artisanal fishers make up 90% of the fishing sector along Kilifi's 270 km stretch of Kenya's coastline, and it is their nearshore waters that industrial trawlers are encroaching on.",
-    "text2": "30%+",
-    "text3": "Decline in key species like prawns and reef fish over the last decade, threatening food security for 20,000+ fishing households.",
-    "text4": "$100M+",
-    "text5": "Estimated annual regional losses from illegal, unreported and unregulated fishing and weak enforcement.",
-    "text6": "80%",
-    "text7": "Share of income Kilifi's small scale fishers draw from nearshore resources now under threat from foreign trawlers.",
-    "text8": "The KCBMU Network gained formal recognition only recently, under the 2024 Beach Management Unit Regulations, and still lacks the skills in evidence-based advocacy, media engagement and coalition-building it needs to influence policy. Left unaddressed, this threatens the newly approved KAMAMKUKI, TAMKIBO and MALINDI-MAGARINI Joint Co-Management Plan (2024 to 2028) and risks locking coastal communities into deeper poverty."
-  },
-  "objectives": {
-    "eyebrow": "Objectives",
-    "heading": "Building a Network That Can Lobby and Win",
-    "list": [
-      "Enhance Network governance and leadership skills to foster unified advocacy.",
-      "Equip BMU members with tools for evidence gathering, policy analysis and public campaigning on IUU threats.",
-      "Facilitate strategic partnerships and media engagement to amplify calls for trawler regulation and enforcement.",
-      "Monitor and evaluate advocacy impacts to keep strategies adaptive and community driven."
+  "atAGlance": {
+    "eyebrow": "Project at a Glance",
+    "heading": "Who, Where and How",
+    "items": [
+      {
+        "label": "Lead Organisations",
+        "text": "Oceans Alive Foundation (OA) in partnership with the Indian Ocean Water Body BMU Network, Kilifi County and Tana River Beach Management Unit Network"
+      },
+      {
+        "label": "Support",
+        "text": "Kenya Fisheries Service (KeFS), Kilifi and Tana River Directorate of Fisheries"
+      },
+      {
+        "label": "Target Beneficiaries",
+        "text": "21 Beach Management Units (BMUs) representing over 6,000 fisherfolk in Kilifi and Tana River Counties in Kenya"
+      },
+      {
+        "label": "Geographic Focus",
+        "text": "Kilifi County and Tana River County"
+      },
+      {
+        "label": "Funding Request",
+        "text": "USD 50,000 (June to August 2026)"
+      }
     ]
   },
-  "activitiesTimeline": {
-    "eyebrow": "Activities",
-    "heading": "A 24 Month Campaign, Five Moving Parts",
-    "text": "Expected output: "
+  "problemStatement": {
+    "eyebrow": "Project Overview",
+    "heading": "One of Kenya's Most Important Fishing Grounds Is Under Threat",
+    "text": "The Malindi-Ungwana Bay, shared by Kilifi and Tana River Counties, supports both artisanal and industrial fisheries. However, the area faces severe resource decline driven by illegal, unreported, and unregulated (IUU) fishing and destructive trawling, which persist despite legal restrictions on nearshore trawling.",
+    "cards": [
+      {
+        "title": "Malindi-Ungwana Bay",
+        "text": "Weak enforcement has led to industrial encroachment into artisanal fishing zones, resulting in habitat degradation, gear loss, and conflicts, while seagrass and nursery habitats continue to deteriorate."
+      },
+      {
+        "title": "Kilifi County",
+        "text": "Small-scale fisheries remain the foundation of coastal livelihoods but are under increasing pressure from overfishing and destructive gear use. Encouragingly, successful BMU-led initiatives such as in Kuruwitu demonstrate that empowered BMUs can restore fish stocks and habitats."
+      },
+      {
+        "title": "Tana River County",
+        "text": "Diverse estuarine and deltaic fisheries are similarly threatened by illegal trawling, unsustainable practices, and upstream land-use changes, while the local BMU Network remains institutionally weak."
+      }
+    ]
   },
-  "outcomes": {
-    "eyebrow": "Expected Outcomes",
-    "heading": "What Success Looks Like",
-    "eyebrow2": "Short Term, 12 Months",
-    "text": "70% of BMUs show improved advocacy skills, and at least one policy brief on trawler bans reaches a county assembly.",
-    "eyebrow3": "Medium Term, 24 Months",
-    "text2": "Reported IUU incidents fall by 25% as monitoring improves, and the Network becomes a recognised voice in national fisheries dialogues.",
-    "eyebrow4": "Long Term",
-    "text3": "A 15% income increase for fishers, supporting Oceans5's goal of curbing overfishing across the Western Indian Ocean, including biodiversity hotspots like the North Kenya Banks, and aligning with SDG 14."
+  "objectives": {
+    "eyebrow": "The Initiative",
+    "heading": "A Timely and Strategic Intervention",
+    "text": "The initiative supports an advocacy campaign of the Indian Ocean Water Body, alongside the Kilifi and Tana River Beach Management Unit (BMU) Networks, implemented in partnership with Oceans Alive Foundation.",
+    "list": [
+      "Strengthen community-led governance and advocacy against Illegal, Unreported, and Unregulated (IUU) fishing, particularly destructive trawling, within the Malindi-Ungwana Bay ecosystem.",
+      "Respond directly to the governance and management priorities in Kenya's fisheries legislation, national policies, and the recently approved Joint Co-Management Area (JCMA) Plans.",
+      "Consolidate the gains made with the Kilifi BMU Network and extend similar capacity-building efforts to the Tana River BMU Network and the broader Indian Ocean Water Body platform.",
+      "Create a more unified and influential community-led voice capable of addressing IUU fishing and destructive trawling, and promoting sustainable fisheries governance."
+    ]
   },
-  "risksAndSustainability": {
-    "eyebrow": "Staying Honest About the Risks",
-    "heading": "Risks, Sustainability and How Progress Gets Tracked",
-    "subheading": "Risks and Mitigation",
-    "text": "Political resistance to trawler bans is met with evidence based advocacy. Low participation is addressed through incentives and sensitization forums, run by the BMUs themselves with backing from the Network and County Fisheries.",
-    "subheading2": "Sustainability",
-    "text2": "Skills are embedded directly in Network operations rather than held by outside trainers, and Oceans Alive will pursue follow on funding to carry the work beyond this grant.",
-    "subheading3": "Monitoring and Learning",
-    "text3": "Trained advocates, policy submissions, IUU reports and income are tracked through BMU logs, surveys and digital dashboards, with biannual progress reports to Oceans5 and quarterly steering committee meetings."
+  "jcma": {
+    "eyebrow": "Policy Alignment",
+    "heading": "Backed by the Malindi-Magarini and Tana-Delta JCMA Plans",
+    "statValue": "3,100 km²",
+    "statLabel": "of marine waters covered by the JCMA Plans (2024 to 2028)",
+    "text": "The Malindi-Magarini and Tana-Delta JCMA Plans (2024 to 2028), which together cover over 3,100 km² of marine waters within the Malindi-Ungwana Bay, identify IUU fishing and unregulated trawling as the most significant threats to the sustainability of local fisheries.",
+    "text2": "The plans highlight the ecological degradation caused by illegal gears and nearshore trawling, including:",
+    "threats": [
+      "Loss of seagrass beds",
+      "Destruction of prawn breeding habitats",
+      "Declining fish stocks"
+    ]
+  },
+  "whyOceansAlive": {
+    "eyebrow": "Why Oceans Alive",
+    "heading": "Four Years Alongside the Kilifi BMU Network",
+    "text": "Oceans Alive Foundation, which has been actively supporting the Kilifi BMU Network over the past four years, is well positioned to lead this initiative. The organisation has demonstrated experience in:",
+    "items": [
+      "Strengthening governance structures",
+      "Building institutional capacity for coordination and accountability",
+      "Promoting awareness and information sharing among BMU members and stakeholders",
+      "Supporting enabling policy and legislative environments for sustainable fisheries management at county level"
+    ]
   },
   "conclusion": {
-    "text": "\"This initiative will transform the KCBMU Network from a reactive monitoring body into a proactive force for ocean justice.\""
+    "text": "\"By empowering these networks, the project will create a more unified and influential community-led voice capable of addressing IUU fishing and destructive trawling, promoting sustainable fisheries governance, and contributing to the long-term ecological and economic resilience of the Malindi-Ungwana Bay.\""
   },
   "callToAction": {
     "heading": "Help Amplify Coastal Voices",
-    "text": "Your support helps fisherfolk communities advocate for stronger protection against illegal fishing and trawler threats.",
+    "text": "Your support helps fisherfolk communities in Kilifi and Tana River stand together against illegal fishing and destructive trawling.",
     "link": "/donate",
     "linkText": "Support This Project",
     "link2": "/#projects",

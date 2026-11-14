@@ -4406,7 +4406,7 @@ content:
                 label: Link text 2
                 type: string
       - name: project-ocean5-advocacy
-        label: Project page › Ocean 5 Advocacy
+        label: Project page › One Voice for Coastal Resilience
         type: file
         path: oceans-alive/content/projects/ocean5-advocacy.json
         format: json
@@ -4431,26 +4431,6 @@ content:
               - name: logo
                 label: Logo
                 type: image
-          - name: ACTIVITIES
-            label: Activities
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: '{fields.months}'
-            fields:
-              - name: months
-                label: Months
-                type: string
-              - name: title
-                label: Title
-                type: string
-              - name: body
-                label: Body
-                type: text
-              - name: output
-                label: Output
-                type: string
           - name: hero
             label: Hero
             type: object
@@ -4482,9 +4462,39 @@ content:
               - name: eyebrow3
                 label: Small label above heading 3
                 type: string
+              - name: text4
+                label: Text 4
+                type: string
+              - name: eyebrow5
+                label: Small label above heading 5
+                type: string
               - name: eyebrow4
                 label: Small label above heading 4
                 type: string
+          - name: atAGlance
+            label: At a glance
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small label above heading
+                type: string
+              - name: heading
+                label: Heading
+                type: string
+              - name: items
+                label: Items
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{fields.label}'
+                fields:
+                  - name: label
+                    label: Label
+                    type: string
+                  - name: text
+                    label: Text
+                    type: text
           - name: problemStatement
             label: Problem statement
             type: object
@@ -4498,27 +4508,20 @@ content:
               - name: text
                 label: Text
                 type: text
-              - name: text2
-                label: Text 2
-                type: string
-              - name: text3
-                label: Text 3
-                type: text
-              - name: text4
-                label: Text 4
-                type: string
-              - name: text5
-                label: Text 5
-                type: text
-              - name: text6
-                label: Text 6
-                type: string
-              - name: text7
-                label: Text 7
-                type: text
-              - name: text8
-                label: Text 8
-                type: text
+              - name: cards
+                label: Cards
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{fields.title}'
+                fields:
+                  - name: title
+                    label: Title
+                    type: string
+                  - name: text
+                    label: Text
+                    type: text
           - name: objectives
             label: Objectives
             type: object
@@ -4529,12 +4532,15 @@ content:
               - name: heading
                 label: Heading
                 type: string
+              - name: text
+                label: Text
+                type: text
               - name: list
                 label: List
                 type: text
                 list: true
-          - name: activitiesTimeline
-            label: Activities timeline
+          - name: jcma
+            label: Jcma
             type: object
             fields:
               - name: eyebrow
@@ -4543,39 +4549,24 @@ content:
               - name: heading
                 label: Heading
                 type: string
-              - name: text
-                label: Text
+              - name: statValue
+                label: Stat value
                 type: string
-          - name: outcomes
-            label: Outcomes
-            type: object
-            fields:
-              - name: eyebrow
-                label: Small label above heading
-                type: string
-              - name: heading
-                label: Heading
-                type: string
-              - name: eyebrow2
-                label: Small label above heading 2
+              - name: statLabel
+                label: Stat label
                 type: string
               - name: text
                 label: Text
                 type: text
-              - name: eyebrow3
-                label: Small label above heading 3
-                type: string
               - name: text2
                 label: Text 2
                 type: text
-              - name: eyebrow4
-                label: Small label above heading 4
+              - name: threats
+                label: Threats
                 type: string
-              - name: text3
-                label: Text 3
-                type: text
-          - name: risksAndSustainability
-            label: Risks and sustainability
+                list: true
+          - name: whyOceansAlive
+            label: Why oceans alive
             type: object
             fields:
               - name: eyebrow
@@ -4584,24 +4575,13 @@ content:
               - name: heading
                 label: Heading
                 type: string
-              - name: subheading
-                label: Subheading
-                type: string
               - name: text
                 label: Text
                 type: text
-              - name: subheading2
-                label: Subheading 2
-                type: string
-              - name: text2
-                label: Text 2
+              - name: items
+                label: Items
                 type: text
-              - name: subheading3
-                label: Subheading 3
-                type: string
-              - name: text3
-                label: Text 3
-                type: text
+                list: true
           - name: conclusion
             label: Conclusion
             type: object

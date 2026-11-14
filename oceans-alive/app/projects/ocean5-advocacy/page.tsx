@@ -1,21 +1,18 @@
 /**
  * ══════════════════════════════════════════════════════════════════
- * PAGE: Project › Ocean 5 Advocacy
+ * PAGE: Project › One Voice for Coastal Resilience (Oceans5)
  * URL:  /projects/ocean5-advocacy
  * ══════════════════════════════════════════════════════════════════
  * Sections, top to bottom (search this file for "SECTION <n>"):
  *   1. Hero
- *   2. Problem Statement
- *   3. Objectives
- *   4. Activities Timeline
- *   5. Outcomes
- *   6. Risks and Sustainability
+ *   2. Project at a Glance
+ *   3. Project Overview (the problem)
+ *   4. The Initiative (objectives)
+ *   5. Policy Alignment (JCMA Plans)
+ *   6. Why Oceans Alive
  *   7. Conclusion
  *   8. Call to action
  *
- * Where the text/data lives:
- *   • FUNDER  →  top of this file
- *   • ACTIVITIES  →  top of this file
  * Page text, images and links (editable in Pages CMS)  →  content/projects/ocean5-advocacy.json
  */
 import Link from 'next/link';
@@ -26,8 +23,6 @@ import PAGE from '@/content/projects/ocean5-advocacy.json';
 export const metadata = PAGE.seo;
 
 const FUNDER = PAGE.FUNDER;
-
-const ACTIVITIES = PAGE.ACTIVITIES;
 
 export default function Ocean5AdvocacyPage() {
   return (
@@ -63,6 +58,10 @@ export default function Ocean5AdvocacyPage() {
                 <div className="text-4xl font-poppins font-bold text-ocean-turquoise">{PAGE.hero.text3}</div>
                 <div className="text-sm text-white/60 uppercase tracking-widest mt-1">{PAGE.hero.eyebrow3}</div>
               </div>
+              <div>
+                <div className="text-4xl font-poppins font-bold text-ocean-turquoise">{PAGE.hero.text4}</div>
+                <div className="text-sm text-white/60 uppercase tracking-widest mt-1">{PAGE.hero.eyebrow5}</div>
+              </div>
             </div>
           </div>
         </div>
@@ -77,41 +76,64 @@ export default function Ocean5AdvocacyPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════
-          SECTION 2 · Problem Statement
+          SECTION 2 · Project at a Glance
+          ══════════════════════════════════════════════════════════════════ */}
+      <section className="bg-white pt-16 md:pt-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-8">
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-3">{PAGE.atAGlance.eyebrow}</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight">{PAGE.atAGlance.heading}</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+            {PAGE.atAGlance.items.map((item, i) => (
+              <div
+                key={item.label}
+                className={`relative rounded-2xl p-6 border overflow-hidden ${
+                  i < 2 ? 'lg:col-span-3' : 'lg:col-span-2'
+                } ${i === 4 ? 'bg-rose-900 border-rose-900 text-white sm:col-span-2 lg:col-span-2' : 'bg-rose-50 border-rose-100'}`}
+              >
+                <span className={`block h-1 w-10 rounded-full mb-4 ${i === 4 ? 'bg-ocean-sunshine' : 'bg-rose-800'}`} />
+                <p className={`text-[11px] font-bold uppercase tracking-widest mb-2 ${i === 4 ? 'text-white/70' : 'text-rose-800'}`}>{item.label}</p>
+                <p className={`leading-relaxed ${i === 4 ? 'text-xl font-poppins font-bold text-white' : 'text-sm text-gray-700'}`}>{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 3 · Project Overview (the problem)
           ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.problemStatement.eyebrow}</p>
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight mb-4">{PAGE.problemStatement.heading}</h2>
-            <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto">{PAGE.problemStatement.text}</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight mb-4 max-w-3xl mx-auto">{PAGE.problemStatement.heading}</h2>
+            <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto">{PAGE.problemStatement.text}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            <div className="bg-rose-50 rounded-2xl p-6 border border-rose-100">
-              <div className="text-3xl font-poppins font-bold text-rose-800 mb-2">{PAGE.problemStatement.text2}</div>
-              <p className="text-sm text-gray-600 leading-relaxed">{PAGE.problemStatement.text3}</p>
-            </div>
-            <div className="bg-rose-50 rounded-2xl p-6 border border-rose-100">
-              <div className="text-3xl font-poppins font-bold text-rose-800 mb-2">{PAGE.problemStatement.text4}</div>
-              <p className="text-sm text-gray-600 leading-relaxed">{PAGE.problemStatement.text5}</p>
-            </div>
-            <div className="bg-rose-50 rounded-2xl p-6 border border-rose-100">
-              <div className="text-3xl font-poppins font-bold text-rose-800 mb-2">{PAGE.problemStatement.text6}</div>
-              <p className="text-sm text-gray-600 leading-relaxed">{PAGE.problemStatement.text7}</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {PAGE.problemStatement.cards.map((card, i) => (
+              <div key={card.title} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="w-9 h-9 rounded-full bg-rose-900 text-white flex items-center justify-center text-sm font-bold shrink-0">{i + 1}</span>
+                  <h3 className="font-poppins font-bold text-lg text-ocean-midnight">{card.title}</h3>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">{card.text}</p>
+              </div>
+            ))}
           </div>
-          <p className="text-gray-700 leading-relaxed max-w-3xl mx-auto text-center">{PAGE.problemStatement.text8}</p>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════
-          SECTION 3 · Objectives
+          SECTION 4 · The Initiative (objectives)
           ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-gray-50 py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
             <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.objectives.eyebrow}</p>
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight">{PAGE.objectives.heading}</h2>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight mb-4">{PAGE.objectives.heading}</h2>
+            <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto">{PAGE.objectives.text}</p>
           </div>
           <div className="space-y-4">
             {PAGE.objectives.list.map((obj, i) => (
@@ -125,82 +147,48 @@ export default function Ocean5AdvocacyPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════
-          SECTION 4 · Activities Timeline
+          SECTION 5 · Policy Alignment (JCMA Plans)
           ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.activitiesTimeline.eyebrow}</p>
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight">{PAGE.activitiesTimeline.heading}</h2>
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-10 lg:gap-14 items-center">
+          <div className="rounded-3xl bg-gradient-to-br from-rose-900 to-ocean-midnight p-10 text-white text-center shadow-xl">
+            <div className="font-poppins font-black text-5xl md:text-6xl text-ocean-turquoise mb-3">{PAGE.jcma.statValue}</div>
+            <p className="text-white/75 text-sm uppercase tracking-widest font-semibold leading-relaxed">{PAGE.jcma.statLabel}</p>
           </div>
-          <div className="space-y-0">
-            {ACTIVITIES.map((item, i) => (
-              <div key={item.title} className="flex gap-4 sm:gap-6 pb-10 last:pb-0">
-                <div className="flex flex-col items-center gap-2 shrink-0 w-28">
-                  <div className="px-2 sm:px-3 py-2 rounded-full bg-rose-900/5 border-2 border-rose-800 text-center">
-                    <span className="text-[11px] font-bold text-rose-800 whitespace-nowrap">{item.months}</span>
-                  </div>
-                  {i < ACTIVITIES.length - 1 && <div className="w-px flex-1 bg-rose-800/20" />}
-                </div>
-                <div className="pt-1 pb-2 min-w-0">
-                  <h3 className="font-poppins font-bold text-lg sm:text-xl text-ocean-midnight mb-2 break-words">{item.title}</h3>
-                  <p className="text-gray-600 leading-relaxed mb-3">{item.body}</p>
-                  <p className="text-sm font-semibold text-rose-800">{PAGE.activitiesTimeline.text}{item.output}</p>
-                </div>
-              </div>
-            ))}
+          <div>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.jcma.eyebrow}</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight mb-5">{PAGE.jcma.heading}</h2>
+            <p className="text-gray-600 leading-relaxed mb-4">{PAGE.jcma.text}</p>
+            <p className="text-gray-700 font-semibold mb-3">{PAGE.jcma.text2}</p>
+            <ul className="space-y-2">
+              {PAGE.jcma.threats.map((t) => (
+                <li key={t} className="flex items-center gap-3 text-gray-700">
+                  <span className="w-2 h-2 rounded-full bg-rose-800 shrink-0" />
+                  {t}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════
-          SECTION 5 · Outcomes
+          SECTION 6 · Why Oceans Alive
           ══════════════════════════════════════════════════════════════════ */}
       <section className="bg-ocean-midnight py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.outcomes.eyebrow}</p>
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white leading-tight">{PAGE.outcomes.heading}</h2>
+            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.whyOceansAlive.eyebrow}</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white leading-tight mb-4">{PAGE.whyOceansAlive.heading}</h2>
+            <p className="text-white/70 leading-relaxed max-w-3xl mx-auto">{PAGE.whyOceansAlive.text}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-              <p className="text-xs font-bold text-ocean-turquoise uppercase tracking-widest mb-3">{PAGE.outcomes.eyebrow2}</p>
-              <p className="text-sm text-white/80 leading-relaxed">{PAGE.outcomes.text}</p>
-            </div>
-            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-              <p className="text-xs font-bold text-ocean-turquoise uppercase tracking-widest mb-3">{PAGE.outcomes.eyebrow3}</p>
-              <p className="text-sm text-white/80 leading-relaxed">{PAGE.outcomes.text2}</p>
-            </div>
-            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-              <p className="text-xs font-bold text-ocean-turquoise uppercase tracking-widest mb-3">{PAGE.outcomes.eyebrow4}</p>
-              <p className="text-sm text-white/80 leading-relaxed">{PAGE.outcomes.text3}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════════════════════════════
-          SECTION 6 · Risks and Sustainability
-          ══════════════════════════════════════════════════════════════════ */}
-      <section className="bg-gray-50 py-16 md:py-20">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.risksAndSustainability.eyebrow}</p>
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-ocean-midnight leading-tight">{PAGE.risksAndSustainability.heading}</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="font-poppins font-bold text-ocean-midnight mb-3">{PAGE.risksAndSustainability.subheading}</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">{PAGE.risksAndSustainability.text}</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="font-poppins font-bold text-ocean-midnight mb-3">{PAGE.risksAndSustainability.subheading2}</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">{PAGE.risksAndSustainability.text2}</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="font-poppins font-bold text-ocean-midnight mb-3">{PAGE.risksAndSustainability.subheading3}</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">{PAGE.risksAndSustainability.text3}</p>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {PAGE.whyOceansAlive.items.map((item, i) => (
+              <div key={item} className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="text-3xl font-poppins font-black text-ocean-turquoise/40 mb-3">{String(i + 1).padStart(2, '0')}</div>
+                <p className="text-sm text-white/85 leading-relaxed">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
