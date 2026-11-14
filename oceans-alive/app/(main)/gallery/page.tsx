@@ -22,6 +22,7 @@ import { GALLERY_CATEGORIES } from '@/lib/constants';
 import { GalleryItem } from '@/lib/types';
 
 import PAGE from '@/content/pages/gallery.json';
+import { asset } from '@/lib/asset';
 
 const LOCAL_PREVIEWS = PAGE.LOCAL_PREVIEWS;
 
@@ -232,7 +233,7 @@ export default function Gallery() {
                   <>
                     {item.type === 'photo' && item.image_url ? (
                       <img
-                        src={item.image_url}
+                        src={asset(item.image_url)}
                         alt={item.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
@@ -240,7 +241,7 @@ export default function Gallery() {
                       <div className="relative w-full h-full bg-gradient-to-br from-ocean-midnight to-[#0a4f7a] flex items-center justify-center">
                         {(item.image_url || (item.video_url && extractYouTubeId(item.video_url))) && (
                           <img
-                            src={item.image_url || `https://img.youtube.com/vi/${extractYouTubeId(item.video_url || '')}/hqdefault.jpg`}
+                            src={asset(item.image_url) || `https://img.youtube.com/vi/${extractYouTubeId(item.video_url || '')}/hqdefault.jpg`}
                             alt={item.title}
                             className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                           />
@@ -340,7 +341,7 @@ export default function Gallery() {
           >
             <div className="relative">
               {selectedItem.type === 'photo' && selectedItem.image_url ? (
-                <img src={selectedItem.image_url} alt={selectedItem.title} className="w-full h-auto max-h-[60vh] object-cover rounded-t-2xl" />
+                <img src={asset(selectedItem.image_url)} alt={selectedItem.title} className="w-full h-auto max-h-[60vh] object-cover rounded-t-2xl" />
               ) : selectedItem.type === 'video' && selectedItem.video_url ? (
                 <iframe
                   width="100%"

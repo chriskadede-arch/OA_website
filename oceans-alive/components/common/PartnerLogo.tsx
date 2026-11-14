@@ -7,6 +7,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { asset } from '@/lib/asset';
 
 type PartnerLogoProps = {
   name: string;
@@ -66,7 +67,7 @@ export default function PartnerLogo({ name, domain, logoPath, size = 'md', class
       return (
         <div className={`flex items-center justify-center ${className}`}>
           <Image
-            src={logoSrc}
+            src={asset(logoSrc)}
             alt={`${name} logo`}
             width={200}
             height={200}
@@ -82,7 +83,7 @@ export default function PartnerLogo({ name, domain, logoPath, size = 'md', class
     return (
       <div className={`flex items-center justify-center ${className}`}>
         <img
-          src={logoSrc}
+          src={asset(logoSrc)}
           alt={`${name} logo`}
           className={`${logoSizeClasses[size]} w-auto h-auto object-contain transition-all duration-300`}
           onError={() => {

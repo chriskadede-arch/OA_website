@@ -6,6 +6,7 @@
 'use client';
 
 import { useState } from 'react';
+import { asset } from '@/lib/asset';
 
 type Props = {
   name: string;
@@ -33,7 +34,7 @@ export default function PartnerCard({ name, role, logo }: Props) {
       <div className="h-14 flex items-center justify-center">
         {showLogo ? (
           <img
-            src={logo}
+            src={asset(logo)}
             alt={name}
             className="max-h-12 max-w-[110px] w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
             onError={() => setImgError(true)}

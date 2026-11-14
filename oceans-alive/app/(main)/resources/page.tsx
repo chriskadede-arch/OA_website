@@ -27,6 +27,7 @@ import { Resource } from '@/lib/types';
 import { apiClient } from '@/lib/api-client';
 
 import PAGE from '@/content/pages/resources.json';
+import { asset } from '@/lib/asset';
 
 const FILE_TYPE_COLORS: Record<string, string> = PAGE.FILE_TYPE_COLORS as unknown as Record<string, string>;
 
@@ -510,7 +511,7 @@ export default function Resources() {
                     {/* Thumbnail */}
                     <div className="h-48 bg-gradient-to-br from-ocean-midnight to-[#0a4f7a] overflow-hidden relative">
                       {resource.thumbnail_url ? (
-                        <img src={resource.thumbnail_url} alt={resource.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                        <img src={asset(resource.thumbnail_url)} alt={resource.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center">
                           <div className="text-center">

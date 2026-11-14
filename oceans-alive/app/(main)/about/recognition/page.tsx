@@ -15,6 +15,7 @@
  */
 import Link from 'next/link';
 import PAGE from '@/content/pages/about-recognition.json';
+import { asset } from '@/lib/asset';
 
 export const metadata = PAGE.seo;
 
@@ -65,7 +66,7 @@ export default function RecognitionPage() {
                 {/* Optional photo (added in the editor) */}
                 {award.image && (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={award.image} alt={award.imageAlt || award.title} className="block max-w-none w-[calc(100%+3.5rem)] -mx-7 -mt-7 mb-6 aspect-[2/1] object-cover" loading="lazy" />
+                  <img src={asset(award.image)} alt={award.imageAlt || award.title} className="block max-w-none w-[calc(100%+3.5rem)] -mx-7 -mt-7 mb-6 aspect-[2/1] object-cover" loading="lazy" />
                 )}
                 {/* Year watermark */}
                 {!award.image && (

@@ -11,6 +11,7 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import type { Components } from 'react-markdown';
+import { asset } from '@/lib/asset';
 
 /** The video id from any common YouTube link (youtu.be/…, watch?v=…, shorts/…, embed/…). */
 function youTubeId(href: string): string | null {
@@ -54,7 +55,7 @@ const components: Components = {
         {/* Whole photo at its own shape, so faces are never cropped off. */}
         {/* Tall (portrait) photos are capped in height and centred. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={src} alt={alt ?? ''} className="block mx-auto max-w-full h-auto max-h-[640px] rounded-2xl" loading="lazy" />
+        <img src={asset(src)} alt={alt ?? ''} className="block mx-auto max-w-full h-auto max-h-[640px] rounded-2xl" loading="lazy" />
         {title && <span className="block text-xs text-gray-400 mt-3 italic px-6 md:px-12">{title}</span>}
       </span>
     );
