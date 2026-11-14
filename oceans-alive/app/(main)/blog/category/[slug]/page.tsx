@@ -204,18 +204,11 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                   <div className={`absolute -bottom-24 -left-24 w-72 h-72 rounded-full blur-3xl opacity-25 group-hover:opacity-45 transition-opacity duration-500 ${tone.bg}`} />
 
                   <div className="relative z-10 p-6 md:p-7 flex flex-col justify-between h-full" style={{ minHeight: '300px' }}>
-                    {/* Top row: story count + big outlined number */}
-                    <div className="flex items-start justify-between">
+                    {/* Top row: story count */}
+                    <div className="flex items-start">
                       <span className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-white">
                         <span className={`w-1.5 h-1.5 rounded-full ${tone.bg}`} />
                         {catPosts.length} {catPosts.length === 1 ? 'story' : 'stories'}
-                      </span>
-                      <span
-                        className="font-poppins font-bold leading-none text-lg text-white/80 select-none pt-1.5 transition-colors duration-300 group-hover:text-white"
-                        style={{ textShadow: '0 1px 6px rgba(0,0,0,0.45)' }}
-                        aria-hidden
-                      >
-                        {String(i + 1).padStart(2, '0')}
                       </span>
                     </div>
 
