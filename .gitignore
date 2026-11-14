@@ -8,3 +8,8 @@ oceans-alive/godaddy-upload/
 oceans-alive/dist/
 oceans-alive/dist_build/
 OA_website/
+
+# Files too large for GitHub (kept locally only)
+images/NEMO.tif
+images/clownfish.jpg
+oceans-alive/OceansAlive-Presentation.zip
