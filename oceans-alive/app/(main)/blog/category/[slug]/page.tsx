@@ -35,7 +35,8 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
   const config = categories.find((c) => c.slug === params.slug);
   if (!config) notFound();
 
-  const stories = getAllPosts().filter((p) => p.category === config.name);
+  const allPosts = getAllPosts();
+  const stories = allPosts.filter((p) => p.category === config.name);
   const featured = stories.find((p) => p.highlight !== 'None') ?? stories[0];
   const rest = stories.filter((s) => s !== featured);
   const others = categories.filter((c) => c.slug !== params.slug);
@@ -179,32 +180,75 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-5">
-            {others.map((cat, i) => (
-              <Link
-                key={cat.slug}
-                href={`/blog/category/${cat.slug}`}
-                className={`group relative rounded-2xl overflow-hidden block ${topicSpan(i, others.length)}`}
-                style={{ minHeight: '280px' }}
-              >
-                <Image src={cat.cardImage} alt={cat.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight/90 via-ocean-midnight/20 to-transparent" />
+            {others.map((cat, i) => {
+              const tone = TOPIC_TONES[i % TOPIC_TONES.length];
+              const catPosts = allPosts.filter((p) => p.category === cat.name);
+              const latest = catPosts[0];
+              const wide = topicSpan(i, others.length).includes('lg:col-span-4');
+              return (
+                <Link
+                  key={cat.slug}
+                  href={`/blog/category/${cat.slug}`}
+                  className={`group relative rounded-3xl overflow-hidden block ring-1 ring-white/10 shadow-xl shadow-black/30 transition-all duration-500 hover:-translate-y-1.5 hover:ring-2 ${tone.ring} ${topicSpan(i, others.length)}`}
+                  style={{ minHeight: '300px' }}
+                >
+                  <Image
+                    src={cat.cardImage}
+                    alt={cat.name}
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                  />
+                  {/* Layered shading: dark base for text, soft colour glow from the corner */}
+                  <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-ocean-midnight/50 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ocean-midnight from-10% via-ocean-midnight/60 via-45% to-ocean-midnight/0" />
+                  <div className={`absolute -bottom-24 -left-24 w-72 h-72 rounded-full blur-3xl opacity-25 group-hover:opacity-45 transition-opacity duration-500 ${tone.bg}`} />
 
-                <div className="relative z-10 p-6 flex flex-col justify-end h-full" style={{ minHeight: '280px' }}>
-                  <p className="text-white/70 text-[11px] uppercase tracking-widest font-semibold mb-1.5">{cat.cardDescription}</p>
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-poppins font-bold text-white text-lg group-hover:text-ocean-turquoise transition-colors">{cat.name}</h3>
-                    <svg
-                      className="w-4 h-4 text-white/30 group-hover:text-ocean-turquoise group-hover:translate-x-0.5 transition-all"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                  <div className="relative z-10 p-6 md:p-7 flex flex-col justify-between h-full" style={{ minHeight: '300px' }}>
+                    {/* Top row: story count + big outlined number */}
+                    <div className="flex items-start justify-between">
+                      <span className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-white">
+                        <span className={`w-1.5 h-1.5 rounded-full ${tone.bg}`} />
+                        {catPosts.length} {catPosts.length === 1 ? 'story' : 'stories'}
+                      </span>
+                      <span
+                        className="font-poppins font-black leading-none text-5xl md:text-6xl select-none transition-transform duration-500 group-hover:-translate-y-1"
+                        style={{ color: 'transparent', WebkitTextStroke: '1.5px rgba(255,255,255,0.75)', textShadow: '0 2px 12px rgba(0,0,0,0.35)' }}
+                        aria-hidden
+                      >
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                    </div>
+
+                    {/* Bottom: title block */}
+                    <div>
+                      <span className={`block h-1 w-10 rounded-full mb-4 transition-all duration-500 group-hover:w-24 ${tone.bg}`} />
+                      <p className="text-[11px] uppercase tracking-[0.2em] font-bold mb-2 text-white/85">{cat.cardDescription}</p>
+                      <h3 className={`font-poppins font-bold text-white leading-tight mb-3 ${wide ? 'text-3xl md:text-4xl' : 'text-2xl'}`}>
+                        {cat.name}
+                      </h3>
+                      {latest && (
+                        <p className={`text-white/65 text-xs leading-relaxed mb-5 line-clamp-2 ${wide ? 'max-w-md' : ''}`}>
+                          <span className="text-white/40 uppercase tracking-widest text-[9px] font-bold mr-1.5">Latest</span>
+                          {latest.title}
+                        </p>
+                      )}
+                      <div className="flex items-center justify-between border-t border-white/10 pt-4">
+                        <span className="text-[11px] font-bold uppercase tracking-widest text-white/70 group-hover:text-white transition-colors">
+                          Explore topic
+                        </span>
+                        <span
+                          className={`w-9 h-9 rounded-full border border-white/20 bg-white/5 backdrop-blur flex items-center justify-center text-white transition-all duration-300 group-hover:border-transparent ${tone.hoverBg} ${tone.hoverText}`}
+                        >
+                          <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M13 6l6 6-6 6" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
 
           <div className="mt-6 text-center sm:hidden">
@@ -223,6 +267,13 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  * Desktop: rows of 3 (each card 2 of 6 columns); when the count doesn't divide by 3,
  * one or two cards are made double width. Tablet: rows of 2; an odd last card spans both.
  */
+/** Colour accents that rotate across the "Other Topics" cards. */
+const TOPIC_TONES = [
+  { text: 'text-ocean-turquoise', bg: 'bg-ocean-turquoise', ring: 'hover:ring-ocean-turquoise', hoverBg: 'group-hover:bg-ocean-turquoise', hoverText: 'group-hover:text-ocean-midnight' },
+  { text: 'text-ocean-sunshine', bg: 'bg-ocean-sunshine', ring: 'hover:ring-ocean-sunshine', hoverBg: 'group-hover:bg-ocean-sunshine', hoverText: 'group-hover:text-ocean-midnight' },
+  { text: 'text-ocean-seafoam', bg: 'bg-ocean-seafoam', ring: 'hover:ring-ocean-seafoam', hoverBg: 'group-hover:bg-ocean-seafoam', hoverText: 'group-hover:text-ocean-midnight' },
+];
+
 function topicSpan(i: number, n: number): string {
   const tablet = n % 2 === 1 && i === n - 1 ? 'sm:col-span-2' : '';
   const wide = (n % 3 === 2 && i === 0) || (n % 3 === 1 && (i === 0 || i === 3));
