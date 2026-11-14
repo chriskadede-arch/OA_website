@@ -2,7 +2,7 @@
 title: 'Innovate, Conserve, Collaborate: Oceans Alive Champions Sustainability at Mombasa Agricultural Show 2024'
 status: Published
 category: Latest Updates
-date: '2024-09-01'
+date: '2024-09-08'
 highlight: None
 excerpt: >-
   At the Mombasa Agricultural Show 2024, Oceans Alive showcased its

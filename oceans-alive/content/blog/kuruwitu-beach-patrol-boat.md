@@ -2,7 +2,7 @@
 title: 'Kuruwitu Beach Patrol: A New Boat for the Co-Management Area'
 status: Published
 category: Fisheries
-date: '2023-07-21'
+date: '2023-10-25'
 highlight: None
 excerpt: >-
   With EU funding through BIOPAMA, Oceans Alive has procured a patrol boat for

@@ -2,7 +2,7 @@
 title: 'Transforming Young Minds: How We''re Educating Kilifi''s Kids to Protect Coral Reefs'
 status: Published
 category: Education
-date: '2026-11-12'
+date: '2025-07-22'
 highlight: Top story on its category page
 excerpt: >-
   Project REEL brings coral reef conservation straight into Kilifi's schools,

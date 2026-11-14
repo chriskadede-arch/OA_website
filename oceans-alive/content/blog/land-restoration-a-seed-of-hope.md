@@ -2,7 +2,7 @@
 title: 'Land Restoration: A Seed of Hope'
 status: Published
 category: Impact Stories
-date: '2026-11-12'
+date: '2024-01-08'
 highlight: None
 excerpt: >-
   In a Giriama village worn down by drought, two young friends, Juma and

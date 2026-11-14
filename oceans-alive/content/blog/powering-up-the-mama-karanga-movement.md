@@ -2,7 +2,7 @@
 title: Powering Up the Mama Karanga Movement!
 status: Published
 category: Women & Ocean
-date: '2026-11-12'
+date: '2025-07-22'
 highlight: Top story on its category page
 excerpt: >-
   With support from Pelorus Foundation, Kuruwitu's Mama Karangas, women

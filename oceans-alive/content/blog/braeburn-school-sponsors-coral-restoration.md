@@ -2,7 +2,7 @@
 title: Braeburn School Sponsors Coral Restoration
 status: Published
 category: Coral Restoration
-date: '2026-11-12'
+date: '2023-10-24'
 highlight: None
 excerpt: >-
   Braeburn Garden Estate School has sponsored the Braeburn Coral Village, adding

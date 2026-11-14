@@ -2,7 +2,7 @@
 title: Kilifi County CECM Witnesses Community Transformation Through Coral Guardian's Project REEL
 status: Published
 category: Coral Restoration
-date: '2026-11-12'
+date: '2025-08-19'
 highlight: Top story on the main blog page
 excerpt: >-
   Dr. Patteson Chula, Kilifi County's CECM for Agriculture, Livestock Development

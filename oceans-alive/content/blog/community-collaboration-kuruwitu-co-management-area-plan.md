@@ -2,7 +2,7 @@
 title: 'Community Collaboration: Launching the Kuruwitu Co-Management Area Plan'
 status: Published
 category: Governance
-date: '2026-11-12'
+date: '2024-03-12'
 highlight: Top story on its category page
 excerpt: >-
   With support from Oceans Alive and funding from BIOPAMA, the Kuruwitu Beach

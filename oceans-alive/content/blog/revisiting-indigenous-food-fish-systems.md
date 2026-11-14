@@ -2,7 +2,7 @@
 title: Revisiting Indigenous Food Fish Systems
 status: Published
 category: Fisheries
-date: '2026-11-12'
+date: '2024-02-04'
 highlight: Top story on its category page
 excerpt: >-
   Oceans Alive is working with the Kuruwitu CBO and the Bureni fishermen

@@ -2,7 +2,7 @@
 title: Launching the Blue Champions Project
 status: Published
 category: Governance
-date: '2021-07-01'
+date: '2021-09-17'
 highlight: None
 excerpt: >-
   Upscaling 15 years of 30 ha LMMA experience to encompass a 12,000 ha

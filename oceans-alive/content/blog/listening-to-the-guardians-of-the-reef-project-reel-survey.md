@@ -2,7 +2,7 @@
 title: 'Listening to the Guardians of the Reef: Project REEL Completes Survey in Kuruwitu'
 status: Published
 category: Community News
-date: '2026-11-12'
+date: '2025-08-19'
 highlight: Top story on its category page
 excerpt: >-
   Project REEL, through our partner Coral Guardian, has completed a social

@@ -2,7 +2,7 @@
 title: Aboard HMS Lancaster
 status: Published
 category: Latest Updates
-date: '2026-11-12'
+date: '2024-09-18'
 highlight: Top story on its category page
 excerpt: >-
   Oceans Alive, the Kuruwitu Beach Management Unit and Kuruwitu CBO were invited

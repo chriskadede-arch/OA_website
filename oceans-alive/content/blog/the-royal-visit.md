@@ -2,7 +2,7 @@
 title: 'The Royal Visit: His Majesty King Charles III at Kuruwitu'
 status: Published
 category: Recognition
-date: '2023-11-02'
+date: '2023-11-05'
 highlight: Top story on its category page
 excerpt: >-
   On 2 November 2023, the Kuruwitu CBO and Oceans Alive Foundation welcomed His

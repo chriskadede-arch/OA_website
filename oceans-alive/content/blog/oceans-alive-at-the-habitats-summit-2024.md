@@ -2,7 +2,7 @@
 title: Oceans Alive Presents at The Habitats Summit 2024
 status: Published
 category: Recognition
-date: '2024-02-01'
+date: '2024-03-12'
 highlight: None
 excerpt: >-
   Oceans Alive was one of 40 organisations chosen worldwide to present at The

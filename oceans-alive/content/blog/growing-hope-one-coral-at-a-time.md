@@ -2,7 +2,7 @@
 title: Growing Hope, One Coral at a Time!
 status: Published
 category: Coral Restoration
-date: '2026-11-12'
+date: '2025-07-22'
 highlight: None
 excerpt: >-
   A second wave of 10 fisher interns has joined Project REEL, supported by

@@ -2,7 +2,7 @@
 title: Hope for Kuruwitu's Coral Reefs
 status: Published
 category: Impact Stories
-date: '2025-01-01'
+date: '2025-01-07'
 highlight: Top story on its category page
 excerpt: >-
   After a year of climate and overfishing pressures, Kuruwitu's community and
