@@ -72,7 +72,7 @@ export default function CoralGuardianPage() {
         {/* Partner badge, floating right */}
         <div className="hidden lg:flex absolute right-10 xl:right-20 top-1/2 -translate-y-1/2 flex-col items-center gap-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
           <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">{PAGE.hero.eyebrow2}</span>
-          <div className="relative w-36 h-20 bg-white rounded-xl p-3">
+          <div className="relative w-36 h-20 bg-ocean-midnight rounded-xl p-3">
             <Image src={PAGE.hero.image} alt={PAGE.hero.imageAlt} fill className="object-contain p-2" />
           </div>
         </div>
