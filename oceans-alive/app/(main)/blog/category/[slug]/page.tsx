@@ -211,8 +211,8 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                         {catPosts.length} {catPosts.length === 1 ? 'story' : 'stories'}
                       </span>
                       <span
-                        className="font-poppins font-black leading-none text-5xl md:text-6xl select-none transition-transform duration-500 group-hover:-translate-y-1"
-                        style={{ color: 'transparent', WebkitTextStroke: '1.5px rgba(255,255,255,0.75)', textShadow: '0 2px 12px rgba(0,0,0,0.35)' }}
+                        className="font-poppins font-bold leading-none text-lg text-white/80 select-none pt-1.5 transition-colors duration-300 group-hover:text-white"
+                        style={{ textShadow: '0 1px 6px rgba(0,0,0,0.45)' }}
                         aria-hidden
                       >
                         {String(i + 1).padStart(2, '0')}
