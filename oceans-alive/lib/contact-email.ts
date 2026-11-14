@@ -59,10 +59,10 @@ export async function sendContactEmail(data: {
     const msg = result.message || '';
     if (/activat/i.test(msg)) {
       throw new Error(
-        'Thank you! Our contact form is being switched on. Please try again shortly, or email us at ' + to + '.',
+        'Thank you! Our contact form is being switched on. Please try again shortly, or email us at ' + SITE.contactEmail + '.',
       );
     }
-    throw new Error('Unable to send your message right now. Please email us directly at ' + to + '.');
+    throw new Error('Unable to send your message right now. Please email us directly at ' + SITE.contactEmail + '.');
   }
   return { success: true, message: 'Message sent successfully.' };
 }
