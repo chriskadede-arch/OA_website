@@ -31,6 +31,17 @@ const QUOTES = PAGE.QUOTES;
 // All gallery photos from Display Photos and images folders
 const STATIC_GALLERY: GalleryItem[] = PAGE.STATIC_GALLERY as unknown as GalleryItem[];
 
+// A colour dot for each category (used on filters, tiles and the lightbox).
+const CATEGORY_DOT: Record<string, string> = {
+  'Coral Restoration': 'bg-ocean-turquoise',
+  'Community Life': 'bg-ocean-sunshine',
+  Education: 'bg-ocean-seafoam',
+  Events: 'bg-ocean-sand',
+  Wildlife: 'bg-emerald-400',
+  'Ocean Landscapes': 'bg-sky-400',
+};
+const dot = (cat?: string) => CATEGORY_DOT[cat ?? ''] ?? 'bg-ocean-turquoise';
+
 export default function Gallery() {
   const [items, setItems] = useState<GalleryItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -51,6 +62,28 @@ export default function Gallery() {
     setItems(data);
     setLoading(false);
   };
+
+  // Counts shown on the filter buttons (respecting the other filter).
+  const published = STATIC_GALLERY.filter((item) => item.is_published !== false);
+  const countFor = (cat: string | null, type: 'photo' | 'video' | null) =>
+    published.filter((it) => (!cat || it.category === cat) && (!type || it.type === type)).length;
+
+  // Lightbox: step through the photos currently showing.
+  const currentIndex = selectedItem ? items.findIndex((it) => it.id === selectedItem.id) : -1;
+  const step = (d: number) => {
+    if (currentIndex < 0 || items.length === 0) return;
+    setSelectedItem(items[(currentIndex + d + items.length) % items.length]);
+  };
+  useEffect(() => {
+    if (!selectedItem) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedItem(null);
+      if (e.key === 'ArrowRight') step(1);
+      if (e.key === 'ArrowLeft') step(-1);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  });
 
   const extractYouTubeId = (url: string) => {
     const match = url.match(/(?:youtube\.com\/(?:watch\?(?:.*&)?v=|shorts\/|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
@@ -82,6 +115,14 @@ export default function Gallery() {
               <div key={p.src} className={`relative overflow-hidden ${i === 0 ? 'col-span-2 row-span-2' : ''}`}>
                 <Image src={p.src} alt={p.alt} fill sizes={i === 0 ? '(min-width: 768px) 50vw, 100vw' : '(min-width: 768px) 25vw, 50vw'} className="object-cover hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-ocean-midnight/10" />
+                {i === 0 && (
+                  <div className="absolute left-4 bottom-4 md:left-5 md:bottom-5 flex items-center gap-3 rounded-2xl bg-ocean-midnight/55 backdrop-blur-md border border-white/15 px-4 py-3">
+                    <span className="font-poppins font-black text-3xl md:text-4xl text-white leading-none">{published.length}</span>
+                    <span className="text-[10px] md:text-[11px] uppercase tracking-widest font-bold text-white/80 leading-tight">
+                      moments from<br />the Kenyan coast
+                    </span>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -94,57 +135,77 @@ export default function Gallery() {
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
 
-          {/* Filters */}
-          <div className="flex flex-wrap items-center gap-6 mb-10 pb-8 border-b border-gray-100">
-            {/* Type */}
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mr-1">{PAGE.photoGridLightbox.eyebrow}</span>
-              {[
-                { label: 'All', value: null as null },
-                { label: 'Photos', value: 'photo' as const },
-                { label: 'Videos', value: 'video' as const },
-              ].map((t) => (
-                <button
-                  key={String(t.value)}
-                  onClick={() => setSelectedType(t.value)}
-                  className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all border ${
-                    selectedType === t.value
-                      ? 'bg-ocean-midnight border-ocean-midnight text-white'
-                      : 'border-gray-200 text-gray-600 hover:border-ocean-midnight/40'
-                  }`}
-                >
-                  {t.label}
-                </button>
-              ))}
+          {/* Filters: a soft panel with pill buttons and live counts */}
+          <div className="rounded-3xl bg-gray-50 border border-gray-100 p-4 md:p-5 mb-6 flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-6">
+            {/* Type: segmented switch */}
+            <div className="flex items-center gap-3">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">{PAGE.photoGridLightbox.eyebrow}</span>
+              <div className="inline-flex rounded-full bg-white border border-gray-200 p-1 shadow-sm">
+                {[
+                  { label: 'All', value: null as null },
+                  { label: 'Photos', value: 'photo' as const },
+                  { label: 'Videos', value: 'video' as const },
+                ].map((t) => (
+                  <button
+                    key={String(t.value)}
+                    onClick={() => setSelectedType(t.value)}
+                    className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
+                      selectedType === t.value ? 'bg-ocean-midnight text-white shadow' : 'text-gray-500 hover:text-ocean-midnight'
+                    }`}
+                  >
+                    {t.label}
+                  </button>
+                ))}
+              </div>
             </div>
 
-            <div className="w-px h-6 bg-gray-200 hidden sm:block" />
+            <div className="w-px h-8 bg-gray-200 hidden lg:block" />
 
-            {/* Category */}
+            {/* Category pills with colour dot + count */}
             <div className="flex flex-wrap items-center gap-2">
               <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mr-1">{PAGE.photoGridLightbox.eyebrow2}</span>
-              <button
-                onClick={() => setSelectedCategory(null)}
-                className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all border ${
-                  selectedCategory === null
-                    ? 'bg-ocean-turquoise border-ocean-turquoise text-white'
-                    : 'border-gray-200 text-gray-600 hover:border-ocean-turquoise/40'
-                }`}
-              >{PAGE.photoGridLightbox.buttonText}</button>
-              {GALLERY_CATEGORIES.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all border ${
-                    selectedCategory === cat
-                      ? 'bg-ocean-turquoise border-ocean-turquoise text-white'
-                      : 'border-gray-200 text-gray-600 hover:border-ocean-turquoise/40'
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
+              {[null, ...GALLERY_CATEGORIES].map((cat) => {
+                const active = selectedCategory === cat;
+                return (
+                  <button
+                    key={cat ?? 'all'}
+                    onClick={() => setSelectedCategory(cat)}
+                    className={`inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 rounded-full text-xs font-semibold transition-all border ${
+                      active
+                        ? 'bg-ocean-midnight border-ocean-midnight text-white shadow-md -translate-y-px'
+                        : 'bg-white border-gray-200 text-gray-600 hover:border-ocean-midnight/30 hover:-translate-y-px'
+                    }`}
+                  >
+                    {cat && <span className={`w-2 h-2 rounded-full ${dot(cat)}`} />}
+                    {cat ?? PAGE.photoGridLightbox.buttonText}
+                    <span className={`min-w-[1.4rem] text-center rounded-full px-1.5 py-0.5 text-[10px] font-bold ${active ? 'bg-white/15 text-white' : 'bg-gray-100 text-gray-500'}`}>
+                      {countFor(cat, selectedType)}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
+          </div>
+
+          {/* Results line */}
+          <div className="flex items-center justify-between mb-6">
+            <p className="text-sm text-gray-500">
+              Showing <span className="font-bold text-ocean-midnight">{items.length}</span>{' '}
+              {selectedType === 'video' ? 'videos' : selectedType === 'photo' ? 'photos' : 'moments'}
+              {selectedCategory && (
+                <>
+                  {' '}in <span className="font-semibold text-ocean-midnight">{selectedCategory}</span>
+                </>
+              )}
+            </p>
+            {(selectedCategory || selectedType) && (
+              <button
+                onClick={() => { setSelectedCategory(null); setSelectedType(null); }}
+                className="text-xs font-bold uppercase tracking-widest text-ocean-turquoise hover:text-ocean-midnight transition-colors"
+              >
+                Clear filters ×
+              </button>
+            )}
           </div>
 
           {/* Gallery Grid */}
@@ -197,7 +258,10 @@ export default function Gallery() {
                       <div className="p-3 w-full">
                         <p className="text-white text-[11px] font-semibold line-clamp-2 leading-tight">{item.title}</p>
                         <div className="flex items-center justify-between gap-2 mt-1">
-                          <p className="text-white/60 text-[8px] uppercase tracking-widest">{item.category}</p>
+                          <p className="flex items-center gap-1.5 text-white/70 text-[8px] uppercase tracking-widest">
+                            <span className={`w-1.5 h-1.5 rounded-full ${dot(item.category)}`} />
+                            {item.category}
+                          </p>
                           {item.link && (
                             <Link
                               href={item.link}
@@ -211,6 +275,13 @@ export default function Gallery() {
                       </div>
                     </div>
 
+                    {item.type === 'photo' && (
+                      <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />
+                        </svg>
+                      </div>
+                    )}
                     {item.type === 'video' && (
                       <div className="absolute top-3 right-3 bg-white/15 text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">{PAGE.photoGridLightbox.eyebrow3}</div>
                     )}
@@ -219,7 +290,7 @@ export default function Gallery() {
 
                 if (!big) {
                   return (
-                    <div key={item.id} className="relative overflow-hidden rounded-xl cursor-pointer group h-44" onClick={() => setSelectedItem(item)}>
+                    <div key={item.id} className="relative overflow-hidden rounded-xl cursor-pointer group h-44 ring-1 ring-black/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ocean-midnight/20" onClick={() => setSelectedItem(item)}>
                       {media}
                     </div>
                   );
@@ -227,14 +298,20 @@ export default function Gallery() {
                 // Big tile: same photo size as before (h-64); the space below it holds a quote.
                 return (
                   <div key={item.id} className="col-span-2 row-span-2 flex flex-col gap-3">
-                    <div className="relative overflow-hidden rounded-xl cursor-pointer group h-64 shrink-0" onClick={() => setSelectedItem(item)}>
+                    <div className="relative overflow-hidden rounded-xl cursor-pointer group h-64 shrink-0 ring-1 ring-black/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ocean-midnight/20" onClick={() => setSelectedItem(item)}>
                       {media}
                     </div>
                     {quote && (
                       <Link
                         href={quote.link}
-                        className="group/q flex-1 rounded-xl bg-white px-5 py-3 flex flex-col justify-center"
+                        className="group/q relative overflow-hidden flex-1 rounded-xl bg-white border-l-4 border-ocean-turquoise pl-5 pr-14 py-3 flex flex-col justify-center hover:border-ocean-sunshine transition-colors"
                       >
+                        <span
+                          aria-hidden
+                          className="absolute -top-3 right-3 font-poppins font-black text-[96px] leading-none text-ocean-turquoise/15 select-none group-hover/q:text-ocean-sunshine/30 transition-colors"
+                        >
+                          &rdquo;
+                        </span>
                         <p className="font-poppins font-bold text-ocean-midnight text-sm md:text-base leading-snug line-clamp-3">
                           <span className="text-ocean-turquoise">&ldquo;</span>{quote.text}<span className="text-ocean-turquoise">&rdquo;</span>
                         </p>
@@ -277,6 +354,27 @@ export default function Gallery() {
                 />
               ) : null}
 
+              {items.length > 1 && (
+                <>
+                  <button
+                    onClick={() => step(-1)}
+                    aria-label="Previous"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/85 hover:bg-white text-ocean-midnight shadow-lg flex items-center justify-center transition-all hover:scale-105"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M15 19l-7-7 7-7" /></svg>
+                  </button>
+                  <button
+                    onClick={() => step(1)}
+                    aria-label="Next"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/85 hover:bg-white text-ocean-midnight shadow-lg flex items-center justify-center transition-all hover:scale-105"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M9 5l7 7-7 7" /></svg>
+                  </button>
+                  <span className="absolute top-3 left-3 rounded-full bg-ocean-midnight/70 backdrop-blur text-white text-[11px] font-bold tracking-widest px-3 py-1.5">
+                    {currentIndex + 1} / {items.length}
+                  </span>
+                </>
+              )}
               <button
                 onClick={() => setSelectedItem(null)}
                 className="absolute top-3 right-3 w-9 h-9 bg-ocean-midnight/70 hover:bg-ocean-midnight text-white rounded-xl flex items-center justify-center transition-colors"
@@ -294,7 +392,10 @@ export default function Gallery() {
                 }`}>
                   {selectedItem.type === 'photo' ? 'Photo' : 'Video'}
                 </span>
-                <span className="text-xs text-gray-400">{selectedItem.category}</span>
+                <span className="inline-flex items-center gap-1.5 text-xs text-gray-400">
+                  <span className={`w-2 h-2 rounded-full ${dot(selectedItem.category)}`} />
+                  {selectedItem.category}
+                </span>
               </div>
               <h2 className="text-2xl font-poppins font-bold text-ocean-midnight mb-2">{selectedItem.title}</h2>
               {selectedItem.description && (
