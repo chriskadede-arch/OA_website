@@ -5,38 +5,38 @@
   "contactEmailSecondary": "des@oceansalivekenya.org",
   "contactPhone": "+254 732 807 935",
   "contactAddress": "Vipingo, Kilifi County, Kenya",
-  "twitterHandle": "@oceans_alive_kenya",
+  "twitterHandle": "@Oceansalive_Ke",
   "instagramHandle": "@oceans_alive_kenya",
-  "facebookPage": "oceansalive",
+  "facebookPage": "OceansAliveKenya",
   "socialLinks": [
     {
       "name": "Facebook",
-      "url": "https://facebook.com/oceansalive",
+      "url": "https://www.facebook.com/OceansAliveKenya",
       "icon": "facebook"
     },
     {
       "name": "Instagram",
-      "url": "https://instagram.com/oceans_alive_kenya",
+      "url": "https://www.instagram.com/oceans_alive_kenya/",
       "icon": "instagram"
     },
     {
       "name": "TikTok",
-      "url": "https://tiktok.com/@oceans_alive_kenya",
+      "url": "https://www.tiktok.com/@oceansaliveke",
       "icon": "tiktok"
     },
     {
       "name": "LinkedIn",
-      "url": "https://linkedin.com/company/oceans-alive",
+      "url": "https://www.linkedin.com/company/oceans-alive-foundation/",
       "icon": "linkedin"
     },
     {
-      "name": "Twitter",
-      "url": "https://twitter.com/oceans_alive_kenya",
+      "name": "X (Twitter)",
+      "url": "https://x.com/Oceansalive_Ke",
       "icon": "twitter"
     },
     {
       "name": "YouTube",
-      "url": "https://youtube.com/@oceansalive",
+      "url": "https://www.youtube.com/@OceansAliveKenya",
       "icon": "youtube"
     }
   ],
