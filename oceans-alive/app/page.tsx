@@ -152,9 +152,29 @@ export default function Home() {
             {/* Photo collage */}
             <div className="relative h-[380px] sm:h-[460px] lg:h-[500px] select-none" aria-label="Photos of our work">
               {/* decorative arcs and dots */}
-              <div aria-hidden="true" className="absolute -top-8 -right-4 w-28 h-28 sm:w-36 sm:h-36 rounded-full border-[9px] border-ocean-sunshine border-l-transparent border-b-transparent rotate-12 z-30" />
-              <div aria-hidden="true" className="absolute -top-3 right-1 w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-ocean-sunshine/70 border-l-transparent border-b-transparent rotate-12 z-30" />
-              <div aria-hidden="true" className="absolute bottom-[8%] left-[30%] w-28 h-28 sm:w-36 sm:h-36 rounded-full border-[10px] border-ocean-turquoise border-r-transparent border-t-transparent -rotate-12 z-30" />
+              {/* Oceans Alive logo ring (words removed), tinted in brand colours */}
+              {(() => {
+                const ring = {
+                  WebkitMaskImage: `url(${asset('/images/brand-ring.png')})`,
+                  maskImage: `url(${asset('/images/brand-ring.png')})`,
+                  WebkitMaskSize: 'contain',
+                  maskSize: 'contain',
+                  WebkitMaskRepeat: 'no-repeat',
+                  maskRepeat: 'no-repeat',
+                } as React.CSSProperties;
+                return (
+                  <>
+                    {/* big faint ring slowly turning behind the photos */}
+                    <div aria-hidden="true" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] aspect-square pointer-events-none">
+                      <div className="w-full h-full bg-white/[0.06] motion-safe:animate-[spin_90s_linear_infinite]" style={ring} />
+                    </div>
+                    {/* sunshine ring at the top corner */}
+                    <div aria-hidden="true" className="absolute -top-10 -right-8 w-32 h-32 sm:w-40 sm:h-40 bg-ocean-sunshine rotate-[160deg] z-30 drop-shadow-lg" style={ring} />
+                    {/* turquoise ring wrapping the photos at the bottom */}
+                    <div aria-hidden="true" className="absolute bottom-[4%] left-[28%] w-32 h-32 sm:w-40 sm:h-40 bg-ocean-turquoise -rotate-[20deg] z-30" style={ring} />
+                  </>
+                );
+              })()}
               <div
                 aria-hidden="true"
                 className="absolute top-[6%] left-[-2%] w-28 h-24 opacity-40"
