@@ -73,7 +73,7 @@ export default function Home() {
           </div>
 
           {/* Buttons, placed under the boat on larger screens */}
-          <div className="flex flex-wrap items-center gap-4 md:ml-[42%] lg:ml-[47%] md:-mt-16">
+          <div className="flex flex-wrap items-center gap-4 md:ml-[42%] lg:ml-[47%] md:-mt-16 md:-translate-y-16">
               {/* Primary: white pill with arrow bubble */}
               <Link
                 href={PAGE.hero.link}
