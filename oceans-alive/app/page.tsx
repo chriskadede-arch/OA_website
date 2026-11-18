@@ -97,7 +97,7 @@ export default function Home() {
       {/* ══════════════════════════════════════════════════════════════════
           SECTION 2 · Impact Stats (dark immersive)
           ══════════════════════════════════════════════════════════════════ */}
-      <section className="bg-ocean-midnight py-14 md:py-20 overflow-hidden">
+      <section className="bg-ocean-midnight pt-14 md:pt-20 pb-4 overflow-hidden">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[5fr_6fr] gap-12 lg:gap-14 items-center mb-12">
             {/* Text (kept compact) */}
@@ -196,7 +196,7 @@ export default function Home() {
       {/* ══════════════════════════════════════════════════════════════════
           SECTION 3 · Our Projects Carousel
           ══════════════════════════════════════════════════════════════════ */}
-      <section id="projects" className="bg-ocean-midnight py-16 md:py-20 scroll-mt-24">
+      <section id="projects" className="bg-ocean-midnight pt-10 md:pt-12 pb-16 md:pb-20 scroll-mt-24">
         <div className="max-w-6xl mx-auto px-6">
           {/* Section Header */}
           <div className="mb-10">
