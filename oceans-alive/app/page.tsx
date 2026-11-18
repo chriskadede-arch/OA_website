@@ -27,9 +27,6 @@ import PAGE from '@/content/pages/home.json';
 import { asset } from '@/lib/asset';
 
 export default function Home() {
-  // basePath is handled by Next.js config for Image components
-  // For raw img tags, we need to add it manually
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   // The brush ring from the Oceans Alive logo (words removed), used as a tintable mask
   const ring = {
@@ -46,95 +43,58 @@ export default function Home() {
       {/* ══════════════════════════════════════════════════════════════════
           SECTION 1 · Hero
           ══════════════════════════════════════════════════════════════════ */}
-      <section className="relative bg-ocean-midnight overflow-hidden min-h-[90vh]">
+      <section className="group/hero relative bg-ocean-midnight overflow-hidden min-h-[90vh] flex items-center">
+        {/* Background photo: fishers poling at dawn (flipped so the boat sits on the right) */}
+        <img
+          src={asset(PAGE.hero.image)}
+          alt={PAGE.hero.imageAlt}
+          loading="eager"
+          fetchPriority="high"
+          className="absolute inset-y-0 right-0 w-full md:w-[78%] h-full object-cover object-[45%_55%] -scale-x-100 motion-safe:animate-[heroZoom_24s_ease-out_forwards]"
+        />
+        {/* Fades that blend the photo into the page */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ocean-midnight via-ocean-midnight/80 md:from-[22%] md:via-ocean-midnight/45 md:via-[45%] to-ocean-midnight/20 md:to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-ocean-midnight/80 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ocean-midnight to-transparent" />
 
-        {/* Three images with diagonal dividers */}
-        <div className="absolute inset-0 bg-ocean-midnight will-change-auto">
-          {/* Image 1 - Left side with diagonal on right edge - show more of photo */}
-          <div className="absolute inset-0 overflow-hidden" style={{ clipPath: 'polygon(0 0, 38% 0, 28% 100%, 0 100%)' }}>
-            <div className="absolute inset-0 w-full h-full" style={{ transform: 'translateX(-35%)' }}>
-              <img
-                src={`${basePath}/images/P5310100.jpg`}
-                alt={PAGE.hero.imageAlt}
-                className="absolute inset-0 w-full h-full object-cover"
-                style={{
-                  objectPosition: 'center center',
-                  imageRendering: '-webkit-optimize-contrast',
-                  backfaceVisibility: 'hidden',
-                  transform: 'translateZ(0)',
-                  position: 'absolute',
-                  top: 0,
-                  left: 0
-                }}
-                loading="eager"
-                decoding="sync"
-              />
-            </div>
-            <div className="absolute inset-0 bg-blue-900/60"></div>
-          </div>
+        {/* Logo brush rings */}
+        <div aria-hidden="true" className="hidden md:block absolute -right-10 -bottom-16 w-64 h-64 lg:w-80 lg:h-80 bg-ocean-sunshine/85 rotate-[150deg] motion-safe:animate-[spin_140s_linear_infinite]" style={ring} />
+        <div aria-hidden="true" className="hidden md:block absolute right-[7%] top-[24%] w-14 h-14 lg:w-16 lg:h-16 bg-white/60 -rotate-12" style={ring} />
 
-          {/* Image 2 - Center with diagonal on both edges */}
-          <div className="absolute inset-0 overflow-hidden" style={{ clipPath: 'polygon(38% 0, 72% 0, 62% 100%, 28% 100%)' }}>
-            <img
-              src={`${basePath}/images/divers.jpg`}
-              alt={PAGE.hero.imageAlt2}
-              className="absolute inset-0 w-full h-full object-cover"
-              style={{
-                minWidth: '100%',
-                minHeight: '100%',
-                objectPosition: '55% 40%',
-                position: 'absolute',
-                top: 0,
-                left: 0
-              }}
-            />
-            <div className="absolute inset-0 bg-blue-900/60"></div>
-          </div>
+        {/* Message */}
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pt-36 pb-20 md:pt-40">
+          <div className="max-w-xl">
+            <p className="flex items-center gap-3 font-poppins font-light text-ocean-turquoise text-base md:text-xl tracking-[0.3em] uppercase mb-4">
+              <span aria-hidden="true" className="h-px w-12 bg-ocean-sunshine" />{PAGE.hero.title}
+            </p>
+            <h1 className="font-poppins font-bold leading-[1.05] text-4xl sm:text-5xl lg:text-[3.6rem] mb-6">
+              <span className="block text-white">{PAGE.hero.heading.split(',')[0]},</span>
+              <span className="block text-ocean-turquoise">{PAGE.hero.heading.split(',').slice(1).join(',').trim()}</span>
+            </h1>
+            <p className="text-white/85 text-base leading-relaxed mb-8 max-w-lg border-l-2 border-ocean-sunshine/70 pl-5">{PAGE.hero.text}</p>
 
-          {/* Image 3 - Right side with diagonal on left edge - ZOOMED IN for details */}
-          <div className="absolute inset-0 overflow-hidden" style={{ clipPath: 'polygon(72% 0, 100% 0, 100% 100%, 62% 100%)' }}>
-            <img
-              src={`${basePath}/images/IMG_4955.jpg`}
-              alt={PAGE.hero.imageAlt3}
-              className="absolute inset-0 w-full h-full object-cover"
-              style={{
-                minWidth: '140%',
-                minHeight: '140%',
-                objectPosition: '55% 45%',
-                transform: 'scale(1.2)',
-                position: 'absolute',
-                top: 0,
-                left: 0
-              }}
-            />
-            <div className="absolute inset-0 bg-blue-900/60"></div>
-          </div>
-        </div>
-
-        {/* Additional gradient overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-ocean-midnight/40 via-ocean-midnight/50 to-ocean-midnight/70"></div>
-
-        {/* Content overlay - centered over all images */}
-        <div className="relative z-20 flex items-center justify-center w-full min-h-[90vh] px-6 pt-36 pb-20 md:pt-40">
-          <div className="max-w-5xl text-center">
-            <h1 className="font-poppins font-light text-ocean-turquoise text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight mb-6 tracking-[0.15em] uppercase">{PAGE.hero.title}</h1>
-            <h2 className="font-poppins font-bold text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-6">{PAGE.hero.heading}</h2>
-            <p className="text-base md:text-lg text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto">{PAGE.hero.text}</p>
-
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap items-center gap-4">
+              {/* Primary: white pill with arrow bubble */}
               <Link
                 href={PAGE.hero.link}
-                className="px-7 py-3.5 bg-ocean-midnight text-white font-bold rounded-xl hover:bg-white hover:text-ocean-turquoise transition-all duration-200 shadow-lg"
-              >{PAGE.hero.linkText}</Link>
+                className="inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-sm md:text-base font-bold text-ocean-midnight hover:text-ocean-midnight shadow-xl transition-all duration-300 hover:bg-ocean-sunshine hover:gap-5"
+              >
+                {PAGE.hero.linkText}
+                <span aria-hidden="true" className="grid place-items-center w-9 h-9 rounded-full bg-ocean-midnight text-white">&rarr;</span>
+              </Link>
+              {/* Secondary: glass pill with a sunshine heart bubble on the left */}
               <Link
                 href={PAGE.hero.link2}
-                className="px-7 py-3.5 border border-white/30 text-white font-semibold rounded-xl hover:border-ocean-turquoise hover:text-ocean-turquoise transition-all duration-200"
-              >{PAGE.hero.linkText2}</Link>
+                className="group inline-flex items-center gap-3 rounded-full border border-white/40 bg-white/10 backdrop-blur-md pl-2 pr-6 py-2 text-sm md:text-base font-semibold text-white hover:text-white transition-all duration-300 hover:border-ocean-sunshine hover:bg-ocean-sunshine/15"
+              >
+                <span aria-hidden="true" className="grid place-items-center w-9 h-9 rounded-full bg-ocean-sunshine text-ocean-midnight transition-transform duration-300 group-hover:scale-110">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.3 2.4 4 6.4 4c2.2 0 3.6 1.2 4.6 2.6C12 5.2 13.4 4 15.6 4c4 0 6 4.3 4.4 7.7C19.5 16.4 12 21 12 21z"/></svg>
+                </span>
+                {PAGE.hero.linkText2}
+              </Link>
             </div>
-
           </div>
         </div>
-
       </section>
 
 

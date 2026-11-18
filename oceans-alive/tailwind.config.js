@@ -84,6 +84,10 @@ module.exports = {
         'float': 'float 3s ease-in-out infinite',
       },
       keyframes: {
+        heroZoom: {
+          '0%': { transform: 'scale(-1.08, 1.08)' },
+          '100%': { transform: 'scale(-1, 1)' },
+        },
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },

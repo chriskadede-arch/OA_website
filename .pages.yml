@@ -180,6 +180,9 @@ content:
             label: Hero
             type: object
             fields:
+              - name: image
+                label: Image
+                type: image
               - name: imageAlt
                 label: Image description (alt text, for screen readers)
                 type: string
