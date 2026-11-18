@@ -201,14 +201,14 @@ export default function Home() {
               {/* floating badge, passing through the turquoise logo ring */}
               <div className="absolute left-[-1%] bottom-[2%] z-30">
                 {/* back half of the ring (behind the card) */}
-                <div aria-hidden="true" className="absolute right-6 sm:right-8 top-1/2 -translate-y-1/2 w-28 h-28 sm:w-32 sm:h-32 bg-ocean-turquoise rotate-90" style={ring} />
+                <div aria-hidden="true" className="absolute right-6 sm:right-8 top-1/2 -translate-y-1/2 w-28 h-28 sm:w-32 sm:h-32 bg-ocean-turquoise rotate-180" style={ring} />
                 <div className="relative flex items-center gap-3 rounded-2xl bg-white px-4 py-3 pr-16 sm:pr-20 shadow-2xl">
                   <span className="font-poppins text-2xl sm:text-3xl font-bold text-ocean-midnight leading-none">{PAGE.impactStats.badgeNumber}</span>
                   <span className="text-[11px] sm:text-xs font-semibold text-ocean-midnight/70 leading-tight max-w-[7.5rem]">{PAGE.impactStats.badgeText}</span>
                 </div>
                 {/* front half of the ring (over the card) */}
                 <div aria-hidden="true" className="absolute right-6 sm:right-8 top-1/2 -translate-y-1/2 w-28 h-28 sm:w-32 sm:h-32" style={{ clipPath: 'inset(0 0 0 50%)' }}>
-                  <div className="w-full h-full bg-ocean-turquoise rotate-90" style={ring} />
+                  <div className="w-full h-full bg-ocean-turquoise rotate-180" style={ring} />
                 </div>
               </div>
             </div>
