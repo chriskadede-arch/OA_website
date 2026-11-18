@@ -35,6 +35,16 @@
       "IUCN World Congress 2025"
     ]
   },
+  "banner": {
+    "eyebrow": "Community-Led Action",
+    "line1": "Healthy Oceans,",
+    "line2": "Healthy Communities.",
+    "text": "From 30 hectares of protected reef to a national model of community-led ocean governance. A story that begins with and still belongs to the fishers who started it.",
+    "image": "/images/gallery/fishers-poling-at-dawn.jpg",
+    "imageAlt": "Fishers poling a traditional boat across calm water at dawn",
+    "link": "/about/story",
+    "linkText": "Read Our Story"
+  },
   "ourProjectsCarousel": {
     "eyebrow": "Our Work",
     "heading": "All Projects"

@@ -165,7 +165,7 @@ export default function Home() {
               {/* Oceans Alive logo ring (words removed), tinted in brand colours */}
               <>
                     {/* big faint ring slowly turning behind the photos */}
-                    <div aria-hidden="true" className="absolute left-[8%] top-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] aspect-square pointer-events-none">
+                    <div aria-hidden="true" className="absolute left-[-22%] top-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] aspect-square pointer-events-none">
                       <div className="w-full h-full bg-white/[0.06] motion-safe:animate-[spin_90s_linear_infinite]" style={ring} />
                     </div>
               </>
@@ -232,6 +232,50 @@ export default function Home() {
               {PAGE.impactStats.list.map((a) => (
                 <span key={a} className="text-xs text-white/40 font-semibold">{a}</span>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════════════
+          SECTION 2b · Message banner (runs from the content edge to the left edge of the screen)
+          ══════════════════════════════════════════════════════════════════ */}
+      <section className="bg-ocean-midnight pt-2 pb-4 overflow-hidden">
+        <div className="pr-6 lg:pr-[max(1.5rem,calc((100vw-72rem)/2+1.5rem))]">
+          <div className="group relative overflow-hidden rounded-r-[3rem] md:rounded-r-[5rem] shadow-2xl">
+            <img
+              src={asset(PAGE.banner.image)}
+              alt={PAGE.banner.imageAlt}
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover object-[50%_60%] -scale-x-100 transition-transform duration-[2000ms] ease-out group-hover:-scale-x-105 group-hover:scale-y-105"
+            />
+            {/* readability gradient */}
+            <div className="absolute inset-0 bg-gradient-to-r from-ocean-midnight/95 via-ocean-midnight/75 md:via-ocean-midnight/50 to-ocean-midnight/30 md:to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ocean-midnight/70 to-transparent" />
+
+            {/* logo ring echoes */}
+            <div aria-hidden="true" className="hidden md:block absolute -right-16 -bottom-24 w-72 h-72 lg:w-80 lg:h-80 bg-ocean-sunshine/80 rotate-[150deg] motion-safe:animate-[spin_120s_linear_infinite]" style={ring} />
+            <div aria-hidden="true" className="hidden md:block absolute right-[24%] top-8 w-16 h-16 bg-white/60 -rotate-12" style={ring} />
+
+            {/* message */}
+            <div className="relative py-12 md:py-16 flex items-center pl-6 lg:pl-[max(1.5rem,calc((100vw-72rem)/2+1.5rem))] pr-6">
+              <div className="max-w-2xl">
+                <p className="flex items-center gap-3 text-ocean-sunshine text-xs font-bold uppercase tracking-[0.25em] mb-4">
+                  <span className="h-px w-10 bg-ocean-sunshine" />{PAGE.banner.eyebrow}
+                </p>
+                <h2 className="font-poppins font-bold leading-[1.05] text-[2.1rem] sm:text-5xl lg:text-[3.5rem] mb-5">
+                  <span className="block text-white">{PAGE.banner.line1}</span>
+                  <span className="block text-ocean-turquoise">{PAGE.banner.line2}</span>
+                </h2>
+                <p className="text-white/80 text-sm md:text-base leading-relaxed mb-6 max-w-md">{PAGE.banner.text}</p>
+                <Link
+                  href={PAGE.banner.link}
+                  className="inline-flex items-center gap-3 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-ocean-midnight shadow-lg transition-all hover:bg-ocean-sunshine hover:gap-4"
+                >
+                  {PAGE.banner.linkText}
+                  <span aria-hidden="true" className="grid place-items-center w-6 h-6 rounded-full bg-ocean-midnight text-white text-xs">&rarr;</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
