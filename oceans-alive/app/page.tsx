@@ -165,7 +165,7 @@ export default function Home() {
               {/* Oceans Alive logo ring (words removed), tinted in brand colours */}
               <>
                     {/* big faint ring slowly turning behind the photos */}
-                    <div aria-hidden="true" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] aspect-square pointer-events-none">
+                    <div aria-hidden="true" className="absolute left-[8%] top-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] aspect-square pointer-events-none">
                       <div className="w-full h-full bg-white/[0.06] motion-safe:animate-[spin_90s_linear_infinite]" style={ring} />
                     </div>
               </>
