@@ -43,8 +43,8 @@ export default function Home() {
       {/* ══════════════════════════════════════════════════════════════════
           SECTION 1 · Hero
           ══════════════════════════════════════════════════════════════════ */}
-      <section className="group/hero relative bg-ocean-midnight overflow-hidden min-h-[90vh] flex">
-        {/* Background photo: fishers poling at dawn (flipped), full width so the message runs across it */}
+      <section className="group/hero relative bg-ocean-midnight overflow-hidden min-h-[90vh] flex items-center">
+        {/* Background photo: fishers poling at dawn (flipped), full width */}
         <img
           src={asset(PAGE.hero.image)}
           alt={PAGE.hero.imageAlt}
@@ -52,33 +52,24 @@ export default function Home() {
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-[50%_30%] -scale-x-100 motion-safe:animate-[heroZoom_24s_ease-out_forwards]"
         />
-        {/* Fades that blend the photo into the page */}
-        <div className="absolute inset-0 bg-gradient-to-r from-ocean-midnight/90 via-ocean-midnight/55 md:from-ocean-midnight/85 md:via-ocean-midnight/25 to-ocean-midnight/30 md:to-transparent" />
-        <div className="absolute inset-x-0 top-0 h-56 bg-gradient-to-b from-ocean-midnight/85 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/70 to-transparent" />
+        {/* Same fades as the old message banner */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ocean-midnight/95 via-ocean-midnight/75 md:via-ocean-midnight/60 to-ocean-midnight/30 md:to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-ocean-midnight/70 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/60 to-transparent" />
 
-        {/* Message, spread across the photo */}
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pt-36 pb-14 md:pt-40 md:pb-16 flex flex-col justify-between gap-10 [text-shadow:0_2px_18px_rgba(0,30,60,0.55)]">
-          {/* Top: name + slogan running across the image */}
-          <div>
-            <p className="font-poppins font-light text-ocean-turquoise text-3xl md:text-5xl tracking-[0.2em] uppercase mb-3">
+        {/* Message */}
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pt-36 pb-20 md:pt-40">
+          <div className="max-w-2xl">
+            <p className="font-poppins font-light text-ocean-turquoise text-3xl md:text-5xl tracking-[0.2em] uppercase mb-4">
               {PAGE.hero.title}
             </p>
-            <h1 className="font-poppins font-bold leading-[1.02] text-4xl sm:text-6xl lg:text-7xl xl:text-[5.5rem]">
+            <h1 className="font-poppins font-bold leading-[1.05] text-[2.1rem] sm:text-5xl lg:text-[3.5rem] mb-5">
               <span className="block text-white">{PAGE.hero.heading.split(',')[0]},</span>
-              <span className="block md:pl-[12%] lg:pl-[22%] md:whitespace-nowrap text-ocean-turquoise">
-                {PAGE.hero.heading.split(',').slice(1).join(',').trim()}
-              </span>
+              <span className="block text-ocean-turquoise">{PAGE.hero.heading.split(',').slice(1).join(',').trim()}</span>
             </h1>
-          </div>
+            <p className="text-white/80 text-sm md:text-base leading-relaxed mb-7 max-w-lg">{PAGE.hero.text}</p>
 
-          {/* Bottom: glass text card on the left, buttons on the right */}
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-            <p className="max-w-lg text-white/90 text-sm md:text-base leading-relaxed rounded-2xl border border-white/15 bg-ocean-midnight/35 backdrop-blur-md p-5 md:p-6 border-l-4 border-l-ocean-sunshine [text-shadow:none]">
-              {PAGE.hero.text}
-            </p>
-
-            <div className="flex flex-wrap md:flex-col md:items-end items-center gap-4 shrink-0 [text-shadow:none]">
+            <div className="flex flex-wrap items-center gap-4">
               {/* Primary: white pill with arrow bubble */}
               <Link
                 href={PAGE.hero.link}
