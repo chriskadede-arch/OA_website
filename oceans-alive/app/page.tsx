@@ -24,6 +24,7 @@ import { PROJECTS } from '@/lib/projects-data';
 import ProjectsCarousel from '@/components/common/ProjectsCarousel';
 
 import PAGE from '@/content/pages/home.json';
+import { asset } from '@/lib/asset';
 
 export default function Home() {
   // basePath is handled by Next.js config for Image components
@@ -130,18 +131,61 @@ export default function Home() {
       {/* ══════════════════════════════════════════════════════════════════
           SECTION 2 · Impact Stats (dark immersive)
           ══════════════════════════════════════════════════════════════════ */}
-      <section className="bg-ocean-midnight py-16 md:py-24">
+      <section className="bg-ocean-midnight py-14 md:py-20 overflow-hidden">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-14">
+          <div className="grid grid-cols-1 lg:grid-cols-[5fr_6fr] gap-12 lg:gap-14 items-center mb-12">
+            {/* Text (kept compact) */}
             <div>
-              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-4">{PAGE.impactStats.eyebrow}</p>
-              <h2 className="text-4xl md:text-5xl font-poppins font-bold text-white leading-tight mb-6">{PAGE.impactStats.heading}</h2>
-              <p className="text-white/60 text-lg leading-relaxed">
-                <span className="text-white font-bold">{PAGE.impactStats.label}</span>{PAGE.impactStats.text}<span className="text-white font-bold">{PAGE.impactStats.label2}</span>{PAGE.impactStats.text2}<span className="text-white font-bold">{PAGE.impactStats.label3}</span>
+              <p className="text-ocean-turquoise text-xs font-bold uppercase tracking-widest mb-3">{PAGE.impactStats.eyebrow}</p>
+              <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white leading-tight mb-5">
+                {PAGE.impactStats.heading}
+                <svg className="block mt-2 w-40 h-3 text-ocean-sunshine" viewBox="0 0 160 12" fill="none" aria-hidden="true">
+                  <path d="M2 8c30-6 70-8 156-3" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+                </svg>
+              </h2>
+              <p className="text-white/65 text-base leading-relaxed mb-4">
+                <span className="text-white font-semibold">{PAGE.impactStats.label}</span>{PAGE.impactStats.text}<span className="text-white font-semibold">{PAGE.impactStats.label2}</span>{PAGE.impactStats.text2}<span className="text-white font-semibold">{PAGE.impactStats.label3}</span>.
               </p>
+              <p className="text-white/50 text-sm leading-relaxed border-l-2 border-ocean-turquoise/60 pl-4">{PAGE.impactStats.text3}</p>
             </div>
-            <div className="lg:pt-3">
-              <p className="text-white/60 text-lg leading-relaxed">{PAGE.impactStats.text3}</p>
+
+            {/* Photo collage */}
+            <div className="relative h-[380px] sm:h-[460px] lg:h-[500px] select-none" aria-label="Photos of our work">
+              {/* decorative arcs and dots */}
+              <div aria-hidden="true" className="absolute -top-8 -right-4 w-28 h-28 sm:w-36 sm:h-36 rounded-full border-[9px] border-ocean-sunshine border-l-transparent border-b-transparent rotate-12 z-30" />
+              <div aria-hidden="true" className="absolute -top-3 right-1 w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-ocean-sunshine/70 border-l-transparent border-b-transparent rotate-12 z-30" />
+              <div aria-hidden="true" className="absolute bottom-[8%] left-[30%] w-28 h-28 sm:w-36 sm:h-36 rounded-full border-[10px] border-ocean-turquoise border-r-transparent border-t-transparent -rotate-12 z-30" />
+              <div
+                aria-hidden="true"
+                className="absolute top-[6%] left-[-2%] w-28 h-24 opacity-40"
+                style={{ backgroundImage: 'radial-gradient(#5ECEC5 1.5px, transparent 1.5px)', backgroundSize: '12px 12px' }}
+              />
+
+              {/* 1 · tall arch */}
+              <figure className="group absolute left-[2%] top-[10%] w-[44%] h-[78%] overflow-hidden rounded-t-full rounded-b-3xl shadow-2xl ring-1 ring-white/10 z-10">
+                <img src={asset(PAGE.impactStats.photos[0].image)} alt={PAGE.impactStats.photos[0].alt} loading="lazy" className="w-full h-full object-cover object-[40%_center] transition-transform duration-700 group-hover:scale-105" />
+              </figure>
+
+              {/* 2 · top right */}
+              <figure className="group absolute right-[4%] top-[4%] w-[48%] h-[44%] overflow-hidden rounded-3xl rounded-tr-[5rem] shadow-2xl ring-1 ring-white/10 z-20">
+                <img src={asset(PAGE.impactStats.photos[1].image)} alt={PAGE.impactStats.photos[1].alt} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </figure>
+
+              {/* 3 · bottom right */}
+              <figure className="group absolute right-0 bottom-0 w-[50%] h-[46%] overflow-hidden rounded-3xl rounded-bl-[5rem] shadow-2xl ring-1 ring-white/10 z-20">
+                <img src={asset(PAGE.impactStats.photos[2].image)} alt={PAGE.impactStats.photos[2].alt} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </figure>
+
+              {/* 4 · round inset */}
+              <figure className="group absolute left-[34%] top-[0%] w-24 h-24 sm:w-32 sm:h-32 overflow-hidden rounded-full ring-[6px] ring-ocean-midnight shadow-xl z-30">
+                <img src={asset(PAGE.impactStats.photos[3].image)} alt={PAGE.impactStats.photos[3].alt} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </figure>
+
+              {/* floating badge */}
+              <div className="absolute left-[-1%] bottom-[2%] z-30 flex items-center gap-3 rounded-2xl bg-white/95 px-4 py-3 shadow-2xl backdrop-blur">
+                <span className="font-poppins text-2xl sm:text-3xl font-bold text-ocean-midnight leading-none">{PAGE.impactStats.badgeNumber}</span>
+                <span className="text-[11px] sm:text-xs font-semibold text-ocean-midnight/70 leading-tight max-w-[7.5rem]">{PAGE.impactStats.badgeText}</span>
+              </div>
             </div>
           </div>
 

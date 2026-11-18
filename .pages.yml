@@ -238,6 +238,26 @@ content:
               - name: text3
                 label: Text 3
                 type: text
+              - name: badgeNumber
+                label: Badge number
+                type: string
+              - name: badgeText
+                label: Badge text
+                type: string
+              - name: photos
+                label: Photos
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{fields.alt}'
+                fields:
+                  - name: image
+                    label: Image
+                    type: image
+                  - name: alt
+                    label: Image description (alt text)
+                    type: string
               - name: eyebrow2
                 label: Small label above heading 2
                 type: string
