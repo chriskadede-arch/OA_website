@@ -31,6 +31,16 @@ export default function Home() {
   // For raw img tags, we need to add it manually
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
+  // The brush ring from the Oceans Alive logo (words removed), used as a tintable mask
+  const ring = {
+    WebkitMaskImage: `url(${asset('/images/brand-ring.png')})`,
+    maskImage: `url(${asset('/images/brand-ring.png')})`,
+    WebkitMaskSize: 'contain',
+    maskSize: 'contain',
+    WebkitMaskRepeat: 'no-repeat',
+    maskRepeat: 'no-repeat',
+  } as React.CSSProperties;
+
   return (
     <>
       {/* ══════════════════════════════════════════════════════════════════
@@ -153,28 +163,12 @@ export default function Home() {
             <div className="relative h-[380px] sm:h-[460px] lg:h-[500px] select-none" aria-label="Photos of our work">
               {/* decorative arcs and dots */}
               {/* Oceans Alive logo ring (words removed), tinted in brand colours */}
-              {(() => {
-                const ring = {
-                  WebkitMaskImage: `url(${asset('/images/brand-ring.png')})`,
-                  maskImage: `url(${asset('/images/brand-ring.png')})`,
-                  WebkitMaskSize: 'contain',
-                  maskSize: 'contain',
-                  WebkitMaskRepeat: 'no-repeat',
-                  maskRepeat: 'no-repeat',
-                } as React.CSSProperties;
-                return (
-                  <>
+              <>
                     {/* big faint ring slowly turning behind the photos */}
                     <div aria-hidden="true" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] aspect-square pointer-events-none">
                       <div className="w-full h-full bg-white/[0.06] motion-safe:animate-[spin_90s_linear_infinite]" style={ring} />
                     </div>
-                    {/* sunshine ring at the top corner */}
-                    <div aria-hidden="true" className="absolute -top-10 -right-8 w-32 h-32 sm:w-40 sm:h-40 bg-ocean-sunshine rotate-[160deg] z-30 drop-shadow-lg" style={ring} />
-                    {/* turquoise ring wrapping the photos at the bottom */}
-                    <div aria-hidden="true" className="absolute bottom-[4%] left-[28%] w-32 h-32 sm:w-40 sm:h-40 bg-ocean-turquoise -rotate-[20deg] z-30" style={ring} />
-                  </>
-                );
-              })()}
+              </>
               <div
                 aria-hidden="true"
                 className="absolute top-[6%] left-[-2%] w-28 h-24 opacity-40"
@@ -196,15 +190,26 @@ export default function Home() {
                 <img src={asset(PAGE.impactStats.photos[2].image)} alt={PAGE.impactStats.photos[2].alt} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </figure>
 
-              {/* 4 · round inset */}
-              <figure className="group absolute left-[34%] top-[0%] w-24 h-24 sm:w-32 sm:h-32 overflow-hidden rounded-full ring-[6px] ring-ocean-midnight shadow-xl z-30">
-                <img src={asset(PAGE.impactStats.photos[3].image)} alt={PAGE.impactStats.photos[3].alt} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              </figure>
+              {/* 4 · round inset, framed by the yellow logo ring */}
+              <div className="group absolute left-[33%] -top-[2%] w-24 h-24 sm:w-32 sm:h-32 z-30">
+                <figure className="absolute inset-0 overflow-hidden rounded-full ring-4 ring-ocean-midnight shadow-xl">
+                  <img src={asset(PAGE.impactStats.photos[3].image)} alt={PAGE.impactStats.photos[3].alt} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                </figure>
+                <div aria-hidden="true" className="absolute -inset-[24%] bg-ocean-sunshine rotate-[200deg] drop-shadow-lg transition-transform duration-700 group-hover:rotate-[230deg]" style={ring} />
+              </div>
 
-              {/* floating badge */}
-              <div className="absolute left-[-1%] bottom-[2%] z-30 flex items-center gap-3 rounded-2xl bg-white/95 px-4 py-3 shadow-2xl backdrop-blur">
-                <span className="font-poppins text-2xl sm:text-3xl font-bold text-ocean-midnight leading-none">{PAGE.impactStats.badgeNumber}</span>
-                <span className="text-[11px] sm:text-xs font-semibold text-ocean-midnight/70 leading-tight max-w-[7.5rem]">{PAGE.impactStats.badgeText}</span>
+              {/* floating badge, passing through the turquoise logo ring */}
+              <div className="absolute left-[-1%] bottom-[2%] z-30">
+                {/* back half of the ring (behind the card) */}
+                <div aria-hidden="true" className="absolute right-6 sm:right-8 top-1/2 -translate-y-1/2 w-28 h-28 sm:w-32 sm:h-32 bg-ocean-turquoise rotate-90" style={ring} />
+                <div className="relative flex items-center gap-3 rounded-2xl bg-white px-4 py-3 pr-16 sm:pr-20 shadow-2xl">
+                  <span className="font-poppins text-2xl sm:text-3xl font-bold text-ocean-midnight leading-none">{PAGE.impactStats.badgeNumber}</span>
+                  <span className="text-[11px] sm:text-xs font-semibold text-ocean-midnight/70 leading-tight max-w-[7.5rem]">{PAGE.impactStats.badgeText}</span>
+                </div>
+                {/* front half of the ring (over the card) */}
+                <div aria-hidden="true" className="absolute right-6 sm:right-8 top-1/2 -translate-y-1/2 w-28 h-28 sm:w-32 sm:h-32" style={{ clipPath: 'inset(0 0 0 50%)' }}>
+                  <div className="w-full h-full bg-ocean-turquoise rotate-90" style={ring} />
+                </div>
               </div>
             </div>
           </div>
