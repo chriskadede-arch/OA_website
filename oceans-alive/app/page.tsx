@@ -50,9 +50,10 @@ export default function Home() {
           alt={PAGE.hero.imageAlt}
           loading="eager"
           fetchPriority="high"
-          className="absolute inset-0 w-full h-full object-cover object-[50%_30%] -scale-x-100 motion-safe:animate-[heroZoom_24s_ease-out_forwards]"
+          className="absolute inset-y-0 left-0 md:left-[14%] w-full h-full object-cover object-[50%_30%] -scale-x-100 motion-safe:animate-[heroZoom_24s_ease-out_forwards]"
         />
         {/* Same fades as the old message banner */}
+        <div className="hidden md:block absolute inset-y-0 left-0 w-[45%] bg-gradient-to-r from-ocean-midnight from-[22%] to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-ocean-midnight/95 via-ocean-midnight/75 md:via-ocean-midnight/60 to-ocean-midnight/30 md:to-transparent" />
         <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-ocean-midnight/70 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ocean-midnight via-ocean-midnight/60 to-transparent" />
@@ -69,7 +70,10 @@ export default function Home() {
             </h1>
             <p className="text-white/80 text-sm md:text-base leading-relaxed mb-7 max-w-lg">{PAGE.hero.text}</p>
 
-            <div className="flex flex-wrap items-center gap-4">
+          </div>
+
+          {/* Buttons, placed under the boat on larger screens */}
+          <div className="flex flex-wrap items-center gap-4 md:ml-[42%] lg:ml-[47%]">
               {/* Primary: white pill with arrow bubble */}
               <Link
                 href={PAGE.hero.link}
@@ -89,7 +93,6 @@ export default function Home() {
                 {PAGE.hero.linkText2}
               </Link>
             </div>
-          </div>
         </div>
       </section>
 
