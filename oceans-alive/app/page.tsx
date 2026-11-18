@@ -50,22 +50,18 @@ export default function Home() {
           alt={PAGE.hero.imageAlt}
           loading="eager"
           fetchPriority="high"
-          className="absolute inset-y-0 right-0 w-full md:w-[78%] h-full object-cover object-[45%_55%] -scale-x-100 motion-safe:animate-[heroZoom_24s_ease-out_forwards]"
+          className="absolute inset-y-0 right-0 w-full md:w-[78%] h-full object-cover object-[45%_30%] -scale-x-100 motion-safe:animate-[heroZoom_24s_ease-out_forwards]"
         />
         {/* Fades that blend the photo into the page */}
         <div className="absolute inset-0 bg-gradient-to-r from-ocean-midnight via-ocean-midnight/80 md:from-[22%] md:via-ocean-midnight/45 md:via-[45%] to-ocean-midnight/20 md:to-transparent" />
         <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-ocean-midnight/80 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ocean-midnight to-transparent" />
 
-        {/* Logo brush rings */}
-        <div aria-hidden="true" className="hidden md:block absolute -right-10 -bottom-16 w-64 h-64 lg:w-80 lg:h-80 bg-ocean-sunshine/85 rotate-[150deg] motion-safe:animate-[spin_140s_linear_infinite]" style={ring} />
-        <div aria-hidden="true" className="hidden md:block absolute right-[7%] top-[24%] w-14 h-14 lg:w-16 lg:h-16 bg-white/60 -rotate-12" style={ring} />
-
         {/* Message */}
         <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pt-36 pb-20 md:pt-40">
           <div className="max-w-xl">
-            <p className="flex items-center gap-3 font-poppins font-light text-ocean-turquoise text-base md:text-xl tracking-[0.3em] uppercase mb-4">
-              <span aria-hidden="true" className="h-px w-12 bg-ocean-sunshine" />{PAGE.hero.title}
+            <p className="flex items-center gap-3 font-poppins font-light text-ocean-turquoise text-3xl md:text-5xl tracking-[0.2em] uppercase mb-4">
+              {PAGE.hero.title}
             </p>
             <h1 className="font-poppins font-bold leading-[1.05] text-4xl sm:text-5xl lg:text-[3.6rem] mb-6">
               <span className="block text-white">{PAGE.hero.heading.split(',')[0]},</span>
