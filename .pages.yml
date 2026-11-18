@@ -268,34 +268,6 @@ content:
                 label: List
                 type: string
                 list: true
-          - name: banner
-            label: Banner
-            type: object
-            fields:
-              - name: eyebrow
-                label: Small label above heading
-                type: string
-              - name: line1
-                label: Line 1
-                type: string
-              - name: line2
-                label: Line 2
-                type: string
-              - name: text
-                label: Text
-                type: text
-              - name: image
-                label: Image
-                type: image
-              - name: imageAlt
-                label: Image description (alt text, for screen readers)
-                type: string
-              - name: link
-                label: Link (web address, e.g. /contact)
-                type: string
-              - name: linkText
-                label: Link text
-                type: string
           - name: ourProjectsCarousel
             label: Our projects carousel
             type: object
